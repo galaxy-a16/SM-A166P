@@ -2,4 +2,4 @@
 *.orig
 *.rej
 *.dex
-
+partitions/system/priv-app/KmxService/KmxService_src/build
