@@ -1,0 +1,54 @@
+.class public Lcom/android/server/sepunion/cover/CoverServiceManager$3;
+.super Ljava/lang/Object;
+.source "CoverServiceManager.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;)V
+    .locals 0
+
+    .line 667
+    iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 1
+
+    .line 669
+    iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
+
+    invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmCoverWakeLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 670
+    iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$3;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
+
+    invoke-static {p0}, Lcom/android/server/sepunion/cover/CoverServiceManager;->-$$Nest$fgetmCoverWakeLock(Lcom/android/server/sepunion/cover/CoverServiceManager;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    :cond_0
+    return-void
+.end method
