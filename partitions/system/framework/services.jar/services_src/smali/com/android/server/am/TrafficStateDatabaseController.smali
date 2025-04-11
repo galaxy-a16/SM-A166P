@@ -47,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$sfgetbandNumber()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->bandNumber:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$sfgetobjTrafficStats()Ljava/util/List;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->objTrafficStats:Ljava/util/List;
 
     return-object v0
@@ -65,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$sfputbandNumber(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->bandNumber:Ljava/lang/String;
 
     return-void
@@ -74,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$smbandFromCP()Ljava/lang/String;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->bandFromCP()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +81,6 @@
 .method public static bridge synthetic -$$Nest$smdeleteValues()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->deleteValues()V
 
     return-void
@@ -94,7 +89,6 @@
 .method public static bridge synthetic -$$Nest$smgetCellId()J
     .locals 2
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getCellId()J
 
     move-result-wide v0
@@ -105,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$smgetIPDNS(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->getIPDNS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -116,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$smgetMD5Hash(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->getMD5Hash(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -127,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$smgetRsrp()Ljava/lang/String;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getRsrp()Ljava/lang/String;
 
     move-result-object v0
@@ -138,7 +129,6 @@
 .method public static bridge synthetic -$$Nest$smgetTechType()Ljava/lang/String;
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechType()Ljava/lang/String;
 
     move-result-object v0
@@ -149,7 +139,6 @@
 .method public static bridge synthetic -$$Nest$sminsertValues()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->insertValues()V
 
     return-void
@@ -158,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$smisWifiConnected()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->isWifiConnected()Z
 
     move-result v0
@@ -169,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$smismInsertDb()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->ismInsertDb()Z
 
     move-result v0
@@ -180,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$smismInsertList()Z
     .locals 1
 
-    .line 0
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->ismInsertList()Z
 
     move-result v0
@@ -191,7 +177,6 @@
 .method public static bridge synthetic -$$Nest$smlog(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
     return-void
@@ -200,7 +185,6 @@
 .method public static bridge synthetic -$$Nest$smsetmInsertDb(Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertDb(Z)V
 
     return-void
@@ -209,7 +193,6 @@
 .method public static bridge synthetic -$$Nest$smsetmInsertList(Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertList(Z)V
 
     return-void
@@ -220,7 +203,6 @@
 
     const-string v0, "content://com.tmobile.oem.echolocate.system.provider/trafficstats"
 
-    .line 95
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -229,14 +211,12 @@
 
     const-string v0, "0"
 
-    .line 97
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->DELETE_QUERY_VALUE:[Ljava/lang/String;
 
-    .line 106
     new-instance v0, Landroid/content/pm/Signature;
 
     const-string v1, "308203623082024aa00302010202044df1bf45300d06092a864886f70d01010505003073310b3009060355040613025553310b30090603550408130257413111300f0603550407130842656c6c657675653111300f060355040a1308542d4d6f62696c6531133011060355040b130a546563686e6f6c6f6779311c301a0603550403131350726f64756374205265616c697a6174696f6e301e170d3131303631303036353235335a170d3338313032363036353235335a3073310b3009060355040613025553310b30090603550408130257413111300f0603550407130842656c6c657675653111300f060355040a1308542d4d6f62696c6531133011060355040b130a546563686e6f6c6f6779311c301a0603550403131350726f64756374205265616c697a6174696f6e30820122300d06092a864886f70d01010105000382010f003082010a0282010100c1456176d31c8989df7e0b30569da5c9b782380d3ff28fb48b4a17c8a125f40ba14862518397800f7a1030bf7cc188b9296d84af5cc5dc37752a1ca2c33d654258a3fdd29d19f2a0dd4e24b328b03bfef8c17bb8da11a25fdae10c1e1e288e3c1f47ee47617972382b0854474da1d6b526b9787d9a2f8e00600a4e436bfa790d04a0376fd7bd5c6ee78a6e522bbaa969d63667d17ca8fd90087fcc4acf2a2676d341a8e19dc46beb82bb1990710bd4101df8943ef8a3f2d7cb0bac6677ae69f9f3d25c134c08dfeb82000f44dea4164f90a65e352387fdd203c3479cfb380a2f8af5af3219a726ba9d82d72229a8d32979ce84be52006f4b71fe75011e8e2d090203010001300d06092a864886f70d01010505000382010100188d18ea72a49334736e118e766744489c7a5c47543cc35cc62a8cce35e84dfd426af3595fe55192dcb2a54c594a8d0de064dad96d72969fbc873c7a9fe7e14b11aed16c6d4bf90c1911b7d8a054c0c34c7a58c4a434d46e72f6142b654af24d461089c4633aa21cead0b154efac0aec4d68403c51bceab76c33a819857531c6a459a266f495f810417e9583d71f3f53a533f1e7013007253e9ed3466432a21977837669cff2b6b20612c055ff09b44ca15ca6830cdb289398d290852d3b0204deecbb00292194cc7533e5ae593e0d355883ea8022eb6fe5e807d6c059b3f6d6f637cd4014da425742f21b54ec37c6f55d3f0b8b6ced1cbc09376e8ea023396f"
@@ -247,40 +227,32 @@
 
     const/4 v0, 0x0
 
-    .line 136
     sput-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mShouldReport:Z
 
     const/4 v0, 0x0
 
-    .line 139
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->sInstance:Lcom/android/server/am/TrafficStateDatabaseController;
 
     const/4 v0, 0x1
 
-    .line 147
     sput-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertList:Z
 
-    .line 148
     sput-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertDb:Z
 
     const-string v0, "-1"
 
-    .line 149
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->bandNumber:Ljava/lang/String;
 
-    .line 150
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->primaryBandwidth:Ljava/lang/String;
 
     const-string v0, "SM-S711U"
 
-    .line 165
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->Support_List:[Ljava/lang/String;
 
-    .line 366
     new-instance v0, Lcom/android/server/am/TrafficStateDatabaseController$1;
 
     invoke-direct {v0}, Lcom/android/server/am/TrafficStateDatabaseController$1;-><init>()V
@@ -301,14 +273,12 @@
 .method public static ShouldReport()Z
     .locals 5
 
-    .line 204
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->isModelSupported()Z
 
     move-result v0
 
     const-string v1, "TMB"
 
-    .line 205
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getSalesCode()Ljava/lang/String;
 
     move-result-object v2
@@ -317,7 +287,6 @@
 
     move-result v1
 
-    .line 206
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->isEchoAppSigPresent()Z
 
     move-result v2
@@ -335,11 +304,9 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 209
     :goto_0
     sput-boolean v3, Lcom/android/server/am/TrafficStateDatabaseController;->mShouldReport:Z
 
-    .line 210
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -381,10 +348,8 @@
     :cond_1
     const-string/jumbo v0, "isTmoSalesCode= false"
 
-    .line 215
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 217
     :goto_1
     sget-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mShouldReport:Z
 
@@ -396,21 +361,18 @@
 
     const/4 v0, 0x4
 
-    .line 648
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->invokeOemRilRequestRaw(I)[Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "-1"
 
-    .line 649
     sput-object v2, Lcom/android/server/am/TrafficStateDatabaseController;->primaryBandwidth:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
     const/4 v2, 0x1
 
-    .line 651
     aget-object v3, v1, v2
 
     invoke-static {v3}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechTypeFromCp(Ljava/lang/String;)Ljava/lang/String;
@@ -427,7 +389,6 @@
 
     aget-object v2, v1, v2
 
-    .line 652
     invoke-static {v2}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechTypeFromCp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -440,13 +401,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 653
     :cond_0
     aget-object v0, v1, v0
 
     sput-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->primaryBandwidth:Ljava/lang/String;
 
-    .line 655
     :cond_1
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->primaryBandwidth:Ljava/lang/String;
 
@@ -458,10 +417,8 @@
 
     const-string v0, "deleteValues()"
 
-    .line 465
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 467
     :try_start_0
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
@@ -484,10 +441,8 @@
     :catch_0
     move-exception v0
 
-    .line 469
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 470
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,31 +472,25 @@
 
     const/4 v1, 0x0
 
-    .line 333
     :try_start_0
     sput-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sInstance:Lcom/android/server/am/TrafficStateDatabaseController;
 
     const-string v1, "disable()"
 
-    .line 334
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    .line 337
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertList(Z)V
 
-    .line 338
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertDb(Z)V
 
-    .line 339
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->ShouldReport()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 340
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v1, :cond_0
@@ -550,12 +499,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 341
     invoke-virtual {v1, v2}, Landroid/telephony/TelephonyManager;->unregisterTelephonyCallback(Landroid/telephony/TelephonyCallback;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 344
     :cond_0
     :try_start_1
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->mIpConnectivityMetrics:Landroid/net/IIpConnectivityMetrics;
@@ -572,7 +519,6 @@
 
     const-string v1, "disable(): unregisterDnsCallback - removed"
 
-    .line 345
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -583,11 +529,9 @@
     :catch_0
     move-exception v1
 
-    .line 348
     :try_start_2
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 349
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -606,7 +550,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 352
     :cond_1
     :goto_0
     monitor-exit v0
@@ -628,7 +571,6 @@
 
     monitor-enter v0
 
-    .line 168
     :try_start_0
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sInstance:Lcom/android/server/am/TrafficStateDatabaseController;
 
@@ -636,20 +578,16 @@
 
     const-string v1, "TrafficStateDatabaseController enable"
 
-    .line 169
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 170
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     const-string v1, "com.tmobile.oem.echolocate.system.provider.trafficstats.TrafficStatsContentProvider.READ_TRAFFIC_STATS"
 
     const-string/jumbo v2, "readTrafficStateProvider"
 
-    .line 171
     invoke-virtual {p0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 172
     sget-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     const-string v1, "com.tmobile.oem.echolocate.system.provider.trafficstats.TrafficStatsContentProvider.WRITE_TRAFFIC_STATS"
@@ -658,7 +596,6 @@
 
     invoke-virtual {p0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     sget-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "phone"
@@ -671,7 +608,6 @@
 
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 174
     sget-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "telephony_subscription_service"
@@ -684,28 +620,24 @@
 
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
-    .line 175
     new-instance p0, Lcom/android/server/am/TrafficStateDatabaseController;
 
     invoke-direct {p0}, Lcom/android/server/am/TrafficStateDatabaseController;-><init>()V
 
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->sInstance:Lcom/android/server/am/TrafficStateDatabaseController;
 
-    .line 176
     new-instance p0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->objTrafficStats:Ljava/util/List;
 
-    .line 177
     new-instance p0, Lcom/android/server/am/TrafficStateDatabaseController$TrafficStatsTelephonyCallback;
 
     invoke-direct {p0}, Lcom/android/server/am/TrafficStateDatabaseController$TrafficStatsTelephonyCallback;-><init>()V
 
     sput-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyCallback:Lcom/android/server/am/TrafficStateDatabaseController$TrafficStatsTelephonyCallback;
 
-    .line 178
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->ShouldReport()Z
 
     move-result p0
@@ -714,12 +646,10 @@
 
     const-string p0, "connmetrics"
 
-    .line 180
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 179
     invoke-static {p0}, Landroid/net/IIpConnectivityMetrics$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/IIpConnectivityMetrics;
 
     move-result-object p0
@@ -728,7 +658,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 182
     :try_start_1
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->mNetdEventCallback:Landroid/net/INetdEventCallback;
 
@@ -742,7 +671,6 @@
 
     const-string/jumbo p0, "registerDnsCallback - added"
 
-    .line 184
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -754,7 +682,6 @@
     :catch_0
     move-exception p0
 
-    .line 190
     :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -777,7 +704,6 @@
     :catch_1
     move-exception p0
 
-    .line 188
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -794,7 +720,6 @@
 
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 193
     :cond_0
     :goto_0
     sget-object p0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -805,7 +730,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 194
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
@@ -821,12 +745,10 @@
     :cond_1
     const-string p0, "already enabled."
 
-    .line 198
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 200
     :cond_2
     :goto_1
     monitor-exit v0
@@ -848,13 +770,11 @@
 
     monitor-enter v0
 
-    .line 276
     :try_start_0
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sAsyncHandlerThread:Landroid/os/HandlerThread;
 
     if-nez v1, :cond_0
 
-    .line 277
     new-instance v1, Landroid/os/HandlerThread;
 
     const-string/jumbo v2, "sAsyncHandlerThread"
@@ -865,10 +785,8 @@
 
     sput-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sAsyncHandlerThread:Landroid/os/HandlerThread;
 
-    .line 279
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 280
     new-instance v1, Landroid/os/Handler;
 
     sget-object v2, Lcom/android/server/am/TrafficStateDatabaseController;->sAsyncHandlerThread:Landroid/os/HandlerThread;
@@ -881,7 +799,6 @@
 
     sput-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sAsyncHandler:Landroid/os/Handler;
 
-    .line 282
     :cond_0
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->sAsyncHandler:Landroid/os/Handler;
     :try_end_0
@@ -902,12 +819,10 @@
 .method public static getCellId()J
     .locals 7
 
-    .line 659
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 661
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -926,7 +841,6 @@
 
     const-string v1, "0"
 
-    .line 662
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -937,14 +851,12 @@
 
     const-string v1, "-2"
 
-    .line 663
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    .line 664
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_6
@@ -955,14 +867,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 665
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getAllCellInfo()Ljava/util/List;
 
     move-result-object v0
 
-    .line 666
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -983,7 +893,6 @@
 
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 668
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1007,26 +916,22 @@
 
     check-cast v5, Landroid/telephony/CellInfo;
 
-    .line 669
     invoke-virtual {v5}, Landroid/telephony/CellInfo;->isRegistered()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 670
     instance-of v3, v5, Landroid/telephony/CellInfoGsm;
 
     if-eqz v3, :cond_1
 
-    .line 671
     check-cast v5, Landroid/telephony/CellInfoGsm;
 
     invoke-virtual {v5}, Landroid/telephony/CellInfoGsm;->getCellIdentity()Landroid/telephony/CellIdentityGsm;
 
     move-result-object v3
 
-    .line 672
     invoke-virtual {v3}, Landroid/telephony/CellIdentityGsm;->getCid()I
 
     move-result v3
@@ -1036,13 +941,11 @@
 
     goto :goto_1
 
-    .line 673
     :cond_1
     instance-of v3, v5, Landroid/telephony/CellInfoNr;
 
     if-eqz v3, :cond_2
 
-    .line 674
     check-cast v5, Landroid/telephony/CellInfoNr;
 
     invoke-virtual {v5}, Landroid/telephony/CellInfoNr;->getCellIdentity()Landroid/telephony/CellIdentity;
@@ -1051,47 +954,40 @@
 
     check-cast v3, Landroid/telephony/CellIdentityNr;
 
-    .line 675
     invoke-virtual {v3}, Landroid/telephony/CellIdentityNr;->getNci()J
 
     move-result-wide v3
 
     goto :goto_1
 
-    .line 676
     :cond_2
     instance-of v3, v5, Landroid/telephony/CellInfoLte;
 
     if-eqz v3, :cond_3
 
-    .line 677
     check-cast v5, Landroid/telephony/CellInfoLte;
 
     invoke-virtual {v5}, Landroid/telephony/CellInfoLte;->getCellIdentity()Landroid/telephony/CellIdentityLte;
 
     move-result-object v3
 
-    .line 678
     invoke-virtual {v3}, Landroid/telephony/CellIdentityLte;->getCi()I
 
     move-result v3
 
     goto :goto_2
 
-    .line 679
     :cond_3
     instance-of v3, v5, Landroid/telephony/CellInfoWcdma;
 
     if-eqz v3, :cond_4
 
-    .line 680
     check-cast v5, Landroid/telephony/CellInfoWcdma;
 
     invoke-virtual {v5}, Landroid/telephony/CellInfoWcdma;->getCellIdentity()Landroid/telephony/CellIdentityWcdma;
 
     move-result-object v3
 
-    .line 681
     invoke-virtual {v3}, Landroid/telephony/CellIdentityWcdma;->getCid()I
 
     move-result v3
@@ -1101,7 +997,6 @@
     :cond_4
     const-string v3, "getCellId(): CellInfo is not one of GSM/LTE/WCDMA"
 
-    .line 684
     invoke-static {v3}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1114,7 +1009,6 @@
     :cond_6
     const-string v0, "getCellId(): mTelephonyManager is null"
 
-    .line 692
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     goto :goto_3
@@ -1122,7 +1016,6 @@
     :cond_7
     const-string v0, "getCellId(): techType is not available"
 
-    .line 698
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     :goto_3
@@ -1134,33 +1027,27 @@
 
     const-string v0, "getCommandToCp(): failed to close dos "
 
-    .line 580
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 581
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     const/16 v3, 0x11
 
-    .line 584
     :try_start_0
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeByte(I)V
 
     const/16 v3, 0x92
 
-    .line 585
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeByte(I)V
 
     const/4 v3, 0x5
 
-    .line 586
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeShort(I)V
 
-    .line 587
     invoke-virtual {v2, p0}, Ljava/io/DataOutputStream;->writeByte(I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1177,12 +1064,10 @@
     :try_start_1
     const-string p0, "getCommandToCp(): "
 
-    .line 589
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 593
     :goto_0
     :try_start_2
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
@@ -1191,11 +1076,9 @@
 
     goto :goto_1
 
-    .line 595
     :catch_1
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 599
     :goto_1
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -1203,7 +1086,6 @@
 
     return-object p0
 
-    .line 593
     :goto_2
     :try_start_3
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
@@ -1212,11 +1094,9 @@
 
     goto :goto_3
 
-    .line 595
     :catch_2
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 598
     :goto_3
     throw p0
 .end method
@@ -1226,7 +1106,6 @@
 
     const-string v0, ":"
 
-    .line 475
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1240,7 +1119,6 @@
     :cond_0
     const-string v0, "."
 
-    .line 477
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -1262,7 +1140,6 @@
 
     const-string v0, "MD5"
 
-    .line 542
     :try_start_0
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
@@ -1270,7 +1147,6 @@
 
     const-string v1, "UTF-8"
 
-    .line 543
     invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v1
@@ -1283,7 +1159,6 @@
 
     move-result-object v0
 
-    .line 544
     new-instance v1, Ljava/math/BigInteger;
 
     const/4 v2, 0x1
@@ -1292,12 +1167,10 @@
 
     const/16 v0, 0x10
 
-    .line 545
     invoke-virtual {v1, v0}, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 546
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -1307,7 +1180,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 547
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1332,7 +1204,6 @@
     :catch_0
     const-string v0, "getMD5Hash: NoSuchAlgorithmException"
 
-    .line 551
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     return-object p0
@@ -1345,14 +1216,12 @@
 
     const-string p0, "getResultsFromBytes(): length is less than or equal to zero!"
 
-    .line 607
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 611
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -1366,7 +1235,6 @@
 
     invoke-direct {v0, p1, v2, p0, v1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
-    .line 612
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1387,25 +1255,21 @@
 
     const/4 p1, -0x1
 
-    .line 614
     invoke-virtual {v0, p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 615
     :goto_0
     array-length p1, p0
 
     if-ge v2, p1, :cond_3
 
-    .line 617
     aget-object p1, p0, v2
 
     if-eqz p1, :cond_1
 
     const-string v0, ""
 
-    .line 618
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1421,7 +1285,6 @@
     :cond_1
     const-string p1, "-2"
 
-    .line 620
     aput-object p1, p0, v2
 
     :cond_2
@@ -1436,7 +1299,6 @@
 .method public static getRsrp()Ljava/lang/String;
     .locals 7
 
-    .line 709
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     const-string v1, "-150"
@@ -1449,26 +1311,22 @@
 
     if-eqz v0, :cond_5
 
-    .line 710
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSignalStrength()Landroid/telephony/SignalStrength;
 
     move-result-object v0
 
-    .line 711
     invoke-virtual {v0}, Landroid/telephony/SignalStrength;->getCellSignalStrengths()Ljava/util/List;
 
     move-result-object v2
 
     if-eqz v2, :cond_4
 
-    .line 712
     invoke-virtual {v0}, Landroid/telephony/SignalStrength;->getCellSignalStrengths()Ljava/util/List;
 
     move-result-object v0
 
-    .line 713
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1489,7 +1347,6 @@
 
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 714
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1518,23 +1375,19 @@
 
     check-cast v1, Landroid/telephony/CellSignalStrength;
 
-    .line 715
     instance-of v5, v1, Landroid/telephony/CellSignalStrengthLte;
 
     if-eqz v5, :cond_0
 
-    .line 716
     move-object v3, v1
 
     check-cast v3, Landroid/telephony/CellSignalStrengthLte;
 
-    .line 718
     :cond_0
     instance-of v5, v1, Landroid/telephony/CellSignalStrengthNr;
 
     if-eqz v5, :cond_1
 
-    .line 719
     check-cast v1, Landroid/telephony/CellSignalStrengthNr;
 
     move-object v4, v1
@@ -1542,14 +1395,12 @@
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 721
     invoke-virtual {v3}, Landroid/telephony/CellSignalStrengthLte;->isValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 722
     invoke-virtual {v3}, Landroid/telephony/CellSignalStrengthLte;->getRsrp()I
 
     move-result v1
@@ -1558,7 +1409,6 @@
 
     move-result-object v1
 
-    .line 723
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1580,14 +1430,12 @@
     :cond_2
     if-eqz v4, :cond_3
 
-    .line 724
     invoke-virtual {v4}, Landroid/telephony/CellSignalStrengthNr;->isValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 725
     invoke-virtual {v4}, Landroid/telephony/CellSignalStrengthNr;->getSsRsrp()I
 
     move-result v1
@@ -1596,7 +1444,6 @@
 
     move-result-object v1
 
-    .line 726
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1615,7 +1462,6 @@
 
     goto :goto_1
 
-    .line 729
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1638,7 +1484,6 @@
     :cond_4
     const-string v0, " getRsrp(): objStrengthList is null "
 
-    .line 734
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     goto :goto_2
@@ -1646,10 +1491,8 @@
     :cond_5
     const-string v0, " getRsrp(): telephonyManager is null "
 
-    .line 738
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 740
     :cond_6
     :goto_2
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1674,7 +1517,6 @@
 .method public static getTechType()Ljava/lang/String;
     .locals 3
 
-    .line 498
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     const-string v1, "-2"
@@ -1687,7 +1529,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 499
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getServiceState()Landroid/telephony/ServiceState;
@@ -1700,7 +1541,6 @@
 
     if-nez v0, :cond_4
 
-    .line 501
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDataNetworkType()I
@@ -1733,7 +1573,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 523
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1776,7 +1615,6 @@
     :cond_4
     const-string v0, "getTechType(): currServiceState is invalid"
 
-    .line 528
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     goto :goto_1
@@ -1784,10 +1622,8 @@
     :cond_5
     const-string v0, "getTechType(): mTelephonyManager is null"
 
-    .line 532
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 534
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1817,7 +1653,6 @@
 
     const-string v1, "1"
 
-    .line 562
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1826,7 +1661,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 564
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1848,14 +1682,12 @@
     :cond_0
     const-string v1, "2"
 
-    .line 565
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 567
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1874,13 +1706,11 @@
 
     goto :goto_1
 
-    .line 569
     :cond_1
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechType()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 570
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1897,13 +1727,11 @@
 
     goto :goto_0
 
-    .line 573
     :cond_2
     invoke-static {}, Lcom/android/server/am/TrafficStateDatabaseController;->getTechType()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 574
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1930,7 +1758,6 @@
 
     const/4 v0, 0x1
 
-    .line 425
     :try_start_0
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->objTrafficStats:Ljava/util/List;
 
@@ -1938,10 +1765,8 @@
 
     const-string v1, "insertValues()"
 
-    .line 426
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
-    .line 427
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->objTrafficStats:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1961,7 +1786,6 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 428
     sget-object v3, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1974,16 +1798,13 @@
 
     goto :goto_0
 
-    .line 430
     :cond_0
     sget-object v1, Lcom/android/server/am/TrafficStateDatabaseController;->objTrafficStats:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 431
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertList(Z)V
 
-    .line 432
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2018,13 +1839,11 @@
 
     goto :goto_1
 
-    .line 434
     :cond_1
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertList(Z)V
 
     const-string v1, "insertValues(): List is null can\'t insert."
 
-    .line 435
     invoke-static {v1}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2034,13 +1853,10 @@
     :catch_0
     move-exception v1
 
-    .line 438
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 439
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->setmInsertList(Z)V
 
-    .line 440
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2064,7 +1880,6 @@
 .method public static invokeOemRilRequestRaw(I)[Ljava/lang/String;
     .locals 4
 
-    .line 632
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
     if-eqz v0, :cond_0
@@ -2077,12 +1892,10 @@
 
     new-array v0, v0, [B
 
-    .line 634
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
 
     move-result v1
 
-    .line 635
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2099,20 +1912,16 @@
 
     invoke-static {v2}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 636
     sget-object v2, Lcom/android/server/am/TrafficStateDatabaseController;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 637
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->getCommandsToCp(I)[B
 
     move-result-object v3
 
-    .line 636
     invoke-virtual {v2, v1, v3, v0}, Landroid/telephony/TelephonyManager;->invokeOemRilRequestRawForSubscriber(I[B[B)I
 
     move-result v1
 
-    .line 638
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2129,12 +1938,10 @@
 
     invoke-static {v2}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
-    .line 639
     invoke-static {v1, v0}, Lcom/android/server/am/TrafficStateDatabaseController;->getResultsFromBytes(I[B)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 640
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2166,7 +1973,6 @@
     :cond_0
     const-string p0, "invokeOemRilRequestRaw: mTelephonyManager= null & resultFromCp = null"
 
-    .line 642
     invoke-static {p0}, Lcom/android/server/am/TrafficStateDatabaseController;->logD(Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -2178,7 +1984,6 @@
 .method public static isEchoAppSigPresent()Z
     .locals 8
 
-    .line 225
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2192,7 +1997,6 @@
 
     const/16 v3, 0x40
 
-    .line 227
     invoke-virtual {v0, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
@@ -2201,7 +2005,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 230
     array-length v2, v0
 
     move v3, v1
@@ -2215,13 +2018,11 @@
 
     move v6, v1
 
-    .line 231
     :goto_1
     array-length v7, v0
 
     if-ge v6, v7, :cond_1
 
-    .line 232
     sget-object v7, Lcom/android/server/am/TrafficStateDatabaseController;->ECHO_APP_SIG:Landroid/content/pm/Signature;
 
     invoke-virtual {v5, v7}, Landroid/content/pm/Signature;->equals(Ljava/lang/Object;)Z
@@ -2255,7 +2056,6 @@
     :catch_0
     const-string v0, "isEchoAppSigPresent(): package is not installed"
 
-    .line 240
     invoke-static {v0}, Lcom/android/server/am/TrafficStateDatabaseController;->log(Ljava/lang/String;)V
 
     :cond_3
@@ -2266,7 +2066,6 @@
 .method public static isModelSupported()Z
     .locals 6
 
-    .line 251
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->Support_List:[Ljava/lang/String;
 
     array-length v1, v0
@@ -2282,7 +2081,6 @@
 
     const-string/jumbo v5, "ro.product.model"
 
-    .line 252
     invoke-static {v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -2307,12 +2105,10 @@
 .method public static isWifiConnected()Z
     .locals 3
 
-    .line 484
     sget-object v0, Lcom/android/server/am/TrafficStateDatabaseController;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
 
-    .line 485
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2323,21 +2119,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 487
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 488
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 489
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v0
@@ -2355,7 +2148,6 @@
 .method public static ismInsertDb()Z
     .locals 1
 
-    .line 455
     sget-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertDb:Z
 
     return v0
@@ -2364,7 +2156,6 @@
 .method public static ismInsertList()Z
     .locals 1
 
-    .line 445
     sget-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertList:Z
 
     return v0
@@ -2375,7 +2166,6 @@
 
     const-string v0, "TrafficStateDatabaseController"
 
-    .line 748
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2384,19 +2174,16 @@
 .method public static logD(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static setmInsertDb(Z)V
     .locals 1
 
-    .line 459
     sget-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertDb:Z
 
     if-eq v0, p0, :cond_0
 
-    .line 460
     sput-boolean p0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertDb:Z
 
     :cond_0
@@ -2406,12 +2193,10 @@
 .method public static setmInsertList(Z)V
     .locals 1
 
-    .line 449
     sget-boolean v0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertList:Z
 
     if-eq v0, p0, :cond_0
 
-    .line 450
     sput-boolean p0, Lcom/android/server/am/TrafficStateDatabaseController;->mInsertList:Z
 
     :cond_0

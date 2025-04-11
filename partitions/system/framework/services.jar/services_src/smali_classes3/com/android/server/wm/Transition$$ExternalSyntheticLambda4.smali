@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowContainer;
 
     check-cast p2, Landroid/view/SurfaceControl$Transaction;

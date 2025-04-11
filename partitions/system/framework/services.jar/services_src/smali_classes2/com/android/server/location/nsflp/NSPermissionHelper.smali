@@ -13,20 +13,16 @@
 .method public constructor <init>(Lcom/android/server/location/injector/UserInfoHelper;Lcom/android/server/location/nsflp/NSConnectionHelper;)V
     .locals 2
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "NSPermissionHelper"
 
     const-string v1, "constructor"
 
-    .line 20
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     iput-object p2, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
-    .line 23
     new-instance p2, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;
 
     const/4 v0, 0x0
@@ -35,7 +31,6 @@
 
     iput-object p2, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mUidObserver:Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;
 
-    .line 24
     invoke-virtual {p1, p2}, Lcom/android/server/location/injector/UserInfoHelper;->registerUidObserver(Landroid/app/IUidObserver;)V
 
     return-void
@@ -46,7 +41,6 @@
 .method public getUidState(I)Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mUidObserver:Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;
 
     invoke-static {p0, p1}, Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;->-$$Nest$mgetUidState(Lcom/android/server/location/nsflp/NSPermissionHelper$UidObserver;I)Lcom/android/server/location/nsflp/NSPermissionHelper$UidState;
@@ -59,22 +53,18 @@
 .method public sendFreezeStateChanged(ZI)V
     .locals 2
 
-    .line 50
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "enabled"
 
-    .line 51
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string/jumbo p1, "uid"
 
-    .line 52
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
     sget-object p1, Landroid/location/LocationConstants$STATE_TYPE;->FREEZE_STATE_CHANGED:Landroid/location/LocationConstants$STATE_TYPE;
@@ -87,17 +77,14 @@
 .method public sendOpChanged(Ljava/lang/String;)V
     .locals 2
 
-    .line 36
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "packageName"
 
-    .line 37
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
     sget-object p1, Landroid/location/LocationConstants$STATE_TYPE;->OP_CHANGED:Landroid/location/LocationConstants$STATE_TYPE;
@@ -110,17 +97,14 @@
 .method public sendPermissionsChange(I)V
     .locals 2
 
-    .line 43
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "uid"
 
-    .line 44
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
     sget-object p1, Landroid/location/LocationConstants$STATE_TYPE;->PERMISSIONS_CHANGED:Landroid/location/LocationConstants$STATE_TYPE;
@@ -133,22 +117,18 @@
 .method public updateUidForegroundChanged(IZ)V
     .locals 2
 
-    .line 28
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string/jumbo v1, "uid"
 
-    .line 29
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string p1, "foreground"
 
-    .line 30
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 32
     iget-object p0, p0, Lcom/android/server/location/nsflp/NSPermissionHelper;->mNSConnectionHelper:Lcom/android/server/location/nsflp/NSConnectionHelper;
 
     sget-object p1, Landroid/location/LocationConstants$STATE_TYPE;->FOREGROUND_CHANGED:Landroid/location/LocationConstants$STATE_TYPE;

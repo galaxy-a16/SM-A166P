@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 0
 
-    .line 9448
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Lcom/android/server/wm/ImeTargetVisibilityPolicy;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;-><init>(Lcom/android/server/wm/WindowManagerService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public removeImeScreenshot(I)Z
     .locals 3
 
-    .line 9469
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -42,7 +39,6 @@
 
     monitor-enter v0
 
-    .line 9470
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -56,7 +52,6 @@
 
     const-string p0, "WindowManager"
 
-    .line 9472
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +72,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9474
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -88,12 +82,10 @@
 
     return p0
 
-    .line 9476
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/wm/DisplayContent;->removeImeSurfaceImmediately()V
 
-    .line 9477
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -120,7 +112,6 @@
 .method public showImeScreenshot(Landroid/os/IBinder;I)Z
     .locals 3
 
-    .line 9452
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -129,7 +120,6 @@
 
     monitor-enter v0
 
-    .line 9453
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -145,7 +135,6 @@
 
     if-nez p1, :cond_0
 
-    .line 9455
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -154,7 +143,6 @@
 
     return v1
 
-    .line 9457
     :cond_0
     :try_start_1
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService$ImeTargetVisibilityPolicyImpl;->this$0:Lcom/android/server/wm/WindowManagerService;
@@ -169,7 +157,6 @@
 
     const-string p0, "WindowManager"
 
-    .line 9459
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +177,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9460
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -199,12 +185,10 @@
 
     return v1
 
-    .line 9463
     :cond_1
     :try_start_2
     invoke-virtual {p0, p1}, Lcom/android/server/wm/DisplayContent;->showImeScreenshot(Lcom/android/server/wm/WindowState;)V
 
-    .line 9464
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -218,7 +202,6 @@
     :catchall_0
     move-exception p0
 
-    .line 9465
     :try_start_3
     monitor-exit v0
     :try_end_3

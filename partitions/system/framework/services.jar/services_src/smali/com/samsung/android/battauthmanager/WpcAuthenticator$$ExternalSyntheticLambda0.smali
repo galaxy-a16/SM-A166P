@@ -20,7 +20,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->$r8$lambda$FkB7IauqwNnYm_YNbhnu6SrygdI(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result p0

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserController;)V
     .locals 0
 
-    .line 2698
     iput-object p1, p0, Lcom/android/server/am/UserController$8;->this$0:Lcom/android/server/am/UserController;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -24,6 +23,5 @@
 .method public performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZI)V
     .locals 0
 
-    .line 0
     return-void
 .end method

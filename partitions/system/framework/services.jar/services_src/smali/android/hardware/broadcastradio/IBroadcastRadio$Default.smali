@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,14 +28,12 @@
 .method public cancel()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public getAmFmRegionConfig(Z)Landroid/hardware/broadcastradio/AmFmRegionConfig;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -45,7 +42,6 @@
 .method public getDabRegionConfig()[Landroid/hardware/broadcastradio/DabTableEntry;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public getImage(I)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -63,7 +58,6 @@
 .method public getParameters([Ljava/lang/String;)[Landroid/hardware/broadcastradio/VendorKeyValue;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -72,7 +66,6 @@
 .method public getProperties()Landroid/hardware/broadcastradio/Properties;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -81,7 +74,6 @@
 .method public isConfigFlagSet(I)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -90,7 +82,6 @@
 .method public registerAnnouncementListener(Landroid/hardware/broadcastradio/IAnnouncementListener;[B)Landroid/hardware/broadcastradio/ICloseHandle;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -99,21 +90,18 @@
 .method public seek(ZZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setConfigFlag(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setParameters([Landroid/hardware/broadcastradio/VendorKeyValue;)[Landroid/hardware/broadcastradio/VendorKeyValue;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -122,34 +110,29 @@
 .method public setTunerCallback(Landroid/hardware/broadcastradio/ITunerCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public startProgramListUpdates(Landroid/hardware/broadcastradio/ProgramFilter;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public step(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public stopProgramListUpdates()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public tune(Landroid/hardware/broadcastradio/ProgramSelector;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

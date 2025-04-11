@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/KillPolicyManager;)V
     .locals 0
 
-    .line 255
     iput-object p1, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    .line 258
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -41,7 +39,6 @@
 
     goto/16 :goto_1
 
-    .line 260
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
@@ -51,19 +48,16 @@
 
     const-string/jumbo p2, "power"
 
-    .line 261
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/os/PowerManager;
 
-    .line 262
     invoke-virtual {p1}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
 
     move-result p1
 
-    .line 264
     iget-object p2, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {p2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fgetmContext(Lcom/android/server/am/KillPolicyManager;)Landroid/content/Context;
@@ -80,7 +74,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -97,7 +90,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastAwakeRealTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -114,7 +106,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastAwakeUpTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -123,12 +114,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastIdleEnterRealTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 271
     sget-boolean v0, Lcom/android/server/am/KillPolicyManager;->KPM_DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 272
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +154,6 @@
 
     goto :goto_0
 
-    .line 275
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
@@ -183,7 +171,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastIdleRealTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 276
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -192,7 +179,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastIdleExitRealTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 277
     iget-object v0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -201,12 +187,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/am/KillPolicyManager;->-$$Nest$fputmLastIdleExitUpTimeMillis(Lcom/android/server/am/KillPolicyManager;J)V
 
-    .line 279
     sget-boolean v0, Lcom/android/server/am/KillPolicyManager;->KPM_DEBUG:Z
 
     if-eqz v0, :cond_2
 
-    .line 280
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,7 +213,6 @@
 
     invoke-static {p2, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$1;->this$0:Lcom/android/server/am/KillPolicyManager;

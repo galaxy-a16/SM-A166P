@@ -7,7 +7,6 @@
 .method public static writeInterceptPower(Ljava/lang/String;II)V
     .locals 0
 
-    .line 27
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -32,7 +31,6 @@
 
     const v0, 0x11170
 
-    .line 23
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void

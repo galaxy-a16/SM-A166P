@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/pm/verify/domain/DomainVerificationUtils;->$r8$lambda$QRJ8rMpaFaI6JUONuc9XWQqiJNE()Ljava/util/regex/Matcher;
 
     move-result-object p0

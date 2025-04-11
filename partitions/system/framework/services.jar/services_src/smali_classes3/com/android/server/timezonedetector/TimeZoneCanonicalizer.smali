@@ -20,7 +20,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 27
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/server/timezonedetector/TimeZoneCanonicalizer;->apply(Ljava/lang/String;)Ljava/lang/String;
@@ -33,7 +32,6 @@
 .method public apply(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 30
     invoke-static {}, Lcom/android/i18n/timezone/TimeZoneFinder;->getInstance()Lcom/android/i18n/timezone/TimeZoneFinder;
 
     move-result-object p0
@@ -42,7 +40,6 @@
 
     move-result-object p0
 
-    .line 31
     invoke-virtual {p0, p1}, Lcom/android/i18n/timezone/CountryZonesFinder;->findCanonicalTimeZoneId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

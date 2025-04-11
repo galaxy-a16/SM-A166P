@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/pm/dex/DynamicCodeLogger;->$r8$lambda$U7WJrnKVqmzyuzHxQZUCkWVsgD8(Ljava/lang/String;)Ljava/util/Set;

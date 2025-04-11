@@ -18,7 +18,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 45
     new-instance v0, Lcom/android/server/firewall/SenderPermissionFilter$1;
 
     const-string/jumbo v1, "sender-permission"
@@ -33,10 +32,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/firewall/SenderPermissionFilter;->mPermission:Ljava/lang/String;
 
     return-void
@@ -45,7 +42,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/android/server/firewall/SenderPermissionFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/firewall/SenderPermissionFilter;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -56,7 +52,6 @@
 .method public matches(Lcom/android/server/firewall/IntentFirewall;Landroid/content/ComponentName;Landroid/content/Intent;IILjava/lang/String;I)Z
     .locals 6
 
-    .line 41
     iget-object v1, p0, Lcom/android/server/firewall/SenderPermissionFilter;->mPermission:Ljava/lang/String;
 
     const/4 v5, 0x1

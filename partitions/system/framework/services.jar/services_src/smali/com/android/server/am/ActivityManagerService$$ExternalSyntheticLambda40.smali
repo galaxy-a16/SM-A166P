@@ -24,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/ActivityManagerService;JZLcom/android/server/am/ProcessRecord;IJ)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda40;->f$0:Lcom/android/server/am/ActivityManagerService;
@@ -47,7 +46,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda40;->f$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-wide v1, p0, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticLambda40;->f$1:J

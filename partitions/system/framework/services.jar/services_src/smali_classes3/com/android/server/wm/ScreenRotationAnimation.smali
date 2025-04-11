@@ -63,7 +63,6 @@
 .method public static synthetic $r8$lambda$km4x46TiJ-mlgYSBydJTKs6UPn8(Landroid/view/SurfaceControl$Transaction;ZLcom/android/server/wm/WindowState;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/wm/ScreenRotationAnimation;->lambda$setSkipScreenshotForRoundedCornerOverlays$0(Landroid/view/SurfaceControl$Transaction;ZLcom/android/server/wm/WindowState;)V
 
     return-void
@@ -72,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBackColorSurface(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -81,7 +79,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -90,7 +87,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayContent(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/DisplayContent;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     return-object p0
@@ -99,7 +95,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEndLuma(Lcom/android/server/wm/ScreenRotationAnimation;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEndLuma:F
 
     return p0
@@ -108,7 +103,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEnterBlackFrameLayer(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterBlackFrameLayer:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -117,7 +111,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEnteringBlackFrame(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/BlackFrame;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
     return-object p0
@@ -126,7 +119,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRotateAlphaAnimation(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/animation/Animation;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateAlphaAnimation:Landroid/view/animation/Animation;
 
     return-object p0
@@ -135,7 +127,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRotateEnterAnimation(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/animation/Animation;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
     return-object p0
@@ -144,7 +135,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRotateExitAnimation(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/animation/Animation;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
     return-object p0
@@ -153,7 +143,6 @@
 .method public static bridge synthetic -$$Nest$fgetmScreenshotLayer(Lcom/android/server/wm/ScreenRotationAnimation;)Landroid/view/SurfaceControl;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     return-object p0
@@ -162,7 +151,6 @@
 .method public static bridge synthetic -$$Nest$fgetmService(Lcom/android/server/wm/ScreenRotationAnimation;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -171,7 +159,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStartLuma(Lcom/android/server/wm/ScreenRotationAnimation;)F
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mStartLuma:F
 
     return p0
@@ -186,95 +173,78 @@
 
     move/from16 v3, p2
 
-    .line 145
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
-    .line 106
     iput-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mTmpFloats:[F
 
-    .line 107
     new-instance v0, Landroid/view/animation/Transformation;
 
     invoke-direct {v0}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitTransformation:Landroid/view/animation/Transformation;
 
-    .line 108
     new-instance v0, Landroid/view/animation/Transformation;
 
     invoke-direct {v0}, Landroid/view/animation/Transformation;-><init>()V
 
     iput-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterTransformation:Landroid/view/animation/Transformation;
 
-    .line 110
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSnapshotInitialMatrix:Landroid/graphics/Matrix;
 
-    .line 146
     iget-object v0, v2, Lcom/android/server/wm/WindowContainer;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iput-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 147
     iget-object v4, v0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
 
     iput-object v4, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
-    .line 148
     iput-object v2, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 149
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/ConfigurationContainer;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v4
 
-    .line 150
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v5
 
-    .line 151
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
-    .line 154
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v6
 
-    .line 155
     iget v7, v6, Landroid/view/DisplayInfo;->rotation:I
 
-    .line 158
     sget-boolean v8, Lcom/samsung/android/rune/CoreRune;->FW_BLACK_SNAPSHOT_TRANSITION:Z
 
     const-string v9, "WindowManager"
 
     if-eqz v8, :cond_0
 
-    .line 159
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/ScreenRotationAnimation;->shouldHasBlackSnapshot()Z
 
     move-result v8
 
     iput-boolean v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mHasBlackSnapshot:Z
 
-    .line 161
     sget-boolean v10, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     if-eqz v10, :cond_0
 
     if-eqz v8, :cond_0
 
-    .line 162
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +257,6 @@
 
     iget-object v10, v10, Lcom/android/server/wm/WindowManagerServiceExt;->mPolicyExt:Lcom/android/server/policy/WindowManagerPolicyExt;
 
-    .line 163
     invoke-interface {v10}, Lcom/android/server/policy/WindowManagerPolicyExt;->isScreenTurnedOn()Z
 
     move-result v10
@@ -298,14 +267,11 @@
 
     move-result-object v8
 
-    .line 162
     invoke-static {v9, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_0
     iput v3, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalRotation:I
 
-    .line 173
     invoke-static {v3, v7}, Landroid/util/RotationUtils;->deltaRotation(II)I
 
     move-result v8
@@ -339,7 +305,6 @@
     :cond_3
     move v13, v5
 
-    .line 175
     :goto_2
     iput v13, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalWidth:I
 
@@ -352,14 +317,11 @@
     :cond_4
     move v8, v4
 
-    .line 176
     :goto_3
     iput v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalHeight:I
 
-    .line 177
     iget v14, v6, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    .line 178
     iget v15, v6, Landroid/view/DisplayInfo;->logicalHeight:I
 
     if-le v14, v13, :cond_5
@@ -396,7 +358,6 @@
     :cond_8
     const/4 v8, 0x0
 
-    .line 182
     :goto_6
     new-instance v10, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
@@ -404,17 +365,14 @@
 
     iput-object v10, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
-    .line 185
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->hasSecureWindowOnScreen()Z
 
     move-result v10
 
-    .line 186
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v12
 
-    .line 187
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mTransactionFactory:Ljava/util/function/Supplier;
 
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
@@ -425,7 +383,6 @@
 
     check-cast v13, Landroid/view/SurfaceControl$Transaction;
 
-    .line 191
     :try_start_0
     sget-boolean v16, Lcom/samsung/android/rune/CoreRune;->FW_BLACK_SNAPSHOT_TRANSITION:Z
     :try_end_0
@@ -440,36 +397,30 @@
 
     if-eqz v0, :cond_9
 
-    .line 192
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->makeOverlay()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
     const-string v4, "BlackSnapshotLayer"
 
-    .line 193
     invoke-virtual {v0, v4}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
     const/4 v4, 0x1
 
-    .line 194
     invoke-virtual {v0, v4}, Landroid/view/SurfaceControl$Builder;->setOpaque(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 195
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->setColorLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 196
     invoke-virtual {v0, v11}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v0
 
-    .line 197
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v0
@@ -478,17 +429,14 @@
 
     const v4, 0x1eab90
 
-    .line 198
     invoke-virtual {v13, v0, v4}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 199
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     const/4 v4, 0x0
 
     invoke-virtual {v13, v0, v4}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 200
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v13, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
@@ -498,15 +446,12 @@
     :cond_9
     if-eqz v8, :cond_c
 
-    .line 205
     iget-object v6, v6, Landroid/view/DisplayInfo;->address:Landroid/view/DisplayAddress;
 
-    .line 206
     instance-of v0, v6, Landroid/view/DisplayAddress$Physical;
 
     if-nez v0, :cond_a
 
-    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -525,16 +470,13 @@
 
     return-void
 
-    .line 210
     :cond_a
     check-cast v6, Landroid/view/DisplayAddress$Physical;
 
-    .line 213
     invoke-virtual {v6}, Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J
 
     move-result-wide v17
 
-    .line 212
     invoke-static/range {v17 .. v18}, Lcom/android/server/display/DisplayControl;->getPhysicalDisplayToken(J)Landroid/os/IBinder;
 
     move-result-object v0
@@ -543,7 +485,6 @@
 
     const-string v0, "Display token is null."
 
-    .line 215
     invoke-static {v9, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -551,17 +492,14 @@
     :cond_b
     const/4 v6, 0x0
 
-    .line 220
     invoke-virtual {v1, v6, v13}, Lcom/android/server/wm/ScreenRotationAnimation;->setSkipScreenshotForRoundedCornerOverlays(ZLandroid/view/SurfaceControl$Transaction;)V
 
-    .line 221
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->findRoundedCornerOverlays()[Landroid/view/SurfaceControl;
 
     move-result-object v6
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRoundedCornerOverlay:[Landroid/view/SurfaceControl;
 
-    .line 222
     new-instance v6, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
     invoke-direct {v6, v0}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;-><init>(Landroid/os/IBinder;)V
@@ -574,7 +512,6 @@
 
     invoke-direct {v0, v10, v10, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 224
     invoke-virtual {v6, v0}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setSourceCrop(Landroid/graphics/Rect;)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
@@ -583,33 +520,28 @@
 
     const/4 v4, 0x1
 
-    .line 225
     invoke-virtual {v0, v4}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setAllowProtected(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
 
     check-cast v0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
-    .line 226
     invoke-virtual {v0, v4}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setCaptureSecureLayers(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
 
     check-cast v0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
-    .line 227
     invoke-virtual {v0, v4}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->setHintForSeamlessTransition(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
 
     check-cast v0, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;
 
-    .line 228
     invoke-virtual {v0}, Landroid/window/ScreenCapture$DisplayCaptureArgs$Builder;->build()Landroid/window/ScreenCapture$DisplayCaptureArgs;
 
     move-result-object v0
 
-    .line 229
     invoke-static {v0}, Landroid/window/ScreenCapture;->captureDisplay(Landroid/window/ScreenCapture$DisplayCaptureArgs;)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
 
     move-result-object v0
@@ -619,10 +551,8 @@
     :cond_c
     move/from16 v17, v10
 
-    .line 231
     new-instance v0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 233
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayArea;->getSurfaceControl()Landroid/view/SurfaceControl;
 
     move-result-object v10
@@ -631,14 +561,12 @@
 
     const/4 v6, 0x1
 
-    .line 234
     invoke-virtual {v0, v6}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setCaptureSecureLayers(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
 
     check-cast v0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 235
     invoke-virtual {v0, v6}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setAllowProtected(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
@@ -651,7 +579,6 @@
 
     invoke-direct {v10, v6, v6, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 236
     invoke-virtual {v0, v10}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setSourceCrop(Landroid/graphics/Rect;)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
@@ -660,19 +587,16 @@
 
     const/4 v4, 0x1
 
-    .line 237
     invoke-virtual {v0, v4}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->setHintForSeamlessTransition(Z)Landroid/window/ScreenCapture$CaptureArgs$Builder;
 
     move-result-object v0
 
     check-cast v0, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;
 
-    .line 238
     invoke-virtual {v0}, Landroid/window/ScreenCapture$LayerCaptureArgs$Builder;->build()Landroid/window/ScreenCapture$LayerCaptureArgs;
 
     move-result-object v0
 
-    .line 239
     invoke-static {v0}, Landroid/window/ScreenCapture;->captureLayers(Landroid/window/ScreenCapture$LayerCaptureArgs;)Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;
 
     move-result-object v0
@@ -680,7 +604,6 @@
     :goto_7
     if-nez v0, :cond_d
 
-    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +622,6 @@
 
     return-void
 
-    .line 250
     :cond_d
     invoke-virtual {v0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->containsSecureLayers()Z
 
@@ -718,7 +640,6 @@
 
     const/4 v5, 0x0
 
-    .line 258
     :goto_8
     invoke-virtual {v2, v5}, Lcom/android/server/wm/DisplayContent;->makeChildSurface(Lcom/android/server/wm/WindowContainer;)Landroid/view/SurfaceControl$Builder;
 
@@ -726,22 +647,18 @@
 
     const-string v5, "BackColorSurface"
 
-    .line 259
     invoke-virtual {v6, v5}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 260
     invoke-virtual {v5}, Landroid/view/SurfaceControl$Builder;->setColorLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 261
     invoke-virtual {v5, v11}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 262
     invoke-virtual {v5}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v5
@@ -750,78 +667,64 @@
 
     const-string v5, "RotationLayer"
 
-    .line 266
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->makeOverlay()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
-    .line 267
     invoke-virtual {v6, v5}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
     const/4 v4, 0x1
 
-    .line 268
     invoke-virtual {v6, v4}, Landroid/view/SurfaceControl$Builder;->setOpaque(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
-    .line 269
     invoke-virtual {v6, v10}, Landroid/view/SurfaceControl$Builder;->setSecure(Z)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
-    .line 270
     invoke-virtual {v6, v11}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
-    .line 271
     invoke-virtual {v6}, Landroid/view/SurfaceControl$Builder;->setBLASTLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v6
 
-    .line 272
     invoke-virtual {v6}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v6
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
-    .line 276
     invoke-static {v6, v13, v12, v5}, Lcom/android/server/wm/InputMonitor;->setTrustedOverlayInputInfo(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;ILjava/lang/String;)V
 
-    .line 278
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayContent;->makeOverlay()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
     const-string v6, "EnterBlackFrameLayer"
 
-    .line 279
     invoke-virtual {v5, v6}, Landroid/view/SurfaceControl$Builder;->setName(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 280
     invoke-virtual {v5}, Landroid/view/SurfaceControl$Builder;->setContainerLayer()Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 281
     invoke-virtual {v5, v11}, Landroid/view/SurfaceControl$Builder;->setCallsite(Ljava/lang/String;)Landroid/view/SurfaceControl$Builder;
 
     move-result-object v5
 
-    .line 282
     invoke-virtual {v5}, Landroid/view/SurfaceControl$Builder;->build()Landroid/view/SurfaceControl;
 
     move-result-object v5
 
     iput-object v5, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterBlackFrameLayer:Landroid/view/SurfaceControl;
 
-    .line 284
     invoke-virtual {v0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
     move-result-object v5
@@ -830,32 +733,26 @@
 
     const-wide/16 v10, 0x20
 
-    .line 285
     invoke-static {v10, v11, v6}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 288
     invoke-virtual {v0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->getColorSpace()Landroid/graphics/ColorSpace;
 
     move-result-object v6
 
-    .line 287
     invoke-static {v5, v6}, Lcom/android/internal/policy/TransitionAnimation;->getBorderLuma(Landroid/hardware/HardwareBuffer;Landroid/graphics/ColorSpace;)F
 
     move-result v6
 
     iput v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mStartLuma:F
 
-    .line 289
     invoke-static {v10, v11}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 291
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     const v10, 0x1eab90
 
     invoke-virtual {v13, v6, v10}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 295
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayArea;->getSurfaceControl()Landroid/view/SurfaceControl;
@@ -864,7 +761,6 @@
 
     invoke-virtual {v13, v6, v10}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 300
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->containsHdrLayers()Z
@@ -883,14 +779,12 @@
     :goto_9
     invoke-virtual {v13, v6, v10}, Landroid/view/SurfaceControl$Transaction;->setDimmingEnabled(Landroid/view/SurfaceControl;Z)Landroid/view/SurfaceControl$Transaction;
 
-    .line 304
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     const/4 v10, -0x1
 
     invoke-virtual {v13, v6, v10}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 305
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     const/4 v10, 0x3
@@ -913,19 +807,16 @@
 
     invoke-virtual {v13, v6, v10}, Landroid/view/SurfaceControl$Transaction;->setColor(Landroid/view/SurfaceControl;[F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 306
     iget-object v4, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     const/high16 v6, 0x3f800000    # 1.0f
 
     invoke-virtual {v13, v4, v6}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 308
     iget-object v4, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v13, v4, v5}, Landroid/view/SurfaceControl$Transaction;->setBuffer(Landroid/view/SurfaceControl;Landroid/hardware/HardwareBuffer;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 309
     iget-object v4, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/window/ScreenCapture$ScreenshotHardwareBuffer;->getColorSpace()Landroid/graphics/ColorSpace;
@@ -934,25 +825,20 @@
 
     invoke-virtual {v13, v4, v0}, Landroid/view/SurfaceControl$Transaction;->setColorSpace(Landroid/view/SurfaceControl;Landroid/graphics/ColorSpace;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 310
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v13, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 314
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v13, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 316
     invoke-virtual {v5}, Landroid/hardware/HardwareBuffer;->close()V
 
-    .line 318
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRoundedCornerOverlay:[Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_11
 
-    .line 319
     array-length v4, v0
 
     const/4 v6, 0x0
@@ -962,14 +848,12 @@
 
     aget-object v5, v0, v6
 
-    .line 320
     invoke-virtual {v5}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v10
 
     if-eqz v10, :cond_10
 
-    .line 321
     invoke-virtual {v13, v5}, Landroid/view/SurfaceControl$Transaction;->hide(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
     :try_end_1
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_1 .. :try_end_1} :catch_0
@@ -984,10 +868,8 @@
 
     const-string v4, "Unable to allocate freeze surface"
 
-    .line 327
     invoke-static {v9, v4, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 334
     :cond_11
     :goto_b
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
@@ -996,7 +878,6 @@
 
     if-eqz v8, :cond_12
 
-    .line 335
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/DisplayArea;->getPendingTransaction()Landroid/view/SurfaceControl$Transaction;
 
     move-result-object v0
@@ -1024,7 +905,6 @@
     :cond_12
     const/4 v8, 0x0
 
-    .line 340
     :goto_c
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_SHOW_SURFACE_ALLOC_enabled:Z
 
@@ -1051,26 +931,21 @@
     :cond_13
     if-ne v3, v7, :cond_14
 
-    .line 343
     invoke-virtual {v1, v13, v7}, Lcom/android/server/wm/ScreenRotationAnimation;->setRotation(Landroid/view/SurfaceControl$Transaction;I)V
 
     goto :goto_d
 
-    .line 348
     :cond_14
     iput v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mCurRotation:I
 
-    .line 349
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSnapshotInitialMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 350
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSnapshotInitialMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v13, v0}, Lcom/android/server/wm/ScreenRotationAnimation;->setRotationTransform(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Matrix;)V
 
-    .line 352
     :goto_d
     invoke-virtual {v13}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
@@ -1080,7 +955,6 @@
 .method public static synthetic lambda$setSkipScreenshotForRoundedCornerOverlays$0(Landroid/view/SurfaceControl$Transaction;ZLcom/android/server/wm/WindowState;)V
     .locals 1
 
-    .line 358
     iget-object v0, p2, Lcom/android/server/wm/WindowState;->mToken:Lcom/android/server/wm/WindowToken;
 
     iget-boolean v0, v0, Lcom/android/server/wm/WindowToken;->mRoundedCornerOverlay:Z
@@ -1103,7 +977,6 @@
 
     goto :goto_0
 
-    .line 361
     :cond_0
     iget-object p2, p2, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
@@ -1123,7 +996,6 @@
 .method public dismiss(Landroid/view/SurfaceControl$Transaction;JFIIII)Z
     .locals 2
 
-    .line 559
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     const/4 v1, 0x0
@@ -1132,13 +1004,11 @@
 
     return v1
 
-    .line 563
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mStarted:Z
 
     if-nez v0, :cond_1
 
-    .line 564
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getWindowingLayer()Landroid/view/SurfaceControl;
@@ -1151,10 +1021,8 @@
 
     iput v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEndLuma:F
 
-    .line 566
     invoke-virtual/range {p0 .. p8}, Lcom/android/server/wm/ScreenRotationAnimation;->startAnimation(Landroid/view/SurfaceControl$Transaction;JFIIII)Z
 
-    .line 569
     :cond_1
     iget-boolean p1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mStarted:Z
 
@@ -1165,7 +1033,6 @@
     :cond_2
     const/4 p1, 0x1
 
-    .line 572
     iput-boolean p1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mFinishAnimReady:Z
 
     return p1
@@ -1174,26 +1041,22 @@
 .method public dumpDebug(Landroid/util/proto/ProtoOutputStream;J)V
     .locals 3
 
-    .line 371
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10800000001L
 
-    .line 372
     iget-boolean v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mStarted:Z
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
     const-wide v0, 0x10800000002L
 
-    .line 373
     iget-boolean p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mAnimRunning:Z
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JZ)V
 
-    .line 374
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -1202,7 +1065,6 @@
 .method public hasScreenshot()Z
     .locals 0
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     if-eqz p0, :cond_0
@@ -1221,12 +1083,10 @@
 .method public isAnimating()Z
     .locals 0
 
-    .line 637
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     if-eqz p0, :cond_0
 
-    .line 638
     invoke-virtual {p0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->isAnimating()Z
 
     move-result p0
@@ -1247,26 +1107,21 @@
 .method public kill()V
     .locals 7
 
-    .line 577
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 578
     invoke-virtual {v0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->cancel()V
 
-    .line 579
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
-    .line 582
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_b
 
-    .line 583
     sget-boolean v2, Lcom/android/server/wm/ProtoLogCache;->WM_SHOW_SURFACE_ALLOC_enabled:Z
 
     const/4 v3, 0x0
@@ -1287,7 +1142,6 @@
 
     invoke-static {v2, v4, v3, v1, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->i(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 584
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1299,7 +1153,6 @@
 
     check-cast v0, Landroid/view/SurfaceControl$Transaction;
 
-    .line 585
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v2}, Landroid/view/SurfaceControl;->isValid()Z
@@ -1308,65 +1161,53 @@
 
     if-eqz v2, :cond_2
 
-    .line 586
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Transaction;->remove(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 588
     :cond_2
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
-    .line 590
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterBlackFrameLayer:Landroid/view/SurfaceControl;
 
     if-eqz v2, :cond_4
 
-    .line 591
     invoke-virtual {v2}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 592
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterBlackFrameLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Transaction;->remove(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 594
     :cond_3
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnterBlackFrameLayer:Landroid/view/SurfaceControl;
 
-    .line 596
     :cond_4
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     if-eqz v2, :cond_6
 
-    .line 597
     invoke-virtual {v2}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 598
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceControl$Transaction;->remove(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 600
     :cond_5
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mBackColorSurface:Landroid/view/SurfaceControl;
 
-    .line 603
     :cond_6
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRoundedCornerOverlay:[Landroid/view/SurfaceControl;
 
     if-eqz v2, :cond_a
 
-    .line 604
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getRotationAnimation()Lcom/android/server/wm/ScreenRotationAnimation;
@@ -1377,7 +1218,6 @@
 
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
-    .line 605
     invoke-virtual {v2}, Lcom/android/server/wm/DisplayContent;->getRotationAnimation()Lcom/android/server/wm/ScreenRotationAnimation;
 
     move-result-object v2
@@ -1387,10 +1227,8 @@
     :cond_7
     const/4 v2, 0x1
 
-    .line 606
     invoke-virtual {p0, v2, v0}, Lcom/android/server/wm/ScreenRotationAnimation;->setSkipScreenshotForRoundedCornerOverlays(ZLandroid/view/SurfaceControl$Transaction;)V
 
-    .line 607
     iget-object v2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRoundedCornerOverlay:[Landroid/view/SurfaceControl;
 
     array-length v4, v2
@@ -1400,14 +1238,12 @@
 
     aget-object v5, v2, v3
 
-    .line 608
     invoke-virtual {v5}, Landroid/view/SurfaceControl;->isValid()Z
 
     move-result v6
 
     if-eqz v6, :cond_8
 
-    .line 609
     invoke-virtual {v0, v5}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     :cond_8
@@ -1415,60 +1251,46 @@
 
     goto :goto_0
 
-    .line 613
     :cond_9
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRoundedCornerOverlay:[Landroid/view/SurfaceControl;
 
-    .line 615
     :cond_a
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->apply()V
 
-    .line 618
     :cond_b
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
     if-eqz v0, :cond_c
 
-    .line 619
     invoke-virtual {v0}, Lcom/android/server/wm/BlackFrame;->kill()V
 
-    .line 620
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
-    .line 622
     :cond_c
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_d
 
-    .line 623
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
-    .line 624
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 626
     :cond_d
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_e
 
-    .line 627
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
-    .line 628
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
-    .line 630
     :cond_e
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateAlphaAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_f
 
-    .line 631
     invoke-virtual {v0}, Landroid/view/animation/Animation;->cancel()V
 
-    .line 632
     iput-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateAlphaAnimation:Landroid/view/animation/Animation;
 
     :cond_f
@@ -1478,7 +1300,6 @@
 .method public printTo(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 3
 
-    .line 398
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mSurface="
@@ -1489,25 +1310,20 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 399
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mEnteringBlackFrame="
 
-    .line 400
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 402
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
     if-eqz v0, :cond_0
 
-    .line 403
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1524,7 +1340,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/android/server/wm/BlackFrame;->printTo(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 405
     :cond_0
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -1538,14 +1353,12 @@
 
     const-string v0, " mOriginalRotation="
 
-    .line 406
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalRotation:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 407
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "mOriginalWidth="
@@ -1558,14 +1371,12 @@
 
     const-string v0, " mOriginalHeight="
 
-    .line 408
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalHeight:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 409
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mStarted="
@@ -1578,7 +1389,6 @@
 
     const-string v0, " mAnimRunning="
 
-    .line 410
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mAnimRunning:Z
@@ -1587,7 +1397,6 @@
 
     const-string v0, " mFinishAnimReady="
 
-    .line 411
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mFinishAnimReady:Z
@@ -1596,14 +1405,12 @@
 
     const-string v0, " mFinishAnimStartTime="
 
-    .line 412
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-wide v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mFinishAnimStartTime:J
 
     invoke-virtual {p2, v0, v1}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 413
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "mRotateExitAnimation="
@@ -1616,7 +1423,6 @@
 
     const-string v0, " "
 
-    .line 414
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitTransformation:Landroid/view/animation/Transformation;
@@ -1625,7 +1431,6 @@
 
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 415
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v1, "mRotateEnterAnimation="
@@ -1636,7 +1441,6 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    .line 416
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterTransformation:Landroid/view/animation/Transformation;
@@ -1645,14 +1449,12 @@
 
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 417
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo p1, "mSnapshotInitialMatrix="
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 418
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSnapshotInitialMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, p2}, Landroid/graphics/Matrix;->dump(Ljava/io/PrintWriter;)V
@@ -1665,17 +1467,14 @@
 .method public setRotation(Landroid/view/SurfaceControl$Transaction;I)V
     .locals 3
 
-    .line 422
     iput p2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mCurRotation:I
 
-    .line 427
     iget v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalRotation:I
 
     invoke-static {p2, v0}, Landroid/util/RotationUtils;->deltaRotation(II)I
 
     move-result p2
 
-    .line 428
     iget v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalWidth:I
 
     iget v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalHeight:I
@@ -1684,7 +1483,6 @@
 
     invoke-static {p2, v0, v1, v2}, Lcom/android/server/wm/utils/CoordinateTransforms;->computeRotationMatrix(IIILandroid/graphics/Matrix;)V
 
-    .line 429
     iget-object p2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mSnapshotInitialMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/ScreenRotationAnimation;->setRotationTransform(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Matrix;)V
@@ -1695,20 +1493,17 @@
 .method public final setRotationTransform(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Matrix;)V
     .locals 8
 
-    .line 382
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 385
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mTmpFloats:[F
 
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 386
     iget-object p2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mTmpFloats:[F
 
     const/4 v0, 0x2
@@ -1717,15 +1512,12 @@
 
     const/4 v1, 0x5
 
-    .line 387
     aget p2, p2, v1
 
-    .line 388
     iget-object v1, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, v1, v0, p2}, Landroid/view/SurfaceControl$Transaction;->setPosition(Landroid/view/SurfaceControl;FF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 389
     iget-object v3, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     iget-object p2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mTmpFloats:[F
@@ -1750,14 +1542,12 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/view/SurfaceControl$Transaction;->setMatrix(Landroid/view/SurfaceControl;FFFF)Landroid/view/SurfaceControl$Transaction;
 
-    .line 393
     iget-object p2, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, p2, v0}, Landroid/view/SurfaceControl$Transaction;->setAlpha(Landroid/view/SurfaceControl;F)Landroid/view/SurfaceControl$Transaction;
 
-    .line 394
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     invoke-virtual {p1, p0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
@@ -1768,7 +1558,6 @@
 .method public setSkipScreenshotForRoundedCornerOverlays(ZLandroid/view/SurfaceControl$Transaction;)V
     .locals 2
 
-    .line 357
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     new-instance v0, Lcom/android/server/wm/ScreenRotationAnimation$$ExternalSyntheticLambda0;
@@ -1783,7 +1572,6 @@
 
     const/4 p0, 0x1
 
-    .line 366
     invoke-virtual {p2, p0}, Landroid/view/SurfaceControl$Transaction;->apply(Z)V
 
     :cond_0
@@ -1793,7 +1581,6 @@
 .method public final shouldHasBlackSnapshot()Z
     .locals 3
 
-    .line 929
     iget-object v0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mDisplayContent:Lcom/android/server/wm/DisplayContent;
 
     iget-boolean v1, v0, Lcom/android/server/wm/DisplayContent;->mHasBlackSnapshot:Z
@@ -1804,13 +1591,11 @@
 
     return v2
 
-    .line 939
     :cond_0
     iget-boolean v1, v0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
 
     if-nez v1, :cond_2
 
-    .line 940
     invoke-virtual {v0}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
 
     move-result-object p0
@@ -1831,7 +1616,6 @@
     :goto_0
     return v2
 
-    .line 943
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
 
@@ -1865,7 +1649,6 @@
 
     move/from16 v7, p8
 
-    .line 437
     iget-object v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mScreenshotLayer:Landroid/view/SurfaceControl;
 
     const/4 v9, 0x0
@@ -1874,7 +1657,6 @@
 
     return v9
 
-    .line 441
     :cond_0
     iget-boolean v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mStarted:Z
 
@@ -1884,11 +1666,9 @@
 
     return v10
 
-    .line 445
     :cond_1
     iput-boolean v10, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mStarted:Z
 
-    .line 448
     iget v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mCurRotation:I
 
     iget v11, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalRotation:I
@@ -1897,7 +1677,6 @@
 
     move-result v8
 
-    .line 451
     sget-boolean v11, Lcom/samsung/android/rune/CoreRune;->FW_BLACK_SNAPSHOT_TRANSITION:Z
 
     if-eqz v11, :cond_2
@@ -1913,7 +1692,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 462
     iget-object v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
     invoke-static {v8, v6}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
@@ -1922,7 +1700,6 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 463
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
     invoke-static {v6, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
@@ -1931,7 +1708,6 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
-    .line 466
     sget-boolean v6, Lcom/samsung/android/rune/CoreRune;->FW_BLACK_SNAPSHOT_TRANSITION:Z
 
     if-eqz v6, :cond_3
@@ -1942,7 +1718,6 @@
 
     goto/16 :goto_3
 
-    .line 470
     :cond_3
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
@@ -1973,7 +1748,6 @@
 
     goto/16 :goto_3
 
-    .line 501
     :cond_5
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
@@ -1985,10 +1759,8 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 503
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
-    .line 505
     sget-boolean v7, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_BASIC_ANIM:Z
 
     if-eqz v7, :cond_6
@@ -2000,7 +1772,6 @@
     :cond_6
     const v7, 0x10a00d6
 
-    .line 503
     :goto_0
     invoke-static {v6, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -2010,7 +1781,6 @@
 
     goto :goto_3
 
-    .line 492
     :cond_7
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
@@ -2022,10 +1792,8 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 494
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
-    .line 496
     sget-boolean v7, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_BASIC_ANIM:Z
 
     if-eqz v7, :cond_8
@@ -2037,7 +1805,6 @@
     :cond_8
     const v7, 0x10a00cf
 
-    .line 494
     :goto_1
     invoke-static {v6, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -2047,7 +1814,6 @@
 
     goto :goto_3
 
-    .line 483
     :cond_9
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
@@ -2059,10 +1825,8 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 485
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
-    .line 487
     sget-boolean v7, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_BASIC_ANIM:Z
 
     if-eqz v7, :cond_a
@@ -2074,7 +1838,6 @@
     :cond_a
     const v7, 0x10a00d8
 
-    .line 485
     :goto_2
     invoke-static {v6, v7}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -2084,7 +1847,6 @@
 
     goto :goto_3
 
-    .line 477
     :cond_b
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
@@ -2096,7 +1858,6 @@
 
     iput-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
-    .line 479
     iget-object v6, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mContext:Landroid/content/Context;
 
     const v7, 0x10a00aa
@@ -2110,7 +1871,6 @@
     :goto_3
     move v6, v9
 
-    .line 512
     :goto_4
     sget-boolean v7, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_ORIENTATION_enabled:Z
 
@@ -2152,7 +1912,6 @@
 
     invoke-static {v12, v8, v9, v13, v7}, Lcom/android/internal/protolog/ProtoLogImpl;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 517
     :cond_c
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
@@ -2162,17 +1921,14 @@
 
     invoke-virtual {v7, v4, v5, v8, v11}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 518
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v7, v2, v3}, Landroid/view/animation/Animation;->restrictDuration(J)V
 
-    .line 519
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateExitAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v7, v0}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
 
-    .line 520
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
     iget v8, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mOriginalWidth:I
@@ -2181,35 +1937,28 @@
 
     invoke-virtual {v7, v4, v5, v8, v11}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 521
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v7, v2, v3}, Landroid/view/animation/Animation;->restrictDuration(J)V
 
-    .line 522
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateEnterAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v7, v0}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
 
-    .line 524
     iput-boolean v9, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mAnimRunning:Z
 
-    .line 525
     iput-boolean v9, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mFinishAnimReady:Z
 
     const-wide/16 v7, -0x1
 
-    .line 526
     iput-wide v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mFinishAnimStartTime:J
 
     if-eqz v6, :cond_d
 
-    .line 529
     iget-object v7, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateAlphaAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v7, v2, v3}, Landroid/view/animation/Animation;->restrictDuration(J)V
 
-    .line 530
     iget-object v2, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mRotateAlphaAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->scaleCurrentDuration(F)V
@@ -2217,12 +1966,10 @@
     :cond_d
     if-eqz v6, :cond_e
 
-    .line 533
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mEnteringBlackFrame:Lcom/android/server/wm/BlackFrame;
 
     if-nez v0, :cond_e
 
-    .line 535
     :try_start_0
     new-instance v14, Landroid/graphics/Rect;
 
@@ -2236,12 +1983,10 @@
 
     invoke-direct {v14, v0, v2, v3, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 537
     new-instance v15, Landroid/graphics/Rect;
 
     invoke-direct {v15, v9, v9, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 538
     new-instance v0, Lcom/android/server/wm/BlackFrame;
 
     iget-object v2, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -2279,21 +2024,18 @@
 
     const-string v3, "Unable to allocate black surface"
 
-    .line 541
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_e
     :goto_5
     if-eqz v6, :cond_f
 
-    .line 546
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;->startCustomAnimation()V
 
     goto :goto_6
 
-    .line 548
     :cond_f
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceRotationAnimationController:Lcom/android/server/wm/ScreenRotationAnimation$SurfaceRotationAnimationController;
 

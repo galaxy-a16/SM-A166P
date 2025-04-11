@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/om/IdmapManager;Lcom/android/server/om/IdmapDaemon;)V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapManager:Lcom/android/server/om/IdmapManager;
 
-    .line 38
     iput-object p2, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     return-void
@@ -30,14 +27,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 90
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 91
     invoke-interface {p0}, Lcom/android/server/pm/pkg/AndroidPackage;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +59,6 @@
 
     const-string v3, "."
 
-    .line 93
     invoke-virtual {p1, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p1
@@ -82,7 +75,6 @@
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 95
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -91,7 +83,6 @@
 
     return-void
 
-    .line 102
     :cond_0
     invoke-static {p0}, Lcom/android/server/om/ResourceMapParser;->parseResourceMap(Lcom/android/server/pm/pkg/AndroidPackage;)V
 
@@ -110,7 +101,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 47
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getBaseApkPath()Ljava/lang/String;
 
     move-result-object v2
@@ -127,7 +117,6 @@
 
     goto/16 :goto_1
 
-    .line 53
     :cond_0
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getSplits()Ljava/util/List;
 
@@ -143,7 +132,6 @@
 
     move-result-object v2
 
-    .line 56
     invoke-static {p1, v2}, Lcom/android/server/om/IdmapManagerWrapper;->checkForResourceMapping(Lcom/android/server/pm/pkg/AndroidPackage;Ljava/lang/String;)V
 
     const/4 p1, 0x1
@@ -152,7 +140,6 @@
 
     const/4 v11, 0x1
 
-    .line 63
     :try_start_0
     iget-object v3, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
@@ -183,7 +170,6 @@
     :catch_0
     move-exception v3
 
-    .line 68
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -205,7 +191,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :cond_1
     iget-object v3, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
@@ -248,7 +233,6 @@
     :catch_1
     move-exception p0
 
-    .line 74
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +261,6 @@
 
     return v1
 
-    .line 49
     :cond_4
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -308,7 +291,6 @@
 .method public getTargetPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,7 +309,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :try_start_0
     iget-object p0, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
@@ -342,7 +323,6 @@
     :catch_0
     move-exception p0
 
-    .line 114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -367,7 +347,6 @@
 .method public idmapExists(Landroid/content/om/OverlayInfo;)Z
     .locals 1
 
-    .line 85
     iget-object p0, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapDaemon:Lcom/android/server/om/IdmapDaemon;
 
     iget-object v0, p1, Landroid/content/om/OverlayInfo;->baseCodePath:Ljava/lang/String;
@@ -384,7 +363,6 @@
 .method public removeIdmap(Landroid/content/om/OverlayInfo;I)Z
     .locals 0
 
-    .line 81
     iget-object p0, p0, Lcom/android/server/om/IdmapManagerWrapper;->mIdmapManager:Lcom/android/server/om/IdmapManager;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/om/IdmapManager;->removeIdmap(Landroid/content/om/OverlayInfo;I)Z

@@ -7,7 +7,6 @@
 .method public static allocDescriptor(Lcom/android/server/usb/descriptors/UsbDescriptorParser;IBB)Lcom/android/server/usb/descriptors/UsbDescriptor;
     .locals 0
 
-    .line 40
     invoke-virtual {p0}, Lcom/android/server/usb/descriptors/UsbDescriptorParser;->getCurInterface()Lcom/android/server/usb/descriptors/UsbInterfaceDescriptor;
 
     const/4 p0, 0x0
@@ -26,7 +25,6 @@
 
     if-eq p3, p1, :cond_0
 
-    .line 70
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

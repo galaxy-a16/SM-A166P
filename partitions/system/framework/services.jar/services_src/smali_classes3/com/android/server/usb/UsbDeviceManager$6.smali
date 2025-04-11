@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbDeviceManager;)V
     .locals 0
 
-    .line 478
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$6;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 481
     iget-object p0, p0, Lcom/android/server/usb/UsbDeviceManager$6;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-static {p0}, Lcom/android/server/usb/UsbDeviceManager;->-$$Nest$fgetmHandler(Lcom/android/server/usb/UsbDeviceManager;)Lcom/android/server/usb/UsbDeviceManager$UsbHandler;

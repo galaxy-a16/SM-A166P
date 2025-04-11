@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,20 +27,17 @@
 
     monitor-enter v0
 
-    .line 41
     :try_start_0
     sget-object v1, Lcom/samsung/android/authnrservice/service/DrkOperation;->sDrkOperation:Lcom/samsung/android/authnrservice/service/DrkOperation;
 
     if-nez v1, :cond_0
 
-    .line 42
     new-instance v1, Lcom/samsung/android/authnrservice/service/DrkOperation;
 
     invoke-direct {v1}, Lcom/samsung/android/authnrservice/service/DrkOperation;-><init>()V
 
     sput-object v1, Lcom/samsung/android/authnrservice/service/DrkOperation;->sDrkOperation:Lcom/samsung/android/authnrservice/service/DrkOperation;
 
-    .line 45
     :cond_0
     sget-object v1, Lcom/samsung/android/authnrservice/service/DrkOperation;->sDrkOperation:Lcom/samsung/android/authnrservice/service/DrkOperation;
     :try_end_0
@@ -71,10 +67,8 @@
 
     const-string v1, "getDrkKeyHandle"
 
-    .line 102
     invoke-static {v0, v1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 104
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     const/4 v1, 0x0
@@ -85,26 +79,22 @@
 
     const-string/jumbo v2, "not initialized"
 
-    .line 105
     invoke-static {v0, v2}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-array v0, v1, [B
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 106
     monitor-exit p0
 
     return-object v0
 
-    .line 111
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 112
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     const-string v4, "AUTHNR"
@@ -117,12 +107,10 @@
 
     move-result-object v0
 
-    .line 114
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-eqz v0, :cond_2
 
-    .line 115
     array-length v2, v0
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -132,7 +120,6 @@
 
     goto :goto_0
 
-    .line 124
     :cond_1
     monitor-exit p0
 
@@ -145,7 +132,6 @@
 
     const-string v2, "createServiceKeySession failed"
 
-    .line 116
     invoke-static {v0, v2}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-array v0, v1, [B
@@ -153,7 +139,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 117
     monitor-exit p0
 
     return-object v0
@@ -164,7 +149,6 @@
     :try_start_3
     const-string v2, "DO"
 
-    .line 120
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +173,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 121
     monitor-exit p0
 
     return-object v0
@@ -212,22 +195,18 @@
 
     const-string v1, "initialize"
 
-    .line 49
     invoke-static {v0, v1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     if-nez v0, :cond_0
 
-    .line 52
     new-instance v0, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     invoke-direct {v0, p1}, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
-    .line 55
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
@@ -243,24 +222,20 @@
 
     const-string v1, "isAliveDeviceRootKeyService failed"
 
-    .line 56
     invoke-static {p1, v1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 57
     monitor-exit p0
 
     return v0
 
-    .line 61
     :cond_1
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 62
     iget-object p1, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     const/4 v3, 0x1
@@ -269,7 +244,6 @@
 
     move-result p1
 
-    .line 63
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-nez p1, :cond_2
@@ -278,18 +252,15 @@
 
     const-string v1, "isExistDeviceRootKey failed"
 
-    .line 65
     invoke-static {p1, v1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 66
     monitor-exit p0
 
     return v0
 
-    .line 73
     :cond_2
     monitor-exit p0
 
@@ -301,7 +272,6 @@
     :try_start_2
     const-string v1, "DO"
 
-    .line 69
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +294,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 70
     monitor-exit p0
 
     return v0
@@ -347,10 +316,8 @@
 
     const-string/jumbo v1, "terminate"
 
-    .line 77
     invoke-static {v0, v1}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     const/4 v1, 0x0
@@ -361,31 +328,26 @@
 
     const-string/jumbo v2, "not initialized"
 
-    .line 80
     invoke-static {v0, v2}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 81
     monitor-exit p0
 
     return v1
 
-    .line 85
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 86
     iget-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;->releaseServiceKeySession()I
 
     move-result v0
 
-    .line 87
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     if-eqz v0, :cond_1
@@ -394,13 +356,11 @@
 
     const-string/jumbo v2, "releaseServiceKeySession failed"
 
-    .line 89
     invoke-static {v0, v2}, Lcom/samsung/android/authnrservice/service/AuthnrLog;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 90
     monitor-exit p0
 
     return v1
@@ -408,14 +368,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 92
     :try_start_2
     iput-object v0, p0, Lcom/samsung/android/authnrservice/service/DrkOperation;->mDrkServiceManager:Lcom/samsung/android/service/DeviceRootKeyService/DeviceRootKeyServiceManager;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 98
     monitor-exit p0
 
     const/4 p0, 0x1
@@ -428,7 +386,6 @@
     :try_start_3
     const-string v2, "DO"
 
-    .line 94
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -451,7 +408,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 95
     monitor-exit p0
 
     return v1

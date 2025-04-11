@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/usage/UserUsageStatsService;Lcom/android/internal/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 1053
     iput-object p1, p0, Lcom/android/server/usage/UserUsageStatsService$5;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iput-object p2, p0, Lcom/android/server/usage/UserUsageStatsService$5;->val$pw:Lcom/android/internal/util/IndentingPrintWriter;
@@ -31,7 +30,6 @@
 .method public checkin(Lcom/android/server/usage/IntervalStats;)Z
     .locals 6
 
-    .line 1056
     iget-object v0, p0, Lcom/android/server/usage/UserUsageStatsService$5;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iget-object v1, p0, Lcom/android/server/usage/UserUsageStatsService$5;->val$pw:Lcom/android/internal/util/IndentingPrintWriter;

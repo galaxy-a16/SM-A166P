@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V
     .locals 0
 
-    .line 503
     iput-object p1, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$3;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAccountsUpdated([Landroid/accounts/Account;)V
     .locals 2
 
-    .line 506
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,7 +46,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$3;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$mcheckAccountUpdated(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V

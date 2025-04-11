@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/app/GameSessionRecord$State;
     .locals 4
 
-    .line 29
     sget-object v0, Lcom/android/server/app/GameSessionRecord$State;->NO_GAME_SESSION_REQUESTED:Lcom/android/server/app/GameSessionRecord$State;
 
     sget-object v1, Lcom/android/server/app/GameSessionRecord$State;->GAME_SESSION_REQUESTED:Lcom/android/server/app/GameSessionRecord$State;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 31
     new-instance v0, Lcom/android/server/app/GameSessionRecord$State;
 
     const-string v1, "NO_GAME_SESSION_REQUESTED"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/app/GameSessionRecord$State;->NO_GAME_SESSION_REQUESTED:Lcom/android/server/app/GameSessionRecord$State;
 
-    .line 34
     new-instance v0, Lcom/android/server/app/GameSessionRecord$State;
 
     const-string v1, "GAME_SESSION_REQUESTED"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/app/GameSessionRecord$State;->GAME_SESSION_REQUESTED:Lcom/android/server/app/GameSessionRecord$State;
 
-    .line 37
     new-instance v0, Lcom/android/server/app/GameSessionRecord$State;
 
     const-string v1, "GAME_SESSION_ATTACHED"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/app/GameSessionRecord$State;->GAME_SESSION_ATTACHED:Lcom/android/server/app/GameSessionRecord$State;
 
-    .line 41
     new-instance v0, Lcom/android/server/app/GameSessionRecord$State;
 
     const-string v1, "GAME_SESSION_ENDED_PROCESS_DEATH"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/app/GameSessionRecord$State;->GAME_SESSION_ENDED_PROCESS_DEATH:Lcom/android/server/app/GameSessionRecord$State;
 
-    .line 29
     invoke-static {}, Lcom/android/server/app/GameSessionRecord$State;->$values()[Lcom/android/server/app/GameSessionRecord$State;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/app/GameSessionRecord$State;
     .locals 1
 
-    .line 29
     const-class v0, Lcom/android/server/app/GameSessionRecord$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +111,6 @@
 .method public static values()[Lcom/android/server/app/GameSessionRecord$State;
     .locals 1
 
-    .line 29
     sget-object v0, Lcom/android/server/app/GameSessionRecord$State;->$VALUES:[Lcom/android/server/app/GameSessionRecord$State;
 
     invoke-virtual {v0}, [Lcom/android/server/app/GameSessionRecord$State;->clone()Ljava/lang/Object;

@@ -58,7 +58,6 @@
 .method public static synthetic $r8$lambda$2EGgOc9ZkczW0pRrGTkzMRWqjS0(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$registerDisplayStateCallback$5(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;)V
 
     return-void
@@ -67,7 +66,6 @@
 .method public static synthetic $r8$lambda$8vh9AiLwKIJ01g-yO0MQZVgRhbA(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$setScreenStatusFromKeyguard$0(Z)V
 
     return-void
@@ -76,7 +74,6 @@
 .method public static synthetic $r8$lambda$9wjfFcUknIS_ptIZqI5rHsId5hY(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$removeMaskView$2(Landroid/os/IBinder;)V
 
     return-void
@@ -85,7 +82,6 @@
 .method public static synthetic $r8$lambda$BUFgwK7rCYWK8o9WGZU2h_b8uHc(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$openTrustAppSession$3()V
 
     return-void
@@ -94,7 +90,6 @@
 .method public static synthetic $r8$lambda$Salx7nte02E4ziltJ3MvzOqAhxE(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$unregisterDisplayBrightnessCallback$8()V
 
     return-void
@@ -103,7 +98,6 @@
 .method public static synthetic $r8$lambda$eKlEaD0da_wZmLKbdKA31R-M53k(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$handleTpaCommand$10()V
 
     return-void
@@ -112,7 +106,6 @@
 .method public static synthetic $r8$lambda$hlAkML6iM9mUn476lRf6RXginVI(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Landroid/os/IBinder;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$setCalibrationMode$4(Landroid/os/IBinder;Ljava/lang/String;I)V
 
     return-void
@@ -121,7 +114,6 @@
 .method public static synthetic $r8$lambda$iOtOhjpEO9wf-TNC-1y94Ptwzzk(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$unregisterDisplayStateCallback$6()V
 
     return-void
@@ -130,7 +122,6 @@
 .method public static synthetic $r8$lambda$m34NbZDxe5L1cAnYI7_9sQNYzRY(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$handleTpaCommand$9(Z)V
 
     return-void
@@ -139,7 +130,6 @@
 .method public static synthetic $r8$lambda$nbynnkbwm8a8fR6289mdvazWkHw(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$addMaskView$1(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
@@ -148,7 +138,6 @@
 .method public static synthetic $r8$lambda$oIKgvSvZRmyetwdpJQYhAjLLj2k(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$registerDisplayBrightnessCallback$7(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;)V
 
     return-void
@@ -157,7 +146,6 @@
 .method public static synthetic $r8$lambda$ylsJvFqljK-ZdeVr3N-0q_TWDEI(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;[Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->lambda$handleTpaCommand$11([Ljava/lang/String;)V
 
     return-void
@@ -166,7 +154,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDisplayStateMonitor(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     return-object p0
@@ -175,7 +162,6 @@
 .method public static bridge synthetic -$$Nest$mhandleActionScreenOff(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleActionScreenOff()V
 
     return-void
@@ -184,7 +170,6 @@
 .method public static bridge synthetic -$$Nest$mhandleActionScreenOn(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleActionScreenOn()V
 
     return-void
@@ -193,7 +178,6 @@
 .method public static bridge synthetic -$$Nest$mhandleActionUserRemoved(Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;Landroid/content/Intent;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleActionUserRemoved(Landroid/content/Intent;)V
 
     return-void
@@ -202,7 +186,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 66
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->DEBUG:Z
@@ -213,7 +196,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;)V
     .locals 1
 
-    .line 168
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;-><init>()V
@@ -226,10 +208,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;)V
     .locals 2
 
-    .line 174
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -238,17 +218,14 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIsBouncer:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 74
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
-    .line 175
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
-    .line 176
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
@@ -263,32 +240,26 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
-    .line 177
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
-    .line 178
     iput-object p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
-    .line 179
     invoke-virtual {p3, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->createDisplayStateMonitor(Landroid/content/Context;)Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
-    .line 180
     sget-boolean p2, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SUPPORT_DRM_PROPERTY_FOR_BRIGHTNESS:Z
 
     if-eqz p2, :cond_0
 
-    .line 181
     invoke-virtual {p3, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->createDisplayBrightnessMonitor(Landroid/content/Context;)Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayBrightnessMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;
 
-    .line 183
     :cond_0
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
@@ -304,14 +275,12 @@
 .method private synthetic lambda$addMaskView$1(Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 0
 
-    .line 774
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     move-result-object p0
 
-    .line 775
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getOpticalSensorHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;
 
     move-result-object p0
@@ -324,14 +293,12 @@
 .method private synthetic lambda$handleTpaCommand$10()V
     .locals 0
 
-    .line 1083
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 1085
     invoke-interface {p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semUpdateTpaAction()V
 
     :cond_0
@@ -341,7 +308,6 @@
 .method private synthetic lambda$handleTpaCommand$11([Ljava/lang/String;)V
     .locals 2
 
-    .line 1091
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
@@ -350,19 +316,16 @@
 
     const/4 v0, 0x2
 
-    .line 1094
     aget-object v0, p1, v0
 
     const/4 v1, 0x3
 
-    .line 1095
     aget-object p1, p1, v1
 
     filled-new-array {v0, p1}, [Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1096
     invoke-interface {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semSetTpaRequestCommandAction([Ljava/lang/String;)V
 
     :cond_0
@@ -372,14 +335,12 @@
 .method private synthetic lambda$handleTpaCommand$9(Z)V
     .locals 0
 
-    .line 1074
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 1076
     invoke-interface {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semSetTpaHalEnabled(Z)V
 
     :cond_0
@@ -389,7 +350,6 @@
 .method private synthetic lambda$openTrustAppSession$3()V
     .locals 3
 
-    .line 816
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getSysUiManager()Lcom/android/server/biometrics/SemBiometricSysUiManager;
@@ -410,7 +370,6 @@
 .method private synthetic lambda$registerDisplayBrightnessCallback$7(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;)V
     .locals 0
 
-    .line 890
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayBrightnessCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;
 
     return-void
@@ -419,7 +378,6 @@
 .method private synthetic lambda$registerDisplayStateCallback$5(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;)V
     .locals 0
 
-    .line 876
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayStateCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;
 
     return-void
@@ -428,14 +386,12 @@
 .method private synthetic lambda$removeMaskView$2(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 784
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     move-result-object p0
 
-    .line 785
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getOpticalSensorHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;
 
     move-result-object p0
@@ -448,14 +404,12 @@
 .method private synthetic lambda$setCalibrationMode$4(Landroid/os/IBinder;Ljava/lang/String;I)V
     .locals 0
 
-    .line 864
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     move-result-object p0
 
-    .line 865
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getOpticalSensorHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;
 
     move-result-object p0
@@ -468,33 +422,27 @@
 .method private synthetic lambda$setScreenStatusFromKeyguard$0(Z)V
     .locals 1
 
-    .line 532
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_0
 
-    .line 533
     iget-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIsScreenOn:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 534
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleQcomForceQDB()V
 
-    .line 537
     :cond_0
     iput-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIsScreenOn:Z
 
-    .line 538
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_2
 
     if-eqz p1, :cond_1
 
-    .line 540
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -505,7 +453,6 @@
 
     goto :goto_0
 
-    .line 542
     :cond_1
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -525,7 +472,6 @@
 
     const/4 v0, 0x0
 
-    .line 899
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayBrightnessCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;
 
     return-void
@@ -536,7 +482,6 @@
 
     const/4 v0, 0x0
 
-    .line 885
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayStateCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;
 
     return-void
@@ -547,7 +492,6 @@
 .method public acquireDvfs(I)V
     .locals 2
 
-    .line 1146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -566,7 +510,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1147
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricBoostingManager;->getInstance()Lcom/android/server/biometrics/SemBiometricBoostingManager;
 
     move-result-object v0
@@ -581,7 +524,6 @@
 .method public addMaskView(Landroid/os/IBinder;Ljava/lang/String;)Landroid/os/IBinder;
     .locals 2
 
-    .line 771
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -600,19 +542,16 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 772
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_0
 
-    .line 773
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->get()Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->cancelUnbind()V
 
-    .line 774
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$$ExternalSyntheticLambda11;
@@ -628,7 +567,6 @@
 .method public applyAndClearIFAAFlag(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1056
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIFAAFlag:Landroid/util/Pair;
 
     if-eqz v0, :cond_0
@@ -643,7 +581,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1057
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -662,7 +599,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1058
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIFAAFlag:Landroid/util/Pair;
 
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -679,7 +615,6 @@
 
     const/4 p1, 0x0
 
-    .line 1059
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIFAAFlag:Landroid/util/Pair;
 
     :cond_0
@@ -689,12 +624,10 @@
 .method public canChangeDeviceColorMode()Z
     .locals 1
 
-    .line 581
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_0
 
-    .line 582
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -705,7 +638,6 @@
 
     move-result-object p0
 
-    .line 583
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->canChangeDeviceColorMode()Z
 
     move-result p0
@@ -721,7 +653,6 @@
 .method public canUseFingerprint(ZZ)Landroid/util/Pair;
     .locals 6
 
-    .line 234
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -734,7 +665,6 @@
 
     if-nez p2, :cond_0
 
-    .line 237
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
@@ -742,34 +672,28 @@
 
     if-eqz v4, :cond_0
 
-    .line 239
     invoke-interface {v4}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetCurrentClient()Lcom/android/server/biometrics/sensors/BaseClientMonitor;
 
     move-result-object v4
 
-    .line 240
     instance-of v5, v4, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
     if-eqz v5, :cond_0
 
-    .line 241
     check-cast v4, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
-    .line 242
     invoke-virtual {v4}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 243
     invoke-virtual {v4, v2}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->semHasPromptPrivilegedAttr(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 244
     invoke-virtual {v4}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v4
@@ -780,7 +704,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 245
     new-instance p0, Landroid/util/Pair;
 
     const/4 p1, 0x5
@@ -797,19 +720,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 275
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 250
     :cond_0
     :try_start_1
     sget-boolean v4, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v4, :cond_4
 
-    .line 252
     iget-object v4, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Lcom/android/server/biometrics/Utils;->isOneHandMode(Landroid/content/Context;)Z
@@ -822,7 +742,6 @@
 
     if-nez p2, :cond_1
 
-    .line 254
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
@@ -833,7 +752,6 @@
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
-    .line 255
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -844,15 +762,12 @@
 
     move-result-object p0
 
-    .line 254
     invoke-static {p1, p2, p0, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Landroid/os/Looper;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0
 
-    .line 256
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
-    .line 259
     :cond_1
     new-instance p0, Landroid/util/Pair;
 
@@ -862,7 +777,6 @@
 
     const/16 p2, 0x1389
 
-    .line 260
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -871,12 +785,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 275
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
 
-    .line 264
     :cond_2
     :try_start_2
     iget-object v4, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
@@ -891,7 +803,6 @@
 
     if-nez p2, :cond_3
 
-    .line 266
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     const/4 p2, 0x1
@@ -900,7 +811,6 @@
 
     const v4, 0x1040cff
 
-    .line 267
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -909,12 +819,10 @@
 
     const v4, 0x1040d02
 
-    .line 266
     invoke-virtual {p1, v4, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 268
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
@@ -929,7 +837,6 @@
 
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
-    .line 270
     :cond_3
     new-instance p0, Landroid/util/Pair;
 
@@ -939,7 +846,6 @@
 
     const/16 p2, 0x138b
 
-    .line 271
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -948,7 +854,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 275
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -956,7 +861,6 @@
     :cond_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 277
     new-instance p0, Landroid/util/Pair;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -974,17 +878,14 @@
     :catchall_0
     move-exception p0
 
-    .line 275
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 276
     throw p0
 .end method
 
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 1105
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1004,14 +905,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1107
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getAllProperties()Ljava/util/List;
 
     move-result-object v0
 
-    .line 1108
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1029,7 +928,6 @@
 
     check-cast v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 1109
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1050,22 +948,18 @@
 
     goto :goto_0
 
-    .line 1112
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mGestureManager:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
     if-eqz v0, :cond_1
 
-    .line 1113
     invoke-virtual {v0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->dump(Ljava/io/PrintWriter;)V
 
-    .line 1115
     :cond_1
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_2
 
-    .line 1116
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1078,7 +972,6 @@
 
     invoke-virtual {v0, p1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->dump(Ljava/io/PrintWriter;Landroid/util/Pair;)V
 
-    .line 1118
     :cond_2
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
@@ -1093,7 +986,6 @@
     :catch_0
     move-exception p0
 
-    .line 1120
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1123,7 +1015,6 @@
 .method public forceCBGE()V
     .locals 2
 
-    .line 554
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1132,7 +1023,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 556
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -1156,14 +1046,12 @@
 .method public final getCurrentClient()Lcom/android/server/biometrics/sensors/BaseClientMonitor;
     .locals 0
 
-    .line 1156
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 1158
     invoke-interface {p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetCurrentClient()Lcom/android/server/biometrics/sensors/BaseClientMonitor;
 
     move-result-object p0
@@ -1179,14 +1067,12 @@
 .method public getDaemonVersion()Ljava/lang/String;
     .locals 0
 
-    .line 614
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 616
     invoke-interface {p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetDaemonSdkVersion()Ljava/lang/String;
 
     move-result-object p0
@@ -1202,14 +1088,12 @@
 .method public getRemainingLockoutTime(I)I
     .locals 0
 
-    .line 572
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 574
     invoke-interface {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetRemainingLockoutTime(I)I
 
     move-result p0
@@ -1225,14 +1109,12 @@
 .method public getSecurityLevel()I
     .locals 0
 
-    .line 590
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 592
     invoke-interface {p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetSecurityLevel()I
 
     move-result p0
@@ -1248,22 +1130,18 @@
 .method public getSensorAreaMarginFromBottomForFod()I
     .locals 1
 
-    .line 731
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 732
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getCurrentClient()Lcom/android/server/biometrics/sensors/BaseClientMonitor;
 
     move-result-object v0
 
-    .line 733
     instance-of v0, v0, Lcom/android/server/biometrics/sensors/AcquisitionClient;
 
     if-eqz v0, :cond_0
 
-    .line 734
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1272,7 +1150,6 @@
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
-    .line 735
     invoke-virtual {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;->getSensorAreaMarginFromBottomForFod(Landroid/content/Context;)I
 
     move-result p0
@@ -1288,7 +1165,6 @@
 .method public getSensorInfo(I)Ljava/lang/String;
     .locals 1
 
-    .line 623
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object p0
@@ -1297,7 +1173,6 @@
 
     const/4 v0, 0x0
 
-    .line 625
     invoke-interface {p0, p1, v0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semGetSensorInfo(IZ)Ljava/lang/String;
 
     move-result-object p0
@@ -1313,7 +1188,6 @@
 .method public getSensorStatus()I
     .locals 3
 
-    .line 799
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_USE_AOSP_HAL:Z
 
     if-eqz v0, :cond_0
@@ -1322,7 +1196,6 @@
 
     return p0
 
-    .line 803
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
@@ -1332,7 +1205,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 805
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -1356,11 +1228,9 @@
     :cond_1
     const/4 v0, -0x2
 
-    .line 808
     :goto_0
     iput v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLatestSensorStatus:I
 
-    .line 809
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getBioAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
@@ -1375,7 +1245,6 @@
 .method public getSensorTestResult([B)I
     .locals 7
 
-    .line 518
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1384,7 +1253,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 520
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     move-object v1, v0
@@ -1422,7 +1290,6 @@
 .method public final getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
     .locals 0
 
-    .line 396
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1431,7 +1298,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 398
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -1447,7 +1313,6 @@
 .method public final getSingleProvider()Landroid/util/Pair;
     .locals 0
 
-    .line 405
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1460,7 +1325,6 @@
 .method public getTrustAppVersion()Ljava/lang/String;
     .locals 7
 
-    .line 655
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1473,7 +1337,6 @@
 
     new-array v0, v0, [B
 
-    .line 658
     iget-object v1, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -1500,17 +1363,14 @@
 
     if-lez p0, :cond_0
 
-    .line 661
     invoke-static {v0, p0}, Lcom/android/server/biometrics/Utils;->byteArrayToString([BI)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 662
     sget-boolean v0, Lcom/android/server/biometrics/Utils;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 663
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1534,7 +1394,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 667
     :cond_1
     :goto_0
     invoke-static {p0}, Landroid/text/TextUtils;->emptyIfNull(Ljava/lang/String;)Ljava/lang/String;
@@ -1547,14 +1406,12 @@
 .method public getUdfpsSensorArea(IILandroid/graphics/Point;)Landroid/graphics/Rect;
     .locals 1
 
-    .line 718
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_1
 
     if-nez p1, :cond_0
 
-    .line 721
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1569,7 +1426,6 @@
 
     return-object p0
 
-    .line 723
     :cond_0
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -1585,7 +1441,6 @@
 
     return-object p0
 
-    .line 726
     :cond_1
     new-instance p0, Landroid/graphics/Rect;
 
@@ -1597,7 +1452,6 @@
 .method public getUserIdList()[Ljava/lang/String;
     .locals 7
 
-    .line 599
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -1610,7 +1464,6 @@
 
     new-array v0, v0, [B
 
-    .line 602
     iget-object v1, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -1637,7 +1490,6 @@
 
     if-lez p0, :cond_0
 
-    .line 605
     new-instance v1, Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -1648,7 +1500,6 @@
 
     const-string p0, ":"
 
-    .line 606
     invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -1664,12 +1515,10 @@
 .method public final handleActionScreenOff()V
     .locals 1
 
-    .line 455
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 456
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -1685,12 +1534,10 @@
 .method public final handleActionScreenOn()V
     .locals 1
 
-    .line 461
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 462
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -1699,7 +1546,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->screenOn()V
 
-    .line 463
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->unregisterAodController()V
 
     :cond_0
@@ -1713,12 +1559,10 @@
 
     const/16 v1, -0x2710
 
-    .line 433
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 434
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1741,7 +1585,6 @@
 
     return-void
 
-    .line 439
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -1755,7 +1598,6 @@
 
     return-void
 
-    .line 443
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
@@ -1780,23 +1622,19 @@
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
-    .line 444
     invoke-interface {v1, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->onUserRemoved(I)V
 
     goto :goto_0
 
-    .line 447
     :cond_2
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_3
 
-    .line 448
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mFpProtectiveFilmGuide:Lcom/android/server/biometrics/sensors/fingerprint/SemFpProtectiveFilmGuide;
 
     if-eqz p0, :cond_3
 
-    .line 449
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpProtectiveFilmGuide;->onUserRemoved(I)V
 
     :cond_3
@@ -1823,13 +1661,11 @@
     :cond_0
     long-to-int p1, p2
 
-    .line 1017
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->acquireDvfs(I)V
 
     goto :goto_1
 
-    .line 1020
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->releaseDvfs()V
 
@@ -1840,7 +1676,6 @@
 .method public final handleBioSysHwLightSourceControl(I)V
     .locals 1
 
-    .line 1006
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_HW_LIGHT_SOURCE:Z
 
     if-eqz v0, :cond_1
@@ -1849,7 +1684,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1008
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1864,7 +1698,6 @@
 
     goto :goto_0
 
-    .line 1010
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -1886,7 +1719,6 @@
 .method public final handleBioSysOpticalControl(IJ)V
     .locals 1
 
-    .line 1025
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_1
@@ -1895,7 +1727,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1027
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1906,7 +1737,6 @@
 
     move-result-object p0
 
-    .line 1028
     invoke-virtual {p0, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->restoreFunctionForLightSource(J)V
 
     goto :goto_0
@@ -1914,7 +1744,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1030
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -1925,7 +1754,6 @@
 
     move-result-object p0
 
-    .line 1031
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->disableFunctionForLightSource()V
 
     :cond_1
@@ -1940,21 +1768,18 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 995
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz p1, :cond_0
 
     const-string p1, "BSS"
 
-    .line 996
     invoke-static {p2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 997
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -1963,7 +1788,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->doNotEnterHalfMode()V
 
-    .line 999
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -1982,7 +1806,6 @@
 
     if-ne p1, p2, :cond_2
 
-    .line 1001
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -1999,7 +1822,6 @@
 .method public handleBioSysUiRequest(IIJLjava/lang/String;)I
     .locals 4
 
-    .line 904
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2032,7 +1854,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 906
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -2049,7 +1870,6 @@
 
     goto/16 :goto_4
 
-    .line 949
     :pswitch_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
@@ -2065,43 +1885,36 @@
     :cond_0
     move v2, v3
 
-    .line 950
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->keepBindService(Z)V
 
     goto :goto_4
 
-    .line 946
     :pswitch_1
     iput-wide p3, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIconDrawnTime:J
 
     goto :goto_4
 
-    .line 916
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->requestAodGone()V
 
     goto :goto_4
 
-    .line 940
     :pswitch_3
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleTouchEvent(IJ)V
 
     goto :goto_4
 
-    .line 937
     :pswitch_4
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleBioSysDvfsControl(IJ)V
 
     goto :goto_4
 
-    .line 934
     :pswitch_5
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleBioSysOpticalControl(IJ)V
 
     goto :goto_4
 
-    .line 931
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIsBouncer:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -2111,13 +1924,11 @@
 
     goto :goto_4
 
-    .line 922
     :pswitch_7
     invoke-virtual {p0, p2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleBioSysHwLightSourceControl(I)V
 
     goto :goto_4
 
-    .line 919
     :pswitch_8
     invoke-virtual {p0, p2, p5}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleBioSysTspControl(ILjava/lang/String;)V
 
@@ -2131,7 +1942,6 @@
     :cond_1
     move v2, v3
 
-    .line 913
     :goto_1
     invoke-virtual {p0, v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->requestDozeHLPM(Z)V
 
@@ -2145,19 +1955,16 @@
     :cond_2
     move v2, v3
 
-    .line 910
     :goto_2
     invoke-virtual {p0, v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->requestDozeMode(Z)V
 
     goto :goto_4
 
-    .line 925
     :pswitch_b
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz p1, :cond_5
 
-    .line 926
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -2175,7 +1982,6 @@
     :cond_3
     move v2, v3
 
-    .line 927
     :goto_3
     invoke-virtual {p0, v2}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->setDisplayStateLimit(Z)V
 
@@ -2186,13 +1992,11 @@
 
     goto :goto_5
 
-    .line 943
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->handleQcomForceQDB()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 954
     :cond_5
     :goto_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -2202,7 +2006,6 @@
     :goto_5
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 955
     throw p0
 
     :pswitch_data_0
@@ -2225,12 +2028,10 @@
 .method public final handleQcomForceQDB()V
     .locals 2
 
-    .line 1164
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_0
 
-    .line 1165
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -2239,7 +2040,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1167
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -2263,7 +2063,6 @@
 .method public final handleTouchEvent(IJ)V
     .locals 4
 
-    .line 1126
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -2274,7 +2073,6 @@
 
     return-void
 
-    .line 1130
     :cond_0
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -2290,7 +2088,6 @@
 
     goto :goto_0
 
-    .line 1131
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
@@ -2301,7 +2098,6 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 1133
     iget-object p1, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -2320,12 +2116,10 @@
 
     invoke-interface {p1, v1, v2, p0, v3}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->onPointerDown(JILandroid/hardware/biometrics/fingerprint/PointerContext;)V
 
-    .line 1135
     instance-of p0, v0, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
     if-eqz p0, :cond_3
 
-    .line 1136
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object p0
@@ -2353,7 +2147,6 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 1141
     iget-object p1, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -2382,7 +2175,6 @@
 
     const/4 v0, 0x1
 
-    .line 1071
     aget-object v1, p2, v0
 
     const-string/jumbo v2, "mode"
@@ -2395,7 +2187,6 @@
 
     const/4 v0, 0x2
 
-    .line 1072
     aget-object p2, p2, v0
 
     const-string v0, "1"
@@ -2404,7 +2195,6 @@
 
     move-result p2
 
-    .line 1073
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -2419,7 +2209,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1079
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2441,7 +2230,6 @@
     :cond_0
     const-string/jumbo v1, "update"
 
-    .line 1081
     aget-object v2, p2, v0
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2450,7 +2238,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1082
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object p2
@@ -2467,7 +2254,6 @@
 
     const-string/jumbo p0, "tpa mode: update action"
 
-    .line 1088
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
@@ -2475,7 +2261,6 @@
     :cond_1
     const-string v1, "command"
 
-    .line 1089
     aget-object v0, p2, v0
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2484,7 +2269,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1090
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -2501,7 +2285,6 @@
 
     const-string/jumbo p0, "tpa mode: setTpaRequestCommands"
 
-    .line 1099
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_2
@@ -2528,19 +2311,16 @@
 
     return p0
 
-    .line 497
     :cond_0
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_WOF_OPTION_DEFAULT_OFF:Z
 
     return p0
 
-    .line 495
     :cond_1
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SWIPE_ENROLL:Z
 
     return p0
 
-    .line 493
     :cond_2
     sget-boolean p0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_GESTURE_MODE:Z
 
@@ -2550,7 +2330,6 @@
 .method public isEnrollSession(I)Z
     .locals 0
 
-    .line 1038
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mEnrollSessionMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->isEnrollSession(I)Z
@@ -2563,7 +2342,6 @@
 .method public isTemplateDbCorrupted()Z
     .locals 7
 
-    .line 792
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -2572,7 +2350,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 793
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     move-object v1, v0
@@ -2619,7 +2396,6 @@
 .method public isTpaCommand([Ljava/lang/String;)Z
     .locals 2
 
-    .line 1064
     sget-boolean p0, Landroid/os/Build;->IS_USER:Z
 
     const/4 v0, 0x0
@@ -2628,7 +2404,6 @@
 
     return v0
 
-    .line 1067
     :cond_0
     array-length p0, p1
 
@@ -2655,19 +2430,16 @@
 .method public moveSensorIconInDisplay()V
     .locals 4
 
-    .line 743
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getCurrentClient()Lcom/android/server/biometrics/sensors/BaseClientMonitor;
 
     move-result-object v0
 
-    .line 744
     instance-of v1, v0, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
     if-nez v1, :cond_0
 
     return-void
 
-    .line 747
     :cond_0
     check-cast v0, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
@@ -2677,7 +2449,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 748
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getSysUiManager()Lcom/android/server/biometrics/SemBiometricSysUiManager;
@@ -2686,7 +2457,6 @@
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
-    .line 750
     invoke-virtual {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
 
     move-result-object v1
@@ -2705,10 +2475,8 @@
 
     const/4 v3, 0x0
 
-    .line 748
     invoke-virtual {v0, v2, v3, v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendCommandIfSessionExist(IILandroid/os/Bundle;)V
 
-    .line 751
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getBioAnalyticsManager()Lcom/android/server/biometrics/SemBioAnalyticsManager;
@@ -2723,7 +2491,6 @@
 
     const/4 v3, 0x0
 
-    .line 752
     invoke-virtual {p0, v2, v3, v0, v1}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLog(Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_1
@@ -2733,7 +2500,6 @@
 .method public onAllAuthenticatorsRegistered()V
     .locals 3
 
-    .line 281
     sget-boolean v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -2742,10 +2508,8 @@
 
     const-string/jumbo v1, "onAllAuthenticatorsRegistered: "
 
-    .line 282
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
@@ -2770,13 +2534,10 @@
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
-    .line 285
     invoke-interface {v1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semAddHalLifecycleListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpHalLifecycleListener;)V
 
-    .line 286
     invoke-interface {v1, p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semAddAuthenticationListener(Lcom/android/server/biometrics/sensors/fingerprint/SemFpAuthenticationListener;)V
 
-    .line 287
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mEnrollSessionMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;
 
     invoke-virtual {v2, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->onProviderRegistered(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
@@ -2798,7 +2559,6 @@
 
     if-ne p4, p1, :cond_0
 
-    .line 194
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
@@ -2812,17 +2572,14 @@
 .method public final onBootActivityManagerReady()V
     .locals 2
 
-    .line 306
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->start()V
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     invoke-virtual {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->registerCallback(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;)V
 
-    .line 308
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_0
@@ -2831,21 +2588,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 310
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;->start()V
 
-    .line 311
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayBrightnessMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;
 
     invoke-virtual {v0, p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor;->registerCallback(Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayMonitor$Callback;)V
 
-    .line 313
     :cond_0
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_1
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -2856,7 +2609,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->onBootActivityManagerReady(Landroid/content/Context;)V
 
-    .line 315
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -2874,7 +2626,6 @@
 .method public final onBootBootCompleted()V
     .locals 2
 
-    .line 339
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getAllProperties()Ljava/util/List;
@@ -2898,7 +2649,6 @@
 
     check-cast v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 340
     iget v1, v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
 
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getInstance(I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
@@ -2909,7 +2659,6 @@
 
     goto :goto_0
 
-    .line 343
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
@@ -2927,12 +2676,10 @@
 .method public onBootPhase(I)V
     .locals 2
 
-    .line 293
     sget-boolean v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2956,7 +2703,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 297
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->onBootActivityManagerReady()V
 
     goto :goto_0
@@ -2966,7 +2712,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 299
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->onBootThirdPartyAppsCanStart()V
 
     goto :goto_0
@@ -2976,7 +2721,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 301
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->onBootBootCompleted()V
 
     :cond_3
@@ -2987,10 +2731,8 @@
 .method public final onBootThirdPartyAppsCanStart()V
     .locals 3
 
-    .line 320
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->registerPersistentBroadcast()V
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -2999,50 +2741,42 @@
 
     if-eqz v0, :cond_0
 
-    .line 325
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startGestureManagerIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 326
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startSpenConstrainHandlerIfNeeded(Landroid/util/Pair;)V
 
-    .line 327
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startWirelessPowerMonitorIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 328
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startOneHandModeMonitorIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 329
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startProtectiveFilmGuideIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 330
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     invoke-virtual {p0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->startScreenNotifierIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 331
     sget-boolean v1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v1, :cond_0
 
-    .line 332
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsHelper()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsHelper;
@@ -3063,7 +2797,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 333
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -3072,7 +2805,6 @@
 
     move-result-object v0
 
-    .line 332
     invoke-virtual {v1, p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsOpticalHelper;->onBootThirdPartyAppsCanStart(Landroid/content/Context;[Ljava/lang/String;)V
 
     :cond_0
@@ -3082,12 +2814,10 @@
 .method public onBrightnessChanged(F)V
     .locals 0
 
-    .line 223
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayBrightnessCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;
 
     if-eqz p0, :cond_0
 
-    .line 225
     :try_start_0
     invoke-interface {p0, p1}, Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;->onBrightnessChanged(F)V
     :try_end_0
@@ -3100,7 +2830,6 @@
 
     const-string/jumbo p1, "onBrightnessChanged: failed to invoke onBrightnessChangedCallback"
 
-    .line 227
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -3111,12 +2840,10 @@
 .method public onFinishDisplayState(III)V
     .locals 0
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayStateCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;
 
     if-eqz p0, :cond_0
 
-    .line 214
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;->onFinish(III)V
     :try_end_0
@@ -3129,7 +2856,6 @@
 
     const-string/jumbo p1, "onFinishDisplayState: failed to invoke onFinishCallback"
 
-    .line 216
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -3140,19 +2866,16 @@
 .method public onHalStarted(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStartDisplayState(III)V
     .locals 0
 
-    .line 201
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mSysUiDisplayStateCallback:Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;
 
     if-eqz p0, :cond_0
 
-    .line 203
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;->onStart(III)V
     :try_end_0
@@ -3165,7 +2888,6 @@
 
     const-string/jumbo p1, "onStartDisplayState: failed to invoke onStartCallback"
 
-    .line 205
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -3176,12 +2898,10 @@
 .method public openTrustAppSession()Z
     .locals 4
 
-    .line 815
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_0
 
-    .line 816
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$$ExternalSyntheticLambda2;
@@ -3190,7 +2910,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 820
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
@@ -3216,7 +2935,6 @@
 
     check-cast v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;
 
-    .line 821
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mEnrollSessionMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;
 
     iget v3, v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
@@ -3227,7 +2945,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 822
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mEnrollSessionMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;
 
     iget v1, v1, Landroid/hardware/fingerprint/FingerprintSensorPropertiesInternal;->sensorId:I
@@ -3236,7 +2953,6 @@
 
     goto :goto_0
 
-    .line 825
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
@@ -3248,7 +2964,6 @@
 
     return p0
 
-    .line 829
     :cond_3
     invoke-interface {p0}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->semOpenTzSession()V
 
@@ -3260,7 +2975,6 @@
 .method public pauseEnroll(I)Z
     .locals 0
 
-    .line 835
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getProviderForSensor(I)Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
@@ -3271,7 +2985,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 837
     invoke-interface {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->pauseEnroll(I)V
 
     :cond_0
@@ -3285,7 +2998,6 @@
 
     const-string v0, "FingerprintService.Ext"
 
-    .line 632
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3306,31 +3018,26 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 634
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     if-nez v1, :cond_0
 
-    .line 635
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-direct {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
-    .line 637
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->registerController(Lcom/samsung/android/bio/fingerprint/ISemFingerprintAodController;)V
 
-    .line 638
     monitor-exit v0
 
     return-void
@@ -3348,7 +3055,6 @@
 .method public registerDisplayBrightnessCallback(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayBrightnessCallback;)I
     .locals 2
 
-    .line 890
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -3363,12 +3069,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 891
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayBrightnessMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;
 
     if-eqz p0, :cond_0
 
-    .line 892
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayBrightnessMonitor;->getBrightness()I
 
     move-result p0
@@ -3384,7 +3088,6 @@
 .method public registerDisplayStateCallback(Lcom/samsung/android/biometrics/ISemBiometricSysUiDisplayStateCallback;)I
     .locals 2
 
-    .line 876
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -3399,12 +3102,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 877
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mDisplayStateMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;
 
     if-eqz p0, :cond_0
 
-    .line 878
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemBiometricDisplayStateMonitor;->getDisplayState()I
 
     move-result p0
@@ -3420,14 +3121,12 @@
 .method public final registerIntentForScreenOnOffAndTspClientIfNeeded()V
     .locals 4
 
-    .line 474
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 477
     :cond_0
     invoke-static {}, Lcom/android/server/biometrics/Utils;->isFactoryBinary()Z
 
@@ -3437,7 +3136,6 @@
 
     return-void
 
-    .line 480
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
@@ -3449,22 +3147,18 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;->enable(I)V
 
-    .line 482
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
-    .line 483
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 484
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 485
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mPersistentBroadCastReceiver:Landroid/content/BroadcastReceiver;
@@ -3481,7 +3175,6 @@
 .method public final registerIntentForUserRemoved()V
     .locals 4
 
-    .line 468
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mPersistentBroadCastReceiver:Landroid/content/BroadcastReceiver;
@@ -3504,14 +3197,12 @@
 .method public final registerPersistentBroadcast()V
     .locals 1
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mPersistentBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 412
     :cond_0
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$1;
 
@@ -3519,10 +3210,8 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mPersistentBroadCastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 428
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->registerIntentForUserRemoved()V
 
-    .line 429
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->registerIntentForScreenOnOffAndTspClientIfNeeded()V
 
     return-void
@@ -3531,7 +3220,6 @@
 .method public releaseDvfs()V
     .locals 2
 
-    .line 1151
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricBoostingManager;->getInstance()Lcom/android/server/biometrics/SemBiometricBoostingManager;
 
     move-result-object v0
@@ -3548,7 +3236,6 @@
 .method public removeMaskView(Landroid/os/IBinder;Ljava/lang/String;)I
     .locals 2
 
-    .line 782
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3567,12 +3254,10 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     sget-boolean p2, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz p2, :cond_0
 
-    .line 784
     iget-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$$ExternalSyntheticLambda6;
@@ -3590,21 +3275,17 @@
 .method public final requestAodGone()V
     .locals 1
 
-    .line 986
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 987
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     if-eqz p0, :cond_0
 
-    .line 988
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->hideAodScreen()V
 
-    .line 990
     :cond_0
     monitor-exit v0
 
@@ -3623,18 +3304,15 @@
 .method public final requestDozeHLPM(Z)V
     .locals 2
 
-    .line 973
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 974
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     if-nez v1, :cond_0
 
-    .line 975
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-direct {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;-><init>()V
@@ -3644,20 +3322,17 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 978
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->turnOnDozeHlpmMode()V
 
     goto :goto_0
 
-    .line 980
     :cond_1
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->turnOffDozeHlpmMode()V
 
-    .line 982
     :goto_0
     monitor-exit v0
 
@@ -3676,18 +3351,15 @@
 .method public final requestDozeMode(Z)V
     .locals 2
 
-    .line 960
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 961
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     if-nez v1, :cond_0
 
-    .line 962
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-direct {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;-><init>()V
@@ -3697,20 +3369,17 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 965
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->turnOnDozeMode()V
 
     goto :goto_0
 
-    .line 967
     :cond_1
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->turnOffDozeMode()V
 
-    .line 969
     :goto_0
     monitor-exit v0
 
@@ -3729,7 +3398,6 @@
 .method public requestProcessFIDO(I[B[B)I
     .locals 1
 
-    .line 563
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -3738,7 +3406,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 565
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -3766,7 +3433,6 @@
 .method public resumeEnroll(I)Z
     .locals 0
 
-    .line 844
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getProviderForSensor(I)Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
@@ -3777,7 +3443,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 846
     invoke-interface {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;->resumeEnroll(I)V
 
     :cond_0
@@ -3789,7 +3454,6 @@
 .method public revokeChallengeInternally(I)V
     .locals 0
 
-    .line 1043
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mEnrollSessionMonitor:Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;
 
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpEnrollSessionMonitor;->revokeChallenge(I)V
@@ -3800,14 +3464,12 @@
 .method public runSensorTest(ILandroid/os/IBinder;IILcom/samsung/android/bio/fingerprint/ISemFingerprintRequestCallback;)I
     .locals 6
 
-    .line 507
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->getServiceProvider()Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 509
     new-instance v5, Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     invoke-direct {v5, p5}, Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;-><init>(Lcom/samsung/android/bio/fingerprint/ISemFingerprintRequestCallback;)V
@@ -3835,12 +3497,10 @@
 .method public setBouncerScreen(I)V
     .locals 2
 
-    .line 759
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_1
 
-    .line 760
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIsBouncer:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -3855,7 +3515,6 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 761
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getSysUiManager()Lcom/android/server/biometrics/SemBiometricSysUiManager;
@@ -3875,7 +3534,6 @@
 .method public setCalibrationMode(Landroid/os/IBinder;ILjava/lang/String;)I
     .locals 2
 
-    .line 861
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3900,12 +3558,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz v0, :cond_0
 
-    .line 863
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$$ExternalSyntheticLambda7;
@@ -3923,7 +3579,6 @@
 .method public setFlagForIFAA(ILjava/lang/String;)V
     .locals 2
 
-    .line 1048
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3948,14 +3603,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1049
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1050
     new-instance v0, Landroid/util/Pair;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3973,12 +3626,10 @@
 .method public setFodStrictMode(Z)V
     .locals 2
 
-    .line 853
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 854
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3997,7 +3648,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->getUdfpsTspManager()Lcom/android/server/biometrics/sensors/fingerprint/SemUdfpsTspManager;
@@ -4013,7 +3663,6 @@
 .method public setScreenStatusFromKeyguard(Z)V
     .locals 3
 
-    .line 528
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4032,7 +3681,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
     invoke-static {}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->get()Lcom/android/server/biometrics/SemBiometricSysUiManager;
 
     move-result-object v0
@@ -4043,7 +3691,6 @@
 
     invoke-virtual {v0, v2, p1, v1}, Lcom/android/server/biometrics/SemBiometricSysUiManager;->sendCommand(IILandroid/os/Bundle;)V
 
-    .line 531
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$$ExternalSyntheticLambda0;
@@ -4054,7 +3701,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 548
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->unregisterAodController()V
 
     :cond_0
@@ -4064,12 +3710,10 @@
 .method public final startGestureManagerIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 2
 
-    .line 374
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_GESTURE_MODE:Z
 
     if-eqz v0, :cond_0
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
@@ -4080,7 +3724,6 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mGestureManager:Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;
 
-    .line 376
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpGestureManager;->start()V
 
     :cond_0
@@ -4090,22 +3733,18 @@
 .method public final startOneHandModeMonitorIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 1
 
-    .line 366
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_0
 
-    .line 367
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
-    .line 368
     invoke-virtual {v0, p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->createOneHandModeMonitor(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)Lcom/android/server/biometrics/sensors/fingerprint/SemFpOneHandModeMonitor;
 
     move-result-object p0
 
-    .line 369
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpOneHandModeMonitor;->start()V
 
     :cond_0
@@ -4115,12 +3754,10 @@
 .method public final startProtectiveFilmGuideIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 2
 
-    .line 381
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     if-eqz v0, :cond_0
 
-    .line 382
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
@@ -4131,10 +3768,8 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mFpProtectiveFilmGuide:Lcom/android/server/biometrics/sensors/fingerprint/SemFpProtectiveFilmGuide;
 
-    .line 383
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpProtectiveFilmGuide;->startMonitoring()V
 
-    .line 384
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mFpProtectiveFilmGuide:Lcom/android/server/biometrics/sensors/fingerprint/SemFpProtectiveFilmGuide;
 
     const/4 p1, 0x0
@@ -4148,7 +3783,6 @@
 .method public startRequest(Landroid/os/IBinder;I[B[BIILcom/samsung/android/bio/fingerprint/ISemFingerprintRequestCallback;Ljava/lang/String;I)I
     .locals 6
 
-    .line 688
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4183,7 +3817,6 @@
 
     invoke-static {p6, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 690
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
     invoke-virtual {p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getSingleProvider()Landroid/util/Pair;
@@ -4194,7 +3827,6 @@
 
     const-string/jumbo p0, "startRequest: No provider"
 
-    .line 692
     invoke-static {p6, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x1
@@ -4206,7 +3838,6 @@
 
     if-ne p2, p6, :cond_4
 
-    .line 698
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;
@@ -4215,26 +3846,22 @@
 
     move-result-object p1
 
-    .line 700
     instance-of p1, p1, Lcom/android/server/biometrics/sensors/AuthenticationClient;
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_3
 
-    .line 701
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     const-wide/16 p3, 0x2710
 
     if-eqz p1, :cond_1
 
-    .line 702
     iget-wide p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mCaptureStartedTime:J
 
     add-long/2addr p0, p3
 
-    .line 703
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p3
@@ -4246,18 +3873,15 @@
 
     goto :goto_1
 
-    .line 704
     :cond_1
     sget-boolean p1, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     if-eqz p1, :cond_2
 
-    .line 705
     iget-wide p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mIconDrawnTime:J
 
     add-long/2addr p0, p3
 
-    .line 706
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p3
@@ -4267,7 +3891,6 @@
     :cond_2
     move p0, p2
 
-    .line 708
     :goto_1
     invoke-static {p0, p2}, Ljava/lang/Math;->max(II)I
 
@@ -4276,7 +3899,6 @@
     :cond_3
     return p2
 
-    .line 712
     :cond_4
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
@@ -4284,7 +3906,6 @@
 
     invoke-static {p0, p6}, Lcom/android/server/biometrics/Utils;->checkPermission(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 713
     iget-object p0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     move-object v0, p0
@@ -4317,14 +3938,12 @@
 .method public final startScreenNotifierIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 1
 
-    .line 389
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;-><init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 391
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpScreenStatusNotifier;->start()V
 
     return-void
@@ -4333,12 +3952,10 @@
 .method public final startSpenConstrainHandlerIfNeeded(Landroid/util/Pair;)V
     .locals 1
 
-    .line 347
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
 
     if-eqz v0, :cond_1
 
-    .line 348
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_LIMITATION_SPEN_CHARGER:Z
 
     if-nez v0, :cond_0
@@ -4347,18 +3964,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 350
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mInjector:Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
-    .line 351
     invoke-virtual {v0, p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl$Injector;->createSpenConstraintHandler(Landroid/content/Context;Landroid/util/Pair;)Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;
 
     move-result-object p0
 
-    .line 352
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpSpenConstraintHandler;->start()V
 
     :cond_1
@@ -4368,19 +3982,16 @@
 .method public final startWirelessPowerMonitorIfNeeded(Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
     .locals 1
 
-    .line 358
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_LIMITATION_WIRELESS_CHARGER:Z
 
     if-eqz v0, :cond_0
 
-    .line 359
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFpWirelessPowerMonitor;
 
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpWirelessPowerMonitor;-><init>(Landroid/content/Context;Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;)V
 
-    .line 361
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpWirelessPowerMonitor;->start()V
 
     :cond_0
@@ -4392,7 +4003,6 @@
 
     const-string v0, "FingerprintService.Ext"
 
-    .line 643
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4413,26 +4023,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mLockForAodCtrl:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 645
     :try_start_0
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
     if-eqz v1, :cond_0
 
-    .line 646
     invoke-virtual {v1}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;->unregisterController()V
 
     const/4 v1, 0x0
 
-    .line 647
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mAodController:Lcom/android/server/biometrics/sensors/fingerprint/SemFpAodController;
 
-    .line 649
     :cond_0
     monitor-exit v0
 
@@ -4451,7 +4056,6 @@
 .method public unregisterDisplayBrightnessCallback()V
     .locals 2
 
-    .line 899
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -4472,7 +4076,6 @@
 .method public unregisterDisplayStateCallback()V
     .locals 2
 
-    .line 885
     invoke-static {}, Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;->get()Lcom/android/server/biometrics/sensors/fingerprint/SemFpMainThread;
 
     move-result-object v0
@@ -4493,12 +4096,10 @@
 .method public updateTrustApp(Ljava/lang/String;Lcom/samsung/android/bio/fingerprint/ISemFingerprintRequestCallback;Ljava/lang/String;)V
     .locals 2
 
-    .line 673
     sget-boolean v0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 674
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4521,7 +4122,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 676
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/SemFingerprintServiceExtImpl;->mRegistry:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintServiceRegistry;
 
@@ -4531,7 +4131,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 678
     iget-object v0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/biometrics/sensors/fingerprint/ServiceProvider;

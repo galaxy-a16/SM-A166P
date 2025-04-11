@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$O0LKvwiPvrbWR8J37FycJ55gRUo(Landroid/media/projection/IMediaProjectionCallback;II)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->lambda$dispatchResize$0(Landroid/media/projection/IMediaProjectionCallback;II)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static synthetic $r8$lambda$X_zJv5FqffGi3cuJqJRCooOShbo(Landroid/media/projection/IMediaProjectionCallback;Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->lambda$dispatchVisibilityChanged$1(Landroid/media/projection/IMediaProjectionCallback;Z)V
 
     return-void
@@ -35,17 +33,14 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1293
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
-    .line 1296
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -60,14 +55,12 @@
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 1297
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
-    .line 1298
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -80,7 +73,6 @@
 .method public static synthetic lambda$dispatchResize$0(Landroid/media/projection/IMediaProjectionCallback;II)V
     .locals 2
 
-    .line 1375
     :try_start_0
     invoke-interface {p0, p1, p2}, Landroid/media/projection/IMediaProjectionCallback;->onCapturedContentResize(II)V
     :try_end_0
@@ -91,7 +83,6 @@
     :catch_0
     move-exception p0
 
-    .line 1377
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +114,6 @@
 .method public static synthetic lambda$dispatchVisibilityChanged$1(Landroid/media/projection/IMediaProjectionCallback;Z)V
     .locals 2
 
-    .line 1403
     :try_start_0
     invoke-interface {p0, p1}, Landroid/media/projection/IMediaProjectionCallback;->onCapturedContentVisibilityChanged(Z)V
     :try_end_0
@@ -134,7 +124,6 @@
     :catch_0
     move-exception p0
 
-    .line 1405
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,12 +151,10 @@
 .method public add(Landroid/media/projection/IMediaProjectionCallback;)V
     .locals 2
 
-    .line 1302
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1303
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -177,7 +164,6 @@
 
     invoke-interface {p0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1304
     monitor-exit v0
 
     return-void
@@ -195,12 +181,10 @@
 .method public add(Landroid/media/projection/IMediaProjectionWatcherCallback;)V
     .locals 2
 
-    .line 1308
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1309
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -210,7 +194,6 @@
 
     invoke-interface {p0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1310
     monitor-exit v0
 
     return-void
@@ -234,18 +217,15 @@
 
     const-string p1, "Tried to dispatch resize notification for a null media projection. Ignoring!"
 
-    .line 1361
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1366
     :cond_0
     iget-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 1370
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -270,7 +250,6 @@
 
     check-cast v1, Landroid/media/projection/IMediaProjectionCallback;
 
-    .line 1371
     iget-object v2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate$$ExternalSyntheticLambda0;
@@ -281,7 +260,6 @@
 
     goto :goto_0
 
-    .line 1384
     :cond_1
     monitor-exit p1
 
@@ -306,18 +284,15 @@
 
     const-string p1, "Tried to dispatch start notification for a null media projection. Ignoring!"
 
-    .line 1327
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1331
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1332
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -342,12 +317,10 @@
 
     check-cast v2, Landroid/media/projection/IMediaProjectionWatcherCallback;
 
-    .line 1333
     invoke-virtual {p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->getProjectionInfo()Landroid/media/projection/MediaProjectionInfo;
 
     move-result-object v3
 
-    .line 1334
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v5, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStartCallback;
@@ -358,7 +331,6 @@
 
     goto :goto_0
 
-    .line 1336
     :cond_1
     monitor-exit v0
 
@@ -383,18 +355,15 @@
 
     const-string p1, "Tried to dispatch stop notification for a null media projection. Ignoring!"
 
-    .line 1341
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1345
     :cond_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1346
     :try_start_0
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -419,7 +388,6 @@
 
     check-cast v2, Landroid/media/projection/IMediaProjectionCallback;
 
-    .line 1349
     iget-object v3, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v4, Lcom/android/server/media/projection/MediaProjectionManagerService$ClientStopCallback;
@@ -430,7 +398,6 @@
 
     goto :goto_0
 
-    .line 1352
     :cond_1
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -455,12 +422,10 @@
 
     check-cast v2, Landroid/media/projection/IMediaProjectionWatcherCallback;
 
-    .line 1353
     invoke-virtual {p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->getProjectionInfo()Landroid/media/projection/MediaProjectionInfo;
 
     move-result-object v3
 
-    .line 1354
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v5, Lcom/android/server/media/projection/MediaProjectionManagerService$WatcherStopCallback;
@@ -471,7 +436,6 @@
 
     goto :goto_1
 
-    .line 1356
     :cond_2
     monitor-exit v0
 
@@ -496,18 +460,15 @@
 
     const-string p1, "Tried to dispatch visibility changed notification for a null media projection. Ignoring!"
 
-    .line 1389
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1394
     :cond_0
     iget-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 1398
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -532,7 +493,6 @@
 
     check-cast v1, Landroid/media/projection/IMediaProjectionCallback;
 
-    .line 1399
     iget-object v2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v3, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate$$ExternalSyntheticLambda1;
@@ -543,7 +503,6 @@
 
     goto :goto_0
 
-    .line 1414
     :cond_1
     monitor-exit p1
 
@@ -562,12 +521,10 @@
 .method public remove(Landroid/media/projection/IMediaProjectionCallback;)V
     .locals 1
 
-    .line 1314
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1315
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -577,7 +534,6 @@
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1316
     monitor-exit v0
 
     return-void
@@ -595,12 +551,10 @@
 .method public remove(Landroid/media/projection/IMediaProjectionWatcherCallback;)V
     .locals 1
 
-    .line 1320
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1321
     :try_start_0
     iget-object p0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -610,7 +564,6 @@
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1322
     monitor-exit v0
 
     return-void

@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmApn(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mApn:Ljava/lang/String;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCapabilities(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;)Landroid/net/NetworkCapabilities;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mCapabilities:Landroid/net/NetworkCapabilities;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmType(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mType:I
 
     return p0
@@ -42,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputmApn(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mApn:Ljava/lang/String;
 
     return-void
@@ -51,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fputmCapabilities(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;Landroid/net/NetworkCapabilities;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mCapabilities:Landroid/net/NetworkCapabilities;
 
     return-void
@@ -60,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fputmType(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mType:I
 
     return-void
@@ -69,7 +63,6 @@
 .method public static bridge synthetic -$$Nest$smgetCapabilityFlags(Landroid/net/NetworkCapabilities;)S
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->getCapabilityFlags(Landroid/net/NetworkCapabilities;)S
 
     move-result p0
@@ -80,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$smhasCapabilitiesChanged(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->hasCapabilitiesChanged(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;)Z
 
     move-result p0
@@ -91,12 +83,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 151
     iput v0, p0, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->mType:I
 
     return-void
@@ -105,7 +95,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;-><init>()V
 
     return-void
@@ -116,7 +105,6 @@
 
     const/16 v0, 0x12
 
-    .line 178
     invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v0
@@ -135,7 +123,6 @@
     :goto_0
     const/16 v1, 0xb
 
-    .line 181
     invoke-virtual {p0, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p0
@@ -164,7 +151,6 @@
     :cond_0
     const/16 v1, 0x12
 
-    .line 164
     invoke-static {p0, p1, v1}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->hasCapabilityChanged(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;I)Z
 
     move-result v1
@@ -173,7 +159,6 @@
 
     const/16 v1, 0xb
 
-    .line 166
     invoke-static {p0, p1, v1}, Lcom/android/server/location/gnss/GnssNetworkConnectivityHandler$NetworkAttributes;->hasCapabilityChanged(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;I)Z
 
     move-result p0
@@ -193,12 +178,10 @@
 .method public static hasCapabilityChanged(Landroid/net/NetworkCapabilities;Landroid/net/NetworkCapabilities;I)Z
     .locals 0
 
-    .line 172
     invoke-virtual {p0, p2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p0
 
-    .line 173
     invoke-virtual {p1, p2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p1

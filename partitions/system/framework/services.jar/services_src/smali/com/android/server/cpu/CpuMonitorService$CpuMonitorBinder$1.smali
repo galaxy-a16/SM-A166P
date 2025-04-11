@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;)V
     .locals 0
 
-    .line 499
     iput-object p1, p0, Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder$1;->this$1:Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public dumpCritical(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;Z)V
     .locals 0
 
-    .line 503
     iget-object p1, p0, Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder$1;->this$1:Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;
 
     iget-object p1, p1, Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;->this$0:Lcom/android/server/cpu/CpuMonitorService;
@@ -48,13 +46,11 @@
 
     goto :goto_1
 
-    .line 507
     :cond_0
     new-instance p1, Landroid/util/IndentingPrintWriter;
 
     invoke-direct {p1, p2}, Landroid/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 508
     :try_start_0
     iget-object p0, p0, Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder$1;->this$1:Lcom/android/server/cpu/CpuMonitorService$CpuMonitorBinder;
 
@@ -64,7 +60,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 509
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->close()V
 
     return-void
@@ -72,7 +67,6 @@
     :catchall_0
     move-exception p0
 
-    .line 507
     :try_start_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->close()V
     :try_end_1

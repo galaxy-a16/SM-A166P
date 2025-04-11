@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$IOPlJiLqOsSO_D2O6k-XB0nplJU(Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;Landroid/security/rkp/RemotelyProvisionedKey;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->lambda$onResult$0(Landroid/security/rkp/RemotelyProvisionedKey;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$sBGiJ1G8X-qLxrW_GPyu8UdXSwU(Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->lambda$onError$2(Ljava/lang/Exception;)V
 
     return-void
@@ -34,7 +32,6 @@
 .method public static synthetic $r8$lambda$tLI-l2bJQbwfHVc4FdMVmAl1jQc(Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;Landroid/security/rkp/service/RkpProxyException;Ljava/lang/Exception;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->lambda$onError$1(Landroid/security/rkp/service/RkpProxyException;Ljava/lang/Exception;)V
 
     return-void
@@ -43,12 +40,10 @@
 .method public constructor <init>(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;Landroid/security/rkp/IGetKeyCallback;)V
     .locals 0
 
-    .line 52
     iput-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p2, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
 
     return-void
@@ -57,7 +52,6 @@
 .method private synthetic lambda$onError$1(Landroid/security/rkp/service/RkpProxyException;Ljava/lang/Exception;)V
     .locals 1
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
 
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
@@ -66,12 +60,10 @@
 
     move-result p0
 
-    .line 79
     invoke-virtual {p2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 78
     invoke-interface {v0, p0, p1}, Landroid/security/rkp/IGetKeyCallback;->onError(BLjava/lang/String;)V
 
     return-void
@@ -80,17 +72,14 @@
 .method private synthetic lambda$onError$2(Ljava/lang/Exception;)V
     .locals 1
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
 
     const/4 v0, 0x1
 
-    .line 85
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 84
     invoke-interface {p0, v0, p1}, Landroid/security/rkp/IGetKeyCallback;->onError(BLjava/lang/String;)V
 
     return-void
@@ -99,7 +88,6 @@
 .method private synthetic lambda$onResult$0(Landroid/security/rkp/RemotelyProvisionedKey;)V
     .locals 0
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
 
     invoke-interface {p0, p1}, Landroid/security/rkp/IGetKeyCallback;->onSuccess(Landroid/security/rkp/RemotelyProvisionedKey;)V
@@ -112,7 +100,6 @@
 .method public onError(Ljava/lang/Exception;)V
     .locals 4
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     invoke-static {v0}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->-$$Nest$fgetmGetKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -127,14 +114,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     instance-of v0, p1, Landroid/os/OperationCanceledException;
 
     const-string v1, "RemoteProvisionSysSvc"
 
     if-eqz v0, :cond_0
 
-    .line 71
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +146,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     iget-object p0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
@@ -176,7 +160,6 @@
 
     goto :goto_0
 
-    .line 73
     :cond_0
     instance-of v0, p1, Landroid/security/rkp/service/RkpProxyException;
 
@@ -184,7 +167,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +189,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -218,15 +199,12 @@
 
     move-result-object v0
 
-    .line 74
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     move-object v0, p1
 
     check-cast v0, Landroid/security/rkp/service/RkpProxyException;
 
-    .line 78
     iget-object v1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     new-instance v2, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver$$ExternalSyntheticLambda1;
@@ -237,7 +215,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -249,7 +226,6 @@
 
     iget-object v3, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->mCallback:Landroid/security/rkp/IGetKeyCallback;
 
-    .line 82
     invoke-interface {v3}, Landroid/security/rkp/IGetKeyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v3
@@ -262,7 +238,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 83
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -273,10 +248,8 @@
 
     move-result-object v0
 
-    .line 81
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     new-instance v1, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver$$ExternalSyntheticLambda2;
@@ -292,7 +265,6 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 49
     check-cast p1, Ljava/lang/Exception;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->onError(Ljava/lang/Exception;)V
@@ -303,7 +275,6 @@
 .method public onResult(Landroid/security/rkp/service/RemotelyProvisionedKey;)V
     .locals 2
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     invoke-static {v0}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration;->-$$Nest$fgetmGetKeyOperations(Lcom/android/server/security/rkp/RemoteProvisioningRegistration;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -318,7 +289,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,26 +317,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     new-instance v0, Landroid/security/rkp/RemotelyProvisionedKey;
 
     invoke-direct {v0}, Landroid/security/rkp/RemotelyProvisionedKey;-><init>()V
 
-    .line 62
     invoke-virtual {p1}, Landroid/security/rkp/service/RemotelyProvisionedKey;->getKeyBlob()[B
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/security/rkp/RemotelyProvisionedKey;->keyBlob:[B
 
-    .line 63
     invoke-virtual {p1}, Landroid/security/rkp/service/RemotelyProvisionedKey;->getEncodedCertChain()[B
 
     move-result-object p1
 
     iput-object p1, v0, Landroid/security/rkp/RemotelyProvisionedKey;->encodedCertChain:[B
 
-    .line 64
     iget-object p1, p0, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->this$0:Lcom/android/server/security/rkp/RemoteProvisioningRegistration;
 
     new-instance v1, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver$$ExternalSyntheticLambda3;
@@ -381,7 +347,6 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 49
     check-cast p1, Landroid/security/rkp/service/RemotelyProvisionedKey;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/rkp/RemoteProvisioningRegistration$GetKeyReceiver;->onResult(Landroid/security/rkp/service/RemotelyProvisionedKey;)V

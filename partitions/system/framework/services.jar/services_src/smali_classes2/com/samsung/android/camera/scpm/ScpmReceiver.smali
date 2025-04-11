@@ -30,7 +30,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -39,7 +38,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -48,7 +46,6 @@
 .method public static bridge synthetic -$$Nest$fgetmScpmListManager(Lcom/samsung/android/camera/scpm/ScpmReceiver;)Lcom/samsung/android/camera/scpm/ScpmListManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     return-object p0
@@ -57,7 +54,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->DEBUG:Z
 
     return v0
@@ -66,7 +62,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 47
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string/jumbo v1, "user"
@@ -103,63 +98,52 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;Landroid/content/Context;Landroid/os/Looper;)V
     .locals 2
 
-    .line 80
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     const-string/jumbo v0, "vendor.camera.unihal.enable"
 
     const/4 v1, 0x0
 
-    .line 67
     invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mIsUnihalSupport:Z
 
-    .line 125
     new-instance v0, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver$1;-><init>(Lcom/samsung/android/camera/scpm/ScpmReceiver;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmCallback:Lcom/samsung/android/camera/scpm/ScpmHelper$scpmCallback;
 
-    .line 81
     iput-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 82
     iput-object p2, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mContext:Landroid/content/Context;
 
-    .line 83
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1, p3, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 84
     new-instance p1, Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-direct {p1}, Lcom/samsung/android/camera/scpm/ScpmListManager;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
-    .line 86
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p3, "com.samsung.android.scpm.policy.UPDATE.camera3rdpartylist-1857"
 
-    .line 87
     invoke-virtual {p1, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p3, "com.samsung.android.scpm.policy.CLEAR_DATA"
 
-    .line 88
     invoke-virtual {p1, p3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 89
     invoke-virtual {p2, p0, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
@@ -175,10 +159,8 @@
     :try_start_0
     const-string v0, "\n\tDump of ScpmReceiver list"
 
-    .line 335
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 336
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +183,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 337
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/scpm/ScpmListManager;->getDefaultScpmList()Ljava/util/List;
@@ -225,7 +206,6 @@
 
     check-cast v1, Lcom/samsung/android/camera/scpm/PolicyListVO;
 
-    .line 338
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -262,7 +242,6 @@
 
     goto :goto_0
 
-    .line 342
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -286,7 +265,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 343
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/scpm/ScpmListManager;->getScpmList()Ljava/util/List;
@@ -310,7 +288,6 @@
 
     check-cast v1, Lcom/samsung/android/camera/scpm/PolicyListVO;
 
-    .line 344
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,7 +326,6 @@
 
     goto :goto_1
 
-    .line 347
     :cond_1
     monitor-exit p0
 
@@ -366,7 +342,6 @@
 .method public getCoverFlexRotatePkgList()Ljava/util/List;
     .locals 0
 
-    .line 328
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-virtual {p0}, Lcom/samsung/android/camera/scpm/ScpmListManager;->getCoverFlexRotatePkgList()Ljava/util/List;
@@ -383,7 +358,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .line 94
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -402,7 +376,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 118
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,13 +398,11 @@
 
     goto :goto_0
 
-    .line 112
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     if-eqz p0, :cond_4
 
-    .line 113
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -442,29 +413,24 @@
 
     goto :goto_0
 
-    .line 106
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmHelper:Lcom/samsung/android/camera/scpm/ScpmHelper;
 
     if-eqz p0, :cond_4
 
-    .line 107
     invoke-virtual {p0}, Lcom/samsung/android/camera/scpm/ScpmHelper;->getSCPMParameters()V
 
     goto :goto_0
 
-    .line 100
     :cond_2
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmHelper:Lcom/samsung/android/camera/scpm/ScpmHelper;
 
     if-eqz p0, :cond_4
 
-    .line 101
     invoke-virtual {p0}, Lcom/samsung/android/camera/scpm/ScpmHelper;->registerScpm()V
 
     goto :goto_0
 
-    .line 96
     :cond_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -482,18 +448,14 @@
 
     const-string v1, "initialize"
 
-    .line 167
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/scpm/ScpmListManager;->loadListFromFile()V
 
-    .line 169
     invoke-virtual {p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->notifyParamChangeRetry()V
 
-    .line 170
     new-instance v0, Lcom/samsung/android/camera/scpm/ScpmHelper;
 
     iget-object v1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mContext:Landroid/content/Context;
@@ -512,7 +474,6 @@
 
     const-string v0, ";"
 
-    .line 216
     iget-object v1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-virtual {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->getCameraService()Landroid/hardware/ICameraService;
@@ -525,7 +486,6 @@
 
     return v2
 
-    .line 221
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -547,24 +507,20 @@
 
     invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     iget-object v3, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
     invoke-virtual {v3}, Lcom/samsung/android/camera/scpm/ScpmListManager;->getScpmList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 224
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 225
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 228
     :try_start_0
     iget-object v7, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
@@ -590,12 +546,10 @@
 
     check-cast v8, Lcom/samsung/android/camera/scpm/PolicyListVO;
 
-    .line 229
     iget-object v9, v8, Lcom/samsung/android/camera/scpm/PolicyListVO;->packageName:Ljava/lang/String;
 
     invoke-virtual {v5, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 230
     new-instance v9, Ljava/lang/StringBuilder;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -618,12 +572,10 @@
 
     invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 231
     iget-boolean v10, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mIsUnihalSupport:Z
 
     if-eqz v10, :cond_3
 
-    .line 232
     iget-object v10, v8, Lcom/samsung/android/camera/scpm/PolicyListVO;->disallowUnihalVersion:Ljava/lang/String;
 
     const-string v11, "0"
@@ -634,7 +586,6 @@
 
     if-nez v10, :cond_2
 
-    .line 233
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -655,7 +606,6 @@
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
     :cond_2
     iget-object v8, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmListManager:Lcom/samsung/android/camera/scpm/ScpmListManager;
 
@@ -677,10 +627,8 @@
 
     const-string v8, "downloaded=true;"
 
-    .line 236
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     :cond_3
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -688,12 +636,10 @@
 
     invoke-virtual {v6, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 240
     sget-boolean v8, Lcom/samsung/android/camera/scpm/ScpmReceiver;->DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 241
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -719,7 +665,6 @@
     :cond_4
     new-array p0, v2, [Ljava/lang/String;
 
-    .line 245
     invoke-virtual {v5, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -736,7 +681,6 @@
 
     invoke-interface {v1, p0, v0}, Landroid/hardware/ICameraService;->notifyPkgListParamChange([Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 246
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -767,7 +711,6 @@
     :catch_0
     move-exception p0
 
-    .line 253
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,7 +732,6 @@
     :catch_1
     move-exception p0
 
-    .line 248
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -814,7 +756,6 @@
 
     const/16 v0, 0x1e
 
-    .line 192
     invoke-virtual {p0, v0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->notifyParamChangeRetryLocked(I)V
 
     return-void
@@ -825,7 +766,6 @@
 
     monitor-enter p0
 
-    .line 199
     :try_start_0
     invoke-virtual {p0}, Lcom/samsung/android/camera/scpm/ScpmReceiver;->notifyParamChange()Z
 
@@ -842,7 +782,6 @@
     :cond_0
     if-gtz p1, :cond_1
 
-    .line 203
     monitor-exit p0
 
     return-void
@@ -853,10 +792,8 @@
 
     const-string v2, "Could not notify camera service of device state change, retrying..."
 
-    .line 205
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -875,7 +812,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 208
     monitor-exit p0
 
     return-void
@@ -891,14 +827,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 176
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "com.samsung.android.scpm.policy.UPDATE.camera3rdpartylist-1857"
 
-    .line 177
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -909,10 +843,8 @@
 
     const-string p1, "SCPM update broadcast received!"
 
-    .line 178
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     const/4 p1, 0x3
@@ -924,7 +856,6 @@
     :cond_0
     const-string p2, "com.samsung.android.scpm.policy.CLEAR_DATA"
 
-    .line 180
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -933,10 +864,8 @@
 
     const-string p1, "SCPM clear broadcast received, policy updated 1 min later!"
 
-    .line 181
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     new-instance p1, Lcom/samsung/android/camera/scpm/ScpmHelper;
 
     iget-object p2, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mContext:Landroid/content/Context;
@@ -947,14 +876,12 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mScpmHelper:Lcom/samsung/android/camera/scpm/ScpmHelper;
 
-    .line 183
     iget-object p1, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     const/4 p2, 0x2
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 184
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     const-wide/32 v0, 0xea60
@@ -969,7 +896,6 @@
 .method public tryRegisterCameraOpenListener()V
     .locals 2
 
-    .line 263
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mContext:Landroid/content/Context;
 
     const-string v1, "camera"
@@ -986,7 +912,6 @@
 
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 264
     invoke-virtual {v0, v1, p0}, Landroid/hardware/camera2/CameraManager;->registerSemCameraDeviceStateCallback(Landroid/hardware/camera2/CameraManager$SemCameraDeviceStateCallback;Landroid/os/Handler;)V
 
     return-void
@@ -995,14 +920,12 @@
 .method public tryRegisterSCPMServer()V
     .locals 2
 
-    .line 320
     iget-object v0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 321
     iget-object p0, p0, Lcom/samsung/android/camera/scpm/ScpmReceiver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z

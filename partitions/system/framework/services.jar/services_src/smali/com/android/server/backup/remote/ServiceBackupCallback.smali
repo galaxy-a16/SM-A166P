@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/app/backup/IBackupManager;I)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Landroid/app/backup/IBackupCallback$Stub;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/backup/remote/ServiceBackupCallback;->mBackupManager:Landroid/app/backup/IBackupManager;
 
-    .line 36
     iput p2, p0, Lcom/android/server/backup/remote/ServiceBackupCallback;->mToken:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public operationComplete(J)V
     .locals 1
 
-    .line 41
     iget-object v0, p0, Lcom/android/server/backup/remote/ServiceBackupCallback;->mBackupManager:Landroid/app/backup/IBackupManager;
 
     iget p0, p0, Lcom/android/server/backup/remote/ServiceBackupCallback;->mToken:I

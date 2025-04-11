@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/os/NativeTombstoneManager$TombstoneFile;)V
     .locals 0
 
-    .line 547
     iput-object p1, p0, Lcom/android/server/os/NativeTombstoneManager$TombstoneFile$ParcelFileDescriptorRetriever;->this$0:Lcom/android/server/os/NativeTombstoneManager$TombstoneFile;
 
     invoke-direct {p0}, Landroid/app/IParcelFileDescriptorRetriever$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public getPfd()Landroid/os/ParcelFileDescriptor;
     .locals 3
 
-    .line 550
     iget-object v0, p0, Lcom/android/server/os/NativeTombstoneManager$TombstoneFile$ParcelFileDescriptorRetriever;->this$0:Lcom/android/server/os/NativeTombstoneManager$TombstoneFile;
 
     iget-boolean v0, v0, Lcom/android/server/os/NativeTombstoneManager$TombstoneFile;->mPurged:Z
@@ -35,7 +33,6 @@
 
     return-object v1
 
-    .line 556
     :cond_0
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -60,7 +57,6 @@
 
     move-result-object p0
 
-    .line 557
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -78,7 +74,6 @@
     :catch_0
     move-exception p0
 
-    .line 561
     invoke-static {}, Lcom/android/server/os/NativeTombstoneManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0

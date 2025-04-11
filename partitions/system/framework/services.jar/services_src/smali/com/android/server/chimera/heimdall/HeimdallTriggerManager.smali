@@ -21,32 +21,26 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 22
     iput-boolean v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_GLOBAL_KILL:Z
 
-    .line 23
     iput-boolean v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_SPEC_KILL:Z
 
-    .line 35
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecMap:Ljava/util/HashMap;
 
-    .line 36
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecKillIgnoreSet:Ljava/util/HashSet;
 
-    .line 37
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -57,7 +51,6 @@
 
     const-string v1, "0x4f4c"
 
-    .line 39
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +63,6 @@
 
     const-string v2, "eng"
 
-    .line 40
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -85,18 +77,15 @@
 
     if-nez v1, :cond_0
 
-    .line 42
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->loadSpec()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 43
     :cond_0
     iput-boolean v2, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_SPEC_KILL:Z
 
-    .line 46
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->loadGlobal()Z
 
@@ -104,7 +93,6 @@
 
     if-nez v0, :cond_2
 
-    .line 47
     iput-boolean v2, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_GLOBAL_KILL:Z
 
     :cond_2
@@ -116,7 +104,6 @@
 .method public dumpInfo(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 247
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,7 +126,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 248
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -163,21 +149,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 249
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 250
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 251
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +196,6 @@
 .method public final getSpecKb(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)I
     .locals 2
 
-    .line 154
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->isSamsungProcess(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)Z
 
     move-result v0
@@ -222,7 +204,6 @@
 
     const/high16 v0, 0x40000
 
-    .line 156
     :try_start_0
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecMap:Ljava/util/HashMap;
 
@@ -250,7 +231,6 @@
     :cond_0
     const v0, 0x7fffffff
 
-    .line 163
     :try_start_1
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecMap:Ljava/util/HashMap;
 
@@ -279,7 +259,6 @@
 .method public final isSamsungProcess(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)Z
     .locals 1
 
-    .line 148
     iget-object p0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->firstAppPackageName:Ljava/lang/String;
 
     const-string v0, "com.sec.android"
@@ -318,7 +297,6 @@
 .method public isTriggered(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)Z
     .locals 2
 
-    .line 52
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
     move-result p0
@@ -329,7 +307,6 @@
 
     if-ne p0, v0, :cond_2
 
-    .line 53
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->isGlobalKill()Z
 
     move-result p0
@@ -348,7 +325,6 @@
     :cond_1
     return v1
 
-    .line 54
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
@@ -358,7 +334,6 @@
 
     if-ne p0, v0, :cond_3
 
-    .line 55
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->shouldKill()Z
 
     move-result p0
@@ -374,10 +349,8 @@
 
     const/4 v0, 0x0
 
-    .line 179
     iput v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
-    .line 180
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getTotalMemorySizeKb()J
 
     move-result-wide v1
@@ -390,7 +363,6 @@
 
     if-le v1, v2, :cond_0
 
-    .line 182
     iput v3, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
     goto :goto_0
@@ -400,7 +372,6 @@
 
     if-le v1, v3, :cond_1
 
-    .line 184
     iput v2, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
     goto :goto_0
@@ -410,7 +381,6 @@
 
     if-le v1, v2, :cond_2
 
-    .line 186
     iput v3, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
     goto :goto_0
@@ -420,10 +390,8 @@
 
     const/high16 v1, 0x300000
 
-    .line 188
     iput v1, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
-    .line 190
     :cond_3
     :goto_0
     iget p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
@@ -447,7 +415,6 @@
 
     const/4 v3, 0x0
 
-    .line 201
     :try_start_0
     new-instance v4, Ljava/io/FileReader;
 
@@ -460,7 +427,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 202
     :try_start_1
     new-instance v5, Ljava/io/BufferedReader;
 
@@ -469,7 +435,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 205
     :cond_0
     :goto_0
     :try_start_2
@@ -483,22 +448,18 @@
 
     const-string v7, ","
 
-    .line 206
     invoke-virtual {v3, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 207
     array-length v7, v3
 
     const/4 v8, 0x4
 
     if-lt v7, v8, :cond_0
 
-    .line 208
     aget-object v7, v3, v2
 
-    .line 209
     aget-object v8, v3, v6
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -507,7 +468,6 @@
 
     const/4 v9, 0x2
 
-    .line 210
     aget-object v9, v3, v9
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -519,7 +479,6 @@
 
     const/4 v10, 0x3
 
-    .line 213
     :try_start_3
     aget-object v3, v3, v10
 
@@ -537,14 +496,12 @@
 
     goto :goto_1
 
-    .line 215
     :catch_0
     :try_start_4
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 217
     :goto_1
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -560,14 +517,12 @@
     :goto_2
     if-eqz v6, :cond_2
 
-    .line 222
     iget-object v3, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecKillIgnoreSet:Ljava/util/HashSet;
 
     invoke-virtual {v3, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 224
     :cond_2
     iget-object v6, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mSpecMap:Ljava/util/HashMap;
 
@@ -576,7 +531,6 @@
     :goto_3
     if-eqz v9, :cond_0
 
-    .line 227
     iget-object v3, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillIgnoreSet:Ljava/util/HashSet;
 
     invoke-virtual {v3, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -586,12 +540,10 @@
 
     goto :goto_0
 
-    .line 236
     :cond_3
     :try_start_5
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
 
-    .line 237
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
@@ -600,7 +552,6 @@
 
     goto :goto_5
 
-    .line 239
     :catch_1
     invoke-static {v1}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
@@ -637,7 +588,6 @@
 
     move-object v4, v3
 
-    .line 232
     :goto_4
     :try_start_6
     new-instance v0, Ljava/lang/StringBuilder;
@@ -664,14 +614,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 236
     :try_start_7
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
 
     :cond_4
     if-eqz v4, :cond_5
 
-    .line 237
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
@@ -686,25 +634,21 @@
     :goto_6
     if-eqz v3, :cond_6
 
-    .line 236
     :try_start_8
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
 
     :cond_6
     if-eqz v4, :cond_7
 
-    .line 237
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
     goto :goto_7
 
-    .line 239
     :catch_5
     invoke-static {v1}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 242
     :cond_7
     :goto_7
     throw p0
@@ -713,10 +657,8 @@
 .method public trigger(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 0
 
-    .line 61
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->triggerGlobalKill(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 62
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->triggerSpecKill(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
     return-void
@@ -725,7 +667,6 @@
 .method public final triggerGlobalKill(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 6
 
-    .line 66
     iget-boolean v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_GLOBAL_KILL:Z
 
     if-eqz v0, :cond_4
@@ -748,7 +689,6 @@
 
     goto/16 :goto_0
 
-    .line 70
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
@@ -764,22 +704,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 71
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->anonBeforeGc:I
 
     iget v1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->graphicsBeforeGc:I
 
     add-int/2addr v0, v1
 
-    .line 72
     iget p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
     if-le v0, p0, :cond_1
 
-    .line 75
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->setGlobalKill()V
 
-    .line 76
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -802,7 +738,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 80
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->toDumpString()Ljava/lang/String;
 
     move-result-object p0
@@ -813,18 +748,15 @@
 
     move-result-object p0
 
-    .line 76
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 82
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->clearGlobalKill()V
 
     goto :goto_0
 
-    .line 84
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
@@ -834,17 +766,14 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 85
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->anonAfterGc:I
 
     iget v1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->graphicsAfterGc:I
 
     add-int/2addr v0, v1
 
-    .line 86
     iget p0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->mGlobalKillThresholdKb:I
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->isGlobalKill()Z
 
     move-result v1
@@ -853,10 +782,8 @@
 
     if-le v0, p0, :cond_3
 
-    .line 90
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->setShouldKill()V
 
-    .line 91
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -879,7 +806,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->toDumpString()Ljava/lang/String;
 
     move-result-object p0
@@ -890,12 +816,10 @@
 
     move-result-object p0
 
-    .line 91
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 97
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->clearShouldKill()V
 
@@ -907,7 +831,6 @@
 .method public final triggerSpecKill(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 5
 
-    .line 103
     iget-boolean v0, p0, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->ENABLE_SPEC_KILL:Z
 
     if-eqz v0, :cond_6
@@ -930,7 +853,6 @@
 
     goto/16 :goto_0
 
-    .line 108
     :cond_0
     iget-object v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->firstAppPackageName:Ljava/lang/String;
 
@@ -944,7 +866,6 @@
 
     return-void
 
-    .line 112
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
@@ -958,14 +879,12 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 113
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->anonBeforeGc:I
 
     iget v1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->graphicsBeforeGc:I
 
     add-int/2addr v0, v1
 
-    .line 114
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->getSpecKb(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)I
 
     move-result p0
@@ -976,16 +895,13 @@
 
     mul-int/lit8 p0, p0, 0x6
 
-    .line 116
     div-int/lit8 p0, p0, 0x5
 
     :cond_2
     if-le v0, p0, :cond_3
 
-    .line 120
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->setSpecKill()V
 
-    .line 121
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1010,7 +926,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 125
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->toDumpString()Ljava/lang/String;
 
     move-result-object p0
@@ -1021,18 +936,15 @@
 
     move-result-object p0
 
-    .line 121
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 127
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->clearSpecKill()V
 
     goto :goto_0
 
-    .line 129
     :cond_4
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->currentPhase()I
 
@@ -1042,19 +954,16 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 130
     iget v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->anonAfterGc:I
 
     iget v1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->graphicsAfterGc:I
 
     add-int/2addr v0, v1
 
-    .line 131
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallTriggerManager;->getSpecKb(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)I
 
     move-result p0
 
-    .line 133
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->isSpecKill()Z
 
     move-result v1
@@ -1063,10 +972,8 @@
 
     if-le v0, p0, :cond_5
 
-    .line 135
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->setShouldKill()V
 
-    .line 136
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1091,7 +998,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->toDumpString()Ljava/lang/String;
 
     move-result-object p0
@@ -1102,12 +1008,10 @@
 
     move-result-object p0
 
-    .line 136
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 142
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->clearShouldKill()V
 

@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$Genw6_OrPO6Ol1ks9dpSV8kgVB0(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->lambda$run$0(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$xxnbkwru_jyApE7X8BGJ4U63IVM(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->lambda$run$1(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)I
 
     move-result p0
@@ -33,7 +31,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/ChimeraQuotaMonitor;)V
     .locals 0
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -44,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/chimera/ChimeraQuotaMonitor;Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;-><init>(Lcom/android/server/chimera/ChimeraQuotaMonitor;)V
 
     return-void
@@ -53,7 +49,6 @@
 .method public static synthetic lambda$run$0(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)Ljava/lang/Integer;
     .locals 0
 
-    .line 142
     iget p0, p0, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -66,7 +61,6 @@
 .method public static synthetic lambda$run$1(Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;)I
     .locals 0
 
-    .line 162
     iget p0, p0, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
     return p0
@@ -81,7 +75,6 @@
 
     const-string v1, "AlwaysRunningMemCollectTask"
 
-    .line 117
     :try_start_0
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
@@ -107,7 +100,6 @@
 
     goto/16 :goto_4
 
-    .line 122
     :cond_0
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
@@ -133,7 +125,6 @@
 
     if-nez v2, :cond_1
 
-    .line 123
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     const-string v2, "Skipped by screen off and not charging"
@@ -145,10 +136,8 @@
     :cond_1
     const/16 v2, 0xa
 
-    .line 127
     invoke-static {v2}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 129
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v2}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$misUMRSuppressed(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Z
@@ -157,14 +146,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 130
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     const-string v3, "Skipped by UMR suppressed"
 
     invoke-static {v2, v3}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$maddTaskHistory(Lcom/android/server/chimera/ChimeraQuotaMonitor;Ljava/lang/String;)V
 
-    .line 131
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -177,7 +164,6 @@
 
     return-void
 
-    .line 137
     :cond_2
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
@@ -189,12 +175,10 @@
 
     if-nez v2, :cond_4
 
-    .line 139
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 140
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v6}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -205,7 +189,6 @@
 
     move-result-object v6
 
-    .line 142
     invoke-interface {v6}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v7
@@ -228,7 +211,6 @@
 
     check-cast v7, Ljava/util/Set;
 
-    .line 145
     iget-object v8, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v8}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -239,7 +221,6 @@
 
     move-result-object v7
 
-    .line 146
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -259,7 +240,6 @@
 
     check-cast v10, Lcom/android/internal/os/ProcessCpuTracker$Stats;
 
-    .line 147
     iget v10, v10, Lcom/android/internal/os/ProcessCpuTracker$Stats;->pid:I
 
     invoke-static {v10, v4, v5}, Lcom/android/server/chimera/ChimeraCommonUtil;->getDRAMUsed(IJ)J
@@ -270,13 +250,11 @@
 
     goto :goto_0
 
-    .line 150
     :cond_3
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v7, v8, v9}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fputmLastNativeDRAMUsed(Lcom/android/server/chimera/ChimeraQuotaMonitor;J)V
 
-    .line 151
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v7}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -316,7 +294,6 @@
     :cond_4
     const/4 v6, 0x0
 
-    .line 154
     :goto_1
     iget-object v2, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
@@ -328,14 +305,12 @@
 
     invoke-static {v2, v3}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fputmTaskExecuteCount(Lcom/android/server/chimera/ChimeraQuotaMonitor;I)V
 
-    .line 155
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     if-nez v6, :cond_5
 
-    .line 157
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v6}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -346,13 +321,11 @@
 
     move-result-object v6
 
-    .line 160
     :cond_5
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 162
     invoke-interface {v6}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v8
@@ -369,7 +342,6 @@
 
     move-result-object v8
 
-    .line 164
     iget-object v9, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v9}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -382,14 +354,12 @@
 
     if-eqz v9, :cond_c
 
-    .line 165
     iget-object v9, v9, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-nez v9, :cond_6
 
     goto/16 :goto_4
 
-    .line 168
     :cond_6
     check-cast v9, [I
 
@@ -397,13 +367,11 @@
 
     move-wide v11, v4
 
-    .line 172
     :goto_2
     array-length v13, v8
 
     if-ge v10, v13, :cond_a
 
-    .line 174
     aget v13, v9, v10
 
     const/16 v14, 0x12c
@@ -418,7 +386,6 @@
 
     goto :goto_3
 
-    .line 178
     :cond_7
     invoke-interface {v6, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -426,17 +393,14 @@
 
     check-cast v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;
 
-    .line 184
     iget-wide v14, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->lastPss:J
 
     cmp-long v16, v14, v4
 
     if-gtz v16, :cond_8
 
-    .line 186
     iget-wide v14, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->avgPss:J
 
-    .line 188
     :cond_8
     iget v4, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->pid:I
 
@@ -444,7 +408,6 @@
 
     move-result-wide v4
 
-    .line 189
     iput-wide v4, v13, Lcom/android/server/chimera/SystemRepository$RunningAppProcessInfo;->DRAMUsed:J
 
     add-long/2addr v11, v4
@@ -457,7 +420,6 @@
 
     goto :goto_2
 
-    .line 193
     :cond_a
     iget-object v4, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
@@ -481,7 +443,6 @@
 
     if-lez v6, :cond_b
 
-    .line 195
     iget-object v6, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v6}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemEventListener(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemEventListener;
@@ -498,7 +459,6 @@
 
     invoke-virtual {v6, v8}, Lcom/android/server/chimera/SystemEventListener;->sendQuotaExceedMessage(Lcom/android/server/chimera/ChimeraQuotaMonitor$QuotaReclaimTarget;)V
 
-    .line 197
     :cond_b
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -534,12 +494,10 @@
 
     move-result-object v2
 
-    .line 198
     iget-object v3, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v3, v2}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$maddTaskHistory(Lcom/android/server/chimera/ChimeraQuotaMonitor;Ljava/lang/String;)V
 
-    .line 199
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraQuotaMonitor$AlwaysRunningMemCollectTask;->this$0:Lcom/android/server/chimera/ChimeraQuotaMonitor;
 
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraQuotaMonitor;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraQuotaMonitor;)Lcom/android/server/chimera/SystemRepository;
@@ -559,7 +517,6 @@
     :catch_0
     move-exception v0
 
-    .line 201
     invoke-static {v1}, Lcom/android/server/chimera/SystemRepositoryDefault;->convertToChimeraTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/notification/EasyMuteController;)V
     .locals 0
 
-    .line 83
     iput-object p1, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onMotionEvent(Lcom/samsung/android/gesture/SemMotionRecognitionEvent;)V
     .locals 2
 
-    .line 85
     invoke-virtual {p1}, Lcom/samsung/android/gesture/SemMotionRecognitionEvent;->getMotion()I
 
     move-result p1
@@ -43,10 +41,8 @@
 
     const-string v0, "EasyMuteController"
 
-    .line 87
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :try_start_0
     iget-object p1, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
@@ -60,13 +56,11 @@
 
     if-eqz p1, :cond_1
 
-    .line 91
     invoke-interface {p1}, Landroid/media/IRingtonePlayer;->stopAsync()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
     :cond_1
     iget-object p1, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
@@ -76,7 +70,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 97
     :goto_0
     iget-object p0, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
@@ -95,12 +88,10 @@
     :try_start_1
     const-string v1, "Remote exception"
 
-    .line 94
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 96
     iget-object p1, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
     invoke-static {p1}, Lcom/android/server/notification/EasyMuteController;->-$$Nest$fgetmIsRegister(Lcom/android/server/notification/EasyMuteController;)Z
@@ -124,12 +115,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 97
     iget-object p0, p0, Lcom/android/server/notification/EasyMuteController$1;->this$0:Lcom/android/server/notification/EasyMuteController;
 
     invoke-virtual {p0}, Lcom/android/server/notification/EasyMuteController;->unregisterListener()V
 
-    .line 99
     :cond_3
     throw p1
 .end method

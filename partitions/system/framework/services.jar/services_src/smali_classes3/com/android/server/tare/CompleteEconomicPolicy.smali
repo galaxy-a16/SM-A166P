@@ -31,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/tare/CompleteEconomicPolicy;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -40,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +67,6 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 1
 
-    .line 50
     new-instance v0, Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;
 
     invoke-direct {v0}, Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;-><init>()V
@@ -82,24 +79,20 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;)V
     .locals 3
 
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/tare/EconomicPolicy;-><init>(Lcom/android/server/tare/InternalResourceService;)V
 
-    .line 38
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
-    .line 40
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
-    .line 42
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -108,36 +101,30 @@
 
     const/4 v0, 0x0
 
-    .line 43
     iput v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 44
     sget-object v0, Llibcore/util/EmptyArray;->INT:[I
 
     iput-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mCostModifiers:[I
 
-    .line 57
     iput-object p2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mInjector:Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;
 
     const/high16 v0, 0x10000000
 
     const/4 v1, 0x0
 
-    .line 59
     invoke-virtual {p2, v0, v1}, Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;->isPolicyEnabled(ILandroid/provider/DeviceConfig$Properties;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 60
     iget v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     or-int/2addr v0, v2
 
     iput v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 61
     new-instance v0, Lcom/android/server/tare/AlarmManagerEconomicPolicy;
 
     iget-object v2, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
@@ -149,21 +136,18 @@
     :cond_0
     const/high16 v0, 0x20000000
 
-    .line 63
     invoke-virtual {p2, v0, v1}, Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;->isPolicyEnabled(ILandroid/provider/DeviceConfig$Properties;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 64
     iget v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     or-int/2addr v0, v1
 
     iput v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 65
     new-instance v0, Lcom/android/server/tare/JobSchedulerEconomicPolicy;
 
     iget-object p0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
@@ -181,13 +165,10 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 5
 
-    .line 238
     invoke-static {p1}, Lcom/android/server/tare/EconomicPolicy;->dumpActiveModifiers(Landroid/util/IndentingPrintWriter;)V
 
-    .line 240
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 241
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,22 +193,18 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string v0, "Cached actions:"
 
-    .line 244
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 245
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 v0, 0x0
 
     move v2, v0
 
-    .line 246
     :goto_0
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
@@ -237,7 +214,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 247
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -248,7 +224,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 249
     invoke-static {p1, v3}, Lcom/android/server/tare/EconomicPolicy;->dumpAction(Landroid/util/IndentingPrintWriter;Lcom/android/server/tare/EconomicPolicy$Action;)V
 
     :cond_0
@@ -256,24 +231,19 @@
 
     goto :goto_0
 
-    .line 252
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 254
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const-string v2, "Cached rewards:"
 
-    .line 255
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 256
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     move v2, v0
 
-    .line 257
     :goto_1
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
@@ -283,7 +253,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 258
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -294,7 +263,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 260
     invoke-static {p1, v3}, Lcom/android/server/tare/EconomicPolicy;->dumpReward(Landroid/util/IndentingPrintWriter;Lcom/android/server/tare/EconomicPolicy$Reward;)V
 
     :cond_2
@@ -302,11 +270,9 @@
 
     goto :goto_1
 
-    .line 263
     :cond_3
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 265
     :goto_2
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -316,7 +282,6 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 266
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -325,15 +290,12 @@
 
     check-cast v2, Lcom/android/server/tare/EconomicPolicy;
 
-    .line 267
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     const-string v3, "(Includes) "
 
-    .line 268
     invoke-virtual {p1, v3}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 269
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,20 +318,16 @@
 
     invoke-virtual {p1, v3}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 270
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 271
     invoke-virtual {v2, p1}, Lcom/android/server/tare/EconomicPolicy;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 272
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 274
     :cond_4
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -379,7 +337,6 @@
 .method public getAction(I)Lcom/android/server/tare/EconomicPolicy$Action;
     .locals 10
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -388,7 +345,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -410,7 +366,6 @@
 
     move v1, v0
 
-    .line 165
     :goto_0
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -420,7 +375,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 166
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -435,12 +389,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 169
     iget-wide v8, v2, Lcom/android/server/tare/EconomicPolicy$Action;->costToProduce:J
 
     add-long/2addr v4, v8
 
-    .line 170
     iget-wide v1, v2, Lcom/android/server/tare/EconomicPolicy$Action;->basePrice:J
 
     add-long/2addr v6, v1
@@ -455,7 +407,6 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 173
     new-instance v0, Lcom/android/server/tare/EconomicPolicy$Action;
 
     move-object v2, v0
@@ -469,7 +420,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 174
     :goto_1
     iget-object p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
@@ -481,7 +431,6 @@
 .method public getCostModifiers()[I
     .locals 0
 
-    .line 153
     iget-object p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mCostModifiers:[I
 
     if-nez p0, :cond_0
@@ -495,7 +444,6 @@
 .method public getEnabledPolicyIds()I
     .locals 0
 
-    .line 207
     iget p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     return p0
@@ -504,7 +452,6 @@
 .method public getInitialSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 137
     iget-wide v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mInitialConsumptionLimit:J
 
     return-wide v0
@@ -517,7 +464,6 @@
 
     const/4 v2, 0x0
 
-    .line 129
     :goto_0
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -527,7 +473,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 130
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -553,7 +498,6 @@
 .method public getMaxSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 147
     iget-wide v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mMaxConsumptionLimit:J
 
     return-wide v0
@@ -566,7 +510,6 @@
 
     const/4 v2, 0x0
 
-    .line 120
     :goto_0
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -576,7 +519,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 121
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -602,7 +544,6 @@
 .method public getMinSatiatedConsumptionLimit()J
     .locals 2
 
-    .line 142
     iget-wide v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mMinConsumptionLimit:J
 
     return-wide v0
@@ -611,7 +552,6 @@
 .method public getReward(I)Lcom/android/server/tare/EconomicPolicy$Reward;
     .locals 12
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -620,7 +560,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     iget-object p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -644,7 +583,6 @@
 
     move v1, v0
 
-    .line 187
     :goto_0
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -654,7 +592,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 188
     iget-object v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -669,17 +606,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 191
     iget-wide v10, v2, Lcom/android/server/tare/EconomicPolicy$Reward;->instantReward:J
 
     add-long/2addr v4, v10
 
-    .line 192
     iget-wide v10, v2, Lcom/android/server/tare/EconomicPolicy$Reward;->ongoingRewardPerSecond:J
 
     add-long/2addr v6, v10
 
-    .line 193
     iget-wide v1, v2, Lcom/android/server/tare/EconomicPolicy$Reward;->maxDailyReward:J
 
     add-long/2addr v8, v1
@@ -694,7 +628,6 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 197
     new-instance v0, Lcom/android/server/tare/EconomicPolicy$Reward;
 
     move-object v2, v0
@@ -708,7 +641,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 198
     :goto_1
     iget-object p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
@@ -720,7 +652,6 @@
 .method public isPolicyEnabled(I)Z
     .locals 0
 
-    .line 203
     iget p0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     and-int/2addr p0, p1
@@ -741,30 +672,24 @@
 .method public setup(Landroid/provider/DeviceConfig$Properties;)V
     .locals 7
 
-    .line 71
     invoke-super {p0, p1}, Lcom/android/server/tare/EconomicPolicy;->setup(Landroid/provider/DeviceConfig$Properties;)V
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mActions:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 74
     iget-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mRewards:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
 
     const/4 v0, 0x0
 
-    .line 77
     iput v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 78
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mInjector:Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;
 
     const/high16 v2, 0x10000000
@@ -775,14 +700,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 79
     iget v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     or-int/2addr v1, v2
 
     iput v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 80
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     new-instance v2, Lcom/android/server/tare/AlarmManagerEconomicPolicy;
@@ -795,7 +718,6 @@
 
     invoke-virtual {v1, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mInjector:Lcom/android/server/tare/CompleteEconomicPolicy$CompleteInjector;
 
@@ -807,14 +729,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 83
     iget v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
     or-int/2addr v1, v2
 
     iput v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicyIds:I
 
-    .line 84
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     new-instance v2, Lcom/android/server/tare/JobSchedulerEconomicPolicy;
@@ -827,7 +747,6 @@
 
     invoke-virtual {v1, v2}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 87
     :cond_1
     new-instance v1, Landroid/util/ArraySet;
 
@@ -835,7 +754,6 @@
 
     move v2, v0
 
-    .line 88
     :goto_0
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -845,7 +763,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 89
     iget-object v3, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -858,7 +775,6 @@
 
     move-result-object v3
 
-    .line 90
     array-length v4, v3
 
     move v5, v0
@@ -868,7 +784,6 @@
 
     aget v6, v3, v5
 
-    .line 91
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -884,7 +799,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_3
     invoke-static {v1}, Lcom/android/internal/util/jobs/ArrayUtils;->convertToIntArray(Landroid/util/ArraySet;)[I
 
@@ -892,7 +806,6 @@
 
     iput-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mCostModifiers:[I
 
-    .line 96
     :goto_2
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -902,7 +815,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 97
     iget-object v1, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -917,7 +829,6 @@
 
     goto :goto_2
 
-    .line 99
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/tare/CompleteEconomicPolicy;->updateLimits()V
 
@@ -937,7 +848,6 @@
 
     move-wide v2, v4
 
-    .line 106
     :goto_0
     iget-object v7, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
@@ -947,7 +857,6 @@
 
     if-ge v6, v7, :cond_0
 
-    .line 107
     iget-object v7, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mEnabledEconomicPolicies:Landroid/util/ArraySet;
 
     invoke-virtual {v7, v6}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -956,21 +865,18 @@
 
     check-cast v7, Lcom/android/server/tare/EconomicPolicy;
 
-    .line 108
     invoke-virtual {v7}, Lcom/android/server/tare/EconomicPolicy;->getInitialSatiatedConsumptionLimit()J
 
     move-result-wide v8
 
     add-long/2addr v0, v8
 
-    .line 109
     invoke-virtual {v7}, Lcom/android/server/tare/EconomicPolicy;->getMinSatiatedConsumptionLimit()J
 
     move-result-wide v8
 
     add-long/2addr v2, v8
 
-    .line 110
     invoke-virtual {v7}, Lcom/android/server/tare/EconomicPolicy;->getMaxSatiatedConsumptionLimit()J
 
     move-result-wide v7
@@ -981,14 +887,11 @@
 
     goto :goto_0
 
-    .line 112
     :cond_0
     iput-wide v0, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mInitialConsumptionLimit:J
 
-    .line 113
     iput-wide v2, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mMinConsumptionLimit:J
 
-    .line 114
     iput-wide v4, p0, Lcom/android/server/tare/CompleteEconomicPolicy;->mMaxConsumptionLimit:J
 
     return-void

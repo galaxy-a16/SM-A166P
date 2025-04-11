@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/WiredAccessoryManager;Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
     .locals 0
 
-    .line 282
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 285
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -41,13 +39,11 @@
 
     goto :goto_0
 
-    .line 296
     :cond_0
     iget-object p1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-static {p1}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$mshowToast(Lcom/android/server/WiredAccessoryManager;)V
 
-    .line 297
     iget-object p0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-static {p0}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$fgetmWakeLock(Lcom/android/server/WiredAccessoryManager;)Landroid/os/PowerManager$WakeLock;
@@ -58,13 +54,11 @@
 
     goto :goto_0
 
-    .line 291
     :cond_1
     iget-object p1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-static {p1}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$monSystemReady(Lcom/android/server/WiredAccessoryManager;)V
 
-    .line 292
     iget-object p0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-static {p0}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$fgetmWakeLock(Lcom/android/server/WiredAccessoryManager;)Landroid/os/PowerManager$WakeLock;
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 287
     :cond_2
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -89,7 +82,6 @@
 
     invoke-static {v0, v1, v2, p1}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$msetDevicesState(Lcom/android/server/WiredAccessoryManager;IILjava/lang/String;)V
 
-    .line 288
     iget-object p0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-static {p0}, Lcom/android/server/WiredAccessoryManager;->-$$Nest$fgetmWakeLock(Lcom/android/server/WiredAccessoryManager;)Landroid/os/PowerManager$WakeLock;

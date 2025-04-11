@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$qosF0of4TTkkTN5IlqCNO5UeXzw(Lcom/android/server/am/UserController$4;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/UserController$4;->lambda$keyEvicted$0(II)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserController;I)V
     .locals 0
 
-    .line 1174
     iput-object p1, p0, Lcom/android/server/am/UserController$4;->this$0:Lcom/android/server/am/UserController;
 
     iput p2, p0, Lcom/android/server/am/UserController$4;->val$userStartMode:I
@@ -38,7 +36,6 @@
 .method private synthetic lambda$keyEvicted$0(II)V
     .locals 0
 
-    .line 1179
     iget-object p0, p0, Lcom/android/server/am/UserController$4;->this$0:Lcom/android/server/am/UserController;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/UserController;->startUser(II)Z
@@ -51,7 +48,6 @@
 .method public keyEvicted(I)V
     .locals 3
 
-    .line 1179
     iget-object v0, p0, Lcom/android/server/am/UserController$4;->this$0:Lcom/android/server/am/UserController;
 
     invoke-static {v0}, Lcom/android/server/am/UserController;->-$$Nest$fgetmHandler(Lcom/android/server/am/UserController;)Landroid/os/Handler;

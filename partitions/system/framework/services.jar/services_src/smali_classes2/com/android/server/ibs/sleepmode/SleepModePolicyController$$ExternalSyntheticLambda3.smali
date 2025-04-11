@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;
 
     invoke-static {p1}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController;->$r8$lambda$3lo_TQhCzjFlmiZkS7vnzy8T7mY(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$ActionEntry;)V

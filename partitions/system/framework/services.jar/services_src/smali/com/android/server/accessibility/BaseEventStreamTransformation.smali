@@ -24,7 +24,6 @@
 .method public getNext()Lcom/android/server/accessibility/EventStreamTransformation;
     .locals 0
 
-    .line 29
     iget-object p0, p0, Lcom/android/server/accessibility/BaseEventStreamTransformation;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     return-object p0
@@ -33,7 +32,6 @@
 .method public setNext(Lcom/android/server/accessibility/EventStreamTransformation;)V
     .locals 0
 
-    .line 24
     iput-object p1, p0, Lcom/android/server/accessibility/BaseEventStreamTransformation;->mNext:Lcom/android/server/accessibility/EventStreamTransformation;
 
     return-void

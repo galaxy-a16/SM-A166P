@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/contexthub/ContextHubService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/location/contexthub/ContextHubService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/contexthub/ContextHubService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/location/contexthub/ContextHubService;
 
     invoke-static {p0}, Lcom/android/server/location/contexthub/ContextHubService;->$r8$lambda$z89dT8hajUgppUSmk9cPoj1ZweM(Lcom/android/server/location/contexthub/ContextHubService;)V

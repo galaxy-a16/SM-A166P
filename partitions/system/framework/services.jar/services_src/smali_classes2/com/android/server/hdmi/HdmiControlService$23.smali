@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 3953
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$23;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,12 +26,10 @@
 .method public onCleared(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
     .locals 1
 
-    .line 3956
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$23;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$massertRunOnServiceThread(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 3957
     iget-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$23;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fgetmCecController(Lcom/android/server/hdmi/HdmiControlService;)Lcom/android/server/hdmi/HdmiCecController;

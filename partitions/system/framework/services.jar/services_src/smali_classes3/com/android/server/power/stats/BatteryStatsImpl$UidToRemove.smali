@@ -17,18 +17,14 @@
 .method public constructor <init>(Lcom/android/server/power/stats/BatteryStatsImpl;IIJ)V
     .locals 0
 
-    .line 434
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 435
     iput p2, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->mStartUid:I
 
-    .line 436
     iput p3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->mEndUid:I
 
-    .line 437
     iput-wide p4, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->mUidRemovalTimestamp:J
 
     return-void
@@ -47,7 +43,6 @@
 
     move-wide v4, p3
 
-    .line 430
     invoke-direct/range {v0 .. v5}, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;-><init>(Lcom/android/server/power/stats/BatteryStatsImpl;IIJ)V
 
     return-void
@@ -58,7 +53,6 @@
 .method public getUidRemovalTimestamp()J
     .locals 2
 
-    .line 441
     iget-wide v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->mUidRemovalTimestamp:J
 
     return-wide v0
@@ -67,7 +61,6 @@
 .method public removeLocked()V
     .locals 2
 
-    .line 446
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->this$0:Lcom/android/server/power/stats/BatteryStatsImpl;
 
     iget v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$UidToRemove;->mStartUid:I

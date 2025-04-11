@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 30
     new-instance v0, Lcom/android/server/am/pmm/PersonalizedMemoryManager;
 
     invoke-direct {v0}, Lcom/android/server/am/pmm/PersonalizedMemoryManager;-><init>()V

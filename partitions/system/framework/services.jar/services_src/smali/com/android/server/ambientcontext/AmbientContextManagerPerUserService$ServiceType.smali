@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
     .locals 2
 
-    .line 70
     sget-object v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->DEFAULT:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     sget-object v1, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->WEARABLE:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 71
     new-instance v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     const-string v1, "DEFAULT"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->DEFAULT:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
-    .line 72
     new-instance v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     const-string v1, "WEARABLE"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->WEARABLE:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
-    .line 70
     invoke-static {}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->$values()[Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 70
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
     .locals 1
 
-    .line 70
     const-class v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
     .locals 1
 
-    .line 70
     sget-object v0, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->$VALUES:[Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     invoke-virtual {v0}, [Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->clone()Ljava/lang/Object;

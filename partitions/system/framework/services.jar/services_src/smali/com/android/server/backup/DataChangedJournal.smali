@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 1
 
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -29,12 +27,10 @@
 .method public static listJournals(Ljava/io/File;)Ljava/util/ArrayList;
     .locals 5
 
-    .line 152
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 153
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
@@ -45,12 +41,10 @@
 
     const-string v1, "Failed to read journal files"
 
-    .line 155
     invoke-static {p0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 158
     :cond_0
     array-length v1, p0
 
@@ -61,7 +55,6 @@
 
     aget-object v3, p0, v2
 
-    .line 159
     new-instance v4, Lcom/android/server/backup/DataChangedJournal;
 
     invoke-direct {v4, v3}, Lcom/android/server/backup/DataChangedJournal;-><init>(Ljava/io/File;)V
@@ -79,19 +72,16 @@
 .method public static newJournal(Ljava/io/File;)Lcom/android/server/backup/DataChangedJournal;
     .locals 2
 
-    .line 143
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string/jumbo v0, "journal"
 
     const/4 v1, 0x0
 
-    .line 144
     invoke-static {v0, v1, p0}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 145
     new-instance v0, Lcom/android/server/backup/DataChangedJournal;
 
     invoke-direct {v0, p0}, Lcom/android/server/backup/DataChangedJournal;-><init>(Ljava/io/File;)V
@@ -104,7 +94,6 @@
 .method public addPackage(Ljava/lang/String;)V
     .locals 3
 
-    .line 69
     new-instance v0, Ljava/io/RandomAccessFile;
 
     iget-object p0, p0, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
@@ -113,7 +102,6 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 70
     :try_start_0
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
@@ -121,12 +109,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 71
     invoke-virtual {v0, p1}, Ljava/io/RandomAccessFile;->writeUTF(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 72
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
     return-void
@@ -134,7 +120,6 @@
     :catchall_0
     move-exception p0
 
-    .line 69
     :try_start_1
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
@@ -154,7 +139,6 @@
 .method public delete()Z
     .locals 0
 
-    .line 113
     iget-object p0, p0, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
@@ -167,15 +151,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 123
     instance-of v0, p1, Lcom/android/server/backup/DataChangedJournal;
 
     if-eqz v0, :cond_0
 
-    .line 124
     check-cast p1, Lcom/android/server/backup/DataChangedJournal;
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
 
     iget-object p1, p1, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
@@ -195,7 +176,6 @@
 .method public forEach(Ljava/util/function/Consumer;)V
     .locals 3
 
-    .line 83
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -205,7 +185,6 @@
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :try_start_1
     new-instance p0, Ljava/io/BufferedInputStream;
 
@@ -215,7 +194,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 85
     :try_start_2
     new-instance v1, Ljava/io/DataInputStream;
 
@@ -223,14 +201,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 88
     :goto_0
     :try_start_3
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 89
     invoke-interface {p1, v2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -240,7 +216,6 @@
     :catchall_0
     move-exception p1
 
-    .line 82
     :try_start_4
     invoke-virtual {v1}, Ljava/io/DataInputStream;->close()V
     :try_end_4
@@ -308,7 +283,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->hashCode()I
@@ -321,7 +295,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 132
     iget-object p0, p0, Lcom/android/server/backup/DataChangedJournal;->mFile:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->toString()Ljava/lang/String;

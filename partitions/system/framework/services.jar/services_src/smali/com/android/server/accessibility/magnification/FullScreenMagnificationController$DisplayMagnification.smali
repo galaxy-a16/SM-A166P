@@ -40,7 +40,6 @@
 .method public static synthetic $r8$lambda$6Q5yGjWy-QREc8NS2M-iNKtuDow(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;Landroid/accessibilityservice/MagnificationConfig;Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->lambda$onMagnificationChangedLocked$0(Landroid/accessibilityservice/MagnificationConfig;Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
 
     return-void
@@ -49,7 +48,6 @@
 .method public static synthetic $r8$lambda$GS2YhrsVPO8CdmnZgzD7dlcPhak(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->lambda$setActivated$1(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
 
     return-void
@@ -58,7 +56,6 @@
 .method public static synthetic $r8$lambda$Z-qrJ_2QZD0fPocF0m3fxc0XyOA(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->lambda$setScaleAndCenter$2(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
 
     return-void
@@ -67,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$msetActivated(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;Z)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->setActivated(Z)Z
 
     move-result p0
@@ -78,40 +74,34 @@
 .method public constructor <init>(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;I)V
     .locals 3
 
-    .line 157
     iput-object p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     new-instance v0, Landroid/view/MagnificationSpec;
 
     invoke-direct {v0}, Landroid/view/MagnificationSpec;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 137
     invoke-static {}, Landroid/graphics/Region;->obtain()Landroid/graphics/Region;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
-    .line 138
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
-    .line 140
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mTempRect:Landroid/graphics/Rect;
 
-    .line 141
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -120,18 +110,14 @@
 
     const/4 v0, -0x1
 
-    .line 152
     iput v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
     const/4 v0, 0x0
 
-    .line 153
     iput-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
 
-    .line 158
     iput p2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
-    .line 159
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-static {p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -154,7 +140,6 @@
 .method private synthetic lambda$onMagnificationChangedLocked$0(Landroid/accessibilityservice/MagnificationConfig;Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 1
 
-    .line 408
     iget v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
@@ -167,7 +152,6 @@
 .method private synthetic lambda$setActivated$1(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 1
 
-    .line 519
     iget v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
     iget-boolean p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
@@ -180,7 +164,6 @@
 .method private synthetic lambda$setScaleAndCenter$2(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$MagnificationInfoChangedCallback;)V
     .locals 1
 
-    .line 605
     iget v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
     iget p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
@@ -195,12 +178,10 @@
 .method public createThumbnailIfSupported()V
     .locals 3
 
-    .line 640
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-nez v0, :cond_0
 
-    .line 641
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmThumbnailSupplier(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/util/function/Supplier;
@@ -215,7 +196,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
-    .line 645
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getScale()F
 
     move-result v0
@@ -237,17 +217,14 @@
 .method public destroyThumbnail()V
     .locals 1
 
-    .line 651
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-eqz v0, :cond_0
 
-    .line 653
     invoke-virtual {v0}, Lcom/android/server/accessibility/magnification/MagnificationThumbnail;->destroyThumbnail()V
 
     const/4 v0, 0x0
 
-    .line 657
     iput-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     :cond_0
@@ -257,7 +234,6 @@
 .method public getCenterX()F
     .locals 2
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -278,7 +254,6 @@
 
     add-float/2addr v0, v1
 
-    .line 261
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getOffsetX()F
 
     move-result v1
@@ -297,7 +272,6 @@
 .method public getCenterY()F
     .locals 2
 
-    .line 266
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -318,7 +292,6 @@
 
     add-float/2addr v0, v1
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getOffsetY()F
 
     move-result v1
@@ -337,12 +310,10 @@
 .method public final getDisplayMetricsForId()Landroid/util/DisplayMetrics;
     .locals 3
 
-    .line 438
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 439
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmDisplayManagerInternal(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Landroid/hardware/display/DisplayManagerInternal;
@@ -357,7 +328,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 441
     sget-object v1, Landroid/content/res/CompatibilityInfo;->DEFAULT_COMPATIBILITY_INFO:Landroid/content/res/CompatibilityInfo;
 
     const/4 v2, 0x0
@@ -366,7 +336,6 @@
 
     goto :goto_0
 
-    .line 444
     :cond_0
     invoke-virtual {v0}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
@@ -377,7 +346,6 @@
 .method public getIdOfLastServiceToMagnify()I
     .locals 0
 
-    .line 393
     iget p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
     return p0
@@ -386,7 +354,6 @@
 .method public getMagnificationBounds(Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 429
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -397,7 +364,6 @@
 .method public getMagnificationRegion(Landroid/graphics/Region;)V
     .locals 0
 
-    .line 434
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
@@ -408,22 +374,18 @@
 .method public getMagnifiedFrameInContentCoordsLocked(Landroid/graphics/Rect;)V
     .locals 3
 
-    .line 500
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getSentScale()F
 
     move-result v0
 
-    .line 501
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getSentOffsetX()F
 
     move-result v1
 
-    .line 502
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getSentOffsetY()F
 
     move-result v2
 
-    .line 503
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getMagnificationBounds(Landroid/graphics/Rect;)V
 
     neg-float p0, v1
@@ -434,14 +396,12 @@
 
     float-to-int v1, v1
 
-    .line 504
     invoke-virtual {p1, p0, v1}, Landroid/graphics/Rect;->offset(II)V
 
     const/high16 p0, 0x3f800000    # 1.0f
 
     div-float/2addr p0, v0
 
-    .line 505
     invoke-virtual {p1, p0}, Landroid/graphics/Rect;->scale(F)V
 
     return-void
@@ -450,7 +410,6 @@
 .method public getMaxOffsetXLocked()F
     .locals 2
 
-    .line 760
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -473,7 +432,6 @@
 .method public getMaxOffsetYLocked()F
     .locals 2
 
-    .line 772
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -496,7 +454,6 @@
 .method public getMinOffsetXLocked()F
     .locals 2
 
-    .line 753
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -505,7 +462,6 @@
 
     int-to-float v0, v0
 
-    .line 754
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -514,7 +470,6 @@
 
     add-float/2addr v1, v0
 
-    .line 755
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget p0, p0, Landroid/view/MagnificationSpec;->scale:F
@@ -529,7 +484,6 @@
 .method public getMinOffsetYLocked()F
     .locals 2
 
-    .line 765
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -538,7 +492,6 @@
 
     int-to-float v0, v0
 
-    .line 766
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
@@ -547,7 +500,6 @@
 
     add-float/2addr v1, v0
 
-    .line 767
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget p0, p0, Landroid/view/MagnificationSpec;->scale:F
@@ -562,7 +514,6 @@
 .method public getOffsetX()F
     .locals 0
 
-    .line 251
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget p0, p0, Landroid/view/MagnificationSpec;->offsetX:F
@@ -573,7 +524,6 @@
 .method public getOffsetY()F
     .locals 0
 
-    .line 255
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget p0, p0, Landroid/view/MagnificationSpec;->offsetY:F
@@ -584,7 +534,6 @@
 .method public getScale()F
     .locals 0
 
-    .line 247
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget p0, p0, Landroid/view/MagnificationSpec;->scale:F
@@ -595,7 +544,6 @@
 .method public getSentOffsetX()F
     .locals 0
 
-    .line 289
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->-$$Nest$fgetmSentMagnificationSpec(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;)Landroid/view/MagnificationSpec;
@@ -610,7 +558,6 @@
 .method public getSentOffsetY()F
     .locals 0
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->-$$Nest$fgetmSentMagnificationSpec(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;)Landroid/view/MagnificationSpec;
@@ -625,7 +572,6 @@
 .method public getSentScale()F
     .locals 0
 
-    .line 278
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->-$$Nest$fgetmSentMagnificationSpec(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;)Landroid/view/MagnificationSpec;
@@ -640,12 +586,10 @@
 .method public hideThumbnail()V
     .locals 0
 
-    .line 633
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-eqz p0, :cond_0
 
-    .line 634
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationThumbnail;->hideThumbnail()V
 
     :cond_0
@@ -655,7 +599,6 @@
 .method public isActivated()Z
     .locals 0
 
-    .line 243
     iget-boolean p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
 
     return p0
@@ -664,7 +607,6 @@
 .method public isRegistered()Z
     .locals 0
 
-    .line 239
     iget-boolean p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     return p0
@@ -673,7 +615,6 @@
 .method public magnificationRegionContains(FF)Z
     .locals 0
 
-    .line 424
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     float-to-int p1, p1
@@ -690,14 +631,12 @@
 .method public offsetMagnifiedRegion(FFI)V
     .locals 2
 
-    .line 715
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 719
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
@@ -705,19 +644,16 @@
 
     sub-float/2addr v1, p1
 
-    .line 720
     iget p1, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
     sub-float/2addr p1, p2
 
-    .line 721
     invoke-virtual {p0, v1, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->updateCurrentSpecWithOffsetsLocked(FF)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 722
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->onMagnificationChangedLocked()V
 
     :cond_1
@@ -725,10 +661,8 @@
 
     if-eq p3, p1, :cond_2
 
-    .line 725
     iput p3, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
-    .line 727
     :cond_2
     iget-object p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
@@ -742,7 +676,6 @@
 .method public onDisplaySizeChanged()V
     .locals 0
 
-    .line 322
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->onUserContextChanged()V
 
     return-void
@@ -751,7 +684,6 @@
 .method public onImeWindowVisibilityChanged(Z)V
     .locals 3
 
-    .line 335
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda5;
 
     invoke-direct {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda5;-><init>()V
@@ -760,7 +692,6 @@
 
     iget v2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
-    .line 337
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -769,12 +700,10 @@
 
     move-result-object p1
 
-    .line 335
     invoke-static {v0, v1, v2, p1}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/TriConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 338
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -793,51 +722,42 @@
 .method public onMagnificationChangedLocked()V
     .locals 6
 
-    .line 398
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getScale()F
 
     move-result v0
 
-    .line 399
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getCenterX()F
 
     move-result v1
 
-    .line 400
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getCenterY()F
 
     move-result v2
 
-    .line 401
     new-instance v3, Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     invoke-direct {v3}, Landroid/accessibilityservice/MagnificationConfig$Builder;-><init>()V
 
     const/4 v4, 0x1
 
-    .line 402
     invoke-virtual {v3, v4}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setMode(I)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v3
 
     iget-boolean v4, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
 
-    .line 403
     invoke-virtual {v3, v4}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setActivated(Z)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v3
 
-    .line 404
     invoke-virtual {v3, v0}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setScale(F)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v3
 
-    .line 405
     invoke-virtual {v3, v1}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setCenterX(F)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v3
 
-    .line 406
     invoke-virtual {v3, v2}, Landroid/accessibilityservice/MagnificationConfig$Builder;->setCenterY(F)Landroid/accessibilityservice/MagnificationConfig$Builder;
 
     move-result-object v3
@@ -846,7 +766,6 @@
 
     move-result-object v3
 
-    .line 407
     iget-object v4, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v4}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmMagnificationInfoChangedCallbacks(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/util/ArrayList;
@@ -859,7 +778,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 411
     iget-boolean v3, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mUnregisterPending:Z
 
     if-eqz v3, :cond_0
@@ -870,12 +788,10 @@
 
     if-nez v3, :cond_0
 
-    .line 412
     iget-boolean v3, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDeleteAfterUnregister:Z
 
     invoke-virtual {p0, v3}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->unregister(Z)V
 
-    .line 415
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->isActivated()Z
 
@@ -883,12 +799,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 416
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->updateThumbnail(FFF)V
 
     goto :goto_0
 
-    .line 418
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->hideThumbnail()V
 
@@ -899,22 +813,18 @@
 .method public onMagnificationRegionChanged(Landroid/graphics/Region;)V
     .locals 1
 
-    .line 305
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda7;
 
     invoke-direct {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda7;-><init>()V
 
-    .line 307
     invoke-static {p1}, Landroid/graphics/Region;->obtain(Landroid/graphics/Region;)Landroid/graphics/Region;
 
     move-result-object p1
 
-    .line 305
     invoke-static {v0, p0, p1}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Ljava/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -933,12 +843,10 @@
 .method public onRectangleOnScreenRequested(IIII)V
     .locals 6
 
-    .line 313
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda4;
 
     invoke-direct {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 315
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -957,12 +865,10 @@
 
     move-object v1, p0
 
-    .line 313
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Lcom/android/internal/util/function/QuintConsumer;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 316
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -981,7 +887,6 @@
 .method public onThumbnailFeatureFlagChanged()V
     .locals 1
 
-    .line 662
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/lang/Object;
@@ -990,14 +895,11 @@
 
     monitor-enter v0
 
-    .line 663
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->destroyThumbnail()V
 
-    .line 664
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->createThumbnailIfSupported()V
 
-    .line 665
     monitor-exit v0
 
     return-void
@@ -1015,7 +917,6 @@
 .method public onUserContextChanged()V
     .locals 3
 
-    .line 327
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda6;
 
     invoke-direct {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda6;-><init>()V
@@ -1024,17 +925,14 @@
 
     iget v2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
-    .line 329
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 327
     invoke-static {v0, v1, v2}, Lcom/android/internal/util/function/pooled/PooledLambda;->obtainMessage(Ljava/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 330
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -1053,12 +951,10 @@
 .method public refreshThumbnail(FFF)V
     .locals 1
 
-    .line 621
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-eqz v0, :cond_0
 
-    .line 622
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lcom/android/server/accessibility/magnification/MagnificationThumbnail;->setThumbnailBounds(Landroid/graphics/Rect;FFF)V
@@ -1070,7 +966,6 @@
 .method public register()Z
     .locals 4
 
-    .line 170
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mtraceEnabled(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Z
@@ -1081,7 +976,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1108,7 +1002,6 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mlogTrace(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
@@ -1130,7 +1023,6 @@
 
     if-nez v0, :cond_1
 
-    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1155,7 +1047,6 @@
 
     return p0
 
-    .line 180
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
@@ -1163,7 +1054,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->setEnabled(Z)V
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mtraceEnabled(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Z
@@ -1172,7 +1062,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1201,7 +1090,6 @@
 
     invoke-static {v0, v3, v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mlogTrace(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
     :cond_2
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
@@ -1219,14 +1107,12 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/wm/WindowManagerInternal;->getMagnificationRegion(ILandroid/graphics/Region;)V
 
-    .line 188
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Region;->getBounds(Landroid/graphics/Rect;)Z
 
-    .line 190
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->createThumbnailIfSupported()V
 
     return v2
@@ -1235,7 +1121,6 @@
 .method public requestRectangleOnScreen(IIII)V
     .locals 7
 
-    .line 450
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/lang/Object;
@@ -1244,38 +1129,30 @@
 
     monitor-enter v0
 
-    .line 451
     :try_start_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mTempRect:Landroid/graphics/Rect;
 
-    .line 452
     invoke-virtual {p0, v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getMagnificationBounds(Landroid/graphics/Rect;)V
 
-    .line 453
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/graphics/Rect;->intersects(IIII)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 454
     monitor-exit v0
 
     return-void
 
-    .line 457
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mTempRect1:Landroid/graphics/Rect;
 
-    .line 458
     invoke-virtual {p0, v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getMagnifiedFrameInContentCoordsLocked(Landroid/graphics/Rect;)V
 
-    .line 463
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getDisplayMetricsForId()Landroid/util/DisplayMetrics;
 
     move-result-object v2
 
-    .line 464
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -1290,14 +1167,12 @@
 
     const/high16 v5, 0x41200000    # 10.0f
 
-    .line 466
     invoke-static {v4, v5, v2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result v2
 
     sub-int v4, p3, p1
 
-    .line 468
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v5
@@ -1306,7 +1181,6 @@
 
     if-le v4, v5, :cond_2
 
-    .line 470
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v3
@@ -1317,7 +1191,6 @@
 
     if-nez v3, :cond_1
 
-    .line 472
     iget p3, v1, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr p1, p3
@@ -1326,7 +1199,6 @@
 
     goto :goto_0
 
-    .line 474
     :cond_1
     iget p1, v1, Landroid/graphics/Rect;->right:I
 
@@ -1336,7 +1208,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_2
     iget v4, v1, Landroid/graphics/Rect;->left:I
 
@@ -1350,7 +1221,6 @@
 
     goto :goto_0
 
-    .line 478
     :cond_3
     iget p1, v1, Landroid/graphics/Rect;->right:I
 
@@ -1370,14 +1240,12 @@
     :goto_0
     sub-int p3, p4, p2
 
-    .line 484
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v3
 
     if-le p3, v3, :cond_5
 
-    .line 485
     iget p3, v1, Landroid/graphics/Rect;->top:I
 
     sub-int/2addr p2, p3
@@ -1386,7 +1254,6 @@
 
     goto :goto_1
 
-    .line 486
     :cond_5
     iget p3, v1, Landroid/graphics/Rect;->top:I
 
@@ -1400,7 +1267,6 @@
 
     goto :goto_1
 
-    .line 488
     :cond_6
     iget p2, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -1412,7 +1278,6 @@
 
     add-float v6, p2, v2
 
-    .line 494
     :cond_7
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getScale()F
@@ -1425,10 +1290,8 @@
 
     const/4 p2, -0x1
 
-    .line 495
     invoke-virtual {p0, p1, v6, p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->offsetMagnifiedRegion(FFI)V
 
-    .line 496
     monitor-exit v0
 
     return-void
@@ -1446,7 +1309,6 @@
 .method public reset(Landroid/view/accessibility/MagnificationAnimationCallback;)Z
     .locals 3
 
-    .line 536
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     const/4 v1, 0x0
@@ -1455,41 +1317,32 @@
 
     return v1
 
-    .line 539
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 540
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->isActivated()Z
 
     move-result v2
 
-    .line 541
     invoke-virtual {p0, v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->setActivated(Z)Z
 
     if-eqz v2, :cond_1
 
-    .line 543
     invoke-virtual {v0}, Landroid/view/MagnificationSpec;->clear()V
 
-    .line 544
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->onMagnificationChangedLocked()V
 
     :cond_1
     const/4 v1, -0x1
 
-    .line 546
     iput v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
-    .line 547
     invoke-virtual {p0, v0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->sendSpecToAnimation(Landroid/view/MagnificationSpec;Landroid/view/accessibility/MagnificationAnimationCallback;)V
 
-    .line 550
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-eqz p0, :cond_2
 
-    .line 551
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/MagnificationThumbnail;->destroyThumbnail()V
 
     :cond_2
@@ -1499,7 +1352,6 @@
 .method public reset(Z)Z
     .locals 0
 
-    .line 531
     invoke-static {p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$smtransformToStubCallback(Z)Landroid/view/accessibility/MagnificationAnimationCallback;
 
     move-result-object p1
@@ -1514,14 +1366,12 @@
 .method public sendSpecToAnimation(Landroid/view/MagnificationSpec;Landroid/view/accessibility/MagnificationAnimationCallback;)V
     .locals 4
 
-    .line 372
     invoke-static {}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$sfgetSEC_DEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 373
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1550,7 +1400,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1570,14 +1419,12 @@
 
     if-nez v0, :cond_1
 
-    .line 378
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->updateSentSpecMainThread(Landroid/view/MagnificationSpec;Landroid/view/accessibility/MagnificationAnimationCallback;)V
 
     goto :goto_0
 
-    .line 380
     :cond_1
     new-instance v0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification$$ExternalSyntheticLambda2;
 
@@ -1589,7 +1436,6 @@
 
     move-result-object p1
 
-    .line 383
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -1609,7 +1455,6 @@
 .method public final setActivated(Z)Z
     .locals 3
 
-    .line 514
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
 
     if-eq v0, p1, :cond_0
@@ -1624,10 +1469,8 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 517
     iput-boolean p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationActivated:Z
 
-    .line 518
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmMagnificationInfoChangedCallbacks(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/util/ArrayList;
@@ -1640,7 +1483,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 522
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmControllerCtx(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$ControllerContext;
@@ -1662,7 +1504,6 @@
 .method public setScale(FFFZI)Z
     .locals 6
 
-    .line 563
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     if-nez v0, :cond_0
@@ -1671,27 +1512,21 @@
 
     return p0
 
-    .line 567
     :cond_0
     invoke-static {p1}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->constrainScale(F)F
 
     move-result v1
 
-    .line 569
     iget-object p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mTempRect:Landroid/graphics/Rect;
 
-    .line 570
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Region;->getBounds(Landroid/graphics/Rect;)Z
 
-    .line 571
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 572
     iget v2, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 574
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -1714,7 +1549,6 @@
 
     div-float/2addr v3, v2
 
-    .line 576
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v5
@@ -1735,7 +1569,6 @@
 
     div-float/2addr v5, v2
 
-    .line 577
     iget p1, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
     sub-float/2addr p2, p1
@@ -1760,10 +1593,8 @@
 
     add-float v3, p3, v5
 
-    .line 583
     iput p5, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
-    .line 584
     invoke-static {p4}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$smtransformToStubCallback(Z)Landroid/view/accessibility/MagnificationAnimationCallback;
 
     move-result-object v4
@@ -1782,7 +1613,6 @@
 .method public setScaleAndCenter(FFFLandroid/view/accessibility/MagnificationAnimationCallback;I)Z
     .locals 2
 
-    .line 590
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     if-nez v0, :cond_0
@@ -1791,7 +1621,6 @@
 
     return p0
 
-    .line 593
     :cond_0
     invoke-static {}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$sfgetSEC_DEBUG()Z
 
@@ -1799,7 +1628,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 594
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1849,24 +1677,20 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 599
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->setActivated(Z)Z
 
     move-result v0
 
-    .line 600
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->updateMagnificationSpecLocked(FFF)Z
 
     move-result p1
 
     or-int/2addr p1, v0
 
-    .line 601
     iget-object p2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     invoke-virtual {p0, p2, p4}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->sendSpecToAnimation(Landroid/view/MagnificationSpec;Landroid/view/accessibility/MagnificationAnimationCallback;)V
 
-    .line 602
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->isActivated()Z
 
     move-result p2
@@ -1877,10 +1701,8 @@
 
     if-eq p5, p2, :cond_2
 
-    .line 603
     iput p5, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mIdOfLastServiceToMagnify:I
 
-    .line 604
     iget-object p2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmMagnificationInfoChangedCallbacks(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/util/ArrayList;
@@ -1900,7 +1722,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 778
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1975,19 +1796,16 @@
 .method public unregister(Z)V
     .locals 4
 
-    .line 206
     iget-boolean v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mSpecAnimationBridge:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$SpecAnimationBridge;->setEnabled(Z)V
 
-    .line 208
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mtraceEnabled(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Z
@@ -1996,7 +1814,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 209
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2023,7 +1840,6 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$mlogTrace(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 212
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
@@ -2041,25 +1857,20 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/wm/WindowManagerInternal;->setMagnificationCallbacks(ILcom/android/server/wm/WindowManagerInternal$MagnificationCallbacks;)Z
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 215
     iput-boolean v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
-    .line 216
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     iget v2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDisplayId:I
 
     invoke-static {v0, v2, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$munregisterCallbackLocked(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;IZ)V
 
-    .line 218
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->destroyThumbnail()V
 
-    .line 220
     :cond_1
     iput-boolean v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mUnregisterPending:Z
 
@@ -2069,15 +1880,12 @@
 .method public unregisterPending(Z)V
     .locals 0
 
-    .line 233
     iput-boolean p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mDeleteAfterUnregister:Z
 
     const/4 p1, 0x1
 
-    .line 234
     iput-boolean p1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mUnregisterPending:Z
 
-    .line 235
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->reset(Z)Z
 
     return-void
@@ -2086,14 +1894,12 @@
 .method public updateCurrentSpecWithOffsetsLocked(FF)Z
     .locals 3
 
-    .line 731
     invoke-static {}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$sfgetSEC_DEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 732
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2122,7 +1928,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 738
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getMinOffsetXLocked()F
 
@@ -2132,12 +1937,10 @@
 
     move-result v1
 
-    .line 737
     invoke-static {p1, v0, v1}, Landroid/util/MathUtils;->constrain(FFF)F
 
     move-result p1
 
-    .line 739
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget v0, v0, Landroid/view/MagnificationSpec;->offsetX:F
@@ -2150,7 +1953,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 740
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iput p1, v0, Landroid/view/MagnificationSpec;->offsetX:F
@@ -2162,7 +1964,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 744
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getMinOffsetYLocked()F
 
@@ -2172,12 +1973,10 @@
 
     move-result v2
 
-    .line 743
     invoke-static {p2, v0, v2}, Landroid/util/MathUtils;->constrain(FFF)F
 
     move-result p2
 
-    .line 745
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget v0, v0, Landroid/view/MagnificationSpec;->offsetY:F
@@ -2188,7 +1987,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 746
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iput p2, p0, Landroid/view/MagnificationSpec;->offsetY:F
@@ -2205,7 +2003,6 @@
 .method public updateMagnificationRegion(Landroid/graphics/Region;)V
     .locals 4
 
-    .line 347
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->this$0:Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;->-$$Nest$fgetmLock(Lcom/android/server/accessibility/magnification/FullScreenMagnificationController;)Ljava/lang/Object;
@@ -2214,18 +2011,15 @@
 
     monitor-enter v0
 
-    .line 348
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mRegistered:Z
 
     if-nez v1, :cond_0
 
-    .line 350
     monitor-exit v0
 
     return-void
 
-    .line 352
     :cond_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
@@ -2235,19 +2029,16 @@
 
     if-nez v1, :cond_2
 
-    .line 353
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     invoke-virtual {v1, p1}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
-    .line 354
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationRegion:Landroid/graphics/Region;
 
     iget-object v2, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Region;->getBounds(Landroid/graphics/Rect;)Z
 
-    .line 356
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getScale()F
 
     move-result v1
@@ -2262,7 +2053,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->refreshThumbnail(FFF)V
 
-    .line 360
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget v2, v1, Landroid/view/MagnificationSpec;->offsetX:F
@@ -2275,22 +2065,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 362
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->sendSpecToAnimation(Landroid/view/MagnificationSpec;Landroid/view/accessibility/MagnificationAnimationCallback;)V
 
-    .line 364
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->onMagnificationChangedLocked()V
 
-    .line 366
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/Region;->recycle()V
 
-    .line 367
     monitor-exit v0
 
     return-void
@@ -2308,19 +2094,16 @@
 .method public updateMagnificationSpecLocked(FFF)Z
     .locals 5
 
-    .line 681
     invoke-static {p2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 682
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getCenterX()F
 
     move-result p2
 
-    .line 684
     :cond_0
     invoke-static {p3}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -2328,12 +2111,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 685
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getCenterY()F
 
     move-result p3
 
-    .line 687
     :cond_1
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -2341,18 +2122,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 688
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->getScale()F
 
     move-result p1
 
-    .line 694
     :cond_2
     invoke-static {p1}, Lcom/android/server/accessibility/magnification/MagnificationScaleProvider;->constrainScale(F)F
 
     move-result p1
 
-    .line 695
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget v0, v0, Landroid/view/MagnificationSpec;->scale:F
@@ -2363,7 +2141,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 696
     iget-object v0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mCurrentMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iput p1, v0, Landroid/view/MagnificationSpec;->scale:F
@@ -2375,7 +2152,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 700
     :goto_0
     iget-object v1, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationBounds:Landroid/graphics/Rect;
 
@@ -2401,7 +2177,6 @@
 
     sub-float/2addr v1, p2
 
-    .line 702
     invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
     move-result p2
@@ -2422,7 +2197,6 @@
 
     sub-float/2addr p2, p3
 
-    .line 704
     invoke-virtual {p0, v1, p2}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->updateCurrentSpecWithOffsetsLocked(FF)Z
 
     move-result p1
@@ -2431,7 +2205,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 707
     invoke-virtual {p0}, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->onMagnificationChangedLocked()V
 
     :cond_4
@@ -2441,12 +2214,10 @@
 .method public updateThumbnail(FFF)V
     .locals 0
 
-    .line 614
     iget-object p0, p0, Lcom/android/server/accessibility/magnification/FullScreenMagnificationController$DisplayMagnification;->mMagnificationThumbnail:Lcom/android/server/accessibility/magnification/MagnificationThumbnail;
 
     if-eqz p0, :cond_0
 
-    .line 615
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/accessibility/magnification/MagnificationThumbnail;->updateThumbnail(FFF)V
 
     :cond_0

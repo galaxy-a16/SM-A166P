@@ -20,7 +20,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public static bridge synthetic -$$Nest$msetTempExempt(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;ILjava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->setTempExempt(ILjava/lang/String;Z)V
 
     return-void
@@ -38,10 +36,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -64,7 +60,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->TAG:Ljava/lang/String;
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -73,10 +68,8 @@
 
     const/4 v0, 0x0
 
-    .line 24
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mContext:Landroid/content/Context;
 
-    .line 26
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mReceiver:Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;
 
     return-void
@@ -85,7 +78,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/PredownloadFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;-><init>()V
 
     return-void
@@ -94,7 +86,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
     .locals 1
 
-    .line 35
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/PredownloadFilter;
 
     move-result-object v0
@@ -107,7 +98,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 57
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -118,12 +108,10 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 62
     new-instance p2, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
     invoke-direct {p2, p0, p3, p1}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;ILjava/lang/String;)V
 
-    .line 63
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -132,7 +120,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 64
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->TAG:Ljava/lang/String;
 
     const-string p1, "EXEMPT!"
@@ -152,29 +139,24 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 48
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->setContext(Landroid/content/Context;)V
 
-    .line 49
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 50
     new-instance p1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;
 
     invoke-direct {p1, p0}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;-><init>(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;)V
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mReceiver:Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;
 
-    .line 51
     invoke-virtual {p1}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;->registerPredownloadRequestReceiver()V
 
     const-string/jumbo p0, "sys.config.mars.predl_filter.enabled"
 
     const-string p1, "1"
 
-    .line 52
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -183,7 +165,6 @@
 .method public final setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mContext:Landroid/content/Context;
 
     return-void
@@ -192,7 +173,6 @@
 .method public final setTempExempt(ILjava/lang/String;Z)V
     .locals 3
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -223,14 +203,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     new-instance v0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>(Lcom/android/server/am/mars/filter/filter/PredownloadFilter;ILjava/lang/String;)V
 
     if-eqz p3, :cond_0
 
-    .line 74
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -239,14 +217,12 @@
 
     if-nez p1, :cond_1
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 78
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 

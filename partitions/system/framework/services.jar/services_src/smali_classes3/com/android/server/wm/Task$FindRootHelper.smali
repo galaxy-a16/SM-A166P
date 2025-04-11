@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/wm/Task;)V
     .locals 0
 
-    .line 727
     iput-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->this$0:Lcom/android/server/wm/Task;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/Task;Lcom/android/server/wm/Task$FindRootHelper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/Task$FindRootHelper;-><init>(Lcom/android/server/wm/Task;)V
 
     return-void
@@ -42,25 +40,20 @@
 .method public findRoot(ZZ)Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 733
     iput-boolean p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->mIgnoreRelinquishIdentity:Z
 
-    .line 734
     iput-boolean p2, p0, Lcom/android/server/wm/Task$FindRootHelper;->mSetToBottomIfNone:Z
 
-    .line 735
     iget-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->this$0:Lcom/android/server/wm/Task;
 
     const/4 p2, 0x0
 
     invoke-virtual {p1, p0, p2}, Lcom/android/server/wm/WindowContainer;->forAllActivities(Ljava/util/function/Predicate;Z)Z
 
-    .line 736
     iget-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
     const/4 p2, 0x0
 
-    .line 737
     iput-object p2, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
     return-object p1
@@ -69,7 +62,6 @@
 .method public test(Lcom/android/server/wm/ActivityRecord;)Z
     .locals 5
 
-    .line 743
     iget-object v0, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
     if-nez v0, :cond_0
@@ -78,10 +70,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 746
     iput-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
-    .line 749
     :cond_0
     iget-boolean v0, p1, Lcom/android/server/wm/ActivityRecord;->finishing:Z
 
@@ -91,7 +81,6 @@
 
     return v1
 
-    .line 751
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
@@ -101,11 +90,9 @@
 
     if-eqz v0, :cond_3
 
-    .line 753
     :cond_2
     iput-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
-    .line 756
     :cond_3
     iget-object v0, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
@@ -124,7 +111,6 @@
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 757
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/wm/Task$FindRootHelper;->mIgnoreRelinquishIdentity:Z
 
@@ -146,7 +132,6 @@
 
     if-eq v3, v4, :cond_5
 
-    .line 760
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->isSystemApp()Z
 
     move-result v0
@@ -165,7 +150,6 @@
 
     goto :goto_1
 
-    .line 767
     :cond_5
     iput-object p1, p0, Lcom/android/server/wm/Task$FindRootHelper;->mRoot:Lcom/android/server/wm/ActivityRecord;
 
@@ -181,7 +165,6 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 727
     check-cast p1, Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/Task$FindRootHelper;->test(Lcom/android/server/wm/ActivityRecord;)Z

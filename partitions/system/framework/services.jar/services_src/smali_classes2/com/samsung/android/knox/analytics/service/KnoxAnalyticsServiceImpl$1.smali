@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;)V
     .locals 0
 
-    .line 25
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl$1;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onKnoxAnalyticsActivation(Z)V
     .locals 1
 
-    .line 28
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -36,7 +34,6 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 29
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl$1;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;
 
     const/4 p1, 0x1
@@ -49,7 +46,6 @@
 .method public onKnoxAnalyticsDeactivation(Z)V
     .locals 1
 
-    .line 34
     invoke-static {}, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -58,7 +54,6 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl$1;->this$0:Lcom/samsung/android/knox/analytics/service/KnoxAnalyticsServiceImpl;
 
     const/4 p1, 0x0
@@ -71,13 +66,11 @@
 .method public onStatusChanged(IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onTriggerChanged(IZLjava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

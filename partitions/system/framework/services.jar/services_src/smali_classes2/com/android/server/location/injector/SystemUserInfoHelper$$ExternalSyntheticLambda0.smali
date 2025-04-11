@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/injector/SystemUserInfoHelper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/injector/SystemUserInfoHelper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/location/injector/SystemUserInfoHelper;
@@ -27,7 +26,6 @@
 .method public final onUserVisibilityChanged(IZ)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/injector/SystemUserInfoHelper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/location/injector/SystemUserInfoHelper;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/location/injector/SystemUserInfoHelper;->$r8$lambda$j9OfdHJLR5q0DR4RrsO4KuvSES4(Lcom/android/server/location/injector/SystemUserInfoHelper;IZ)V

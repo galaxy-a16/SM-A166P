@@ -17,7 +17,6 @@
 
     const-string v2, "0"
 
-    .line 40
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v3

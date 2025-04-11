@@ -16,7 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Lcom/samsung/android/hardware/display/IRefreshRateToken$Stub;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public binderDied()V
     .locals 0
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/display/mode/RefreshRateToken;->remove()V
 
     return-void
@@ -39,20 +37,16 @@
 .method public init(Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateToken;->mInfo:Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
 
-    .line 45
     iput-object p2, p0, Lcom/android/server/display/mode/RefreshRateToken;->mRemoveConsumer:Ljava/util/function/Consumer;
 
-    .line 46
     iget-object p1, p1, Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;->mToken:Landroid/os/IBinder;
 
     if-eqz p1, :cond_0
 
     const/4 p2, 0x0
 
-    .line 48
     :try_start_0
     invoke-interface {p1, p0, p2}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -63,7 +57,6 @@
     :catch_0
     move-exception p0
 
-    .line 51
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -78,7 +71,6 @@
 .method public release()V
     .locals 0
 
-    .line 58
     invoke-virtual {p0}, Lcom/android/server/display/mode/RefreshRateToken;->remove()V
 
     return-void
@@ -87,15 +79,12 @@
 .method public final remove()V
     .locals 2
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/display/mode/RefreshRateToken;->mRemoveConsumer:Ljava/util/function/Consumer;
 
     if-eqz v0, :cond_0
 
-    .line 68
     invoke-interface {v0, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 70
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/mode/RefreshRateToken;->mInfo:Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
 
@@ -107,7 +96,6 @@
 
     const/4 v1, 0x0
 
-    .line 71
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
     :cond_1
@@ -117,7 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +119,6 @@
 
     const-string v1, "->"
 
-    .line 77
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/display/mode/RefreshRateToken;->mInfo:Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
@@ -147,7 +133,6 @@
 
     const-string v1, " acquire at "
 
-    .line 78
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/display/mode/RefreshRateToken;->mInfo:Lcom/android/server/display/mode/RefreshRateToken$RefreshRateTokenInfo;
@@ -162,7 +147,6 @@
 
     const-string/jumbo p0, "}"
 
-    .line 79
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

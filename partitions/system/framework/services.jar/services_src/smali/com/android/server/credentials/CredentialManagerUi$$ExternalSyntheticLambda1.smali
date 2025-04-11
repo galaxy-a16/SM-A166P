@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/credentials/CredentialProviderInfo;
 
     invoke-static {p1}, Lcom/android/server/credentials/CredentialManagerUi;->$r8$lambda$-uSR8lfIfglIsP0UC-bxruIpJTQ(Landroid/credentials/CredentialProviderInfo;)Landroid/credentials/ui/DisabledProviderData;

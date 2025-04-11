@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/PinnerService;Landroid/os/Handler;Landroid/net/Uri;)V
     .locals 0
 
-    .line 350
     iput-object p1, p0, Lcom/android/server/PinnerService$2;->this$0:Lcom/android/server/PinnerService;
 
     iput-object p3, p0, Lcom/android/server/PinnerService$2;->val$userSetupCompleteUri:Landroid/net/Uri;
@@ -28,7 +27,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 353
     iget-object p1, p0, Lcom/android/server/PinnerService$2;->val$userSetupCompleteUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 354
     iget-object p0, p0, Lcom/android/server/PinnerService$2;->this$0:Lcom/android/server/PinnerService;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I

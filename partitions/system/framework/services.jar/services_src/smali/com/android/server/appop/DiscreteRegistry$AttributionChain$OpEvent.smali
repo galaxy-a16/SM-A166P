@@ -19,22 +19,16 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;ILcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;)V
     .locals 0
 
-    .line 490
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 491
     iput-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mPkgName:Ljava/lang/String;
 
-    .line 492
     iput p2, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mUid:I
 
-    .line 493
     iput-object p3, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mAttributionTag:Ljava/lang/String;
 
-    .line 494
     iput p4, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpCode:I
 
-    .line 495
     iput-object p5, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     return-void
@@ -45,7 +39,6 @@
 .method public equalsExceptDuration(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
     .locals 4
 
-    .line 514
     iget-object v0, p1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mOpEvent:Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;
 
     iget-wide v0, v0, Lcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;->mNoteDuration:J
@@ -62,7 +55,6 @@
 
     return v1
 
-    .line 517
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->packageOpEquals(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
 
@@ -89,7 +81,6 @@
 .method public matches(Ljava/lang/String;ILjava/lang/String;ILcom/android/server/appop/DiscreteRegistry$DiscreteOpEvent;)Z
     .locals 1
 
-    .line 500
     iget-object v0, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mPkgName:Ljava/lang/String;
 
     invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -104,7 +95,6 @@
 
     iget-object p1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mAttributionTag:Ljava/lang/String;
 
-    .line 501
     invoke-static {p3, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -151,7 +141,6 @@
 .method public packageOpEquals(Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;)Z
     .locals 2
 
-    .line 508
     iget-object v0, p1, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mPkgName:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mPkgName:Ljava/lang/String;
@@ -172,7 +161,6 @@
 
     iget-object v1, p0, Lcom/android/server/appop/DiscreteRegistry$AttributionChain$OpEvent;->mAttributionTag:Ljava/lang/String;
 
-    .line 509
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0

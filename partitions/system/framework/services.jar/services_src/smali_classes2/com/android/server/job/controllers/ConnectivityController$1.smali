@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/ConnectivityController;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/job/controllers/ConnectivityController$1;->this$0:Lcom/android/server/job/controllers/ConnectivityController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,10 +26,8 @@
 .method public compare(Lcom/android/server/job/controllers/ConnectivityController$UidStats;Lcom/android/server/job/controllers/ConnectivityController$UidStats;)I
     .locals 8
 
-    .line 172
     iget-object v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->runningJobs:Landroid/util/ArraySet;
 
-    .line 173
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -43,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 172
     invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/job/controllers/ConnectivityController$1;->prioritizeExistenceOver(III)I
 
     move-result v0
@@ -52,7 +48,6 @@
 
     return v0
 
-    .line 178
     :cond_0
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->numReadyWithConnectivity:I
 
@@ -66,7 +61,6 @@
 
     return v0
 
-    .line 185
     :cond_1
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->numRequestedNetworkAvailable:I
 
@@ -80,7 +74,6 @@
 
     return v0
 
-    .line 192
     :cond_2
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->baseBias:I
 
@@ -96,7 +89,6 @@
 
     return v0
 
-    .line 199
     :cond_3
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->numUIJs:I
 
@@ -110,7 +102,6 @@
 
     return v0
 
-    .line 204
     :cond_4
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->numEJs:I
 
@@ -124,7 +115,6 @@
 
     return v0
 
-    .line 211
     :cond_5
     iget v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->baseBias:I
 
@@ -140,7 +130,6 @@
 
     return p0
 
-    .line 217
     :cond_6
     iget-wide v0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->earliestUIJEnqueueTime:J
 
@@ -163,7 +152,6 @@
 
     return v0
 
-    .line 223
     :cond_8
     iget-wide v3, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->earliestEJEnqueueTime:J
 
@@ -182,7 +170,6 @@
 
     return v0
 
-    .line 229
     :cond_a
     iget p0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->baseBias:I
 
@@ -194,7 +181,6 @@
 
     return v1
 
-    .line 233
     :cond_b
     iget-wide p0, p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;->earliestEnqueueTime:J
 
@@ -220,7 +206,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 143
     check-cast p1, Lcom/android/server/job/controllers/ConnectivityController$UidStats;
 
     check-cast p2, Lcom/android/server/job/controllers/ConnectivityController$UidStats;
@@ -235,7 +220,6 @@
 .method public final prioritizeExistenceOver(III)I
     .locals 0
 
-    .line 0
     if-le p2, p1, :cond_0
 
     if-gt p3, p1, :cond_1

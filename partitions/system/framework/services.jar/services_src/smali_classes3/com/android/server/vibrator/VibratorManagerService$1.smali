@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibratorManagerService;)V
     .locals 0
 
-    .line 182
     iput-object p1, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.SCREEN_OFF"
 
-    .line 185
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 186
     iget-object p1, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
     invoke-static {p1}, Lcom/android/server/vibrator/VibratorManagerService;->-$$Nest$fgetmLock(Lcom/android/server/vibrator/VibratorManagerService;)Ljava/lang/Object;
@@ -51,7 +48,6 @@
 
     const/4 v1, -0x1
 
-    .line 189
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -64,15 +60,12 @@
 
     const-string p2, "Keep screen turned off"
 
-    .line 191
     invoke-static {p0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     monitor-exit p1
 
     return-void
 
-    .line 197
     :cond_0
     iget-object p2, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
@@ -86,12 +79,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 198
     monitor-exit p1
 
     return-void
 
-    .line 204
     :cond_1
     iget-object p2, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
@@ -105,7 +96,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 205
     iget-object p2, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
     new-instance v0, Lcom/android/server/vibrator/Vibration$EndInfo;
@@ -116,7 +106,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/vibrator/VibratorManagerService;->-$$Nest$mclearNextVibrationLocked(Lcom/android/server/vibrator/VibratorManagerService;Lcom/android/server/vibrator/Vibration$EndInfo;)V
 
-    .line 208
     :cond_2
     iget-object p2, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
@@ -130,7 +119,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 209
     iget-object p0, p0, Lcom/android/server/vibrator/VibratorManagerService$1;->this$0:Lcom/android/server/vibrator/VibratorManagerService;
 
     invoke-static {p0}, Lcom/android/server/vibrator/VibratorManagerService;->-$$Nest$fgetmCurrentVibration(Lcom/android/server/vibrator/VibratorManagerService;)Lcom/android/server/vibrator/VibrationStepConductor;
@@ -147,7 +135,6 @@
 
     invoke-virtual {p0, p2, v0}, Lcom/android/server/vibrator/VibrationStepConductor;->notifyCancelled(Lcom/android/server/vibrator/Vibration$EndInfo;Z)V
 
-    .line 217
     :cond_3
     monitor-exit p1
 

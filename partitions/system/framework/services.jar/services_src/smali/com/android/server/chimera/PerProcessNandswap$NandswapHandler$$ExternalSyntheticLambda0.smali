@@ -20,7 +20,6 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/util/Pair;
 
     check-cast p2, Landroid/util/Pair;

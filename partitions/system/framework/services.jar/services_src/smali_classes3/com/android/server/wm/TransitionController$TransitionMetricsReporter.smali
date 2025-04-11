@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1997
     invoke-direct {p0}, Landroid/window/ITransitionMetricsReporter$Stub;-><init>()V
 
-    .line 1998
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -29,18 +27,15 @@
 .method public associate(Landroid/os/IBinder;Ljava/util/function/LongConsumer;)V
     .locals 1
 
-    .line 2001
     iget-object v0, p0, Lcom/android/server/wm/TransitionController$TransitionMetricsReporter;->mMetricConsumers:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 2002
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/TransitionController$TransitionMetricsReporter;->mMetricConsumers:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2003
     monitor-exit v0
 
     return-void
@@ -58,12 +53,10 @@
 .method public reportAnimationStart(Landroid/os/IBinder;J)V
     .locals 2
 
-    .line 2009
     iget-object v0, p0, Lcom/android/server/wm/TransitionController$TransitionMetricsReporter;->mMetricConsumers:Landroid/util/ArrayMap;
 
     monitor-enter v0
 
-    .line 2010
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/TransitionController$TransitionMetricsReporter;->mMetricConsumers:Landroid/util/ArrayMap;
 
@@ -77,7 +70,6 @@
 
     return-void
 
-    .line 2011
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/TransitionController$TransitionMetricsReporter;->mMetricConsumers:Landroid/util/ArrayMap;
 
@@ -87,14 +79,12 @@
 
     check-cast p0, Ljava/util/function/LongConsumer;
 
-    .line 2012
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p0, :cond_1
 
-    .line 2014
     invoke-interface {p0, p2, p3}, Ljava/util/function/LongConsumer;->accept(J)V
 
     :cond_1
@@ -103,7 +93,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2012
     :try_start_1
     monitor-exit v0
     :try_end_1

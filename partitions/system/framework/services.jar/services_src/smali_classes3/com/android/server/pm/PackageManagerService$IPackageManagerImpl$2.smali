@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;I)V
     .locals 0
 
-    .line 6190
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$2;->this$1:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$2;->val$realMoveId:I
@@ -28,14 +27,12 @@
 .method public onCreated(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStatusChanged(IIJ)V
     .locals 0
 
-    .line 6198
     iget-object p1, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$2;->this$1:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     iget-object p1, p1, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;->this$0:Lcom/android/server/pm/PackageManagerService;

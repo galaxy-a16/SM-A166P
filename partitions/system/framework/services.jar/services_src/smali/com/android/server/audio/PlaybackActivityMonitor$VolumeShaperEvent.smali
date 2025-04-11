@@ -17,27 +17,22 @@
 .method public constructor <init>(Landroid/media/AudioPlaybackConfiguration;Z)V
     .locals 1
 
-    .line 1388
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1389
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getPlayerInterfaceId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->mPlayerIId:I
 
-    .line 1390
     iput-boolean p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->mSkipRamp:Z
 
-    .line 1391
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientUid()I
 
     move-result p2
 
     iput p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->mClientUid:I
 
-    .line 1392
     invoke-virtual {p1}, Landroid/media/AudioPlaybackConfiguration;->getClientPid()I
 
     move-result p1
@@ -52,7 +47,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 1397
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->getVSAction()Ljava/lang/String;
@@ -71,7 +65,6 @@
 
     const-string v1, " uid/pid:"
 
-    .line 1398
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->mClientUid:I
@@ -88,7 +81,6 @@
 
     const-string v1, " skip ramp:"
 
-    .line 1399
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$VolumeShaperEvent;->mSkipRamp:Z

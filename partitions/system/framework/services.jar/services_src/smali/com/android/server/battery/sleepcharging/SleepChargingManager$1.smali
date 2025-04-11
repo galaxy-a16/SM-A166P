@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/battery/sleepcharging/SleepChargingManager;IJIJ)V
     .locals 0
 
-    .line 113
     iput-object p1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iput p2, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$plugType:I
@@ -43,35 +42,30 @@
 .method public run()V
     .locals 4
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iget v1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$plugType:I
 
     invoke-static {v0, v1}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fputmPlugType(Lcom/android/server/battery/sleepcharging/SleepChargingManager;I)V
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iget-wide v1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$chargeStartTime:J
 
     invoke-static {v0, v1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fputmChargeStartTime(Lcom/android/server/battery/sleepcharging/SleepChargingManager;J)V
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iget v1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$batteryLevel:I
 
     invoke-static {v0, v1}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fputmBatteryLevel(Lcom/android/server/battery/sleepcharging/SleepChargingManager;I)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     iget-wide v1, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$secondsToFullCharge:J
 
     invoke-static {v0, v1, v2}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fputmSecondsToFullCharge(Lcom/android/server/battery/sleepcharging/SleepChargingManager;J)V
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     invoke-static {v0}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fgetmIsSleepCharging(Lcom/android/server/battery/sleepcharging/SleepChargingManager;)Z
@@ -82,14 +76,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
     iget v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$plugType:I
 
     if-nez v0, :cond_1
 
     goto :goto_0
 
-    .line 127
     :cond_0
     iget v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->val$plugType:I
 
@@ -123,7 +115,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 133
     invoke-static {}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -170,7 +161,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     invoke-static {v0}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fgetmHandler(Lcom/android/server/battery/sleepcharging/SleepChargingManager;)Landroid/os/Handler;
@@ -181,7 +171,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 136
     iget-object p0, p0, Lcom/android/server/battery/sleepcharging/SleepChargingManager$1;->this$0:Lcom/android/server/battery/sleepcharging/SleepChargingManager;
 
     invoke-static {p0}, Lcom/android/server/battery/sleepcharging/SleepChargingManager;->-$$Nest$fgetmHandler(Lcom/android/server/battery/sleepcharging/SleepChargingManager;)Landroid/os/Handler;

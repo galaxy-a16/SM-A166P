@@ -19,14 +19,12 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 0
 
-    .line 3916
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 3912
     iput p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mLastBatterySeq:I
 
     return-void
@@ -37,7 +35,6 @@
 .method public getSeq()I
     .locals 0
 
-    .line 3969
     iget p0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mLastBatterySeq:I
 
     return p0
@@ -46,7 +43,6 @@
 .method public isBatteryNotLow()Z
     .locals 0
 
-    .line 3961
     iget-boolean p0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mBatteryNotLow:Z
 
     return p0
@@ -55,7 +51,6 @@
 .method public isCharging()Z
     .locals 0
 
-    .line 3957
     iget-boolean p0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mCharging:Z
 
     return p0
@@ -64,7 +59,6 @@
 .method public isMonitoring()Z
     .locals 0
 
-    .line 3965
     iget-object p0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mMonitor:Landroid/content/BroadcastReceiver;
 
     if-eqz p0, :cond_0
@@ -83,7 +77,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 3974
     invoke-virtual {p0, p2}, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->onReceiveInternal(Landroid/content/Intent;)V
 
     return-void
@@ -92,14 +85,12 @@
 .method public onReceiveInternal(Landroid/content/Intent;)V
     .locals 7
 
-    .line 3979
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v0, v0, Lcom/android/server/job/JobSchedulerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3980
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -107,7 +98,6 @@
 
     const-string v2, "android.intent.action.BATTERY_LOW"
 
-    .line 3982
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -118,14 +108,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 3983
     sget-boolean v1, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
     const-string v1, "JobScheduler"
 
-    .line 3984
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,13 +136,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3986
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mBatteryNotLow:Z
 
     if-eqz v1, :cond_7
 
-    .line 3987
     iput-boolean v3, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mBatteryNotLow:Z
 
     :goto_0
@@ -165,21 +151,18 @@
     :cond_1
     const-string v2, "android.intent.action.BATTERY_OKAY"
 
-    .line 3990
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 3991
     sget-boolean v1, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
     const-string v1, "JobScheduler"
 
-    .line 3992
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,13 +185,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3994
     :cond_2
     iget-boolean v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mBatteryNotLow:Z
 
     if-nez v1, :cond_7
 
-    .line 3995
     iput-boolean v4, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mBatteryNotLow:Z
 
     goto :goto_0
@@ -216,21 +197,18 @@
     :cond_3
     const-string v2, "android.os.action.CHARGING"
 
-    .line 3998
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 3999
     sget-boolean v1, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v1, :cond_4
 
     const-string v1, "JobScheduler"
 
-    .line 4000
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,13 +231,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4002
     :cond_4
     iget-boolean v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mCharging:Z
 
     if-nez v1, :cond_7
 
-    .line 4003
     iput-boolean v4, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mCharging:Z
 
     goto :goto_0
@@ -267,21 +243,18 @@
     :cond_5
     const-string v2, "android.os.action.DISCHARGING"
 
-    .line 4006
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 4007
     sget-boolean v1, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-eqz v1, :cond_6
 
     const-string v1, "JobScheduler"
 
-    .line 4008
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,13 +277,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4010
     :cond_6
     iget-boolean v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mCharging:Z
 
     if-eqz v1, :cond_7
 
-    .line 4011
     iput-boolean v3, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mCharging:Z
 
     goto/16 :goto_0
@@ -319,10 +290,8 @@
     :goto_1
     const-string/jumbo v1, "seq"
 
-    .line 4015
     iget v2, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mLastBatterySeq:I
 
-    .line 4016
     invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -331,7 +300,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 4018
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object p1, p1, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -345,7 +313,6 @@
     :goto_2
     if-ltz p1, :cond_8
 
-    .line 4019
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v1, v1, Lcom/android/server/job/JobSchedulerService;->mControllers:Ljava/util/List;
@@ -362,7 +329,6 @@
 
     goto :goto_2
 
-    .line 4022
     :cond_8
     monitor-exit v0
 
@@ -383,29 +349,24 @@
 
     if-eqz p1, :cond_0
 
-    .line 3939
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mMonitor:Landroid/content/BroadcastReceiver;
 
     if-nez p1, :cond_1
 
-    .line 3940
     new-instance p1, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker$1;-><init>(Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;)V
 
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mMonitor:Landroid/content/BroadcastReceiver;
 
-    .line 3946
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.BATTERY_CHANGED"
 
-    .line 3947
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3948
     iget-object v0, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0}, Lcom/android/server/job/JobSchedulerService;->getTestableContext()Landroid/content/Context;
@@ -418,13 +379,11 @@
 
     goto :goto_0
 
-    .line 3950
     :cond_0
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mMonitor:Landroid/content/BroadcastReceiver;
 
     if-eqz p1, :cond_1
 
-    .line 3951
     iget-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {p1}, Lcom/android/server/job/JobSchedulerService;->getTestableContext()Landroid/content/Context;
@@ -437,7 +396,6 @@
 
     const/4 p1, 0x0
 
-    .line 3952
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->mMonitor:Landroid/content/BroadcastReceiver;
 
     :cond_1
@@ -448,32 +406,26 @@
 .method public startTracking()V
     .locals 2
 
-    .line 3920
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.BATTERY_LOW"
 
-    .line 3923
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.BATTERY_OKAY"
 
-    .line 3924
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.os.action.CHARGING"
 
-    .line 3926
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.os.action.DISCHARGING"
 
-    .line 3927
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3928
     iget-object v1, p0, Lcom/android/server/job/JobSchedulerService$BatteryStateTracker;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v1}, Lcom/android/server/job/JobSchedulerService;->getTestableContext()Landroid/content/Context;
@@ -482,17 +434,14 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 3931
     const-class v0, Landroid/os/BatteryManagerInternal;
 
-    .line 3932
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/BatteryManagerInternal;
 
-    .line 3933
     invoke-virtual {v0}, Landroid/os/BatteryManagerInternal;->getBatteryLevelLow()Z
 
     move-result v1
@@ -503,7 +452,6 @@
 
     const/16 v1, 0xf
 
-    .line 3934
     invoke-virtual {v0, v1}, Landroid/os/BatteryManagerInternal;->isPowered(I)Z
 
     move-result v0

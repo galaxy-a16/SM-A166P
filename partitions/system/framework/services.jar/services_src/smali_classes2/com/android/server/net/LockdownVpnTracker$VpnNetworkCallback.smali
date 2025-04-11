@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/LockdownVpnTracker;)V
     .locals 1
 
-    .line 125
     iput-object p1, p0, Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback;->this$0:Lcom/android/server/net/LockdownVpnTracker;
 
     const/4 v0, 0x0
@@ -24,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/net/LockdownVpnTracker;Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback;-><init>(Lcom/android/server/net/LockdownVpnTracker;)V
 
     return-void
@@ -35,7 +33,6 @@
 .method public onAvailable(Landroid/net/Network;)V
     .locals 0
 
-    .line 128
     iget-object p1, p0, Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback;->this$0:Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-static {p1}, Lcom/android/server/net/LockdownVpnTracker;->-$$Nest$fgetmStateLock(Lcom/android/server/net/LockdownVpnTracker;)Ljava/lang/Object;
@@ -44,13 +41,11 @@
 
     monitor-enter p1
 
-    .line 129
     :try_start_0
     iget-object p0, p0, Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback;->this$0:Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-static {p0}, Lcom/android/server/net/LockdownVpnTracker;->-$$Nest$mhandleStateChangedLocked(Lcom/android/server/net/LockdownVpnTracker;)V
 
-    .line 130
     monitor-exit p1
 
     return-void
@@ -68,7 +63,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 0
 
-    .line 134
     invoke-virtual {p0, p1}, Lcom/android/server/net/LockdownVpnTracker$VpnNetworkCallback;->onAvailable(Landroid/net/Network;)V
 
     return-void

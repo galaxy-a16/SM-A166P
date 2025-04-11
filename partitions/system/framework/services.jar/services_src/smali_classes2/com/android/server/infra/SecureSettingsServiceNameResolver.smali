@@ -15,7 +15,6 @@
 
     const/4 v0, 0x0
 
-    .line 49
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/infra/SecureSettingsServiceNameResolver;-><init>(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -24,10 +23,8 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 61
     invoke-direct {p0, p1, p3}, Lcom/android/server/infra/ServiceNameBaseResolver;-><init>(Landroid/content/Context;Z)V
 
-    .line 42
     new-instance p1, Landroid/text/TextUtils$SimpleStringSplitter;
 
     const/16 p3, 0x3a
@@ -36,7 +33,6 @@
 
     iput-object p1, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
-    .line 62
     iput-object p2, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mProperty:Ljava/lang/String;
 
     return-void
@@ -49,7 +45,6 @@
 
     const-string v0, "SecureSettingsServiceNamer: prop="
 
-    .line 68
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mProperty:Ljava/lang/String;
@@ -64,7 +59,6 @@
 
     const-string v0, "defaultService="
 
-    .line 74
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Lcom/android/server/infra/ServiceNameBaseResolver;->getDefaultServiceName(I)Ljava/lang/String;
@@ -79,25 +73,20 @@
 .method public final parseColonDelimitedServiceNames(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
-    .line 112
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 113
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 114
     iget-object p0, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
-    .line 115
     invoke-virtual {p0, p1}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 116
     :goto_0
     invoke-virtual {p0}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -105,12 +94,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 117
     invoke-virtual {p0}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 118
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -119,13 +106,11 @@
 
     goto :goto_0
 
-    .line 121
     :cond_0
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 124
     :cond_1
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -133,7 +118,6 @@
 
     new-array p0, p0, [Ljava/lang/String;
 
-    .line 125
     invoke-interface {v0, p0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -146,17 +130,14 @@
 .method public readServiceName(I)Ljava/lang/String;
     .locals 1
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/infra/ServiceNameBaseResolver;->mContext:Landroid/content/Context;
 
-    .line 92
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iget-object p0, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mProperty:Ljava/lang/String;
 
-    .line 91
     invoke-static {v0, p0, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -167,22 +148,18 @@
 .method public readServiceNameList(I)[Ljava/lang/String;
     .locals 2
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/infra/ServiceNameBaseResolver;->mContext:Landroid/content/Context;
 
-    .line 86
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->mProperty:Ljava/lang/String;
 
-    .line 85
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 84
     invoke-virtual {p0, p1}, Lcom/android/server/infra/SecureSettingsServiceNameResolver;->parseColonDelimitedServiceNames(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -195,7 +172,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 97
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -204,7 +180,6 @@
 
     goto :goto_1
 
-    .line 102
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -220,7 +195,6 @@
 
     const/4 v1, 0x1
 
-    .line 103
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -230,10 +204,8 @@
 
     const/16 v2, 0x3a
 
-    .line 104
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -246,11 +218,9 @@
 
     goto :goto_0
 
-    .line 107
     :cond_1
     iget-object p1, p0, Lcom/android/server/infra/ServiceNameBaseResolver;->mContext:Landroid/content/Context;
 
-    .line 108
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -261,17 +231,14 @@
 
     move-result-object v0
 
-    .line 107
     invoke-static {p1, p0, v0, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     return-void
 
-    .line 98
     :cond_2
     :goto_1
     iget-object p1, p0, Lcom/android/server/infra/ServiceNameBaseResolver;->mContext:Landroid/content/Context;
 
-    .line 99
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -280,7 +247,6 @@
 
     const/4 v0, 0x0
 
-    .line 98
     invoke-static {p1, p0, v0, p2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
     return-void
@@ -289,7 +255,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

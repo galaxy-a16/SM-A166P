@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$cOGZ-6XsCw55Q5XfOn14i41ZDBc(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/desktopmode/Utils;->lambda$writeFile$0(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,7 +53,6 @@
 
     return-object p0
 
-    .line 218
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -69,10 +66,8 @@
 
     const/16 v1, 0x7b
 
-    .line 219
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 220
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -94,7 +89,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 221
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
@@ -105,10 +99,8 @@
 
     const-string v3, ", "
 
-    .line 222
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
     :cond_1
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,10 +119,8 @@
     :cond_2
     const/16 p0, 0x7d
 
-    .line 226
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 228
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -149,7 +139,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 263
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,12 +195,10 @@
 
     const-string/jumbo p1, "null"
 
-    .line 202
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
 
-    .line 206
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -221,10 +208,8 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 207
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 208
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -242,7 +227,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 209
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,7 +264,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 123
     invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -296,7 +279,6 @@
     :cond_0
     const-string v0, "display"
 
-    .line 126
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -305,21 +287,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
     invoke-virtual {v0, p1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 130
     invoke-virtual {p0, p1}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
 
     move-result-object p0
 
     const p1, 0x103012b
 
-    .line 131
     invoke-virtual {p0, p1}, Landroid/content/Context;->setTheme(I)V
 
     :cond_1
@@ -330,7 +309,6 @@
 .method public static getFixedZoomProperty()I
     .locals 5
 
-    .line 445
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     move-result-object v0
@@ -343,12 +321,10 @@
 
     const-string v1, ","
 
-    .line 446
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 445
     invoke-static {v0}, Ljava/util/List;->of([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -357,7 +333,6 @@
 
     move v2, v1
 
-    .line 447
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -365,7 +340,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 448
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -374,7 +348,6 @@
 
     const-string v4, "fixedzoom"
 
-    .line 449
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -383,17 +356,14 @@
 
     const-string v4, "\\((.*?)\\)"
 
-    .line 450
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v4
 
-    .line 451
     invoke-virtual {v4, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
-    .line 452
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v4
@@ -402,12 +372,10 @@
 
     const/4 v0, 0x1
 
-    .line 453
     invoke-virtual {v3, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 454
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -426,19 +394,16 @@
 .method public static getOrPut(Ljava/util/Map;Ljava/lang/Object;Ljava/util/function/Supplier;)Ljava/lang/Object;
     .locals 1
 
-    .line 95
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 97
     invoke-interface {p2}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 98
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -450,12 +415,10 @@
 
     const-string/jumbo v0, "persist.omc.sales_code"
 
-    .line 429
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 430
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -464,12 +427,10 @@
 
     const-string/jumbo v0, "ro.csc.sales_code"
 
-    .line 431
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 432
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -478,7 +439,6 @@
 
     const-string/jumbo v0, "ril.sales_code"
 
-    .line 433
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -490,7 +450,6 @@
 .method public static isLduModel()Z
     .locals 5
 
-    .line 394
     invoke-static {}, Lcom/android/server/desktopmode/Utils;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
@@ -585,7 +544,6 @@
 .method public static isRetailMode(Landroid/content/Context;I)Z
     .locals 1
 
-    .line 387
     invoke-static {}, Lcom/android/server/desktopmode/Utils;->isLduModel()Z
 
     move-result v0
@@ -616,7 +574,6 @@
 .method public static isShopDemo(Landroid/content/Context;I)Z
     .locals 2
 
-    .line 440
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -642,12 +599,10 @@
 .method public static synthetic lambda$writeFile$0(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 6
 
-    .line 180
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 181
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -658,7 +613,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 182
     :try_start_0
     new-instance v1, Ljava/io/BufferedWriter;
 
@@ -676,13 +630,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 184
     :try_start_1
     invoke-virtual {v1, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 185
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_2
@@ -693,7 +645,6 @@
     :catchall_0
     move-exception v0
 
-    .line 182
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_3
@@ -715,7 +666,6 @@
     :catch_0
     move-exception v0
 
-    .line 186
     sget-object v1, Lcom/android/server/desktopmode/Utils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -742,7 +692,6 @@
 
     invoke-static {v1, v4, v0}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 190
     :cond_0
     :goto_1
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
@@ -788,7 +737,6 @@
 
     const/4 v0, -0x1
 
-    .line 139
     invoke-static {p0, v0}, Lcom/android/server/desktopmode/Utils;->readFile(Ljava/lang/String;I)I
 
     move-result p0
@@ -799,7 +747,6 @@
 .method public static readFile(Ljava/lang/String;I)I
     .locals 4
 
-    .line 145
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -820,7 +767,6 @@
     :catch_0
     move-exception v0
 
-    .line 147
     sget-object v1, Lcom/android/server/desktopmode/Utils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -850,19 +796,16 @@
 .method public static readFile(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 153
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 155
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 156
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -880,7 +823,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 158
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -888,7 +830,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 159
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -899,7 +840,6 @@
     :catchall_0
     move-exception v0
 
-    .line 156
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -921,7 +861,6 @@
     :catch_0
     move-exception v0
 
-    .line 160
     sget-object v1, Lcom/android/server/desktopmode/Utils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -944,7 +883,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/server/desktopmode/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 164
     :cond_0
     :goto_1
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
@@ -982,7 +920,6 @@
 .method public static runOnHandlerThread(Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 104
     invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -993,12 +930,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 105
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 107
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
@@ -1009,12 +944,10 @@
 .method public static showTipsNotification(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
-    .line 405
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 406
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -1023,47 +956,38 @@
 
     const-string v3, "com.samsung.android.app.tips.TipsIntentService"
 
-    .line 408
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v4, 0x7
 
     const-string/jumbo v5, "tips_extras"
 
-    .line 410
     invoke-virtual {v1, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v4, "tips_extras2"
 
-    .line 411
     invoke-virtual {v1, v4, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p2, 0x10000000
 
-    .line 412
     invoke-virtual {v1, p2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 414
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/16 p2, 0x9
 
-    .line 415
     invoke-virtual {v0, v5, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo p2, "tips_id"
 
-    .line 416
     invoke-virtual {v0, p2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_noti_category"
 
     const-string/jumbo p2, "recommendation"
 
-    .line 417
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 418
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -1074,39 +998,32 @@
 
     const-string/jumbo p1, "tips_title"
 
-    .line 419
     invoke-virtual {v0, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_text"
 
-    .line 420
     invoke-virtual {v0, p1, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_action_type"
 
     const/4 p2, 0x1
 
-    .line 421
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_action"
 
-    .line 422
     invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_app_primary_color"
 
     const-string p3, "#ff6c39"
 
-    .line 423
     invoke-virtual {v0, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo p1, "tips_condition"
 
-    .line 424
     invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 425
     invoke-virtual {p0, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     return-void
@@ -1115,7 +1032,6 @@
 .method public static writeFile(Ljava/lang/String;IZ)V
     .locals 0
 
-    .line 173
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1128,7 +1044,6 @@
 .method public static writeFile(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 3
 
-    .line 177
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1163,7 +1078,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :cond_0
     new-instance v0, Lcom/android/server/desktopmode/Utils$$ExternalSyntheticLambda0;
 
@@ -1171,7 +1085,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 194
     invoke-static {}, Lcom/android/server/IoThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
@@ -1180,7 +1093,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_1
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 

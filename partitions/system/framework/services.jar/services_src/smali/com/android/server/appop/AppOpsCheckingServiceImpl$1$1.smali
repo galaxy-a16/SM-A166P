@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/appop/AppOpsCheckingServiceImpl$1;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/appop/AppOpsCheckingServiceImpl$1$1;->this$1:Lcom/android/server/appop/AppOpsCheckingServiceImpl$1;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -24,7 +23,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 143
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/server/appop/AppOpsCheckingServiceImpl$1$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -37,7 +35,6 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/appop/AppOpsCheckingServiceImpl$1$1;->this$1:Lcom/android/server/appop/AppOpsCheckingServiceImpl$1;
 
     iget-object p0, p0, Lcom/android/server/appop/AppOpsCheckingServiceImpl$1;->this$0:Lcom/android/server/appop/AppOpsCheckingServiceImpl;

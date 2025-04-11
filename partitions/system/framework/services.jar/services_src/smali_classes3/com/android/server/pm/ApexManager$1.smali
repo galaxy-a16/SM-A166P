@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 82
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public create()Lcom/android/server/pm/ApexManager;
     .locals 1
 
-    .line 85
     invoke-static {}, Landroid/sysprop/ApexProperties;->updatable()Ljava/util/Optional;
 
     move-result-object p0
@@ -37,14 +35,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 86
     new-instance p0, Lcom/android/server/pm/ApexManager$ApexManagerImpl;
 
     invoke-direct {p0}, Lcom/android/server/pm/ApexManager$ApexManagerImpl;-><init>()V
 
     return-object p0
 
-    .line 88
     :cond_0
     new-instance p0, Lcom/android/server/pm/ApexManager$ApexManagerFlattenedApex;
 
@@ -56,7 +52,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 0
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/server/pm/ApexManager$1;->create()Lcom/android/server/pm/ApexManager;
 
     move-result-object p0

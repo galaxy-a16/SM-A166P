@@ -9,12 +9,10 @@
 
     move-object/from16 v0, p4
 
-    .line 45
     new-instance v14, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;
 
     invoke-direct {v14}, Lcom/android/server/pm/pkg/component/ParsedInstrumentationImpl;-><init>()V
 
-    .line 46
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -37,7 +35,6 @@
 
     move-result-object v15
 
-    .line 48
     sget-object v1, Lcom/android/internal/R$styleable;->AndroidManifestInstrumentation:[I
 
     move-object/from16 v13, p1
@@ -82,27 +79,23 @@
 
     move/from16 v13, v18
 
-    .line 50
     :try_start_0
     invoke-static/range {v1 .. v13}, Lcom/android/server/pm/pkg/component/ParsedComponentUtils;->parseComponent(Lcom/android/server/pm/pkg/component/ParsedComponentImpl;Ljava/lang/String;Lcom/android/server/pm/pkg/parsing/ParsingPackage;Landroid/content/res/TypedArray;ZLandroid/content/pm/parsing/result/ParseInput;IIIIIII)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object v1
 
-    .line 59
     invoke-interface {v1}, Landroid/content/pm/parsing/result/ParseResult;->isError()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 60
     invoke-interface {v0, v1}, Landroid/content/pm/parsing/result/ParseInput;->error(Landroid/content/pm/parsing/result/ParseResult;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 72
     invoke-virtual/range {p3 .. p3}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v0
@@ -112,7 +105,6 @@
 
     move-object/from16 v2, p3
 
-    .line 66
     :try_start_1
     invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
 
@@ -124,7 +116,6 @@
 
     const/16 v3, 0x9
 
-    .line 67
     invoke-virtual {v2, v3}, Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -137,7 +128,6 @@
 
     const/4 v4, 0x0
 
-    .line 68
     invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v3
@@ -148,7 +138,6 @@
 
     const/4 v3, 0x5
 
-    .line 69
     invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v3
@@ -157,7 +146,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 72
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     move-object/from16 v1, p0
@@ -172,26 +160,22 @@
 
     move-object/from16 v6, p4
 
-    .line 76
     invoke-static/range {v1 .. v6}, Lcom/android/server/pm/pkg/component/ComponentParseUtils;->parseAllMetaData(Lcom/android/server/pm/pkg/parsing/ParsingPackage;Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;Ljava/lang/String;Lcom/android/server/pm/pkg/component/ParsedComponentImpl;Landroid/content/pm/parsing/result/ParseInput;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object v1
 
-    .line 78
     invoke-interface {v1}, Landroid/content/pm/parsing/result/ParseResult;->isError()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 79
     invoke-interface {v0, v1}, Landroid/content/pm/parsing/result/ParseInput;->error(Landroid/content/pm/parsing/result/ParseResult;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object v0
 
     return-object v0
 
-    .line 82
     :cond_1
     invoke-interface {v1}, Landroid/content/pm/parsing/result/ParseResult;->getResult()Ljava/lang/Object;
 
@@ -215,10 +199,8 @@
 
     move-object/from16 v2, p3
 
-    .line 72
     :goto_0
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 73
     throw v0
 .end method

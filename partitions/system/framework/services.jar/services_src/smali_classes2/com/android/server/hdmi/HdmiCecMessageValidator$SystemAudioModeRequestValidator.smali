@@ -9,7 +9,6 @@
 
     const/4 v0, 0x0
 
-    .line 843
     invoke-direct {p0, v0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$PhysicalAddressValidator;-><init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$PhysicalAddressValidator-IA;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$SystemAudioModeRequestValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$SystemAudioModeRequestValidator;-><init>()V
 
     return-void
@@ -29,7 +27,6 @@
 .method public isValid([B)I
     .locals 1
 
-    .line 847
     array-length v0, p1
 
     if-nez v0, :cond_0
@@ -38,7 +35,6 @@
 
     return p0
 
-    .line 850
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/hdmi/HdmiCecMessageValidator$PhysicalAddressValidator;->isValid([B)I
 

@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(ILjava/util/List;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$$ExternalSyntheticLambda5;->f$0:I
@@ -31,7 +30,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    .line 0
     iget v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$$ExternalSyntheticLambda5;->f$0:I
 
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$$ExternalSyntheticLambda5;->f$1:Ljava/util/List;

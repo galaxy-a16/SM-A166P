@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V
     .locals 0
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$1;->this$0:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.SCREEN_OFF"
 
-    .line 51
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 52
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$1;->this$0:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-static {p1}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->-$$Nest$fgetmPopup(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)Landroid/widget/PopupMenu;
@@ -46,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup$1;->this$0:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->-$$Nest$fgetmPopup(Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)Landroid/widget/PopupMenu;

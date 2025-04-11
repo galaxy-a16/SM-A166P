@@ -47,7 +47,6 @@
 
     const-string v17, "Item_ParentId"
 
-    .line 63
     filled-new-array/range {v0 .. v17}, [Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +59,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 110
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -71,17 +69,14 @@
 .method public final constructContentValues(Lcom/samsung/android/knox/lockscreen/LSOItemData;IJ)Landroid/content/ContentValues;
     .locals 17
 
-    .line 577
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 578
     invoke-virtual/range {p1 .. p1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->getType()B
 
     move-result v1
 
-    .line 581
     sget-object v2, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
     const/16 v3, 0x10
@@ -96,7 +91,6 @@
 
     const/16 v4, 0x11
 
-    .line 582
     aget-object v4, v2, v4
 
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -107,7 +101,6 @@
 
     const/4 v4, 0x1
 
-    .line 583
     aget-object v2, v2, v4
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -116,14 +109,12 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Byte;)V
 
-    .line 585
     invoke-virtual/range {p1 .. p1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->getUpdatedFields()[I
 
     move-result-object v2
 
     if-eqz v2, :cond_18
 
-    .line 586
     array-length v5, v2
 
     if-nez v5, :cond_0
@@ -137,7 +128,6 @@
 
     move v7, v6
 
-    .line 590
     :goto_0
     array-length v8, v2
 
@@ -145,7 +135,6 @@
 
     if-nez v7, :cond_17
 
-    .line 591
     aget v8, v2, v6
 
     const/4 v9, 0x2
@@ -198,14 +187,12 @@
 
     const-string/jumbo v4, "unknown LSOItem"
 
-    .line 684
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v7, 0x1
 
     goto/16 :goto_2
 
-    .line 674
     :cond_1
     move-object/from16 v3, p1
 
@@ -215,7 +202,6 @@
 
     goto/16 :goto_2
 
-    .line 677
     :cond_2
     sget-object v4, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -231,7 +217,6 @@
 
     goto/16 :goto_2
 
-    .line 660
     :cond_3
     move-object/from16 v9, p1
 
@@ -243,23 +228,19 @@
 
     goto/16 :goto_2
 
-    .line 663
     :cond_4
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
     aget-object v3, v3, v16
 
-    .line 664
     invoke-virtual {v9}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->getBGImagePath()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 663
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 667
     :cond_5
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -267,7 +248,6 @@
 
     aget-object v3, v3, v4
 
-    .line 668
     invoke-virtual {v9}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->getOrientation()Lcom/samsung/android/knox/lockscreen/LSOItemContainer$ORIENTATION;
 
     move-result-object v4
@@ -283,7 +263,6 @@
     :cond_6
     const/4 v4, 0x1
 
-    .line 667
     :goto_1
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -293,7 +272,6 @@
 
     goto/16 :goto_2
 
-    .line 642
     :cond_7
     move-object/from16 v9, p1
 
@@ -307,13 +285,11 @@
 
     goto/16 :goto_2
 
-    .line 648
     :cond_8
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
     aget-object v3, v3, v14
 
-    .line 649
     invoke-virtual {v9}, Lcom/samsung/android/knox/lockscreen/LSOItemImage;->getScaleTypeAsInteger()I
 
     move-result v4
@@ -322,12 +298,10 @@
 
     move-result-object v4
 
-    .line 648
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     goto/16 :goto_2
 
-    .line 652
     :cond_9
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -341,10 +315,8 @@
 
     invoke-virtual {v0, v4, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 653
     aget-object v3, v3, v13
 
-    .line 654
     invoke-virtual {v9}, Lcom/samsung/android/knox/lockscreen/LSOItemImage;->getPollingInterval()J
 
     move-result-wide v8
@@ -353,12 +325,10 @@
 
     move-result-object v4
 
-    .line 653
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     goto/16 :goto_2
 
-    .line 645
     :cond_a
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -372,7 +342,6 @@
 
     goto/16 :goto_2
 
-    .line 623
     :cond_b
     move-object/from16 v9, p1
 
@@ -390,7 +359,6 @@
 
     goto/16 :goto_2
 
-    .line 632
     :cond_c
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -408,7 +376,6 @@
 
     goto/16 :goto_2
 
-    .line 635
     :cond_d
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -416,7 +383,6 @@
 
     aget-object v3, v3, v4
 
-    .line 636
     invoke-virtual {v9}, Lcom/samsung/android/knox/lockscreen/LSOItemText;->getTextSizeAsFloat()F
 
     move-result v4
@@ -425,12 +391,10 @@
 
     move-result-object v4
 
-    .line 635
     invoke-virtual {v0, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Float;)V
 
     goto/16 :goto_2
 
-    .line 629
     :cond_e
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -448,7 +412,6 @@
 
     goto/16 :goto_2
 
-    .line 626
     :cond_f
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -462,7 +425,6 @@
 
     goto :goto_2
 
-    .line 617
     :cond_10
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -482,7 +444,6 @@
 
     goto :goto_2
 
-    .line 613
     :cond_11
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -502,7 +463,6 @@
 
     goto :goto_2
 
-    .line 609
     :cond_12
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -522,7 +482,6 @@
 
     goto :goto_2
 
-    .line 605
     :cond_13
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -540,7 +499,6 @@
 
     goto :goto_2
 
-    .line 601
     :cond_14
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -558,7 +516,6 @@
 
     goto :goto_2
 
-    .line 597
     :cond_15
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -576,7 +533,6 @@
 
     goto :goto_2
 
-    .line 593
     :cond_16
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
@@ -610,7 +566,6 @@
 .method public final deleteRecord(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)J
     .locals 3
 
-    .line 511
     iget-object p0, p0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -623,7 +578,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 513
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -644,7 +598,6 @@
 
     goto :goto_0
 
-    .line 515
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -660,7 +613,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 517
     :goto_0
     invoke-virtual {p0, p1, p2, p3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -676,12 +628,10 @@
 
     const-string v0, "accountObject"
 
-    .line 149
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 152
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
@@ -690,14 +640,12 @@
 
     const-string v3, "LOCKSCREEN_OVERLAY"
 
-    .line 153
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "ADMIN_REF"
 
     const/4 v3, 0x0
 
-    .line 154
     invoke-virtual {p0, v2, v0, v1, v3}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getCursor(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
@@ -706,23 +654,19 @@
 
     return-object v3
 
-    .line 161
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     const/4 v0, 0x0
 
-    .line 162
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v0
 
-    .line 163
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     if-eqz v0, :cond_1
 
-    .line 167
     invoke-static {v0}, Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;->fromByteArray([B)Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;
 
     move-result-object v3
@@ -738,12 +682,10 @@
 
     const-string/jumbo v1, "policyName"
 
-    .line 142
     invoke-virtual {p0, v0, v1, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getAdminByField(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
-    .line 144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -770,14 +712,12 @@
 .method public getCount(Ljava/lang/String;)I
     .locals 2
 
-    .line 118
     iget-object p0, p0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
 
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -804,19 +744,15 @@
 
     return v0
 
-    .line 124
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 125
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 127
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
-    .line 129
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -849,14 +785,12 @@
 
     const-string v0, "LSOStorageProvider"
 
-    .line 301
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 302
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -867,7 +801,6 @@
 
     const-string v2, "Item_Layer"
 
-    .line 303
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -879,7 +812,6 @@
     :try_start_0
     const-string v2, "LOCKSCREEN_OVERLAY"
 
-    .line 309
     sget-object v3, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
     invoke-virtual {p0, v2, v3, v1, p1}, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->getCursor(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;)Landroid/database/Cursor;
@@ -894,7 +826,6 @@
 
     if-nez v1, :cond_1
 
-    .line 312
     :try_start_1
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -904,13 +835,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 337
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_0
     return-object p1
 
-    .line 315
     :cond_1
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
@@ -919,33 +848,28 @@
 
     if-nez v3, :cond_2
 
-    .line 316
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Landroid/database/SQLException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 337
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     return-object p1
 
-    .line 320
     :cond_2
     :try_start_3
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     const/4 v2, 0x1
 
-    .line 322
     invoke-interface {v1, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     int-to-byte v2, v2
 
-    .line 323
     invoke-static {v2}, Lcom/samsung/android/knox/lockscreen/LSOItemCreator;->createItem(B)Lcom/samsung/android/knox/lockscreen/LSOItemData;
 
     move-result-object v2
@@ -959,19 +883,16 @@
     :try_start_4
     const-string p0, "Invalid Item type"
 
-    .line 326
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catch Landroid/database/SQLException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 337
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     return-object p1
 
-    .line 330
     :cond_3
     :try_start_5
     invoke-virtual {p0, v2, v1}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->loadItemData(Lcom/samsung/android/knox/lockscreen/LSOItemData;Landroid/database/Cursor;)V
@@ -980,7 +901,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 337
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_4
@@ -1027,14 +947,12 @@
     :try_start_6
     const-string p0, "getOverlay() falied "
 
-    .line 334
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     if-eqz p1, :cond_4
 
-    .line 337
     :goto_2
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
@@ -1045,7 +963,6 @@
 
     move-object v2, p1
 
-    .line 332
     :goto_3
     :try_start_7
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1081,10 +998,8 @@
     :goto_5
     if-eqz p1, :cond_5
 
-    .line 337
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 338
     :cond_5
     throw p0
 .end method
@@ -1094,7 +1009,6 @@
 
     const-string v0, "LOCKSCREEN_OVERLAY"
 
-    .line 134
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->getAdminUid(Ljava/lang/String;)I
 
     move-result p0
@@ -1107,7 +1021,6 @@
 
     const-string v0, "LOCKSCREEN_WALLPAPER"
 
-    .line 138
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->getAdminUid(Ljava/lang/String;)I
 
     move-result p0
@@ -1118,7 +1031,6 @@
 .method public final insertRecord(Ljava/lang/String;Landroid/content/ContentValues;)J
     .locals 6
 
-    .line 495
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1147,7 +1059,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     iget-object p0, p0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -1156,7 +1067,6 @@
 
     const/4 v0, 0x0
 
-    .line 497
     invoke-virtual {p0, p1, v0, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v2
@@ -1167,7 +1077,6 @@
 
     if-nez v0, :cond_0
 
-    .line 499
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1190,7 +1099,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_0
@@ -1202,7 +1110,6 @@
 
     const-string v0, "LOCKSCREEN_OVERLAY"
 
-    .line 114
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->getCount(Ljava/lang/String;)I
 
     move-result p0
@@ -1225,39 +1132,33 @@
 
     const/16 v0, 0x9
 
-    .line 437
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const/16 v1, 0xd
 
-    .line 438
     invoke-interface {p2, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
 
     if-eqz v0, :cond_0
 
-    .line 440
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 441
     invoke-virtual {p1, v0}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->setBGImage(Ljava/lang/String;)V
 
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 443
     sget-object v0, Lcom/samsung/android/knox/lockscreen/LSOItemContainer$ORIENTATION;->HORIZONTAL:Lcom/samsung/android/knox/lockscreen/LSOItemContainer$ORIENTATION;
 
     invoke-virtual {p1, v0}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->setOrientation(Lcom/samsung/android/knox/lockscreen/LSOItemContainer$ORIENTATION;)V
 
-    .line 445
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1283,26 +1184,22 @@
 
     const/4 v0, 0x0
 
-    .line 446
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p2
 
-    .line 447
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "Item_ParentId"
 
-    .line 448
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
     invoke-virtual {v0, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 449
     sget-object p2, Lcom/android/server/enterprise/lso/LSOStorageProvider;->tblColumns:[Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -1317,7 +1214,6 @@
 
     return-void
 
-    .line 455
     :cond_2
     :try_start_0
     invoke-interface {p2}, Landroid/database/Cursor;->getCount()I
@@ -1329,12 +1225,10 @@
 
     if-nez v0, :cond_3
 
-    .line 474
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
     return-void
 
-    .line 460
     :cond_3
     :goto_0
     :try_start_1
@@ -1346,14 +1240,12 @@
 
     const/4 v0, 0x1
 
-    .line 461
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     int-to-byte v0, v0
 
-    .line 463
     invoke-static {v0}, Lcom/samsung/android/knox/lockscreen/LSOItemCreator;->createItem(B)Lcom/samsung/android/knox/lockscreen/LSOItemData;
 
     move-result-object v0
@@ -1362,11 +1254,9 @@
 
     goto :goto_0
 
-    .line 467
     :cond_4
     invoke-virtual {p0, v0, p2}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->loadItemData(Lcom/samsung/android/knox/lockscreen/LSOItemData;Landroid/database/Cursor;)V
 
-    .line 468
     invoke-virtual {p1, v0}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->addItem(Lcom/samsung/android/knox/lockscreen/LSOItemData;)Z
     :try_end_1
     .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
@@ -1374,7 +1264,6 @@
 
     goto :goto_0
 
-    .line 474
     :cond_5
     :goto_1
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
@@ -1389,7 +1278,6 @@
     :catch_0
     move-exception p0
 
-    .line 471
     :try_start_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1418,11 +1306,9 @@
     :goto_2
     return-void
 
-    .line 474
     :goto_3
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
-    .line 475
     throw p0
 .end method
 
@@ -1431,26 +1317,22 @@
 
     const/16 p0, 0x9
 
-    .line 418
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 420
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 421
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemImage;->setImagePath(Ljava/lang/String;)V
 
     const/16 p0, 0xa
 
-    .line 423
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
@@ -1459,27 +1341,23 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 425
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemImage;->setScaleType(I)V
 
     :cond_0
     const/16 p0, 0x8
 
-    .line 427
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
     const/16 v0, 0xc
 
-    .line 428
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    .line 429
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1488,10 +1366,8 @@
 
     int-to-long v0, p0
 
-    .line 430
     invoke-virtual {p1, p2, v0, v1}, Lcom/samsung/android/knox/lockscreen/LSOItemImage;->setURL(Ljava/lang/String;J)V
 
-    .line 433
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1523,20 +1399,17 @@
 
     const/4 v0, 0x2
 
-    .line 343
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 345
     invoke-virtual {p1, v1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setId(Ljava/lang/String;)V
 
     :cond_0
     const/4 v1, 0x3
 
-    .line 347
     invoke-interface {p2, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
@@ -1545,26 +1418,22 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 349
     invoke-virtual {p1, v2}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setWidth(I)V
 
     :cond_1
     const/4 v2, 0x4
 
-    .line 351
     invoke-interface {p2, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
 
     if-eq v4, v3, :cond_2
 
-    .line 353
     invoke-virtual {p1, v4}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setHeight(I)V
 
     :cond_2
     const/4 v3, 0x5
 
-    .line 355
     invoke-interface {p2, v3}, Landroid/database/Cursor;->getFloat(I)F
 
     move-result v4
@@ -1575,13 +1444,11 @@
 
     if-eqz v5, :cond_3
 
-    .line 357
     invoke-virtual {p1, v4}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setWeight(F)V
 
     :cond_3
     const/4 v4, 0x6
 
-    .line 359
     invoke-interface {p2, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
@@ -1590,10 +1457,8 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 361
     invoke-virtual {p1, v4}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setBgColor(I)V
 
-    .line 363
     :cond_4
     invoke-virtual {p1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->getType()B
 
@@ -1603,7 +1468,6 @@
 
     if-ne v4, v6, :cond_5
 
-    .line 364
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1631,34 +1495,29 @@
     :cond_5
     const/4 v4, 0x7
 
-    .line 368
     invoke-interface {p2, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
 
     if-eq v4, v5, :cond_6
 
-    .line 370
     invoke-virtual {p1, v4}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setGravity(I)V
 
     :cond_6
     const/16 v4, 0xf
 
-    .line 372
     invoke-interface {p2, v4}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    .line 374
     invoke-static {v4}, Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;->fromByteArray([B)Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;
 
     move-result-object v4
 
     invoke-virtual {p1, v4}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->setAttrs(Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;)V
 
-    .line 377
     :cond_7
     invoke-virtual {p1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->getType()B
 
@@ -1674,7 +1533,6 @@
 
     goto :goto_0
 
-    .line 391
     :cond_8
     check-cast p1, Lcom/samsung/android/knox/lockscreen/LSOItemWidget;
 
@@ -1682,7 +1540,6 @@
 
     goto :goto_0
 
-    .line 387
     :cond_9
     check-cast p1, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;
 
@@ -1690,7 +1547,6 @@
 
     goto :goto_0
 
-    .line 383
     :cond_a
     check-cast p1, Lcom/samsung/android/knox/lockscreen/LSOItemImage;
 
@@ -1698,7 +1554,6 @@
 
     goto :goto_0
 
-    .line 379
     :cond_b
     check-cast p1, Lcom/samsung/android/knox/lockscreen/LSOItemText;
 
@@ -1713,27 +1568,23 @@
 
     const/16 p0, 0x9
 
-    .line 398
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 399
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 400
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemText;->setText(Ljava/lang/String;)V
 
     :cond_0
     const/16 p0, 0x8
 
-    .line 402
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
@@ -1742,26 +1593,22 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 404
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemText;->setTextColor(I)V
 
     :cond_1
     const/16 p0, 0xa
 
-    .line 406
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
     if-eq p0, v0, :cond_2
 
-    .line 408
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemText;->setTextStyle(I)V
 
     :cond_2
     const/16 p0, 0xb
 
-    .line 410
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getFloat(I)F
 
     move-result p0
@@ -1772,10 +1619,8 @@
 
     if-eqz p2, :cond_3
 
-    .line 412
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemText;->setTextSize(F)V
 
-    .line 414
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1807,24 +1652,20 @@
 
     const/16 p0, 0xe
 
-    .line 481
     invoke-interface {p2, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 482
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 483
     invoke-virtual {p1, p0}, Lcom/samsung/android/knox/lockscreen/LSOItemWidget;->setWidget(Ljava/lang/String;)V
 
-    .line 486
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1854,17 +1695,14 @@
 .method public resetOverlayData(I)V
     .locals 3
 
-    .line 224
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->wipeLayerData(I)V
 
     const-string v0, "LOCKSCREEN_OVERLAY"
 
-    .line 226
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 231
     invoke-virtual {p0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->isEmpty()Z
 
     move-result v1
@@ -1875,10 +1713,8 @@
 
     const-string/jumbo v2, "policyName=?"
 
-    .line 232
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->deleteRecord(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)J
 
-    .line 236
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1910,7 +1746,6 @@
 
     const-string v0, "LOCKSCREEN_WALLPAPER"
 
-    .line 240
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -1919,14 +1754,12 @@
 
     const-string/jumbo v2, "policyName=?"
 
-    .line 243
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->deleteRecord(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)J
 
     const-string p0, "LSOStorageProvider"
 
     const-string/jumbo v0, "resetWallpaperData() LOCKSCREEN_WALLPAPER - resetted"
 
-    .line 245
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1943,17 +1776,14 @@
 
     if-eqz v2, :cond_4
 
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->getOverlayAdminUid()I
 
     move-result v2
 
-    .line 255
     invoke-virtual {p0, p4}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->wipeLayerData(I)V
 
     const-wide/16 v3, 0x0
 
-    .line 257
     invoke-virtual {p0, p3, p4, v3, v4}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->setOverlayData(Lcom/samsung/android/knox/lockscreen/LSOItemData;IJ)Z
 
     move-result p3
@@ -1962,7 +1792,6 @@
 
     if-nez p3, :cond_0
 
-    .line 259
     invoke-virtual {p0, p4}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->resetOverlayData(I)V
 
     goto :goto_1
@@ -1974,7 +1803,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 262
     new-instance p3, Landroid/content/ContentValues;
 
     invoke-direct {p3}, Landroid/content/ContentValues;-><init>()V
@@ -1983,12 +1811,10 @@
 
     const-string v3, "LOCKSCREEN_OVERLAY"
 
-    .line 263
     invoke-virtual {p3, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "adminUid"
 
-    .line 264
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -1999,7 +1825,6 @@
 
     const-string p1, "accountObject"
 
-    .line 266
     invoke-virtual {p5}, Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;->toByteArray()[B
 
     move-result-object p2
@@ -2009,7 +1834,6 @@
     :cond_1
     const-string p1, "ADMIN_REF"
 
-    .line 269
     invoke-virtual {p0, p1, p3}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->insertRecord(Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p1
@@ -2030,14 +1854,12 @@
     :goto_0
     if-nez p3, :cond_3
 
-    .line 271
     invoke-virtual {p0, p4}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->resetOverlayData(I)V
 
     :cond_3
     :goto_1
     return p3
 
-    .line 251
     :cond_4
     new-instance p0, Ljava/security/InvalidParameterException;
 
@@ -2057,7 +1879,6 @@
 
     return v0
 
-    .line 545
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->constructContentValues(Lcom/samsung/android/knox/lockscreen/LSOItemData;IJ)Landroid/content/ContentValues;
 
@@ -2069,7 +1890,6 @@
 
     const-string p0, "Cannot construct content values"
 
-    .line 547
     invoke-static {p4, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -2077,7 +1897,6 @@
     :cond_1
     const-string v1, "LOCKSCREEN_OVERLAY"
 
-    .line 551
     invoke-virtual {p0, v1, p3}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->insertRecord(Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v1
@@ -2090,7 +1909,6 @@
 
     return v0
 
-    .line 556
     :cond_2
     invoke-virtual {p1}, Lcom/samsung/android/knox/lockscreen/LSOItemData;->getType()B
 
@@ -2104,11 +1922,9 @@
 
     return v4
 
-    .line 563
     :cond_3
     check-cast p1, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;
 
-    .line 565
     :goto_0
     invoke-virtual {p1}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->getNumItems()I
 
@@ -2118,7 +1934,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 566
     invoke-virtual {p1, v0}, Lcom/samsung/android/knox/lockscreen/LSOItemContainer;->getItem(I)Lcom/samsung/android/knox/lockscreen/LSOItemData;
 
     move-result-object p3
@@ -2134,7 +1949,6 @@
     :cond_4
     if-nez v4, :cond_5
 
-    .line 570
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2172,10 +1986,8 @@
 
     if-eqz p3, :cond_2
 
-    .line 285
     invoke-virtual {p0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->resetWallpaperData()V
 
-    .line 287
     new-instance p3, Landroid/content/ContentValues;
 
     invoke-direct {p3}, Landroid/content/ContentValues;-><init>()V
@@ -2184,12 +1996,10 @@
 
     const-string v3, "LOCKSCREEN_WALLPAPER"
 
-    .line 288
     invoke-virtual {p3, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "adminUid"
 
-    .line 289
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -2198,7 +2008,6 @@
 
     const-string p1, "ADMIN_REF"
 
-    .line 292
     invoke-virtual {p0, p1, p3}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->insertRecord(Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p1
@@ -2217,13 +2026,11 @@
     :goto_0
     if-nez p1, :cond_1
 
-    .line 294
     invoke-virtual {p0}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->resetWallpaperData()V
 
     :cond_1
     return p1
 
-    .line 281
     :cond_2
     new-instance p0, Ljava/security/InvalidParameterException;
 
@@ -2237,7 +2044,6 @@
 .method public updateAdminPref(Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;)Z
     .locals 3
 
-    .line 174
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
@@ -2246,7 +2052,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 178
     invoke-virtual {p1}, Lcom/samsung/android/knox/lockscreen/LSOAttributeSet;->toByteArray()[B
 
     move-result-object p1
@@ -2258,13 +2063,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 180
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     :goto_0
     const-string p1, "LOCKSCREEN_OVERLAY"
 
-    .line 184
     filled-new-array {p1}, [Ljava/lang/String;
 
     move-result-object p1
@@ -2273,7 +2076,6 @@
 
     const-string/jumbo v2, "policyName=?"
 
-    .line 189
     invoke-virtual {p0, v1, v0, v2, p1}, Lcom/android/server/enterprise/lso/LSOStorageProvider;->updateRecord(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -2294,7 +2096,6 @@
 .method public final updateRecord(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 2
 
-    .line 527
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2313,19 +2114,16 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     iget-object p0, p0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
 
-    .line 529
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p3
 
-    .line 530
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2344,7 +2142,6 @@
 
     if-gtz p3, :cond_0
 
-    .line 533
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2367,7 +2164,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_0
@@ -2381,7 +2177,6 @@
 
     if-nez p1, :cond_0
 
-    .line 209
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->remove(Ljava/lang/String;)Z
 
     goto :goto_0
@@ -2389,12 +2184,10 @@
     :cond_0
     const-string v1, "Item_Layer"
 
-    .line 211
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    .line 215
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2403,10 +2196,8 @@
 
     move-result-object v2
 
-    .line 217
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->deleteDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
 
-    .line 220
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 

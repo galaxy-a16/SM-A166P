@@ -11,13 +11,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 31
     iput-object p1, p0, Lcom/android/server/firewall/FilterFactory;->mTag:Ljava/lang/String;
 
     return-void
@@ -28,7 +25,6 @@
 .method public getTagName()Ljava/lang/String;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/firewall/FilterFactory;->mTag:Ljava/lang/String;
 
     return-object p0

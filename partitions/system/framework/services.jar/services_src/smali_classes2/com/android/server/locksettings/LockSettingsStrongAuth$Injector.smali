@@ -17,7 +17,6 @@
 .method public getAlarmManager(Landroid/content/Context;)Landroid/app/AlarmManager;
     .locals 0
 
-    .line 151
     const-class p0, Landroid/app/AlarmManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -32,7 +31,6 @@
 .method public getDefaultStrongAuthFlags(Landroid/content/Context;)I
     .locals 0
 
-    .line 159
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->getDefaultFlags(Landroid/content/Context;)I
 
     move-result p0
@@ -43,7 +41,6 @@
 .method public getElapsedRealtimeMs()J
     .locals 2
 
-    .line 176
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -54,7 +51,6 @@
 .method public getLockPatternUtils(Landroid/content/Context;)Lcom/android/internal/widget/LockPatternUtils;
     .locals 0
 
-    .line 182
     new-instance p0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
@@ -65,7 +61,6 @@
 .method public getNextAlarmTimeMs(J)J
     .locals 2
 
-    .line 167
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

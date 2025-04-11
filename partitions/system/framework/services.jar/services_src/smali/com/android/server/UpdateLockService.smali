@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 66
     invoke-direct {p0}, Landroid/os/IUpdateLock$Stub;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/UpdateLockService;->mContext:Landroid/content/Context;
 
-    .line 68
     new-instance p1, Lcom/android/server/UpdateLockService$LockWatcher;
 
     new-instance v0, Landroid/os/Handler;
@@ -34,7 +31,6 @@
 
     const/4 p1, 0x1
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/server/UpdateLockService;->sendLockChangedBroadcast(Z)V
 
     return-void
@@ -45,7 +41,6 @@
 .method public acquireUpdateLock(Landroid/os/IBinder;Ljava/lang/String;)V
     .locals 3
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/UpdateLockService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.UPDATE_LOCK"
@@ -54,7 +49,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/UpdateLockService;->mLocks:Lcom/android/server/UpdateLockService$LockWatcher;
 
     invoke-virtual {p0, p2}, Lcom/android/server/UpdateLockService;->makeTag(Ljava/lang/String;)Ljava/lang/String;
@@ -69,7 +63,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 117
     iget-object p1, p0, Lcom/android/server/UpdateLockService;->mContext:Landroid/content/Context;
 
     const-string p3, "UpdateLockService"
@@ -82,7 +75,6 @@
 
     return-void
 
-    .line 118
     :cond_0
     iget-object p0, p0, Lcom/android/server/UpdateLockService;->mLocks:Lcom/android/server/UpdateLockService$LockWatcher;
 
@@ -94,7 +86,6 @@
 .method public final makeTag(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 110
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +100,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 111
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result p1
@@ -120,7 +110,6 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result p1
@@ -141,7 +130,6 @@
 .method public releaseUpdateLock(Landroid/os/IBinder;)V
     .locals 3
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/UpdateLockService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.UPDATE_LOCK"
@@ -150,7 +138,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     iget-object p0, p0, Lcom/android/server/UpdateLockService;->mLocks:Lcom/android/server/UpdateLockService$LockWatcher;
 
     invoke-virtual {p0, p1}, Landroid/os/TokenWatcher;->release(Landroid/os/IBinder;)V
@@ -161,12 +148,10 @@
 .method public sendLockChangedBroadcast(Z)V
     .locals 5
 
-    .line 77
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 79
     :try_start_0
     new-instance v2, Landroid/content/Intent;
 
@@ -176,14 +161,12 @@
 
     const-string/jumbo v3, "nowisconvenient"
 
-    .line 80
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     move-result-object p1
 
     const-string/jumbo v2, "timestamp"
 
-    .line 81
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -194,12 +177,10 @@
 
     const/high16 v2, 0x4000000
 
-    .line 82
     invoke-virtual {p1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/UpdateLockService;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -208,7 +189,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 85
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -218,6 +198,5 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 86
     throw p0
 .end method

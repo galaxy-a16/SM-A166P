@@ -19,24 +19,20 @@
 
     const/16 v0, 0x1d3
 
-    .line 331
     invoke-static {}, Lcom/android/server/pm/dex/ArtStatsLogUtils;->-$$Nest$sfgetSTATUS_MAP()Ljava/util/Map;
 
     move-result-object p0
 
-    .line 333
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    .line 334
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 333
     invoke-interface {p0, p1, v1}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -53,7 +49,6 @@
 
     move-wide v3, p3
 
-    .line 331
     invoke-static/range {v0 .. v6}, Lcom/android/internal/art/ArtStatsLog;->write(IIIJJ)V
 
     return-void

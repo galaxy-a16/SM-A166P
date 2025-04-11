@@ -24,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;Landroid/os/IBinder;JLcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda31;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
@@ -47,7 +46,6 @@
 .method public final run()V
     .locals 7
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda31;->f$0:Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda31;->f$1:Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;

@@ -11,7 +11,6 @@
 
     const/4 v1, 0x1
 
-    .line 1275
     invoke-direct {p0, p1, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 1281
     :try_start_0
     iget p0, p1, Landroid/os/Message;->what:I
 
@@ -44,7 +42,6 @@
 
     goto :goto_0
 
-    .line 1294
     :cond_0
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->getSystemStatusMonitor()Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;
 
@@ -54,7 +51,6 @@
 
     goto :goto_0
 
-    .line 1291
     :cond_1
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->getSystemStatusMonitor()Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;
 
@@ -64,7 +60,6 @@
 
     goto :goto_0
 
-    .line 1288
     :cond_2
     invoke-static {}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->getSystemStatusMonitor()Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer$SystemStatusMonitor;
 
@@ -74,13 +69,11 @@
 
     goto :goto_0
 
-    .line 1284
     :cond_3
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Landroid/content/Context;
 
-    .line 1285
     invoke-static {p0}, Lcom/android/server/chimera/umr/UnifiedMemoryReclaimer;->enableReclaimers(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -88,7 +81,6 @@
     :goto_0
     return-void
 
-    .line 1299
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 

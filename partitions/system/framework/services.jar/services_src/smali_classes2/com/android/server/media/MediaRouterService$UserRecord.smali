@@ -21,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$fgetmClientGroupMap(Lcom/android/server/media/MediaRouterService$UserRecord;)Landroid/util/ArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
     return-object p0
@@ -30,29 +29,24 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;I)V
     .locals 1
 
-    .line 1062
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1057
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
-    .line 1060
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
-    .line 1063
     iput p2, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mUserId:I
 
-    .line 1064
     new-instance p2, Lcom/android/server/media/MediaRouterService$UserHandler;
 
     invoke-direct {p2, p1, p0}, Lcom/android/server/media/MediaRouterService$UserHandler;-><init>(Lcom/android/server/media/MediaRouterService;Lcom/android/server/media/MediaRouterService$UserRecord;)V
@@ -67,7 +61,6 @@
 .method public addToGroup(Ljava/lang/String;Lcom/android/server/media/MediaRouterService$ClientRecord;)V
     .locals 2
 
-    .line 1094
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -78,19 +71,16 @@
 
     if-nez v0, :cond_0
 
-    .line 1096
     new-instance v0, Lcom/android/server/media/MediaRouterService$ClientGroup;
 
     iget-object v1, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {v0, v1}, Lcom/android/server/media/MediaRouterService$ClientGroup;-><init>(Lcom/android/server/media/MediaRouterService;)V
 
-    .line 1097
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1099
     :cond_0
     iget-object p0, v0, Lcom/android/server/media/MediaRouterService$ClientGroup;->mClientRecords:Ljava/util/List;
 
@@ -102,7 +92,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 4
 
-    .line 1068
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,7 +106,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1070
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +120,6 @@
 
     move-result-object p2
 
-    .line 1071
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -146,7 +133,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1074
     iget-object v2, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientRecords:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -161,7 +147,6 @@
 
     goto :goto_0
 
-    .line 1077
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -179,7 +164,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1080
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -197,7 +181,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1081
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +201,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1083
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mHandler:Lcom/android/server/media/MediaRouterService$UserHandler;
 
     new-instance v1, Lcom/android/server/media/MediaRouterService$UserRecord$1;
@@ -233,7 +215,6 @@
 
     if-nez p0, :cond_2
 
-    .line 1089
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +238,6 @@
 .method public removeFromGroup(Ljava/lang/String;Lcom/android/server/media/MediaRouterService$ClientRecord;)V
     .locals 2
 
-    .line 1103
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -268,12 +248,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1105
     iget-object v1, v0, Lcom/android/server/media/MediaRouterService$ClientGroup;->mClientRecords:Ljava/util/List;
 
     invoke-interface {v1, p2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1106
     iget-object p2, v0, Lcom/android/server/media/MediaRouterService$ClientGroup;->mClientRecords:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -282,7 +260,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1107
     iget-object p0, p0, Lcom/android/server/media/MediaRouterService$UserRecord;->mClientGroupMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -294,7 +271,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

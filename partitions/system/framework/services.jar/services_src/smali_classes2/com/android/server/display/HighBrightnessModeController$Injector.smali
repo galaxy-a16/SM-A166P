@@ -17,7 +17,6 @@
 .method public getClock()Lcom/android/server/display/DisplayManagerService$Clock;
     .locals 0
 
-    .line 937
     new-instance p0, Lcom/android/server/display/HighBrightnessModeController$Injector$$ExternalSyntheticLambda0;
 
     invoke-direct {p0}, Lcom/android/server/display/HighBrightnessModeController$Injector$$ExternalSyntheticLambda0;-><init>()V
@@ -30,7 +29,6 @@
 
     const/16 p0, 0x1a0
 
-    .line 941
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIII)V
 
     return-void

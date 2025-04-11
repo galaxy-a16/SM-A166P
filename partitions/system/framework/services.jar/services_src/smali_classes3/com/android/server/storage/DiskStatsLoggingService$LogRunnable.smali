@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 125
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -57,12 +56,10 @@
 .method public final finishJob(Z)V
     .locals 1
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mJobService:Landroid/app/job/JobService;
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object p0, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mParams:Landroid/app/job/JobParameters;
 
     invoke-virtual {v0, p0, p1}, Landroid/app/job/JobService;->jobFinished(Landroid/app/job/JobParameters;Z)V
@@ -74,7 +71,6 @@
 .method public final logToFile(Lcom/android/server/storage/FileCollector$MeasurementResult;Lcom/android/server/storage/FileCollector$MeasurementResult;Ljava/util/List;J)V
     .locals 7
 
-    .line 187
     new-instance v6, Lcom/android/server/storage/DiskStatsFileLogger;
 
     move-object v0, v6
@@ -89,13 +85,11 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/storage/DiskStatsFileLogger;-><init>(Lcom/android/server/storage/FileCollector$MeasurementResult;Lcom/android/server/storage/FileCollector$MeasurementResult;Ljava/util/List;J)V
 
-    .line 190
     :try_start_0
     iget-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mOutputFile:Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
 
-    .line 191
     iget-object p0, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mOutputFile:Ljava/io/File;
 
     invoke-virtual {v6, p0}, Lcom/android/server/storage/DiskStatsFileLogger;->dumpToFile(Ljava/io/File;)V
@@ -111,7 +105,6 @@
 
     const-string p2, "Exception while writing opportunistic disk file cache."
 
-    .line 193
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -125,7 +118,6 @@
 
     const/4 v1, 0x1
 
-    .line 163
     :try_start_0
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mContext:Landroid/content/Context;
 
@@ -135,15 +127,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 170
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mDownloadsDirectory:Ljava/io/File;
 
-    .line 171
     invoke-static {v2}, Lcom/android/server/storage/FileCollector;->getMeasurementResult(Ljava/io/File;)Lcom/android/server/storage/FileCollector$MeasurementResult;
 
     move-result-object v5
 
-    .line 174
     iget-object v2, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mCollector:Lcom/android/server/storage/AppCollector;
 
     sget-wide v6, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->TIMEOUT_MILLIS:J
@@ -154,7 +143,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 177
     iget-wide v7, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mSystemSize:J
 
     move-object v3, p0
@@ -168,10 +156,8 @@
     :cond_0
     const-string v2, "Timed out while fetching package stats."
 
-    .line 179
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     :goto_0
     invoke-virtual {p0, v1}, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->finishJob(Z)V
 
@@ -182,10 +168,8 @@
 
     const-string v3, "Error while measuring storage"
 
-    .line 166
     invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 167
     invoke-virtual {p0, v1}, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->finishJob(Z)V
 
     return-void
@@ -194,7 +178,6 @@
 .method public setAppCollector(Lcom/android/server/storage/AppCollector;)V
     .locals 0
 
-    .line 140
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mCollector:Lcom/android/server/storage/AppCollector;
 
     return-void
@@ -203,7 +186,6 @@
 .method public setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 152
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mContext:Landroid/content/Context;
 
     return-void
@@ -212,7 +194,6 @@
 .method public setDownloadsDirectory(Ljava/io/File;)V
     .locals 0
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mDownloadsDirectory:Ljava/io/File;
 
     return-void
@@ -221,10 +202,8 @@
 .method public setJobService(Landroid/app/job/JobService;Landroid/app/job/JobParameters;)V
     .locals 0
 
-    .line 156
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mJobService:Landroid/app/job/JobService;
 
-    .line 157
     iput-object p2, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mParams:Landroid/app/job/JobParameters;
 
     return-void
@@ -233,7 +212,6 @@
 .method public setLogOutputFile(Ljava/io/File;)V
     .locals 0
 
-    .line 144
     iput-object p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mOutputFile:Ljava/io/File;
 
     return-void
@@ -242,7 +220,6 @@
 .method public setSystemSize(J)V
     .locals 0
 
-    .line 148
     iput-wide p1, p0, Lcom/android/server/storage/DiskStatsLoggingService$LogRunnable;->mSystemSize:J
 
     return-void

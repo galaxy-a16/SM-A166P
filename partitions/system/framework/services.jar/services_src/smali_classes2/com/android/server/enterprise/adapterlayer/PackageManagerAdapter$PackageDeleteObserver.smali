@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;)V
     .locals 0
 
-    .line 296
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->this$0:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
@@ -28,12 +27,10 @@
 .method public packageDeleted(Ljava/lang/String;I)V
     .locals 0
 
-    .line 302
     monitor-enter p0
 
     const/4 p1, 0x1
 
-    .line 303
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->finished:Z
 
@@ -44,14 +41,11 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 304
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$PackageDeleteObserver;->result:Z
 
-    .line 305
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 306
     monitor-exit p0
 
     return-void

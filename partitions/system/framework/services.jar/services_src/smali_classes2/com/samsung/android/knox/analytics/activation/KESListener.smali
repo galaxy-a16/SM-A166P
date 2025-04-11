@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,13 +53,10 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;Landroid/content/Context;)V
     .locals 0
 
-    .line 25
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 26
     iput-object p2, p0, Lcom/samsung/android/knox/analytics/activation/KESListener;->mContext:Landroid/content/Context;
 
-    .line 27
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/activation/KESListener;->mActivationMonitor:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
 
     return-void
@@ -71,7 +67,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 42
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -84,7 +79,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 43
     sget-object p1, Lcom/samsung/android/knox/analytics/activation/KESListener;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -111,7 +105,6 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/KESListener;->mActivationMonitor:Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
 
     const-string p1, "com.sec.enterprise.knox.cloudmdm.smdms.intent.extra.PACKAGE_NAME"
@@ -137,24 +130,20 @@
 .method public register()V
     .locals 4
 
-    .line 31
     sget-object v0, Lcom/samsung/android/knox/analytics/activation/KESListener;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "start()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 32
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.sec.enterprise.knox.cloudmdm.smdms.intent.action.KES_STATE_CHANGED"
 
-    .line 33
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 34
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/KESListener;->mContext:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.knox.permission.KNOX_KES_INTERNAL"

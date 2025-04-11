@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->$r8$lambda$5mo5ftDkT71ZgKWNyHn7uh8mhAM()V
 
     return-void

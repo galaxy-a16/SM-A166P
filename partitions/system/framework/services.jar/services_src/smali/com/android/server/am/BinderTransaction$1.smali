@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/am/BinderTransaction;Ljava/lang/String;Lcom/android/server/am/BinderTransaction$BinderProcsInfo;I)V
     .locals 0
 
-    .line 111
     iput-object p1, p0, Lcom/android/server/am/BinderTransaction$1;->this$0:Lcom/android/server/am/BinderTransaction;
 
     iput-object p3, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
@@ -32,17 +31,14 @@
 .method public run()V
     .locals 7
 
-    .line 113
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 114
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
 
     iget-object v2, v2, Lcom/android/server/am/BinderTransaction$BinderProcsInfo;->rawInfo:Ljava/util/ArrayList;
@@ -57,7 +53,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 120
     iget v2, p0, Lcom/android/server/am/BinderTransaction$1;->val$startPid:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    .line 121
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
@@ -75,7 +69,6 @@
 
     if-nez v2, :cond_1
 
-    .line 123
     invoke-virtual {v0}, Ljava/util/LinkedList;->pollFirst()Ljava/lang/Object;
 
     move-result-object v2
@@ -86,7 +79,6 @@
 
     move-result v2
 
-    .line 126
     iget-object v3, p0, Lcom/android/server/am/BinderTransaction$1;->this$0:Lcom/android/server/am/BinderTransaction;
 
     iget-object v4, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
@@ -99,7 +91,6 @@
 
     if-nez v3, :cond_0
 
-    .line 130
     iget-object v3, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
 
     iget-object v3, v3, Lcom/android/server/am/BinderTransaction$BinderProcsInfo;->rawInfo:Ljava/util/ArrayList;
@@ -116,7 +107,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -127,7 +117,6 @@
 
     move-result-object v2
 
-    .line 130
     invoke-static {v4, v2}, Lcom/android/server/am/BinderTransaction;->-$$Nest$mmakeBinderTransactionsErrorLog(Lcom/android/server/am/BinderTransaction;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -136,7 +125,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/BinderTransaction$1;->this$0:Lcom/android/server/am/BinderTransaction;
 
@@ -148,7 +136,6 @@
 
     if-nez v0, :cond_2
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
 
     iget-object v0, v0, Lcom/android/server/am/BinderTransaction$BinderProcsInfo;->rawInfo:Ljava/util/ArrayList;
@@ -165,7 +152,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 146
     :cond_2
     iget-object v0, p0, Lcom/android/server/am/BinderTransaction$1;->val$workInfo:Lcom/android/server/am/BinderTransaction$BinderProcsInfo;
 

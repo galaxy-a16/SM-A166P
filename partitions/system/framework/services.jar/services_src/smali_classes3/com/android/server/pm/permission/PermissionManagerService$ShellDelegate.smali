@@ -20,18 +20,14 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/PermissionManagerService;ILjava/lang/String;Ljava/util/List;)V
     .locals 0
 
-    .line 964
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->this$0:Lcom/android/server/pm/permission/PermissionManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 965
     iput p2, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedUid:I
 
-    .line 966
     iput-object p3, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedPackageName:Ljava/lang/String;
 
-    .line 967
     iput-object p4, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedPermissionNames:Ljava/util/List;
 
     return-void
@@ -42,7 +38,6 @@
 .method public checkPermission(Ljava/lang/String;Ljava/lang/String;ILcom/android/internal/util/function/TriFunction;)I
     .locals 1
 
-    .line 978
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -51,14 +46,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 979
     invoke-virtual {p0, p2}, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->isDelegatedPermission(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 980
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p0
@@ -66,7 +59,6 @@
     :try_start_0
     const-string v0, "com.android.shell"
 
-    .line 982
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -83,7 +75,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 984
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p2
@@ -93,10 +84,8 @@
 
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 985
     throw p2
 
-    .line 987
     :cond_0
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -118,7 +107,6 @@
 .method public checkUidPermission(ILjava/lang/String;Ljava/util/function/BiFunction;)I
     .locals 1
 
-    .line 993
     iget v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedUid:I
 
     if-ne p1, v0, :cond_0
@@ -129,14 +117,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 994
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide p0
 
     const/16 v0, 0x7d0
 
-    .line 996
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -154,7 +140,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 998
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return p2
@@ -164,10 +149,8 @@
 
     invoke-static {p0, p1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 999
     throw p2
 
-    .line 1001
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -189,7 +172,6 @@
 .method public getDelegatedPermissionNames()Ljava/util/List;
     .locals 1
 
-    .line 1006
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedPermissionNames:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -198,7 +180,6 @@
 
     goto :goto_0
 
-    .line 1008
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -215,7 +196,6 @@
 .method public getDelegatedUid()I
     .locals 0
 
-    .line 972
     iget p0, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedUid:I
 
     return p0
@@ -224,12 +204,10 @@
 .method public final isDelegatedPermission(Ljava/lang/String;)Z
     .locals 0
 
-    .line 1013
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerService$ShellDelegate;->mDelegatedPermissionNames:Ljava/util/List;
 
     if-eqz p0, :cond_1
 
-    .line 1014
     invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0

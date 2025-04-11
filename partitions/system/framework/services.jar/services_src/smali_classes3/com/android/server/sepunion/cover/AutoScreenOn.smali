@@ -27,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/cover/AutoScreenOn;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -36,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,10 +63,8 @@
 .method public constructor <init>(Landroid/os/Looper;Landroid/content/Context;)V
     .locals 1
 
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -77,13 +73,10 @@
 
     const/4 v0, 0x1
 
-    .line 30
     iput-boolean v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mIsAutoScreenOn:Z
 
-    .line 33
     iput-object p2, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mContext:Landroid/content/Context;
 
-    .line 34
     invoke-static {p2}, Lcom/android/server/sepunion/cover/Feature;->getInstance(Landroid/content/Context;)Lcom/android/server/sepunion/cover/Feature;
 
     move-result-object v0
@@ -94,7 +87,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mNfcAuthEnabled:Z
 
-    .line 35
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p2
@@ -107,14 +99,12 @@
 
     iput-boolean p2, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mAutoScreenOnFeature:Z
 
-    .line 37
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/AutoScreenOn;->support()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 38
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/cover/AutoScreenOn;->init(Landroid/os/Looper;)V
 
     :cond_0
@@ -128,15 +118,12 @@
 
     const-string p1, " Current AutoScreenOn State:"
 
-    .line 60
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 61
     iget-object p1, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 62
     :try_start_0
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -164,7 +151,6 @@
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 63
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -185,10 +171,8 @@
 
     const-string p0, "  "
 
-    .line 64
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 65
     monitor-exit p1
 
     return-void
@@ -206,7 +190,6 @@
 .method public final init(Landroid/os/Looper;)V
     .locals 4
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -215,7 +198,6 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 70
     new-instance v0, Lcom/android/server/sepunion/cover/AutoScreenOn$AutoScreenOnObserver;
 
     new-instance v1, Landroid/os/Handler;
@@ -226,7 +208,6 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mObserver:Lcom/android/server/sepunion/cover/AutoScreenOn$AutoScreenOnObserver;
 
-    .line 71
     iget-object p1, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v0, "auto_screen_on"
@@ -243,7 +224,6 @@
 
     invoke-virtual {p1, v0, v3, v1, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 73
     invoke-virtual {p0}, Lcom/android/server/sepunion/cover/AutoScreenOn;->update()V
 
     return-void
@@ -252,12 +232,10 @@
 .method public off()Z
     .locals 1
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 48
     :try_start_0
     iget-boolean p0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mIsAutoScreenOn:Z
 
@@ -278,7 +256,6 @@
     :catchall_0
     move-exception p0
 
-    .line 49
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -289,7 +266,6 @@
 .method public support()Z
     .locals 1
 
-    .line 43
     iget-boolean v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mNfcAuthEnabled:Z
 
     if-eqz v0, :cond_1
@@ -316,12 +292,10 @@
 .method public update()V
     .locals 5
 
-    .line 53
     iget-object v0, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 54
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -345,7 +319,6 @@
     :goto_0
     iput-boolean v4, p0, Lcom/android/server/sepunion/cover/AutoScreenOn;->mIsAutoScreenOn:Z
 
-    .line 56
     monitor-exit v0
 
     return-void

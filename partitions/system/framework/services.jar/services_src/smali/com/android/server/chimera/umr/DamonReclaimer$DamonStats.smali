@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
     .locals 4
 
-    .line 362
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->bytes_reclaimed_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     sget-object v1, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->nr_reclaim_tried_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 363
     new-instance v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     const-string v1, "bytes_reclaimed_regions"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->bytes_reclaimed_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
-    .line 364
     new-instance v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     const-string/jumbo v1, "nr_reclaim_tried_regions"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->nr_reclaim_tried_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
-    .line 365
     new-instance v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     const-string v1, "bytes_reclaim_tried_regions"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->bytes_reclaim_tried_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
-    .line 366
     new-instance v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     const-string/jumbo v1, "nr_reclaimed_regions"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->nr_reclaimed_regions:Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
-    .line 362
     invoke-static {}, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->$values()[Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 362
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
     .locals 1
 
-    .line 362
     const-class v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +111,6 @@
 .method public static values()[Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
     .locals 1
 
-    .line 362
     sget-object v0, Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->$VALUES:[Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;
 
     invoke-virtual {v0}, [Lcom/android/server/chimera/umr/DamonReclaimer$DamonStats;->clone()Ljava/lang/Object;

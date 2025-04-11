@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 1243
     iput-object p1, p0, Lcom/android/server/wm/ActivityRecord$4;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 1246
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$4;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -41,7 +39,6 @@
     :try_start_0
     const-string v1, "ActivityTaskManager"
 
-    .line 1247
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1248
     iget-object v1, p0, Lcom/android/server/wm/ActivityRecord$4;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-virtual {v1}, Lcom/android/server/wm/ActivityRecord;->isInHistory()Z
@@ -69,14 +65,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1249
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord$4;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v1, v1}, Lcom/android/server/wm/ActivityRecord;->activityStopped(Landroid/os/Bundle;Landroid/os/PersistableBundle;Ljava/lang/CharSequence;)V
 
-    .line 1252
     :cond_0
     monitor-exit v0
     :try_end_0

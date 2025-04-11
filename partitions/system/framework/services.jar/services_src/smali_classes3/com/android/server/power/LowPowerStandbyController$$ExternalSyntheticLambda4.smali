@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/power/LowPowerStandbyController;->$r8$lambda$C5R8NlvfYJNd4O5ZVFEKi_ixMJg()Landroid/app/IActivityManager;
 
     move-result-object p0

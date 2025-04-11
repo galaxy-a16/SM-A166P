@@ -39,43 +39,36 @@
 .method public constructor <init>(I)V
     .locals 5
 
-    .line 928
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x100
 
     new-array v1, v0, [Z
 
-    .line 896
     iput-object v1, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->inUse:[Z
 
     new-array v1, v0, [B
 
-    .line 898
     iput-object v1, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->seqToUnseq:[B
 
     const/16 v1, 0x4652
 
     new-array v2, v1, [B
 
-    .line 899
     iput-object v2, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->selector:[B
 
     new-array v1, v1, [B
 
-    .line 900
     iput-object v1, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->selectorMtf:[B
 
     new-array v1, v0, [I
 
-    .line 906
     iput-object v1, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->unzftab:[I
 
     const/4 v1, 0x6
 
     const/16 v2, 0x102
 
-    .line 908
     filled-new-array {v1, v2}, [I
 
     move-result-object v3
@@ -90,7 +83,6 @@
 
     iput-object v3, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->limit:[[I
 
-    .line 909
     filled-new-array {v1, v2}, [I
 
     move-result-object v3
@@ -103,7 +95,6 @@
 
     iput-object v3, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->base:[[I
 
-    .line 910
     filled-new-array {v1, v2}, [I
 
     move-result-object v3
@@ -118,22 +109,18 @@
 
     new-array v3, v1, [I
 
-    .line 911
     iput-object v3, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->minLens:[I
 
     const/16 v3, 0x101
 
     new-array v3, v3, [I
 
-    .line 913
     iput-object v3, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->cftab:[I
 
     new-array v0, v0, [C
 
-    .line 914
     iput-object v0, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->getAndMoveToFrontDecode_yy:[C
 
-    .line 915
     filled-new-array {v1, v2}, [I
 
     move-result-object v0
@@ -150,14 +137,12 @@
 
     new-array v0, v1, [B
 
-    .line 917
     iput-object v0, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->recvDecodingTables_pos:[B
 
     const v0, 0x186a0
 
     mul-int/2addr p1, v0
 
-    .line 929
     new-array p1, p1, [B
 
     iput-object p1, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->ll8:[B
@@ -170,17 +155,14 @@
 .method public initTT(I)[I
     .locals 2
 
-    .line 940
     iget-object v0, p0, Lorg/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream$Data;->tt:[I
 
     if-eqz v0, :cond_0
 
-    .line 946
     array-length v1, v0
 
     if-ge v1, p1, :cond_1
 
-    .line 947
     :cond_0
     new-array v0, p1, [I
 

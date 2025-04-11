@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/SemBiometricSysUiReceiver;)V
     .locals 0
 
-    .line 17
     iput-object p1, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onDismissed(I[B)V
     .locals 0
 
-    .line 34
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;->onDialogDismissed(I[B)V
@@ -38,7 +36,6 @@
 .method public onError(II)V
     .locals 0
 
-    .line 20
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;->onSysUiError(II)V
@@ -53,7 +50,6 @@
 
     goto :goto_0
 
-    .line 47
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
@@ -63,7 +59,6 @@
 
     goto :goto_0
 
-    .line 44
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 41
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
@@ -95,14 +89,12 @@
 
     if-nez p1, :cond_0
 
-    .line 26
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/SemBiometricSysUiReceiver;->onTryAgainPressed()V
 
     goto :goto_0
 
-    .line 28
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/SemBiometricSysUiReceiver$1;->this$0:Lcom/android/server/biometrics/SemBiometricSysUiReceiver;
 

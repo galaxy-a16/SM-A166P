@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$SdZ5Mv_-JxEPaaaXBcbsnVrU6R4(Ljava/lang/String;Landroid/companion/AssociationInfo;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->lambda$isDeviceAssociatedForWifiConnection$0(Ljava/lang/String;Landroid/companion/AssociationInfo;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/companion/CompanionDeviceManagerService;)V
     .locals 0
 
-    .line 588
     iput-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-direct {p0}, Landroid/companion/ICompanionDeviceManager$Stub;-><init>()V
@@ -33,7 +31,6 @@
 .method public static synthetic lambda$isDeviceAssociatedForWifiConnection$0(Ljava/lang/String;Landroid/companion/AssociationInfo;)Z
     .locals 0
 
-    .line 765
     invoke-virtual {p1, p0}, Landroid/companion/AssociationInfo;->isLinkedTo(Ljava/lang/String;)Z
 
     move-result p0
@@ -46,7 +43,6 @@
 .method public addOnAssociationsChangedListener(Landroid/companion/IOnAssociationsChangedListener;I)V
     .locals 2
 
-    .line 650
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -55,7 +51,6 @@
 
     invoke-static {v0, p2}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerIsSystemOrCanInteractWithUserId(Landroid/content/Context;I)V
 
-    .line 651
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -66,7 +61,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageCompanionDevice(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 654
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmListeners(Lcom/android/server/companion/CompanionDeviceManagerService;)Landroid/os/RemoteCallbackList;
@@ -85,7 +79,6 @@
 .method public addOnMessageReceivedListener(ILandroid/companion/IOnMessageReceivedListener;)V
     .locals 0
 
-    .line 685
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -100,7 +93,6 @@
 .method public addOnTransportsChangedListener(Landroid/companion/IOnTransportsChangedListener;)V
     .locals 0
 
-    .line 669
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -115,7 +107,6 @@
 .method public associate(Landroid/companion/AssociationRequest;Landroid/companion/IAssociationRequestCallback;Ljava/lang/String;I)V
     .locals 2
 
-    .line 603
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +137,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -157,7 +147,6 @@
 
     invoke-static {v0, p4, p3, v1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageAssociationsForPackage(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 609
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationRequestsProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationRequestsProcessor;
@@ -172,12 +161,10 @@
 .method public attachSystemDataTransport(Ljava/lang/String;IILandroid/os/ParcelFileDescriptor;)V
     .locals 1
 
-    .line 808
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p3}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
-    .line 809
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -192,7 +179,6 @@
 .method public buildAssociationCancellationIntent(Ljava/lang/String;I)Landroid/app/PendingIntent;
     .locals 2
 
-    .line 616
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +203,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 618
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -228,7 +213,6 @@
 
     invoke-static {v0, p2, p1, v1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageAssociationsForPackage(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 621
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationRequestsProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationRequestsProcessor;
@@ -245,14 +229,12 @@
 .method public buildPermissionTransferUserConsentIntent(Ljava/lang/String;II)Landroid/app/PendingIntent;
     .locals 1
 
-    .line 785
     invoke-static {}, Landroid/companion/utils/FeatureUtils;->isPermSyncEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 790
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmSystemDataTransferProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;
@@ -265,7 +247,6 @@
 
     return-object p0
 
-    .line 786
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -279,14 +260,12 @@
 .method public canPairWithoutPrompt(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 2
 
-    .line 959
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
 
     move-result-object p0
 
-    .line 960
     invoke-virtual {p0, p3, p1, p2}, Lcom/android/server/companion/AssociationStoreImpl;->getAssociationsForPackageWithAddress(ILjava/lang/String;Ljava/lang/String;)Landroid/companion/AssociationInfo;
 
     move-result-object p0
@@ -297,7 +276,6 @@
 
     return p1
 
-    .line 965
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -324,10 +302,8 @@
 .method public final checkCanCallNotificationApi(Ljava/lang/String;I)V
     .locals 2
 
-    .line 947
     invoke-static {p2, p1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerIsSystemOr(ILjava/lang/String;)V
 
-    .line 949
     invoke-static {}, Landroid/companion/ICompanionDeviceManager$Stub;->getCallingUid()I
 
     move-result v0
@@ -338,7 +314,6 @@
 
     return-void
 
-    .line 951
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -348,19 +323,16 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/companion/PackageUtils;->enforceUsesCompanionDeviceFeature(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 952
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
 
     move-result-object p0
 
-    .line 953
     invoke-virtual {p0, p2, p1}, Lcom/android/server/companion/AssociationStoreImpl;->getAssociationsForPackage(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 952
     invoke-static {p0}, Lcom/android/internal/util/ArrayUtils;->isEmpty(Ljava/util/Collection;)Z
 
     move-result p0
@@ -377,7 +349,6 @@
 .method public createAssociation(Ljava/lang/String;Ljava/lang/String;I[B)V
     .locals 9
 
-    .line 933
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -400,12 +371,10 @@
 
     const-string p1, "Given certificate doesn\'t match the package certificate."
 
-    .line 935
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 939
     :cond_0
     iget-object p4, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -419,12 +388,10 @@
 
     invoke-virtual {p4, v0, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 942
     invoke-static {p2}, Landroid/net/MacAddress;->fromString(Ljava/lang/String;)Landroid/net/MacAddress;
 
     move-result-object v5
 
-    .line 943
     iget-object v2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     const/4 v6, 0x0
@@ -445,12 +412,10 @@
 .method public detachSystemDataTransport(Ljava/lang/String;II)V
     .locals 1
 
-    .line 814
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p3}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
-    .line 815
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -465,12 +430,10 @@
 .method public disableSystemDataSync(II)V
     .locals 1
 
-    .line 826
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
-    .line 827
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationRequestsProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationRequestsProcessor;
@@ -485,7 +448,6 @@
 .method public disassociate(I)V
     .locals 2
 
-    .line 709
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -504,15 +466,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 711
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
-    .line 712
     invoke-virtual {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
     move-result-object p1
 
-    .line 713
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p1}, Landroid/companion/AssociationInfo;->getId()I
@@ -527,7 +486,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 983
     iget-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -544,7 +502,6 @@
 
     return-void
 
-    .line 987
     :cond_0
     iget-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -554,7 +511,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/companion/AssociationStoreImpl;->dump(Ljava/io/PrintWriter;)V
 
-    .line 988
     iget-object p1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmDevicePresenceMonitor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;
@@ -563,7 +519,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;->dump(Ljava/io/PrintWriter;)V
 
-    .line 989
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmCompanionAppController(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/CompanionApplicationController;
@@ -578,7 +533,6 @@
 .method public enableSecureTransport(Z)V
     .locals 0
 
-    .line 832
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -593,12 +547,10 @@
 .method public enableSystemDataSync(II)V
     .locals 1
 
-    .line 820
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
-    .line 821
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationRequestsProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationRequestsProcessor;
@@ -613,7 +565,6 @@
 .method public getAllAssociationsForUser(I)Ljava/util/List;
     .locals 2
 
-    .line 641
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -622,7 +573,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerIsSystemOrCanInteractWithUserId(Landroid/content/Context;I)V
 
-    .line 642
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -633,7 +583,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageCompanionDevice(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 644
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
@@ -650,7 +599,6 @@
 .method public getAssociations(Ljava/lang/String;I)Ljava/util/List;
     .locals 2
 
-    .line 627
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -661,7 +609,6 @@
 
     invoke-static {v0, p2, p1, v1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageAssociationsForPackage(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 630
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -674,7 +621,6 @@
 
     if-nez v0, :cond_0
 
-    .line 633
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -683,7 +629,6 @@
 
     invoke-static {v0, p2, p1}, Lcom/android/server/companion/PackageUtils;->enforceUsesCompanionDeviceFeature(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 636
     :cond_0
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -715,7 +660,6 @@
 
     return-object p0
 
-    .line 999
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -725,7 +669,6 @@
 
     if-le p0, v0, :cond_2
 
-    .line 1000
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -751,7 +694,6 @@
 .method public handleShellCommand(Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;)I
     .locals 8
 
-    .line 973
     new-instance v7, Lcom/android/server/companion/CompanionDeviceShellCommand;
 
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
@@ -788,7 +730,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/companion/CompanionDeviceShellCommand;-><init>(Lcom/android/server/companion/CompanionDeviceManagerService;Lcom/android/server/companion/AssociationStoreImpl;Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;Lcom/android/server/companion/transport/CompanionTransportManager;Lcom/android/server/companion/datatransfer/SystemDataTransferRequestStore;Lcom/android/server/companion/AssociationRequestsProcessor;)V
 
-    .line 976
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v2
@@ -797,7 +738,6 @@
 
     move-result-object v3
 
-    .line 977
     invoke-virtual {p3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
@@ -806,7 +746,6 @@
 
     move-object v5, p4
 
-    .line 976
     invoke-virtual/range {v0 .. v5}, Landroid/os/ShellCommand;->exec(Landroid/os/Binder;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;)I
 
     move-result p0
@@ -817,7 +756,6 @@
 .method public hasNotificationAccess(Landroid/content/ComponentName;)Z
     .locals 2
 
-    .line 746
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -828,7 +766,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->checkCanCallNotificationApi(Ljava/lang/String;I)V
 
-    .line 747
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -843,7 +780,6 @@
 
     check-cast p0, Landroid/app/NotificationManager;
 
-    .line 748
     invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->isNotificationListenerAccessGranted(Landroid/content/ComponentName;)Z
 
     move-result p0
@@ -854,7 +790,6 @@
 .method public isCompanionApplicationBound(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 875
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmCompanionAppController(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/CompanionApplicationController;
@@ -871,7 +806,6 @@
 .method public isDeviceAssociatedForWifiConnection(Ljava/lang/String;Ljava/lang/String;I)Z
     .locals 3
 
-    .line 754
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -884,7 +818,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 757
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -917,7 +850,6 @@
 
     return v1
 
-    .line 764
     :cond_1
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -943,7 +875,6 @@
 .method public legacyDisassociate(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .line 696
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -964,7 +895,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 697
     invoke-virtual {p0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->getMaskedMacAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -977,24 +907,18 @@
 
     const-string v1, "CDM_CompanionDeviceManagerService"
 
-    .line 696
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 699
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 700
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 702
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
-    .line 703
     invoke-virtual {v0, p3, p2, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(ILjava/lang/String;Ljava/lang/String;)Landroid/companion/AssociationInfo;
 
     move-result-object p1
 
-    .line 704
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p1}, Landroid/companion/AssociationInfo;->getId()I
@@ -1009,7 +933,6 @@
 .method public notifyDeviceAppeared(I)V
     .locals 3
 
-    .line 838
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1028,26 +951,22 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 841
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
     move-result-object v0
 
-    .line 842
     invoke-virtual {v0}, Landroid/companion/AssociationInfo;->isSelfManaged()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 849
     invoke-static {v0}, Landroid/companion/AssociationInfo;->builder(Landroid/companion/AssociationInfo;)Landroid/companion/AssociationInfo$NonActionableBuilder;
 
     move-result-object v0
 
-    .line 850
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1056,12 +975,10 @@
 
     move-result-object v0
 
-    .line 851
     invoke-virtual {v0}, Landroid/companion/AssociationInfo$Builder;->build()Landroid/companion/AssociationInfo;
 
     move-result-object v0
 
-    .line 852
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {v1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
@@ -1070,7 +987,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/companion/AssociationStoreImpl;->updateAssociation(Landroid/companion/AssociationInfo;)V
 
-    .line 854
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmDevicePresenceMonitor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;
@@ -1081,7 +997,6 @@
 
     return-void
 
-    .line 843
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1111,7 +1026,6 @@
 .method public notifyDeviceDisappeared(I)V
     .locals 2
 
-    .line 860
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1130,21 +1044,18 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 863
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->getAssociationWithCallerChecks(I)Landroid/companion/AssociationInfo;
 
     move-result-object v0
 
-    .line 864
     invoke-virtual {v0}, Landroid/companion/AssociationInfo;->isSelfManaged()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 870
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmDevicePresenceMonitor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;
@@ -1155,7 +1066,6 @@
 
     return-void
 
-    .line 865
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1185,7 +1095,6 @@
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 0
 
-    .line 593
     :try_start_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/companion/ICompanionDeviceManager$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
@@ -1202,10 +1111,8 @@
 
     const-string p2, "Error during IPC"
 
-    .line 595
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 596
     const-class p1, Landroid/os/RemoteException;
 
     invoke-static {p0, p1}, Landroid/util/ExceptionUtils;->propagate(Ljava/lang/Throwable;Ljava/lang/Class;)Ljava/lang/RuntimeException;
@@ -1218,7 +1125,6 @@
 .method public final registerDevicePresenceListenerActive(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 4
 
-    .line 881
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1233,7 +1139,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 883
     invoke-virtual {p0, p2}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->getMaskedMacAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1246,10 +1151,8 @@
 
     const-string v1, "CDM_CompanionDeviceManagerService"
 
-    .line 881
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -1262,15 +1165,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 889
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 890
     invoke-static {v0, p1}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerIsSystemOr(ILjava/lang/String;)V
 
-    .line 892
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {v1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
@@ -1283,7 +1183,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 902
     invoke-virtual {v1}, Landroid/companion/AssociationInfo;->isNotifyOnDeviceNearby()Z
 
     move-result p2
@@ -1292,23 +1191,19 @@
 
     return-void
 
-    .line 909
     :cond_0
     invoke-static {v1}, Landroid/companion/AssociationInfo;->builder(Landroid/companion/AssociationInfo;)Landroid/companion/AssociationInfo$NonActionableBuilder;
 
     move-result-object p2
 
-    .line 910
     invoke-interface {p2, p3}, Landroid/companion/AssociationInfo$NonActionableBuilder;->setNotifyOnDeviceNearby(Z)Landroid/companion/AssociationInfo$Builder;
 
     move-result-object p2
 
-    .line 911
     invoke-virtual {p2}, Landroid/companion/AssociationInfo$Builder;->build()Landroid/companion/AssociationInfo;
 
     move-result-object p2
 
-    .line 915
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {v1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmAssociationStore(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/AssociationStoreImpl;
@@ -1319,7 +1214,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 918
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {v1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmDevicePresenceMonitor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/presence/CompanionDevicePresenceMonitor;
@@ -1336,7 +1230,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 920
     iget-object v1, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {p2}, Landroid/companion/AssociationInfo;->getId()I
@@ -1348,7 +1241,6 @@
     :cond_1
     if-nez p3, :cond_2
 
-    .line 924
     iget-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p2, v0, p1}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$mshouldBindPackage(Lcom/android/server/companion/CompanionDeviceManagerService;ILjava/lang/String;)Z
@@ -1357,7 +1249,6 @@
 
     if-nez p2, :cond_2
 
-    .line 926
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmCompanionAppController(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/CompanionApplicationController;
@@ -1369,7 +1260,6 @@
     :cond_2
     return-void
 
-    .line 896
     :cond_3
     new-instance p3, Landroid/os/RemoteException;
 
@@ -1389,7 +1279,6 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 897
     invoke-virtual {p0, p2}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->getMaskedMacAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1418,7 +1307,6 @@
 
     const/4 p3, 0x1
 
-    .line 772
     invoke-virtual {p0, p2, p1, p3}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->registerDevicePresenceListenerActive(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
@@ -1427,7 +1315,6 @@
 .method public removeOnAssociationsChangedListener(Landroid/companion/IOnAssociationsChangedListener;I)V
     .locals 1
 
-    .line 660
     iget-object v0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -1436,20 +1323,16 @@
 
     invoke-static {v0, p2}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerIsSystemOrCanInteractWithUserId(Landroid/content/Context;I)V
 
-    .line 661
     iget-object p2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
-    .line 662
     invoke-virtual {p2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
     const-string/jumbo v0, "removeOnAssociationsChangedListener"
 
-    .line 661
     invoke-static {p2, v0}, Lcom/android/server/companion/PermissionsUtils;->enforceCallerCanManageCompanionDevice(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 664
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmListeners(Lcom/android/server/companion/CompanionDeviceManagerService;)Landroid/os/RemoteCallbackList;
@@ -1464,7 +1347,6 @@
 .method public removeOnMessageReceivedListener(ILandroid/companion/IOnMessageReceivedListener;)V
     .locals 0
 
-    .line 691
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -1479,7 +1361,6 @@
 .method public removeOnTransportsChangedListener(Landroid/companion/IOnTransportsChangedListener;)V
     .locals 0
 
-    .line 674
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -1494,15 +1375,12 @@
 .method public requestNotificationAccess(Landroid/content/ComponentName;I)Landroid/app/PendingIntent;
     .locals 9
 
-    .line 719
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 720
     invoke-virtual {p0, v0, p2}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->checkCanCallNotificationApi(Ljava/lang/String;I)V
 
-    .line 721
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v0
@@ -1515,12 +1393,10 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 724
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 726
     :try_start_0
     iget-object v2, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
@@ -1532,12 +1408,10 @@
 
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
-    .line 729
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 728
     invoke-static {p0, p2, p1}, Lcom/android/internal/notification/NotificationAccessConfirmationActivityContract;->launcherIntent(Landroid/content/Context;ILandroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v5
@@ -1550,14 +1424,12 @@
 
     invoke-direct {v8, p2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 726
     invoke-static/range {v3 .. v8}, Landroid/app/PendingIntent;->getActivityAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/Bundle;Landroid/os/UserHandle;)Landroid/app/PendingIntent;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 735
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p0
@@ -1567,10 +1439,8 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 736
     throw p0
 
-    .line 722
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1584,7 +1454,6 @@
 .method public sendMessage(I[B[I)V
     .locals 0
 
-    .line 679
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmTransportManager(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/transport/CompanionTransportManager;
@@ -1599,14 +1468,12 @@
 .method public startSystemDataTransfer(Ljava/lang/String;IILandroid/companion/ISystemDataTransferCallback;)V
     .locals 1
 
-    .line 797
     invoke-static {}, Landroid/companion/utils/FeatureUtils;->isPermSyncEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 801
     iget-object p0, p0, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->this$0:Lcom/android/server/companion/CompanionDeviceManagerService;
 
     invoke-static {p0}, Lcom/android/server/companion/CompanionDeviceManagerService;->-$$Nest$fgetmSystemDataTransferProcessor(Lcom/android/server/companion/CompanionDeviceManagerService;)Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;
@@ -1617,7 +1484,6 @@
 
     return-void
 
-    .line 798
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -1633,7 +1499,6 @@
 
     const/4 p3, 0x0
 
-    .line 779
     invoke-virtual {p0, p2, p1, p3}, Lcom/android/server/companion/CompanionDeviceManagerService$CompanionDeviceManagerImpl;->registerDevicePresenceListenerActive(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void

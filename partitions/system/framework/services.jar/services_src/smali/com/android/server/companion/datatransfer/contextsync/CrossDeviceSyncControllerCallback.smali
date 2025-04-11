@@ -17,7 +17,6 @@
 .method public cleanUpCallIds(Ljava/util/Set;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -27,13 +26,11 @@
 .method public requestCrossDeviceSync(Landroid/companion/AssociationInfo;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public updateNumberOfActiveSyncAssociations(IZ)V
     .locals 0
 
-    .line 0
     return-void
 .end method

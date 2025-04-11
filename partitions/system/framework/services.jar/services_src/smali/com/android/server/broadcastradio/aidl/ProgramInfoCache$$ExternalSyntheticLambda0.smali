@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Ljava/lang/StringBuilder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/broadcastradio/aidl/ProgramInfoCache$$ExternalSyntheticLambda0;->f$0:Ljava/lang/StringBuilder;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/broadcastradio/aidl/ProgramInfoCache$$ExternalSyntheticLambda0;->f$0:Ljava/lang/StringBuilder;
 
     check-cast p1, Landroid/hardware/radio/ProgramSelector$Identifier;

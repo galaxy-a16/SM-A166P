@@ -11,10 +11,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput p1, p0, Lcom/samsung/android/powerSolution/SOCJump$SOC;->battery:I
 
     return-void
@@ -27,7 +25,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 39
     iget p1, p1, Lcom/samsung/android/powerSolution/SOCJump$SOC;->battery:I
 
     iget p0, p0, Lcom/samsung/android/powerSolution/SOCJump$SOC;->battery:I

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/CachedAppOptimizer;)V
     .locals 0
 
-    .line 1970
     iput-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    .line 1971
     iget-object p1, p1, Lcom/android/server/am/CachedAppOptimizer;->mCachedAppOptimizerThread:Lcom/android/server/ServiceThread;
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -29,7 +27,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/CachedAppOptimizer;Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;-><init>(Lcom/android/server/am/CachedAppOptimizer;)V
 
     return-void
@@ -44,7 +41,6 @@
 
     move-object/from16 v1, p1
 
-    .line 2102
     iget v2, v1, Landroid/os/Message;->what:I
 
     const/16 v7, 0x756f
@@ -71,11 +67,9 @@
 
     goto/16 :goto_9
 
-    .line 2337
     :cond_0
     iget v1, v1, Landroid/os/Message;->arg1:I
 
-    .line 2340
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v2}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmAm(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerService;
@@ -88,7 +82,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2341
     invoke-virtual {v0, v3, v1, v6}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v1
@@ -99,7 +92,6 @@
 
     goto/16 :goto_9
 
-    .line 2347
     :cond_1
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -113,7 +105,6 @@
 
     move-result-object v2
 
-    .line 2348
     invoke-virtual {v2, v1}, Lcom/android/server/am/FreecessController;->isProcessFrozen(I)Z
 
     move-result v2
@@ -123,7 +114,6 @@
     :cond_2
     const-string v2, "ActivityManager"
 
-    .line 2349
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,7 +130,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2350
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v2}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -151,17 +140,14 @@
 
     move-result-object v2
 
-    .line 2351
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 2352
     invoke-static {v1, v15}, Lcom/android/server/am/CachedAppOptimizer;->compactProcess(II)I
 
     move-result v5
 
-    .line 2353
     iget-object v8, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v8}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -172,35 +158,30 @@
 
     move-result-object v8
 
-    .line 2354
     aget-wide v12, v8, v6
 
     aget-wide v16, v2, v6
 
     sub-long v12, v12, v16
 
-    .line 2355
     aget-wide v16, v8, v15
 
     aget-wide v18, v2, v15
 
     sub-long v16, v16, v18
 
-    .line 2356
     aget-wide v18, v8, v14
 
     aget-wide v20, v2, v14
 
     sub-long v18, v18, v20
 
-    .line 2357
     aget-wide v20, v8, v11
 
     aget-wide v22, v2, v11
 
     sub-long v20, v20, v22
 
-    .line 2358
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v22
@@ -209,7 +190,6 @@
 
     const-string v3, ""
 
-    .line 2361
     iget-object v4, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v4}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcLock(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -220,7 +200,6 @@
 
     monitor-enter v4
 
-    .line 2362
     :try_start_0
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -236,7 +215,6 @@
 
     if-nez v5, :cond_3
 
-    .line 2364
     aget-wide v9, v8, v15
 
     goto :goto_0
@@ -247,20 +225,17 @@
     :goto_0
     iput-wide v9, v0, Lcom/android/server/am/ProcessRecord;->mRSSresiduePostFCA:J
 
-    .line 2365
     iget-object v3, v0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     :cond_4
     move-object/from16 v25, v3
 
-    .line 2367
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
 
-    .line 2369
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v24
@@ -269,7 +244,6 @@
 
     aget-wide v0, v2, v6
 
-    .line 2370
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v27
@@ -282,7 +256,6 @@
 
     aget-wide v0, v2, v14
 
-    .line 2371
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v29
@@ -293,7 +266,6 @@
 
     move-result-object v30
 
-    .line 2372
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v31
@@ -310,7 +282,6 @@
 
     move-result-object v34
 
-    .line 2373
     invoke-static/range {v22 .. v23}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v35
@@ -341,7 +312,6 @@
 
     move-result-object v0
 
-    .line 2368
     invoke-static {v7, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
     goto/16 :goto_9
@@ -349,7 +319,6 @@
     :catchall_0
     move-exception v0
 
-    .line 2367
     :try_start_1
     monitor-exit v4
     :try_end_1
@@ -359,11 +328,9 @@
 
     throw v0
 
-    .line 2317
     :cond_5
     iget v2, v1, Landroid/os/Message;->arg1:I
 
-    .line 2318
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->values()[Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v3
@@ -374,7 +341,6 @@
 
     const-string v3, "ActivityManager"
 
-    .line 2319
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -389,7 +355,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2321
     invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v5
@@ -400,21 +365,17 @@
 
     move-result-object v4
 
-    .line 2319
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v3, "compactSystem"
 
-    .line 2322
     invoke-static {v12, v13, v3}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
 
-    .line 2324
     :try_start_2
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->FAST_MADVISE_ENABLED:Z
 
     if-eqz v3, :cond_6
 
-    .line 2325
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -425,7 +386,6 @@
 
     goto :goto_1
 
-    .line 2327
     :cond_6
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -442,7 +402,6 @@
     :catch_0
     const-string v0, "ActivityManager"
 
-    .line 2330
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,25 +418,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2332
     :goto_1
     invoke-static {v12, v13}, Landroid/os/Trace;->traceEnd(J)V
 
     goto/16 :goto_9
 
-    .line 2104
     :cond_7
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v16
 
-    .line 2111
     iget v5, v1, Landroid/os/Message;->arg1:I
 
-    .line 2112
     iget v3, v1, Landroid/os/Message;->arg2:I
 
-    .line 2117
     iget-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v1}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcLock(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -488,7 +442,6 @@
 
     monitor-enter v1
 
-    .line 2118
     :try_start_3
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -502,7 +455,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 2122
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
@@ -511,7 +463,6 @@
 
     return-void
 
-    .line 2124
     :cond_8
     :try_start_4
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
@@ -528,29 +479,22 @@
 
     check-cast v4, Lcom/android/server/am/ProcessRecord;
 
-    .line 2125
     iget-object v2, v4, Lcom/android/server/am/ProcessRecord;->mOptRecord:Lcom/android/server/am/ProcessCachedOptimizerRecord;
 
-    .line 2126
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->isForceCompact()Z
 
     move-result v36
 
-    .line 2127
     invoke-virtual {v2, v6}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->setForceCompact(Z)V
 
-    .line 2128
     invoke-virtual {v4}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v7
 
-    .line 2129
     iget-object v8, v4, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 2130
     invoke-virtual {v2, v6}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->setHasPendingCompact(Z)V
 
-    .line 2133
     iget-object v6, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v6}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmAm(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerService;
@@ -571,7 +515,6 @@
 
     if-nez v6, :cond_9
 
-    .line 2135
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
@@ -580,44 +523,36 @@
 
     return-void
 
-    .line 2139
     :cond_9
     :try_start_5
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getReqCompactSource()Lcom/android/server/am/CachedAppOptimizer$CompactSource;
 
     move-result-object v20
 
-    .line 2140
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getReqCompactProfile()Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v6
 
-    .line 2141
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getLastCompactProfile()Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v39
 
-    .line 2142
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getLastCompactTime()J
 
     move-result-wide v40
 
-    .line 2143
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getLastOomAdjChangeReason()I
 
     move-result v9
 
-    .line 2144
     monitor-exit v1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
 
-    .line 2146
     iget-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    .line 2147
     invoke-virtual {v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getReqCompactSource()Lcom/android/server/am/CachedAppOptimizer$CompactSource;
 
     move-result-object v10
@@ -626,10 +561,8 @@
 
     move-result-object v10
 
-    .line 2148
     iget-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    .line 2149
     invoke-static {v1, v8}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$mgetPerProcessAggregatedCompactStat(Lcom/android/server/am/CachedAppOptimizer;Ljava/lang/String;)Lcom/android/server/am/CachedAppOptimizer$AggregatedProcessCompactionStats;
 
     move-result-object v1
@@ -638,14 +571,12 @@
 
     if-nez v7, :cond_a
 
-    .line 2157
     iget-wide v2, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsNoPidThrottled:J
 
     add-long v2, v2, v23
 
     iput-wide v2, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsNoPidThrottled:J
 
-    .line 2158
     iget-wide v2, v1, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsNoPidThrottled:J
 
     add-long v2, v2, v23
@@ -657,21 +588,18 @@
     :cond_a
     if-nez v36, :cond_f
 
-    .line 2163
     invoke-virtual {v0, v4}, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->shouldOomAdjThrottleCompaction(Lcom/android/server/am/ProcessRecord;)Z
 
     move-result v19
 
     if-eqz v19, :cond_b
 
-    .line 2164
     iget-wide v2, v1, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsOomAdjThrottled:J
 
     add-long v2, v2, v23
 
     iput-wide v2, v1, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsOomAdjThrottled:J
 
-    .line 2165
     iget-wide v0, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsOomAdjThrottled:J
 
     add-long v0, v0, v23
@@ -705,21 +633,18 @@
 
     move-object/from16 v6, v20
 
-    .line 2168
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->shouldTimeThrottleCompaction(Lcom/android/server/am/ProcessRecord;JLcom/android/server/am/CachedAppOptimizer$CompactProfile;Lcom/android/server/am/CachedAppOptimizer$CompactSource;)Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    .line 2170
     iget-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsTimeThrottled:J
 
     add-long v0, v0, v23
 
     iput-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsTimeThrottled:J
 
-    .line 2171
     iget-wide v0, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsTimeThrottled:J
 
     add-long v0, v0, v23
@@ -728,7 +653,6 @@
 
     return-void
 
-    .line 2174
     :cond_c
     invoke-virtual {v0, v15, v14}, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->shouldThrottleMiscCompaction(Lcom/android/server/am/ProcessRecord;I)Z
 
@@ -736,14 +660,12 @@
 
     if-eqz v1, :cond_d
 
-    .line 2175
     iget-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsMiscThrottled:J
 
     add-long v0, v0, v23
 
     iput-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsMiscThrottled:J
 
-    .line 2176
     iget-wide v0, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsMiscThrottled:J
 
     add-long v0, v0, v23
@@ -752,7 +674,6 @@
 
     return-void
 
-    .line 2179
     :cond_d
     iget-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -764,21 +685,18 @@
 
     move-result-object v1
 
-    .line 2180
     invoke-virtual {v0, v12, v7, v8, v1}, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->shouldRssThrottleCompaction(Lcom/android/server/am/CachedAppOptimizer$CompactProfile;ILjava/lang/String;[J)Z
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    .line 2181
     iget-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsRSSThrottled:J
 
     add-long v0, v0, v23
 
     iput-wide v0, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsRSSThrottled:J
 
-    .line 2182
     iget-wide v0, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mProcCompactionsRSSThrottled:J
 
     add-long v0, v0, v23
@@ -787,7 +705,6 @@
 
     return-void
 
-    .line 2185
     :cond_e
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -799,7 +716,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 2186
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,7 +742,6 @@
 
     invoke-static {v1}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 2187
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-virtual {v0, v15}, Lcom/android/server/am/CachedAppOptimizer;->delayCompactProcess(Lcom/android/server/am/ProcessRecord;)V
@@ -848,7 +763,6 @@
 
     const/4 v13, 0x0
 
-    .line 2191
     iget-object v1, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v1}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -859,23 +773,19 @@
 
     move-result-object v1
 
-    .line 2197
     :cond_10
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    .line 2198
     invoke-virtual {v2, v12}, Lcom/android/server/am/CachedAppOptimizer;->resolveCompactionProfile(Lcom/android/server/am/CachedAppOptimizer$CompactProfile;)Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v2
 
-    .line 2199
     sget-object v3, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->NONE:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     if-ne v2, v3, :cond_11
 
     return-void
 
-    .line 2209
     :cond_11
     :try_start_6
     new-instance v3, Ljava/lang/StringBuilder;
@@ -886,7 +796,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2210
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v4
@@ -909,7 +818,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2212
     invoke-virtual/range {v20 .. v20}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v4
@@ -925,14 +833,12 @@
 
     const-wide/16 v4, 0x40
 
-    .line 2209
     :try_start_7
     invoke-static {v4, v5, v3}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 2214
     :try_start_8
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -960,22 +866,18 @@
 
     invoke-static {v3}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 2216
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory()J
 
     move-result-wide v3
 
-    .line 2217
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs()J
 
     move-result-wide v5
 
-    .line 2219
     sget-boolean v18, Lcom/samsung/android/rune/CoreRune;->FAST_MADVISE_ENABLED:Z
 
     if-eqz v18, :cond_12
 
-    .line 2220
     iget-object v13, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v13}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -986,7 +888,6 @@
 
     goto :goto_2
 
-    .line 2222
     :cond_12
     iget-object v13, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -996,13 +897,11 @@
 
     invoke-interface {v13, v2, v7}, Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->performCompaction(Lcom/android/server/am/CachedAppOptimizer$CompactProfile;I)V
 
-    .line 2225
     :goto_2
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs()J
 
     move-result-wide v18
 
-    .line 2226
     iget-object v13, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v13}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcessDependencies(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
@@ -1020,7 +919,6 @@
 
     move-object/from16 v43, v8
 
-    .line 2227
     :try_start_9
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -1030,14 +928,12 @@
 
     sub-long v18, v18, v5
 
-    .line 2230
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory()J
 
     move-result-wide v5
 
     const/16 v25, 0x0
 
-    .line 2231
     aget-wide v26, v13, v25
 
     aget-wide v28, v1, v25
@@ -1046,7 +942,6 @@
 
     const/16 v25, 0x1
 
-    .line 2232
     aget-wide v26, v13, v25
 
     aget-wide v28, v1, v25
@@ -1055,7 +950,6 @@
 
     const/16 v25, 0x2
 
-    .line 2233
     aget-wide v26, v13, v25
 
     aget-wide v28, v1, v25
@@ -1066,7 +960,6 @@
 
     const/16 v25, 0x3
 
-    .line 2234
     aget-wide v26, v13, v25
 
     aget-wide v28, v1, v25
@@ -1075,7 +968,6 @@
 
     move-object/from16 v53, v12
 
-    .line 2236
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1110,7 +1002,6 @@
 
     invoke-static {v12}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;)V
 
-    .line 2238
     sget-object v12, Lcom/android/server/am/CachedAppOptimizer$5;->$SwitchMap$com$android$server$am$CachedAppOptimizer$CompactProfile:[I
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getReqCompactProfile()Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
@@ -1135,7 +1026,6 @@
 
     const-string v1, "Compaction: Unknown requested action"
 
-    .line 2279
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
@@ -1143,12 +1033,10 @@
 
     const-wide/16 v1, 0x40
 
-    .line 2299
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
     return-void
 
-    .line 2244
     :cond_13
     :try_start_a
     iget-wide v12, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
@@ -1157,7 +1045,6 @@
 
     iput-wide v12, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
 
-    .line 2245
     iget-wide v12, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mFullCompactPerformed:J
 
     add-long v12, v12, v23
@@ -1172,12 +1059,10 @@
 
     const-wide/32 v27, 0xf4240
 
-    .line 2249
     div-long v55, v18, v27
 
     const/4 v14, 0x2
 
-    .line 2250
     aget-wide v57, v1, v14
 
     const-wide/16 v18, 0x0
@@ -1228,7 +1113,6 @@
 
     move-wide/from16 v32, v55
 
-    .line 2259
     invoke-virtual/range {v23 .. v33}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->addMemStats(JJJJJ)V
 
     move-object/from16 v23, v10
@@ -1243,10 +1127,8 @@
 
     move-wide/from16 v32, v55
 
-    .line 2261
     invoke-virtual/range {v23 .. v33}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->addMemStats(JJJJJ)V
 
-    .line 2263
     new-instance v10, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;
 
     iget v11, v15, Lcom/android/server/am/ProcessRecord;->uid:I
@@ -1277,7 +1159,6 @@
 
     invoke-direct/range {v18 .. v35}, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;-><init>([JLcom/android/server/am/CachedAppOptimizer$CompactSource;Ljava/lang/String;JJJJJIIII)V
 
-    .line 2267
     iget-object v9, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object v9, v9, Lcom/android/server/am/CachedAppOptimizer;->mLastCompactionStats:Ljava/util/LinkedHashMap;
@@ -1288,7 +1169,6 @@
 
     invoke-virtual {v9, v11}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2268
     iget-object v9, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object v9, v9, Lcom/android/server/am/CachedAppOptimizer;->mLastCompactionStats:Ljava/util/LinkedHashMap;
@@ -1299,7 +1179,6 @@
 
     invoke-virtual {v9, v11, v10}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2269
     iget-object v9, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object v9, v9, Lcom/android/server/am/CachedAppOptimizer;->mCompactionStatsHistory:Ljava/util/LinkedList;
@@ -1308,12 +1187,10 @@
 
     if-nez v36, :cond_18
 
-    .line 2272
     invoke-virtual {v10}, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->sendStat()V
 
     goto :goto_6
 
-    .line 2240
     :cond_17
     iget-wide v12, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactPerformed:J
 
@@ -1321,7 +1198,6 @@
 
     iput-wide v12, v10, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactPerformed:J
 
-    .line 2241
     iget-wide v9, v11, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;->mSomeCompactPerformed:J
 
     add-long v9, v9, v23
@@ -1334,7 +1210,6 @@
 
     new-array v9, v9, [Ljava/lang/Object;
 
-    .line 2282
     invoke-static/range {v44 .. v44}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -1347,7 +1222,6 @@
 
     aput-object v43, v9, v10
 
-    .line 2283
     invoke-virtual/range {v54 .. v54}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v10
@@ -1370,7 +1244,6 @@
 
     aget-wide v10, v1, v10
 
-    .line 2284
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v10
@@ -1395,7 +1268,6 @@
 
     aget-wide v10, v1, v10
 
-    .line 2285
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -1420,7 +1292,6 @@
 
     aput-object v1, v9, v10
 
-    .line 2286
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -1453,7 +1324,6 @@
 
     aput-object v1, v9, v7
 
-    .line 2287
     invoke-static/range {v40 .. v41}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -1488,7 +1358,6 @@
 
     sub-long/2addr v3, v5
 
-    .line 2288
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -1499,10 +1368,8 @@
 
     const/16 v1, 0x756f
 
-    .line 2282
     invoke-static {v1, v9}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 2289
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-static {v0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$fgetmProcLock(Lcom/android/server/am/CachedAppOptimizer;)Lcom/android/server/am/ActivityManagerGlobalLock;
@@ -1520,16 +1387,13 @@
 
     move-wide/from16 v2, v49
 
-    .line 2290
     :try_start_b
     invoke-virtual {v0, v2, v3}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->setLastCompactTime(J)V
 
     move-object/from16 v2, v53
 
-    .line 2291
     invoke-virtual {v0, v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->setLastCompactProfile(Lcom/android/server/am/CachedAppOptimizer$CompactProfile;)V
 
-    .line 2292
     monitor-exit v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
@@ -1588,7 +1452,6 @@
     :try_start_f
     const-string v1, "ActivityManager"
 
-    .line 2295
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1605,7 +1468,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2297
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -1616,14 +1478,12 @@
 
     move-result-object v0
 
-    .line 2295
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_3
 
     const-wide/16 v1, 0x40
 
-    .line 2299
     :goto_8
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
@@ -1634,13 +1494,11 @@
     :goto_a
     invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
 
-    .line 2300
     throw v0
 
     :catchall_4
     move-exception v0
 
-    .line 2144
     :try_start_10
     monitor-exit v1
     :try_end_10
@@ -1654,10 +1512,8 @@
 .method public final shouldOomAdjThrottleCompaction(Lcom/android/server/am/ProcessRecord;)Z
     .locals 0
 
-    .line 1975
     iget-object p0, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 1979
     iget-object p0, p1, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
     invoke-virtual {p0}, Lcom/android/server/am/ProcessStateRecord;->getSetAdj()I
@@ -1683,10 +1539,8 @@
 
     const/4 p3, 0x2
 
-    .line 2058
     aget-wide v0, p4, p3
 
-    .line 2059
     iget-object v2, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object v2, v2, Lcom/android/server/am/CachedAppOptimizer;->mLastCompactionStats:Ljava/util/LinkedHashMap;
@@ -1703,7 +1557,6 @@
 
     const/4 v2, 0x0
 
-    .line 2061
     aget-wide v3, p4, v2
 
     const-wide/16 v5, 0x0
@@ -1736,13 +1589,11 @@
 
     return v7
 
-    .line 2071
     :cond_0
     sget-object v3, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->FULL:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     if-ne p1, v3, :cond_2
 
-    .line 2072
     iget-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v8, p1, Lcom/android/server/am/CachedAppOptimizer;->mFullAnonRssThrottleKb:J
@@ -1764,7 +1615,6 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 2081
     iget-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v0, p1, Lcom/android/server/am/CachedAppOptimizer;->mFullDeltaRssThrottleKb:J
@@ -1773,12 +1623,10 @@
 
     if-lez p1, :cond_2
 
-    .line 2082
     invoke-virtual {p2}, Lcom/android/server/am/CachedAppOptimizer$SingleCompactionStats;->getRssAfterCompaction()[J
 
     move-result-object p1
 
-    .line 2083
     aget-wide v0, p4, v7
 
     aget-wide v5, p1, v7
@@ -1795,7 +1643,6 @@
 
     sub-long/2addr v5, p2
 
-    .line 2084
     invoke-static {v5, v6}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide p2
@@ -1808,14 +1655,12 @@
 
     sub-long/2addr p2, v3
 
-    .line 2085
     invoke-static {p2, p3}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide p1
 
     add-long/2addr v0, p1
 
-    .line 2086
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFullDeltaRssThrottleKb:J
@@ -1833,7 +1678,6 @@
 .method public final shouldThrottleMiscCompaction(Lcom/android/server/am/ProcessRecord;I)Z
     .locals 0
 
-    .line 2043
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mProcStateThrottle:Ljava/util/Set;
@@ -1861,15 +1705,12 @@
 .method public final shouldTimeThrottleCompaction(Lcom/android/server/am/ProcessRecord;JLcom/android/server/am/CachedAppOptimizer$CompactProfile;Lcom/android/server/am/CachedAppOptimizer$CompactSource;)Z
     .locals 8
 
-    .line 1993
     iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->mOptRecord:Lcom/android/server/am/ProcessCachedOptimizerRecord;
 
-    .line 1996
     invoke-virtual {p1}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getLastCompactProfile()Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v0
 
-    .line 1997
     invoke-virtual {p1}, Lcom/android/server/am/ProcessCachedOptimizerRecord;->getLastCompactTime()J
 
     move-result-wide v1
@@ -1880,12 +1721,10 @@
 
     if-eqz p1, :cond_5
 
-    .line 2006
     sget-object p1, Lcom/android/server/am/CachedAppOptimizer$CompactSource;->APP:Lcom/android/server/am/CachedAppOptimizer$CompactSource;
 
     if-ne p5, p1, :cond_5
 
-    .line 2007
     sget-object p1, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->SOME:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     const/4 p5, 0x1
@@ -1896,7 +1735,6 @@
 
     sub-long v3, p2, v1
 
-    .line 2008
     iget-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v5, p1, Lcom/android/server/am/CachedAppOptimizer;->mCompactThrottleSomeSome:J
@@ -1923,7 +1761,6 @@
     :cond_1
     return p5
 
-    .line 2021
     :cond_2
     sget-object v3, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->FULL:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
@@ -1933,7 +1770,6 @@
 
     sub-long v4, p2, v1
 
-    .line 2022
     iget-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v6, p1, Lcom/android/server/am/CachedAppOptimizer;->mCompactThrottleFullSome:J

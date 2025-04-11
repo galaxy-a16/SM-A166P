@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/BaseErrorDialog;)V
     .locals 0
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/am/BaseErrorDialog$1;->this$0:Lcom/android/server/am/BaseErrorDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
-    .line 62
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -37,7 +35,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/am/BaseErrorDialog$1;->this$0:Lcom/android/server/am/BaseErrorDialog;
 
     invoke-virtual {p0}, Lcom/android/server/am/BaseErrorDialog;->closeDialog()V

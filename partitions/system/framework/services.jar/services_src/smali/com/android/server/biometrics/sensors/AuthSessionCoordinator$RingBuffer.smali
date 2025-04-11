@@ -17,12 +17,10 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-gtz p1, :cond_0
 
-    .line 236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,7 +39,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_0
     new-array v0, p1, [Ljava/lang/String;
 
@@ -49,13 +46,10 @@
 
     const/4 v0, 0x0
 
-    .line 239
     iput v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mCurr:I
 
-    .line 240
     iput p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mSize:I
 
-    .line 241
     iput v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mApiCallNumber:I
 
     return-void
@@ -66,7 +60,6 @@
 .method public addApiCall(Ljava/lang/String;)V
     .locals 2
 
-    .line 245
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mApiCalls:[Ljava/lang/String;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mCurr:I
@@ -75,17 +68,14 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 246
     iput v1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mCurr:I
 
-    .line 247
     iget p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mSize:I
 
     rem-int/2addr v1, p1
 
     iput v1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mCurr:I
 
-    .line 248
     iget p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mApiCallNumber:I
 
     add-int/lit8 p1, p1, 0x1
@@ -98,7 +88,6 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .line 254
     iget v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mApiCallNumber:I
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mSize:I
@@ -117,27 +106,23 @@
     :goto_0
     const-string v1, ""
 
-    .line 255
     :goto_1
     iget v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mSize:I
 
     if-ge v2, v3, :cond_2
 
-    .line 256
     iget v4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mCurr:I
 
     add-int/2addr v4, v2
 
     rem-int/2addr v4, v3
 
-    .line 257
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->mApiCalls:[Ljava/lang/String;
 
     aget-object v3, v3, v4
 
     if-eqz v3, :cond_1
 
-    .line 258
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

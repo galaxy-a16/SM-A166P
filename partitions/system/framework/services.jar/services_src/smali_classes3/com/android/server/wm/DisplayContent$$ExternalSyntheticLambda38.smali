@@ -22,7 +22,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/RecentsAnimationController;Ljava/util/Set;Ljava/util/Set;Landroid/graphics/Matrix;[F)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda38;->f$0:Lcom/android/server/wm/RecentsAnimationController;
@@ -43,7 +42,6 @@
 .method public final apply(Ljava/lang/Object;)Z
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda38;->f$0:Lcom/android/server/wm/RecentsAnimationController;
 
     iget-object v1, p0, Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda38;->f$1:Ljava/util/Set;

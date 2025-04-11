@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$MGdCQP8bFxXzF2rnBsRzPmnA-RA(Lcom/android/server/job/controllers/QuotaController$StandbyTracker;IILjava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->lambda$onAppIdleStateChanged$0(IILjava/lang/String;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/QuotaController;)V
     .locals 0
 
-    .line 2472
     iput-object p1, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-direct {p0}, Lcom/android/server/usage/AppStandbyInternal$AppIdleStateChangeListener;-><init>()V
@@ -31,12 +29,10 @@
 .method private synthetic lambda$onAppIdleStateChanged$0(IILjava/lang/String;)V
     .locals 0
 
-    .line 2479
     invoke-static {p1}, Lcom/android/server/job/JobSchedulerService;->standbyBucketToBucketIndex(I)I
 
     move-result p1
 
-    .line 2480
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-virtual {p0, p2, p3, p1}, Lcom/android/server/job/controllers/QuotaController;->updateStandbyBucket(ILjava/lang/String;I)V
@@ -49,7 +45,6 @@
 .method public onAppIdleStateChanged(Ljava/lang/String;IZII)V
     .locals 0
 
-    .line 2478
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p3
@@ -66,14 +61,12 @@
 .method public triggerTemporaryQuotaBump(Ljava/lang/String;I)V
     .locals 5
 
-    .line 2486
     iget-object v0, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2487
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
@@ -89,7 +82,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2488
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -98,7 +90,6 @@
 
     goto :goto_0
 
-    .line 2492
     :cond_0
     new-instance v2, Lcom/android/server/job/controllers/QuotaController$QuotaBump;
 
@@ -112,17 +103,14 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2493
     iget-object v1, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-virtual {v1, p2, p1}, Lcom/android/server/job/controllers/QuotaController;->invalidateAllExecutionStatsLocked(ILjava/lang/String;)V
 
-    .line 2494
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2496
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$StandbyTracker;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p0}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmHandler(Lcom/android/server/job/controllers/QuotaController;)Lcom/android/server/job/controllers/QuotaController$QcHandler;
@@ -141,7 +129,6 @@
 
     return-void
 
-    .line 2490
     :cond_1
     :goto_0
     :try_start_1
@@ -152,7 +139,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2494
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

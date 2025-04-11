@@ -24,7 +24,6 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 46
     invoke-static {}, Lcom/android/internal/os/Zygote;->nativeSupportsMemoryTagging()Z
 
     move-result p1
@@ -38,20 +37,17 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 44
     :goto_0
     invoke-static {p0, p1}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(II)Landroid/util/StatsEvent;
 
     move-result-object p0
 
-    .line 43
     invoke-interface {p2, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 40
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

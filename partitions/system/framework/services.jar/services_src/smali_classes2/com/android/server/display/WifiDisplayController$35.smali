@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayController;)V
     .locals 0
 
-    .line 2434
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,7 +86,6 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 2547
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,13 +104,11 @@
 
     goto/16 :goto_3
 
-    .line 2488
     :cond_0
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 2489
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +125,6 @@
 
     invoke-static {v5, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2491
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const/16 v1, 0x8
@@ -141,7 +136,6 @@
     :cond_1
     invoke-static {p2, v8, v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$msendRemoteDisplayStateChangeEvent(Lcom/android/server/display/WifiDisplayController;II)V
 
-    .line 2493
     new-instance p2, Landroid/content/Intent;
 
     const-string v1, "com.samsung.intent.action.ROTATION_CHANGED"
@@ -150,10 +144,8 @@
 
     const-string/jumbo v1, "rotation"
 
-    .line 2494
     invoke-virtual {p2, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2495
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {v1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -170,7 +162,6 @@
 
     goto :goto_0
 
-    .line 2500
     :cond_2
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -182,7 +173,6 @@
 
     goto/16 :goto_3
 
-    .line 2498
     :cond_3
     :goto_0
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
@@ -195,14 +185,12 @@
 
     goto/16 :goto_3
 
-    .line 2505
     :cond_4
     :try_start_0
     new-instance p1, Lorg/json/JSONObject;
 
     invoke-direct {p1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2506
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string v1, "UibcAvailable"
@@ -215,12 +203,10 @@
 
     const-string p2, "UibcSamsungMobile"
 
-    .line 2507
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
 
-    .line 2508
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +235,6 @@
 
     invoke-static {v5, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2510
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmIsUibcAvailable(Lcom/android/server/display/WifiDisplayController;)Z
@@ -258,7 +243,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 2511
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmWfdUibcManager(Lcom/android/server/display/WifiDisplayController;)Lcom/samsung/android/wfd/WFDUibcManager;
@@ -267,7 +251,6 @@
 
     invoke-virtual {p2, v0}, Lcom/samsung/android/wfd/WFDUibcManager;->start(Z)Z
 
-    .line 2512
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmWfdUibcManager(Lcom/android/server/display/WifiDisplayController;)Lcom/samsung/android/wfd/WFDUibcManager;
@@ -278,7 +261,6 @@
 
     goto/16 :goto_3
 
-    .line 2514
     :cond_5
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -295,7 +277,6 @@
     :catch_0
     move-exception p0
 
-    .line 2517
     invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -304,7 +285,6 @@
 
     goto/16 :goto_3
 
-    .line 2541
     :cond_6
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -322,7 +302,6 @@
 
     invoke-static {v5, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2542
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmRemoteDisplayConnected(Lcom/android/server/display/WifiDisplayController;)Z
@@ -331,7 +310,6 @@
 
     if-eqz p1, :cond_11
 
-    .line 2543
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmAdvertisedDisplay(Lcom/android/server/display/WifiDisplayController;)Landroid/hardware/display/WifiDisplay;
@@ -349,10 +327,8 @@
     :cond_7
     const-string p1, "    onNotify received : NOTIFY_SWTICH_TCP_FOR_DEMO"
 
-    .line 2534
     invoke-static {v5, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2535
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmTransportMode(Lcom/android/server/display/WifiDisplayController;)I
@@ -361,12 +337,10 @@
 
     if-eq p1, v4, :cond_11
 
-    .line 2536
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p1, v4}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fputmTransportMode(Lcom/android/server/display/WifiDisplayController;I)V
 
-    .line 2537
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string/jumbo p1, "tcp"
@@ -377,40 +351,34 @@
 
     goto/16 :goto_3
 
-    .line 2466
     :cond_8
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 2468
     :try_start_1
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2469
     invoke-virtual {v4, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, v3, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2470
     invoke-virtual {v4, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2471
     invoke-virtual {v4, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2472
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result p2
@@ -424,14 +392,12 @@
     :catch_1
     move-exception p2
 
-    .line 2474
     invoke-virtual {p2}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-static {v5, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2476
     :goto_1
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -439,19 +405,16 @@
 
     const-string p0, "    onNotify received :  NOTIFY_DISPLAY_VOLUME_STATUS"
 
-    .line 2477
     invoke-static {v5, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_3
 
-    .line 2457
     :cond_9
     :try_start_2
     new-instance p1, Lorg/json/JSONObject;
 
     invoke-direct {p1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2458
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string v0, "isSupportDisplayVolumeControl"
@@ -462,7 +425,6 @@
 
     invoke-static {p2, p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fputmIsDisplayVolumeControlSupported(Lcom/android/server/display/WifiDisplayController;Z)V
 
-    .line 2459
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,7 +447,6 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2460
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$msendWifiDisplayVolumeSupportChangedBroadcast(Lcom/android/server/display/WifiDisplayController;)V
@@ -497,7 +458,6 @@
     :catch_2
     move-exception p0
 
-    .line 2462
     invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -509,24 +469,20 @@
     :cond_a
     const-string p1, "    onNotify received : NOTIFY_SCREEN_WAKE_UP"
 
-    .line 2530
     invoke-static {v5, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2531
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$mwakeUpScreen(Lcom/android/server/display/WifiDisplayController;)V
 
     goto/16 :goto_3
 
-    .line 2522
     :cond_b
     :try_start_3
     new-instance p1, Lorg/json/JSONObject;
 
     invoke-direct {p1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2523
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string v0, "isSupportInitiatedMirroring"
@@ -537,7 +493,6 @@
 
     invoke-static {p2, p1}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fputmIsSupportInitiateMirroring(Lcom/android/server/display/WifiDisplayController;Z)V
 
-    .line 2524
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +522,6 @@
     :catch_3
     move-exception p0
 
-    .line 2526
     invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -576,20 +530,17 @@
 
     goto/16 :goto_3
 
-    .line 2447
     :cond_c
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 2448
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     rem-int/lit8 v0, p1, 0x2
 
     invoke-static {p2, v0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fputmTransportMode(Lcom/android/server/display/WifiDisplayController;I)V
 
-    .line 2449
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +575,6 @@
 
     if-gt p1, v4, :cond_11
 
-    .line 2452
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$msendBroadcastTransportMode(Lcom/android/server/display/WifiDisplayController;)V
@@ -634,10 +584,8 @@
     :cond_e
     const-string p1, "    onNotify received : NOTIFY_WFD_ENGINE_PAUSE"
 
-    .line 2443
     invoke-static {v5, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2444
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -659,10 +607,8 @@
     :cond_f
     const-string p1, "    onNotify received : NOTIFY_WFD_ENGINE_RESUME"
 
-    .line 2439
     invoke-static {v5, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2440
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-static {p0}, Lcom/android/server/display/WifiDisplayController;->-$$Nest$fgetmContext(Lcom/android/server/display/WifiDisplayController;)Landroid/content/Context;
@@ -681,14 +627,12 @@
 
     goto :goto_3
 
-    .line 2481
     :cond_10
     :try_start_4
     new-instance p1, Lorg/json/JSONObject;
 
     invoke-direct {p1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2482
     iget-object p0, p0, Lcom/android/server/display/WifiDisplayController$35;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const-string/jumbo p2, "renameAvailable"
@@ -706,7 +650,6 @@
     :catch_4
     move-exception p0
 
-    .line 2484
     invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0

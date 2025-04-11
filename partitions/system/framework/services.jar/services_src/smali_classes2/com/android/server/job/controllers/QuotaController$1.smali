@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/job/controllers/QuotaController;)V
     .locals 0
 
-    .line 378
     iput-object p1, p0, Lcom/android/server/job/controllers/QuotaController$1;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAlarm()V
     .locals 1
 
-    .line 381
     iget-object p0, p0, Lcom/android/server/job/controllers/QuotaController$1;->this$0:Lcom/android/server/job/controllers/QuotaController;
 
     invoke-static {p0}, Lcom/android/server/job/controllers/QuotaController;->-$$Nest$fgetmHandler(Lcom/android/server/job/controllers/QuotaController;)Lcom/android/server/job/controllers/QuotaController$QcHandler;

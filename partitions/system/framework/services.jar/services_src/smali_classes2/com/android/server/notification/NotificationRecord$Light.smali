@@ -15,16 +15,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1734
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1735
     iput p1, p0, Lcom/android/server/notification/NotificationRecord$Light;->color:I
 
-    .line 1736
     iput p2, p0, Lcom/android/server/notification/NotificationRecord$Light;->onMs:I
 
-    .line 1737
     iput p3, p0, Lcom/android/server/notification/NotificationRecord$Light;->offMs:I
 
     return-void
@@ -46,7 +42,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 1743
     const-class v2, Lcom/android/server/notification/NotificationRecord$Light;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -57,11 +52,9 @@
 
     goto :goto_1
 
-    .line 1745
     :cond_1
     check-cast p1, Lcom/android/server/notification/NotificationRecord$Light;
 
-    .line 1747
     iget v2, p0, Lcom/android/server/notification/NotificationRecord$Light;->color:I
 
     iget v3, p1, Lcom/android/server/notification/NotificationRecord$Light;->color:I
@@ -70,7 +63,6 @@
 
     return v1
 
-    .line 1748
     :cond_2
     iget v2, p0, Lcom/android/server/notification/NotificationRecord$Light;->onMs:I
 
@@ -80,7 +72,6 @@
 
     return v1
 
-    .line 1749
     :cond_3
     iget p0, p0, Lcom/android/server/notification/NotificationRecord$Light;->offMs:I
 
@@ -104,19 +95,16 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1755
     iget v0, p0, Lcom/android/server/notification/NotificationRecord$Light;->color:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 1756
     iget v1, p0, Lcom/android/server/notification/NotificationRecord$Light;->onMs:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 1757
     iget p0, p0, Lcom/android/server/notification/NotificationRecord$Light;->offMs:I
 
     add-int/2addr v0, p0
@@ -127,7 +115,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1763
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

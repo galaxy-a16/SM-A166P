@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$9VESZJw_RieNqPiQqgeZhBgXR5k(Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;->lambda$onFinished$0()V
 
     return-void
@@ -22,15 +21,12 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;Landroid/content/IntentSender;)V
     .locals 0
 
-    .line 663
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-direct {p0}, Landroid/os/IProgressListener$Stub;-><init>()V
 
-    .line 664
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 665
     iput-object p2, p0, Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;->mTarget:Landroid/content/IntentSender;
 
     return-void
@@ -39,7 +35,6 @@
 .method private synthetic lambda$onFinished$0()V
     .locals 7
 
-    .line 678
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;->this$0:Lcom/android/server/pm/UserManagerService;
 
@@ -70,7 +65,6 @@
 
     const-string v1, "Failed to start the target in the callback"
 
-    .line 680
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -82,7 +76,6 @@
 .method public onFinished(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 676
     iget-object p1, p0, Lcom/android/server/pm/UserManagerService$DisableQuietModeUserUnlockedCallback;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-static {p1}, Lcom/android/server/pm/UserManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/pm/UserManagerService;)Landroid/os/Handler;
@@ -101,13 +94,11 @@
 .method public onProgress(IILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onStarted(ILandroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

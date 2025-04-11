@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameManagerService;Landroid/app/IGameModeListener;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 1477
     iput-object p1, p0, Lcom/android/server/app/GameManagerService$1;->this$0:Lcom/android/server/app/GameManagerService;
 
     iput-object p2, p0, Lcom/android/server/app/GameManagerService$1;->val$listener:Landroid/app/IGameModeListener;
@@ -35,14 +34,12 @@
 .method public binderDied()V
     .locals 2
 
-    .line 1480
     iget-object v0, p0, Lcom/android/server/app/GameManagerService$1;->this$0:Lcom/android/server/app/GameManagerService;
 
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$1;->val$listener:Landroid/app/IGameModeListener;
 
     invoke-static {v0, v1}, Lcom/android/server/app/GameManagerService;->-$$Nest$mremoveGameModeListenerUnchecked(Lcom/android/server/app/GameManagerService;Landroid/app/IGameModeListener;)V
 
-    .line 1481
     iget-object v0, p0, Lcom/android/server/app/GameManagerService$1;->val$listenerBinder:Landroid/os/IBinder;
 
     const/4 v1, 0x0

@@ -48,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 24
     new-instance v0, Landroid/net/ResolverParamsParcel$1;
 
     invoke-direct {v0}, Landroid/net/ResolverParamsParcel$1;-><init>()V
@@ -61,48 +60,36 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 8
     iput v0, p0, Landroid/net/ResolverParamsParcel;->netId:I
 
-    .line 9
     iput v0, p0, Landroid/net/ResolverParamsParcel;->sampleValiditySeconds:I
 
-    .line 10
     iput v0, p0, Landroid/net/ResolverParamsParcel;->successThreshold:I
 
-    .line 11
     iput v0, p0, Landroid/net/ResolverParamsParcel;->minSamples:I
 
-    .line 12
     iput v0, p0, Landroid/net/ResolverParamsParcel;->maxSamples:I
 
-    .line 13
     iput v0, p0, Landroid/net/ResolverParamsParcel;->baseTimeoutMsec:I
 
-    .line 14
     iput v0, p0, Landroid/net/ResolverParamsParcel;->retryCount:I
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 19
     iput-object v1, p0, Landroid/net/ResolverParamsParcel;->tlsFingerprints:[Ljava/lang/String;
 
     const-string v1, ""
 
-    .line 20
     iput-object v1, p0, Landroid/net/ResolverParamsParcel;->caCertificate:Ljava/lang/String;
 
-    .line 21
     iput v0, p0, Landroid/net/ResolverParamsParcel;->tlsConnectTimeoutMs:I
 
     new-array v0, v0, [I
 
-    .line 23
     iput-object v0, p0, Landroid/net/ResolverParamsParcel;->transportTypes:[I
 
     return-void
@@ -117,13 +104,11 @@
 
     return p0
 
-    .line 114
     :cond_0
     instance-of v0, p1, Landroid/os/Parcelable;
 
     if-eqz v0, :cond_1
 
-    .line 115
     check-cast p1, Landroid/os/Parcelable;
 
     invoke-interface {p1}, Landroid/os/Parcelable;->describeContents()I
@@ -139,7 +124,6 @@
 .method public describeContents()I
     .locals 1
 
-    .line 109
     iget-object v0, p0, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
 
     invoke-direct {p0, v0}, Landroid/net/ResolverParamsParcel;->describeContents(Ljava/lang/Object;)I
@@ -154,12 +138,10 @@
 .method public final readFromParcel(Landroid/os/Parcel;)V
     .locals 5
 
-    .line 63
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    .line 64
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -172,7 +154,6 @@
 
     if-lt v1, v2, :cond_21
 
-    .line 67
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -191,12 +172,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 103
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 101
     :cond_0
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -204,7 +183,6 @@
 
     throw p0
 
-    .line 68
     :cond_1
     :try_start_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -213,7 +191,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->netId:I
 
-    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -230,7 +207,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_2
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -238,7 +214,6 @@
 
     throw p0
 
-    .line 70
     :cond_3
     :try_start_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -247,7 +222,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->sampleValiditySeconds:I
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -264,7 +238,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_4
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -272,7 +245,6 @@
 
     throw p0
 
-    .line 72
     :cond_5
     :try_start_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -281,7 +253,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->successThreshold:I
 
-    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -298,7 +269,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_6
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -306,7 +276,6 @@
 
     throw p0
 
-    .line 74
     :cond_7
     :try_start_4
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -315,7 +284,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->minSamples:I
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -332,7 +300,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_8
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -340,7 +307,6 @@
 
     throw p0
 
-    .line 76
     :cond_9
     :try_start_5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -349,7 +315,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->maxSamples:I
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -366,7 +331,6 @@
 
     goto :goto_0
 
-    .line 101
     :cond_a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -374,7 +338,6 @@
 
     throw p0
 
-    .line 78
     :cond_b
     :try_start_6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -383,7 +346,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->baseTimeoutMsec:I
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -400,7 +362,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_c
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -408,7 +369,6 @@
 
     throw p0
 
-    .line 80
     :cond_d
     :try_start_7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -417,7 +377,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->retryCount:I
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -434,7 +393,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_e
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -442,7 +400,6 @@
 
     throw p0
 
-    .line 82
     :cond_f
     :try_start_8
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
@@ -451,7 +408,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->servers:[Ljava/lang/String;
 
-    .line 83
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -468,7 +424,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_10
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -476,7 +431,6 @@
 
     throw p0
 
-    .line 84
     :cond_11
     :try_start_9
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
@@ -485,7 +439,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->domains:[Ljava/lang/String;
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -502,7 +455,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_12
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -510,7 +462,6 @@
 
     throw p0
 
-    .line 86
     :cond_13
     :try_start_a
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -519,7 +470,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->tlsName:Ljava/lang/String;
 
-    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -536,7 +486,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_14
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -544,7 +493,6 @@
 
     throw p0
 
-    .line 88
     :cond_15
     :try_start_b
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
@@ -553,7 +501,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->tlsServers:[Ljava/lang/String;
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -570,7 +517,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_16
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -578,7 +524,6 @@
 
     throw p0
 
-    .line 90
     :cond_17
     :try_start_c
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
@@ -587,7 +532,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->tlsFingerprints:[Ljava/lang/String;
 
-    .line 91
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -604,7 +548,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_18
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -612,7 +555,6 @@
 
     throw p0
 
-    .line 92
     :cond_19
     :try_start_d
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -621,7 +563,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->caCertificate:Ljava/lang/String;
 
-    .line 93
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -638,7 +579,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_1a
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -646,7 +586,6 @@
 
     throw p0
 
-    .line 94
     :cond_1b
     :try_start_e
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -655,7 +594,6 @@
 
     iput v2, p0, Landroid/net/ResolverParamsParcel;->tlsConnectTimeoutMs:I
 
-    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -672,7 +610,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_1c
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -680,7 +617,6 @@
 
     throw p0
 
-    .line 96
     :cond_1d
     :try_start_f
     sget-object v2, Landroid/net/ResolverOptionsParcel;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -693,7 +629,6 @@
 
     iput-object v2, p0, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
 
-    .line 97
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v2
@@ -710,7 +645,6 @@
 
     goto/16 :goto_0
 
-    .line 101
     :cond_1e
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -718,7 +652,6 @@
 
     throw p0
 
-    .line 98
     :cond_1f
     :try_start_10
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
@@ -735,12 +668,10 @@
 
     add-int/2addr v0, v1
 
-    .line 103
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void
 
-    .line 101
     :cond_20
     new-instance p0, Landroid/os/BadParcelableException;
 
@@ -753,7 +684,6 @@
 
     goto :goto_1
 
-    .line 66
     :cond_21
     :try_start_11
     new-instance p0, Landroid/os/BadParcelableException;
@@ -771,7 +701,6 @@
 
     if-le v0, v4, :cond_22
 
-    .line 101
     new-instance p0, Landroid/os/BadParcelableException;
 
     invoke-direct {p0, v3}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
@@ -781,120 +710,96 @@
     :cond_22
     add-int/2addr v0, v1
 
-    .line 103
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 104
     throw p0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 38
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 39
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 40
     iget v1, p0, Landroid/net/ResolverParamsParcel;->netId:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 41
     iget v1, p0, Landroid/net/ResolverParamsParcel;->sampleValiditySeconds:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 42
     iget v1, p0, Landroid/net/ResolverParamsParcel;->successThreshold:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 43
     iget v1, p0, Landroid/net/ResolverParamsParcel;->minSamples:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 44
     iget v1, p0, Landroid/net/ResolverParamsParcel;->maxSamples:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 45
     iget v1, p0, Landroid/net/ResolverParamsParcel;->baseTimeoutMsec:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 46
     iget v1, p0, Landroid/net/ResolverParamsParcel;->retryCount:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 47
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->servers:[Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 48
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->domains:[Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 49
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->tlsName:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 50
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->tlsServers:[Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 51
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->tlsFingerprints:[Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 52
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->caCertificate:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 53
     iget v1, p0, Landroid/net/ResolverParamsParcel;->tlsConnectTimeoutMs:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 54
     iget-object v1, p0, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
 
     invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
-    .line 55
     iget-object p0, p0, Landroid/net/ResolverParamsParcel;->transportTypes:[I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result p0
 
-    .line 57
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     sub-int p2, p0, v0
 
-    .line 58
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->setDataPosition(I)V
 
     return-void

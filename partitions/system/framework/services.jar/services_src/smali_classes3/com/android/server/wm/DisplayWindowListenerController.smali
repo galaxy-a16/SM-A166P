@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$MjweUNs2a4e3vbdSGHMpGMzdHTM(Landroid/util/IntArray;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/wm/DisplayWindowListenerController;->lambda$registerListener$0(Landroid/util/IntArray;Lcom/android/server/wm/DisplayContent;)V
 
     return-void
@@ -22,17 +21,14 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
-    .line 39
     iput-object p1, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     return-void
@@ -41,7 +37,6 @@
 .method public static synthetic lambda$registerListener$0(Landroid/util/IntArray;Lcom/android/server/wm/DisplayContent;)V
     .locals 0
 
-    .line 47
     iget p1, p1, Lcom/android/server/wm/DisplayContent;->mDisplayId:I
 
     invoke-virtual {p0, p1}, Landroid/util/IntArray;->add(I)V
@@ -54,7 +49,6 @@
 .method public dispatchDisplayAdded(Lcom/android/server/wm/DisplayContent;)V
     .locals 4
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -66,7 +60,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 61
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -87,7 +80,6 @@
 
     goto :goto_0
 
-    .line 65
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -105,7 +97,6 @@
 
     move v2, v1
 
-    .line 71
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
@@ -117,7 +108,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 72
     invoke-virtual {p1}, Lcom/android/server/wm/WindowContainer;->getParent()Lcom/android/server/wm/WindowContainer;
 
     move-result-object v3
@@ -140,7 +130,6 @@
 
     return-void
 
-    .line 79
     :cond_2
     iget-object v1, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -151,7 +140,6 @@
     :goto_1
     if-ge v0, v1, :cond_3
 
-    .line 82
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -161,12 +149,10 @@
 
     check-cast v2, Landroid/view/IDisplayWindowListener;
 
-    .line 83
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v3
 
-    .line 82
     invoke-interface {v2, v3, p2}, Landroid/view/IDisplayWindowListener;->onDisplayConfigurationChanged(ILandroid/content/res/Configuration;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -176,7 +162,6 @@
 
     goto :goto_1
 
-    .line 87
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -188,7 +173,6 @@
 .method public dispatchDisplayRemoved(Lcom/android/server/wm/DisplayContent;)V
     .locals 4
 
-    .line 91
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -200,7 +184,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 94
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -221,7 +204,6 @@
 
     goto :goto_0
 
-    .line 98
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -233,7 +215,6 @@
 .method public dispatchFixedRotationFinished(Lcom/android/server/wm/DisplayContent;)V
     .locals 4
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -245,7 +226,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 117
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -266,7 +246,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -278,7 +257,6 @@
 .method public dispatchFixedRotationStarted(Lcom/android/server/wm/DisplayContent;I)V
     .locals 4
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -290,7 +268,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 105
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -311,7 +288,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -323,7 +299,6 @@
 .method public dispatchKeepClearAreasChanged(Lcom/android/server/wm/DisplayContent;Ljava/util/Set;Ljava/util/Set;)V
     .locals 6
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
@@ -335,7 +310,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 129
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -364,7 +338,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
@@ -376,7 +349,6 @@
 .method public registerListener(Landroid/view/IDisplayWindowListener;)[I
     .locals 2
 
-    .line 43
     iget-object v0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -385,18 +357,15 @@
 
     monitor-enter v0
 
-    .line 44
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v1, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 45
     new-instance p1, Landroid/util/IntArray;
 
     invoke-direct {p1}, Landroid/util/IntArray;-><init>()V
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -409,7 +378,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/RootWindowContainer;->forAllDisplays(Ljava/util/function/Consumer;)V
 
-    .line 49
     invoke-virtual {p1}, Landroid/util/IntArray;->toArray()[I
 
     move-result-object p0
@@ -425,7 +393,6 @@
     :catchall_0
     move-exception p0
 
-    .line 50
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -439,7 +406,6 @@
 .method public unregisterListener(Landroid/view/IDisplayWindowListener;)V
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/wm/DisplayWindowListenerController;->mDisplayListeners:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z

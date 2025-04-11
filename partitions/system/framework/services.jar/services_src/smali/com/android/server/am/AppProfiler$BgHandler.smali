@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/am/AppProfiler;Landroid/os/Looper;)V
     .locals 0
 
-    .line 627
     iput-object p1, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 
-    .line 628
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 633
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -46,7 +43,6 @@
 
     goto :goto_0
 
-    .line 644
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 
@@ -58,7 +54,6 @@
 
     monitor-enter v0
 
-    .line 645
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 
@@ -68,7 +63,6 @@
 
     invoke-static {p0, v1, p1}, Lcom/android/server/am/AppProfiler;->-$$Nest$mhandleMemoryPressureChangedLocked(Lcom/android/server/am/AppProfiler;II)V
 
-    .line 646
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -89,7 +83,6 @@
 
     throw p0
 
-    .line 641
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 
@@ -97,7 +90,6 @@
 
     goto :goto_0
 
-    .line 638
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 635
     :cond_3
     iget-object p0, p0, Lcom/android/server/am/AppProfiler$BgHandler;->this$0:Lcom/android/server/am/AppProfiler;
 

@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/policy/DeviceStateProviderImpl;Landroid/hardware/Sensor;Ljava/util/List;)V
     .locals 0
 
-    .line 605
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 606
     iput-object p2, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->mSensor:Landroid/hardware/Sensor;
 
-    .line 607
     iput-object p3, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->mExpectedValues:Ljava/util/List;
 
     return-void
@@ -37,7 +34,6 @@
 .method public final adheresToRange(FLcom/android/server/policy/devicestate/config/NumericRange;)Z
     .locals 1
 
-    .line 652
     invoke-virtual {p2}, Lcom/android/server/policy/devicestate/config/NumericRange;->getMin_optional()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -46,7 +42,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 657
     invoke-virtual {p0}, Ljava/math/BigDecimal;->floatValue()F
 
     move-result p0
@@ -57,7 +52,6 @@
 
     return v0
 
-    .line 662
     :cond_0
     invoke-virtual {p2}, Lcom/android/server/policy/devicestate/config/NumericRange;->getMinInclusive_optional()Ljava/math/BigDecimal;
 
@@ -65,7 +59,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 668
     invoke-virtual {p0}, Ljava/math/BigDecimal;->floatValue()F
 
     move-result p0
@@ -76,7 +69,6 @@
 
     return v0
 
-    .line 673
     :cond_1
     invoke-virtual {p2}, Lcom/android/server/policy/devicestate/config/NumericRange;->getMax_optional()Ljava/math/BigDecimal;
 
@@ -84,7 +76,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 678
     invoke-virtual {p0}, Ljava/math/BigDecimal;->floatValue()F
 
     move-result p0
@@ -95,7 +86,6 @@
 
     return v0
 
-    .line 683
     :cond_2
     invoke-virtual {p2}, Lcom/android/server/policy/devicestate/config/NumericRange;->getMaxInclusive_optional()Ljava/math/BigDecimal;
 
@@ -103,7 +93,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 689
     invoke-virtual {p0}, Ljava/math/BigDecimal;->floatValue()F
 
     move-result p0
@@ -123,7 +112,6 @@
 .method public getAsBoolean()Z
     .locals 6
 
-    .line 612
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     invoke-static {v0}, Lcom/android/server/policy/DeviceStateProviderImpl;->-$$Nest$fgetmLock(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/lang/Object;
@@ -132,7 +120,6 @@
 
     monitor-enter v0
 
-    .line 621
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
@@ -150,7 +137,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 632
     iget-object v2, v1, Landroid/hardware/SensorEvent;->values:[F
 
     array-length v2, v2
@@ -167,7 +153,6 @@
 
     move v3, v2
 
-    .line 638
     :goto_0
     iget-object v4, p0, Lcom/android/server/policy/DeviceStateProviderImpl$SensorBooleanSupplier;->mExpectedValues:Ljava/util/List;
 
@@ -177,7 +162,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 639
     iget-object v4, v1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v4, v4, v3
@@ -196,7 +180,6 @@
 
     if-nez v4, :cond_0
 
-    .line 640
     monitor-exit v0
 
     return v2
@@ -206,7 +189,6 @@
 
     goto :goto_0
 
-    .line 643
     :cond_1
     monitor-exit v0
 
@@ -214,7 +196,6 @@
 
     return p0
 
-    .line 633
     :cond_2
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -238,7 +219,6 @@
 
     throw v1
 
-    .line 629
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -251,7 +231,6 @@
     :catchall_0
     move-exception p0
 
-    .line 644
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

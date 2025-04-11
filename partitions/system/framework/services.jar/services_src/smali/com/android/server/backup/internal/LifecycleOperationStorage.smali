@@ -20,31 +20,26 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
-    .line 77
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
-    .line 82
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
-    .line 86
     iput p1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mUserId:I
 
     return-void
@@ -55,12 +50,10 @@
 .method public cancelOperation(IZLjava/util/function/IntConsumer;)V
     .locals 6
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 319
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
@@ -74,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 326
     iget v3, v1, Lcom/android/server/backup/internal/Operation;->state:I
 
     goto :goto_0
@@ -89,7 +81,6 @@
 
     const-string p3, "LifecycleOperationStorage"
 
-    .line 330
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,7 +103,6 @@
 
     invoke-static {p3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     iget-object p3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p1}, Landroid/util/SparseArray;->delete(I)V
@@ -126,7 +116,6 @@
 
     const-string v3, "LifecycleOperationStorage"
 
-    .line 337
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +132,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 338
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -154,37 +142,30 @@
 
     move-result-object p1
 
-    .line 337
     invoke-static {v3, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     iput v2, v1, Lcom/android/server/backup/internal/Operation;->state:I
 
-    .line 343
     iget p1, v1, Lcom/android/server/backup/internal/Operation;->type:I
 
     invoke-interface {p3, p1}, Ljava/util/function/IntConsumer;->accept(I)V
 
-    .line 345
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 346
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_3
 
-    .line 349
     iget-object p0, v1, Lcom/android/server/backup/internal/Operation;->callback:Lcom/android/server/backup/BackupRestoreTask;
 
     if-eqz p0, :cond_3
 
-    .line 353
     invoke-interface {p0, p2}, Lcom/android/server/backup/BackupRestoreTask;->handleCancel(Z)V
 
     :cond_3
@@ -193,7 +174,6 @@
     :catchall_0
     move-exception p0
 
-    .line 346
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -205,7 +185,6 @@
 .method public isBackupOperationInProgress()Z
     .locals 6
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -214,7 +193,6 @@
 
     move v2, v1
 
-    .line 142
     :goto_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
@@ -225,7 +203,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 143
     iget-object v3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -234,7 +211,6 @@
 
     check-cast v3, Lcom/android/server/backup/internal/Operation;
 
-    .line 144
     iget v4, v3, Lcom/android/server/backup/internal/Operation;->type:I
 
     const/4 v5, 0x2
@@ -245,7 +221,6 @@
 
     if-nez v3, :cond_0
 
-    .line 145
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -257,7 +232,6 @@
 
     goto :goto_0
 
-    .line 148
     :cond_1
     monitor-exit v0
 
@@ -266,7 +240,6 @@
     :catchall_0
     move-exception p0
 
-    .line 149
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -277,12 +250,10 @@
 .method public onOperationComplete(IJLjava/util/function/Consumer;)V
     .locals 3
 
-    .line 271
     iget-object p2, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 272
     :try_start_0
     iget-object p3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
@@ -294,7 +265,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 274
     iget v0, p3, Lcom/android/server/backup/internal/Operation;->state:I
 
     const/4 v1, -0x1
@@ -303,7 +273,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 278
     iget-object p3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -320,7 +289,6 @@
 
     const-string p3, "LifecycleOperationStorage"
 
-    .line 281
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,7 +305,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
     invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -348,10 +315,8 @@
 
     move-result-object v0
 
-    .line 281
     invoke-static {p3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     iget-object p3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -361,29 +326,24 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 289
     iput v1, p3, Lcom/android/server/backup/internal/Operation;->state:I
 
-    .line 292
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 293
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p3, :cond_3
 
-    .line 296
     iget-object p0, p3, Lcom/android/server/backup/internal/Operation;->callback:Lcom/android/server/backup/BackupRestoreTask;
 
     if-eqz p0, :cond_3
 
-    .line 297
     invoke-interface {p4, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :cond_3
@@ -392,7 +352,6 @@
     :catchall_0
     move-exception p0
 
-    .line 293
     :try_start_1
     monitor-exit p2
     :try_end_1
@@ -404,19 +363,16 @@
 .method public operationTokensForOpType(I)Ljava/util/Set;
     .locals 5
 
-    .line 168
     invoke-static {}, Lcom/google/android/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 169
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     const/4 v2, 0x0
 
-    .line 170
     :goto_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
@@ -427,7 +383,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 171
     iget-object v3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -436,19 +391,16 @@
 
     check-cast v3, Lcom/android/server/backup/internal/Operation;
 
-    .line 172
     iget-object v4, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v4
 
-    .line 173
     iget v3, v3, Lcom/android/server/backup/internal/Operation;->type:I
 
     if-ne v3, p1, :cond_0
 
-    .line 174
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -460,7 +412,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_1
     monitor-exit v1
 
@@ -469,7 +420,6 @@
     :catchall_0
     move-exception p0
 
-    .line 178
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -480,12 +430,10 @@
 .method public operationTokensForPackage(Ljava/lang/String;)Ljava/util/Set;
     .locals 1
 
-    .line 155
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 156
     :try_start_0
     iget-object p0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
@@ -495,17 +443,14 @@
 
     check-cast p0, Ljava/util/Set;
 
-    .line 157
     invoke-static {}, Lcom/google/android/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object p1
 
     if-eqz p0, :cond_0
 
-    .line 159
     invoke-interface {p1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 161
     :cond_0
     monitor-exit v0
 
@@ -514,7 +459,6 @@
     :catchall_0
     move-exception p0
 
-    .line 162
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -525,7 +469,6 @@
 .method public registerOperation(IILcom/android/server/backup/BackupRestoreTask;I)V
     .locals 6
 
-    .line 93
     invoke-static {}, Lcom/google/android/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v3
@@ -548,12 +491,10 @@
 .method public registerOperationForPackages(IILjava/util/Set;Lcom/android/server/backup/BackupRestoreTask;I)V
     .locals 3
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 101
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
@@ -563,7 +504,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 102
     invoke-interface {p3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -581,7 +521,6 @@
 
     check-cast p3, Ljava/lang/String;
 
-    .line 103
     iget-object p4, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
     invoke-interface {p4, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -592,12 +531,10 @@
 
     if-nez p4, :cond_0
 
-    .line 105
     new-instance p4, Ljava/util/HashSet;
 
     invoke-direct {p4}, Ljava/util/HashSet;-><init>()V
 
-    .line 107
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -605,14 +542,12 @@
 
     invoke-interface {p4, p5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 108
     iget-object p5, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
     invoke-interface {p5, p3, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 110
     :cond_1
     monitor-exit v0
 
@@ -631,25 +566,21 @@
 .method public removeOperation(I)V
     .locals 5
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 118
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 119
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -667,7 +598,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 120
     iget-object v3, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -680,7 +610,6 @@
 
     goto :goto_0
 
-    .line 124
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -688,14 +617,12 @@
 
     invoke-interface {v3, v4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 125
     iget-object v4, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOpTokensByPackage:Ljava/util/Map;
 
     invoke-interface {v4, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 127
     :cond_1
     monitor-exit v0
 
@@ -714,12 +641,10 @@
 .method public waitUntilOperationComplete(ILjava/util/function/IntConsumer;)Z
     .locals 4
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 217
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperations:Landroid/util/SparseArray;
@@ -738,7 +663,6 @@
 
     goto :goto_1
 
-    .line 222
     :cond_0
     iget v3, v1, Lcom/android/server/backup/internal/Operation;->state:I
     :try_end_0
@@ -746,7 +670,6 @@
 
     if-nez v3, :cond_1
 
-    .line 224
     :try_start_1
     iget-object v1, p0, Lcom/android/server/backup/internal/LifecycleOperationStorage;->mOperationsLock:Ljava/lang/Object;
 
@@ -765,24 +688,20 @@
 
     const-string v3, "Waiting on mOperationsLock: "
 
-    .line 226
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 241
     :cond_1
     :goto_1
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 243
     invoke-virtual {p0, p1}, Lcom/android/server/backup/internal/LifecycleOperationStorage;->removeOperation(I)V
 
     if-eqz v1, :cond_2
 
-    .line 245
     iget p0, v1, Lcom/android/server/backup/internal/Operation;->type:I
 
     invoke-interface {p2, p0}, Ljava/util/function/IntConsumer;->accept(I)V
@@ -800,7 +719,6 @@
     :catchall_0
     move-exception p0
 
-    .line 241
     :try_start_3
     monitor-exit v0
     :try_end_3

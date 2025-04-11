@@ -20,7 +20,6 @@
 .method public final write(Landroid/util/proto/ProtoOutputStream;Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p2, Ljava/util/List;
 
     invoke-static {p1, p2}, Lcom/android/server/people/data/ConversationStore$ConversationInfosProtoDiskReadWriter;->$r8$lambda$Hi0eZ12O-IOCYVO2Q42v1BVP_40(Landroid/util/proto/ProtoOutputStream;Ljava/util/List;)V

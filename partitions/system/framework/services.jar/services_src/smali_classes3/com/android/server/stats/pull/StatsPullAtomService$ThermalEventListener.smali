@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5013
     invoke-direct {p0}, Landroid/os/IThermalEventListener$Stub;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/stats/pull/StatsPullAtomService$ThermalEventListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/stats/pull/StatsPullAtomService$ThermalEventListener;-><init>()V
 
     return-void
@@ -27,7 +25,6 @@
 .method public notifyThrottling(Landroid/os/Temperature;)V
     .locals 3
 
-    .line 5017
     invoke-virtual {p1}, Landroid/os/Temperature;->getType()I
 
     move-result p0
@@ -52,7 +49,6 @@
 
     const/16 v2, 0xbd
 
-    .line 5016
     invoke-static {v2, p0, v0, v1, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;II)V
 
     return-void

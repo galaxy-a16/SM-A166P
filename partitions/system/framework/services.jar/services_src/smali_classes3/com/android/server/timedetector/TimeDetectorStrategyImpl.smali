@@ -38,7 +38,6 @@
 .method public static synthetic $r8$lambda$I2rIcOUub8essjwoYYG0XEh68CA(Lcom/android/server/timedetector/TimeDetectorStrategyImpl;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->handleConfigurationInternalMaybeChanged()V
 
     return-void
@@ -47,17 +46,14 @@
 .method public constructor <init>(Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;Lcom/android/server/timedetector/ServiceConfigAccessor;)V
     .locals 2
 
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mStateChangeListeners:Ljava/util/List;
 
-    .line 126
     new-instance v0, Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
     const/16 v1, 0xa
@@ -66,66 +62,55 @@
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
-    .line 130
     new-instance v0, Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-direct {v0, v1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
-    .line 134
     new-instance v0, Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-direct {v0, v1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastGnssSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
-    .line 138
     new-instance v0, Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-direct {v0, v1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastExternalSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
-    .line 142
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mNetworkTimeUpdateListeners:Landroid/util/ArraySet;
 
-    .line 207
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     iput-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
-    .line 208
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p2, Lcom/android/server/timedetector/ServiceConfigAccessor;
 
     iput-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mServiceConfigAccessor:Lcom/android/server/timedetector/ServiceConfigAccessor;
 
-    .line 210
     monitor-enter p0
 
-    .line 212
     :try_start_0
     new-instance p1, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/timedetector/TimeDetectorStrategyImpl;)V
 
-    .line 213
     invoke-interface {p2, p1}, Lcom/android/server/timedetector/ServiceConfigAccessor;->addConfigurationInternalChangeListener(Lcom/android/server/timezonedetector/StateChangeListener;)V
 
     const-string p1, "TimeDetectorStrategyImpl:"
 
-    .line 216
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->updateCurrentConfigurationInternalIfRequired(Ljava/lang/String;)V
 
-    .line 217
     monitor-exit p0
 
     return-void
@@ -143,12 +128,10 @@
 .method public static create(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/timedetector/ServiceConfigAccessor;)Lcom/android/server/timedetector/TimeDetectorStrategy;
     .locals 1
 
-    .line 200
     new-instance v0, Lcom/android/server/timedetector/EnvironmentImpl;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/timedetector/EnvironmentImpl;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    .line 201
     new-instance p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;
 
     invoke-direct {p0, v0, p2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;-><init>(Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;Lcom/android/server/timedetector/ServiceConfigAccessor;)V
@@ -159,7 +142,6 @@
 .method public static isOriginAutomatic(I)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x2
 
     if-eq p0, v0, :cond_0
@@ -178,12 +160,10 @@
 .method public static scoreTelephonySuggestion(JLandroid/app/timedetector/TelephonyTimeSuggestion;)I
     .locals 3
 
-    .line 877
     invoke-virtual {p2}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v0
 
-    .line 878
     invoke-static {p0, p1, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionUnixEpochTime(JLandroid/app/time/UnixEpochTime;)Z
 
     move-result v1
@@ -192,7 +172,6 @@
 
     if-nez v1, :cond_0
 
-    .line 879
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +198,6 @@
 
     return v2
 
-    .line 887
     :cond_0
     invoke-virtual {v0}, Landroid/app/time/UnixEpochTime;->getElapsedRealtimeMillis()J
 
@@ -229,7 +207,6 @@
 
     const-wide/32 v0, 0x36ee80
 
-    .line 890
     div-long/2addr p0, v0
 
     long-to-int p0, p0
@@ -249,7 +226,6 @@
 .method public static validateSuggestionUnixEpochTime(JLandroid/app/time/UnixEpochTime;)Z
     .locals 3
 
-    .line 1243
     invoke-virtual {p2}, Landroid/app/time/UnixEpochTime;->getElapsedRealtimeMillis()J
 
     move-result-wide v0
@@ -284,7 +260,6 @@
 
     monitor-enter p0
 
-    .line 442
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mStateChangeListeners:Ljava/util/List;
 
@@ -292,7 +267,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 443
     monitor-exit p0
 
     return-void
@@ -310,10 +284,8 @@
 
     const-string/jumbo v0, "time_detector"
 
-    .line 558
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->addDebugLogEntry(Ljava/lang/String;)V
@@ -326,7 +298,6 @@
 
     monitor-enter p0
 
-    .line 358
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
@@ -334,17 +305,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->set(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 360
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->notifyNetworkTimeUpdateListenersAsynchronously()V
 
     const-string v0, "Network time cleared"
 
-    .line 364
     invoke-virtual {p0, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 365
     monitor-exit p0
 
     return-void
@@ -362,18 +330,15 @@
 
     monitor-enter p0
 
-    .line 397
     :try_start_0
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 400
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->acquireWakeLock()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 404
     :try_start_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -381,7 +346,6 @@
 
     move-result-wide v7
 
-    .line 405
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->systemClockMillis()J
@@ -396,14 +360,12 @@
 
     move-wide v5, v9
 
-    .line 406
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isTimeWithinConfidenceThreshold(Landroid/app/time/UnixEpochTime;JJ)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 410
     iget-object v1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->systemClockConfidence()I
@@ -424,7 +386,6 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 413
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -465,17 +426,14 @@
 
     const-string/jumbo v1, "time_detector"
 
-    .line 420
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     iget-object v1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v1, v2, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->setSystemClockConfidence(ILjava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 428
     :cond_1
     :try_start_2
     iget-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
@@ -484,7 +442,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 426
     monitor-exit p0
 
     return v0
@@ -492,13 +449,11 @@
     :catchall_0
     move-exception p1
 
-    .line 428
     :try_start_3
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->releaseWakeLock()V
 
-    .line 429
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -514,14 +469,12 @@
 .method public final doAutoTimeDetection(Ljava/lang/String;)V
     .locals 9
 
-    .line 731
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     invoke-virtual {v0}, Lcom/android/server/timedetector/ConfigurationInternal;->getAutoOriginPriorities()[I
 
     move-result-object v0
 
-    .line 732
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -541,19 +494,16 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 736
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findBestTelephonySuggestion()Landroid/app/timedetector/TelephonyTimeSuggestion;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    .line 738
     invoke-virtual {v3}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v7
 
-    .line 739
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,19 +529,16 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 744
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidNetworkSuggestion()Lcom/android/server/timedetector/NetworkTimeSuggestion;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    .line 746
     invoke-virtual {v3}, Lcom/android/server/timedetector/NetworkTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v7
 
-    .line 747
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -617,19 +564,16 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 752
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidGnssSuggestion()Lcom/android/server/timedetector/GnssTimeSuggestion;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    .line 754
     invoke-virtual {v3}, Lcom/android/server/timedetector/GnssTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v7
 
-    .line 755
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -655,19 +599,16 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 760
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidExternalSuggestion()Landroid/app/time/ExternalTimeSuggestion;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    .line 762
     invoke-virtual {v3}, Landroid/app/time/ExternalTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v6
 
-    .line 763
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -692,7 +633,6 @@
 
     goto :goto_1
 
-    .line 768
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -708,7 +648,6 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 769
     invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v6
@@ -723,7 +662,6 @@
 
     move-result-object v4
 
-    .line 768
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -732,7 +670,6 @@
     :goto_1
     if-eqz v7, :cond_7
 
-    .line 775
     iget-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     invoke-virtual {p1}, Lcom/android/server/timedetector/ConfigurationInternal;->getAutoDetectionEnabledBehavior()Z
@@ -741,7 +678,6 @@
 
     if-nez p1, :cond_6
 
-    .line 777
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isNtpSetByMdm()Z
 
     move-result p1
@@ -750,13 +686,11 @@
 
     goto :goto_2
 
-    .line 784
     :cond_5
     invoke-virtual {p0, v7, v3}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->upgradeSystemClockConfidenceIfRequired(Landroid/app/time/UnixEpochTime;Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 779
     :cond_6
     :goto_2
     invoke-virtual {p0, v5, v7, v3}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->setSystemClockAndConfidenceIfRequired(ILandroid/app/time/UnixEpochTime;Ljava/lang/String;)Z
@@ -769,7 +703,6 @@
 
     goto/16 :goto_0
 
-    .line 791
     :cond_8
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -779,7 +712,6 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 792
     invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
@@ -794,7 +726,6 @@
 
     move-result-object p0
 
-    .line 791
     invoke-static {v3, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -808,13 +739,10 @@
     :try_start_0
     const-string p2, "TimeDetectorStrategy:"
 
-    .line 565
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 566
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 568
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -833,7 +761,6 @@
 
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 569
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -852,7 +779,6 @@
 
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 571
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -865,7 +791,6 @@
 
     const/4 v1, 0x0
 
-    .line 572
     invoke-virtual {v0, v1}, Lcom/android/server/timedetector/ConfigurationInternal;->createCapabilitiesAndConfig(Z)Landroid/app/time/TimeCapabilitiesAndConfig;
 
     move-result-object v0
@@ -880,109 +805,82 @@
 
     move-result-object p2
 
-    .line 571
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     const-string p2, "mEnvironment:"
 
-    .line 575
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 576
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 577
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p2, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->dumpDebugLog(Landroid/util/IndentingPrintWriter;)V
 
-    .line 578
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "Time change log:"
 
-    .line 580
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 581
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 582
     invoke-static {p1}, Lcom/android/server/SystemClockTime;->dump(Ljava/io/PrintWriter;)V
 
-    .line 583
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "Telephony suggestion history:"
 
-    .line 585
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 586
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 587
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
     invoke-virtual {p2, p1}, Lcom/android/server/timezonedetector/ArrayMapWithHistory;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 588
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "Network suggestion history:"
 
-    .line 590
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 591
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 592
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {p2, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 593
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "Gnss suggestion history:"
 
-    .line 595
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 596
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 597
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastGnssSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {p2, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 598
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string p2, "External suggestion history:"
 
-    .line 600
     invoke-virtual {p1, p2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 601
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 602
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastExternalSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {p2, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 603
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 605
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 606
     monitor-exit p0
 
     return-void
@@ -998,7 +896,6 @@
 .method public final findBestTelephonySuggestion()Landroid/app/timedetector/TelephonyTimeSuggestion;
     .locals 10
 
-    .line 800
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
@@ -1013,7 +910,6 @@
 
     move v5, v3
 
-    .line 834
     :goto_0
     iget-object v6, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
@@ -1023,7 +919,6 @@
 
     if-ge v4, v6, :cond_6
 
-    .line 835
     iget-object v6, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
     invoke-virtual {v6, v4}, Lcom/android/server/timezonedetector/ArrayMapWithHistory;->keyAt(I)Ljava/lang/Object;
@@ -1032,7 +927,6 @@
 
     check-cast v6, Ljava/lang/Integer;
 
-    .line 836
     iget-object v7, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
     invoke-virtual {v7, v4}, Lcom/android/server/timezonedetector/ArrayMapWithHistory;->valueAt(I)Ljava/lang/Object;
@@ -1045,7 +939,6 @@
 
     if-nez v7, :cond_0
 
-    .line 839
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1064,7 +957,6 @@
 
     goto :goto_3
 
-    .line 842
     :cond_0
     invoke-virtual {v7}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
@@ -1072,7 +964,6 @@
 
     if-nez v6, :cond_1
 
-    .line 844
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1091,7 +982,6 @@
 
     goto :goto_3
 
-    .line 850
     :cond_1
     invoke-static {v0, v1, v7}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->scoreTelephonySuggestion(JLandroid/app/timedetector/TelephonyTimeSuggestion;)I
 
@@ -1111,12 +1001,10 @@
     :cond_3
     if-ne v5, v6, :cond_5
 
-    .line 862
     invoke-virtual {v7}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getSlotIndex()I
 
     move-result v6
 
-    .line 863
     invoke-virtual {v2}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getSlotIndex()I
 
     move-result v8
@@ -1147,7 +1035,6 @@
 
     monitor-enter p0
 
-    .line 1181
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findBestTelephonySuggestion()Landroid/app/timedetector/TelephonyTimeSuggestion;
 
@@ -1170,7 +1057,6 @@
 .method public final findLatestValidExternalSuggestion()Landroid/app/time/ExternalTimeSuggestion;
     .locals 5
 
-    .line 943
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastExternalSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->get()Ljava/lang/Object;
@@ -1185,20 +1071,17 @@
 
     return-object v1
 
-    .line 949
     :cond_0
     invoke-virtual {v0}, Landroid/app/time/ExternalTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v2
 
-    .line 950
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v3
 
-    .line 951
     invoke-static {v3, v4, v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionUnixEpochTime(JLandroid/app/time/UnixEpochTime;)Z
 
     move-result p0
@@ -1216,7 +1099,6 @@
 
     monitor-enter p0
 
-    .line 1211
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidExternalSuggestion()Landroid/app/time/ExternalTimeSuggestion;
 
@@ -1239,7 +1121,6 @@
 .method public final findLatestValidGnssSuggestion()Lcom/android/server/timedetector/GnssTimeSuggestion;
     .locals 5
 
-    .line 923
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastGnssSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->get()Ljava/lang/Object;
@@ -1254,20 +1135,17 @@
 
     return-object v1
 
-    .line 929
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/timedetector/GnssTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v2
 
-    .line 930
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v3
 
-    .line 931
     invoke-static {v3, v4, v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionUnixEpochTime(JLandroid/app/time/UnixEpochTime;)Z
 
     move-result p0
@@ -1285,7 +1163,6 @@
 
     monitor-enter p0
 
-    .line 1201
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidGnssSuggestion()Lcom/android/server/timedetector/GnssTimeSuggestion;
 
@@ -1308,7 +1185,6 @@
 .method public final findLatestValidNetworkSuggestion()Lcom/android/server/timedetector/NetworkTimeSuggestion;
     .locals 5
 
-    .line 903
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->get()Ljava/lang/Object;
@@ -1323,20 +1199,17 @@
 
     return-object v1
 
-    .line 909
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/timedetector/NetworkTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v2
 
-    .line 910
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v3
 
-    .line 911
     invoke-static {v3, v4, v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionUnixEpochTime(JLandroid/app/time/UnixEpochTime;)Z
 
     move-result p0
@@ -1354,7 +1227,6 @@
 
     monitor-enter p0
 
-    .line 1191
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->findLatestValidNetworkSuggestion()Lcom/android/server/timedetector/NetworkTimeSuggestion;
 
@@ -1379,7 +1251,6 @@
 
     monitor-enter p0
 
-    .line 610
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
     :try_end_0
@@ -1402,7 +1273,6 @@
 
     monitor-enter p0
 
-    .line 449
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
@@ -1412,12 +1282,10 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 451
     iget-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     goto :goto_0
 
-    .line 457
     :cond_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mServiceConfigAccessor:Lcom/android/server/timedetector/ServiceConfigAccessor;
 
@@ -1425,7 +1293,6 @@
 
     move-result-object p1
 
-    .line 459
     :goto_0
     invoke-virtual {p1, p2}, Lcom/android/server/timedetector/ConfigurationInternal;->createCapabilitiesAndConfig(Z)Landroid/app/time/TimeCapabilitiesAndConfig;
 
@@ -1450,7 +1317,6 @@
 
     monitor-enter p0
 
-    .line 1237
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastExternalSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
@@ -1479,7 +1345,6 @@
 
     monitor-enter p0
 
-    .line 1228
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastGnssSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
@@ -1508,7 +1373,6 @@
 
     monitor-enter p0
 
-    .line 353
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
@@ -1537,7 +1401,6 @@
 
     monitor-enter p0
 
-    .line 1219
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
@@ -1570,7 +1433,6 @@
 
     monitor-enter p0
 
-    .line 370
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -1589,13 +1451,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 371
     :goto_0
     new-instance v1, Landroid/app/time/UnixEpochTime;
 
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
-    .line 372
     invoke-interface {v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v2
@@ -1608,7 +1468,6 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Landroid/app/time/UnixEpochTime;-><init>(JJ)V
 
-    .line 373
     new-instance v2, Landroid/app/time/TimeState;
 
     invoke-direct {v2, v1, v0}, Landroid/app/time/TimeState;-><init>(Landroid/app/time/UnixEpochTime;Z)V
@@ -1635,12 +1494,10 @@
     :try_start_0
     const-string v0, "handleConfigurationInternalMaybeChanged:"
 
-    .line 515
     invoke-virtual {p0, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->updateCurrentConfigurationInternalIfRequired(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 516
     monitor-exit p0
 
     return-void
@@ -1656,7 +1513,6 @@
 .method public final isNtpSetByMdm()Z
     .locals 2
 
-    .line 649
     :try_start_0
     invoke-static {}, Landroid/sec/enterprise/EnterpriseDeviceManager$EDMProxyServiceHelper;->getService()Landroid/sec/enterprise/IEDMProxy;
 
@@ -1664,7 +1520,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 650
     invoke-interface {p0}, Landroid/sec/enterprise/IEDMProxy;->isNtpSetByMDM()Z
 
     move-result p0
@@ -1680,7 +1535,6 @@
     :catch_0
     move-exception p0
 
-    .line 654
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1708,7 +1562,6 @@
 .method public final isTimeWithinConfidenceThreshold(Landroid/app/time/UnixEpochTime;JJ)Z
     .locals 0
 
-    .line 1060
     invoke-virtual {p1, p2, p3}, Landroid/app/time/UnixEpochTime;->at(J)Landroid/app/time/UnixEpochTime;
 
     move-result-object p1
@@ -1719,15 +1572,12 @@
 
     sub-long/2addr p1, p4
 
-    .line 1062
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide p1
 
-    .line 1063
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 1064
     invoke-virtual {p0}, Lcom/android/server/timedetector/ConfigurationInternal;->getSystemClockConfidenceThresholdMillis()I
 
     move-result p0
@@ -1752,7 +1602,6 @@
 .method public final notifyNetworkTimeUpdateListenersAsynchronously()V
     .locals 4
 
-    .line 338
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mNetworkTimeUpdateListeners:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
@@ -1772,7 +1621,6 @@
 
     check-cast v1, Lcom/android/server/timezonedetector/StateChangeListener;
 
-    .line 340
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1792,7 +1640,6 @@
 .method public final notifyStateChangeListenersAsynchronously()V
     .locals 4
 
-    .line 434
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mStateChangeListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1812,7 +1659,6 @@
 
     check-cast v1, Lcom/android/server/timezonedetector/StateChangeListener;
 
-    .line 436
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1832,7 +1678,6 @@
 .method public final setSystemClockAndConfidenceIfRequired(ILandroid/app/time/UnixEpochTime;Ljava/lang/String;)Z
     .locals 5
 
-    .line 966
     invoke-static {p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isOriginAutomatic(I)Z
 
     move-result v0
@@ -1847,7 +1692,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 968
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     invoke-virtual {v0}, Lcom/android/server/timedetector/ConfigurationInternal;->getAutoDetectionEnabledBehavior()Z
@@ -1856,14 +1700,12 @@
 
     if-nez v0, :cond_1
 
-    .line 970
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isNtpSetByMdm()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 973
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1872,7 +1714,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 975
     invoke-static {p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1891,12 +1732,10 @@
 
     move-result-object p0
 
-    .line 973
     invoke-static {v4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 982
     :cond_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
@@ -1906,14 +1745,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 984
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isNtpSetByMdm()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 987
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1922,7 +1759,6 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 988
     invoke-static {p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1941,12 +1777,10 @@
 
     move-result-object p0
 
-    .line 987
     invoke-static {v4, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 996
     :cond_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -1954,7 +1788,6 @@
 
     const/16 v0, 0x64
 
-    .line 998
     :try_start_0
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->setSystemClockAndConfidenceUnderWakeLock(ILandroid/app/time/UnixEpochTime;ILjava/lang/String;)Z
 
@@ -1962,7 +1795,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1000
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->releaseWakeLock()V
@@ -1976,7 +1808,6 @@
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->releaseWakeLock()V
 
-    .line 1001
     throw p1
 .end method
 
@@ -1991,19 +1822,16 @@
 
     move-object/from16 v3, p4
 
-    .line 1073
     iget-object v4, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v4}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v4
 
-    .line 1074
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isOriginAutomatic(I)Z
 
     move-result v6
 
-    .line 1075
     iget-object v7, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v7}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->systemClockMillis()J
@@ -2018,24 +1846,20 @@
 
     if-eqz v6, :cond_0
 
-    .line 1079
     iget-object v6, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastAutoSystemClockTimeSet:Landroid/app/time/UnixEpochTime;
 
     if-eqz v6, :cond_0
 
-    .line 1080
     invoke-virtual {v6, v4, v5}, Landroid/app/time/UnixEpochTime;->at(J)Landroid/app/time/UnixEpochTime;
 
     move-result-object v6
 
-    .line 1081
     invoke-virtual {v6}, Landroid/app/time/UnixEpochTime;->getUnixEpochTimeMillis()J
 
     move-result-wide v12
 
     sub-long v14, v12, v7
 
-    .line 1083
     invoke-static {v14, v15}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v14
@@ -2046,7 +1870,6 @@
 
     if-lez v6, :cond_0
 
-    .line 1085
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2055,7 +1878,6 @@
 
     invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1089
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object v14
@@ -2086,10 +1908,8 @@
 
     move-result-object v6
 
-    .line 1085
     invoke-static {v11, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1102
     :cond_0
     invoke-virtual {v1, v4, v5}, Landroid/app/time/UnixEpochTime;->at(J)Landroid/app/time/UnixEpochTime;
 
@@ -2101,15 +1921,12 @@
 
     sub-long v14, v12, v7
 
-    .line 1103
     invoke-static {v14, v15}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v14
 
-    .line 1104
     iget-object v6, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 1105
     invoke-virtual {v6}, Lcom/android/server/timedetector/ConfigurationInternal;->getSystemClockUpdateThresholdMillis()I
 
     move-result v6
@@ -2126,7 +1943,6 @@
 
     if-ne v12, v6, :cond_1
 
-    .line 1107
     iget-object v6, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastAutoSystemClockTimeSet:Landroid/app/time/UnixEpochTime;
 
     invoke-virtual {v1, v6}, Landroid/app/time/UnixEpochTime;->equals(Ljava/lang/Object;)Z
@@ -2135,7 +1951,6 @@
 
     if-nez v6, :cond_1
 
-    .line 1109
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2177,7 +1992,6 @@
     :cond_2
     move/from16 v6, v18
 
-    .line 1114
     :goto_1
     iget-object v14, v0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -2206,7 +2020,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1118
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2217,7 +2030,6 @@
 
     invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1119
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object v14
@@ -2262,24 +2074,20 @@
 
     move-object/from16 v6, p0
 
-    .line 1127
     iget-object v5, v6, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v5, v3, v4, v2, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->setSystemClock(JILjava/lang/String;)V
 
     move-object/from16 v14, v24
 
-    .line 1129
     invoke-static {v14, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isOriginAutomatic(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1135
     iput-object v1, v6, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastAutoSystemClockTimeSet:Landroid/app/time/UnixEpochTime;
 
     goto/16 :goto_2
@@ -2287,7 +2095,6 @@
     :cond_4
     const/4 v0, 0x0
 
-    .line 1137
     iput-object v0, v6, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastAutoSystemClockTimeSet:Landroid/app/time/UnixEpochTime;
 
     goto/16 :goto_2
@@ -2307,7 +2114,6 @@
 
     move/from16 v25, v0
 
-    .line 1144
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2318,7 +2124,6 @@
 
     invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1145
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object v13
@@ -2365,12 +2170,10 @@
 
     move-object/from16 v8, v24
 
-    .line 1154
     invoke-static {v8, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object/from16 v1, p0
 
-    .line 1156
     iget-object v1, v1, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v1, v2, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->setSystemClockConfidence(ILjava/lang/String;)V
@@ -2386,7 +2189,6 @@
 
     move-object/from16 v8, v24
 
-    .line 1160
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -2395,7 +2197,6 @@
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1161
     invoke-static/range {p1 .. p1}, Lcom/android/server/timedetector/TimeDetectorStrategy;->originToString(I)Ljava/lang/String;
 
     move-result-object v13
@@ -2442,7 +2243,6 @@
 
     move-result-object v0
 
-    .line 1160
     invoke-static {v8, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -2454,11 +2254,9 @@
 
     monitor-enter p0
 
-    .line 378
     :try_start_0
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
     invoke-virtual {p1}, Landroid/app/time/TimeState;->getUserShouldConfirmTime()Z
 
     move-result v0
@@ -2472,7 +2270,6 @@
     :cond_0
     const/16 v0, 0x64
 
-    .line 382
     :goto_0
     iget-object v1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -2480,7 +2277,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 387
     :try_start_1
     invoke-virtual {p1}, Landroid/app/time/TimeState;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
@@ -2490,12 +2286,10 @@
 
     const/4 v2, 0x2
 
-    .line 388
     invoke-virtual {p0, v2, p1, v0, v1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->setSystemClockAndConfidenceUnderWakeLock(ILandroid/app/time/UnixEpochTime;ILjava/lang/String;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 391
     :try_start_2
     iget-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -2503,7 +2297,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 393
     monitor-exit p0
 
     return-void
@@ -2511,13 +2304,11 @@
     :catchall_0
     move-exception p1
 
-    .line 391
     :try_start_3
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->releaseWakeLock()V
 
-    .line 392
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -2533,17 +2324,14 @@
 .method public final storeTelephonySuggestion(Landroid/app/timedetector/TelephonyTimeSuggestion;)Z
     .locals 10
 
-    .line 615
     invoke-virtual {p1}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v0
 
-    .line 617
     invoke-virtual {p1}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getSlotIndex()I
 
     move-result v1
 
-    .line 618
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2558,7 +2346,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 621
     invoke-virtual {v2}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v3
@@ -2569,7 +2356,6 @@
 
     if-nez v3, :cond_0
 
-    .line 623
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2594,13 +2380,11 @@
 
     return v4
 
-    .line 630
     :cond_0
     invoke-virtual {v2}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v3
 
-    .line 629
     invoke-static {v0, v3}, Landroid/app/time/UnixEpochTime;->elapsedRealtimeDifference(Landroid/app/time/UnixEpochTime;Landroid/app/time/UnixEpochTime;)J
 
     move-result-wide v6
@@ -2611,7 +2395,6 @@
 
     if-gez v0, :cond_1
 
-    .line 633
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2642,7 +2425,6 @@
 
     return v4
 
-    .line 642
     :cond_1
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mSuggestionBySlotIndex:Lcom/android/server/timezonedetector/ArrayMapWithHistory;
 
@@ -2662,13 +2444,11 @@
 
     monitor-enter p0
 
-    .line 221
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     const-string/jumbo v1, "time_detector"
 
-    .line 223
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2691,15 +2471,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 227
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     invoke-virtual {p1}, Landroid/app/time/ExternalTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v0
 
-    .line 231
     invoke-virtual {p0, v0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateAutoSuggestionTime(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
 
     move-result v0
@@ -2708,19 +2485,16 @@
 
     if-nez v0, :cond_0
 
-    .line 232
     monitor-exit p0
 
     return-void
 
-    .line 235
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastExternalSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->set(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2735,12 +2509,10 @@
 
     move-result-object p1
 
-    .line 238
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 239
     monitor-exit p0
 
     return-void
@@ -2758,13 +2530,11 @@
 
     monitor-enter p0
 
-    .line 243
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     const-string/jumbo v1, "time_detector"
 
-    .line 245
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2787,15 +2557,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     invoke-virtual {p1}, Lcom/android/server/timedetector/GnssTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v0
 
-    .line 253
     invoke-virtual {p0, v0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateAutoSuggestionTime(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
 
     move-result v0
@@ -2804,19 +2571,16 @@
 
     if-nez v0, :cond_0
 
-    .line 254
     monitor-exit p0
 
     return-void
 
-    .line 257
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastGnssSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->set(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2831,12 +2595,10 @@
 
     move-result-object p1
 
-    .line 260
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 261
     monitor-exit p0
 
     return-void
@@ -2854,11 +2616,9 @@
 
     monitor-enter p0
 
-    .line 268
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 269
     invoke-virtual {v0}, Lcom/android/server/timedetector/ConfigurationInternal;->getUserId()I
 
     move-result v1
@@ -2869,7 +2629,6 @@
 
     const-string/jumbo p3, "time_detector"
 
-    .line 270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2894,17 +2653,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 274
     monitor-exit p0
 
     return v2
 
-    .line 277
     :cond_0
     :try_start_1
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 278
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2919,17 +2675,14 @@
 
     move-result-object p1
 
-    .line 281
     invoke-virtual {v0, p3}, Lcom/android/server/timedetector/ConfigurationInternal;->createCapabilitiesAndConfig(Z)Landroid/app/time/TimeCapabilitiesAndConfig;
 
     move-result-object p3
 
-    .line 282
     invoke-virtual {p3}, Landroid/app/time/TimeCapabilitiesAndConfig;->getCapabilities()Landroid/app/time/TimeCapabilities;
 
     move-result-object p3
 
-    .line 283
     invoke-virtual {p3}, Landroid/app/time/TimeCapabilities;->getSetManualTimeCapability()I
 
     move-result v0
@@ -2940,7 +2693,6 @@
 
     const-string/jumbo v0, "time_detector"
 
-    .line 284
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2971,19 +2723,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 288
     monitor-exit p0
 
     return v2
 
-    .line 291
     :cond_1
     :try_start_2
     invoke-virtual {p2}, Landroid/app/timedetector/ManualTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object p3
 
-    .line 293
     invoke-virtual {p0, p3, p2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateManualSuggestionTime(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
 
     move-result p2
@@ -2992,7 +2741,6 @@
 
     if-nez p2, :cond_2
 
-    .line 294
     monitor-exit p0
 
     return v2
@@ -3000,7 +2748,6 @@
     :cond_2
     const/4 p2, 0x2
 
-    .line 297
     :try_start_3
     invoke-virtual {p0, p2, p3, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->setSystemClockAndConfidenceIfRequired(ILandroid/app/time/UnixEpochTime;Ljava/lang/String;)Z
 
@@ -3025,13 +2772,11 @@
 
     monitor-enter p0
 
-    .line 302
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     const-string/jumbo v1, "time_detector"
 
-    .line 304
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3054,10 +2799,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 310
     invoke-virtual {p1}, Lcom/android/server/timedetector/NetworkTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
     move-result-object v0
@@ -3068,7 +2811,6 @@
 
     if-nez v0, :cond_0
 
-    .line 312
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isNtpSetByMdm()Z
 
     move-result v0
@@ -3077,12 +2819,10 @@
 
     if-nez v0, :cond_0
 
-    .line 314
     monitor-exit p0
 
     return-void
 
-    .line 324
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
@@ -3095,23 +2835,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 325
     invoke-virtual {v0, p1}, Lcom/android/server/timedetector/NetworkTimeSuggestion;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 326
     :cond_1
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastNetworkSuggestion:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v0, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->set(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 327
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->notifyNetworkTimeUpdateListenersAsynchronously()V
 
-    .line 332
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3127,12 +2863,10 @@
 
     move-result-object p1
 
-    .line 333
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 334
     monitor-exit p0
 
     return-void
@@ -3150,7 +2884,6 @@
 
     monitor-enter p0
 
-    .line 491
     :try_start_0
     invoke-virtual {p1}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
 
@@ -3160,12 +2893,10 @@
 
     if-nez v0, :cond_0
 
-    .line 492
     monitor-exit p0
 
     return-void
 
-    .line 495
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/app/timedetector/TelephonyTimeSuggestion;->getUnixEpochTime()Landroid/app/time/UnixEpochTime;
@@ -3180,12 +2911,10 @@
 
     if-nez v0, :cond_1
 
-    .line 496
     monitor-exit p0
 
     return-void
 
-    .line 500
     :cond_1
     :try_start_2
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->storeTelephonySuggestion(Landroid/app/timedetector/TelephonyTimeSuggestion;)Z
@@ -3196,12 +2925,10 @@
 
     if-nez v0, :cond_2
 
-    .line 501
     monitor-exit p0
 
     return-void
 
-    .line 506
     :cond_2
     :try_start_3
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3218,12 +2945,10 @@
 
     move-result-object p1
 
-    .line 507
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 508
     monitor-exit p0
 
     return-void
@@ -3241,7 +2966,6 @@
 
     monitor-enter p0
 
-    .line 466
     :try_start_0
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mServiceConfigAccessor:Lcom/android/server/timedetector/ServiceConfigAccessor;
 
@@ -3251,7 +2975,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 474
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3278,12 +3001,10 @@
 
     move-result-object p1
 
-    .line 478
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->updateCurrentConfigurationInternalIfRequired(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 480
     :cond_0
     monitor-exit p0
 
@@ -3300,66 +3021,52 @@
 .method public final updateCurrentConfigurationInternalIfRequired(Ljava/lang/String;)V
     .locals 3
 
-    .line 520
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mServiceConfigAccessor:Lcom/android/server/timedetector/ServiceConfigAccessor;
 
-    .line 521
     invoke-interface {v0}, Lcom/android/server/timedetector/ServiceConfigAccessor;->getCurrentUserConfigurationInternal()Lcom/android/server/timedetector/ConfigurationInternal;
 
     move-result-object v0
 
-    .line 523
     iget-object v1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 527
     invoke-virtual {v0, v1}, Lcom/android/server/timedetector/ConfigurationInternal;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 528
     iput-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 530
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string p1, " [oldConfiguration="
 
-    .line 531
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, ", newConfiguration="
 
-    .line 532
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, "]"
 
-    .line 533
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 534
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 535
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->addDebugLogEntry(Ljava/lang/String;)V
 
-    .line 538
     invoke-virtual {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->notifyStateChangeListenersAsynchronously()V
 
-    .line 540
     iget-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 541
     invoke-virtual {p1}, Lcom/android/server/timedetector/ConfigurationInternal;->getAutoDetectionEnabledBehavior()Z
 
     move-result p1
@@ -3368,7 +3075,6 @@
 
     const-string p1, "Auto time zone detection config changed."
 
-    .line 547
     invoke-virtual {p0, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->doAutoTimeDetection(Ljava/lang/String;)V
 
     goto :goto_0
@@ -3376,7 +3082,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 551
     iput-object p1, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mLastAutoSystemClockTimeSet:Landroid/app/time/UnixEpochTime;
 
     :cond_1
@@ -3387,7 +3092,6 @@
 .method public final upgradeSystemClockConfidenceIfRequired(Landroid/app/time/UnixEpochTime;Ljava/lang/String;)V
     .locals 13
 
-    .line 1016
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->systemClockConfidence()I
@@ -3410,13 +3114,11 @@
 
     return-void
 
-    .line 1023
     :cond_1
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->acquireWakeLock()V
 
-    .line 1027
     :try_start_0
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -3424,7 +3126,6 @@
 
     move-result-wide v9
 
-    .line 1028
     iget-object v2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->systemClockMillis()J
@@ -3439,14 +3140,12 @@
 
     move-wide v7, v11
 
-    .line 1029
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->isTimeWithinConfidenceThreshold(Landroid/app/time/UnixEpochTime;JJ)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 1033
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3493,17 +3192,14 @@
 
     const-string/jumbo p2, "time_detector"
 
-    .line 1041
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
     iget-object p2, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {p2, v1, p1}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->setSystemClockConfidence(ILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1047
     :cond_2
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
@@ -3518,28 +3214,24 @@
 
     invoke-interface {p0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->releaseWakeLock()V
 
-    .line 1048
     throw p1
 .end method
 
 .method public final validateAutoSuggestionTime(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
     .locals 2
 
-    .line 693
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     invoke-virtual {v0}, Lcom/android/server/timedetector/ConfigurationInternal;->getAutoSuggestionLowerBound()Ljava/time/Instant;
 
     move-result-object v0
 
-    .line 694
     invoke-virtual {p0, p1, p2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionCommon(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 695
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionAgainstLowerBound(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;Ljava/time/Instant;)Z
 
     move-result p0
@@ -3560,21 +3252,18 @@
 .method public final validateManualSuggestionTime(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
     .locals 2
 
-    .line 706
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
     invoke-virtual {v0}, Lcom/android/server/timedetector/ConfigurationInternal;->getManualSuggestionLowerBound()Ljava/time/Instant;
 
     move-result-object v0
 
-    .line 709
     invoke-virtual {p0, p1, p2}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionCommon(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 710
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->validateSuggestionAgainstLowerBound(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;Ljava/time/Instant;)Z
 
     move-result p0
@@ -3595,7 +3284,6 @@
 .method public final validateSuggestionAgainstLowerBound(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;Ljava/time/Instant;)Z
     .locals 2
 
-    .line 719
     invoke-virtual {p3}, Ljava/time/Instant;->toEpochMilli()J
 
     move-result-wide v0
@@ -3608,7 +3296,6 @@
 
     if-lez p0, :cond_0
 
-    .line 720
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3646,14 +3333,12 @@
 .method public final validateSuggestionCommon(Landroid/app/time/UnixEpochTime;Ljava/lang/Object;)Z
     .locals 5
 
-    .line 665
     iget-object v0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mEnvironment:Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;
 
     invoke-interface {v0}, Lcom/android/server/timedetector/TimeDetectorStrategyImpl$Environment;->elapsedRealtimeMillis()J
 
     move-result-wide v0
 
-    .line 666
     invoke-virtual {p1}, Landroid/app/time/UnixEpochTime;->getElapsedRealtimeMillis()J
 
     move-result-wide v2
@@ -3666,7 +3351,6 @@
 
     if-gez v2, :cond_0
 
-    .line 668
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3691,7 +3375,6 @@
 
     return v3
 
-    .line 674
     :cond_0
     invoke-virtual {p1}, Landroid/app/time/UnixEpochTime;->getUnixEpochTimeMillis()J
 
@@ -3699,7 +3382,6 @@
 
     iget-object p0, p0, Lcom/android/server/timedetector/TimeDetectorStrategyImpl;->mCurrentConfigurationInternal:Lcom/android/server/timedetector/ConfigurationInternal;
 
-    .line 675
     invoke-virtual {p0}, Lcom/android/server/timedetector/ConfigurationInternal;->getSuggestionUpperBound()Ljava/time/Instant;
 
     move-result-object p0
@@ -3712,7 +3394,6 @@
 
     if-lez p0, :cond_1
 
-    .line 679
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

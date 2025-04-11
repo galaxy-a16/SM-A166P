@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbUI;)V
     .locals 0
 
-    .line 266
     iput-object p1, p0, Lcom/android/server/usb/UsbUI$4;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 268
     iget-object p1, p0, Lcom/android/server/usb/UsbUI$4;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p1}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmIsHiccupState(Lcom/android/server/usb/UsbUI;)Z
 
     move-result p1
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/usb/UsbUI$4;->this$0:Lcom/android/server/usb/UsbUI;
 
     const-string/jumbo v1, "misc_event"
@@ -51,7 +48,6 @@
     :cond_0
     invoke-static {v0, v2}, Lcom/android/server/usb/UsbUI;->-$$Nest$fputmIsHiccupState(Lcom/android/server/usb/UsbUI;Z)V
 
-    .line 272
     iget-object p2, p0, Lcom/android/server/usb/UsbUI$4;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p2}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmIsHiccupState(Lcom/android/server/usb/UsbUI;)Z
@@ -60,7 +56,6 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 273
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +86,6 @@
 
     invoke-static {p2, p1}, Landroid/util/sysfwutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     iget-object p0, p0, Lcom/android/server/usb/UsbUI$4;->this$0:Lcom/android/server/usb/UsbUI;
 
     invoke-static {p0}, Lcom/android/server/usb/UsbUI;->-$$Nest$fgetmIsHiccupState(Lcom/android/server/usb/UsbUI;)Z

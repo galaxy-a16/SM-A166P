@@ -24,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;IILjava/util/Map$Entry;Landroid/content/pm/ApplicationInfo;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda17;->f$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -47,7 +46,6 @@
 .method public final runOrThrow()V
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda17;->f$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$$ExternalSyntheticLambda17;->f$1:I

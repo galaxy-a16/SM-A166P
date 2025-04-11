@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/tracing/TracingServiceProxy;)V
     .locals 0
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/tracing/TracingServiceProxy$1;->this$0:Lcom/android/server/tracing/TracingServiceProxy;
 
     invoke-direct {p0}, Landroid/tracing/ITracingServiceProxy$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public notifyTraceSessionEnded(Z)V
     .locals 0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy$1;->this$0:Lcom/android/server/tracing/TracingServiceProxy;
 
     invoke-static {p0, p1}, Lcom/android/server/tracing/TracingServiceProxy;->-$$Nest$mnotifyTraceur(Lcom/android/server/tracing/TracingServiceProxy;Z)V
@@ -35,7 +33,6 @@
 .method public reportTrace(Landroid/tracing/TraceReportParams;)V
     .locals 0
 
-    .line 110
     iget-object p0, p0, Lcom/android/server/tracing/TracingServiceProxy$1;->this$0:Lcom/android/server/tracing/TracingServiceProxy;
 
     invoke-static {p0, p1}, Lcom/android/server/tracing/TracingServiceProxy;->-$$Nest$mreportTrace(Lcom/android/server/tracing/TracingServiceProxy;Landroid/tracing/TraceReportParams;)V

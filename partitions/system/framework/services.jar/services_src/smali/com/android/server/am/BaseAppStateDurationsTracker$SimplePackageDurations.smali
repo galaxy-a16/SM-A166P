@@ -19,10 +19,8 @@
 
     move-object v5, p3
 
-    .line 231
     invoke-direct/range {v0 .. v5}, Lcom/android/server/am/BaseAppStateDurations;-><init>(ILjava/lang/String;ILjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
-    .line 232
     iget-object p0, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     new-instance p1, Ljava/util/LinkedList;
@@ -39,7 +37,6 @@
 .method public constructor <init>(Lcom/android/server/am/BaseAppStateDurationsTracker$SimplePackageDurations;)V
     .locals 0
 
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/am/BaseAppStateDurations;-><init>(Lcom/android/server/am/BaseAppStateDurations;)V
 
     return-void
@@ -50,7 +47,6 @@
 .method public addEvent(ZJ)V
     .locals 1
 
-    .line 240
     new-instance v0, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;
 
     invoke-direct {v0, p2, p3}, Lcom/android/server/am/BaseAppStateTimeEvents$BaseTimeEvent;-><init>(J)V
@@ -65,7 +61,6 @@
 .method public formatEventTypeLabel(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, ""
 
     return-object p0
@@ -76,7 +71,6 @@
 
     const/4 v0, 0x0
 
-    .line 252
     invoke-virtual {p0, v0}, Lcom/android/server/am/BaseAppStateDurations;->isActive(I)Z
 
     move-result p0

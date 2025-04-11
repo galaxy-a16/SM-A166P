@@ -13,7 +13,6 @@
 .method public constructor <init>(Landroid/widget/Toast;Ljava/lang/String;)V
     .locals 0
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/desktopmode/ToastManager$1;->val$toast:Landroid/widget/Toast;
 
     iput-object p2, p0, Lcom/android/server/desktopmode/ToastManager$1;->val$msg:Ljava/lang/String;
@@ -28,14 +27,12 @@
 .method public onToastHidden()V
     .locals 4
 
-    .line 47
     invoke-static {}, Lcom/android/server/desktopmode/ToastManager;->-$$Nest$sfgetsToasts()Ljava/util/List;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 48
     :try_start_0
     invoke-static {}, Lcom/android/server/desktopmode/ToastManager;->-$$Nest$sfgetsToasts()Ljava/util/List;
 
@@ -45,7 +42,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 49
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -82,7 +78,6 @@
 
     invoke-static {v1, p0}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     :cond_0
     monitor-exit v0
 

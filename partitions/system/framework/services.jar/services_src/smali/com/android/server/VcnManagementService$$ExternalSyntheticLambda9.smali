@@ -20,7 +20,6 @@
 .method public final fromPersistableBundle(Landroid/os/PersistableBundle;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     new-instance p0, Landroid/net/vcn/VcnConfig;
 
     invoke-direct {p0, p1}, Landroid/net/vcn/VcnConfig;-><init>(Landroid/os/PersistableBundle;)V

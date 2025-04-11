@@ -15,15 +15,12 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsVersionManager;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager$MARsSettingsInfo;->this$0:Lcom/android/server/am/mars/database/MARsVersionManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/am/mars/database/MARsVersionManager$MARsSettingsInfo;->key:Ljava/lang/String;
 
-    .line 57
     iput-object p3, p0, Lcom/android/server/am/mars/database/MARsVersionManager$MARsSettingsInfo;->value:Ljava/lang/String;
 
     return-void

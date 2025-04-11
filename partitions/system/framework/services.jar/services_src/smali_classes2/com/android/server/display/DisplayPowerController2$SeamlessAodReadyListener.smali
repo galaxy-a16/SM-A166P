@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayPowerController2;)V
     .locals 0
 
-    .line 4778
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/DisplayPowerController2;Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener;-><init>(Lcom/android/server/display/DisplayPowerController2;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public readyToScreenTurningOn()V
     .locals 2
 
-    .line 4782
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmTag(Lcom/android/server/display/DisplayPowerController2;)Ljava/lang/String;
@@ -47,7 +44,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4784
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmHandler(Lcom/android/server/display/DisplayPowerController2;)Lcom/android/server/display/DisplayPowerController2$DisplayControllerHandler;
@@ -62,10 +58,8 @@
 
     const/4 v1, 0x1
 
-    .line 4785
     invoke-virtual {v0, v1}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    .line 4786
     iget-object p0, p0, Lcom/android/server/display/DisplayPowerController2$SeamlessAodReadyListener;->this$0:Lcom/android/server/display/DisplayPowerController2;
 
     invoke-static {p0}, Lcom/android/server/display/DisplayPowerController2;->-$$Nest$fgetmHandler(Lcom/android/server/display/DisplayPowerController2;)Lcom/android/server/display/DisplayPowerController2$DisplayControllerHandler;

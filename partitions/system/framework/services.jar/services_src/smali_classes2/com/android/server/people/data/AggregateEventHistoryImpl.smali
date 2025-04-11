@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -32,7 +30,6 @@
 .method public addEventHistory(Lcom/android/server/people/data/EventHistory;)V
     .locals 0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/people/data/AggregateEventHistoryImpl;->mEventHistoryList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -43,7 +40,6 @@
 .method public getEventIndex(I)Lcom/android/server/people/data/EventIndex;
     .locals 2
 
-    .line 33
     iget-object p0, p0, Lcom/android/server/people/data/AggregateEventHistoryImpl;->mEventHistoryList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -63,12 +59,10 @@
 
     check-cast v0, Lcom/android/server/people/data/EventHistory;
 
-    .line 34
     invoke-interface {v0, p1}, Lcom/android/server/people/data/EventHistory;->getEventIndex(I)Lcom/android/server/people/data/EventIndex;
 
     move-result-object v0
 
-    .line 35
     invoke-virtual {v0}, Lcom/android/server/people/data/EventIndex;->isEmpty()Z
 
     move-result v1
@@ -77,7 +71,6 @@
 
     return-object v0
 
-    .line 39
     :cond_1
     sget-object p0, Lcom/android/server/people/data/EventIndex;->EMPTY:Lcom/android/server/people/data/EventIndex;
 
@@ -87,7 +80,6 @@
 .method public getEventIndex(Ljava/util/Set;)Lcom/android/server/people/data/EventIndex;
     .locals 3
 
-    .line 46
     iget-object p0, p0, Lcom/android/server/people/data/AggregateEventHistoryImpl;->mEventHistoryList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -110,7 +102,6 @@
 
     check-cast v1, Lcom/android/server/people/data/EventHistory;
 
-    .line 47
     invoke-interface {v1, p1}, Lcom/android/server/people/data/EventHistory;->getEventIndex(Ljava/util/Set;)Lcom/android/server/people/data/EventIndex;
 
     move-result-object v1
@@ -121,7 +112,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_1
     invoke-virtual {v1}, Lcom/android/server/people/data/EventIndex;->isEmpty()Z
 
@@ -129,7 +119,6 @@
 
     if-nez v2, :cond_0
 
-    .line 51
     invoke-static {v0, v1}, Lcom/android/server/people/data/EventIndex;->combine(Lcom/android/server/people/data/EventIndex;Lcom/android/server/people/data/EventIndex;)Lcom/android/server/people/data/EventIndex;
 
     move-result-object v0
@@ -141,7 +130,6 @@
 
     goto :goto_1
 
-    .line 54
     :cond_3
     sget-object v0, Lcom/android/server/people/data/EventIndex;->EMPTY:Lcom/android/server/people/data/EventIndex;
 

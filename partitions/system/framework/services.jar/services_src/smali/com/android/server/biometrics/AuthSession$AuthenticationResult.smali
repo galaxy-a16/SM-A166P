@@ -23,7 +23,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/biometrics/AuthSession$AuthenticationResult-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/AuthSession$AuthenticationResult;-><init>()V
 
     return-void

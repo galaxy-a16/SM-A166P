@@ -20,7 +20,6 @@
 .method public final toPersistableBundle(Ljava/lang/Object;)Landroid/os/PersistableBundle;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/os/ParcelUuid;
 
     invoke-static {p1}, Lcom/android/server/vcn/util/PersistableBundleUtils;->fromParcelUuid(Landroid/os/ParcelUuid;)Landroid/os/PersistableBundle;

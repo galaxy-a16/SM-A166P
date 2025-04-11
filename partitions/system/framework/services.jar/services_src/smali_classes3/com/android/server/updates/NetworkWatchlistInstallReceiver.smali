@@ -15,7 +15,6 @@
 
     const-string/jumbo v3, "network_watchlist.xml"
 
-    .line 28
     invoke-direct {p0, v2, v3, v0, v1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public postInstall(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 34
     :try_start_0
     const-class p0, Landroid/net/NetworkWatchlistManager;
 
@@ -47,7 +45,6 @@
 
     const-string p1, "Unable to reload watchlist"
 
-    .line 37
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

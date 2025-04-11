@@ -17,34 +17,29 @@
 .method public onAnimationComplete()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonNegative()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonPositive()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDismiss()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onShow()V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 287
     invoke-direct {p0, p1}, Lcom/android/server/location/eventlog/LocationEventLog$ProviderEvent;-><init>(Ljava/lang/String;)V
 
-    .line 288
     iput-boolean p2, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderMockedEvent;->mMocked:Z
 
     return-void
@@ -25,12 +23,10 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 293
     iget-boolean v0, p0, Lcom/android/server/location/eventlog/LocationEventLog$ProviderMockedEvent;->mMocked:Z
 
     if-eqz v0, :cond_0
 
-    .line 294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,7 +45,6 @@
 
     return-object p0
 
-    .line 296
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

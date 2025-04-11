@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1524
     iput-object p1, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
-    .line 1525
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1530
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -50,7 +47,6 @@
 
     goto :goto_1
 
-    .line 1556
     :cond_0
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -61,7 +57,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 1557
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -73,7 +68,6 @@
 
     goto :goto_1
 
-    .line 1547
     :cond_2
     iget-object p1, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -87,7 +81,6 @@
 
     monitor-enter p1
 
-    .line 1548
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -97,7 +90,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1549
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-static {v0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->-$$Nest$fgetmMagnifedViewport(Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;)Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MagnifiedViewport;
@@ -106,7 +98,6 @@
 
     invoke-virtual {v0, v1, v1}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MagnifiedViewport;->setMagnifiedRegionBorderShown(ZZ)V
 
-    .line 1550
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-static {p0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->-$$Nest$fgetmService(Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;)Lcom/android/server/wm/WindowManagerService;
@@ -115,7 +106,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->scheduleAnimationLocked()V
 
-    .line 1552
     :cond_3
     monitor-exit p1
     :try_end_0
@@ -137,7 +127,6 @@
 
     throw p0
 
-    .line 1543
     :cond_4
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -149,7 +138,6 @@
 
     goto :goto_1
 
-    .line 1539
     :cond_5
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
@@ -161,18 +149,15 @@
 
     goto :goto_1
 
-    .line 1532
     :cond_6
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/internal/os/SomeArgs;
 
-    .line 1533
     iget-object p1, p1, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     check-cast p1, Landroid/graphics/Region;
 
-    .line 1534
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier$MyHandler;->this$0:Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;
 
     invoke-static {p0}, Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;->-$$Nest$fgetmCallbacks(Lcom/android/server/wm/AccessibilityController$DisplayMagnifier;)Lcom/android/server/wm/WindowManagerInternal$MagnificationCallbacks;
@@ -181,7 +166,6 @@
 
     invoke-interface {p0, p1}, Lcom/android/server/wm/WindowManagerInternal$MagnificationCallbacks;->onMagnificationRegionChanged(Landroid/graphics/Region;)V
 
-    .line 1535
     invoke-virtual {p1}, Landroid/graphics/Region;->recycle()V
 
     :goto_1

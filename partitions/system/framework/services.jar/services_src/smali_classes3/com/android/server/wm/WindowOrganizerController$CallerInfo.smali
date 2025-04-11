@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2468
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2469
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wm/WindowOrganizerController$CallerInfo;->mPid:I
 
-    .line 2470
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0

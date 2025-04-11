@@ -15,20 +15,16 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 1
 
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayDeque;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/utils/EventLogger;->mEvents:Ljava/util/ArrayDeque;
 
-    .line 63
     iput p1, p0, Lcom/android/server/utils/EventLogger;->mMemSize:I
 
-    .line 64
     iput-object p2, p0, Lcom/android/server/utils/EventLogger;->mTag:Ljava/lang/String;
 
     return-void
@@ -41,7 +37,6 @@
 
     monitor-enter p0
 
-    .line 89
     :try_start_0
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mTag:Ljava/lang/String;
 
@@ -55,7 +50,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
     monitor-exit p0
 
     return-void
@@ -76,12 +70,10 @@
     :try_start_0
     const-string v0, ""
 
-    .line 94
     invoke-virtual {p0, p1, v0}, Lcom/android/server/utils/EventLogger;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 95
     monitor-exit p0
 
     return-void
@@ -99,7 +91,6 @@
 
     monitor-enter p0
 
-    .line 106
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger;->getDumpTitle()Ljava/lang/String;
 
@@ -107,7 +98,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
@@ -127,7 +117,6 @@
 
     check-cast v1, Lcom/android/server/utils/EventLogger$Event;
 
-    .line 109
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_0
     monitor-exit p0
 
@@ -169,7 +157,6 @@
 
     monitor-enter p0
 
-    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mEvents:Ljava/util/ArrayDeque;
 
@@ -181,12 +168,10 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
-    .line 73
     :cond_0
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mEvents:Ljava/util/ArrayDeque;
 
@@ -194,7 +179,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     monitor-exit p0
 
     return-void
@@ -212,13 +196,11 @@
 
     monitor-enter p0
 
-    .line 83
     :try_start_0
     new-instance v0, Lcom/android/server/utils/EventLogger$StringEvent;
 
     invoke-direct {v0, p1}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {v0, p2, p3}, Lcom/android/server/utils/EventLogger$Event;->printLog(ILjava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object p1
@@ -227,7 +209,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 85
     monitor-exit p0
 
     return-void
@@ -243,7 +224,6 @@
 .method public getDumpTitle()Ljava/lang/String;
     .locals 2
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/utils/EventLogger;->mTag:Ljava/lang/String;
 
     const-string v1, "Events log: "
@@ -252,7 +232,6 @@
 
     return-object v1
 
-    .line 101
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

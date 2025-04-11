@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/security/SecurityPolicy;)V
     .locals 0
 
-    .line 220
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onBlocked()Ljava/lang/String;
     .locals 1
 
-    .line 224
     iget-object p0, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-static {p0}, Lcom/android/server/enterprise/security/SecurityPolicy;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/security/SecurityPolicy;)Landroid/content/Context;

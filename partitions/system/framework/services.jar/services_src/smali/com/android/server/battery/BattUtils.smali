@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +37,6 @@
 
     const-string/jumbo v0, "yyyyMMdd"
 
-    .line 20
     invoke-static {v0}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
@@ -51,7 +49,6 @@
 .method public static convertDateStringToLocalDate(Ljava/lang/String;)Ljava/time/LocalDate;
     .locals 4
 
-    .line 50
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -70,19 +67,16 @@
     :catch_0
     move-exception v0
 
-    .line 52
     sget-object v1, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     const-string v2, "[convertDateStringToLocalDate]Exception"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 v0, 0x0
 
-    .line 55
     :goto_0
     sget-object v1, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
@@ -114,21 +108,18 @@
 .method public static getCurrentCalenderStr()Ljava/lang/String;
     .locals 4
 
-    .line 38
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 39
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x2
 
-    .line 40
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v3
@@ -137,12 +128,10 @@
 
     const/4 v1, 0x5
 
-    .line 41
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 42
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -171,13 +160,11 @@
 .method public static getCurrentNetworkDateStr()Ljava/lang/String;
     .locals 6
 
-    .line 25
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->currentNetworkTimeMillis()J
 
     move-result-wide v0
 
-    .line 26
     invoke-static {v0, v1}, Ljava/time/Instant;->ofEpochMilli(J)Ljava/time/Instant;
 
     move-result-object v2
@@ -194,7 +181,6 @@
 
     move-result-object v2
 
-    .line 27
     sget-object v3, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -219,7 +205,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     sget-object v0, Lcom/android/server/battery/BattUtils;->FORMATTER_yyyyMMdd:Ljava/time/format/DateTimeFormatter;
 
     invoke-virtual {v2, v0}, Ljava/time/LocalDateTime;->format(Ljava/time/format/DateTimeFormatter;)Ljava/lang/String;
@@ -233,14 +218,12 @@
     :catch_0
     move-exception v0
 
-    .line 30
     sget-object v1, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     const-string v2, "[getCurrentNetworkDateStr]Exception(cannot get network time)"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     const-string v0, ""
@@ -256,7 +239,6 @@
 
     if-nez p0, :cond_0
 
-    .line 61
     sget-object p0, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     const-string v1, "[readNode]path null"
@@ -265,7 +247,6 @@
 
     return-object v0
 
-    .line 64
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
@@ -278,13 +259,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
     :try_start_1
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 66
     sget-object v3, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -311,7 +290,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 68
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -322,7 +300,6 @@
     :catchall_0
     move-exception p0
 
-    .line 64
     :try_start_3
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -344,14 +321,12 @@
     :catch_0
     move-exception p0
 
-    .line 69
     sget-object v1, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 
     const-string v2, "[readNode]Exception"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return-object v0
@@ -360,7 +335,6 @@
 .method public static readNodeAsInt(Ljava/lang/String;)I
     .locals 1
 
-    .line 77
     :try_start_0
     invoke-static {p0}, Lcom/android/server/battery/BattUtils;->readNode(Ljava/lang/String;)Ljava/lang/String;
 
@@ -374,7 +348,6 @@
 
     return p0
 
-    .line 79
     :catch_0
     sget-object p0, Lcom/android/server/battery/BattUtils;->TAG:Ljava/lang/String;
 

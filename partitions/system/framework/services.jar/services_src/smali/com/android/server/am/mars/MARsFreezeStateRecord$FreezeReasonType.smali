@@ -25,7 +25,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
     .locals 4
 
-    .line 63
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     sget-object v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_REASON_LCDON:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
@@ -44,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 64
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     const/4 v1, 0x0
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
-    .line 65
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     const/4 v1, 0x1
@@ -78,7 +75,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_REASON_LCDON:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
-    .line 66
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     const/4 v1, 0x2
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_REASON_LCDOFF:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
-    .line 67
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     const/4 v1, 0x3
@@ -112,7 +107,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_REASON_OLAF:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
-    .line 63
     invoke-static {}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->$values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     move-result-object v0
@@ -125,17 +119,14 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/String;)V
     .locals 0
 
-    .line 71
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 72
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->typeNum:I
 
-    .line 73
     iput-object p4, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->freezeType:Ljava/lang/String;
 
     return-void
@@ -144,7 +135,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
     .locals 1
 
-    .line 63
     const-class v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -159,7 +149,6 @@
 .method public static values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
     .locals 1
 
-    .line 63
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->$VALUES:[Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
     invoke-virtual {v0}, [Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->clone()Ljava/lang/Object;
@@ -176,7 +165,6 @@
 .method public getTypeNum()I
     .locals 0
 
-    .line 77
     iget p0, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->typeNum:I
 
     return p0

@@ -42,10 +42,8 @@
 
     move-object/from16 v10, p10
 
-    .line 55
     invoke-direct/range {v0 .. v10}, Lcom/android/server/biometrics/sensors/HalClientMonitor;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;ILjava/lang/String;IILcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;)V
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,12 +52,10 @@
 
     move-object/from16 v0, p6
 
-    .line 59
     iput-object v0, v11, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
     move-object/from16 v0, p7
 
-    .line 60
     iput-object v0, v11, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     return-void
@@ -70,7 +66,6 @@
 .method public final doTemplateCleanup()V
     .locals 6
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
     const-string v1, "Biometrics/InternalEnumerateClient"
@@ -79,7 +74,6 @@
 
     const-string p0, "Null enrolledList"
 
-    .line 110
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -87,7 +81,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 116
     :goto_0
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
@@ -97,7 +90,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 117
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -106,7 +98,6 @@
 
     check-cast v2, Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;
 
-    .line 118
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +106,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
     invoke-virtual {v2}, Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;->getBiometricId()I
 
     move-result v4
@@ -136,17 +126,14 @@
 
     move-result-object v3
 
-    .line 118
     invoke-static {v1, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mUtils:Lcom/android/server/biometrics/sensors/BiometricUtils;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    .line 121
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v5
@@ -155,10 +142,8 @@
 
     move-result v2
 
-    .line 120
     invoke-interface {v3, v4, v5, v2}, Lcom/android/server/biometrics/sensors/BiometricUtils;->removeBiometricForUser(Landroid/content/Context;II)V
 
-    .line 123
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getLogger()Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v2
@@ -169,7 +154,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_1
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
@@ -181,7 +165,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x6
 
     return p0
@@ -190,7 +173,6 @@
 .method public getUnknownHALTemplates()Ljava/util/List;
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mUnknownHALTemplates:Ljava/util/List;
 
     return-object p0
@@ -205,12 +187,10 @@
 
     const-string p0, "Null identifier"
 
-    .line 88
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 91
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -236,7 +216,6 @@
 
     move v2, v1
 
-    .line 93
     :goto_0
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
@@ -246,7 +225,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 94
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -265,7 +243,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 95
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mEnrolledList:Ljava/util/List;
 
     invoke-interface {v1, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -283,19 +260,16 @@
     :goto_1
     if-nez v1, :cond_3
 
-    .line 102
     invoke-virtual {p1}, Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;->getBiometricId()I
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->mUnknownHALTemplates:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 105
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -319,15 +293,12 @@
 .method public onEnumerationResult(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;I)V
     .locals 0
 
-    .line 66
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->handleEnumeratedTemplate(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;)V
 
     if-nez p2, :cond_0
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/InternalEnumerateClient;->doTemplateCleanup()V
 
-    .line 69
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 p2, 0x1
@@ -341,10 +312,8 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 80
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->startHalOperation()V
 
     return-void
@@ -353,6 +322,5 @@
 .method public unableToStart()V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;
 
     invoke-static {p0}, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->$r8$lambda$d3M5ZHKfsL1rzqoMGVZz0KfC3Xw(Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;)V

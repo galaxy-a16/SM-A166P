@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.broadcastradio@2.0::IBroadcastRadio"
 
-    .line 23
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 25
     instance-of v3, v2, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio;
 
     if-eqz v3, :cond_1
 
-    .line 26
     check-cast v2, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio;
 
     return-object v2
 
-    .line 29
     :cond_1
     new-instance v2, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 32
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 33
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string v0, "android.hardware.broadcastradio@2.0::IBroadcastRadio"
 
-    .line 79
     invoke-static {v0, p0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;)Landroid/os/IHwBinder;
 
     move-result-object p0

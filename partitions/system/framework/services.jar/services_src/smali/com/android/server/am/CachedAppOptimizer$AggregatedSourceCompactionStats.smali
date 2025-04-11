@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/am/CachedAppOptimizer;Lcom/android/server/am/CachedAppOptimizer$CompactSource;)V
     .locals 0
 
-    .line 648
     iput-object p1, p0, Lcom/android/server/am/CachedAppOptimizer$AggregatedSourceCompactionStats;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     invoke-direct {p0, p1}, Lcom/android/server/am/CachedAppOptimizer$AggregatedCompactionStats;-><init>(Lcom/android/server/am/CachedAppOptimizer;)V

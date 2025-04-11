@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -28,7 +27,6 @@
 .method public initializeTaSession(Lcom/samsung/android/knox/knoxai/TaLoaderOptions;)I
     .locals 8
 
-    .line 35
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaLoaderOptions;->getRoot()Ljava/lang/String;
 
     move-result-object v1
@@ -41,7 +39,6 @@
 
     move-result-object v3
 
-    .line 36
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaLoaderOptions;->getProcessLength()I
 
     move-result v4
@@ -50,7 +47,6 @@
 
     move-result-object v5
 
-    .line 37
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaLoaderOptions;->getTaOffset()I
 
     move-result v6
@@ -61,7 +57,6 @@
 
     move-object v0, p0
 
-    .line 35
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/enterprise/knoxai/KnoxAiTzNative;->tzKnoxAiInitializeFd(Ljava/lang/String;ILjava/lang/String;ILjava/io/FileDescriptor;II)I
 
     move-result p0
@@ -74,14 +69,12 @@
 
     if-eqz p3, :cond_4
 
-    .line 46
     array-length v0, p3
 
     if-nez v0, :cond_0
 
     goto/16 :goto_1
 
-    .line 47
     :cond_0
     new-instance v0, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;
 
@@ -91,19 +84,16 @@
 
     aput-object v0, p3, v1
 
-    .line 48
     sget-object v2, Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessBufferType;->OUTPUT_RESULT:Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessBufferType;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->setProcessBufferType(Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessBufferType;)V
 
     if-eqz p2, :cond_3
 
-    .line 49
     array-length v0, p2
 
     if-lez v0, :cond_3
 
-    .line 50
     sget-object v0, Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;->GET_CERT:Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;
 
     invoke-virtual {v0}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;->getValue()I
@@ -112,7 +102,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 51
     aget-object p1, p2, v1
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBuffer()[B
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_1
     sget-object v0, Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;->SET_PROV:Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;
 
@@ -143,7 +131,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 53
     aget-object p1, p2, v1
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBuffer()[B
@@ -158,7 +145,6 @@
 
     aget-object v3, p2, v2
 
-    .line 54
     invoke-virtual {v3}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBuffer()[B
 
     move-result-object v3
@@ -169,14 +155,12 @@
 
     move-result p2
 
-    .line 53
     invoke-virtual {p0, p1, v0, v3, p2}, Lcom/android/server/enterprise/knoxai/KnoxAiTzNative;->tzKnoxAiSetProv([BI[BI)[B
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 55
     :cond_2
     sget-object v0, Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;->RETURN_PLAIN_FACTORY_MODEL_KEY:Lcom/samsung/android/knox/knoxai/TaProcessBuffer$ProcessType;
 
@@ -186,7 +170,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 56
     aget-object p1, p2, v1
 
     invoke-virtual {p1}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBuffer()[B
@@ -195,26 +178,22 @@
 
     aget-object v0, p2, v1
 
-    .line 57
     invoke-virtual {v0}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBufferLength()I
 
     move-result v0
 
     aget-object v3, p2, v2
 
-    .line 58
     invoke-virtual {v3}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBuffer()[B
 
     move-result-object v3
 
     aget-object p2, p2, v2
 
-    .line 59
     invoke-virtual {p2}, Lcom/samsung/android/knox/knoxai/TaProcessBuffer;->getBufferLength()I
 
     move-result p2
 
-    .line 56
     invoke-virtual {p0, p1, v0, v3, p2}, Lcom/android/server/enterprise/knoxai/KnoxAiTzNative;->tzKnoxAiReturnPlainFactoryModelKey([BI[BI)[B
 
     move-result-object p0
@@ -224,7 +203,6 @@
     :cond_3
     const/4 p0, 0x0
 
-    .line 62
     :goto_0
     aget-object p1, p3, v1
 
@@ -238,7 +216,6 @@
 .method public terminateTaSession()I
     .locals 0
 
-    .line 41
     invoke-virtual {p0}, Lcom/android/server/enterprise/knoxai/KnoxAiTzNative;->tzKnoxAiTerminate()I
 
     move-result p0

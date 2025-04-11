@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService$BinderService;I)V
     .locals 0
 
-    .line 2706
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->val$deviceType:I
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 2709
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/hdmi/HdmiControlService$BinderService;->this$0:Lcom/android/server/hdmi/HdmiControlService;
@@ -52,12 +50,10 @@
 
     const-string p0, "Local device not available"
 
-    .line 2711
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2714
     :cond_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -71,12 +67,10 @@
 
     const-string p0, "audio system is not available"
 
-    .line 2715
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2718
     :cond_1
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 
@@ -94,12 +88,10 @@
 
     const-string p0, "audio system is not in system audio mode"
 
-    .line 2719
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2722
     :cond_2
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$BinderService$23;->this$1:Lcom/android/server/hdmi/HdmiControlService$BinderService;
 

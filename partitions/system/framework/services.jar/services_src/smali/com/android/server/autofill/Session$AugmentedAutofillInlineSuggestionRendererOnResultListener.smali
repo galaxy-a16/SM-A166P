@@ -18,20 +18,16 @@
 .method public constructor <init>(Lcom/android/server/autofill/Session;Landroid/view/autofill/AutofillId;Ljava/util/function/Consumer;)V
     .locals 1
 
-    .line 5014
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5015
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRendererOnResultListener;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
-    .line 5016
     iput-object p2, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRendererOnResultListener;->mFocusedId:Landroid/view/autofill/AutofillId;
 
-    .line 5017
     iput-object p3, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRendererOnResultListener;->mRequestAugmentedAutofill:Ljava/util/function/Consumer;
 
     return-void
@@ -42,7 +38,6 @@
 .method public onResult(Landroid/os/Bundle;)V
     .locals 3
 
-    .line 5022
     iget-object v0, p0, Lcom/android/server/autofill/Session$AugmentedAutofillInlineSuggestionRendererOnResultListener;->mSessionWeakRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -53,7 +48,6 @@
 
     const-string v1, "AugmentedAutofillInlineSuggestionRendererOnResultListener:"
 
-    .line 5024
     invoke-static {v0, v1}, Lcom/android/server/autofill/Session;->-$$Nest$smlogIfSessionNull(Lcom/android/server/autofill/Session;Ljava/lang/String;)Z
 
     move-result v1
@@ -62,13 +56,11 @@
 
     return-void
 
-    .line 5028
     :cond_0
     iget-object v1, v0, Lcom/android/server/autofill/Session;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 5029
     :try_start_0
     iget-object v0, v0, Lcom/android/server/autofill/Session;->mInlineSessionController:Lcom/android/server/autofill/AutofillInlineSessionController;
 
@@ -78,7 +70,6 @@
 
     invoke-virtual {v0, v2, p0, p1}, Lcom/android/server/autofill/AutofillInlineSessionController;->onCreateInlineSuggestionsRequestLocked(Landroid/view/autofill/AutofillId;Ljava/util/function/Consumer;Landroid/os/Bundle;)V
 
-    .line 5032
     monitor-exit v1
 
     return-void

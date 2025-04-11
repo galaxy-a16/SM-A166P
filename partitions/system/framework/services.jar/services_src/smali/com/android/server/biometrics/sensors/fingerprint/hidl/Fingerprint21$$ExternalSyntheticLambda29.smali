@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/hardware/biometrics/fingerprint/PointerContext;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda29;->f$0:Landroid/hardware/biometrics/fingerprint/PointerContext;
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/hidl/Fingerprint21$$ExternalSyntheticLambda29;->f$0:Landroid/hardware/biometrics/fingerprint/PointerContext;
 
     check-cast p1, Lcom/android/server/biometrics/sensors/BaseClientMonitor;

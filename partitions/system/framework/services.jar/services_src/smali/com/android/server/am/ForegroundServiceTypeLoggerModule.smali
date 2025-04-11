@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -29,7 +27,6 @@
 .method public final convertFgsTypeToApiTypes(I)Landroid/util/IntArray;
     .locals 4
 
-    .line 418
     new-instance p0, Landroid/util/IntArray;
 
     invoke-direct {p0}, Landroid/util/IntArray;-><init>()V
@@ -42,7 +39,6 @@
 
     const/4 v0, 0x1
 
-    .line 421
     invoke-virtual {p0, v0}, Landroid/util/IntArray;->add(I)V
 
     :cond_0
@@ -56,15 +52,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 425
     invoke-virtual {p0, v2}, Landroid/util/IntArray;->add(I)V
 
-    .line 426
     invoke-virtual {p0, v3}, Landroid/util/IntArray;->add(I)V
 
     const/16 v0, 0x9
 
-    .line 427
     invoke-virtual {p0, v0}, Landroid/util/IntArray;->add(I)V
 
     :cond_1
@@ -74,7 +67,6 @@
 
     const/4 v0, 0x3
 
-    .line 431
     invoke-virtual {p0, v0}, Landroid/util/IntArray;->add(I)V
 
     :cond_2
@@ -86,10 +78,8 @@
 
     const/4 v0, 0x5
 
-    .line 435
     invoke-virtual {p0, v0}, Landroid/util/IntArray;->add(I)V
 
-    .line 436
     invoke-virtual {p0, v1}, Landroid/util/IntArray;->add(I)V
 
     :cond_3
@@ -101,7 +91,6 @@
 
     const/4 v0, 0x6
 
-    .line 440
     invoke-virtual {p0, v0}, Landroid/util/IntArray;->add(I)V
 
     :cond_4
@@ -111,7 +100,6 @@
 
     const/4 p1, 0x7
 
-    .line 444
     invoke-virtual {p0, p1}, Landroid/util/IntArray;->add(I)V
 
     :cond_5
@@ -121,7 +109,6 @@
 .method public final hasValidActiveFgs(II)Z
     .locals 0
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -132,7 +119,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->contains(I)Z
@@ -154,19 +140,16 @@
 
     move/from16 v1, p4
 
-    .line 464
     iget-wide v2, v0, Lcom/android/server/am/ServiceRecord;->createRealTime:J
 
     sub-long v2, v2, p5
 
-    .line 465
     iget-wide v4, v0, Lcom/android/server/am/ServiceRecord;->mFgsExitTime:J
 
     sub-long v4, p5, v4
 
     move-object/from16 v6, p0
 
-    .line 466
     iget-object v6, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     iget-object v7, v0, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
@@ -181,7 +164,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 468
     iget-object v7, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mFirstFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v1}, Landroid/util/SparseArray;->contains(I)Z
@@ -190,7 +172,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 469
     iget-object v2, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mFirstFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -205,7 +186,6 @@
 
     sub-long v2, v2, p5
 
-    .line 471
     :cond_0
     iget-object v7, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mLastFgsTimeStamp:Landroid/util/SparseArray;
 
@@ -215,7 +195,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 472
     iget-object v4, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mLastFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -235,7 +214,6 @@
 
     move-wide/from16 v36, v4
 
-    .line 476
     filled-new-array/range {p4 .. p4}, [I
 
     move-result-object v28
@@ -248,7 +226,6 @@
 
     aput-wide p5, v1, v2
 
-    .line 479
     iget-object v3, v0, Lcom/android/server/am/ServiceRecord;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v7, v3, Landroid/content/pm/ApplicationInfo;->uid:I
@@ -263,12 +240,10 @@
 
     iget v13, v0, Lcom/android/server/am/ServiceRecord;->mRecentCallingUid:I
 
-    .line 488
     iget-object v3, v0, Lcom/android/server/am/ServiceRecord;->mInfoTempFgsAllowListReason:Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;
 
     if-eqz v3, :cond_2
 
-    .line 489
     iget v3, v3, Lcom/android/server/am/ActivityManagerService$FgsTempAllowListItem;->mCallingUid:I
 
     move v15, v3
@@ -287,7 +262,6 @@
 
     iget v9, v0, Lcom/android/server/am/ServiceRecord;->mStartForegroundCount:I
 
-    .line 494
     invoke-static {v8}, Lcom/android/server/am/ActivityManagerUtils;->hashComponentNameForAtom(Ljava/lang/String;)I
 
     move-result v20
@@ -300,7 +274,6 @@
 
     iget-boolean v14, v0, Lcom/android/server/am/ServiceRecord;->mIsFgsDelegate:Z
 
-    .line 499
     iget-object v0, v0, Lcom/android/server/am/ServiceRecord;->mFgsDelegation:Lcom/android/server/am/ForegroundServiceDelegation;
 
     if-eqz v0, :cond_3
@@ -319,7 +292,6 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    .line 500
     iget-object v0, v0, Lcom/android/server/am/ForegroundServiceDelegation;->mOptions:Landroid/app/ForegroundServiceDelegationOptions;
 
     iget v0, v0, Landroid/app/ForegroundServiceDelegationOptions;->mDelegationService:I
@@ -366,7 +338,6 @@
 
     move-object/from16 v29, v1
 
-    .line 479
     invoke-static/range {v6 .. v37}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;IZIIIIIZZIIIZIIZIII[I[JIIIIJJ)V
 
     return-void
@@ -379,7 +350,6 @@
 
     move-object/from16 v1, p0
 
-    .line 522
     iget-object v1, v1, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     move/from16 v9, p1
@@ -392,7 +362,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 524
     iget-object v2, v1, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mLastFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->contains(I)Z
@@ -401,7 +370,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 525
     iget-object v1, v1, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mLastFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -424,7 +392,6 @@
     :goto_0
     move-wide/from16 v32, v1
 
-    .line 529
     filled-new-array/range {p3 .. p3}, [I
 
     move-result-object v24
@@ -493,7 +460,6 @@
 
     move/from16 v23, p2
 
-    .line 532
     invoke-static/range {v2 .. v33}, Lcom/android/internal/util/FrameworkStatsLog;->write(IILjava/lang/String;IZIIIIIZZIIIZIIZIII[I[JIIIIJJ)V
 
     return-void
@@ -508,10 +474,8 @@
 
     move v9, p2
 
-    .line 267
     new-instance v10, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;
 
-    .line 268
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -528,7 +492,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;-><init>(IILjava/lang/String;IJ)V
 
-    .line 269
     iget-object v0, v7, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -539,19 +502,16 @@
 
     if-nez v0, :cond_0
 
-    .line 271
     new-instance v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;-><init>(Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState-IA;)V
 
-    .line 272
     iget-object v1, v7, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 276
     :cond_0
     invoke-virtual {p0, p2, p1}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->hasValidActiveFgs(II)Z
 
@@ -563,30 +523,24 @@
 
     if-nez v1, :cond_4
 
-    .line 280
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 281
     invoke-virtual {v1, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result v1
 
     if-gez v1, :cond_1
 
-    .line 284
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 285
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 286
     invoke-virtual {v1, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result v1
 
-    .line 290
     :cond_1
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiOpenCalls:Landroid/util/SparseArray;
 
@@ -598,24 +552,20 @@
 
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 291
     invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->valueAt(I)I
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 292
     :cond_2
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiOpenCalls:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 296
     :cond_3
     iget-object v0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 297
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v1
@@ -624,12 +574,10 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 298
     iget-wide v0, v10, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
     return-wide v0
 
-    .line 305
     :cond_4
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
@@ -639,23 +587,19 @@
 
     if-gez v1, :cond_5
 
-    .line 308
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 309
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
     move-result v1
 
-    .line 311
     :cond_5
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
-    .line 312
     invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->valueAt(I)I
 
     move-result v4
@@ -664,7 +608,6 @@
 
     invoke-virtual {v2, p1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 313
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -673,10 +616,8 @@
 
     check-cast v2, Landroid/util/ArrayMap;
 
-    .line 317
     iget-wide v11, v10, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
-    .line 318
     iget-object v0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseIntArray;->valueAt(I)I
@@ -685,7 +626,6 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 319
     invoke-virtual {v2}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -719,12 +659,10 @@
 
     move-wide v5, v11
 
-    .line 320
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->logFgsApiEvent(Lcom/android/server/am/ServiceRecord;IIIJ)V
 
     goto :goto_0
 
-    .line 327
     :cond_6
     iget-wide v0, v10, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
@@ -734,7 +672,6 @@
 .method public logForegroundServiceApiEventEnd(III)J
     .locals 11
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -749,14 +686,12 @@
 
     const-string p1, "API event end called before start!"
 
-    .line 343
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 p0, -0x1
 
     return-wide p0
 
-    .line 346
     :cond_0
     iget-object v1, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
@@ -766,7 +701,6 @@
 
     if-ltz v1, :cond_2
 
-    .line 349
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseIntArray;->get(I)I
@@ -775,20 +709,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 352
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
-    .line 353
     invoke-virtual {v2, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v3
 
     add-int/lit8 v3, v3, -0x1
 
-    .line 352
     invoke-virtual {v2, p1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 356
     :cond_1
     invoke-virtual {p0, p2, p1}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->hasValidActiveFgs(II)Z
 
@@ -798,14 +728,12 @@
 
     iget-object v2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
-    .line 357
     invoke-virtual {v2, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 361
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v9
@@ -820,17 +748,14 @@
 
     move-wide v7, v9
 
-    .line 363
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->logFgsApiEventWithNoFgs(IIIJ)V
 
-    .line 366
     iget-object p0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, v1}, Landroid/util/SparseIntArray;->removeAt(I)V
 
     return-wide v9
 
-    .line 374
     :cond_2
     iget-object p0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
@@ -840,14 +765,12 @@
 
     if-gez p0, :cond_3
 
-    .line 376
     iget-object p0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 378
     :cond_3
     iget-object p0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
@@ -857,10 +780,8 @@
 
     if-eqz p0, :cond_4
 
-    .line 379
     iget-object p0, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 380
     invoke-virtual {p0, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result p2
@@ -869,20 +790,17 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 381
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
 
     return-wide p0
 
-    .line 387
     :cond_4
     new-instance p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;
 
     const-string v4, ""
 
-    .line 388
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -897,12 +815,10 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;-><init>(IILjava/lang/String;IJ)V
 
-    .line 389
     iget-object p2, v0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiClosedCalls:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 390
     iget-wide p0, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
     return-wide p0
@@ -911,7 +827,6 @@
 .method public logForegroundServiceApiStateChanged(IIII)V
     .locals 9
 
-    .line 398
     iget-object p3, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -920,7 +835,6 @@
 
     check-cast p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;
 
-    .line 399
     iget-object p3, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -931,7 +845,6 @@
 
     return-void
 
-    .line 405
     :cond_0
     iget-object p2, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
@@ -941,12 +854,10 @@
 
     check-cast p2, Landroid/util/ArrayMap;
 
-    .line 407
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
-    .line 408
     invoke-virtual {p2}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object p2
@@ -980,7 +891,6 @@
 
     move-wide v5, v7
 
-    .line 409
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->logFgsApiEvent(Lcom/android/server/am/ServiceRecord;IIIJ)V
 
     goto :goto_0
@@ -992,7 +902,6 @@
 .method public logForegroundServiceStart(IILcom/android/server/am/ServiceRecord;)V
     .locals 11
 
-    .line 136
     iget-object p2, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1003,38 +912,31 @@
 
     if-nez p2, :cond_0
 
-    .line 138
     new-instance p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;
 
     const/4 v0, 0x0
 
     invoke-direct {p2, v0}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;-><init>(Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState-IA;)V
 
-    .line 139
     iget-object v0, p0, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 142
     :cond_0
     iget p1, p3, Lcom/android/server/am/ServiceRecord;->foregroundServiceType:I
 
-    .line 143
     invoke-virtual {p0, p1}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->convertFgsTypeToApiTypes(I)Landroid/util/IntArray;
 
     move-result-object p1
 
-    .line 146
     new-instance v0, Landroid/util/IntArray;
 
     invoke-direct {v0}, Landroid/util/IntArray;-><init>()V
 
-    .line 147
     new-instance v1, Landroid/util/LongArray;
 
     invoke-direct {v1}, Landroid/util/LongArray;-><init>()V
 
-    .line 148
     invoke-virtual {p1}, Landroid/util/IntArray;->size()I
 
     move-result v2
@@ -1046,12 +948,10 @@
     :goto_0
     if-ge v4, v2, :cond_3
 
-    .line 149
     invoke-virtual {p1, v4}, Landroid/util/IntArray;->get(I)I
 
     move-result v5
 
-    .line 150
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->indexOfKey(I)I
@@ -1060,7 +960,6 @@
 
     if-gez v6, :cond_1
 
-    .line 152
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     new-instance v7, Landroid/util/ArrayMap;
@@ -1069,14 +968,12 @@
 
     invoke-virtual {v6, v5, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 153
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->indexOfKey(I)I
 
     move-result v6
 
-    .line 154
     iget-object v7, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mFirstFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1089,25 +986,21 @@
 
     invoke-virtual {v7, v5, v8}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 156
     :cond_1
     iget-object v7, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
-    .line 157
     invoke-virtual {v7, v6}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/util/ArrayMap;
 
-    .line 158
     invoke-virtual {p3}, Lcom/android/server/am/ServiceRecord;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v7
 
     invoke-virtual {v6, v7, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiOpenCalls:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->contains(I)Z
@@ -1116,27 +1009,22 @@
 
     if-eqz v6, :cond_2
 
-    .line 167
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     iget-object v7, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
-    .line 168
     invoke-virtual {v7, v5}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v7
 
     invoke-virtual {v6, v5, v7}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 169
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenedWithoutFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v6, v5, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 170
     invoke-virtual {v0, v5}, Landroid/util/IntArray;->add(I)V
 
-    .line 171
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiOpenCalls:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1145,20 +1033,16 @@
 
     check-cast v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;
 
-    .line 172
     iget-wide v7, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
     invoke-virtual {v1, v7, v8}, Landroid/util/LongArray;->add(J)V
 
     const/4 v7, 0x1
 
-    .line 174
     iput-boolean v7, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mIsAssociatedWithFgs:Z
 
-    .line 175
     iput-object p3, v6, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mAssociatedFgsRecord:Lcom/android/server/am/ServiceRecord;
 
-    .line 179
     iget-object v6, p2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiOpenCalls:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->remove(I)V
@@ -1168,7 +1052,6 @@
 
     goto :goto_0
 
-    .line 182
     :cond_3
     invoke-virtual {v0}, Landroid/util/IntArray;->size()I
 
@@ -1176,7 +1059,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 184
     invoke-virtual {v0}, Landroid/util/IntArray;->size()I
 
     move-result p1
@@ -1188,12 +1070,10 @@
 
     const/4 v7, 0x1
 
-    .line 188
     invoke-virtual {v0, v3}, Landroid/util/IntArray;->get(I)I
 
     move-result v8
 
-    .line 189
     invoke-virtual {v1, v3}, Landroid/util/LongArray;->get(I)J
 
     move-result-wide v9
@@ -1202,7 +1082,6 @@
 
     move-object v5, p3
 
-    .line 185
     invoke-virtual/range {v4 .. v10}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->logFgsApiEvent(Lcom/android/server/am/ServiceRecord;IIIJ)V
 
     add-int/lit8 v3, v3, 0x1
@@ -1222,14 +1101,12 @@
 
     move-object/from16 v8, p2
 
-    .line 202
     iget v1, v8, Lcom/android/server/am/ServiceRecord;->foregroundServiceType:I
 
     invoke-virtual {v7, v1}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->convertFgsTypeToApiTypes(I)Landroid/util/IntArray;
 
     move-result-object v1
 
-    .line 203
     iget-object v2, v7, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->mUids:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1244,7 +1121,6 @@
 
     if-nez v2, :cond_0
 
-    .line 205
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1269,18 +1145,15 @@
 
     return-void
 
-    .line 210
     :cond_0
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 211
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 212
     invoke-virtual {v1}, Landroid/util/IntArray;->size()I
 
     move-result v5
@@ -1292,12 +1165,10 @@
     :goto_0
     if-ge v11, v5, :cond_5
 
-    .line 213
     invoke-virtual {v1, v11}, Landroid/util/IntArray;->get(I)I
 
     move-result v12
 
-    .line 214
     iget-object v13, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
     invoke-virtual {v13, v12}, Landroid/util/SparseIntArray;->indexOfKey(I)I
@@ -1306,7 +1177,6 @@
 
     if-gez v13, :cond_1
 
-    .line 216
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1331,7 +1201,6 @@
 
     goto :goto_1
 
-    .line 225
     :cond_1
     iget-object v14, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiClosedCalls:Landroid/util/SparseArray;
 
@@ -1343,24 +1212,20 @@
 
     if-eqz v14, :cond_2
 
-    .line 226
     iget-object v15, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mOpenWithFgsCount:Landroid/util/SparseIntArray;
 
-    .line 227
     invoke-virtual {v15, v13}, Landroid/util/SparseIntArray;->valueAt(I)I
 
     move-result v13
 
     if-nez v13, :cond_2
 
-    .line 228
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v13
 
     invoke-virtual {v9, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 229
     iget-wide v13, v14, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$FgsApiRecord;->mTimeStart:J
 
     invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1369,16 +1234,13 @@
 
     invoke-virtual {v10, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 231
     iget-object v13, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mApiClosedCalls:Landroid/util/SparseArray;
 
     invoke-virtual {v13, v12}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 234
     :cond_2
     iget-object v13, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
-    .line 235
     invoke-virtual {v13, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -1387,7 +1249,6 @@
 
     if-nez v13, :cond_3
 
-    .line 237
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1412,7 +1273,6 @@
 
     goto :goto_1
 
-    .line 242
     :cond_3
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/am/ServiceRecord;->getComponentName()Landroid/content/ComponentName;
 
@@ -1420,19 +1280,16 @@
 
     invoke-virtual {v13, v14}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     invoke-virtual {v13}, Landroid/util/ArrayMap;->size()I
 
     move-result v13
 
     if-nez v13, :cond_4
 
-    .line 245
     iget-object v13, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mRunningFgs:Landroid/util/SparseArray;
 
     invoke-virtual {v13, v12}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 247
     iget-object v13, v2, Lcom/android/server/am/ForegroundServiceTypeLoggerModule$UidState;->mLastFgsTimeStamp:Landroid/util/SparseArray;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1451,7 +1308,6 @@
 
     goto/16 :goto_0
 
-    .line 250
     :cond_5
     invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1461,7 +1317,6 @@
 
     move v11, v6
 
-    .line 252
     :goto_2
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -1473,7 +1328,6 @@
 
     const/4 v3, 0x2
 
-    .line 255
     invoke-virtual {v9, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1498,7 +1352,6 @@
 
     move-object/from16 v1, p2
 
-    .line 253
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/am/ForegroundServiceTypeLoggerModule;->logFgsApiEvent(Lcom/android/server/am/ServiceRecord;IIIJ)V
 
     add-int/lit8 v11, v11, 0x1

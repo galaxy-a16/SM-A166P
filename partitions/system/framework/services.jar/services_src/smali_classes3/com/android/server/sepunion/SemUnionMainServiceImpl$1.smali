@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemUnionMainServiceImpl;)V
     .locals 0
 
-    .line 85
     iput-object p1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     invoke-direct {p0}, Lcom/samsung/android/sepunion/SemUnionManagerLocal;-><init>()V
@@ -24,21 +23,18 @@
 .method public accessoryStateChanged(Z[B[B)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public createSemSystemService(Ljava/lang/String;)V
     .locals 3
 
-    .line 147
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetsLock()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 148
     :try_start_0
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetsSemSystemServiceMap()Ljava/util/HashMap;
 
@@ -60,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 149
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -81,12 +76,10 @@
 
     invoke-static {p0, p1}, Lcom/samsung/android/sepunion/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     monitor-exit v0
 
     return-void
 
-    .line 152
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
@@ -96,7 +89,6 @@
 
     invoke-static {p0, p1, v1}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$maddSepUnionServiceMapInternal(Lcom/android/server/sepunion/SemUnionMainServiceImpl;Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 153
     monitor-exit v0
 
     return-void
@@ -114,7 +106,6 @@
 .method public getSemSystemService(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/IBinder;
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->getSemSystemService(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/IBinder;
@@ -127,7 +118,6 @@
 .method public notifyCoverSwitchStateChanged(JZ)V
     .locals 1
 
-    .line 104
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -138,7 +128,6 @@
 
     const-string/jumbo p0, "plugin"
 
-    .line 105
     invoke-static {p0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->getSemSystemService(Ljava/lang/String;)Lcom/android/server/sepunion/AbsSemSystemService;
 
     move-result-object p0
@@ -147,12 +136,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 107
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sepunion/SemPluginManagerService;->notifyCoverSwitchStateChanged(JZ)V
 
     goto :goto_0
 
-    .line 109
     :cond_0
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -169,7 +156,6 @@
 .method public notifySmartCoverAttachStateChanged(JZLcom/samsung/android/cover/CoverState;)V
     .locals 2
 
-    .line 88
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -180,7 +166,6 @@
 
     const-string/jumbo v0, "plugin"
 
-    .line 89
     invoke-static {v0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->getSemSystemService(Ljava/lang/String;)Lcom/android/server/sepunion/AbsSemSystemService;
 
     move-result-object v1
@@ -189,14 +174,12 @@
 
     if-nez v1, :cond_0
 
-    .line 92
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mSemUnionManagerLocal:Lcom/samsung/android/sepunion/SemUnionManagerLocal;
 
     invoke-virtual {p0, v0}, Lcom/samsung/android/sepunion/SemUnionManagerLocal;->createSemSystemService(Ljava/lang/String;)V
 
-    .line 93
     invoke-static {v0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->getSemSystemService(Ljava/lang/String;)Lcom/android/server/sepunion/AbsSemSystemService;
 
     move-result-object p0
@@ -208,12 +191,10 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 96
     invoke-virtual {v1, p1, p2, p3, p4}, Lcom/android/server/sepunion/SemPluginManagerService;->notifySmartCoverAttachStateChanged(JZLcom/samsung/android/cover/CoverState;)V
 
     goto :goto_0
 
-    .line 98
     :cond_1
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -230,6 +211,5 @@
 .method public screenTurnedOff()V
     .locals 0
 
-    .line 0
     return-void
 .end method

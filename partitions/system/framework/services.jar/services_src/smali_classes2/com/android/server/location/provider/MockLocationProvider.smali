@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/location/provider/ProviderProperties;Landroid/location/util/identity/CallerIdentity;Ljava/util/Set;)V
     .locals 1
 
-    .line 45
     sget-object v0, Lcom/android/internal/util/ConcurrentUtils;->DIRECT_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-direct {p0, v0, p2, p1, p3}, Lcom/android/server/location/provider/AbstractLocationProvider;-><init>(Ljava/util/concurrent/Executor;Landroid/location/util/identity/CallerIdentity;Landroid/location/provider/ProviderProperties;Ljava/util/Set;)V
@@ -24,7 +23,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 0
 
-    .line 74
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -49,14 +47,12 @@
 .method public onExtraCommand(IILjava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onFlush(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 66
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -65,14 +61,12 @@
 .method public onSetRequest(Landroid/location/provider/ProviderRequest;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setProviderAllowed(Z)V
     .locals 0
 
-    .line 50
     invoke-virtual {p0, p1}, Lcom/android/server/location/provider/AbstractLocationProvider;->setAllowed(Z)V
 
     return-void
@@ -81,20 +75,16 @@
 .method public setProviderLocation(Landroid/location/Location;)V
     .locals 1
 
-    .line 55
     new-instance v0, Landroid/location/Location;
 
     invoke-direct {v0, p1}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
     const/4 p1, 0x1
 
-    .line 56
     invoke-virtual {v0, p1}, Landroid/location/Location;->setIsFromMockProvider(Z)V
 
-    .line 57
     iput-object v0, p0, Lcom/android/server/location/provider/MockLocationProvider;->mLocation:Landroid/location/Location;
 
-    .line 58
     filled-new-array {v0}, [Landroid/location/Location;
 
     move-result-object p1

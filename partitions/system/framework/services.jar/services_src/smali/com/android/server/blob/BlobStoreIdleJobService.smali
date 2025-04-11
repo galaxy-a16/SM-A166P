@@ -7,7 +7,6 @@
 .method public static synthetic $r8$lambda$eJVySJkEwnETVAzf-BKONpX7FO8(Lcom/android/server/blob/BlobStoreIdleJobService;Landroid/app/job/JobParameters;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/blob/BlobStoreIdleJobService;->lambda$onStartJob$0(Landroid/app/job/JobParameters;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -25,7 +23,6 @@
 .method private synthetic lambda$onStartJob$0(Landroid/app/job/JobParameters;)V
     .locals 1
 
-    .line 40
     const-class v0, Lcom/android/server/blob/BlobStoreManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -34,12 +31,10 @@
 
     check-cast v0, Lcom/android/server/blob/BlobStoreManagerInternal;
 
-    .line 42
     invoke-virtual {v0}, Lcom/android/server/blob/BlobStoreManagerInternal;->onIdleMaintenance()V
 
     const/4 v0, 0x0
 
-    .line 43
     invoke-virtual {p0, p1, v0}, Landroid/app/job/JobService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
     return-void
@@ -50,14 +45,12 @@
 
     const-string/jumbo v0, "jobscheduler"
 
-    .line 58
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/job/JobScheduler;
 
-    .line 60
     new-instance v1, Landroid/app/job/JobInfo$Builder;
 
     new-instance v2, Landroid/content/ComponentName;
@@ -72,17 +65,14 @@
 
     const/4 p0, 0x1
 
-    .line 62
     invoke-virtual {v1, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
     move-result-object v1
 
-    .line 63
     invoke-virtual {v1, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
     move-result-object p0
 
-    .line 64
     invoke-static {}, Lcom/android/server/blob/BlobStoreConfig;->getIdleJobPeriodMs()J
 
     move-result-wide v1
@@ -91,15 +81,12 @@
 
     move-result-object p0
 
-    .line 65
     invoke-virtual {p0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
     move-result-object p0
 
-    .line 66
     invoke-virtual {v0, p0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
-    .line 67
     sget-boolean p0, Lcom/android/server/blob/BlobStoreConfig;->LOGV:Z
 
     if-eqz p0, :cond_0
@@ -108,7 +95,6 @@
 
     const-string v0, "Scheduling the idle maintenance job"
 
-    .line 68
     invoke-static {p0, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -120,7 +106,6 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 1
 
-    .line 39
     new-instance v0, Lcom/android/server/blob/BlobStoreIdleJobService$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/blob/BlobStoreIdleJobService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/blob/BlobStoreIdleJobService;Landroid/app/job/JobParameters;)V
@@ -135,7 +120,6 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 1
 
-    .line 50
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,12 +138,10 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 53
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getInternalStopReasonCode()I
 
     move-result p1
 
-    .line 52
     invoke-static {p1}, Landroid/app/job/JobParameters;->getInternalReasonCodeDescription(I)Ljava/lang/String;
 
     move-result-object p1
@@ -172,7 +154,6 @@
 
     const-string p1, "BlobStore"
 
-    .line 50
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

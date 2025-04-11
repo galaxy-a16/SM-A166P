@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/input/WirelessKeyboardMouseShare;)V
     .locals 0
 
-    .line 1611
     iput-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,12 +23,10 @@
 
     new-array p1, p1, [B
 
-    .line 1612
     iput-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     const/4 p1, 0x1
 
-    .line 1613
     iput-byte p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mId:B
 
     return-void
@@ -38,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/WirelessKeyboardMouseShare;Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;-><init>(Lcom/android/server/input/WirelessKeyboardMouseShare;)V
 
     return-void
@@ -49,7 +45,6 @@
 .method public clear(Z)V
     .locals 5
 
-    .line 1619
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     iget-object v0, v0, Lcom/android/server/input/WirelessKeyboardMouseShare;->innerLock:Ljava/lang/Object;
@@ -69,7 +64,6 @@
     :goto_0
     if-ge p1, v1, :cond_1
 
-    .line 1623
     :try_start_0
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
@@ -81,7 +75,6 @@
 
     const-string v4, "Keyboard need clear()."
 
-    .line 1625
     invoke-static {p1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move p1, v3
@@ -99,7 +92,6 @@
     :goto_1
     if-eq p1, v3, :cond_2
 
-    .line 1630
     monitor-exit v0
 
     return-void
@@ -110,7 +102,6 @@
     :goto_2
     if-ge p1, v1, :cond_3
 
-    .line 1634
     iget-object v4, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     aput-byte v2, v4, p1
@@ -119,7 +110,6 @@
 
     goto :goto_2
 
-    .line 1636
     :cond_3
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -131,7 +121,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1638
     :try_start_1
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -162,10 +151,8 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1640
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1642
     :goto_3
     monitor-exit v0
 
@@ -184,7 +171,6 @@
 .method public keyDownLocked(B)V
     .locals 5
 
-    .line 1646
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -208,7 +194,6 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 1650
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     const/4 v3, 0x0
@@ -235,14 +220,12 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 1653
     iget-object v2, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     aget-byte v3, v2, v0
 
     if-nez v3, :cond_2
 
-    .line 1654
     aput-byte p1, v2, v0
 
     goto :goto_1
@@ -252,7 +235,6 @@
 
     goto :goto_0
 
-    .line 1660
     :cond_3
     :goto_1
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
@@ -263,7 +245,6 @@
 
     invoke-static {p1, v0, v2, v1}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1662
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -292,7 +273,6 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1664
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
@@ -302,7 +282,6 @@
 .method public keyUpLocked(B)V
     .locals 5
 
-    .line 1668
     iget-object v0, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
     invoke-static {v0}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$fgetmConnectionState(Lcom/android/server/input/WirelessKeyboardMouseShare;)I
@@ -328,7 +307,6 @@
 
     if-ge p1, v3, :cond_1
 
-    .line 1672
     iget-object v3, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     aget-byte v4, v3, v0
@@ -355,14 +333,12 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 1675
     iget-object v3, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->mBuffer:[B
 
     aget-byte v4, v3, v1
 
     if-ne v4, p1, :cond_2
 
-    .line 1676
     aput-byte v0, v3, v1
 
     :cond_2
@@ -370,7 +346,6 @@
 
     goto :goto_0
 
-    .line 1682
     :cond_3
     :goto_1
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
@@ -381,7 +356,6 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/server/input/WirelessKeyboardMouseShare;->-$$Nest$mstoreReportLocked(Lcom/android/server/input/WirelessKeyboardMouseShare;B[BZ)V
 
-    .line 1684
     :try_start_0
     iget-object p1, p0, Lcom/android/server/input/WirelessKeyboardMouseShare$Keyboard;->this$0:Lcom/android/server/input/WirelessKeyboardMouseShare;
 
@@ -410,7 +384,6 @@
 
     const-string p1, "ignore nullpointer exception "
 
-    .line 1686
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2

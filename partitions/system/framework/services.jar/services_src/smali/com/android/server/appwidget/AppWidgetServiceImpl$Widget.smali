@@ -29,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mclearMaskedViewsLocked(Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->clearMaskedViewsLocked()Z
 
     move-result p0
@@ -40,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$mreplaceWithMaskedViewsLocked(Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;Landroid/widget/RemoteViews;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->replaceWithMaskedViewsLocked(Landroid/widget/RemoteViews;)Z
 
     move-result p0
@@ -51,15 +49,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 5933
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 5942
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->transactionError:Ljava/lang/String;
 
-    .line 5945
     new-instance v0, Landroid/util/SparseLongArray;
 
     const/4 v1, 0x2
@@ -70,7 +65,6 @@
 
     const/4 v0, 0x0
 
-    .line 5946
     iput-boolean v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->trackingUpdate:Z
 
     return-void
@@ -79,7 +73,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;-><init>()V
 
     return-void
@@ -90,17 +83,14 @@
 .method public final clearMaskedViewsLocked()Z
     .locals 1
 
-    .line 5962
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->maskedViews:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 5963
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->maskedViews:Landroid/widget/RemoteViews;
 
-    .line 5965
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->transactionError:Ljava/lang/String;
 
     const/4 p0, 0x1
@@ -116,7 +106,6 @@
 .method public getEffectiveViewsLocked()Landroid/widget/RemoteViews;
     .locals 1
 
-    .line 5974
     iget-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->maskedViews:Landroid/widget/RemoteViews;
 
     if-eqz v0, :cond_0
@@ -133,12 +122,10 @@
 .method public final replaceWithMaskedViewsLocked(Landroid/widget/RemoteViews;)Z
     .locals 0
 
-    .line 5954
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->maskedViews:Landroid/widget/RemoteViews;
 
     const/4 p1, 0x0
 
-    .line 5956
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->transactionError:Ljava/lang/String;
 
     const/4 p0, 0x1
@@ -149,7 +136,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 5950
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

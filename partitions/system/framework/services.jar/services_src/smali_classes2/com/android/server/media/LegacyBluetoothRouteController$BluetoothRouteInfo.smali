@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBtDevice(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;)Landroid/bluetooth/BluetoothDevice;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mBtDevice:Landroid/bluetooth/BluetoothDevice;
 
     return-object p0
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmConnectedProfiles(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;)Landroid/util/SparseBooleanArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mConnectedProfiles:Landroid/util/SparseBooleanArray;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRoute(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;)Landroid/media/MediaRoute2Info;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mRoute:Landroid/media/MediaRoute2Info;
 
     return-object p0
@@ -42,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fputmBtDevice(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;Landroid/bluetooth/BluetoothDevice;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mBtDevice:Landroid/bluetooth/BluetoothDevice;
 
     return-void
@@ -51,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$fputmConnectedProfiles(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;Landroid/util/SparseBooleanArray;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mConnectedProfiles:Landroid/util/SparseBooleanArray;
 
     return-void
@@ -60,7 +55,6 @@
 .method public static bridge synthetic -$$Nest$fputmRoute(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;Landroid/media/MediaRoute2Info;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mRoute:Landroid/media/MediaRoute2Info;
 
     return-void
@@ -77,7 +71,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;-><init>()V
 
     return-void
@@ -88,7 +81,6 @@
 .method public getRouteType()I
     .locals 3
 
-    .line 418
     iget-object v0, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mConnectedProfiles:Landroid/util/SparseBooleanArray;
 
     const/16 v1, 0x15
@@ -105,7 +97,6 @@
 
     return p0
 
-    .line 422
     :cond_0
     iget-object p0, p0, Lcom/android/server/media/LegacyBluetoothRouteController$BluetoothRouteInfo;->mConnectedProfiles:Landroid/util/SparseBooleanArray;
 

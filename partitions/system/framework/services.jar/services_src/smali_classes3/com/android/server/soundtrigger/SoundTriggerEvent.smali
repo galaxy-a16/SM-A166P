@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 25
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 41
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
@@ -47,7 +44,6 @@
 
     goto :goto_0
 
-    .line 34
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 31
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 

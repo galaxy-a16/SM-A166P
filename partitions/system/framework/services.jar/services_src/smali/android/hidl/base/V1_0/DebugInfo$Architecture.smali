@@ -23,14 +23,12 @@
 .method public static final dumpBitfield(I)Ljava/lang/String;
     .locals 4
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "UNKNOWN"
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     and-int/lit8 v1, p0, 0x1
@@ -41,7 +39,6 @@
 
     const-string v1, "IS_64BIT"
 
-    .line 27
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -58,7 +55,6 @@
 
     const-string v1, "IS_32BIT"
 
-    .line 31
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     or-int/lit8 v2, v2, 0x2
@@ -66,7 +62,6 @@
     :cond_1
     if-eq p0, v2, :cond_2
 
-    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +89,6 @@
     :cond_2
     const-string p0, " | "
 
-    .line 37
     invoke-static {p0, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -129,7 +123,6 @@
 
     return-object p0
 
-    .line 19
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 

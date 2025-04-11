@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/PACMService;)V
     .locals 0
 
-    .line 147
     iput-object p1, p0, Lcom/android/server/PACMService$1;->this$0:Lcom/android/server/PACMService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 150
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -38,10 +36,8 @@
 
     const-string v1, "PACMService"
 
-    .line 152
     invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     invoke-static {}, Lcom/android/server/PACMService;->-$$Nest$sfgetmReceiverList()Ljava/util/List;
 
     move-result-object p1
@@ -50,12 +46,10 @@
 
     const-string p0, "List is null"
 
-    .line 154
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 158
     :cond_1
     invoke-static {}, Lcom/android/server/PACMService;->-$$Nest$sfgetmReceiverList()Ljava/util/List;
 
@@ -73,12 +67,10 @@
 
     if-nez p1, :cond_2
 
-    .line 159
     iget-object p1, p0, Lcom/android/server/PACMService$1;->this$0:Lcom/android/server/PACMService;
 
     invoke-static {p1}, Lcom/android/server/PACMService;->-$$Nest$mregisterForBroadcasts(Lcom/android/server/PACMService;)V
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/PACMService$1;->this$0:Lcom/android/server/PACMService;
 
     invoke-static {p0}, Lcom/android/server/PACMService;->-$$Nest$fgetmHandler(Lcom/android/server/PACMService;)Landroid/os/Handler;
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 162
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -121,7 +112,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object p1, p0, Lcom/android/server/PACMService$1;->this$0:Lcom/android/server/PACMService;
 
     invoke-static {p1}, Lcom/android/server/PACMService;->-$$Nest$fgetmHandler(Lcom/android/server/PACMService;)Landroid/os/Handler;
@@ -134,7 +124,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/PACMService$1;->this$0:Lcom/android/server/PACMService;
 
     invoke-static {p0}, Lcom/android/server/PACMService;->-$$Nest$fgetmHandler(Lcom/android/server/PACMService;)Landroid/os/Handler;

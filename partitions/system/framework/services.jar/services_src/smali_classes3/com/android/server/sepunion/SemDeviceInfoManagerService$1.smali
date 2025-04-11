@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemDeviceInfoManagerService;)V
     .locals 0
 
-    .line 136
     iput-object p1, p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService$1;->this$0:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,19 +27,16 @@
 
     const/16 v0, -0x2710
 
-    .line 139
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 141
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    .line 142
     invoke-virtual {p2}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object p2
@@ -57,7 +53,6 @@
 
     goto :goto_1
 
-    .line 147
     :cond_1
     sget-object v0, Lcom/android/server/sepunion/SemDeviceInfoManagerService;->TAG:Ljava/lang/String;
 
@@ -83,14 +78,12 @@
 
     invoke-static {v0, v1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService$1;->this$0:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
     invoke-static {p0, p2, p1}, Lcom/android/server/sepunion/SemDeviceInfoManagerService;->-$$Nest$mclearPendingIntentAsUserInternal(Lcom/android/server/sepunion/SemDeviceInfoManagerService;Ljava/lang/String;I)V
 
     return-void
 
-    .line 144
     :cond_2
     :goto_1
     sget-object p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService;->TAG:Ljava/lang/String;

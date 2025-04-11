@@ -15,7 +15,6 @@
 
     new-array v0, v0, [I
 
-    .line 27
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/apache/commons/compress/compressors/bzip2/Rand;->RNUMS:[I
@@ -542,7 +541,6 @@
 .method public static rNums(I)I
     .locals 1
 
-    .line 89
     sget-object v0, Lorg/apache/commons/compress/compressors/bzip2/Rand;->RNUMS:[I
 
     aget p0, v0, p0

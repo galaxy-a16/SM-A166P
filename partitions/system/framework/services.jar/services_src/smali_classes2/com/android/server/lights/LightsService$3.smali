@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/lights/LightsService;)V
     .locals 0
 
-    .line 988
     iput-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCoverStateChanged(Lcom/samsung/android/cover/CoverState;)V
     .locals 3
 
-    .line 991
     iget-object v0, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getType()I
@@ -33,7 +31,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/lights/LightsService;->-$$Nest$fputmCoverType(Lcom/android/server/lights/LightsService;I)V
 
-    .line 992
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
 
     move-result p1
@@ -44,7 +41,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 993
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,14 +63,12 @@
 
     invoke-static {v0, p1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 994
     iget-object p0, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-static {p0, v1}, Lcom/android/server/lights/LightsService;->-$$Nest$fputmCoverOpened(Lcom/android/server/lights/LightsService;Z)V
 
     goto :goto_0
 
-    .line 996
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -98,14 +92,12 @@
 
     invoke-static {v0, p1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 997
     iget-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/lights/LightsService;->-$$Nest$fputmCoverOpened(Lcom/android/server/lights/LightsService;Z)V
 
-    .line 998
     iget-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-static {p1}, Lcom/android/server/lights/LightsService;->-$$Nest$fgetmCoverType(Lcom/android/server/lights/LightsService;)I
@@ -116,7 +108,6 @@
 
     if-eq p1, v0, :cond_2
 
-    .line 999
     const-class p1, Lcom/android/server/lights/LightsManager;
 
     invoke-static {p1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -127,7 +118,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1001
     iget-object v0, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v1, 0x3
@@ -138,7 +128,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/lights/LightsService;->-$$Nest$fputmCoverBatteryLight(Lcom/android/server/lights/LightsService;Lcom/android/server/lights/LogicalLight;)V
 
-    .line 1002
     iget-object v0, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v1, 0x4
@@ -149,7 +138,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/lights/LightsService;->-$$Nest$fputmCoverNotiLight(Lcom/android/server/lights/LightsService;Lcom/android/server/lights/LogicalLight;)V
 
-    .line 1003
     iget-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-static {p1}, Lcom/android/server/lights/LightsService;->-$$Nest$fgetmCoverBatteryLight(Lcom/android/server/lights/LightsService;)Lcom/android/server/lights/LogicalLight;
@@ -166,7 +154,6 @@
 
     invoke-virtual {p1}, Lcom/android/server/lights/LogicalLight;->turnOff()V
 
-    .line 1004
     :cond_1
     iget-object p1, p0, Lcom/android/server/lights/LightsService$3;->this$0:Lcom/android/server/lights/LightsService;
 

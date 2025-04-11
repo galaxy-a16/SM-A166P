@@ -16,10 +16,8 @@
 .method public constructor <init>(Landroid/net/IpSecTransform;Landroid/net/IpSecTransform;)V
     .locals 1
 
-    .line 503
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 504
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, p1
@@ -28,7 +26,6 @@
 
     iput-object p1, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->inTransform:Landroid/net/IpSecTransform;
 
-    .line 505
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object p1, p2
@@ -45,7 +42,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 515
     instance-of v0, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;
 
     const/4 v1, 0x0
@@ -54,11 +50,9 @@
 
     return v1
 
-    .line 519
     :cond_0
     check-cast p1, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;
 
-    .line 520
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->inTransform:Landroid/net/IpSecTransform;
 
     iget-object v2, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->inTransform:Landroid/net/IpSecTransform;
@@ -73,7 +67,6 @@
 
     iget-object p1, p1, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->outTransform:Landroid/net/IpSecTransform;
 
-    .line 521
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -89,7 +82,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->inTransform:Landroid/net/IpSecTransform;
 
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$EventMigrationCompletedInfo;->outTransform:Landroid/net/IpSecTransform;

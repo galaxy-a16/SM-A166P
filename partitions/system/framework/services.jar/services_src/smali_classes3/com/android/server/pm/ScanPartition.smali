@@ -13,10 +13,8 @@
 .method public constructor <init>(Landroid/content/pm/PackagePartitions$SystemPartition;)V
     .locals 0
 
-    .line 48
     invoke-direct {p0, p1}, Landroid/content/pm/PackagePartitions$SystemPartition;-><init>(Landroid/content/pm/PackagePartitions$SystemPartition;)V
 
-    .line 49
     invoke-static {p1}, Lcom/android/server/pm/ScanPartition;->scanFlagForPartition(Landroid/content/pm/PackagePartitions$SystemPartition;)I
 
     move-result p1
@@ -25,7 +23,6 @@
 
     const/4 p1, 0x0
 
-    .line 50
     iput-object p1, p0, Lcom/android/server/pm/ScanPartition;->apexInfo:Lcom/android/server/pm/ApexManager$ActiveApexInfo;
 
     return-void
@@ -34,13 +31,10 @@
 .method public constructor <init>(Ljava/io/File;Lcom/android/server/pm/ScanPartition;Lcom/android/server/pm/ApexManager$ActiveApexInfo;)V
     .locals 0
 
-    .line 60
     invoke-direct {p0, p1, p2}, Landroid/content/pm/PackagePartitions$SystemPartition;-><init>(Ljava/io/File;Landroid/content/pm/PackagePartitions$SystemPartition;)V
 
-    .line 61
     iget p1, p2, Lcom/android/server/pm/ScanPartition;->scanFlag:I
 
-    .line 62
     iput-object p3, p0, Lcom/android/server/pm/ScanPartition;->apexInfo:Lcom/android/server/pm/ApexManager$ActiveApexInfo;
 
     if-eqz p3, :cond_1
@@ -49,7 +43,6 @@
 
     or-int/2addr p1, p2
 
-    .line 65
     iget-boolean p2, p3, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->isFactory:Z
 
     if-eqz p2, :cond_0
@@ -58,7 +51,6 @@
 
     or-int/2addr p1, p2
 
-    .line 68
     :cond_0
     iget-boolean p2, p3, Lcom/android/server/pm/ApexManager$ActiveApexInfo;->activeApexChanged:Z
 
@@ -68,7 +60,6 @@
 
     or-int/2addr p1, p2
 
-    .line 73
     :cond_1
     iput p1, p0, Lcom/android/server/pm/ScanPartition;->scanFlag:I
 
@@ -78,7 +69,6 @@
 .method public static scanFlagForPartition(Landroid/content/pm/PackagePartitions$SystemPartition;)I
     .locals 3
 
-    .line 77
     iget v0, p0, Landroid/content/pm/PackagePartitions$SystemPartition;->type:I
 
     if-eqz v0, :cond_5
@@ -107,7 +97,6 @@
 
     return p0
 
-    .line 91
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -119,7 +108,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
     invoke-virtual {p0}, Landroid/content/pm/PackagePartitions$SystemPartition;->getFolder()Ljava/io/File;
 
     move-result-object p0
@@ -165,7 +153,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 98
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

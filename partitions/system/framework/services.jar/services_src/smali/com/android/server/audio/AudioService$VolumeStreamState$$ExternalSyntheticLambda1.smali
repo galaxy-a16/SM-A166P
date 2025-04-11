@@ -20,7 +20,6 @@
 .method public final run(I)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/audio/AudioService$VolumeStreamState;->$r8$lambda$KuLbbM9k6IHPHRaEH23ICNTlXco(I)V
 
     return-void

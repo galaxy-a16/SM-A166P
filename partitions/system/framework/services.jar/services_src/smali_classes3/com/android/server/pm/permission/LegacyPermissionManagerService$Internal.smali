@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$8bKhHiG8qT3VzEQ4J0rLYDpRfG8(Lcom/android/server/pm/permission/PermissionManagerServiceInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->lambda$resetRuntimePermissions$0(Lcom/android/server/pm/permission/PermissionManagerServiceInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)V
     .locals 0
 
-    .line 320
     iput-object p1, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;-><init>(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)V
 
     return-void
@@ -43,7 +40,6 @@
 .method public static synthetic lambda$resetRuntimePermissions$0(Lcom/android/server/pm/permission/PermissionManagerServiceInternal;ILcom/android/server/pm/pkg/AndroidPackage;)V
     .locals 0
 
-    .line 340
     invoke-interface {p0, p2, p1}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;->resetRuntimePermissions(Lcom/android/server/pm/pkg/AndroidPackage;I)V
 
     return-void
@@ -54,7 +50,6 @@
 .method public checkSoundTriggerRecordAudioPermissionForDataDelivery(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 7
 
-    .line 410
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Landroid/content/Context;
@@ -73,7 +68,6 @@
 
     return v0
 
-    .line 415
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
@@ -109,7 +103,6 @@
 .method public grantDefaultPermissions(I)V
     .locals 0
 
-    .line 398
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -124,7 +117,6 @@
 .method public grantDefaultPermissionsToDefaultSimCallManager(Ljava/lang/String;I)V
     .locals 0
 
-    .line 386
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -139,7 +131,6 @@
 .method public grantDefaultPermissionsToDefaultUseOpenWifiApp(Ljava/lang/String;I)V
     .locals 0
 
-    .line 392
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -154,7 +145,6 @@
 .method public resetRuntimePermissions()V
     .locals 6
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Landroid/content/Context;
@@ -167,7 +157,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 327
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -178,7 +167,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 329
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmContext(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Landroid/content/Context;
@@ -191,7 +179,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
     :cond_0
     const-class p0, Landroid/content/pm/PackageManagerInternal;
 
@@ -201,17 +188,14 @@
 
     check-cast p0, Landroid/content/pm/PackageManagerInternal;
 
-    .line 336
     const-class v0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
-    .line 337
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
 
-    .line 338
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v1
@@ -229,7 +213,6 @@
 
     aget v4, v1, v3
 
-    .line 339
     new-instance v5, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal$$ExternalSyntheticLambda0;
 
     invoke-direct {v5, v0, v4}, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/pm/permission/PermissionManagerServiceInternal;I)V
@@ -247,7 +230,6 @@
 .method public scheduleReadDefaultPermissionExceptions()V
     .locals 0
 
-    .line 403
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -262,7 +244,6 @@
 .method public setDialerAppPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 346
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -277,7 +258,6 @@
 .method public setLocationExtraPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 351
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -292,7 +272,6 @@
 .method public setLocationPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 356
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -307,7 +286,6 @@
 .method public setSimCallManagerPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 361
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -322,7 +300,6 @@
 .method public setSmsAppPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 366
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -337,7 +314,6 @@
 .method public setSyncAdapterPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$SyncAdapterPackagesProvider;)V
     .locals 0
 
-    .line 371
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -352,7 +328,6 @@
 .method public setUseOpenWifiAppPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 376
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;
@@ -367,7 +342,6 @@
 .method public setVoiceInteractionPackagesProvider(Lcom/android/server/pm/permission/LegacyPermissionManagerInternal$PackagesProvider;)V
     .locals 0
 
-    .line 381
     iget-object p0, p0, Lcom/android/server/pm/permission/LegacyPermissionManagerService$Internal;->this$0:Lcom/android/server/pm/permission/LegacyPermissionManagerService;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/LegacyPermissionManagerService;->-$$Nest$fgetmDefaultPermissionGrantPolicy(Lcom/android/server/pm/permission/LegacyPermissionManagerService;)Lcom/android/server/pm/permission/DefaultPermissionGrantPolicy;

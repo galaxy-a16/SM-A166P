@@ -27,39 +27,30 @@
 .method public constructor <init>(Ljava/lang/String;[B)V
     .locals 8
 
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "EC"
 
-    .line 165
     iput-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mAlgorithm:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 167
     iput-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mDeviceAttestation:Z
 
-    .line 168
     iput-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mVerifiableIntegrity:Z
 
-    .line 169
     iput-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mDevicePropertiesAttestationIncluded:Z
 
-    .line 170
     iput-boolean v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mSAKUidRequired:Z
 
     const/4 v0, 0x0
 
-    .line 171
     iput-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mPackageName:Ljava/lang/String;
 
-    .line 173
     iput-object v0, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mCertificateSubject:Ljavax/security/auth/x500/X500Principal;
 
     if-eqz p1, :cond_2
 
-    .line 186
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -68,7 +59,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 193
     new-instance v0, Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
     const/4 v1, 0x4
@@ -91,24 +81,20 @@
 
     move-result-object p1
 
-    .line 194
     invoke-virtual {v0, p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setDigests([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
     move-result-object p1
 
-    .line 197
     invoke-virtual {p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->build()Landroid/security/keystore/KeyGenParameterSpec;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mSpec:Landroid/security/keystore/KeyGenParameterSpec;
 
-    .line 199
     iput-object p2, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mChallenge:[B
 
     return-void
 
-    .line 190
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -118,7 +104,6 @@
 
     throw p0
 
-    .line 187
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -128,7 +113,6 @@
 
     throw p0
 
-    .line 185
     :cond_2
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -144,7 +128,6 @@
 .method public build()Lcom/samsung/android/security/keystore/AttestParameterSpec;
     .locals 11
 
-    .line 332
     new-instance v10, Lcom/samsung/android/security/keystore/AttestParameterSpec;
 
     iget-object v1, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mAlgorithm:Ljava/lang/String;
@@ -175,7 +158,6 @@
 .method public setVerifiableIntegrity(Z)Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;
     .locals 0
 
-    .line 253
     iput-boolean p1, p0, Lcom/samsung/android/security/keystore/AttestParameterSpec$Builder;->mVerifiableIntegrity:Z
 
     return-object p0

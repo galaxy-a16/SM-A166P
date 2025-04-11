@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/enterprise/license/EnterpriseLicenseService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/enterprise/license/EnterpriseLicenseService;
 
     invoke-static {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->$r8$lambda$k8wRHzJ5GKZo2Kl1Dy44sU34SBM(Lcom/android/server/enterprise/license/EnterpriseLicenseService;)V

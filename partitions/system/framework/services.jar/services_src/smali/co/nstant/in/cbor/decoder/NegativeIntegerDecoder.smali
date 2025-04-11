@@ -13,7 +13,6 @@
 
     const-wide/16 v0, -0x1
 
-    .line 12
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -26,7 +25,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
     .locals 0
 
-    .line 15
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/decoder/AbstractDecoder;-><init>(Lco/nstant/in/cbor/CborDecoder;Ljava/io/InputStream;)V
 
     return-void
@@ -37,7 +35,6 @@
 .method public decode(I)Lco/nstant/in/cbor/model/NegativeInteger;
     .locals 2
 
-    .line 20
     new-instance v0, Lco/nstant/in/cbor/model/NegativeInteger;
 
     sget-object v1, Lco/nstant/in/cbor/decoder/NegativeIntegerDecoder;->MINUS_ONE:Ljava/math/BigInteger;

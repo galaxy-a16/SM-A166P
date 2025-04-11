@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 0
 
-    .line 1316
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$ActiveLaunchReceiver;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -34,7 +33,6 @@
 
     return-void
 
-    .line 1323
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -42,14 +40,12 @@
 
     const-string v4, "com.samsung.DO_ACTIVE_LAUNCH"
 
-    .line 1324
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     const-string v5, "com.samsung.DO_ACTIVE_LAUNCH_FOR_KNOX_LAUNCHER"
 
-    .line 1325
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -62,7 +58,6 @@
 
     const-string v5, "com.samsung.DO_ACTIVE_LAUNCH_FOR_KNOX"
 
-    .line 1326
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -87,7 +82,6 @@
 
     return-void
 
-    .line 1331
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -97,7 +91,6 @@
 
     return-void
 
-    .line 1336
     :cond_4
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -105,14 +98,12 @@
 
     const-string/jumbo v5, "package_name"
 
-    .line 1337
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v4, :cond_5
 
-    .line 1339
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result p2
@@ -131,10 +122,8 @@
 
     if-eqz v4, :cond_6
 
-    .line 1347
     invoke-static {v5}, Lcom/android/server/am/Pageboost;->startActiveLaunch(Ljava/lang/String;)V
 
-    .line 1352
     :cond_6
     :try_start_0
     iget-object v9, p0, Lcom/android/server/wm/ActivityTaskManagerService$ActiveLaunchReceiver;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -145,14 +134,12 @@
 
     if-eqz v9, :cond_8
 
-    .line 1354
     invoke-virtual {v9, v5, p2}, Landroid/content/pm/PackageManagerInternal;->wasPackageEverLaunched(Ljava/lang/String;I)Z
 
     move-result v10
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 1355
     :try_start_1
     invoke-virtual {v9, v5, p2}, Landroid/content/pm/PackageManagerInternal;->wasPackageStopped(Ljava/lang/String;I)Z
 
@@ -160,7 +147,6 @@
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1356
     :try_start_2
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -176,7 +162,6 @@
 
     if-eqz v9, :cond_9
 
-    .line 1358
     :cond_7
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -216,7 +201,6 @@
 
     move v11, v7
 
-    .line 1365
     :cond_9
     iget-object v9, p0, Lcom/android/server/wm/ActivityTaskManagerService$ActiveLaunchReceiver;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -228,7 +212,6 @@
 
     if-eqz v8, :cond_a
 
-    .line 1367
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,7 +233,6 @@
     :cond_a
     if-eqz v3, :cond_b
 
-    .line 1373
     invoke-virtual {v3, v5}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
     move-result v6
@@ -262,7 +244,6 @@
 
     const-string v6, "Checking for the Active launch getApplicationEnabledSetting"
 
-    .line 1376
     invoke-static {v2, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
@@ -283,7 +264,6 @@
 
     move-object v6, v9
 
-    .line 1381
     :goto_3
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -307,7 +287,6 @@
 
     invoke-static {v2, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1385
     :cond_c
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -343,30 +322,25 @@
 
     if-nez v8, :cond_10
 
-    .line 1388
     invoke-virtual {v3, v5}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     if-eqz v0, :cond_f
 
-    .line 1391
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object v1
 
     if-eqz v1, :cond_10
 
-    .line 1393
     invoke-virtual {v1, v7}, Landroid/app/ActivityOptions;->setActiveApplaunch(Z)V
 
-    .line 1395
     :try_start_3
     sget-boolean v3, Lcom/samsung/android/rune/CoreRune;->SYSPERF_VI_BOOST:Z
 
     if-eqz v3, :cond_d
 
-    .line 1396
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$ActiveLaunchReceiver;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mAMBooster:Lcom/android/server/wm/ActivityManagerPerformance;
@@ -375,13 +349,11 @@
 
     const/16 v3, 0x64
 
-    .line 1397
     invoke-virtual {p0, v3}, Lcom/android/server/wm/ActivityManagerPerformance;->notifyAnimationBoost(I)V
 
     :cond_d
     if-eqz v4, :cond_e
 
-    .line 1401
     invoke-virtual {v1}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p0
@@ -390,7 +362,6 @@
 
     goto :goto_4
 
-    .line 1403
     :cond_e
     invoke-virtual {v1}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
@@ -411,13 +382,11 @@
 
     const-string p1, "No activity to handle assist action."
 
-    .line 1406
     invoke-static {v2, p1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_4
     const-string/jumbo p0, "starting Active launch"
 
-    .line 1408
     invoke-static {v2, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_5
@@ -425,7 +394,6 @@
     :cond_f
     const-string p0, "Received intent is null"
 
-    .line 1411
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_10

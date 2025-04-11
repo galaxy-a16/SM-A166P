@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/utils/ManagedApplicationService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/utils/ManagedApplicationService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/utils/ManagedApplicationService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/utils/ManagedApplicationService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/utils/ManagedApplicationService;
 
     invoke-static {p0}, Lcom/android/server/utils/ManagedApplicationService;->$r8$lambda$_nOd8TmmI3r9f4QMF7u_YJL_Tck(Lcom/android/server/utils/ManagedApplicationService;)V

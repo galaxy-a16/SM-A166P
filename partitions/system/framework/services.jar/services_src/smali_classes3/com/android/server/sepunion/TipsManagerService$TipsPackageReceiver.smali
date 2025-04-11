@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/TipsManagerService;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
 
-    .line 146
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -39,7 +37,6 @@
 
     if-nez v0, :cond_1
 
-    .line 147
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +51,6 @@
 
     goto :goto_0
 
-    .line 185
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -68,7 +64,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 186
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object p1
@@ -83,7 +78,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 187
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -92,7 +86,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     iget-object p0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     const/4 p1, 0x0
@@ -101,7 +94,6 @@
 
     goto :goto_1
 
-    .line 148
     :cond_1
     :goto_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -118,7 +110,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 149
     invoke-static {}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -127,14 +118,12 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     const/4 v0, 0x1
 
     invoke-static {p2, v0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fputmTipsPackageExist(Lcom/android/server/sepunion/TipsManagerService;Z)V
 
-    .line 153
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p2}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmTipsOnBoot(Lcom/android/server/sepunion/TipsManagerService;)Z
@@ -143,7 +132,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 155
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p2}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmTipReceiver(Lcom/android/server/sepunion/TipsManagerService;)Lcom/android/server/sepunion/TipsManagerService$TipsReceiver;
@@ -152,7 +140,6 @@
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 158
     :cond_2
     new-instance v4, Landroid/content/IntentFilter;
 
@@ -160,20 +147,16 @@
 
     const-string p2, "android.intent.action.LOCALE_CHANGED"
 
-    .line 160
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p2, "samsung.galaxy.tips.application.terminated"
 
-    .line 161
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p2, "android.intent.action.USER_SWITCHED"
 
-    .line 162
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 164
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p2}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fgetmTipsNetworkGranted(Lcom/android/server/sepunion/TipsManagerService;)Z
@@ -184,10 +167,8 @@
 
     const-string/jumbo p2, "samsung.galaxy.tips.network_granted"
 
-    .line 165
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 167
     :cond_3
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -199,15 +180,12 @@
 
     const-string p2, "android.intent.action.NEW_OUTGOING_CALL"
 
-    .line 168
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string p2, "android.intent.action.PHONE_STATE"
 
-    .line 169
     invoke-virtual {v4, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 171
     :cond_4
     iget-object p2, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
@@ -225,7 +203,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/sepunion/TipsManagerService$TipsPackageReceiver;->this$0:Lcom/android/server/sepunion/TipsManagerService;
 
     invoke-static {p0, v0}, Lcom/android/server/sepunion/TipsManagerService;->-$$Nest$fputmTipsOnBoot(Lcom/android/server/sepunion/TipsManagerService;Z)V

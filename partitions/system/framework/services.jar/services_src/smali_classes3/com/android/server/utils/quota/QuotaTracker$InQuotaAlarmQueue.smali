@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$EZuQsMskZDyDZLa_87vI1MsrZ6I(ILjava/lang/String;Lcom/android/server/utils/quota/Uptc;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->lambda$removeAlarms$0(ILjava/lang/String;Lcom/android/server/utils/quota/Uptc;)Z
 
     move-result p0
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$GPwgGLSG5VNx1aMNvBxf9cyeX6Y(Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;Lcom/android/server/utils/quota/Uptc;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->lambda$processExpiredAlarms$1(Lcom/android/server/utils/quota/Uptc;)V
 
     return-void
@@ -31,10 +29,8 @@
 .method public constructor <init>(Lcom/android/server/utils/quota/QuotaTracker;Landroid/content/Context;Landroid/os/Looper;)V
     .locals 8
 
-    .line 455
     iput-object p1, p0, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->this$0:Lcom/android/server/utils/quota/QuotaTracker;
 
-    .line 456
     invoke-static {}, Lcom/android/server/utils/quota/QuotaTracker;->-$$Nest$sfgetALARM_TAG_QUOTA_CHECK()Ljava/lang/String;
 
     move-result-object v3
@@ -59,7 +55,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/utils/quota/QuotaTracker;Landroid/content/Context;Landroid/os/Looper;Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;-><init>(Lcom/android/server/utils/quota/QuotaTracker;Landroid/content/Context;Landroid/os/Looper;)V
 
     return-void
@@ -68,7 +63,6 @@
 .method private synthetic lambda$processExpiredAlarms$1(Lcom/android/server/utils/quota/Uptc;)V
     .locals 2
 
-    .line 473
     iget-object p0, p0, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->this$0:Lcom/android/server/utils/quota/QuotaTracker;
 
     iget v0, p1, Lcom/android/server/utils/quota/Uptc;->userId:I
@@ -85,7 +79,6 @@
 .method public static synthetic lambda$removeAlarms$0(ILjava/lang/String;Lcom/android/server/utils/quota/Uptc;)Z
     .locals 1
 
-    .line 465
     iget v0, p2, Lcom/android/server/utils/quota/Uptc;->userId:I
 
     if-ne p0, v0, :cond_0
@@ -114,7 +107,6 @@
 .method public isForUser(Lcom/android/server/utils/quota/Uptc;I)Z
     .locals 0
 
-    .line 461
     iget p0, p1, Lcom/android/server/utils/quota/Uptc;->userId:I
 
     if-ne p2, p0, :cond_0
@@ -133,7 +125,6 @@
 .method public bridge synthetic isForUser(Ljava/lang/Object;I)Z
     .locals 0
 
-    .line 454
     check-cast p1, Lcom/android/server/utils/quota/Uptc;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->isForUser(Lcom/android/server/utils/quota/Uptc;I)Z
@@ -148,7 +139,6 @@
 
     const/4 v0, 0x0
 
-    .line 470
     :goto_0
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
@@ -156,14 +146,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 471
     invoke-virtual {p1, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/utils/quota/Uptc;
 
-    .line 472
     iget-object v2, p0, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue;->this$0:Lcom/android/server/utils/quota/QuotaTracker;
 
     invoke-virtual {v2}, Lcom/android/server/utils/quota/QuotaTracker;->getHandler()Landroid/os/Handler;
@@ -187,7 +175,6 @@
 .method public removeAlarms(ILjava/lang/String;)V
     .locals 1
 
-    .line 465
     new-instance v0, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/utils/quota/QuotaTracker$InQuotaAlarmQueue$$ExternalSyntheticLambda1;-><init>(ILjava/lang/String;)V

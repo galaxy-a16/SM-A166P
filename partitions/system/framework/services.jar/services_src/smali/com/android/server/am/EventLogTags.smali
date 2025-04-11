@@ -7,7 +7,6 @@
 .method public static writeAmCrash(IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 9
 
-    .line 312
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -52,7 +51,6 @@
 
     const/16 v0, 0x7551
 
-    .line 292
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -63,7 +61,6 @@
 
     const/16 v0, 0x759e
 
-    .line 484
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -72,7 +69,6 @@
 .method public static writeAmKillBgProc(Ljava/lang/String;II)V
     .locals 0
 
-    .line 492
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -97,7 +93,6 @@
 
     const/16 v0, 0x7541
 
-    .line 264
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -106,7 +101,6 @@
 .method public static writeAmMemFactor(II)V
     .locals 0
 
-    .line 336
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -129,7 +123,6 @@
 .method public static writeAmMeminfo(JJJJJ)V
     .locals 0
 
-    .line 328
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -164,7 +157,6 @@
 .method public static writeAmPreBoot(ILjava/lang/String;)V
     .locals 0
 
-    .line 324
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -183,7 +175,6 @@
 .method public static writeAmProcBound(IILjava/lang/String;)V
     .locals 0
 
-    .line 244
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -206,7 +197,6 @@
 .method public static writeAmProcDied(IILjava/lang/String;IIII)V
     .locals 7
 
-    .line 248
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -247,7 +237,6 @@
 .method public static writeAmProcessStartTimeout(IIILjava/lang/String;)V
     .locals 0
 
-    .line 308
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -274,7 +263,6 @@
 .method public static writeAmProviderLostProcess(ILjava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .line 304
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -297,7 +285,6 @@
 .method public static writeAmPss(IILjava/lang/String;JJJJIIJ)V
     .locals 9
 
-    .line 332
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -368,7 +355,6 @@
 .method public static writeAmStopIdleService(ILjava/lang/String;)V
     .locals 0
 
-    .line 360
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -389,7 +375,6 @@
 
     const/16 v0, 0x7559
 
-    .line 320
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -400,7 +385,6 @@
 
     const/16 v0, 0x7566
 
-    .line 352
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -411,7 +395,6 @@
 
     const/16 v0, 0x7567
 
-    .line 356
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -422,7 +405,6 @@
 
     const/16 v0, 0x7564
 
-    .line 344
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -433,7 +415,6 @@
 
     const/16 v0, 0x7565
 
-    .line 348
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -442,7 +423,6 @@
 .method public static writeAmUserStateChanged(II)V
     .locals 0
 
-    .line 340
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -465,7 +445,6 @@
 .method public static writeAmWtf(IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 6
 
-    .line 316
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -500,7 +479,6 @@
 
     const/16 v0, 0xbe0
 
-    .line 232
     invoke-static {v0, p0, p1}, Landroid/util/EventLog;->writeEvent(IJ)I
 
     return-void
@@ -509,7 +487,6 @@
 .method public static writeBootProgressAmsState(IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 488
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -538,7 +515,6 @@
 
     const/16 v0, 0xbea
 
-    .line 236
     invoke-static {v0, p0, p1}, Landroid/util/EventLog;->writeEvent(IJ)I
 
     return-void
@@ -549,7 +525,6 @@
 
     const/16 v0, 0xa9f
 
-    .line 224
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(II)I
 
     return-void
@@ -558,7 +533,6 @@
 .method public static writeCpu(IIIIII)V
     .locals 0
 
-    .line 228
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0

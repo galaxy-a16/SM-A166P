@@ -36,7 +36,6 @@
 .method public static synthetic $r8$lambda$O7j7aIaRn2G_bfFN1SctJ5eRrkI(Lcom/android/server/policy/AppOpsPolicy;ILandroid/os/PackageTagsList;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->lambda$new$0(ILandroid/os/PackageTagsList;)V
 
     return-void
@@ -45,7 +44,6 @@
 .method public static synthetic $r8$lambda$rSwoDbz5FQDzO26nsB4OBi0hfyA(Lcom/android/server/policy/AppOpsPolicy;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->lambda$new$1(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     return-void
@@ -54,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRoleManager(Lcom/android/server/policy/AppOpsPolicy;)Landroid/app/role/RoleManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mRoleManager:Landroid/app/role/RoleManager;
 
     return-object p0
@@ -63,7 +60,6 @@
 .method public static bridge synthetic -$$Nest$mupdateActivityRecognizerTags(Lcom/android/server/policy/AppOpsPolicy;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/policy/AppOpsPolicy;->updateActivityRecognizerTags(Ljava/lang/String;)V
 
     return-void
@@ -72,7 +68,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 67
     const-class v0, Lcom/android/server/policy/AppOpsPolicy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -85,7 +80,6 @@
 
     const/4 v1, 0x0
 
-    .line 73
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -98,48 +92,40 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 10
 
-    .line 125
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLock:Ljava/lang/Object;
 
-    .line 78
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mToken:Landroid/os/IBinder;
 
-    .line 106
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mLocationTags:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 113
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
-    .line 120
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 126
     iput-object p1, p0, Lcom/android/server/policy/AppOpsPolicy;->mContext:Landroid/content/Context;
 
-    .line 127
     const-class v1, Landroid/app/role/RoleManager;
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -150,7 +136,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mRoleManager:Landroid/app/role/RoleManager;
 
-    .line 128
     const-class v2, Landroid/service/voice/VoiceInteractionManagerInternal;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -161,19 +146,16 @@
 
     iput-object v2, p0, Lcom/android/server/policy/AppOpsPolicy;->mVoiceInteractionManagerInternal:Landroid/service/voice/VoiceInteractionManagerInternal;
 
-    .line 131
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 130
     invoke-static {v2}, Lcom/android/server/policy/AppOpsPolicy;->isHotwordDetectionServiceRequired(Landroid/content/pm/PackageManager;)Z
 
     move-result v2
 
     iput-boolean v2, p0, Lcom/android/server/policy/AppOpsPolicy;->mIsHotwordDetectionServiceRequired:Z
 
-    .line 133
     const-class v2, Landroid/location/LocationManagerInternal;
 
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -182,34 +164,28 @@
 
     check-cast v2, Landroid/location/LocationManagerInternal;
 
-    .line 135
     new-instance v3, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda0;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/AppOpsPolicy$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/policy/AppOpsPolicy;)V
 
     invoke-virtual {v2, v3}, Landroid/location/LocationManagerInternal;->setLocationPackageTagsListener(Landroid/location/LocationManagerInternal$LocationPackageTagsListener;)V
 
-    .line 158
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v2, "android.intent.action.PACKAGE_ADDED"
 
-    .line 159
     invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v2, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 160
     invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v2, "package"
 
-    .line 161
     invoke-virtual {v7, v2}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 163
     new-instance v5, Lcom/android/server/policy/AppOpsPolicy$1;
 
     invoke-direct {v5, p0}, Lcom/android/server/policy/AppOpsPolicy$1;-><init>(Lcom/android/server/policy/AppOpsPolicy;)V
@@ -224,7 +200,6 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 182
     invoke-virtual {p1}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v2
@@ -237,17 +212,14 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/app/role/RoleManager;->addOnRoleHoldersChangedListenerAsUser(Ljava/util/concurrent/Executor;Landroid/app/role/OnRoleHoldersChangedListener;Landroid/os/UserHandle;)V
 
-    .line 189
     invoke-virtual {p0}, Lcom/android/server/policy/AppOpsPolicy;->initializeActivityRecognizersTags()V
 
-    .line 193
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const-string v1, "android.hardware.telephony"
 
-    .line 194
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v1
@@ -256,7 +228,6 @@
 
     const-string v1, "android.hardware.microphone"
 
-    .line 195
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v1
@@ -265,14 +236,12 @@
 
     const-string v1, "android.software.telecom"
 
-    .line 196
     invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 197
     const-class p0, Landroid/app/AppOpsManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -293,12 +262,10 @@
 
     move-object v4, v0
 
-    .line 198
     invoke-virtual/range {v1 .. v6}, Landroid/app/AppOpsManager;->setUserRestrictionForUser(IZLandroid/os/IBinder;Landroid/os/PackageTagsList;I)V
 
     const/16 v2, 0x65
 
-    .line 200
     invoke-virtual/range {v1 .. v6}, Landroid/app/AppOpsManager;->setUserRestrictionForUser(IZLandroid/os/IBinder;Landroid/os/PackageTagsList;I)V
 
     :cond_0
@@ -308,7 +275,6 @@
 .method public static isDatasourceAttributionTag(ILjava/lang/String;Ljava/lang/String;Ljava/util/Map;)Z
     .locals 0
 
-    .line 413
     invoke-static {p0}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p0
@@ -325,7 +291,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 414
     invoke-virtual {p0, p1, p2}, Landroid/os/PackageTagsList;->contains(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -348,7 +313,6 @@
 
     const-string v0, "android.hardware.type.automotive"
 
-    .line 210
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v0
@@ -357,7 +321,6 @@
 
     const-string v0, "android.software.leanback"
 
-    .line 211
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
@@ -366,7 +329,6 @@
 
     goto :goto_0
 
-    .line 214
     :cond_0
     sget-boolean p0, Lcom/android/server/policy/AppOpsPolicy;->SYSPROP_HOTWORD_DETECTION_SERVICE_REQUIRED:Z
 
@@ -382,12 +344,10 @@
 .method private synthetic lambda$new$0(ILandroid/os/PackageTagsList;)V
     .locals 4
 
-    .line 137
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 138
     :try_start_0
     invoke-virtual {p2}, Landroid/os/PackageTagsList;->isEmpty()Z
 
@@ -395,33 +355,28 @@
 
     if-eqz v1, :cond_0
 
-    .line 139
     iget-object p2, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->remove(I)V
 
     goto :goto_0
 
-    .line 141
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseArray;->set(ILjava/lang/Object;)V
 
-    .line 144
     :goto_0
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p1
 
-    .line 145
     new-instance p2, Landroid/os/PackageTagsList$Builder;
 
     const/4 v1, 0x1
 
     invoke-direct {p2, v1}, Landroid/os/PackageTagsList$Builder;-><init>(I)V
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -433,7 +388,6 @@
     :goto_1
     if-ge v2, v1, :cond_2
 
-    .line 148
     iget-object v3, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->keyAt(I)I
@@ -446,7 +400,6 @@
 
     if-ne v3, p1, :cond_1
 
-    .line 149
     iget-object v3, p0, Lcom/android/server/policy/AppOpsPolicy;->mPerUidLocationTags:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -462,7 +415,6 @@
 
     goto :goto_1
 
-    .line 153
     :cond_2
     invoke-virtual {p2}, Landroid/os/PackageTagsList$Builder;->build()Landroid/os/PackageTagsList;
 
@@ -472,7 +424,6 @@
 
     invoke-static {p1, p2, p0}, Lcom/android/server/policy/AppOpsPolicy;->updateAllowListedTagsForPackageLocked(ILandroid/os/PackageTagsList;Ljava/util/concurrent/ConcurrentHashMap;)V
 
-    .line 155
     monitor-exit v0
 
     return-void
@@ -492,14 +443,12 @@
 
     const-string p2, "android.app.role.SYSTEM_ACTIVITY_RECOGNIZER"
 
-    .line 184
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 185
     invoke-virtual {p0}, Lcom/android/server/policy/AppOpsPolicy;->initializeActivityRecognizersTags()V
 
     :cond_0
@@ -509,7 +458,6 @@
 .method public static resolveArOp(I)I
     .locals 1
 
-    .line 0
     const/16 v0, 0x4f
 
     if-ne p0, v0, :cond_0
@@ -523,7 +471,6 @@
 .method public static resolveLocationOp(I)I
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_1
 
     const/4 v0, 0x1
@@ -546,7 +493,6 @@
 .method public static updateAllowListedTagsForPackageLocked(ILandroid/os/PackageTagsList;Ljava/util/concurrent/ConcurrentHashMap;)V
     .locals 0
 
-    .line 407
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -561,7 +507,6 @@
 .method public checkAudioOperation(IIILjava/lang/String;Lcom/android/internal/util/function/QuadFunction;)I
     .locals 0
 
-    .line 227
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -590,7 +535,6 @@
 .method public checkOperation(IILjava/lang/String;Ljava/lang/String;ZLcom/android/internal/util/function/QuintFunction;)I
     .locals 6
 
-    .line 221
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -629,18 +573,15 @@
 .method public final clearActivityRecognitionTags()V
     .locals 1
 
-    .line 365
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 366
     :try_start_0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 367
     monitor-exit v0
 
     return-void
@@ -658,7 +599,6 @@
 .method public dumpTags(Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 303
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLocationTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->isEmpty()Z
@@ -669,18 +609,14 @@
 
     const-string v0, "  AppOps policy location tags:"
 
-    .line 304
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLocationTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/policy/AppOpsPolicy;->writeTags(Ljava/util/Map;Ljava/io/PrintWriter;)V
 
-    .line 306
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 308
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -692,15 +628,12 @@
 
     const-string v0, "  AppOps policy activity recognition tags:"
 
-    .line 309
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 310
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/policy/AppOpsPolicy;->writeTags(Ljava/util/Map;Ljava/io/PrintWriter;)V
 
-    .line 311
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     :cond_1
@@ -710,7 +643,6 @@
 .method public finishOperation(Landroid/os/IBinder;IILjava/lang/String;Ljava/lang/String;Lcom/android/internal/util/function/QuintConsumer;)V
     .locals 7
 
-    .line 285
     invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -719,7 +651,6 @@
 
     move-result-object v3
 
-    .line 286
     invoke-virtual {p0, p2, p3}, Lcom/android/server/policy/AppOpsPolicy;->resolveUid(II)I
 
     move-result p0
@@ -736,7 +667,6 @@
 
     move-object v6, p5
 
-    .line 285
     invoke-interface/range {v1 .. v6}, Lcom/android/internal/util/function/QuintConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -745,12 +675,10 @@
 .method public finishProxyOperation(Landroid/os/IBinder;ILandroid/content/AttributionSource;ZLcom/android/internal/util/function/QuadFunction;)V
     .locals 3
 
-    .line 293
     invoke-virtual {p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 294
     invoke-virtual {p3}, Landroid/content/AttributionSource;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -759,7 +687,6 @@
 
     move-result-object v2
 
-    .line 293
     invoke-virtual {p0, p2, v0, v1, v2}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -768,12 +695,10 @@
 
     move-result-object p0
 
-    .line 295
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
 
-    .line 293
     invoke-interface {p5, p1, p0, p3, p2}, Lcom/android/internal/util/function/QuadFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -782,7 +707,6 @@
 .method public final initializeActivityRecognizersTags()V
     .locals 4
 
-    .line 351
     iget-object v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mRoleManager:Landroid/app/role/RoleManager;
 
     const-string v1, "android.app.role.SYSTEM_ACTIVITY_RECOGNIZER"
@@ -791,7 +715,6 @@
 
     move-result-object v0
 
-    .line 353
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -803,21 +726,18 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 356
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 357
     invoke-virtual {p0, v3}, Lcom/android/server/policy/AppOpsPolicy;->updateActivityRecognizerTags(Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 360
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/policy/AppOpsPolicy;->clearActivityRecognitionTags()V
 
@@ -828,7 +748,6 @@
 .method public noteOperation(IILjava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLcom/android/internal/util/function/HeptFunction;)Landroid/app/SyncNotedAppOp;
     .locals 9
 
-    .line 235
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -837,7 +756,6 @@
 
     move-result-object v2
 
-    .line 236
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->resolveUid(II)I
 
     move-result v0
@@ -850,7 +768,6 @@
 
     move-result-object v6
 
-    .line 237
     invoke-static/range {p7 .. p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -863,7 +780,6 @@
 
     move-object v7, p6
 
-    .line 235
     invoke-interface/range {v1 .. v8}, Lcom/android/internal/util/function/HeptFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -876,12 +792,10 @@
 .method public noteProxyOperation(ILandroid/content/AttributionSource;ZLjava/lang/String;ZZLcom/android/internal/util/function/HexFunction;)Landroid/app/SyncNotedAppOp;
     .locals 7
 
-    .line 246
     invoke-virtual {p2}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 247
     invoke-virtual {p2}, Landroid/content/AttributionSource;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -890,7 +804,6 @@
 
     move-result-object v2
 
-    .line 246
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -899,7 +812,6 @@
 
     move-result-object v1
 
-    .line 248
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -908,7 +820,6 @@
 
     move-result-object v5
 
-    .line 249
     invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -919,7 +830,6 @@
 
     move-object v4, p4
 
-    .line 246
     invoke-interface/range {v0 .. v6}, Lcom/android/internal/util/function/HexFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -932,12 +842,10 @@
 .method public final resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
     .locals 1
 
-    .line 327
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->resolveRecordAudioOp(II)I
 
     move-result p1
 
-    .line 328
     invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/AppOpsPolicy;->resolveSandboxedServiceOp(II)I
 
     move-result p1
@@ -946,7 +854,6 @@
 
     return p1
 
-    .line 332
     :cond_0
     invoke-static {p1}, Lcom/android/server/policy/AppOpsPolicy;->resolveLocationOp(I)I
 
@@ -954,7 +861,6 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 334
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mLocationTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2, p3, p4, p0}, Lcom/android/server/policy/AppOpsPolicy;->isDatasourceAttributionTag(ILjava/lang/String;Ljava/lang/String;Ljava/util/Map;)Z
@@ -965,7 +871,6 @@
 
     return v0
 
-    .line 339
     :cond_1
     invoke-static {p1}, Lcom/android/server/policy/AppOpsPolicy;->resolveArOp(I)I
 
@@ -973,7 +878,6 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 341
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2, p3, p4, p0}, Lcom/android/server/policy/AppOpsPolicy;->isDatasourceAttributionTag(ILjava/lang/String;Ljava/lang/String;Ljava/util/Map;)Z
@@ -995,25 +899,21 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 436
     iget-boolean v0, p0, Lcom/android/server/policy/AppOpsPolicy;->mIsHotwordDetectionServiceRequired:Z
 
     if-nez v0, :cond_0
 
     return p1
 
-    .line 441
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mVoiceInteractionManagerInternal:Landroid/service/voice/VoiceInteractionManagerInternal;
 
-    .line 442
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal;->getHotwordDetectionServiceIdentity()Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 444
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getIsolatedUid()I
 
     move-result p0
@@ -1034,7 +934,6 @@
 .method public final resolveSandboxedServiceOp(II)I
     .locals 2
 
-    .line 453
     invoke-static {p2}, Landroid/os/Process;->isIsolated(I)Z
 
     move-result v0
@@ -1051,18 +950,15 @@
 
     goto :goto_0
 
-    .line 457
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mVoiceInteractionManagerInternal:Landroid/service/voice/VoiceInteractionManagerInternal;
 
-    .line 458
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal;->getHotwordDetectionServiceIdentity()Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 460
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getIsolatedUid()I
 
     move-result p0
@@ -1093,7 +989,6 @@
 .method public final resolveUid(II)I
     .locals 1
 
-    .line 480
     invoke-static {p2}, Landroid/os/Process;->isIsolated(I)Z
 
     move-result v0
@@ -1112,25 +1007,21 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 484
     :cond_0
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mVoiceInteractionManagerInternal:Landroid/service/voice/VoiceInteractionManagerInternal;
 
-    .line 485
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal;->getHotwordDetectionServiceIdentity()Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 487
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getIsolatedUid()I
 
     move-result p1
 
     if-ne p2, p1, :cond_1
 
-    .line 488
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionManagerInternal$HotwordDetectionServiceIdentity;->getOwnerUid()I
 
     move-result p2
@@ -1152,7 +1043,6 @@
 
     move-object/from16 v5, p5
 
-    .line 260
     invoke-virtual {p0, p2, p3, v4, v5}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v3
@@ -1161,7 +1051,6 @@
 
     move-result-object v3
 
-    .line 261
     invoke-virtual {p0, p2, p3}, Lcom/android/server/policy/AppOpsPolicy;->resolveUid(II)I
 
     move-result v0
@@ -1174,7 +1063,6 @@
 
     move-result-object v7
 
-    .line 262
     invoke-static/range {p7 .. p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -1187,7 +1075,6 @@
 
     move-result-object v10
 
-    .line 263
     invoke-static/range {p11 .. p11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
@@ -1206,7 +1093,6 @@
 
     move-object/from16 v8, p8
 
-    .line 260
     invoke-interface/range {v0 .. v11}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1219,12 +1105,10 @@
 .method public startProxyOperation(Landroid/os/IBinder;ILandroid/content/AttributionSource;ZZLjava/lang/String;ZZIIILcom/android/internal/util/function/UndecFunction;)Landroid/app/SyncNotedAppOp;
     .locals 13
 
-    .line 274
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getUid()I
 
     move-result v0
 
-    .line 275
     invoke-virtual/range {p3 .. p3}, Landroid/content/AttributionSource;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1237,7 +1121,6 @@
 
     move v4, p2
 
-    .line 274
     invoke-virtual {p0, p2, v0, v1, v2}, Lcom/android/server/policy/AppOpsPolicy;->resolveDatasourceOp(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1246,7 +1129,6 @@
 
     move-result-object v3
 
-    .line 276
     invoke-static/range {p4 .. p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
@@ -1255,7 +1137,6 @@
 
     move-result-object v6
 
-    .line 277
     invoke-static/range {p7 .. p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -1268,7 +1149,6 @@
 
     move-result-object v10
 
-    .line 278
     invoke-static/range {p10 .. p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
@@ -1285,7 +1165,6 @@
 
     move-object/from16 v7, p6
 
-    .line 274
     invoke-interface/range {v1 .. v12}, Lcom/android/internal/util/function/UndecFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1298,17 +1177,14 @@
 .method public final updateActivityRecognizerTags(Ljava/lang/String;)V
     .locals 4
 
-    .line 377
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.ACTIVITY_RECOGNIZER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 378
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 379
     iget-object p1, p0, Lcom/android/server/policy/AppOpsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1319,21 +1195,18 @@
 
     const/4 v2, 0x0
 
-    .line 380
     invoke-virtual {p1, v0, v1, v2}, Landroid/content/pm/PackageManager;->resolveServiceAsUser(Landroid/content/Intent;II)Landroid/content/pm/ResolveInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 381
     iget-object v0, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
-    .line 386
     :cond_0
     iget-object v0, v0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
 
@@ -1344,19 +1217,16 @@
     :cond_1
     const-string v1, "android:activity_recognition_allow_listed_tags"
 
-    .line 390
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 391
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 392
     new-instance v1, Landroid/os/PackageTagsList$Builder;
 
     const/4 v2, 0x1
@@ -1369,7 +1239,6 @@
 
     const-string v3, ";"
 
-    .line 394
     invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -1378,22 +1247,18 @@
 
     move-result-object v0
 
-    .line 392
     invoke-virtual {v1, v2, v0}, Landroid/os/PackageTagsList$Builder;->add(Ljava/lang/String;Ljava/util/Collection;)Landroid/os/PackageTagsList$Builder;
 
     move-result-object v0
 
-    .line 394
     invoke-virtual {v0}, Landroid/os/PackageTagsList$Builder;->build()Landroid/os/PackageTagsList;
 
     move-result-object v0
 
-    .line 395
     iget-object v1, p0, Lcom/android/server/policy/AppOpsPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 396
     :try_start_0
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -1401,17 +1266,14 @@
 
     iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 397
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result p1
 
     iget-object p0, p0, Lcom/android/server/policy/AppOpsPolicy;->mActivityRecognitionTags:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 396
     invoke-static {p1, v0, p0}, Lcom/android/server/policy/AppOpsPolicy;->updateAllowListedTagsForPackageLocked(ILandroid/os/PackageTagsList;Ljava/util/concurrent/ConcurrentHashMap;)V
 
-    .line 400
     monitor-exit v1
 
     goto :goto_0
@@ -1429,7 +1291,6 @@
     :goto_0
     return-void
 
-    .line 382
     :cond_3
     :goto_1
     sget-object p0, Lcom/android/server/policy/AppOpsPolicy;->LOG_TAG:Ljava/lang/String;
@@ -1444,7 +1305,6 @@
 .method public final writeTags(Ljava/util/Map;Ljava/io/PrintWriter;)V
     .locals 2
 
-    .line 317
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -1470,7 +1330,6 @@
 
     const-string v1, "    #"
 
-    .line 318
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     add-int/lit8 v1, p1, 0x1
@@ -1481,7 +1340,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 319
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -1498,7 +1356,6 @@
 
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 320
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1

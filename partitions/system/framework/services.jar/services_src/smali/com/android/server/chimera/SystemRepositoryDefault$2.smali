@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/SystemRepositoryDefault;)V
     .locals 0
 
-    .line 507
     iput-object p1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -28,7 +27,6 @@
 
     move/from16 v8, p2
 
-    .line 511
     iget-object v1, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-static {v1}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fgetmChimeraProcessObservers(Lcom/android/server/chimera/SystemRepositoryDefault;)Ljava/util/List;
@@ -37,7 +35,6 @@
 
     monitor-enter v9
 
-    .line 512
     :try_start_0
     iget-object v1, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
@@ -47,14 +44,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 513
     array-length v1, v10
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 516
     :cond_0
     iget-object v1, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
@@ -62,7 +57,6 @@
 
     move-result v11
 
-    .line 517
     iget-object v1, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-virtual {v1}, Lcom/android/server/chimera/SystemRepositoryDefault;->getCurrentHomePackageName()Ljava/lang/String;
@@ -77,7 +71,6 @@
 
     move-result v13
 
-    .line 518
     iget-object v1, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     invoke-static {v1}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fgetmChimeraProcessObservers(Lcom/android/server/chimera/SystemRepositoryDefault;)Ljava/util/List;
@@ -113,7 +106,6 @@
 
     move v7, v13
 
-    .line 519
     invoke-interface/range {v1 .. v7}, Lcom/android/server/chimera/SystemRepository$ChimeraProcessObserver;->onForegroundActivitiesChanged(IIZI[Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -123,7 +115,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 523
     iget-object v0, v0, Lcom/android/server/chimera/SystemRepositoryDefault$2;->this$0:Lcom/android/server/chimera/SystemRepositoryDefault;
 
     aget-object v1, v10, v12
@@ -142,13 +133,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/chimera/SystemRepositoryDefault;->-$$Nest$fputmLastForegroundApp(Lcom/android/server/chimera/SystemRepositoryDefault;Landroid/util/Pair;)V
 
-    .line 525
     :cond_2
     monitor-exit v9
 
     return-void
 
-    .line 514
     :cond_3
     :goto_1
     monitor-exit v9
@@ -158,7 +147,6 @@
     :catchall_0
     move-exception v0
 
-    .line 525
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -169,13 +157,11 @@
 .method public onForegroundServicesChanged(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onProcessDied(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method

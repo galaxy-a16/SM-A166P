@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerService$DefaultSystemWrapper-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$DefaultSystemWrapper;-><init>()V
 
     return-void
@@ -29,22 +28,16 @@
 .method public disablePackageCaches()V
     .locals 0
 
-    .line 947
     invoke-static {}, Landroid/content/pm/PackageManager;->disableApplicationInfoCache()V
 
-    .line 948
     invoke-static {}, Landroid/content/pm/PackageManager;->disablePackageInfoCache()V
 
-    .line 949
     invoke-static {}, Landroid/app/ApplicationPackageManager;->invalidateGetPackagesForUidCache()V
 
-    .line 950
     invoke-static {}, Landroid/app/ApplicationPackageManager;->disableGetPackagesForUidCache()V
 
-    .line 951
     invoke-static {}, Landroid/app/ApplicationPackageManager;->invalidateHasSystemFeatureCache()V
 
-    .line 952
     invoke-static {}, Landroid/content/pm/PackageManager;->corkPackageInfoCache()V
 
     return-void
@@ -53,7 +46,6 @@
 .method public enablePackageCaches()V
     .locals 0
 
-    .line 957
     invoke-static {}, Landroid/content/pm/PackageManager;->uncorkPackageInfoCache()V
 
     return-void

@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/om/ResourceMapParser$ResourceType;
     .locals 2
 
-    .line 152
     sget-object v0, Lcom/android/server/om/ResourceMapParser$ResourceType;->DRAWABLE:Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     sget-object v1, Lcom/android/server/om/ResourceMapParser$ResourceType;->COLOR:Lcom/android/server/om/ResourceMapParser$ResourceType;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 153
     new-instance v0, Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     const-string v1, "DRAWABLE"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/om/ResourceMapParser$ResourceType;->DRAWABLE:Lcom/android/server/om/ResourceMapParser$ResourceType;
 
-    .line 154
     new-instance v0, Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     const-string v1, "COLOR"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/om/ResourceMapParser$ResourceType;->COLOR:Lcom/android/server/om/ResourceMapParser$ResourceType;
 
-    .line 152
     invoke-static {}, Lcom/android/server/om/ResourceMapParser$ResourceType;->$values()[Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 152
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/om/ResourceMapParser$ResourceType;
     .locals 1
 
-    .line 152
     const-class v0, Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/om/ResourceMapParser$ResourceType;
     .locals 1
 
-    .line 152
     sget-object v0, Lcom/android/server/om/ResourceMapParser$ResourceType;->$VALUES:[Lcom/android/server/om/ResourceMapParser$ResourceType;
 
     invoke-virtual {v0}, [Lcom/android/server/om/ResourceMapParser$ResourceType;->clone()Ljava/lang/Object;

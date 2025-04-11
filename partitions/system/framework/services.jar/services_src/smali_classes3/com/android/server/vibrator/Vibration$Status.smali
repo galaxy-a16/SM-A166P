@@ -75,7 +75,6 @@
 .method public static synthetic $values()[Lcom/android/server/vibrator/Vibration$Status;
     .locals 30
 
-    .line 56
     sget-object v0, Lcom/android/server/vibrator/Vibration$Status;->UNKNOWN:Lcom/android/server/vibrator/Vibration$Status;
 
     sget-object v1, Lcom/android/server/vibrator/Vibration$Status;->RUNNING:Lcom/android/server/vibrator/Vibration$Status;
@@ -146,7 +145,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 57
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "UNKNOWN"
@@ -157,7 +155,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->UNKNOWN:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 58
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "RUNNING"
@@ -168,7 +165,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->RUNNING:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 59
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "FINISHED"
@@ -179,7 +175,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->FINISHED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 60
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "FINISHED_UNEXPECTED"
@@ -190,7 +185,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->FINISHED_UNEXPECTED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 61
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "FORWARDED_TO_INPUT_DEVICES"
@@ -201,7 +195,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->FORWARDED_TO_INPUT_DEVICES:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 62
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_BINDER_DIED"
@@ -212,7 +205,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_BINDER_DIED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 63
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_BY_SCREEN_OFF"
@@ -223,7 +215,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_BY_SCREEN_OFF:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 64
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_BY_SETTINGS_UPDATE"
@@ -234,7 +225,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_BY_SETTINGS_UPDATE:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 65
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_BY_USER"
@@ -245,7 +235,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_BY_USER:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 66
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_BY_UNKNOWN_REASON"
@@ -256,7 +245,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_BY_UNKNOWN_REASON:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 67
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "CANCELLED_SUPERSEDED"
@@ -267,7 +255,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_SUPERSEDED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 68
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_ERROR_APP_OPS"
@@ -278,7 +265,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_ERROR_APP_OPS:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 69
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_ERROR_CANCELLING"
@@ -289,7 +275,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_ERROR_CANCELLING:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 70
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_ERROR_SCHEDULING"
@@ -300,7 +285,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_ERROR_SCHEDULING:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 71
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_ERROR_TOKEN"
@@ -311,7 +295,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_ERROR_TOKEN:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 72
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_APP_OPS"
@@ -322,7 +305,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_APP_OPS:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 73
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_BACKGROUND"
@@ -333,7 +315,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_BACKGROUND:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 74
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_UNKNOWN_VIBRATION"
@@ -344,7 +325,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_UNKNOWN_VIBRATION:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 75
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_UNSUPPORTED"
@@ -355,7 +335,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_UNSUPPORTED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 76
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_FOR_EXTERNAL"
@@ -366,7 +345,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_EXTERNAL:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 77
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_FOR_HIGHER_IMPORTANCE"
@@ -377,7 +355,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_HIGHER_IMPORTANCE:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 78
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const-string v1, "IGNORED_FOR_ONGOING"
@@ -388,7 +365,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_ONGOING:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 79
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x16
@@ -401,7 +377,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_POWER:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 80
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x17
@@ -414,7 +389,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_RINGER_MODE:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 81
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x18
@@ -427,7 +401,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FOR_SETTINGS:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 82
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x19
@@ -440,7 +413,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_SUPERSEDED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 83
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x1a
@@ -453,7 +425,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->IGNORED_FROM_VIRTUAL_DEVICE:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 85
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x1b
@@ -466,7 +437,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_ACH_REPEATED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 86
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x1c
@@ -479,7 +449,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_ACH_NON_REPEATED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 89
     new-instance v0, Lcom/android/server/vibrator/Vibration$Status;
 
     const/16 v1, 0x1d
@@ -492,7 +461,6 @@
 
     sput-object v0, Lcom/android/server/vibrator/Vibration$Status;->CANCELLED_SERVICE_RECOVERED:Lcom/android/server/vibrator/Vibration$Status;
 
-    .line 56
     invoke-static {}, Lcom/android/server/vibrator/Vibration$Status;->$values()[Lcom/android/server/vibrator/Vibration$Status;
 
     move-result-object v0
@@ -505,10 +473,8 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 94
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 95
     iput p3, p0, Lcom/android/server/vibrator/Vibration$Status;->mProtoEnumValue:I
 
     return-void
@@ -517,7 +483,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/vibrator/Vibration$Status;
     .locals 1
 
-    .line 56
     const-class v0, Lcom/android/server/vibrator/Vibration$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -532,7 +497,6 @@
 .method public static values()[Lcom/android/server/vibrator/Vibration$Status;
     .locals 1
 
-    .line 56
     sget-object v0, Lcom/android/server/vibrator/Vibration$Status;->$VALUES:[Lcom/android/server/vibrator/Vibration$Status;
 
     invoke-virtual {v0}, [Lcom/android/server/vibrator/Vibration$Status;->clone()Ljava/lang/Object;
@@ -549,7 +513,6 @@
 .method public getProtoEnumValue()I
     .locals 0
 
-    .line 99
     iget p0, p0, Lcom/android/server/vibrator/Vibration$Status;->mProtoEnumValue:I
 
     return p0

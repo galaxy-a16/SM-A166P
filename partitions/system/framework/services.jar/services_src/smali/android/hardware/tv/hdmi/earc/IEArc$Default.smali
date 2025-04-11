@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public getLastReportedAudioCapabilities(I)[B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -38,7 +36,6 @@
 .method public getState(I)B
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -47,7 +44,6 @@
 .method public isEArcEnabled()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0
@@ -56,13 +52,11 @@
 .method public setCallback(Landroid/hardware/tv/hdmi/earc/IEArcCallback;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setEArcEnabled(Z)V
     .locals 0
 
-    .line 0
     return-void
 .end method

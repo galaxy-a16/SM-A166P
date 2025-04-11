@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$Mchbf7xEwadjFv9_gIBWToikEFw(Lcom/android/server/companion/transport/RawTransport;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/companion/transport/RawTransport;->lambda$start$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(ILandroid/os/ParcelFileDescriptor;Landroid/content/Context;)V
     .locals 0
 
-    .line 34
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/companion/transport/Transport;-><init>(ILandroid/os/ParcelFileDescriptor;Landroid/content/Context;)V
 
     return-void
@@ -29,14 +27,12 @@
 .method private synthetic lambda$start$0()V
     .locals 3
 
-    .line 44
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/companion/transport/RawTransport;->mStopped:Z
 
     if-nez v0, :cond_0
 
-    .line 45
     invoke-virtual {p0}, Lcom/android/server/companion/transport/RawTransport;->receiveMessage()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -46,7 +42,6 @@
     :catch_0
     move-exception v0
 
-    .line 48
     iget-boolean v1, p0, Lcom/android/server/companion/transport/RawTransport;->mStopped:Z
 
     if-nez v1, :cond_0
@@ -55,10 +50,8 @@
 
     const-string v2, "Trouble during transport"
 
-    .line 49
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 50
     invoke-virtual {p0}, Lcom/android/server/companion/transport/RawTransport;->close()V
 
     :cond_0
@@ -70,10 +63,8 @@
 .method public close()V
     .locals 2
 
-    .line 66
     invoke-virtual {p0}, Lcom/android/server/companion/transport/RawTransport;->stop()V
 
-    .line 68
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -82,21 +73,17 @@
 
     const-string v1, "Closing raw transport."
 
-    .line 69
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mRemoteIn:Ljava/io/InputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 74
     invoke-super {p0}, Lcom/android/server/companion/transport/Transport;->close()V
 
     return-void
@@ -105,7 +92,6 @@
 .method public final receiveMessage()V
     .locals 5
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mRemoteIn:Ljava/io/InputStream;
 
     monitor-enter v0
@@ -115,43 +101,34 @@
     :try_start_0
     new-array v1, v1, [B
 
-    .line 100
     iget-object v2, p0, Lcom/android/server/companion/transport/Transport;->mRemoteIn:Ljava/io/InputStream;
 
     invoke-static {v2, v1}, Llibcore/io/Streams;->readFully(Ljava/io/InputStream;[B)V
 
-    .line 101
     invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 102
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
-    .line 103
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
 
-    .line 104
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
-    .line 105
     new-array v1, v1, [B
 
-    .line 106
     iget-object v4, p0, Lcom/android/server/companion/transport/Transport;->mRemoteIn:Ljava/io/InputStream;
 
     invoke-static {v4, v1}, Llibcore/io/Streams;->readFully(Ljava/io/InputStream;[B)V
 
-    .line 108
     invoke-virtual {p0, v2, v3, v1}, Lcom/android/server/companion/transport/Transport;->handleMessage(II[B)V
 
-    .line 109
     monitor-exit v0
 
     return-void
@@ -169,14 +146,12 @@
 .method public sendMessage(II[B)V
     .locals 3
 
-    .line 80
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "CDM_CompanionTransport"
 
-    .line 81
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +194,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     :cond_0
     iget-object v0, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
@@ -227,30 +201,25 @@
 
     const/16 v1, 0xc
 
-    .line 87
     :try_start_0
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 88
     invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 89
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     array-length p2, p3
 
-    .line 90
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 91
     iget-object p2, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
@@ -259,17 +228,14 @@
 
     invoke-virtual {p2, p1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 92
     iget-object p1, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
     invoke-virtual {p1, p3}, Ljava/io/OutputStream;->write([B)V
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/companion/transport/Transport;->mRemoteOut:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
 
-    .line 94
     monitor-exit v0
 
     return-void
@@ -287,7 +253,6 @@
 .method public start()V
     .locals 2
 
-    .line 39
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -296,10 +261,8 @@
 
     const-string v1, "Starting raw transport."
 
-    .line 40
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -309,7 +272,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 53
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -318,7 +280,6 @@
 .method public stop()V
     .locals 2
 
-    .line 58
     sget-boolean v0, Lcom/android/server/companion/transport/Transport;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -327,13 +288,11 @@
 
     const-string v1, "Stopping raw transport."
 
-    .line 59
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 61
     iput-boolean v0, p0, Lcom/android/server/companion/transport/RawTransport;->mStopped:Z
 
     return-void

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayMcfManager;)V
     .locals 0
 
-    .line 425
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 428
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 429
     invoke-static {}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -52,7 +49,6 @@
 
     const-string v0, "com.samsung.bluetooth.adapter.action.BLE_STATE_CHANGED"
 
-    .line 432
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -67,7 +63,6 @@
 
     const/16 v0, 0xa
 
-    .line 433
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -85,7 +80,6 @@
 
     const/4 v1, 0x1
 
-    .line 437
     :cond_1
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
@@ -95,7 +89,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 438
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -108,7 +101,6 @@
 
     move-result-object p0
 
-    .line 439
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -117,7 +109,6 @@
 
     move-result-object p0
 
-    .line 438
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
@@ -125,7 +116,6 @@
     :cond_2
     const-string v0, "android.intent.action.AIRPLANE_MODE"
 
-    .line 441
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -134,12 +124,10 @@
 
     const-string/jumbo p1, "state"
 
-    .line 442
     invoke-virtual {p2, p1, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 443
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -148,7 +136,6 @@
 
     invoke-virtual {p2, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 444
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -161,7 +148,6 @@
 
     move-result-object p0
 
-    .line 445
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -170,7 +156,6 @@
 
     move-result-object p0
 
-    .line 444
     invoke-virtual {p2, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
@@ -178,21 +163,18 @@
     :cond_3
     const-string p2, "com.samsung.android.nearbyscanning"
 
-    .line 446
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 447
     iget-object p1, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p1}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$misNearbyScanningOn(Lcom/android/server/display/WifiDisplayMcfManager;)Z
 
     move-result p1
 
-    .line 448
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -201,7 +183,6 @@
 
     invoke-virtual {p2, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 449
     iget-object p2, p0, Lcom/android/server/display/WifiDisplayMcfManager$5;->this$0:Lcom/android/server/display/WifiDisplayMcfManager;
 
     invoke-static {p2}, Lcom/android/server/display/WifiDisplayMcfManager;->-$$Nest$fgetmMcfHandler(Lcom/android/server/display/WifiDisplayMcfManager;)Lcom/android/server/display/WifiDisplayMcfManager$McfHandler;
@@ -214,7 +195,6 @@
 
     move-result-object p0
 
-    .line 450
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -223,7 +203,6 @@
 
     move-result-object p0
 
-    .line 449
     invoke-virtual {p2, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_4

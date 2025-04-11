@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver;
 
     invoke-static {p0}, Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver;->$r8$lambda$lsQLZmFmbWkt1Llatn3pbhuHVaU(Lcom/android/server/audio/AudioService$SamsungBroadcastReceiver;)V

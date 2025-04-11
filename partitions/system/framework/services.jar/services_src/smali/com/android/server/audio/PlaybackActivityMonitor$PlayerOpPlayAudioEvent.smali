@@ -15,16 +15,12 @@
 .method public constructor <init>(IZI)V
     .locals 0
 
-    .line 1339
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1340
     iput p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerOpPlayAudioEvent;->mPlayerIId:I
 
-    .line 1341
     iput-boolean p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerOpPlayAudioEvent;->mHasOp:Z
 
-    .line 1342
     iput p3, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerOpPlayAudioEvent;->mUid:I
 
     return-void
@@ -35,7 +31,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 2
 
-    .line 1347
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "player piid:"
@@ -48,7 +43,6 @@
 
     const-string v1, " has OP_PLAY_AUDIO:"
 
-    .line 1348
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerOpPlayAudioEvent;->mHasOp:Z
@@ -57,7 +51,6 @@
 
     const-string v1, " in uid:"
 
-    .line 1349
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerOpPlayAudioEvent;->mUid:I

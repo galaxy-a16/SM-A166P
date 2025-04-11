@@ -20,7 +20,6 @@
 .method public combine(Lcom/android/server/usage/IntervalStats;ZLjava/util/List;)Z
     .locals 0
 
-    .line 537
     invoke-virtual {p1, p3}, Lcom/android/server/usage/IntervalStats;->addEventStatsTo(Ljava/util/List;)V
 
     const/4 p0, 0x1

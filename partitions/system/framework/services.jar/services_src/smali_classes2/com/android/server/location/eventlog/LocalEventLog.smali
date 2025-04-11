@@ -33,7 +33,6 @@
 
     const/high16 v0, -0x80000000
 
-    .line 51
     invoke-static {v0}, Lcom/android/server/location/eventlog/LocalEventLog;->countTrailingZeros(I)I
 
     move-result v0
@@ -42,14 +41,12 @@
 
     const v0, 0x7fffffff
 
-    .line 52
     invoke-static {v0}, Lcom/android/server/location/eventlog/LocalEventLog;->countTrailingZeros(I)I
 
     move-result v1
 
     sput v1, Lcom/android/server/location/eventlog/LocalEventLog;->TIME_DELTA_OFFSET:I
 
-    .line 55
     invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v0
@@ -68,7 +65,6 @@
 .method public constructor <init>(ILjava/lang/Class;)V
     .locals 2
 
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
@@ -82,16 +78,13 @@
     :cond_0
     move v1, v0
 
-    .line 109
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 111
     new-array v1, p1, [I
 
     iput-object v1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mEntries:[I
 
-    .line 112
     invoke-static {p2, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -100,18 +93,14 @@
 
     iput-object p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEvents:[Ljava/lang/Object;
 
-    .line 113
     iput v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
 
-    .line 114
     iput v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEndIndex:I
 
     const-wide/16 p1, -0x1
 
-    .line 116
     iput-wide p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
-    .line 117
     iput-wide p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLastLogTime:J
 
     return-void
@@ -120,7 +109,6 @@
 .method public static countTrailingZeros(I)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x0
 
     :goto_0
@@ -145,7 +133,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 67
     sget v0, Lcom/android/server/location/eventlog/LocalEventLog;->MAX_TIME_DELTA:I
 
     if-gt p1, v0, :cond_0
@@ -160,7 +147,6 @@
     :goto_0
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 68
     sget v0, Lcom/android/server/location/eventlog/LocalEventLog;->IS_FILLER_OFFSET:I
 
     shl-int/2addr p0, v0
@@ -189,7 +175,6 @@
 
     and-int/2addr p0, v0
 
-    .line 73
     sget v0, Lcom/android/server/location/eventlog/LocalEventLog;->TIME_DELTA_OFFSET:I
 
     ushr-int/2addr p0, v0
@@ -200,7 +185,6 @@
 .method public static isFiller(I)Z
     .locals 1
 
-    .line 0
     const/high16 v0, -0x80000000
 
     and-int/2addr p0, v0
@@ -221,14 +205,12 @@
 .method public static varargs iterate(Lcom/android/server/location/eventlog/LocalEventLog$LogConsumer;[Lcom/android/server/location/eventlog/LocalEventLog;)V
     .locals 7
 
-    .line 212
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 213
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -238,24 +220,20 @@
 
     aget-object v3, p1, v2
 
-    .line 214
     new-instance v4, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-direct {v4, v3}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;-><init>(Lcom/android/server/location/eventlog/LocalEventLog;)V
 
-    .line 215
     invoke-virtual {v4}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 216
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 217
     invoke-virtual {v4}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->next()V
 
     :cond_0
@@ -263,7 +241,6 @@
 
     goto :goto_0
 
-    .line 223
     :cond_1
     :goto_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -290,7 +267,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 224
     invoke-virtual {v2}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->getTime()J
 
     move-result-wide v3
@@ -313,7 +289,6 @@
 
     return-void
 
-    .line 233
     :cond_5
     invoke-virtual {v1}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->getTime()J
 
@@ -325,19 +300,16 @@
 
     invoke-interface {p0, v2, v3, p1}, Lcom/android/server/location/eventlog/LocalEventLog$LogConsumer;->acceptLog(JLjava/lang/Object;)V
 
-    .line 235
     invoke-virtual {v1}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->hasNext()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 236
     invoke-virtual {v1}, Lcom/android/server/location/eventlog/LocalEventLog$LogIterator;->next()V
 
     goto :goto_1
 
-    .line 238
     :cond_6
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -364,12 +336,10 @@
     :cond_0
     move v2, v0
 
-    .line 122
     :goto_0
     :try_start_0
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 126
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocalEventLog;->isEmpty()Z
 
     move-result v2
@@ -378,7 +348,6 @@
 
     if-nez v2, :cond_3
 
-    .line 127
     iget-wide v5, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLastLogTime:J
 
     sub-long v5, p1, v5
@@ -387,7 +356,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 132
     sget v2, Lcom/android/server/location/eventlog/LocalEventLog;->MAX_TIME_DELTA:I
 
     int-to-long v7, v2
@@ -411,7 +379,6 @@
     :cond_1
     move-wide v3, v5
 
-    .line 136
     :goto_1
     sget v2, Lcom/android/server/location/eventlog/LocalEventLog;->MAX_TIME_DELTA:I
 
@@ -423,7 +390,6 @@
 
     const/4 v5, 0x0
 
-    .line 137
     invoke-virtual {p0, v1, v2, v5}, Lcom/android/server/location/eventlog/LocalEventLog;->addLogEventInternal(ZILjava/lang/Object;)V
 
     int-to-long v5, v2
@@ -432,12 +398,10 @@
 
     goto :goto_1
 
-    .line 133
     :cond_2
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocalEventLog;->clear()V
 
-    .line 144
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocalEventLog;->isEmpty()Z
 
@@ -445,13 +409,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 145
     iput-wide p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
-    .line 146
     iput-wide p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLastLogTime:J
 
-    .line 147
     iget-wide p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mModificationCount:J
 
     const-wide/16 v1, 0x1
@@ -463,12 +424,10 @@
     :cond_4
     long-to-int p1, v3
 
-    .line 150
     invoke-virtual {p0, v0, p1, p3}, Lcom/android/server/location/eventlog/LocalEventLog;->addLogEventInternal(ZILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 151
     monitor-exit p0
 
     return-void
@@ -503,11 +462,9 @@
     :goto_0
     move v2, v1
 
-    .line 155
     :goto_1
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 156
     iget-wide v2, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
     const-wide/16 v4, -0x1
@@ -527,7 +484,6 @@
     :cond_2
     invoke-static {v0}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 158
     iget v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
 
     iget-object v2, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mEntries:[I
@@ -536,7 +492,6 @@
 
     if-ne v0, v3, :cond_3
 
-    .line 160
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocalEventLog;->startIndex()I
@@ -555,7 +510,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
-    .line 161
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mModificationCount:J
 
     const-wide/16 v2, 0x1
@@ -569,10 +523,8 @@
     :cond_3
     add-int/2addr v0, v1
 
-    .line 164
     iput v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
 
-    .line 168
     :goto_2
     iget-object v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mEntries:[I
 
@@ -584,21 +536,18 @@
 
     aput p1, v0, v1
 
-    .line 169
     iget-object p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEvents:[Ljava/lang/Object;
 
     iget v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEndIndex:I
 
     aput-object p3, p1, v0
 
-    .line 170
     invoke-virtual {p0, v0}, Lcom/android/server/location/eventlog/LocalEventLog;->incrementIndex(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEndIndex:I
 
-    .line 171
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLastLogTime:J
 
     int-to-long p1, p2
@@ -615,7 +564,6 @@
 
     monitor-enter p0
 
-    .line 177
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEvents:[Ljava/lang/Object;
 
@@ -625,13 +573,10 @@
 
     const/4 v0, 0x0
 
-    .line 179
     iput v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEndIndex:I
 
-    .line 180
     iput v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
 
-    .line 181
     iget-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mModificationCount:J
 
     const-wide/16 v2, 0x1
@@ -642,15 +587,12 @@
 
     const-wide/16 v0, -0x1
 
-    .line 183
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mStartTime:J
 
-    .line 184
     iput-wide v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLastLogTime:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 185
     monitor-exit p0
 
     return-void
@@ -670,7 +612,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 253
     invoke-virtual {p0}, Lcom/android/server/location/eventlog/LocalEventLog;->startIndex()I
 
     move-result p0
@@ -682,14 +623,12 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 255
     invoke-virtual {p0, p1}, Lcom/android/server/location/eventlog/LocalEventLog;->wrapIndex(I)I
 
     move-result p0
 
     return p0
 
-    .line 257
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -701,7 +640,6 @@
 .method public final isEmpty()Z
     .locals 0
 
-    .line 190
     iget p0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
 
     if-nez p0, :cond_0
@@ -720,7 +658,6 @@
 .method public startIndex()I
     .locals 2
 
-    .line 246
     iget v0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogEndIndex:I
 
     iget v1, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mLogSize:I
@@ -737,7 +674,6 @@
 .method public wrapIndex(I)I
     .locals 1
 
-    .line 265
     iget-object p0, p0, Lcom/android/server/location/eventlog/LocalEventLog;->mEntries:[I
 
     array-length v0, p0

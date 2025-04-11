@@ -20,14 +20,12 @@
 .method public getModifiedCostToProduce(J)J
     .locals 0
 
-    .line 0
     return-wide p1
 .end method
 
 .method public getModifiedPrice(J)J
     .locals 0
 
-    .line 0
     return-wide p1
 .end method
 

@@ -11,7 +11,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 639
     iget-object p1, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$3;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     invoke-static {p1}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$fgetmUCSMHandler(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;)Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;
@@ -28,7 +27,6 @@
 
     const/4 v1, -0x1
 
-    .line 640
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
@@ -37,20 +35,16 @@
 
     const/4 v2, 0x0
 
-    .line 641
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
-    .line 642
     filled-new-array {v0}, [I
 
     move-result-object v0
 
-    .line 643
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 644
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -73,7 +67,6 @@
 
     if-nez p2, :cond_0
 
-    .line 646
     iget-object p0, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$3;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
     invoke-static {p0}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$fgetmUCSMHandler(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;)Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;
@@ -84,7 +77,6 @@
 
     goto :goto_0
 
-    .line 648
     :cond_0
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

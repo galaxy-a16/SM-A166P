@@ -18,7 +18,6 @@
 .method public constructor <init>(Lcom/android/server/tv/TvInputHardwareManager;Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;Landroid/media/tv/TvStreamConfig;)V
     .locals 0
 
-    .line 555
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     iput-object p2, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$hardwareImpl:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 1
 
-    .line 558
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$hardwareImpl:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     iget-object p0, p0, Lcom/android/server/tv/TvInputHardwareManager$2;->val$config:Landroid/media/tv/TvStreamConfig;

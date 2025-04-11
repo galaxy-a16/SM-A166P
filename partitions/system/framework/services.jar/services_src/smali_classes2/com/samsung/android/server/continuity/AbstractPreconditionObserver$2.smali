@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V
     .locals 0
 
-    .line 378
     iput-object p1, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public final handlePackageAdded(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 412
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {v0, p1}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$msetInstalledFlag(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;Ljava/lang/String;)V
@@ -35,10 +33,8 @@
 
     const-string p2, "handlePackageAdded - with EXTRA_REPLACING"
 
-    .line 414
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 415
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     const/4 p1, 0x1
@@ -50,10 +46,8 @@
     :cond_0
     const-string p2, "handlePackageAdded - without EXTRA_REPLACING"
 
-    .line 417
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     const/4 p1, 0x5
@@ -67,12 +61,10 @@
 .method public final handlePackageRemoved(Ljava/lang/String;)V
     .locals 1
 
-    .line 428
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {v0, p1}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$munsetInstalledFlag(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;Ljava/lang/String;)V
 
-    .line 429
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     const/4 p1, 0x5
@@ -85,12 +77,10 @@
 .method public final handlePackageReplaced(Ljava/lang/String;)V
     .locals 1
 
-    .line 423
     iget-object v0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {v0, p1}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$msetInstalledFlag(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;Ljava/lang/String;)V
 
-    .line 424
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     const/4 p1, 0x0
@@ -103,7 +93,6 @@
 .method public final handlePackageRestarted()V
     .locals 0
 
-    .line 433
     iget-object p0, p0, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->this$0:Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;
 
     invoke-static {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;->-$$Nest$mnotifyRestartedPackage(Lcom/samsung/android/server/continuity/AbstractPreconditionObserver;)V
@@ -114,7 +103,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 381
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -123,7 +111,6 @@
 
     return-void
 
-    .line 386
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -133,13 +120,11 @@
 
     return-void
 
-    .line 391
     :cond_1
     invoke-virtual {v0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 393
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -222,7 +207,6 @@
     :pswitch_0
     const-string p1, "android.intent.extra.REPLACING"
 
-    .line 395
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -231,19 +215,16 @@
 
     goto :goto_1
 
-    .line 401
     :pswitch_1
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->handlePackageRemoved(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 404
     :pswitch_2
     invoke-virtual {p0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->handlePackageRestarted()V
 
     goto :goto_1
 
-    .line 398
     :pswitch_3
     invoke-virtual {p0, v0}, Lcom/samsung/android/server/continuity/AbstractPreconditionObserver$2;->handlePackageReplaced(Ljava/lang/String;)V
 

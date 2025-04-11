@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 41
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 42
     new-instance v0, Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-direct {v0, p1}, Lcom/android/server/isrb/IsrbManagerServiceImpl;-><init>(Landroid/content/Context;)V
@@ -33,7 +31,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/isrb/IsrbManagerService;->mIsrbManagerServiceImpl:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->systemRunning()V
@@ -45,7 +42,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 55
     iget-object p0, p0, Lcom/android/server/isrb/IsrbManagerService;->mIsrbManagerServiceImpl:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->systemBootComplete()V
@@ -60,7 +56,6 @@
 
     const-string v0, "isrb"
 
-    .line 47
     iget-object v1, p0, Lcom/android/server/isrb/IsrbManagerService;->mIsrbManagerServiceImpl:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V

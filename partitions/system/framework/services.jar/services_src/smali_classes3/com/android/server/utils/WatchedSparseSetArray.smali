@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 38
     invoke-direct {p0}, Lcom/android/server/utils/WatchableImpl;-><init>()V
 
-    .line 39
     new-instance v0, Landroid/util/SparseSetArray;
 
     invoke-direct {v0}, Landroid/util/SparseSetArray;-><init>()V
@@ -30,10 +28,8 @@
 .method public constructor <init>(Lcom/android/server/utils/WatchedSparseSetArray;)V
     .locals 1
 
-    .line 45
     invoke-direct {p0}, Lcom/android/server/utils/WatchableImpl;-><init>()V
 
-    .line 46
     new-instance v0, Landroid/util/SparseSetArray;
 
     invoke-virtual {p1}, Lcom/android/server/utils/WatchedSparseSetArray;->untrackedStorage()Landroid/util/SparseSetArray;
@@ -52,14 +48,12 @@
 .method public add(ILjava/lang/Object;)Z
     .locals 1
 
-    .line 62
     iget-object v0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseSetArray;->add(ILjava/lang/Object;)Z
 
     move-result p1
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->onChanged()V
 
     return p1
@@ -68,12 +62,10 @@
 .method public clear()V
     .locals 1
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {v0}, Landroid/util/SparseSetArray;->clear()V
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->onChanged()V
 
     return-void
@@ -82,7 +74,6 @@
 .method public contains(ILjava/lang/Object;)Z
     .locals 0
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseSetArray;->contains(ILjava/lang/Object;)Z
@@ -95,10 +86,8 @@
 .method public copyFrom(Landroid/util/SparseSetArray;)V
     .locals 5
 
-    .line 149
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->clear()V
 
-    .line 150
     invoke-virtual {p1}, Landroid/util/SparseSetArray;->size()I
 
     move-result v0
@@ -108,17 +97,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 152
     invoke-virtual {p1, v1}, Landroid/util/SparseSetArray;->keyAt(I)I
 
     move-result v2
 
-    .line 153
     invoke-virtual {p1, v2}, Landroid/util/SparseSetArray;->get(I)Landroid/util/ArraySet;
 
     move-result-object v3
 
-    .line 154
     iget-object v4, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {v4, v2, v3}, Landroid/util/SparseSetArray;->addAll(ILandroid/util/ArraySet;)V
@@ -127,7 +113,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->onChanged()V
 
@@ -137,7 +122,6 @@
 .method public get(I)Landroid/util/ArraySet;
     .locals 0
 
-    .line 94
     iget-object p0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseSetArray;->get(I)Landroid/util/ArraySet;
@@ -150,7 +134,6 @@
 .method public keyAt(I)I
     .locals 0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseSetArray;->keyAt(I)I
@@ -163,7 +146,6 @@
 .method public final onChanged()V
     .locals 0
 
-    .line 35
     invoke-virtual {p0, p0}, Lcom/android/server/utils/WatchableImpl;->dispatchChange(Lcom/android/server/utils/Watchable;)V
 
     return-void
@@ -172,12 +154,10 @@
 .method public remove(I)V
     .locals 1
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseSetArray;->remove(I)V
 
-    .line 114
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->onChanged()V
 
     return-void
@@ -186,7 +166,6 @@
 .method public remove(ILjava/lang/Object;)Z
     .locals 1
 
-    .line 102
     iget-object v0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseSetArray;->remove(ILjava/lang/Object;)Z
@@ -195,7 +174,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/utils/WatchedSparseSetArray;->onChanged()V
 
     const/4 p0, 0x1
@@ -211,7 +189,6 @@
 .method public size()I
     .locals 0
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     invoke-virtual {p0}, Landroid/util/SparseSetArray;->size()I
@@ -224,12 +201,10 @@
 .method public snapshot()Ljava/lang/Object;
     .locals 1
 
-    .line 162
     new-instance v0, Lcom/android/server/utils/WatchedSparseSetArray;
 
     invoke-direct {v0, p0}, Lcom/android/server/utils/WatchedSparseSetArray;-><init>(Lcom/android/server/utils/WatchedSparseSetArray;)V
 
-    .line 163
     invoke-virtual {v0}, Lcom/android/server/utils/WatchableImpl;->seal()V
 
     return-object v0
@@ -238,7 +213,6 @@
 .method public untrackedStorage()Landroid/util/SparseSetArray;
     .locals 0
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/utils/WatchedSparseSetArray;->mStorage:Landroid/util/SparseSetArray;
 
     return-object p0

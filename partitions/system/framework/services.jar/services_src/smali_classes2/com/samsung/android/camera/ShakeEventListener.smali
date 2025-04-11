@@ -50,7 +50,6 @@
 .method public static bridge synthetic -$$Nest$fgetmShakeDetector(Lcom/samsung/android/camera/ShakeEventListener;)Landroid/hardware/Sensor;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeDetector:Landroid/hardware/Sensor;
 
     return-object p0
@@ -59,17 +58,14 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 4
 
-    .line 99
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 76
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mLock:Ljava/lang/Object;
 
-    .line 84
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -78,55 +74,42 @@
 
     const/4 v0, 0x0
 
-    .line 87
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mEnabled:Z
 
-    .line 88
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mInCall:Z
 
-    .line 89
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeDetected:Z
 
-    .line 90
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mApplied:Z
 
     const-wide/16 v1, 0x0
 
-    .line 93
     iput-wide v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeCount:J
 
-    .line 94
     iput-wide v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mAccumulatedShakeTime:J
 
     const/4 v3, 0x0
 
-    .line 95
     iput-object v3, p0, Lcom/samsung/android/camera/ShakeEventListener;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 96
     iput-wide v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeStartTime:J
 
     const-string v1, "No event."
 
-    .line 97
     iput-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mLastEventMessage:Ljava/lang/String;
 
-    .line 120
     new-instance v1, Lcom/samsung/android/camera/ShakeEventListener$1;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/camera/ShakeEventListener$1;-><init>(Lcom/samsung/android/camera/ShakeEventListener;)V
 
     iput-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeOffRunnable:Ljava/lang/Runnable;
 
-    .line 100
     iput-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 101
     iput-object p2, p0, Lcom/samsung/android/camera/ShakeEventListener;->mContext:Landroid/content/Context;
 
     const-string/jumbo p1, "sensor"
 
-    .line 102
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -139,7 +122,6 @@
 
     const/4 v2, 0x1
 
-    .line 103
     invoke-virtual {p1, v1, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(IZ)Landroid/hardware/Sensor;
 
     move-result-object p1
@@ -148,7 +130,6 @@
 
     const-string/jumbo p1, "power"
 
-    .line 105
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -157,7 +138,6 @@
 
     const-string v1, "ShakeEventListener"
 
-    .line 106
     invoke-virtual {p1, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
@@ -166,7 +146,6 @@
 
     const-string p1, "alarm"
 
-    .line 107
     invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -175,10 +154,8 @@
 
     iput-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 108
     iput-object p3, p0, Lcom/samsung/android/camera/ShakeEventListener;->mHandler:Landroid/os/Handler;
 
-    .line 110
     new-instance p1, Landroid/content/Intent;
 
     const-string p3, "com.samsung.android.intent.ACTION_CAMERA_SERVICE_WORKER_LOGGING"
@@ -187,7 +164,6 @@
 
     const/high16 p3, 0x4000000
 
-    .line 111
     invoke-static {p2, v0, p1, p3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
@@ -204,7 +180,6 @@
 
     monitor-enter p0
 
-    .line 336
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mLock:Ljava/lang/Object;
 
@@ -212,7 +187,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 337
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -234,7 +208,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 338
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,7 +226,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 339
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->isSupported()Z
 
     move-result v1
@@ -262,10 +234,8 @@
 
     const-string v1, "\n\tDump of ShakeEventListener Activity"
 
-    .line 340
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 341
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,7 +254,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 342
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,10 +274,8 @@
 
     const-string v1, "\t\tDaily accumulated (old first):"
 
-    .line 343
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 344
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mDailyLog:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -334,7 +301,6 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 345
     iget-object v5, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     const/4 v6, 0x0
@@ -355,18 +321,15 @@
 
     goto :goto_0
 
-    .line 348
     :cond_0
     sget-object v1, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v1, p1}, Lcom/samsung/android/camera/Logger;->dumpLog(Lcom/samsung/android/camera/Logger$ID;Ljava/io/PrintWriter;)V
 
-    .line 349
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 350
     monitor-exit p0
 
     return-void
@@ -374,7 +337,6 @@
     :catchall_0
     move-exception p1
 
-    .line 349
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -398,7 +360,6 @@
 
     monitor-enter p0
 
-    .line 252
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
@@ -408,7 +369,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     const-string v1, "0125"
@@ -423,7 +383,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/samsung/android/camera/CameraServiceWorker;->insertDMALog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 254
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     const-string v1, "0124"
@@ -436,7 +395,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/samsung/android/camera/CameraServiceWorker;->insertDMALog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 257
     :cond_0
     sget-object v0, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
 
@@ -448,7 +406,6 @@
 
     iget-wide v3, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeCount:J
 
-    .line 258
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -471,10 +428,8 @@
 
     move-result-object v1
 
-    .line 257
     invoke-static {v0, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 260
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mDailyLog:Ljava/util/List;
 
     new-instance v1, Landroid/util/Pair;
@@ -495,7 +450,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 261
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mDailyLog:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -506,7 +460,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 262
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mDailyLog:Ljava/util/List;
 
     invoke-interface {v0, v4}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -514,15 +467,12 @@
     :cond_1
     const-wide/16 v0, 0x0
 
-    .line 265
     iput-wide v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeCount:J
 
-    .line 266
     iput-wide v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mAccumulatedShakeTime:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 267
     monitor-exit p0
 
     return-void
@@ -538,12 +488,10 @@
 .method public final handleShakeEventChanged()V
     .locals 12
 
-    .line 270
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 272
     :try_start_0
     iget-boolean v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mEnabled:Z
 
@@ -575,10 +523,8 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 274
     iget-boolean v6, p0, Lcom/samsung/android/camera/ShakeEventListener;->mApplied:Z
 
-    .line 276
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -621,34 +567,28 @@
 
     aput-object v6, v5, v8
 
-    .line 274
     invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "ShakeEventListener"
 
-    .line 277
     invoke-static {v5, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 278
     sget-object v5, Lcom/samsung/android/camera/Logger$ID;->SHAKE_EVENT_LISTENER:Lcom/samsung/android/camera/Logger$ID;
 
     invoke-static {v5, v4}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 280
     iget-boolean v4, p0, Lcom/samsung/android/camera/ShakeEventListener;->mApplied:Z
 
     if-eq v4, v1, :cond_6
 
-    .line 281
     iput-boolean v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mApplied:Z
 
     const-wide/16 v8, 0x0
 
     if-eqz v1, :cond_3
 
-    .line 285
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -657,7 +597,6 @@
 
     if-nez v1, :cond_1
 
-    .line 286
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
@@ -666,21 +605,17 @@
 
     const-string/jumbo v4, "wakelock acquired"
 
-    .line 287
     invoke-static {v1, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v1, "wakelock acquired"
 
-    .line 288
     invoke-static {v5, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 291
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     const-wide v10, 0x300000000L
 
-    .line 292
     invoke-virtual {v1, v10, v11, v3}, Lcom/samsung/android/camera/CameraServiceWorker;->notifyDeviceChangeLocked(JZ)Landroid/util/Pair;
 
     move-result-object v1
@@ -689,7 +624,6 @@
 
     new-array v6, v3, [Ljava/lang/Object;
 
-    .line 295
     iget-object v10, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     aput-object v10, v6, v2
@@ -700,13 +634,10 @@
 
     const-string v6, "ShakeEventListener"
 
-    .line 296
     invoke-static {v6, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     invoke-static {v5, v4}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 299
     iget-object v6, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/Boolean;
@@ -725,7 +656,6 @@
 
     if-nez v6, :cond_2
 
-    .line 300
     iget-wide v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeCount:J
 
     const-wide/16 v5, 0x1
@@ -734,7 +664,6 @@
 
     iput-wide v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeCount:J
 
-    .line 301
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -748,14 +677,12 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    .line 303
     iget-object v1, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     aput-object v1, v7, v2
 
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
-    .line 305
     invoke-virtual {v1}, Lcom/samsung/android/camera/CameraServiceWorker;->isCameraOpened()Z
 
     move-result v1
@@ -766,15 +693,12 @@
 
     aput-object v1, v7, v3
 
-    .line 304
     invoke-static {v6, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 303
     invoke-static {v5, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 306
     iput-wide v8, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeStartTime:J
 
     goto :goto_1
@@ -784,12 +708,10 @@
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    .line 309
     iget-object v6, p0, Lcom/samsung/android/camera/ShakeEventListener;->mCameraServiceWorker:Lcom/samsung/android/camera/CameraServiceWorker;
 
     const-wide v10, 0x100000000L
 
-    .line 310
     invoke-virtual {v6, v10, v11, v3}, Lcom/samsung/android/camera/CameraServiceWorker;->notifyDeviceChangeLocked(JZ)Landroid/util/Pair;
 
     move-result-object v6
@@ -798,27 +720,22 @@
 
     aput-object v6, v4, v2
 
-    .line 309
     invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v1, "ShakeEventListener"
 
-    .line 312
     invoke-static {v1, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     invoke-static {v5, v4}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 315
     iget-wide v6, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeStartTime:J
 
     cmp-long v1, v6, v8
 
     if-eqz v1, :cond_4
 
-    .line 316
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
@@ -827,7 +744,6 @@
 
     sub-long/2addr v6, v10
 
-    .line 317
     iget-wide v10, p0, Lcom/samsung/android/camera/ShakeEventListener;->mAccumulatedShakeTime:J
 
     add-long/2addr v10, v6
@@ -838,7 +754,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 318
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -851,11 +766,9 @@
 
     invoke-static {v5, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 320
     :cond_4
     iput-wide v8, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeStartTime:J
 
-    .line 323
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -864,7 +777,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 324
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -873,20 +785,16 @@
 
     const-string/jumbo v2, "wakelock released"
 
-    .line 325
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo v1, "wakelock released"
 
-    .line 326
     invoke-static {v5, v1}, Lcom/samsung/android/camera/Logger;->log(Lcom/samsung/android/camera/Logger$ID;Ljava/lang/String;)V
 
-    .line 330
     :cond_5
     :goto_1
     iput-object v4, p0, Lcom/samsung/android/camera/ShakeEventListener;->mLastEventMessage:Ljava/lang/String;
 
-    .line 332
     :cond_6
     monitor-exit v0
 
@@ -907,7 +815,6 @@
 
     monitor-enter p0
 
-    .line 201
     monitor-exit p0
 
     const/4 p0, 0x0
@@ -918,7 +825,6 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -927,7 +833,6 @@
 
     monitor-enter p0
 
-    .line 157
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -937,12 +842,10 @@
 
     if-nez p1, :cond_0
 
-    .line 159
     monitor-exit p0
 
     return-void
 
-    .line 161
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1000,7 +903,6 @@
 
     goto :goto_2
 
-    .line 187
     :cond_4
     iget-boolean p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mEnabled:Z
 
@@ -1010,13 +912,10 @@
 
     const-string p2, "Time to log proxy activity."
 
-    .line 188
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->dumpDMALog()V
 
-    .line 190
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->scheduleLogging()V
 
     goto :goto_2
@@ -1024,14 +923,12 @@
     :cond_5
     const-string p1, "android.samsung.media.extra.AUDIO_MODE"
 
-    .line 163
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string p2, "ShakeEventListener"
 
-    .line 164
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1060,35 +957,28 @@
 
     goto :goto_2
 
-    .line 169
     :cond_6
     iget-boolean p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mInCall:Z
 
     if-nez p1, :cond_8
 
-    .line 170
     iput-boolean v3, p0, Lcom/samsung/android/camera/ShakeEventListener;->mInCall:Z
 
-    .line 171
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->handleShakeEventChanged()V
 
     goto :goto_2
 
-    .line 175
     :cond_7
     iget-boolean p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mInCall:Z
 
     if-eqz p1, :cond_8
 
-    .line 176
     iput-boolean v2, p0, Lcom/samsung/android/camera/ShakeEventListener;->mInCall:Z
 
-    .line 177
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->handleShakeEventChanged()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 198
     :cond_8
     :goto_2
     monitor-exit p0
@@ -1108,7 +998,6 @@
 
     monitor-enter p0
 
-    .line 133
     :try_start_0
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
@@ -1120,7 +1009,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 134
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v0, 0x0
@@ -1141,25 +1029,20 @@
 
     const-string v0, "Unknown shake event. ignore"
 
-    .line 149
     invoke-static {p1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 150
     monitor-exit p0
 
     return-void
 
-    .line 143
     :cond_0
     :try_start_1
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeDetected:Z
 
-    .line 144
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->handleShakeEventChanged()V
 
-    .line 146
     iget-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeOffRunnable:Ljava/lang/Runnable;
@@ -1168,21 +1051,17 @@
 
     goto :goto_0
 
-    .line 136
     :cond_1
     iput-boolean v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeDetected:Z
 
-    .line 137
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->handleShakeEventChanged()V
 
-    .line 139
     iget-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeOffRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 140
     iget-object p1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeOffRunnable:Ljava/lang/Runnable;
@@ -1199,7 +1078,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 153
     :cond_2
     :goto_0
     monitor-exit p0
@@ -1219,7 +1097,6 @@
 
     monitor-enter p0
 
-    .line 238
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
@@ -1229,10 +1106,8 @@
 
     move-result-wide v0
 
-    .line 239
     iget-object v2, p0, Lcom/samsung/android/camera/ShakeEventListener;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 240
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -1243,12 +1118,10 @@
 
     const/4 v1, 0x2
 
-    .line 239
     invoke-virtual {v2, v1, v3, v4, v0}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     monitor-exit p0
 
     return-void
@@ -1266,7 +1139,6 @@
 
     monitor-enter p0
 
-    .line 206
     :try_start_0
     iget-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mEnabled:Z
 
@@ -1278,7 +1150,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 207
     iget-object v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mShakeDetector:Landroid/hardware/Sensor;
@@ -1289,22 +1160,18 @@
 
     invoke-virtual {v0, p0, v1, v3, v2}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;ILandroid/os/Handler;)Z
 
-    .line 210
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.samsung.media.action.AUDIO_MODE"
 
-    .line 211
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.intent.ACTION_CAMERA_SERVICE_WORKER_LOGGING"
 
-    .line 212
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 213
     iget-object v1, p0, Lcom/samsung/android/camera/ShakeEventListener;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/samsung/android/camera/ShakeEventListener;->mHandler:Landroid/os/Handler;
@@ -1313,17 +1180,14 @@
 
     invoke-virtual {v1, p0, v0, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 215
     invoke-virtual {p0}, Lcom/samsung/android/camera/ShakeEventListener;->scheduleLogging()V
 
     const/4 v0, 0x1
 
-    .line 216
     iput-boolean v0, p0, Lcom/samsung/android/camera/ShakeEventListener;->mEnabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 218
     :cond_0
     monitor-exit p0
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/hwrs/PreconditionObserver;Landroid/os/Looper;)V
     .locals 0
 
-    .line 40
     iput-object p1, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$1;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 43
     iget-object p0, p0, Lcom/samsung/android/server/hwrs/PreconditionObserver$1;->this$0:Lcom/samsung/android/server/hwrs/PreconditionObserver;
 
     iget v0, p1, Landroid/os/Message;->what:I

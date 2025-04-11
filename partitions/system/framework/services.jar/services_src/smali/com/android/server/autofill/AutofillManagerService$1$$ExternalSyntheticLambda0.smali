@@ -20,7 +20,6 @@
 .method public final visit(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/autofill/AutofillManagerServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/autofill/AutofillManagerService$1;->$r8$lambda$gR3lHeitxLs-Odltg-gqWTiGaX0(Lcom/android/server/autofill/AutofillManagerServiceImpl;)V

@@ -14,12 +14,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "audio"
 
-    .line 41
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -36,7 +34,6 @@
 .method public adjustStreamVolume(III)V
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
@@ -47,7 +44,6 @@
 .method public getDeviceVolumeBehavior(Landroid/media/AudioDeviceAttributes;)I
     .locals 0
 
-    .line 99
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getDeviceVolumeBehavior(Landroid/media/AudioDeviceAttributes;)I
@@ -60,7 +56,6 @@
 .method public getDevicesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
     .locals 0
 
-    .line 112
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getDevicesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
@@ -73,7 +68,6 @@
 .method public getStreamMaxVolume(I)I
     .locals 0
 
-    .line 68
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
@@ -86,7 +80,6 @@
 .method public getStreamMinVolume(I)I
     .locals 0
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamMinVolume(I)I
@@ -99,7 +92,6 @@
 .method public getStreamVolume(I)I
     .locals 0
 
-    .line 58
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -112,7 +104,6 @@
 .method public isStreamMute(I)Z
     .locals 0
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->isStreamMute(I)Z
@@ -125,7 +116,6 @@
 .method public setDeviceVolumeBehavior(Landroid/media/AudioDeviceAttributes;I)V
     .locals 0
 
-    .line 105
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioManager;->setDeviceVolumeBehavior(Landroid/media/AudioDeviceAttributes;I)V
@@ -136,7 +126,6 @@
 .method public setHdmiSystemAudioSupported(Z)I
     .locals 0
 
-    .line 83
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1}, Landroid/media/AudioManager;->setHdmiSystemAudioSupported(Z)I
@@ -149,7 +138,6 @@
 .method public setStreamMute(IZ)V
     .locals 0
 
-    .line 78
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioManager;->setStreamMute(IZ)V
@@ -160,7 +148,6 @@
 .method public setStreamVolume(III)V
     .locals 0
 
-    .line 53
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/AudioManager;->setStreamVolume(III)V
@@ -171,7 +158,6 @@
 .method public setWiredDeviceConnectionState(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(IILjava/lang/String;Ljava/lang/String;)V
@@ -182,7 +168,6 @@
 .method public setWiredDeviceConnectionState(Landroid/media/AudioDeviceAttributes;I)V
     .locals 0
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/hdmi/DefaultAudioManagerWrapper;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/AudioManager;->setWiredDeviceConnectionState(Landroid/media/AudioDeviceAttributes;I)V

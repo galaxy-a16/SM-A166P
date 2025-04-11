@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/locksettings/LockSettingsService;->$r8$lambda$S-_jB2YpEnUEFRdAmvlGBYll4BM()V
 
     return-void

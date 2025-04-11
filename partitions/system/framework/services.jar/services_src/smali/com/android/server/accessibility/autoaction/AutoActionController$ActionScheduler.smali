@@ -44,7 +44,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCornerActionController(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;)Lcom/android/server/accessibility/autoaction/CornerActionController;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     return-object p0
@@ -53,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCornerActionType(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
     return p0
@@ -62,7 +60,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsPauseAutoClick(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mIsPauseAutoClick:Z
 
     return p0
@@ -71,7 +68,6 @@
 .method public static bridge synthetic -$$Nest$fputmCornerActionType(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
     return-void
@@ -80,7 +76,6 @@
 .method public static bridge synthetic -$$Nest$msetCornerActionController(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;Z)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->setCornerActionController(Z)V
 
     return-void
@@ -89,7 +84,6 @@
 .method public static bridge synthetic -$$Nest$mshowToastToggleAutoClick(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->showToastToggleAutoClick()V
 
     return-void
@@ -98,32 +92,24 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/AutoActionController;Landroid/os/Handler;III)V
     .locals 0
 
-    .line 322
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->this$0:Lcom/android/server/accessibility/autoaction/AutoActionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 323
     iput-object p2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     const/4 p1, 0x0
 
-    .line 324
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
-    .line 325
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->resetInternalState()V
 
-    .line 326
     iput p3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDelay:I
 
-    .line 327
     iput p4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mType:I
 
-    .line 328
     iput p5, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
-    .line 329
     new-instance p1, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {p1}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -132,7 +118,6 @@
 
     const/4 p1, 0x0
 
-    .line 330
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->updateIsPauseAutoClick(Z)V
 
     return-void
@@ -143,15 +128,12 @@
 .method public final cacheLastEvent(Landroid/view/MotionEvent;IZ)V
     .locals 1
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 457
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 459
     :cond_0
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
@@ -159,17 +141,14 @@
 
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
-    .line 460
     iput p2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mEventPolicyFlags:I
 
     if-eqz p3, :cond_1
 
-    .line 463
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p1
 
-    .line 464
     iget-object p2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mAnchorCoords:Landroid/view/MotionEvent$PointerCoords;
@@ -183,14 +162,12 @@
 .method public cancel()V
     .locals 2
 
-    .line 369
     iget-boolean v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mActive:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 372
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
@@ -198,19 +175,15 @@
 
     const/4 v1, 0x0
 
-    .line 373
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/autoaction/CornerActionController;->setDurationViewOnOff(Z)V
 
-    .line 374
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/autoaction/CornerActionController;->clearDuration()V
 
-    .line 376
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->resetInternalState()V
 
-    .line 377
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -221,7 +194,6 @@
 .method public final click(JJ)V
     .locals 10
 
-    .line 553
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->this$0:Lcom/android/server/accessibility/autoaction/AutoActionController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/autoaction/AutoActionController;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/autoaction/AutoActionController;)Landroid/content/Context;
@@ -240,7 +212,6 @@
 
     const/4 v5, 0x0
 
-    .line 556
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     const/4 v9, 0x0
@@ -263,83 +234,62 @@
 
     const/16 p2, 0x1002
 
-    .line 558
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->setSource(I)V
 
     const/high16 p2, 0x800000
 
-    .line 559
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->setFlags(I)V
 
-    .line 560
     iget p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
 
     invoke-virtual {p1, p0}, Landroid/view/MotionEvent;->setDisplayId(I)V
 
-    .line 562
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p0
 
     const/16 p2, 0xb
 
-    .line 563
     invoke-virtual {p0, p2}, Landroid/view/MotionEvent;->setAction(I)V
 
     const/4 p2, 0x1
 
-    .line 564
     invoke-virtual {p0, p2}, Landroid/view/MotionEvent;->setActionButton(I)V
 
-    .line 566
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p3
 
     const/16 p4, 0xc
 
-    .line 567
     invoke-virtual {p3, p4}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 568
     invoke-virtual {p3, p2}, Landroid/view/MotionEvent;->setActionButton(I)V
 
-    .line 569
     invoke-virtual {p3, v9}, Landroid/view/MotionEvent;->setButtonState(I)V
 
-    .line 571
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p4
 
-    .line 572
     invoke-virtual {p4, p2}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 573
     invoke-virtual {p4, v9}, Landroid/view/MotionEvent;->setButtonState(I)V
 
-    .line 575
     invoke-virtual {v0, p1, v9}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 576
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 578
     invoke-virtual {v0, p0, v9}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 579
     invoke-virtual {p0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 581
     invoke-virtual {v0, p3, v9}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 582
     invoke-virtual {p3}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 584
     invoke-virtual {v0, p4, v9}, Landroid/hardware/input/InputManager;->semInjectInputEvent(Landroid/view/InputEvent;I)Z
 
-    .line 585
     invoke-virtual {p4}, Landroid/view/MotionEvent;->recycle()V
 
     :cond_0
@@ -349,7 +299,6 @@
 .method public final detectMovement(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 483
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     const/4 v1, 0x0
@@ -358,13 +307,11 @@
 
     return v1
 
-    .line 487
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 489
     iget-object v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mAnchorCoords:Landroid/view/MotionEvent$PointerCoords;
 
     iget v2, v2, Landroid/view/MotionEvent$PointerCoords;->x:F
@@ -375,7 +322,6 @@
 
     sub-float/2addr v2, v3
 
-    .line 490
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mAnchorCoords:Landroid/view/MotionEvent$PointerCoords;
 
     iget p0, p0, Landroid/view/MotionEvent$PointerCoords;->y:F
@@ -390,7 +336,6 @@
 
     float-to-double p0, p0
 
-    .line 491
     invoke-static {v2, v3, p0, p1}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide p0
@@ -410,7 +355,6 @@
 .method public final rescheduleAction(I)V
     .locals 8
 
-    .line 412
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     const/4 v1, 0x1
@@ -421,45 +365,38 @@
 
     if-eqz v0, :cond_1
 
-    .line 413
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 414
     iget-object v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v2, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v2
 
-    .line 415
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v3, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v0
 
-    .line 417
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/android/server/accessibility/autoaction/CornerActionController;->setDurationViewOnOff(Z)V
 
-    .line 418
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v3}, Lcom/android/server/accessibility/autoaction/CornerActionController;->clearDuration()V
 
-    .line 419
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
 
     invoke-virtual {v3, v4}, Lcom/android/server/accessibility/autoaction/CornerActionController;->createDurationProgress(I)V
 
-    .line 421
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
@@ -472,30 +409,25 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 422
     iget v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
     if-ne v3, v1, :cond_1
 
-    .line 423
     :cond_0
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v3, v2, v0}, Lcom/android/server/accessibility/autoaction/CornerActionController;->updateDurationViewXY(FF)V
 
-    .line 424
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v0, v1}, Lcom/android/server/accessibility/autoaction/CornerActionController;->setDurationViewOnOff(Z)V
 
-    .line 425
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     int-to-long v2, p1
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/accessibility/autoaction/CornerActionController;->startDuration(J)V
 
-    .line 429
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -505,7 +437,6 @@
 
     add-long/2addr v2, v4
 
-    .line 433
     iget-boolean p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mActive:Z
 
     if-eqz p1, :cond_2
@@ -516,7 +447,6 @@
 
     if-lez v0, :cond_2
 
-    .line 434
     iput-wide v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mScheduledActionTime:J
 
     return-void
@@ -524,19 +454,15 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 439
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 442
     :cond_3
     iput-boolean v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mActive:Z
 
-    .line 443
     iput-wide v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mScheduledActionTime:J
 
-    .line 445
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, p0, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -549,26 +475,21 @@
 
     const/4 v0, 0x0
 
-    .line 469
     iput-boolean v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mActive:Z
 
-    .line 470
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 471
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     const/4 v0, 0x0
 
-    .line 472
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     :cond_0
     const-wide/16 v0, -0x1
 
-    .line 474
     iput-wide v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mScheduledActionTime:J
 
     return-void
@@ -577,19 +498,16 @@
 .method public run()V
     .locals 5
 
-    .line 335
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 337
     iget-wide v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mScheduledActionTime:J
 
     cmp-long v4, v0, v2
 
     if-gez v4, :cond_0
 
-    .line 338
     iget-object v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     sub-long/2addr v2, v0
@@ -598,11 +516,9 @@
 
     return-void
 
-    .line 342
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->sendAction()V
 
-    .line 343
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->resetInternalState()V
 
     return-void
@@ -611,7 +527,6 @@
 .method public final sendAction()V
     .locals 8
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_8
@@ -626,7 +541,6 @@
 
     goto/16 :goto_1
 
-    .line 505
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
@@ -634,7 +548,6 @@
 
     move-result v0
 
-    .line 507
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
     const/4 v2, 0x1
@@ -645,17 +558,14 @@
 
     new-array v1, v2, [Landroid/view/MotionEvent$PointerProperties;
 
-    .line 508
     iput-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerProperties:[Landroid/view/MotionEvent$PointerProperties;
 
-    .line 509
     new-instance v4, Landroid/view/MotionEvent$PointerProperties;
 
     invoke-direct {v4}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
 
     aput-object v4, v1, v3
 
-    .line 512
     :cond_1
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
@@ -665,24 +575,20 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 514
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
     if-nez v1, :cond_2
 
     new-array v1, v2, [Landroid/view/MotionEvent$PointerCoords;
 
-    .line 515
     iput-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
 
-    .line 516
     new-instance v4, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v4}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
 
     aput-object v4, v1, v3
 
-    .line 518
     :cond_2
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
@@ -692,25 +598,20 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 520
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 522
     iget-object v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     if-eqz v4, :cond_7
 
-    .line 523
     invoke-virtual {v4}, Lcom/android/server/accessibility/autoaction/CornerActionController;->clearDuration()V
 
-    .line 524
     iget-object v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v4, v3}, Lcom/android/server/accessibility/autoaction/CornerActionController;->setDurationViewOnOff(Z)V
 
-    .line 525
     iget-object v4, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget-object v5, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mTempPointerCoords:[Landroid/view/MotionEvent$PointerCoords;
@@ -727,7 +628,6 @@
 
     move-result v4
 
-    .line 527
     iget v5, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
     const/4 v6, 0x2
@@ -738,7 +638,6 @@
 
     if-eq v4, v7, :cond_7
 
-    .line 529
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
@@ -751,7 +650,6 @@
 
     if-ne v0, v6, :cond_3
 
-    .line 531
     iget v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
 
     invoke-virtual {p0, v4, v0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->showActionSelectPopup(II)V
@@ -763,17 +661,14 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 533
     iget-boolean v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mIsPauseAutoClick:Z
 
     xor-int/2addr v0, v2
 
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->updateIsPauseAutoClick(Z)V
 
-    .line 534
     iput v3, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionType:I
 
-    .line 535
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->showToastToggleAutoClick()V
 
     :cond_4
@@ -783,7 +678,6 @@
     :cond_5
     if-ne v5, v2, :cond_6
 
-    .line 540
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
@@ -803,7 +697,6 @@
 
     return-void
 
-    .line 547
     :cond_7
     iget v2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mType:I
 
@@ -813,7 +706,6 @@
 
     if-nez v2, :cond_8
 
-    .line 548
     invoke-virtual {p0, v0, v1, v0, v1}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->click(JJ)V
 
     :cond_8
@@ -826,7 +718,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 591
     new-instance p1, Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->this$0:Lcom/android/server/accessibility/autoaction/AutoActionController;
@@ -850,7 +741,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 593
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     :goto_0
@@ -860,19 +750,16 @@
 .method public final showActionSelectPopup(II)V
     .locals 8
 
-    .line 598
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/accessibility/autoaction/CornerActionController;->getCornerActions(I)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 599
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 600
     array-length v1, v4
 
     const/4 v2, 0x0
@@ -886,14 +773,12 @@
 
     const-string/jumbo v6, "pause_resume_auto_click"
 
-    .line 601
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 602
     iget-boolean v5, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mIsPauseAutoClick:Z
 
     if-eqz v5, :cond_0
@@ -910,14 +795,12 @@
     :cond_1
     const-string/jumbo v6, "sound_vibrate_mute"
 
-    .line 603
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 604
     iget-object v6, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->this$0:Lcom/android/server/accessibility/autoaction/AutoActionController;
 
     invoke-static {v6}, Lcom/android/server/accessibility/autoaction/AutoActionController;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/autoaction/AutoActionController;)Landroid/content/Context;
@@ -934,7 +817,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 605
     invoke-virtual {v6}, Landroid/os/Vibrator;->hasVibrator()Z
 
     move-result v6
@@ -953,7 +835,6 @@
 
     const-string/jumbo v5, "sound_mute"
 
-    .line 610
     :cond_3
     :goto_2
     iget-object v6, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
@@ -968,30 +849,25 @@
 
     goto :goto_0
 
-    .line 613
     :cond_4
     new-instance v7, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mCornerActionController:Lcom/android/server/accessibility/autoaction/CornerActionController;
 
-    .line 614
     invoke-virtual {v1, p2}, Lcom/android/server/accessibility/autoaction/CornerActionController;->getDisplayContext(I)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v7, v1, p1}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;-><init>(Landroid/content/Context;I)V
 
-    .line 615
     invoke-virtual {v7, v0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->setCornerActionList(Ljava/util/List;)V
 
-    .line 616
     new-instance v0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;
 
     invoke-direct {v0, p0, v7}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;-><init>(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V
 
     invoke-virtual {v7, v0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->setOnDismissListener(Landroid/widget/PopupMenu$OnDismissListener;)V
 
-    .line 623
     new-instance v0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$2;
 
     move-object v1, v0
@@ -1008,7 +884,6 @@
 
     invoke-virtual {v7, v0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->setOnMenuItemClickListener(Landroid/widget/PopupMenu$OnMenuItemClickListener;)V
 
-    .line 637
     invoke-virtual {v7}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->show()V
 
     return-void
@@ -1017,7 +892,6 @@
 .method public final showToastToggleAutoClick()V
     .locals 2
 
-    .line 641
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$3;
@@ -1032,14 +906,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "ActionScheduler: { active="
 
-    .line 654
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mActive:Z
@@ -1048,7 +920,6 @@
 
     const-string v1, ", type="
 
-    .line 655
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mType:I
@@ -1057,7 +928,6 @@
 
     const-string v1, ", delay="
 
-    .line 656
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDelay:I
@@ -1066,7 +936,6 @@
 
     const-string v1, ", scheduledActionTime="
 
-    .line 657
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mScheduledActionTime:J
@@ -1075,7 +944,6 @@
 
     const-string v1, ", anchor={x:"
 
-    .line 658
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mAnchorCoords:Landroid/view/MotionEvent$PointerCoords;
@@ -1086,7 +954,6 @@
 
     const-string v1, ", y:"
 
-    .line 659
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mAnchorCoords:Landroid/view/MotionEvent$PointerCoords;
@@ -1101,7 +968,6 @@
 
     const-string v1, ", metastate="
 
-    .line 660
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mMetaState:I
@@ -1110,7 +976,6 @@
 
     const-string v1, ", policyFlags="
 
-    .line 661
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mEventPolicyFlags:I
@@ -1119,7 +984,6 @@
 
     const-string v1, ", lastMotionEvent="
 
-    .line 662
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
@@ -1128,10 +992,8 @@
 
     const-string p0, " }"
 
-    .line 663
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 664
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1142,26 +1004,22 @@
 .method public update(Landroid/view/MotionEvent;I)V
     .locals 2
 
-    .line 356
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mMetaState:I
 
-    .line 357
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDisplayId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDisplayId:I
 
-    .line 359
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->detectMovement(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 360
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mLastMotionEvent:Landroid/view/MotionEvent;
 
     if-eqz v1, :cond_1
@@ -1184,7 +1042,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 363
     iget p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDelay:I
 
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->rescheduleAction(I)V
@@ -1196,7 +1053,6 @@
 .method public updateDelay(I)V
     .locals 0
 
-    .line 393
     iput p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mDelay:I
 
     return-void
@@ -1205,10 +1061,8 @@
 .method public updateIsPauseAutoClick(Z)V
     .locals 1
 
-    .line 401
     iput-boolean p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mIsPauseAutoClick:Z
 
-    .line 402
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->this$0:Lcom/android/server/accessibility/autoaction/AutoActionController;
 
     invoke-static {p0}, Lcom/android/server/accessibility/autoaction/AutoActionController;->-$$Nest$fgetmContext(Lcom/android/server/accessibility/autoaction/AutoActionController;)Landroid/content/Context;
@@ -1229,7 +1083,6 @@
 .method public updateMetaState(I)V
     .locals 0
 
-    .line 384
     iput p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mMetaState:I
 
     return-void
@@ -1238,7 +1091,6 @@
 .method public updateType(I)V
     .locals 0
 
-    .line 397
     iput p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->mType:I
 
     return-void

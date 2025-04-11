@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/samsung/android/server/audio/MultiSoundManager;I)V
     .locals 0
 
-    .line 1206
     iput-object p1, p0, Lcom/samsung/android/server/audio/MultiSoundManager$RemoveStackAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1207
     iput p2, p0, Lcom/samsung/android/server/audio/MultiSoundManager$RemoveStackAppRunnable;->mRemoveTaskId:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public run()V
     .locals 1
 
-    .line 1212
     iget-object v0, p0, Lcom/samsung/android/server/audio/MultiSoundManager$RemoveStackAppRunnable;->this$0:Lcom/samsung/android/server/audio/MultiSoundManager;
 
     invoke-static {v0}, Lcom/samsung/android/server/audio/MultiSoundManager;->-$$Nest$fgetmTaskStack(Lcom/samsung/android/server/audio/MultiSoundManager;)Ljava/util/HashMap;

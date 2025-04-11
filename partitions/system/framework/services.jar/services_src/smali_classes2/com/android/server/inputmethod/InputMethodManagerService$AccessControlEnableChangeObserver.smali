@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/inputmethod/InputMethodManagerService;)V
     .locals 0
 
-    .line 8309
     iput-object p1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
-    .line 8310
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -31,7 +29,6 @@
 
     const-string p1, "InputMethodManagerService"
 
-    .line 8315
     :try_start_0
     iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
@@ -47,12 +44,10 @@
 
     iget-object v2, v2, Lcom/android/server/inputmethod/InputMethodManagerService;->mSettings:Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;
 
-    .line 8316
     invoke-virtual {v2}, Lcom/android/server/inputmethod/InputMethodUtils$InputMethodSettings;->getCurrentUserId()I
 
     move-result v2
 
-    .line 8315
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -66,7 +61,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 8317
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -98,7 +92,6 @@
 
     invoke-static {p1, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8318
     iget-object p0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$AccessControlEnableChangeObserver;->this$0:Lcom/android/server/inputmethod/InputMethodManagerService;
 
     invoke-virtual {p0, v0}, Lcom/android/server/inputmethod/InputMethodManagerService;->setAccessControlEnable(Z)V
@@ -110,7 +103,6 @@
     :catch_0
     move-exception p0
 
-    .line 8320
     invoke-virtual {p0}, Landroid/provider/Settings$SettingNotFoundException;->toString()Ljava/lang/String;
 
     move-result-object p0

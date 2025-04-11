@@ -21,14 +21,12 @@
 
     const-string v0, "MM-dd HH:mm:ss.SSS"
 
-    .line 19
     invoke-static {v0}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/remoteappmode/Log;->sFormatter:Ljava/time/format/DateTimeFormatter;
 
-    .line 20
     new-instance v0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
     sget v1, Lcom/android/server/remoteappmode/Log;->CAPACITY_LOG:I
@@ -37,7 +35,6 @@
 
     sput-object v0, Lcom/android/server/remoteappmode/Log;->sSavedLogs:Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
-    .line 22
     new-instance v0, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
     sget v1, Lcom/android/server/remoteappmode/Log;->CAPACITY_STATE:I
@@ -52,7 +49,6 @@
 .method public static buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
-    .line 96
     invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
     move-result-object v0
@@ -63,7 +59,6 @@
 
     move-result-object v2
 
-    .line 97
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -104,7 +99,6 @@
 
     const-string p2, "%s %5d %5d %5d %c %s: %s"
 
-    .line 95
     invoke-static {p1, p2, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -117,10 +111,8 @@
 
     const/16 v0, 0x44
 
-    .line 39
     invoke-static {v0, p0, p1}, Lcom/android/server/remoteappmode/Log;->save(CLjava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -137,21 +129,18 @@
 
     const-string v2, "=========================================================================="
 
-    .line 30
     invoke-static {v1, v0, v2}, Lcom/android/server/remoteappmode/Log;->buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 31
     sget-object v0, Lcom/android/server/remoteappmode/Log;->sSavedStates:Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
     invoke-virtual {v0, p0}, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->dump(Ljava/io/PrintWriter;)V
 
     const-string v0, "[RAMS]StateEnd"
 
-    .line 32
     invoke-static {v1, v0, v2}, Lcom/android/server/remoteappmode/Log;->buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -160,21 +149,18 @@
 
     const-string v0, "[RAMS]SavedLogsStart"
 
-    .line 33
     invoke-static {v1, v0, v2}, Lcom/android/server/remoteappmode/Log;->buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 34
     sget-object v0, Lcom/android/server/remoteappmode/Log;->sSavedLogs:Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
     invoke-virtual {v0, p0}, Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;->dump(Ljava/io/PrintWriter;)V
 
     const-string v0, "[RAMS]SavedLogsEnd"
 
-    .line 35
     invoke-static {v1, v0, v2}, Lcom/android/server/remoteappmode/Log;->buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -189,10 +175,8 @@
 
     const/16 v0, 0x45
 
-    .line 49
     invoke-static {v0, p0, p1}, Lcom/android/server/remoteappmode/Log;->save(CLjava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -205,10 +189,8 @@
 
     const/16 v0, 0x49
 
-    .line 59
     invoke-static {v0, p0, p1}, Lcom/android/server/remoteappmode/Log;->save(CLjava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -219,7 +201,6 @@
 .method public static save(CLjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 90
     sget-object v0, Lcom/android/server/remoteappmode/Log;->sSavedLogs:Lcom/android/server/remoteappmode/Log$EvictingArrayQueue;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/remoteappmode/Log;->buildLogString(CLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;

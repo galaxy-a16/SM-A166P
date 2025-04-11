@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Landroid/os/Looper;)V
     .locals 1
 
-    .line 430
     iput-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 431
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -107,7 +105,6 @@
 
     return-object p0
 
-    .line 552
     :cond_8
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -129,7 +126,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 436
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -156,7 +152,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x0
@@ -199,7 +194,6 @@
 
     goto/16 :goto_0
 
-    .line 522
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -207,7 +201,6 @@
 
     move-result-object p1
 
-    .line 523
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -228,12 +221,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 525
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -244,7 +235,6 @@
 
     goto/16 :goto_0
 
-    .line 516
     :cond_1
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -254,19 +244,16 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 517
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$mgetAndVerifyChallenge(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Z
 
     move-result p1
 
-    .line 518
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {v0, p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 519
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -277,7 +264,6 @@
 
     goto/16 :goto_0
 
-    .line 504
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -287,12 +273,10 @@
 
     if-nez v0, :cond_3
 
-    .line 505
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 506
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -303,7 +287,6 @@
 
     goto/16 :goto_0
 
-    .line 508
     :cond_3
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -313,7 +296,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {v0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -328,7 +310,6 @@
 
     iget p1, p1, Landroid/os/Message;->what:I
 
-    .line 510
     invoke-virtual {p0, p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->getNameOfMsgWhat(I)Ljava/lang/String;
 
     move-result-object p1
@@ -339,17 +320,14 @@
 
     const-wide/32 v1, 0x15f90
 
-    .line 509
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 512
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0, v5}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fputcurrentStatus(Lcom/samsung/android/battauthmanager/WpcAuthenticator;I)V
 
     goto/16 :goto_0
 
-    .line 494
     :cond_4
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -359,7 +337,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 495
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$mgetAndVerifyCertChain(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Z
@@ -368,12 +345,10 @@
 
     if-nez p1, :cond_5
 
-    .line 496
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 497
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -384,7 +359,6 @@
 
     goto/16 :goto_0
 
-    .line 499
     :cond_5
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -394,7 +368,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -405,7 +378,6 @@
 
     goto/16 :goto_0
 
-    .line 482
     :cond_6
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -415,12 +387,10 @@
 
     if-nez v0, :cond_7
 
-    .line 483
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 484
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -431,7 +401,6 @@
 
     goto/16 :goto_0
 
-    .line 486
     :cond_7
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -441,7 +410,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {v0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -456,7 +424,6 @@
 
     iget p1, p1, Landroid/os/Message;->what:I
 
-    .line 488
     invoke-virtual {p0, p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->getNameOfMsgWhat(I)Ljava/lang/String;
 
     move-result-object p1
@@ -467,17 +434,14 @@
 
     const-wide/32 v1, 0x493e0
 
-    .line 487
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 490
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0, v4}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fputcurrentStatus(Lcom/samsung/android/battauthmanager/WpcAuthenticator;I)V
 
     goto/16 :goto_0
 
-    .line 473
     :cond_8
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -487,7 +451,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 474
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$mgetAndCheckDigests(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Z
@@ -496,7 +459,6 @@
 
     if-nez p1, :cond_9
 
-    .line 475
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -505,7 +467,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -516,7 +477,6 @@
 
     goto/16 :goto_0
 
-    .line 478
     :cond_9
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -528,7 +488,6 @@
 
     goto/16 :goto_0
 
-    .line 460
     :cond_a
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -538,7 +497,6 @@
 
     if-nez v0, :cond_b
 
-    .line 461
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -547,12 +505,10 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$msetAuthPass(Lcom/samsung/android/battauthmanager/WpcAuthenticator;Z)Z
 
-    .line 463
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -563,7 +519,6 @@
 
     goto/16 :goto_0
 
-    .line 465
     :cond_b
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -573,7 +528,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     iget-object v0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {v0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -588,7 +542,6 @@
 
     iget p1, p1, Landroid/os/Message;->what:I
 
-    .line 467
     invoke-virtual {p0, p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->getNameOfMsgWhat(I)Ljava/lang/String;
 
     move-result-object p1
@@ -599,17 +552,14 @@
 
     const-wide/32 v1, 0xea60
 
-    .line 466
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 469
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0, v3}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fputcurrentStatus(Lcom/samsung/android/battauthmanager/WpcAuthenticator;I)V
 
     goto/16 :goto_0
 
-    .line 448
     :cond_c
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -619,7 +569,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 449
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmAuthWakeLock(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Landroid/os/PowerManager$WakeLock;
@@ -632,7 +581,6 @@
 
     if-nez p1, :cond_d
 
-    .line 450
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmAuthWakeLock(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Landroid/os/PowerManager$WakeLock;
@@ -643,7 +591,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 452
     :cond_d
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -659,7 +606,6 @@
 
     if-ne v0, p1, :cond_e
 
-    .line 453
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -668,7 +614,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -679,7 +624,6 @@
 
     goto :goto_0
 
-    .line 456
     :cond_e
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -691,7 +635,6 @@
 
     goto :goto_0
 
-    .line 439
     :cond_f
     invoke-static {}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -701,7 +644,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmWpcAuthHandler(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;
@@ -710,7 +652,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 441
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmAuthWakeLock(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Landroid/os/PowerManager$WakeLock;
@@ -723,7 +664,6 @@
 
     if-eqz p1, :cond_10
 
-    .line 442
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p1}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fgetmAuthWakeLock(Lcom/samsung/android/battauthmanager/WpcAuthenticator;)Landroid/os/PowerManager$WakeLock;
@@ -732,7 +672,6 @@
 
     invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 444
     :cond_10
     iget-object p1, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
@@ -742,7 +681,6 @@
 
     invoke-virtual {p1}, Lcom/samsung/android/battauthmanager/BattAuthHelper;->close_batt_misc()I
 
-    .line 445
     iget-object p0, p0, Lcom/samsung/android/battauthmanager/WpcAuthenticator$WpcAuthHandler;->this$0:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     invoke-static {p0, v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->-$$Nest$fputcurrentStatus(Lcom/samsung/android/battauthmanager/WpcAuthenticator;I)V

@@ -19,26 +19,20 @@
 .method public constructor <init>(Lcom/android/server/power/stats/CpuPowerCalculator;I)V
     .locals 1
 
-    .line 15942
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 15939
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCachedUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
-    .line 15940
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mUidClusterCache:[D
 
-    .line 15943
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCalculator:Lcom/android/server/power/stats/CpuPowerCalculator;
 
-    .line 15944
     new-array p1, p2, [D
 
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->totalClusterChargesMah:[D
 
-    .line 15945
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
@@ -53,20 +47,17 @@
 .method public addCpuClusterDurationsMs(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;[J)V
     .locals 6
 
-    .line 15950
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->getOrCreateUidCpuClusterCharges(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;)[D
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 15951
     :goto_0
     array-length v1, p2
 
     if-ge v0, v1, :cond_0
 
-    .line 15952
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCalculator:Lcom/android/server/power/stats/CpuPowerCalculator;
 
     aget-wide v2, p2, v0
@@ -75,14 +66,12 @@
 
     move-result-wide v1
 
-    .line 15954
     aget-wide v3, p1, v0
 
     add-double/2addr v3, v1
 
     aput-wide v3, p1, v0
 
-    .line 15955
     iget-object v3, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->totalClusterChargesMah:[D
 
     aget-wide v4, v3, v0
@@ -102,26 +91,22 @@
 .method public addCpuClusterSpeedDurationsMs(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;IIJ)V
     .locals 2
 
-    .line 15962
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->getOrCreateUidCpuClusterCharges(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;)[D
 
     move-result-object p1
 
-    .line 15963
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCalculator:Lcom/android/server/power/stats/CpuPowerCalculator;
 
     invoke-virtual {v0, p2, p3, p4, p5}, Lcom/android/server/power/stats/CpuPowerCalculator;->calculatePerCpuFreqPowerMah(IIJ)D
 
     move-result-wide p3
 
-    .line 15965
     aget-wide v0, p1, p2
 
     add-double/2addr v0, p3
 
     aput-wide v0, p1, p2
 
-    .line 15966
     iget-object p0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->totalClusterChargesMah:[D
 
     aget-wide v0, p0, p2
@@ -136,7 +121,6 @@
 .method public final getOrCreateUidCpuClusterCharges(Lcom/android/server/power/stats/BatteryStatsImpl$Uid;)[D
     .locals 2
 
-    .line 15972
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCachedUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
     if-ne p1, v0, :cond_0
@@ -145,7 +129,6 @@
 
     return-object p0
 
-    .line 15974
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->perUidCpuClusterChargesMah:Landroid/util/ArrayMap;
 
@@ -157,23 +140,19 @@
 
     if-nez v0, :cond_1
 
-    .line 15976
     iget-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->totalClusterChargesMah:[D
 
     array-length v0, v0
 
     new-array v0, v0, [D
 
-    .line 15977
     iget-object v1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->perUidCpuClusterChargesMah:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15979
     :cond_1
     iput-object p1, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mCachedUid:Lcom/android/server/power/stats/BatteryStatsImpl$Uid;
 
-    .line 15980
     iput-object v0, p0, Lcom/android/server/power/stats/BatteryStatsImpl$CpuDeltaPowerAccumulator;->mUidClusterCache:[D
 
     return-object v0

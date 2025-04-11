@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$$ExternalSyntheticLambda18;->f$0:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
@@ -39,7 +38,6 @@
 .method public final applyOrThrow(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$$ExternalSyntheticLambda18;->f$0:Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl$$ExternalSyntheticLambda18;->f$1:Ljava/lang/String;

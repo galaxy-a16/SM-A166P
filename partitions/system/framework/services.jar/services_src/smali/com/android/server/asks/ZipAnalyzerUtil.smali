@@ -9,17 +9,14 @@
 
     const/4 v0, 0x0
 
-    .line 18
     filled-new-array {v0, v0}, [I
 
     move-result-object v1
 
-    .line 19
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 21
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -36,19 +33,16 @@
 
     goto :goto_1
 
-    .line 27
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/android/server/asks/ZipAnalyzerUtil;->findEOCDOffset(Ljava/lang/String;)J
 
     move-result-wide v2
 
-    .line 28
     invoke-static {p0, v2, v3}, Lcom/android/server/asks/ZipAnalyzerUtil;->parseEocdRecord(Ljava/lang/String;J)Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;
 
     move-result-object v2
 
-    .line 30
     iget-short v3, v2, Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;->diskNumber:S
 
     const/4 v5, 0x1
@@ -62,13 +56,10 @@
     :cond_1
     const-string v3, "ZIP Number of this Disk Tampering"
 
-    .line 31
     invoke-static {v4, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     aput v5, v1, v0
 
-    .line 35
     :cond_2
     iget v0, v2, Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;->centralDirOffset:I
 
@@ -78,7 +69,6 @@
 
     move-result p0
 
-    .line 36
     iget-short v0, v2, Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;->numEntriesThisDisk:S
 
     if-ne v0, p0, :cond_3
@@ -90,10 +80,8 @@
     :cond_3
     const-string p0, "Number of Entries this DiskTampering"
 
-    .line 37
     invoke-static {v4, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     aput v5, v1, v5
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -104,7 +92,6 @@
     :catch_0
     move-exception p0
 
-    .line 44
     invoke-virtual {p0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -116,7 +103,6 @@
     :catch_1
     move-exception p0
 
-    .line 42
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -127,7 +113,6 @@
     :goto_0
     return-object v1
 
-    .line 22
     :cond_5
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -158,7 +143,6 @@
 .method public static countCentralDirectorySignatures(Ljava/lang/String;II)I
     .locals 2
 
-    .line 97
     new-instance v0, Ljava/io/RandomAccessFile;
 
     const-string/jumbo v1, "r"
@@ -167,17 +151,13 @@
 
     int-to-long p0, p1
 
-    .line 98
     :try_start_0
     invoke-virtual {v0, p0, p1}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 100
     new-array p0, p2, [B
 
-    .line 101
     invoke-virtual {v0, p0}, Ljava/io/RandomAccessFile;->readFully([B)V
 
-    .line 103
     invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -190,7 +170,6 @@
 
     const/4 p1, 0x0
 
-    .line 104
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -200,7 +179,6 @@
 
     if-lt p2, v1, :cond_1
 
-    .line 105
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p2
@@ -213,7 +191,6 @@
 
     goto :goto_0
 
-    .line 108
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
@@ -227,7 +204,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_1
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
@@ -236,7 +212,6 @@
     :catchall_0
     move-exception p0
 
-    .line 97
     :try_start_1
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
@@ -256,14 +231,12 @@
 .method public static findEOCDOffset(Ljava/lang/String;)J
     .locals 6
 
-    .line 51
     new-instance v0, Ljava/io/RandomAccessFile;
 
     const-string/jumbo v1, "r"
 
     invoke-direct {v0, p0, v1}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     :try_start_0
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
@@ -271,22 +244,18 @@
 
     const-wide/32 v3, 0x10015
 
-    .line 54
     invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v3
 
     sub-long/2addr v1, v3
 
-    .line 57
     invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
     long-to-int p0, v3
 
-    .line 59
     new-array v3, p0, [B
 
-    .line 60
     invoke-virtual {v0, v3}, Ljava/io/RandomAccessFile;->readFully([B)V
 
     add-int/lit8 p0, p0, -0x16
@@ -296,7 +265,6 @@
 
     const/4 v4, 0x4
 
-    .line 63
     invoke-static {v3, p0, v4}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object v4
@@ -321,7 +289,6 @@
 
     add-long/2addr v1, v3
 
-    .line 67
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
     return-wide v1
@@ -334,7 +301,6 @@
     :cond_1
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
-    .line 68
     new-instance p0, Ljava/io/IOException;
 
     const-string v0, "End of Central Directory Record not found"
@@ -346,7 +312,6 @@
     :catchall_0
     move-exception p0
 
-    .line 51
     :try_start_1
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
@@ -366,20 +331,17 @@
 .method public static parseEocdRecord(Ljava/lang/String;J)Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;
     .locals 9
 
-    .line 71
     new-instance v0, Ljava/io/RandomAccessFile;
 
     const-string/jumbo v1, "r"
 
     invoke-direct {v0, p0, v1}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 72
     :try_start_0
     invoke-virtual {v0, p1, p2}, Ljava/io/RandomAccessFile;->seek(J)V
 
     const/16 p0, 0x16
 
-    .line 74
     invoke-static {p0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -390,17 +352,14 @@
 
     move-result-object p0
 
-    .line 75
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
 
-    .line 76
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 78
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -409,42 +368,34 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 82
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v2
 
-    .line 83
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v3
 
-    .line 84
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
 
-    .line 85
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v5
 
-    .line 86
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v6
 
-    .line 87
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v7
 
-    .line 88
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v8
 
-    .line 90
     new-instance p0, Lcom/android/server/asks/ZipAnalyzerUtil$EocdRecord;
 
     move-object v1, p0
@@ -453,12 +404,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 91
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
     return-object p0
 
-    .line 79
     :cond_0
     :try_start_1
     new-instance p0, Ljava/io/IOException;
@@ -474,7 +423,6 @@
     :catchall_0
     move-exception p0
 
-    .line 71
     :try_start_2
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
     :try_end_2

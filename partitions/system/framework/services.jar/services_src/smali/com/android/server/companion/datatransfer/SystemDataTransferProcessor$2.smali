@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;Landroid/os/Handler;)V
     .locals 0
 
-    .line 246
     iput-object p1, p0, Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor$2;->this$0:Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;
 
     invoke-direct {p0, p2}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onReceiveResult(ILandroid/os/Bundle;)V
     .locals 4
 
-    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +55,6 @@
 
     goto :goto_0
 
-    .line 268
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -81,10 +78,8 @@
     :goto_0
     const-string/jumbo v2, "permission_sync_request"
 
-    .line 254
     const-class v3, Landroid/companion/datatransfer/PermissionSyncRequest;
 
-    .line 255
     invoke-virtual {p2, v2, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
@@ -100,11 +95,9 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 258
     :goto_1
     invoke-virtual {p2, v0}, Landroid/companion/datatransfer/PermissionSyncRequest;->setUserConsented(Z)V
 
-    .line 260
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +114,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
     iget-object p0, p0, Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor$2;->this$0:Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;
 
     invoke-static {p0}, Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;->-$$Nest$fgetmSystemDataTransferRequestStore(Lcom/android/server/companion/datatransfer/SystemDataTransferProcessor;)Lcom/android/server/companion/datatransfer/SystemDataTransferRequestStore;

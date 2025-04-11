@@ -33,7 +33,6 @@
 .method public static synthetic $r8$lambda$GLgRVsQmPs45pA-yX7ZcJZ6VqzU(Landroid/graphics/Matrix;Landroid/graphics/Matrix;Landroid/graphics/Region;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->lambda$getUnMagnifiedTouchableRegion$0(Landroid/graphics/Matrix;Landroid/graphics/Matrix;Landroid/graphics/Region;Landroid/graphics/Rect;)V
 
     return-void
@@ -42,17 +41,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 662
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mTouchableRegionInScreen:Landroid/graphics/Region;
 
-    .line 663
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
@@ -65,20 +61,16 @@
 .method public static getTouchableRegionInWindow(ZLandroid/graphics/Region;Landroid/graphics/Region;Landroid/graphics/Rect;Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
     .locals 1
 
-    .line 833
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
-    .line 834
     invoke-virtual {v0, p1}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
-    .line 835
     sget-object p1, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
     invoke-virtual {v0, p3, p1}, Landroid/graphics/Region;->op(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 837
     invoke-static {p0, v0, p2, p4, p5}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->getUnMagnifiedTouchableRegion(ZLandroid/graphics/Region;Landroid/graphics/Region;Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
 
     return-void
@@ -89,7 +81,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 854
     invoke-virtual {p3}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result p0
@@ -103,12 +94,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 855
     invoke-virtual {p2, p1}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
 
     return-void
 
-    .line 859
     :cond_1
     new-instance p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow$$ExternalSyntheticLambda0;
 
@@ -122,22 +111,18 @@
 .method public static getWindowInfoForWindowlessWindows(Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;)Landroid/view/WindowInfo;
     .locals 2
 
-    .line 878
     invoke-static {}, Landroid/view/WindowInfo;->obtain()Landroid/view/WindowInfo;
 
     move-result-object v0
 
-    .line 879
     iget v1, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mDisplayId:I
 
     iput v1, v0, Landroid/view/WindowInfo;->displayId:I
 
-    .line 880
     iget v1, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mType:I
 
     iput v1, v0, Landroid/view/WindowInfo;->type:I
 
-    .line 881
     iget-object v1, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindow:Landroid/view/IWindow;
 
     if-eqz v1, :cond_0
@@ -154,7 +139,6 @@
     :goto_0
     iput-object v1, v0, Landroid/view/WindowInfo;->token:Landroid/os/IBinder;
 
-    .line 882
     iget v1, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mInputConfig:I
 
     and-int/lit16 v1, v1, 0x200
@@ -171,7 +155,6 @@
     :goto_1
     iput-boolean v1, v0, Landroid/view/WindowInfo;->hasFlagWatchOutsideTouch:Z
 
-    .line 885
     iget-boolean p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mIsPIPMenu:Z
 
     iput-boolean p0, v0, Landroid/view/WindowInfo;->inPictureInPicture:Z
@@ -182,22 +165,18 @@
 .method public static initializeData(Lcom/android/server/wm/WindowManagerService;Landroid/view/InputWindowHandle;Landroid/graphics/Matrix;Landroid/os/IBinder;Landroid/graphics/Matrix;)Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;
     .locals 11
 
-    .line 676
     invoke-virtual {p1}, Landroid/view/InputWindowHandle;->getWindow()Landroid/view/IWindow;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 677
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mWindowMap:Ljava/util/HashMap;
 
-    .line 678
     invoke-interface {v0}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
 
-    .line 677
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -209,26 +188,21 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 680
     :goto_0
     new-instance v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;
 
     invoke-direct {v2}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;-><init>()V
 
-    .line 682
     iput-object v0, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindow:Landroid/view/IWindow;
 
-    .line 683
     iget v3, p1, Landroid/view/InputWindowHandle;->displayId:I
 
     iput v3, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mDisplayId:I
 
-    .line 684
     iget v3, p1, Landroid/view/InputWindowHandle;->inputConfig:I
 
     iput v3, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mInputConfig:I
 
-    .line 685
     iget v3, p1, Landroid/view/InputWindowHandle;->layoutParamsType:I
 
     iput v3, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mType:I
@@ -239,7 +213,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 686
     invoke-interface {v0}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -262,7 +235,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 689
     iget-object p3, v1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget p3, p3, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
@@ -277,7 +249,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 691
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->isFocused()Z
 
     move-result p3
@@ -296,7 +267,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 692
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->shouldMagnify()Z
 
     move-result p3
@@ -317,7 +287,6 @@
     :goto_5
     iput-boolean p3, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mShouldMagnify:Z
 
-    .line 694
     invoke-virtual {p0}, Lcom/android/server/wm/WindowManagerService;->getRecentsAnimationController()Lcom/android/server/wm/RecentsAnimationController;
 
     move-result-object p0
@@ -326,7 +295,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 696
     invoke-virtual {p0, v1}, Lcom/android/server/wm/RecentsAnimationController;->shouldIgnoreForAccessibility(Lcom/android/server/wm/WindowState;)Z
 
     move-result p0
@@ -341,7 +309,6 @@
     :goto_6
     iput-boolean v3, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mIgnoreDuetoRecentsAnimation:Z
 
-    .line 698
     new-instance v8, Landroid/graphics/Rect;
 
     iget p0, p1, Landroid/view/InputWindowHandle;->frameLeft:I
@@ -354,7 +321,6 @@
 
     invoke-direct {v8, p0, p3, v0, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 701
     iget-boolean v5, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mShouldMagnify:Z
 
     iget-object v6, p1, Landroid/view/InputWindowHandle;->touchableRegion:Landroid/graphics/Region;
@@ -367,7 +333,6 @@
 
     invoke-static/range {v5 .. v10}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->getTouchableRegionInWindow(ZLandroid/graphics/Region;Landroid/graphics/Region;Landroid/graphics/Rect;Landroid/graphics/Matrix;Landroid/graphics/Matrix;)V
 
-    .line 704
     iget-boolean p0, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mShouldMagnify:Z
 
     iget-object p3, p1, Landroid/view/InputWindowHandle;->touchableRegion:Landroid/graphics/Region;
@@ -378,7 +343,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 708
     invoke-virtual {v1}, Lcom/android/server/wm/WindowState;->getWindowInfo()Landroid/view/WindowInfo;
 
     move-result-object p0
@@ -393,32 +357,26 @@
     :goto_7
     iput-object p0, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindowInfo:Landroid/view/WindowInfo;
 
-    .line 712
     new-instance p0, Landroid/graphics/Matrix;
 
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 713
     iget-object p1, p1, Landroid/view/InputWindowHandle;->transform:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
-    .line 714
     invoke-virtual {p0, p4}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
-    .line 715
     iget-object p1, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindowInfo:Landroid/view/WindowInfo;
 
     iget-object p1, p1, Landroid/view/WindowInfo;->mTransformMatrix:[F
 
     invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 718
     new-instance p0, Landroid/graphics/Matrix;
 
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 719
     invoke-virtual {v2}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->shouldMagnify()Z
 
     move-result p1
@@ -427,33 +385,28 @@
 
     if-eqz p2, :cond_9
 
-    .line 720
     invoke-virtual {p2}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result p1
 
     if-nez p1, :cond_9
 
-    .line 721
     invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 722
     invoke-static {}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->-$$Nest$sfgetsTempFloats()[F
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 723
     iget-object p0, v2, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindowInfo:Landroid/view/WindowInfo;
 
     iget-object p0, p0, Landroid/view/WindowInfo;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 724
     invoke-static {}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->-$$Nest$sfgetsTempFloats()[F
 
     move-result-object p1
@@ -462,7 +415,6 @@
 
     iput p1, p0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 725
     invoke-static {}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->-$$Nest$sfgetsTempFloats()[F
 
     move-result-object p1
@@ -473,7 +425,6 @@
 
     iput p1, p0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 726
     invoke-static {}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->-$$Nest$sfgetsTempFloats()[F
 
     move-result-object p1
@@ -486,7 +437,6 @@
 
     goto :goto_8
 
-    .line 728
     :cond_8
     invoke-static {}, Lcom/android/server/wm/AccessibilityWindowsPopulator;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -504,26 +454,20 @@
 .method public static synthetic lambda$getUnMagnifiedTouchableRegion$0(Landroid/graphics/Matrix;Landroid/graphics/Matrix;Landroid/graphics/Region;Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 861
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, p3}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 863
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 864
     invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 867
     new-instance p0, Landroid/graphics/Rect;
 
     invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 868
     invoke-virtual {v0, p0}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
 
-    .line 869
     invoke-virtual {p2, p0}, Landroid/graphics/Region;->union(Landroid/graphics/Rect;)Z
 
     return-void
@@ -534,7 +478,6 @@
 .method public getTouchableRegionInScreen(Landroid/graphics/Region;)V
     .locals 0
 
-    .line 739
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mTouchableRegionInScreen:Landroid/graphics/Region;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
@@ -545,7 +488,6 @@
 .method public getTouchableRegionInWindow(Landroid/graphics/Region;)V
     .locals 0
 
-    .line 747
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mTouchableRegionInWindow:Landroid/graphics/Region;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Region;->set(Landroid/graphics/Region;)Z
@@ -556,7 +498,6 @@
 .method public getType()I
     .locals 0
 
-    .line 754
     iget p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mType:I
 
     return p0
@@ -565,7 +506,6 @@
 .method public getWindowInfo()Landroid/view/WindowInfo;
     .locals 0
 
-    .line 769
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindowInfo:Landroid/view/WindowInfo;
 
     return-object p0
@@ -574,7 +514,6 @@
 .method public ignoreRecentsAnimationForAccessibility()Z
     .locals 0
 
-    .line 790
     iget-boolean p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mIgnoreDuetoRecentsAnimation:Z
 
     return p0
@@ -583,7 +522,6 @@
 .method public isFocused()Z
     .locals 0
 
-    .line 783
     iget-boolean p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mIsFocused:Z
 
     return p0
@@ -592,7 +530,6 @@
 .method public isPIPMenu()Z
     .locals 0
 
-    .line 822
     iget-boolean p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mIsPIPMenu:Z
 
     return p0
@@ -601,7 +538,6 @@
 .method public isTouchable()Z
     .locals 0
 
-    .line 804
     iget p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mInputConfig:I
 
     and-int/lit8 p0, p0, 0x8
@@ -622,7 +558,6 @@
 .method public isTrustedOverlay()Z
     .locals 0
 
-    .line 797
     iget p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mInputConfig:I
 
     and-int/lit16 p0, p0, 0x100
@@ -643,7 +578,6 @@
 .method public isUntouchableNavigationBar()Z
     .locals 2
 
-    .line 811
     iget v0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mType:I
 
     const/16 v1, 0x7e3
@@ -654,7 +588,6 @@
 
     return p0
 
-    .line 815
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mTouchableRegionInScreen:Landroid/graphics/Region;
 
@@ -668,7 +601,6 @@
 .method public shouldMagnify()Z
     .locals 0
 
-    .line 776
     iget-boolean p0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mShouldMagnify:Z
 
     return p0
@@ -677,7 +609,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 892
     iget-object v0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mWindow:Landroid/view/IWindow;
 
     if-eqz v0, :cond_0
@@ -695,7 +626,6 @@
     :cond_0
     const-string v0, "(no window token)"
 
-    .line 893
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -721,7 +651,6 @@
 
     iget v0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mInputConfig:I
 
-    .line 895
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -742,7 +671,6 @@
 
     iget v0, p0, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->mPrivateFlags:I
 
-    .line 897
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -777,7 +705,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 901
     invoke-virtual {p0}, Lcom/android/server/wm/AccessibilityWindowsPopulator$AccessibilityWindow;->isTrustedOverlay()Z
 
     move-result v0

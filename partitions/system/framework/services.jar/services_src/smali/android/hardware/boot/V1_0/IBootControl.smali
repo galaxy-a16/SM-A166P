@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.boot@1.0::IBootControl"
 
-    .line 29
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 31
     instance-of v3, v2, Landroid/hardware/boot/V1_0/IBootControl;
 
     if-eqz v3, :cond_1
 
-    .line 32
     check-cast v2, Landroid/hardware/boot/V1_0/IBootControl;
 
     return-object v2
 
-    .line 35
     :cond_1
     new-instance v2, Landroid/hardware/boot/V1_0/IBootControl$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/boot/V1_0/IBootControl$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 38
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/boot/V1_0/IBootControl;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 39
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string v0, "android.hardware.boot@1.0::IBootControl"
 
-    .line 68
     invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object p0
@@ -103,7 +96,6 @@
 
     const-string v0, "default"
 
-    .line 75
     invoke-static {v0, p0}, Landroid/hardware/boot/V1_0/IBootControl;->getService(Ljava/lang/String;Z)Landroid/hardware/boot/V1_0/IBootControl;
 
     move-result-object p0

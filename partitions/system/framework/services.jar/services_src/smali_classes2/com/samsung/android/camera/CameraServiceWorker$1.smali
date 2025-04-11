@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/samsung/android/camera/CameraServiceWorker;)V
     .locals 0
 
-    .line 410
     iput-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$1;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,14 +36,12 @@
 
     if-ne p3, p1, :cond_1
 
-    .line 414
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$1;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmFoldStateLatch(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/util/concurrent/CountDownLatch;
 
     move-result-object p1
 
-    .line 416
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
     move-result-wide v0
@@ -58,10 +55,8 @@
     :try_start_0
     const-string/jumbo p1, "mFoldStateLatch E"
 
-    .line 418
     invoke-static {p2, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$1;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmFoldStateLatch(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/util/concurrent/CountDownLatch;
@@ -80,10 +75,8 @@
 
     const-string/jumbo p1, "mDisplayStateListener onStart - can\'t wait for close camera is done for 500 millisec"
 
-    .line 420
     invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     iget-object p1, p0, Lcom/samsung/android/camera/CameraServiceWorker$1;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p1}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmDeviceState(Lcom/samsung/android/camera/CameraServiceWorker;)J
@@ -96,10 +89,8 @@
 
     const-string/jumbo p1, "mDisplayStateListener onStart - but device state does not changed yet. wait 500ms more"
 
-    .line 422
     invoke-static {p2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     iget-object p0, p0, Lcom/samsung/android/camera/CameraServiceWorker$1;->this$0:Lcom/samsung/android/camera/CameraServiceWorker;
 
     invoke-static {p0}, Lcom/samsung/android/camera/CameraServiceWorker;->-$$Nest$fgetmFoldStateLatch(Lcom/samsung/android/camera/CameraServiceWorker;)Ljava/util/concurrent/CountDownLatch;
@@ -111,7 +102,6 @@
     :cond_0
     const-string/jumbo p0, "mFoldStateLatch X"
 
-    .line 426
     invoke-static {p2, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -121,7 +111,6 @@
     :catch_0
     const-string/jumbo p0, "mDisplayStateListener onStart - getting interrupt during wait for close camera is done"
 
-    .line 428
     invoke-static {p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1

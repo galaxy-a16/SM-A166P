@@ -7,7 +7,6 @@
 .method public constructor <init>(J)V
     .locals 3
 
-    .line 8
     invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -27,7 +26,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 9
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -55,7 +53,6 @@
 .method public constructor <init>(Ljava/math/BigInteger;)V
     .locals 1
 
-    .line 13
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->UNSIGNED_INTEGER:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0, p1}, Lco/nstant/in/cbor/model/Number;-><init>(Lco/nstant/in/cbor/model/MajorType;Ljava/math/BigInteger;)V

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/TimerRecordingAction;)V
     .locals 0
 
-    .line 81
     iput-object p1, p0, Lcom/android/server/hdmi/TimerRecordingAction$1;->this$0:Lcom/android/server/hdmi/TimerRecordingAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,7 +30,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 85
     iget-object p1, p0, Lcom/android/server/hdmi/TimerRecordingAction$1;->this$0:Lcom/android/server/hdmi/TimerRecordingAction;
 
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -46,14 +44,12 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceTimerRecordingResult(II)V
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/hdmi/TimerRecordingAction$1;->this$0:Lcom/android/server/hdmi/TimerRecordingAction;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->finish()V
 
     return-void
 
-    .line 90
     :cond_0
     iget-object p0, p0, Lcom/android/server/hdmi/TimerRecordingAction$1;->this$0:Lcom/android/server/hdmi/TimerRecordingAction;
 
@@ -61,7 +57,6 @@
 
     const p1, 0x1d4c0
 
-    .line 91
     invoke-virtual {p0, v0, p1}, Lcom/android/server/hdmi/HdmiCecFeatureAction;->addTimer(II)V
 
     return-void

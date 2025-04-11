@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiCecLocalDevice;)V
     .locals 0
 
-    .line 163
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 166
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -37,7 +35,6 @@
 
     goto :goto_0
 
-    .line 171
     :cond_0
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
@@ -45,7 +42,6 @@
 
     goto :goto_0
 
-    .line 168
     :cond_1
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevice$1;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 

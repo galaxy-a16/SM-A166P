@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 781
     invoke-direct {p0}, Landroid/os/HwBinder;-><init>()V
 
     return-void
@@ -21,26 +20,22 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 2
 
-    .line 836
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 837
     invoke-static {}, Landroid/os/HidlSupport;->getPidIfSharable()I
 
     move-result v0
@@ -49,12 +44,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 838
     iput-wide v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->ptr:J
 
     const/4 v0, 0x0
 
-    .line 839
     iput v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->arch:I
 
     return-object p0
@@ -63,7 +56,6 @@
 .method public final getHashChain()Ljava/util/ArrayList;
     .locals 3
 
-    .line 810
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x20
@@ -206,7 +198,6 @@
 .method public final interfaceChain()Ljava/util/ArrayList;
     .locals 3
 
-    .line 789
     new-instance p0, Ljava/util/ArrayList;
 
     const-string v0, "android.hardware.health@2.0::IHealth"
@@ -231,7 +222,6 @@
 .method public final interfaceDescriptor()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "android.hardware.health@2.1::IHealth"
 
     return-object p0
@@ -240,7 +230,6 @@
 .method public final linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -249,7 +238,6 @@
 .method public final notifySyspropsChanged()V
     .locals 0
 
-    .line 846
     invoke-static {}, Landroid/os/HwBinder;->enableInstrumentation()V
 
     return-void
@@ -272,94 +260,73 @@
 
     goto/16 :goto_1
 
-    .line 1196
     :sswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1198
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->notifySyspropsChanged()V
 
     goto/16 :goto_1
 
-    .line 1185
     :sswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1187
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
 
     move-result-object p0
 
-    .line 1188
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1189
     invoke-virtual {p0, p3}, Landroid/hidl/base/V1_0/DebugInfo;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 1190
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1175
     :sswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1177
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->ping()V
 
-    .line 1178
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1179
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1162
     :sswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1164
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->setHALInstrumentation()V
 
     goto/16 :goto_1
 
-    .line 1128
     :sswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1130
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->getHashChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 1131
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1133
     new-instance p1, Landroid/os/HwBlob;
 
     const/16 p2, 0x10
 
     invoke-direct {p1, p2}, Landroid/os/HwBlob;-><init>(I)V
 
-    .line 1135
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p2
 
     const-wide/16 v1, 0x8
 
-    .line 1136
     invoke-virtual {p1, v1, v2, p2}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v1, 0xc
 
-    .line 1137
     invoke-virtual {p1, v1, v2, v0}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 1138
     new-instance p4, Landroid/os/HwBlob;
 
     mul-int/lit8 v1, p2, 0x20
@@ -373,7 +340,6 @@
 
     int-to-long v1, v1
 
-    .line 1142
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -382,21 +348,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 1144
     array-length v4, v3
 
     const/16 v5, 0x20
 
     if-ne v4, v5, :cond_0
 
-    .line 1148
     invoke-virtual {p4, v1, v2, v3}, Landroid/os/HwBlob;->putInt8Array(J[B)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1145
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -409,87 +372,66 @@
     :cond_1
     const-wide/16 v0, 0x0
 
-    .line 1152
     invoke-virtual {p1, v0, v1, p4}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
-    .line 1154
     invoke-virtual {p3, p1}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
-    .line 1156
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1117
     :sswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1119
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->interfaceDescriptor()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1120
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1121
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 1122
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1105
     :sswitch_6
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1107
     invoke-virtual {p2}, Landroid/os/HwParcel;->readNativeHandle()Landroid/os/NativeHandle;
 
     move-result-object p1
 
-    .line 1108
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 1109
     invoke-virtual {p0, p1, p2}, Landroid/hardware/health/V2_1/IHealth$Stub;->debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
 
-    .line 1110
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1111
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1094
     :sswitch_7
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1096
     invoke-virtual {p0}, Landroid/hardware/health/V2_1/IHealth$Stub;->interfaceChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 1097
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 1098
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 1099
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 1079
     :pswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1081
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$12;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$12;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -498,11 +440,9 @@
 
     goto/16 :goto_1
 
-    .line 1064
     :pswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1066
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$11;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$11;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -511,11 +451,9 @@
 
     goto/16 :goto_1
 
-    .line 1049
     :pswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1051
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$10;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$10;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -524,11 +462,9 @@
 
     goto/16 :goto_1
 
-    .line 1034
     :pswitch_3
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1036
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$9;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$9;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -537,11 +473,9 @@
 
     goto/16 :goto_1
 
-    .line 1019
     :pswitch_4
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1021
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$8;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$8;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -550,11 +484,9 @@
 
     goto/16 :goto_1
 
-    .line 1004
     :pswitch_5
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1006
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$7;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$7;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -563,11 +495,9 @@
 
     goto/16 :goto_1
 
-    .line 989
     :pswitch_6
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 991
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$6;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$6;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -576,11 +506,9 @@
 
     goto/16 :goto_1
 
-    .line 974
     :pswitch_7
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 976
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$5;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$5;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -589,11 +517,9 @@
 
     goto/16 :goto_1
 
-    .line 959
     :pswitch_8
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 961
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$4;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$4;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -602,11 +528,9 @@
 
     goto :goto_1
 
-    .line 944
     :pswitch_9
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 946
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$3;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$3;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -615,11 +539,9 @@
 
     goto :goto_1
 
-    .line 929
     :pswitch_a
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 931
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$2;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$2;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -628,11 +550,9 @@
 
     goto :goto_1
 
-    .line 914
     :pswitch_b
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 916
     new-instance p1, Landroid/hardware/health/V2_1/IHealth$Stub$1;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/health/V2_1/IHealth$Stub$1;-><init>(Landroid/hardware/health/V2_1/IHealth$Stub;Landroid/os/HwParcel;)V
@@ -641,31 +561,24 @@
 
     goto :goto_1
 
-    .line 903
     :pswitch_c
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 905
     invoke-interface {p0}, Landroid/hardware/health/V2_0/IHealth;->update()I
 
     move-result p0
 
-    .line 906
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 907
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 908
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 891
     :pswitch_d
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 893
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -674,27 +587,21 @@
 
     move-result-object p1
 
-    .line 894
     invoke-interface {p0, p1}, Landroid/hardware/health/V2_0/IHealth;->unregisterCallback(Landroid/hardware/health/V2_0/IHealthInfoCallback;)I
 
     move-result p0
 
-    .line 895
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 896
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 897
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 879
     :pswitch_e
     invoke-virtual {p2, v1}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 881
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -703,18 +610,14 @@
 
     move-result-object p1
 
-    .line 882
     invoke-interface {p0, p1}, Landroid/hardware/health/V2_0/IHealth;->registerCallback(Landroid/hardware/health/V2_0/IHealthInfoCallback;)I
 
     move-result p0
 
-    .line 883
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 884
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt32(I)V
 
-    .line 885
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     :goto_1
@@ -757,7 +660,6 @@
 .method public final ping()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -766,7 +668,6 @@
 
     const-string v0, "android.hardware.health@2.1::IHealth"
 
-    .line 858
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -784,14 +685,12 @@
 .method public final setHALInstrumentation()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 870
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -816,7 +715,6 @@
 .method public final unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

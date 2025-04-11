@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$0X5KaPzNJ-ES4tJdYHgOtjtk074(Lcom/android/server/wallpaper/LocalColorRepository;ILandroid/graphics/RectF;Ljava/util/function/Consumer;Landroid/app/ILocalWallpaperColorConsumer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/wallpaper/LocalColorRepository;->lambda$forEachCallback$1(ILandroid/graphics/RectF;Ljava/util/function/Consumer;Landroid/app/ILocalWallpaperColorConsumer;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static synthetic $r8$lambda$m7ZRU7k5mL1-U288XxMB1_g7n6w(Lcom/android/server/wallpaper/LocalColorRepository;Landroid/app/ILocalWallpaperColorConsumer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wallpaper/LocalColorRepository;->lambda$addAreas$0(Landroid/app/ILocalWallpaperColorConsumer;)V
 
     return-void
@@ -31,17 +29,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
-    .line 44
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
@@ -54,7 +49,6 @@
 .method private synthetic lambda$addAreas$0(Landroid/app/ILocalWallpaperColorConsumer;)V
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
@@ -69,12 +63,10 @@
 .method private synthetic lambda$forEachCallback$1(ILandroid/graphics/RectF;Ljava/util/function/Consumer;Landroid/app/ILocalWallpaperColorConsumer;)V
     .locals 1
 
-    .line 149
     invoke-interface {p4}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 150
     iget-object p0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {p0, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -87,7 +79,6 @@
 
     return-void
 
-    .line 152
     :cond_0
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -97,7 +88,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 153
     invoke-virtual {p0, p2}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -115,12 +105,10 @@
 .method public addAreas(Landroid/app/ILocalWallpaperColorConsumer;Ljava/util/List;I)V
     .locals 4
 
-    .line 53
     invoke-interface {p1}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 54
     iget-object v1, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -133,7 +121,6 @@
 
     if-nez v1, :cond_0
 
-    .line 58
     :try_start_0
     invoke-interface {p1}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
 
@@ -152,16 +139,13 @@
     :catch_0
     move-exception v1
 
-    .line 61
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 63
     :goto_0
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 64
     iget-object v3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v0, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -170,7 +154,6 @@
 
     goto :goto_1
 
-    .line 66
     :cond_0
     invoke-virtual {v1, p3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -181,15 +164,12 @@
     :goto_1
     if-nez v0, :cond_1
 
-    .line 69
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0, p2}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 70
     invoke-virtual {v1, p3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 73
     :cond_1
     :goto_2
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -198,7 +178,6 @@
 
     if-ge v2, p3, :cond_2
 
-    .line 74
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -211,7 +190,6 @@
 
     goto :goto_2
 
-    .line 76
     :cond_2
     iget-object p0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -223,7 +201,6 @@
 .method public forEachCallback(Ljava/util/function/Consumer;Landroid/graphics/RectF;I)V
     .locals 2
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     new-instance v1, Lcom/android/server/wallpaper/LocalColorRepository$$ExternalSyntheticLambda1;
@@ -238,7 +215,6 @@
 .method public getAreasByDisplayId(I)Ljava/util/List;
     .locals 6
 
-    .line 127
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -247,7 +223,6 @@
 
     move v2, v1
 
-    .line 128
     :goto_0
     iget-object v3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
@@ -257,7 +232,6 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 129
     iget-object v3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -270,7 +244,6 @@
 
     goto :goto_2
 
-    .line 131
     :cond_0
     invoke-virtual {v3, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -285,7 +258,6 @@
     :cond_1
     move v4, v1
 
-    .line 133
     :goto_1
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
@@ -293,7 +265,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 134
     invoke-virtual {v3, v4}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -319,7 +290,6 @@
 .method public isCallbackAvailable(Landroid/app/ILocalWallpaperColorConsumer;)Z
     .locals 0
 
-    .line 164
     iget-object p0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
@@ -346,12 +316,10 @@
 .method public removeAreas(Landroid/app/ILocalWallpaperColorConsumer;Ljava/util/List;I)Ljava/util/List;
     .locals 6
 
-    .line 88
     invoke-interface {p1}, Landroid/app/ILocalWallpaperColorConsumer;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 89
     iget-object v1, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -364,7 +332,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 92
     invoke-virtual {v1, p3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -373,7 +340,6 @@
 
     if-nez v3, :cond_0
 
-    .line 94
     iget-object p3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p3, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
@@ -383,7 +349,6 @@
     :cond_0
     move v4, v2
 
-    .line 96
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -391,7 +356,6 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 97
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -402,7 +366,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_1
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
@@ -410,10 +373,8 @@
 
     if-nez v3, :cond_2
 
-    .line 100
     invoke-virtual {v1, p3}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 103
     :cond_2
     :goto_1
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -422,25 +383,21 @@
 
     if-nez p3, :cond_4
 
-    .line 104
     iget-object p3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {p3, v0}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     iget-object p3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p3, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
     goto :goto_2
 
-    .line 108
     :cond_3
     iget-object p3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p3, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 110
     :cond_4
     :goto_2
     new-instance p1, Landroid/util/ArraySet;
@@ -449,7 +406,6 @@
 
     move p2, v2
 
-    .line 111
     :goto_3
     iget-object p3, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
@@ -461,7 +417,6 @@
 
     move p3, v2
 
-    .line 112
     :goto_4
     iget-object v0, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
@@ -479,7 +434,6 @@
 
     move v0, v2
 
-    .line 113
     :goto_5
     iget-object v1, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
@@ -501,7 +455,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 114
     iget-object v1, p0, Lcom/android/server/wallpaper/LocalColorRepository;->mLocalColorAreas:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -536,7 +489,6 @@
 
     goto :goto_3
 
-    .line 118
     :cond_7
     new-instance p0, Ljava/util/ArrayList;
 

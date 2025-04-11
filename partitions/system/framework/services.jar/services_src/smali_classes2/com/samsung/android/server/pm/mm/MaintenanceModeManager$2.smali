@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/server/pm/mm/MaintenanceModeManager;)V
     .locals 0
 
-    .line 463
     iput-object p1, p0, Lcom/samsung/android/server/pm/mm/MaintenanceModeManager$2;->this$0:Lcom/samsung/android/server/pm/mm/MaintenanceModeManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,12 +23,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 466
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 467
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +49,6 @@
 
     const-string p2, "com.samsung.android.intent.action.HIDE_MAINTENANCE_MODE_MARK"
 
-    .line 469
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -69,7 +65,6 @@
 
     goto :goto_0
 
-    .line 474
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/server/pm/mm/MaintenanceModeManager$2;->this$0:Lcom/samsung/android/server/pm/mm/MaintenanceModeManager;
 
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 471
     :cond_1
     iget-object p0, p0, Lcom/samsung/android/server/pm/mm/MaintenanceModeManager$2;->this$0:Lcom/samsung/android/server/pm/mm/MaintenanceModeManager;
 

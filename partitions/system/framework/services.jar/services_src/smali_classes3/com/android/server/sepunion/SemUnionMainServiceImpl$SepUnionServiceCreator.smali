@@ -13,12 +13,10 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemUnionMainServiceImpl;Ljava/lang/String;)V
     .locals 0
 
-    .line 262
     iput-object p1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$SepUnionServiceCreator;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     iput-object p2, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$SepUnionServiceCreator;->mName:Ljava/lang/String;
 
     return-void
@@ -29,14 +27,12 @@
 .method public createService(Landroid/content/Context;)Landroid/os/IBinder;
     .locals 2
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$SepUnionServiceCreator;->this$0:Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     iget-object v1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$SepUnionServiceCreator;->mName:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$maddSepUnionServiceMapInternal(Lcom/android/server/sepunion/SemUnionMainServiceImpl;Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 268
     invoke-static {}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->-$$Nest$sfgetsUnionIbinderMap()Ljava/util/HashMap;
 
     move-result-object p1

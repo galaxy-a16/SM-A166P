@@ -32,7 +32,6 @@
 .method public static bridge synthetic -$$Nest$fgetmManager(Lcom/android/server/sepunion/EngmodeService;)Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mManager:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     return-object p0
@@ -41,7 +40,6 @@
 .method public static bridge synthetic -$$Nest$fgetmNeedUpdate(Lcom/android/server/sepunion/EngmodeService;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/sepunion/EngmodeService;->mNeedUpdate:Z
 
     return p0
@@ -50,7 +48,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRunTimeTask(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/TimerTask;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mRunTimeTask:Ljava/util/TimerTask;
 
     return-object p0
@@ -59,7 +56,6 @@
 .method public static bridge synthetic -$$Nest$fgetmServerDate(Lcom/android/server/sepunion/EngmodeService;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mServerDate:Ljava/lang/String;
 
     return-object p0
@@ -68,7 +64,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTimeThread(Lcom/android/server/sepunion/EngmodeService;)Ljava/lang/Thread;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mTimeThread:Ljava/lang/Thread;
 
     return-object p0
@@ -77,7 +72,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTimerObserve(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/Timer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mTimerObserve:Ljava/util/Timer;
 
     return-object p0
@@ -86,7 +80,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUpdateTimer(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/Timer;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mUpdateTimer:Ljava/util/Timer;
 
     return-object p0
@@ -95,7 +88,6 @@
 .method public static bridge synthetic -$$Nest$fputmNeedUpdate(Lcom/android/server/sepunion/EngmodeService;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/sepunion/EngmodeService;->mNeedUpdate:Z
 
     return-void
@@ -104,7 +96,6 @@
 .method public static bridge synthetic -$$Nest$fputmRunTimeTask(Lcom/android/server/sepunion/EngmodeService;Ljava/util/TimerTask;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mRunTimeTask:Ljava/util/TimerTask;
 
     return-void
@@ -113,7 +104,6 @@
 .method public static bridge synthetic -$$Nest$fputmServerDate(Lcom/android/server/sepunion/EngmodeService;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mServerDate:Ljava/lang/String;
 
     return-void
@@ -122,7 +112,6 @@
 .method public static bridge synthetic -$$Nest$fputmTimeThread(Lcom/android/server/sepunion/EngmodeService;Ljava/lang/Thread;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mTimeThread:Ljava/lang/Thread;
 
     return-void
@@ -131,7 +120,6 @@
 .method public static bridge synthetic -$$Nest$fputmTimerObserve(Lcom/android/server/sepunion/EngmodeService;Ljava/util/Timer;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mTimerObserve:Ljava/util/Timer;
 
     return-void
@@ -140,7 +128,6 @@
 .method public static bridge synthetic -$$Nest$fputmUpdateTimer(Lcom/android/server/sepunion/EngmodeService;Ljava/util/Timer;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mUpdateTimer:Ljava/util/Timer;
 
     return-void
@@ -149,7 +136,6 @@
 .method public static bridge synthetic -$$Nest$mgetEmManager(Lcom/android/server/sepunion/EngmodeService;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->getEmManager()Z
 
     move-result p0
@@ -160,7 +146,6 @@
 .method public static bridge synthetic -$$Nest$misTokenInstalled(Lcom/android/server/sepunion/EngmodeService;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->isTokenInstalled()Z
 
     move-result p0
@@ -171,7 +156,6 @@
 .method public static bridge synthetic -$$Nest$mmakeRunTimeTask(Lcom/android/server/sepunion/EngmodeService;)Ljava/util/TimerTask;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->makeRunTimeTask()Ljava/util/TimerTask;
 
     move-result-object p0
@@ -182,7 +166,6 @@
 .method public static bridge synthetic -$$Nest$mmakeTimeReq(Lcom/android/server/sepunion/EngmodeService;)[B
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->makeTimeReq()[B
 
     move-result-object p0
@@ -193,7 +176,6 @@
 .method public static bridge synthetic -$$Nest$mregisterNetworkCallback(Lcom/android/server/sepunion/EngmodeService;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->registerNetworkCallback()Z
 
     move-result p0
@@ -204,7 +186,6 @@
 .method public static bridge synthetic -$$Nest$mupdateTime(Lcom/android/server/sepunion/EngmodeService;[B)[B
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/EngmodeService;->updateTime([B)[B
 
     move-result-object p0
@@ -215,20 +196,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 83
     invoke-direct {p0}, Lcom/samsung/android/sepunion/IEngmodeService$Stub;-><init>()V
 
-    .line 112
     new-instance v0, Lcom/android/server/sepunion/EngmodeService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/EngmodeService$2;-><init>(Lcom/android/server/sepunion/EngmodeService;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/EngmodeService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 84
     iput-object p1, p0, Lcom/android/server/sepunion/EngmodeService;->mContext:Landroid/content/Context;
 
-    .line 85
     new-instance p1, Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     iget-object v0, p0, Lcom/android/server/sepunion/EngmodeService;->mContext:Landroid/content/Context;
@@ -239,14 +216,12 @@
 
     const/4 p1, 0x1
 
-    .line 86
     iput-boolean p1, p0, Lcom/android/server/sepunion/EngmodeService;->mNeedUpdate:Z
 
     const-string p0, "engmode_service"
 
     const-string p1, "EM Service is started"
 
-    .line 88
     invoke-static {p0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -259,7 +234,6 @@
 
     const-string p0, "\n##### EngmodeService #####\n##### (dumpsys sepunion EngmodeService) #####\n"
 
-    .line 231
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -268,7 +242,6 @@
 .method public final getEmManager()Z
     .locals 2
 
-    .line 236
     new-instance v0, Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     iget-object v1, p0, Lcom/android/server/sepunion/EngmodeService;->mContext:Landroid/content/Context;
@@ -287,7 +260,6 @@
 
     const/4 v0, 0x0
 
-    .line 248
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->getEmManager()Z
 
@@ -299,12 +271,10 @@
 
     const-string v1, "Failed to get EM Manager"
 
-    .line 249
     invoke-static {p0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 253
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mManager:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
@@ -326,7 +296,6 @@
     :catch_0
     move-exception p0
 
-    .line 255
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -335,7 +304,6 @@
 .method public final makeRunTimeTask()Ljava/util/TimerTask;
     .locals 1
 
-    .line 92
     new-instance v0, Lcom/android/server/sepunion/EngmodeService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/EngmodeService$1;-><init>(Lcom/android/server/sepunion/EngmodeService;)V
@@ -350,10 +318,8 @@
 
     const-string v1, "engmode_service"
 
-    .line 261
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->getEmManager()Z
 
     move-result v0
@@ -362,14 +328,12 @@
 
     const-string p0, "Failed to get manager"
 
-    .line 264
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 268
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mManager:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
@@ -392,20 +356,16 @@
 
     const-string/jumbo v0, "onBootPhase() boot completed"
 
-    .line 198
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
-    .line 201
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/sepunion/EngmodeService;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
@@ -419,7 +379,6 @@
     :catch_0
     move-exception p0
 
-    .line 205
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -430,14 +389,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final registerNetworkCallback()Z
     .locals 3
 
-    .line 131
     :try_start_0
     iget-object v0, p0, Lcom/android/server/sepunion/EngmodeService;->mContext:Landroid/content/Context;
 
@@ -449,33 +406,28 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 133
     new-instance v1, Landroid/net/NetworkRequest$Builder;
 
     invoke-direct {v1}, Landroid/net/NetworkRequest$Builder;-><init>()V
 
     const/16 v2, 0xc
 
-    .line 135
     invoke-virtual {v1, v2}, Landroid/net/NetworkRequest$Builder;->addCapability(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x10
 
-    .line 136
     invoke-virtual {v1, v2}, Landroid/net/NetworkRequest$Builder;->addCapability(I)Landroid/net/NetworkRequest$Builder;
 
     move-result-object v1
 
-    .line 138
     new-instance v2, Lcom/android/server/sepunion/EngmodeService$3;
 
     invoke-direct {v2, p0}, Lcom/android/server/sepunion/EngmodeService$3;-><init>(Lcom/android/server/sepunion/EngmodeService;)V
 
     iput-object v2, p0, Lcom/android/server/sepunion/EngmodeService;->mNetworkCallback:Landroid/net/ConnectivityManager$NetworkCallback;
 
-    .line 177
     invoke-virtual {v1}, Landroid/net/NetworkRequest$Builder;->build()Landroid/net/NetworkRequest;
 
     move-result-object v1
@@ -493,7 +445,6 @@
     :catch_0
     move-exception p0
 
-    .line 179
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -508,10 +459,8 @@
 
     const-string v1, "engmode_service"
 
-    .line 272
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/sepunion/EngmodeService;->getEmManager()Z
 
     move-result v0
@@ -520,14 +469,12 @@
 
     const-string p0, "Failed to get manager"
 
-    .line 275
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 279
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/EngmodeService;->mManager:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 

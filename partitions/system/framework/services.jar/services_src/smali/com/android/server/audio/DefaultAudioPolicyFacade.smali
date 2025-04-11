@@ -17,17 +17,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mServiceLock:Ljava/lang/Object;
 
-    .line 47
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/audio/DefaultAudioPolicyFacade;->getAudioPolicyOrInit()Landroid/media/IAudioPolicyService;
     :try_end_0
@@ -42,7 +39,6 @@
 
     const-string v1, "Failed to initialize APM connection"
 
-    .line 50
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -58,7 +54,6 @@
 
     const-string v0, "Unexpected binderDied without IBinder object"
 
-    .line 67
     invoke-static {p0, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -67,7 +62,6 @@
 .method public binderDied(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/server/audio/DefaultAudioPolicyFacade;->resetServiceConnection(Landroid/os/IBinder;)V
 
     return-void
@@ -76,18 +70,15 @@
 .method public final getAudioPolicyOrInit()Landroid/media/IAudioPolicyService;
     .locals 4
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mServiceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 96
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mAudioPolicy:Landroid/media/IAudioPolicyService;
 
     if-eqz v1, :cond_0
 
-    .line 97
     monitor-exit v0
 
     return-object v1
@@ -95,12 +86,10 @@
     :cond_0
     const-string/jumbo v1, "media.audio_policy"
 
-    .line 101
     invoke-static {v1}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 100
     invoke-static {v1}, Landroid/media/IAudioPolicyService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/media/IAudioPolicyService;
 
     move-result-object v1
@@ -109,7 +98,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 106
     :try_start_1
     invoke-interface {v1}, Landroid/media/IAudioPolicyService;->asBinder()Landroid/os/IBinder;
 
@@ -122,11 +110,9 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 111
     :try_start_2
     iput-object v1, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mAudioPolicy:Landroid/media/IAudioPolicyService;
 
-    .line 112
     monitor-exit v0
 
     return-object v1
@@ -134,7 +120,6 @@
     :catch_0
     move-exception p0
 
-    .line 108
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "DefaultAudioPolicyFacade: Unable to link deathListener to AudioPolicy"
@@ -143,7 +128,6 @@
 
     throw v1
 
-    .line 103
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -156,7 +140,6 @@
     :catchall_0
     move-exception p0
 
-    .line 113
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -167,12 +150,10 @@
 .method public isHotwordStreamSupported(Z)Z
     .locals 2
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/audio/DefaultAudioPolicyFacade;->getAudioPolicyOrInit()Landroid/media/IAudioPolicyService;
 
     move-result-object v0
 
-    .line 57
     :try_start_0
     invoke-static {}, Landroid/media/permission/ClearCallingIdentityContext;->create()Landroid/media/permission/SafeCloseable;
 
@@ -180,7 +161,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     :try_start_1
     invoke-interface {v0, p1}, Landroid/media/IAudioPolicyService;->isHotwordStreamSupported(Z)Z
 
@@ -190,7 +170,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 59
     :try_start_2
     invoke-interface {v1}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_2
@@ -204,7 +183,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 57
     :try_start_3
     invoke-interface {v1}, Landroid/media/permission/SafeCloseable;->close()V
     :try_end_3
@@ -227,14 +205,12 @@
     :catch_0
     move-exception p1
 
-    .line 60
     invoke-interface {v0}, Landroid/media/IAudioPolicyService;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/audio/DefaultAudioPolicyFacade;->resetServiceConnection(Landroid/os/IBinder;)V
 
-    .line 61
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -245,12 +221,10 @@
 .method public final resetServiceConnection(Landroid/os/IBinder;)V
     .locals 2
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mServiceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 77
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mAudioPolicy:Landroid/media/IAudioPolicyService;
 
@@ -266,7 +240,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 78
     iget-object p1, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mAudioPolicy:Landroid/media/IAudioPolicyService;
 
     invoke-interface {p1}, Landroid/media/IAudioPolicyService;->asBinder()Landroid/os/IBinder;
@@ -279,10 +252,8 @@
 
     const/4 p1, 0x0
 
-    .line 79
     iput-object p1, p0, Lcom/android/server/audio/DefaultAudioPolicyFacade;->mAudioPolicy:Landroid/media/IAudioPolicyService;
 
-    .line 81
     :cond_0
     monitor-exit v0
 

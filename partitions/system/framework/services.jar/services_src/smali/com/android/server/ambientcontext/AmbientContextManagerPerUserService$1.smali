@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 461
     invoke-static {}, Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;->values()[Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService$ServiceType;
 
     move-result-object v0

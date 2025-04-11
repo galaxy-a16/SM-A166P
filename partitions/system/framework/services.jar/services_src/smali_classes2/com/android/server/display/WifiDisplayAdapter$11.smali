@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/display/WifiDisplayAdapter;Z)V
     .locals 0
 
-    .line 691
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$11;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput-boolean p2, p0, Lcom/android/server/display/WifiDisplayAdapter$11;->val$mode:Z
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 3
 
-    .line 694
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.intent.action.SET_SCREEN_RATIO_VALUE"
@@ -40,12 +38,10 @@
 
     const-string/jumbo v1, "screenratiovalue"
 
-    .line 695
     iget-boolean v2, p0, Lcom/android/server/display/WifiDisplayAdapter$11;->val$mode:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 696
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter$11;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v1}, Lcom/android/server/display/DisplayAdapter;->getContext()Landroid/content/Context;
@@ -56,7 +52,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 697
     iget-boolean p0, p0, Lcom/android/server/display/WifiDisplayAdapter$11;->val$mode:Z
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;

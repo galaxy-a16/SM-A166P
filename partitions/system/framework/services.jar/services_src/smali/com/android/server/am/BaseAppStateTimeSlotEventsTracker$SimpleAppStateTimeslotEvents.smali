@@ -21,7 +21,6 @@
 
     move-object v7, p6
 
-    .line 360
     invoke-direct/range {v0 .. v7}, Lcom/android/server/am/BaseAppStateTimeSlotEvents;-><init>(ILjava/lang/String;IJLjava/lang/String;Lcom/android/server/am/BaseAppStateEvents$MaxTrackingDurationConfig;)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public formatEventSummary(JI)Ljava/lang/String;
     .locals 8
 
-    .line 374
     iget-object p3, p0, Lcom/android/server/am/BaseAppStateEvents;->mEvents:[Ljava/util/LinkedList;
 
     const/4 v0, 0x0
@@ -49,13 +47,11 @@
 
     goto :goto_0
 
-    .line 377
     :cond_0
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/am/BaseAppStateEvents;->getTotalEvents(JI)I
 
     move-result p3
 
-    .line 378
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +76,6 @@
 
     move-wide v5, p1
 
-    .line 379
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/am/BaseAppStateTimeSlotEvents;->getTotalEventsSince(JJI)I
 
     move-result p3
@@ -95,7 +90,6 @@
 
     aget-wide v2, p0, v0
 
-    .line 380
     invoke-static {v2, v3, p1, p2}, Landroid/util/TimeUtils;->formatTime(JJ)Ljava/lang/String;
 
     move-result-object p0
@@ -122,7 +116,6 @@
 .method public formatEventTypeLabel(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, ""
 
     return-object p0

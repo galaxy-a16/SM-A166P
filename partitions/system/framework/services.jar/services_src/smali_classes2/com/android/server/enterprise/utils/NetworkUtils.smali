@@ -13,7 +13,6 @@
 
     return-object p0
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getPacFileUrl()Ljava/lang/String;
 
@@ -27,17 +26,14 @@
 
     if-nez v0, :cond_2
 
-    .line 39
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getHostname()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 40
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getPortNumber()I
 
     move-result v1
 
-    .line 41
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getExclusionList()Ljava/util/List;
 
     move-result-object v2
@@ -48,13 +44,11 @@
 
     goto :goto_0
 
-    .line 42
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getExclusionList()Ljava/util/List;
 
     move-result-object p0
 
-    .line 39
     :goto_0
     invoke-static {v0, v1, p0}, Landroid/net/ProxyInfo;->buildDirectProxy(Ljava/lang/String;ILjava/util/List;)Landroid/net/ProxyInfo;
 
@@ -62,7 +56,6 @@
 
     goto :goto_1
 
-    .line 44
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/knox/net/ProxyProperties;->getPacFileUrl()Ljava/lang/String;
 
@@ -85,14 +78,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 21
     array-length v0, p0
 
     if-lez v0, :cond_0
 
     const-string v0, ","
 
-    .line 22
     invoke-static {v0, p0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
@@ -115,7 +106,6 @@
 
     return-object p0
 
-    .line 59
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -127,7 +117,6 @@
 
     const/4 v2, 0x0
 
-    .line 60
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -144,7 +133,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 61
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0

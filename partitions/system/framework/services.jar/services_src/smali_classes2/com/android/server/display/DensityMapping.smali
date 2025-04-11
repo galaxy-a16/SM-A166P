@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$xFXh2oerFieTO7wAJHpJfRN11Qc(Lcom/android/server/display/DensityMapping$Entry;)I
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/display/DensityMapping;->lambda$new$0(Lcom/android/server/display/DensityMapping$Entry;)I
 
     move-result p0
@@ -22,10 +21,8 @@
 .method public constructor <init>([Lcom/android/server/display/DensityMapping$Entry;)V
     .locals 1
 
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v0, Lcom/android/server/display/DensityMapping$$ExternalSyntheticLambda0;
 
     invoke-direct {v0}, Lcom/android/server/display/DensityMapping$$ExternalSyntheticLambda0;-><init>()V
@@ -36,10 +33,8 @@
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 44
     iput-object p1, p0, Lcom/android/server/display/DensityMapping;->mSortedDensityMappingEntries:[Lcom/android/server/display/DensityMapping$Entry;
 
-    .line 45
     invoke-static {p1}, Lcom/android/server/display/DensityMapping;->verifyDensityMapping([Lcom/android/server/display/DensityMapping$Entry;)V
 
     return-void
@@ -48,7 +43,6 @@
 .method public static createByOwning([Lcom/android/server/display/DensityMapping$Entry;)Lcom/android/server/display/DensityMapping;
     .locals 1
 
-    .line 38
     new-instance v0, Lcom/android/server/display/DensityMapping;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DensityMapping;-><init>([Lcom/android/server/display/DensityMapping$Entry;)V
@@ -59,7 +53,6 @@
 .method public static synthetic lambda$new$0(Lcom/android/server/display/DensityMapping$Entry;)I
     .locals 0
 
-    .line 43
     iget p0, p0, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
     return p0
@@ -70,7 +63,6 @@
 
     const/4 v0, 0x1
 
-    .line 95
     :goto_0
     array-length v1, p0
 
@@ -78,13 +70,10 @@
 
     add-int/lit8 v1, v0, -0x1
 
-    .line 96
     aget-object v1, p0, v1
 
-    .line 97
     aget-object v2, p0, v0
 
-    .line 99
     iget v3, v1, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
     iget v4, v2, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
@@ -93,7 +82,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 106
     iget v3, v1, Lcom/android/server/display/DensityMapping$Entry;->density:I
 
     iget v4, v2, Lcom/android/server/display/DensityMapping$Entry;->density:I
@@ -104,7 +92,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -130,7 +117,6 @@
 
     throw p0
 
-    .line 104
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -171,10 +157,8 @@
 
     add-int/2addr p1, p2
 
-    .line 62
     sget-object p2, Lcom/android/server/display/DensityMapping$Entry;->ZEROES:Lcom/android/server/display/DensityMapping$Entry;
 
-    .line 65
     iget-object p0, p0, Lcom/android/server/display/DensityMapping;->mSortedDensityMappingEntries:[Lcom/android/server/display/DensityMapping$Entry;
 
     array-length v0, p0
@@ -186,7 +170,6 @@
 
     aget-object v2, p0, v1
 
-    .line 66
     iget v3, v2, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
     if-gt v3, p1, :cond_1
@@ -200,13 +183,11 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 75
     :cond_1
     iget p0, p2, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
     if-ne p0, p1, :cond_2
 
-    .line 76
     iget p0, p2, Lcom/android/server/display/DensityMapping$Entry;->density:I
 
     return p0
@@ -214,14 +195,12 @@
     :cond_2
     if-nez v2, :cond_3
 
-    .line 83
     sget-object p0, Lcom/android/server/display/DensityMapping$Entry;->ZEROES:Lcom/android/server/display/DensityMapping$Entry;
 
     move-object v2, p2
 
     move-object p2, p0
 
-    .line 86
     :cond_3
     iget p0, p2, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
@@ -231,7 +210,6 @@
 
     move-result-wide v0
 
-    .line 87
     iget p0, v2, Lcom/android/server/display/DensityMapping$Entry;->squaredDiagonal:I
 
     int-to-double v3, p0
@@ -242,14 +220,12 @@
 
     int-to-double p0, p1
 
-    .line 88
     invoke-static {p0, p1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide p0
 
     sub-double/2addr p0, v0
 
-    .line 90
     iget v2, v2, Lcom/android/server/display/DensityMapping$Entry;->density:I
 
     iget p2, p2, Lcom/android/server/display/DensityMapping$Entry;->density:I
@@ -280,7 +256,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,7 +266,6 @@
 
     iget-object p0, p0, Lcom/android/server/display/DensityMapping;->mSortedDensityMappingEntries:[Lcom/android/server/display/DensityMapping$Entry;
 
-    .line 116
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

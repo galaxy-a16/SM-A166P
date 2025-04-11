@@ -15,7 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 37
     new-instance v0, Lcom/android/server/pm/pkg/PackageUserStateDefault;
 
     invoke-direct {v0}, Lcom/android/server/pm/pkg/PackageUserStateDefault;-><init>()V

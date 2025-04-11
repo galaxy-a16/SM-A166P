@@ -13,10 +13,8 @@
 
     const/4 v0, 0x0
 
-    .line 187
     invoke-direct {p0, p1, v0}, Lcom/android/server/firewall/StringFilter;-><init>(Lcom/android/server/firewall/StringFilter$ValueProvider;Lcom/android/server/firewall/StringFilter-IA;)V
 
-    .line 188
     new-instance p1, Landroid/os/PatternMatcher;
 
     const/4 v0, 0x2
@@ -35,7 +33,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 193
     iget-object p0, p0, Lcom/android/server/firewall/StringFilter$PatternStringFilter;->mPattern:Landroid/os/PatternMatcher;
 
     invoke-virtual {p0, p1}, Landroid/os/PatternMatcher;->match(Ljava/lang/String;)Z

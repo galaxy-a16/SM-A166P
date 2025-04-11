@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/device/DeviceInfo;)V
     .locals 0
 
-    .line 143
     iput-object p1, p0, Lcom/android/server/enterprise/device/DeviceInfo$1;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 145
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0xc8
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 147
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/device/DeviceInfo$1;->this$0:Lcom/android/server/enterprise/device/DeviceInfo;
 

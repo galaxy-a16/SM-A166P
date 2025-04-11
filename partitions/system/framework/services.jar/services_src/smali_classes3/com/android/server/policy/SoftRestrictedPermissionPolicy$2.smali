@@ -25,7 +25,6 @@
 .method public constructor <init>(ZIZZZZZZ)V
     .locals 0
 
-    .line 169
     iput-boolean p1, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhiteListed:Z
 
     iput p2, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
@@ -52,7 +51,6 @@
 .method public getExtraAppOpCode()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x57
 
     return p0
@@ -61,7 +59,6 @@
 .method public mayAllowExtraAppOp()Z
     .locals 3
 
-    .line 183
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
 
     const/4 v1, 0x0
@@ -70,7 +67,6 @@
 
     return v1
 
-    .line 188
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isForcedScopedStorage:Z
 
@@ -78,7 +74,6 @@
 
     return v1
 
-    .line 193
     :cond_1
     iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
 
@@ -88,7 +83,6 @@
 
     return v1
 
-    .line 200
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasWriteMediaStorageGrantedForUid:Z
 
@@ -112,7 +106,6 @@
 .method public mayDenyExtraAppOpIfGranted()Z
     .locals 3
 
-    .line 207
     iget v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$targetSDK:I
 
     const/16 v1, 0x1e
@@ -121,7 +114,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 208
     invoke-virtual {p0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->mayAllowExtraAppOp()Z
 
     move-result p0
@@ -130,7 +122,6 @@
 
     return p0
 
-    .line 214
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$shouldApplyRestriction:Z
 
@@ -138,7 +129,6 @@
 
     return v2
 
-    .line 219
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isForcedScopedStorage:Z
 
@@ -146,7 +136,6 @@
 
     return v2
 
-    .line 224
     :cond_2
     iget-boolean p0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$hasRequestedPreserveLegacyExternalStorage:Z
 
@@ -163,7 +152,6 @@
 .method public mayGrantPermission()Z
     .locals 1
 
-    .line 172
     iget-boolean v0, p0, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;->val$isWhiteListed:Z
 
     if-nez v0, :cond_1

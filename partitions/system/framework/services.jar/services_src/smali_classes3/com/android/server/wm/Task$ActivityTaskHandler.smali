@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/Task;Landroid/os/Looper;)V
     .locals 0
 
-    .line 708
     iput-object p1, p0, Lcom/android/server/wm/Task$ActivityTaskHandler;->this$0:Lcom/android/server/wm/Task;
 
-    .line 709
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 714
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x65
@@ -34,7 +31,6 @@
 
     goto :goto_0
 
-    .line 716
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/Task$ActivityTaskHandler;->this$0:Lcom/android/server/wm/Task;
 
@@ -46,7 +42,6 @@
 
     monitor-enter p1
 
-    .line 717
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/Task$ActivityTaskHandler;->this$0:Lcom/android/server/wm/Task;
 
@@ -54,7 +49,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/wm/Task;->notifyActivityDrawnLocked(Lcom/android/server/wm/ActivityRecord;)V
 
-    .line 718
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

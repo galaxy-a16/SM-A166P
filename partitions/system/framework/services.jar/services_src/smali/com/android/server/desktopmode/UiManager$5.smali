@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/UiManager;Lcom/android/server/desktopmode/UiManager$InternalUiCallback;)V
     .locals 0
 
-    .line 395
     iput-object p1, p0, Lcom/android/server/desktopmode/UiManager$5;->this$0:Lcom/android/server/desktopmode/UiManager;
 
     iput-object p2, p0, Lcom/android/server/desktopmode/UiManager$5;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
@@ -28,7 +27,6 @@
 .method public onAnimationComplete()V
     .locals 0
 
-    .line 414
     iget-object p0, p0, Lcom/android/server/desktopmode/UiManager$5;->val$callback:Lcom/android/server/desktopmode/UiManager$InternalUiCallback;
 
     invoke-virtual {p0}, Lcom/android/server/desktopmode/UiManager$InternalUiCallback;->onAnimationComplete()V
@@ -39,27 +37,23 @@
 .method public onClickButtonNegative()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onClickButtonPositive()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onDismiss()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onShow()V
     .locals 0
 
-    .line 0
     return-void
 .end method

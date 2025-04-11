@@ -43,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$fgetisStillDecEFK(Lcom/android/server/bgslotmanager/CustomEFKManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isStillDecEFK:Z
 
     return p0
@@ -52,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->last_Watermark_EFK:I
 
     return p0
@@ -61,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetv_watermark_scale(Lcom/android/server/bgslotmanager/CustomEFKManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
     return p0
@@ -70,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fputisBlockDecEFK(Lcom/android/server/bgslotmanager/CustomEFKManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isBlockDecEFK:Z
 
     return-void
@@ -79,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fputisStillDecEFK(Lcom/android/server/bgslotmanager/CustomEFKManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isStillDecEFK:Z
 
     return-void
@@ -88,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fputlast_Watermark_EFK(Lcom/android/server/bgslotmanager/CustomEFKManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->last_Watermark_EFK:I
 
     return-void
@@ -97,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fputv_watermark_scale(Lcom/android/server/bgslotmanager/CustomEFKManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
     return-void
@@ -106,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$mrestoreEFKAfterBoot(Lcom/android/server/bgslotmanager/CustomEFKManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->restoreEFKAfterBoot()V
 
     return-void
@@ -115,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$mrestoreWatermarkScaleFactor(Lcom/android/server/bgslotmanager/CustomEFKManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->restoreWatermarkScaleFactor()V
 
     return-void
@@ -124,7 +115,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 15
     invoke-static {}, Lcom/android/server/bgslotmanager/MemInfoGetter;->getTotalMemoryMB()J
 
     move-result-wide v0
@@ -135,7 +125,6 @@
 
     const-string v1, "false"
 
-    .line 30
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyBool(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -144,7 +133,6 @@
 
     const-string v0, "bEFKb_enable"
 
-    .line 31
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyBool(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -153,14 +141,12 @@
 
     const-string v0, "Y29tLnNlYy5hbmRyb2lkLmFwcC5zYnJvd3Nlcg=="
 
-    .line 34
     invoke-static {v0}, Lcom/android/server/am/DynamicHiddenApp;->decodeToStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Y29tLnNlYy5hbmRyb2lkLmFwcC5jYW1lcmE="
 
-    .line 35
     invoke-static {v1}, Lcom/android/server/am/DynamicHiddenApp;->decodeToStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -177,14 +163,12 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "add_bonusEFK"
 
     const-string v1, "-1"
 
-    .line 18
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -195,7 +179,6 @@
 
     const-string v1, "0"
 
-    .line 19
     invoke-static {v0, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -204,14 +187,12 @@
 
     const/4 v0, -0x1
 
-    .line 20
     iput v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
 
     const-string/jumbo v2, "v_BootEFK"
 
     const-string v3, "204800"
 
-    .line 21
     invoke-static {v2, v3}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v2
@@ -220,7 +201,6 @@
 
     const-string/jumbo v2, "v_decrease_EFK"
 
-    .line 22
     invoke-static {v2, v1}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
@@ -231,7 +211,6 @@
 
     const-string v2, "1000"
 
-    .line 23
     invoke-static {v1, v2}, Lcom/android/server/bgslotmanager/BgAppPropManager;->getSlmkPropertyInt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
@@ -240,24 +219,18 @@
 
     const/4 v2, 0x0
 
-    .line 24
     iput v2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
-    .line 25
     iput v1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vWatermarkScaleGetPerTickTime:I
 
     mul-int/lit8 v1, v1, 0x5
 
-    .line 26
     iput v1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vWatermarkScaleGetTime:I
 
-    .line 27
     iput v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->last_Watermark_EFK:I
 
-    .line 28
     iput-boolean v2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isBlockDecEFK:Z
 
-    .line 29
     iput-boolean v2, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isStillDecEFK:Z
 
     return-void
@@ -268,7 +241,6 @@
 
     const/16 v0, 0x2020
 
-    .line 222
     filled-new-array {v0}, [I
 
     move-result-object v0
@@ -287,7 +259,6 @@
 
     const-string v3, "/proc/sys/vm/watermark_scale_factor"
 
-    .line 228
     invoke-static {v3, v0, v2, v1, v2}, Landroid/os/Process;->readProcFile(Ljava/lang/String;[I[Ljava/lang/String;[J[F)Z
 
     aget-wide v0, v1, v4
@@ -302,7 +273,6 @@
 .method public getBonusEFK()I
     .locals 10
 
-    .line 140
     sget-wide v0, Lcom/android/server/bgslotmanager/CustomEFKManager;->mTotalMemMb:J
 
     const-wide/16 v2, 0xc00
@@ -336,7 +306,6 @@
     :cond_0
     move v2, v7
 
-    .line 144
     :goto_0
     iget v8, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->addBonusEFK:I
 
@@ -359,7 +328,6 @@
 
     if-ne v8, v0, :cond_2
 
-    .line 147
     iget v7, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_BonusEFK:I
 
     goto :goto_1
@@ -379,7 +347,6 @@
 .method public getCurWatermarkFactorScale(I)V
     .locals 8
 
-    .line 211
     sget-boolean v0, Lcom/android/server/bgslotmanager/CustomEFKManager;->APP_EFK_DECREASE_BOOST_ENABLE:Z
 
     if-nez v0, :cond_0
@@ -389,10 +356,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 215
     iput-boolean v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isBlockDecEFK:Z
 
-    .line 216
     new-instance v0, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;
 
     iget v1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vWatermarkScaleGetTime:I
@@ -411,7 +376,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/bgslotmanager/CustomEFKManager$WatermarkScaleTimer;-><init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJI)V
 
-    .line 217
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
@@ -420,7 +384,6 @@
 .method public final restoreEFKAfterBoot()V
     .locals 1
 
-    .line 44
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
 
     const/4 v0, -0x1
@@ -429,7 +392,6 @@
 
     const-string/jumbo v0, "sys.sysctl.extra_free_kbytes"
 
-    .line 45
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -443,7 +405,6 @@
 .method public final restoreWatermarkScaleFactor()V
     .locals 1
 
-    .line 58
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
     const/16 v0, 0xa
@@ -452,7 +413,6 @@
 
     const-string/jumbo v0, "sys.sysctl.watermark_scale_factor"
 
-    .line 59
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -466,18 +426,15 @@
 .method public runBootEFKBoost()V
     .locals 7
 
-    .line 73
     sget-boolean v0, Lcom/android/server/bgslotmanager/CustomEFKManager;->BOOTING_EFK_BOOST_ENABLE:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 77
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->setEFKBoost()V
 
-    .line 78
     new-instance v0, Lcom/android/server/bgslotmanager/CustomEFKManager$1;
 
     const-wide/32 v3, 0x2bf20
@@ -490,7 +447,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/bgslotmanager/CustomEFKManager$1;-><init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJ)V
 
-    .line 93
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
@@ -499,7 +455,6 @@
 .method public runDecEFKBoost(Ljava/lang/String;)V
     .locals 12
 
-    .line 97
     sget-boolean v0, Lcom/android/server/bgslotmanager/CustomEFKManager;->APP_EFK_DECREASE_BOOST_ENABLE:Z
 
     if-nez v0, :cond_0
@@ -509,7 +464,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 101
     :goto_0
     sget-object v1, Lcom/android/server/bgslotmanager/CustomEFKManager;->DECEFK_EXCEPT_PROC_ARRAY:[Ljava/lang/String;
 
@@ -517,7 +471,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 102
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -533,7 +486,6 @@
 
     goto :goto_0
 
-    .line 107
     :cond_2
     iget p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
@@ -541,20 +493,16 @@
 
     if-le p1, v0, :cond_3
 
-    .line 108
     iget-boolean p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isBlockDecEFK:Z
 
     if-nez p1, :cond_4
 
     const/4 p1, 0x1
 
-    .line 109
     iput-boolean p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->isStillDecEFK:Z
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->setWatermarkScaleFactorDecreaseBoost()V
 
-    .line 111
     new-instance p1, Lcom/android/server/bgslotmanager/CustomEFKManager$2;
 
     iget v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vDecreaseEFKTime:I
@@ -569,16 +517,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/bgslotmanager/CustomEFKManager$2;-><init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJ)V
 
-    .line 121
     invoke-virtual {p1}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     goto :goto_1
 
-    .line 124
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/bgslotmanager/CustomEFKManager;->setEFKDecreaseBoost()V
 
-    .line 125
     new-instance p1, Lcom/android/server/bgslotmanager/CustomEFKManager$3;
 
     iget v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vDecreaseEFKTime:I
@@ -593,7 +538,6 @@
 
     invoke-direct/range {v6 .. v11}, Lcom/android/server/bgslotmanager/CustomEFKManager$3;-><init>(Lcom/android/server/bgslotmanager/CustomEFKManager;JJ)V
 
-    .line 134
     invoke-virtual {p1}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     :cond_4
@@ -604,14 +548,12 @@
 .method public final setEFKBoost()V
     .locals 2
 
-    .line 39
     iget v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 40
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_bonusEFKWhileBoot:I
 
     add-int/2addr v0, p0
@@ -631,21 +573,18 @@
 .method public final setEFKDecreaseBoost()V
     .locals 2
 
-    .line 49
     iget v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 50
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vDecreaseEFK:I
 
     const-string/jumbo v1, "sys.sysctl.extra_free_kbytes"
 
     if-lez p0, :cond_0
 
-    .line 51
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -654,7 +593,6 @@
 
     goto :goto_0
 
-    .line 53
     :cond_0
     div-int/lit8 v0, v0, 0x3
 
@@ -672,12 +610,10 @@
 .method public setOriginEFKWithSetProperty(I)V
     .locals 0
 
-    .line 156
     iput p1, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
 
     const-string/jumbo p0, "sys.sysctl.origin_extra_free_kbytes"
 
-    .line 157
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -692,7 +628,6 @@
 
     const-string/jumbo p0, "sys.sysctl.watermark_boost_factor"
 
-    .line 161
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -705,7 +640,6 @@
 .method public final setWatermarkScaleFactorDecreaseBoost()V
     .locals 3
 
-    .line 63
     iget v0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->v_watermark_scale:I
 
     div-int/lit8 v1, v0, 0x3
@@ -724,14 +658,12 @@
     :goto_0
     if-le v0, v2, :cond_2
 
-    .line 65
     iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->vDecreaseEFK:I
 
     const-string/jumbo v0, "sys.sysctl.watermark_scale_factor"
 
     if-lez p0, :cond_1
 
-    .line 66
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -740,7 +672,6 @@
 
     goto :goto_1
 
-    .line 68
     :cond_1
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 

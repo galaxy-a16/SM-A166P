@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +55,6 @@
 .method public static addOrRemoveB2CFeature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 3
 
-    .line 77
     sget-object v0, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,20 +91,16 @@
 
     if-eqz p2, :cond_0
 
-    .line 81
     new-instance p3, Landroid/content/ContentValues;
 
     invoke-direct {p3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 82
     invoke-virtual {p3, v0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "feature_name"
 
-    .line 83
     invoke-virtual {p3, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -120,12 +114,10 @@
     :cond_0
     if-nez p3, :cond_1
 
-    .line 88
     invoke-static {p0, p1}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getB2CFeatureByPackage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 91
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p3
@@ -140,7 +132,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 96
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -163,19 +154,16 @@
 .method public static applyWhitelistForB2CFeatures(Landroid/content/Context;)V
     .locals 4
 
-    .line 24
     sget-object v0, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->TAG:Ljava/lang/String;
 
     const-string v1, "applyWhitelistForB2CFeatures()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getB2CFeaturesList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 26
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -184,13 +172,11 @@
 
     return-void
 
-    .line 28
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 29
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -210,7 +196,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 31
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -222,14 +207,12 @@
     :cond_1
     const-string v0, "KNOX_ANALYTICS"
 
-    .line 34
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 35
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -238,21 +221,18 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 38
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "*"
 
-    .line 39
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 40
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -267,26 +247,22 @@
 .method public static getB2CActivationStatus(Landroid/content/Context;)Z
     .locals 3
 
-    .line 67
     sget-object v0, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->TAG:Ljava/lang/String;
 
     const-string v1, "getB2CActivationStatus()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getB2CFeaturePackageList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
 
-    .line 70
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
 
     xor-int/lit8 p0, p0, 0x1
 
-    .line 71
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -309,19 +285,16 @@
 .method public static removeB2CFeaturesFromWhitelist(Landroid/content/Context;)V
     .locals 5
 
-    .line 44
     sget-object v0, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "removeB2CFeaturesFromWhitelist()"
 
     invoke-static {v0, v1}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/util/KnoxAnalyticsQueryResolver;->getB2CFeaturesList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 47
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -334,19 +307,16 @@
 
     const-string v1, "KNOX_ANALYTICS"
 
-    .line 49
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     new-array v1, v3, [Ljava/lang/String;
 
-    .line 52
     invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 53
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -355,7 +325,6 @@
 
     invoke-virtual {v1, v4, v2, v0}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 59
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -381,7 +350,6 @@
     :catch_0
     move-exception p0
 
-    .line 62
     sget-object v0, Lcom/samsung/android/knox/analytics/util/B2CFeatures;->TAG:Ljava/lang/String;
 
     const-string v1, "Failed to delete from FeaturesBlacklist"

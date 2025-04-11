@@ -37,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDeviceBroker(Lcom/android/server/audio/BtHelper;)Lcom/android/server/audio/AudioDeviceBroker;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     return-object p0
@@ -46,25 +45,20 @@
 .method public constructor <init>(Lcom/android/server/audio/AudioDeviceBroker;)V
     .locals 2
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 96
     iput-boolean v0, p0, Lcom/android/server/audio/BtHelper;->mAvrcpAbsVolSupported:Z
 
-    .line 751
     new-instance v1, Lcom/android/server/audio/BtHelper$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/audio/BtHelper$1;-><init>(Lcom/android/server/audio/BtHelper;)V
 
     iput-object v1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
-    .line 1118
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mIsBtOffloadEnabled:I
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     return-void
@@ -75,7 +69,6 @@
 
     sparse-switch p0, :sswitch_data_0
 
-    .line 1086
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -222,25 +215,21 @@
 
     if-nez p0, :cond_0
 
-    .line 646
     new-instance p0, Landroid/media/AudioDeviceAttributes;
 
     invoke-direct {p0, v1, v0}, Landroid/media/AudioDeviceAttributes;-><init>(ILjava/lang/String;)V
 
     return-object p0
 
-    .line 648
     :cond_0
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 649
     invoke-static {p0}, Lcom/android/server/audio/BtHelper;->getName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 650
     invoke-static {v2}, Landroid/bluetooth/BluetoothAdapter;->checkBluetoothAddress(Ljava/lang/String;)Z
 
     move-result v4
@@ -252,7 +241,6 @@
     :cond_1
     move-object v0, v2
 
-    .line 653
     :goto_0
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
 
@@ -260,7 +248,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 656
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothClass;->getDeviceClass()I
 
     move-result v4
@@ -287,7 +274,6 @@
     :cond_3
     const/16 v1, 0x20
 
-    .line 667
     :cond_4
     :goto_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -308,7 +294,6 @@
 
     const-string v2, "Unknown"
 
-    .line 668
     :cond_5
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -330,10 +315,8 @@
 
     const-string v2, "AS.BtHelper"
 
-    .line 667
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
     new-instance p0, Landroid/media/AudioDeviceAttributes;
 
     invoke-direct {p0, v1, v0, v3}, Landroid/media/AudioDeviceAttributes;-><init>(ILjava/lang/String;Ljava/lang/String;)V
@@ -354,7 +337,6 @@
 
     return p0
 
-    .line 961
     :cond_0
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHeadset;->startVoiceRecognition(Landroid/bluetooth/BluetoothDevice;)Z
 
@@ -362,7 +344,6 @@
 
     return p0
 
-    .line 959
     :cond_1
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothHeadset;->startScoUsingVirtualVoiceCall()Z
 
@@ -376,7 +357,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 179
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -416,7 +396,6 @@
 
     return p0
 
-    .line 949
     :cond_0
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothHeadset;->stopVoiceRecognition(Landroid/bluetooth/BluetoothDevice;)Z
 
@@ -424,7 +403,6 @@
 
     return p0
 
-    .line 947
     :cond_1
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothHeadset;->stopScoUsingVirtualVoiceCall()Z
 
@@ -436,7 +414,6 @@
 .method public static getName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
     .locals 0
 
-    .line 184
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -452,12 +429,10 @@
 .method public static getPreferredAudioProfiles(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 1
 
-    .line 1030
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 1031
     invoke-virtual {v0, p0}, Landroid/bluetooth/BluetoothAdapter;->getRemoteDevice(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
 
     move-result-object p0
@@ -472,7 +447,6 @@
 .method public static getProfileFromType(I)I
     .locals 1
 
-    .line 1019
     invoke-static {p0}, Landroid/media/AudioSystem;->isBluetoothA2dpOutDevice(I)Z
 
     move-result v0
@@ -483,7 +457,6 @@
 
     return p0
 
-    .line 1021
     :cond_0
     invoke-static {p0}, Landroid/media/AudioSystem;->isBluetoothScoDevice(I)Z
 
@@ -495,7 +468,6 @@
 
     return p0
 
-    .line 1023
     :cond_1
     invoke-static {p0}, Landroid/media/AudioSystem;->isBluetoothLeDevice(I)Z
 
@@ -516,7 +488,6 @@
 .method public static onNotifyPreferredAudioProfileApplied(Landroid/bluetooth/BluetoothDevice;)V
     .locals 1
 
-    .line 1039
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
@@ -539,7 +510,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -597,7 +567,6 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -649,7 +618,6 @@
 .method public final broadcastScoConnectionState(I)V
     .locals 0
 
-    .line 634
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->postBroadcastScoConnectionState(I)V
@@ -660,7 +628,6 @@
 .method public final checkScoAudioState()V
     .locals 3
 
-    .line 968
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-eqz v0, :cond_0
@@ -673,7 +640,6 @@
 
     if-nez v2, :cond_0
 
-    .line 971
     invoke-virtual {v0, v1}, Landroid/bluetooth/BluetoothHeadset;->getAudioState(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result v0
@@ -684,7 +650,6 @@
 
     const/4 v0, 0x2
 
-    .line 973
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     :cond_0
@@ -698,16 +663,13 @@
 
     const/4 v0, 0x0
 
-    .line 517
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->setBtScoActiveDevice(Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 518
     iput-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 519
     monitor-exit p0
 
     return-void
@@ -723,7 +685,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 4
 
-    .line 1092
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -748,7 +709,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1093
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -769,19 +729,16 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1094
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz v0, :cond_0
 
-    .line 1095
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getBluetoothClass()Landroid/bluetooth/BluetoothClass;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1097
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -792,7 +749,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1098
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothClass;->getDeviceClass()I
 
     move-result v0
@@ -807,10 +763,8 @@
 
     move-result-object v0
 
-    .line 1097
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1101
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -836,7 +790,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -861,7 +814,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -884,7 +836,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -907,7 +858,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -928,7 +878,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -955,7 +904,6 @@
 .method public forceCloseSco()V
     .locals 3
 
-    .line 1152
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-eqz v0, :cond_0
@@ -964,14 +912,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1153
     iget v2, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
     invoke-static {v0, v1, v2}, Lcom/android/server/audio/BtHelper;->disconnectBluetoothScoAudioHelper(Landroid/bluetooth/BluetoothHeadset;Landroid/bluetooth/BluetoothDevice;I)Z
 
     const/4 v0, 0x5
 
-    .line 1155
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     :cond_0
@@ -983,7 +929,6 @@
 
     monitor-enter p0
 
-    .line 1171
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
     :try_end_0
@@ -1006,7 +951,6 @@
 
     monitor-enter p0
 
-    .line 279
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
     :try_end_0
@@ -1016,12 +960,10 @@
 
     if-nez v0, :cond_0
 
-    .line 280
     monitor-exit p0
 
     return v1
 
-    .line 284
     :cond_0
     :try_start_1
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothA2dp;->getCodecStatus(Landroid/bluetooth/BluetoothDevice;)Landroid/bluetooth/BluetoothCodecStatus;
@@ -1039,7 +981,6 @@
     :try_start_2
     const-string v2, "AS.BtHelper"
 
-    .line 286
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1063,12 +1004,10 @@
     :goto_0
     if-nez p1, :cond_1
 
-    .line 289
     monitor-exit p0
 
     return v1
 
-    .line 291
     :cond_1
     :try_start_3
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothCodecStatus;->getCodecConfig()Landroid/bluetooth/BluetoothCodecConfig;
@@ -1079,12 +1018,10 @@
 
     if-nez p1, :cond_2
 
-    .line 293
     monitor-exit p0
 
     return v1
 
-    .line 295
     :cond_2
     :try_start_4
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothCodecConfig;->getCodecType()I
@@ -1114,7 +1051,6 @@
 
     monitor-enter p0
 
-    .line 1217
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
     :try_end_0
@@ -1122,14 +1058,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1218
     monitor-exit p0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 1220
     :cond_0
     :try_start_1
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothA2dp;->getActiveDevice()Landroid/bluetooth/BluetoothDevice;
@@ -1159,7 +1093,6 @@
 
     goto :goto_0
 
-    .line 704
     :cond_0
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAnonymizedAddress()Ljava/lang/String;
 
@@ -1174,7 +1107,6 @@
 
     monitor-enter p0
 
-    .line 1179
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     :try_end_0
@@ -1195,7 +1127,6 @@
 .method public final getBluetoothHeadset()Z
     .locals 5
 
-    .line 979
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
@@ -1204,7 +1135,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 981
     iget-object v2, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v2}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
@@ -1224,7 +1154,6 @@
     :cond_0
     move v0, v1
 
-    .line 988
     :goto_0
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -1241,7 +1170,6 @@
 .method public getHeadsetAudioDevice()Landroid/media/AudioDeviceAttributes;
     .locals 0
 
-    .line 638
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-nez p0, :cond_0
@@ -1250,7 +1178,6 @@
 
     return-object p0
 
-    .line 641
     :cond_0
     invoke-static {p0}, Lcom/android/server/audio/BtHelper;->btHeadsetDeviceToAudioDevice(Landroid/bluetooth/BluetoothDevice;)Landroid/media/AudioDeviceAttributes;
 
@@ -1264,7 +1191,6 @@
 
     monitor-enter p0
 
-    .line 1175
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mLeAudio:Landroid/bluetooth/BluetoothLeAudio;
     :try_end_0
@@ -1291,7 +1217,6 @@
 
     return v0
 
-    .line 679
     :cond_0
     invoke-static {p1}, Lcom/android/server/audio/BtHelper;->btHeadsetDeviceToAudioDevice(Landroid/bluetooth/BluetoothDevice;)Landroid/media/AudioDeviceAttributes;
 
@@ -1301,7 +1226,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 682
     iget-object v3, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v3, v1, p2, p1}, Lcom/android/server/audio/AudioDeviceBroker;->handleDeviceConnection(Landroid/media/AudioDeviceAttributes;ZLandroid/bluetooth/BluetoothDevice;)Z
@@ -1319,7 +1243,6 @@
 
     const/16 v5, 0x10
 
-    .line 684
     filled-new-array {v5, v3, v4}, [I
 
     move-result-object v3
@@ -1333,15 +1256,12 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 689
     aget v6, v3, v5
 
-    .line 690
     iget-object v7, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     new-instance v8, Landroid/media/AudioDeviceAttributes;
 
-    .line 691
     invoke-virtual {v1}, Landroid/media/AudioDeviceAttributes;->getAddress()Ljava/lang/String;
 
     move-result-object v9
@@ -1352,7 +1272,6 @@
 
     invoke-direct {v8, v6, v9, v10}, Landroid/media/AudioDeviceAttributes;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 690
     invoke-virtual {v7, v8, p2, p1}, Lcom/android/server/audio/AudioDeviceBroker;->handleDeviceConnection(Landroid/media/AudioDeviceAttributes;ZLandroid/bluetooth/BluetoothDevice;)Z
 
     move-result v6
@@ -1366,13 +1285,11 @@
     :cond_2
     move v3, v4
 
-    .line 696
     :goto_1
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     new-instance v4, Landroid/media/AudioDeviceAttributes;
 
-    .line 697
     invoke-virtual {v1}, Landroid/media/AudioDeviceAttributes;->getAddress()Ljava/lang/String;
 
     move-result-object v5
@@ -1385,7 +1302,6 @@
 
     invoke-direct {v4, v6, v5, v1}, Landroid/media/AudioDeviceAttributes;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 696
     invoke-virtual {p0, v4, p2, p1}, Lcom/android/server/audio/AudioDeviceBroker;->handleDeviceConnection(Landroid/media/AudioDeviceAttributes;ZLandroid/bluetooth/BluetoothDevice;)Z
 
     move-result p0
@@ -1408,7 +1324,6 @@
 
     monitor-enter p0
 
-    .line 417
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
@@ -1422,7 +1337,6 @@
 
     goto :goto_0
 
-    .line 420
     :cond_0
     invoke-virtual {v0, v2}, Landroid/bluetooth/BluetoothHeadset;->getAudioState(Landroid/bluetooth/BluetoothDevice;)I
 
@@ -1441,7 +1355,6 @@
 
     return v1
 
-    .line 418
     :cond_2
     :goto_0
     monitor-exit p0
@@ -1461,7 +1374,6 @@
 
     monitor-enter p0
 
-    .line 1127
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
@@ -1473,7 +1385,6 @@
 
     const/4 v3, 0x3
 
-    .line 1128
     filled-new-array {v2, v1, v3}, [I
 
     move-result-object v2
@@ -1482,14 +1393,12 @@
 
     move-result-object v0
 
-    .line 1132
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1133
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1498,12 +1407,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1134
     monitor-exit p0
 
     return v2
 
-    .line 1136
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
@@ -1522,7 +1429,6 @@
 
     const-string v1, "AS.BtHelper"
 
-    .line 1139
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1549,12 +1455,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1140
     monitor-exit p0
 
     return v2
 
-    .line 1144
     :cond_1
     monitor-exit p0
 
@@ -1573,13 +1477,11 @@
 
     monitor-enter p0
 
-    .line 1185
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz v0, :cond_0
 
-    .line 1186
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getVolumeControlSupport()Z
 
     move-result v0
@@ -1595,7 +1497,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1185
     :goto_0
     monitor-exit p0
 
@@ -1614,7 +1515,6 @@
 
     monitor-enter p0
 
-    .line 1148
     :try_start_0
     iget v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
     :try_end_0
@@ -1647,7 +1547,6 @@
 .method public isWatchOrBudsWearingOff()Z
     .locals 3
 
-    .line 1160
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     const/4 v1, 0x0
@@ -1656,7 +1555,6 @@
 
     return v1
 
-    .line 1164
     :cond_0
     iget-object v2, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
@@ -1668,7 +1566,6 @@
 
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 1165
     invoke-static {p0}, Lcom/samsung/android/server/audio/utils/BtUtils;->isBudsWearingOff(Landroid/bluetooth/BluetoothDevice;)Z
 
     move-result p0
@@ -1687,7 +1584,6 @@
 
     monitor-enter p0
 
-    .line 229
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -1704,7 +1600,6 @@
     :cond_0
     const/16 v0, 0xa
 
-    .line 231
     :goto_0
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -1716,7 +1611,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 232
     monitor-exit p0
 
     return-void
@@ -1734,7 +1628,6 @@
 
     monitor-enter p0
 
-    .line 493
     :try_start_0
     iget v0, p0, Lcom/android/server/audio/BtHelper;->mScoConnectionState:I
     :try_end_0
@@ -1742,12 +1635,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 494
     monitor-exit p0
 
     return-void
 
-    .line 496
     :cond_0
     :try_start_1
     new-instance v0, Landroid/content/Intent;
@@ -1758,25 +1649,20 @@
 
     const-string v1, "android.media.extra.SCO_AUDIO_STATE"
 
-    .line 497
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v1, "android.media.extra.SCO_AUDIO_PREVIOUS_STATE"
 
-    .line 498
     iget v2, p0, Lcom/android/server/audio/BtHelper;->mScoConnectionState:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 500
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->sendStickyBroadcastToAll(Landroid/content/Intent;)V
 
-    .line 501
     iput p1, p0, Lcom/android/server/audio/BtHelper;->mScoConnectionState:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 502
     monitor-exit p0
 
     return-void
@@ -1798,7 +1684,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 556
     :try_start_0
     check-cast p2, Landroid/bluetooth/BluetoothHeadset;
 
@@ -1806,7 +1691,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 557
     monitor-exit p0
 
     return-void
@@ -1821,7 +1705,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 560
     :try_start_1
     move-object v1, p2
 
@@ -1836,7 +1719,6 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 562
     move-object v1, p2
 
     check-cast v1, Landroid/bluetooth/BluetoothHearingAid;
@@ -1850,7 +1732,6 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 564
     move-object v1, p2
 
     check-cast v1, Landroid/bluetooth/BluetoothLeAudio;
@@ -1864,19 +1745,16 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 566
     check-cast p2, Landroid/bluetooth/BluetoothLeBroadcast;
 
     iput-object p2, p0, Lcom/android/server/audio/BtHelper;->mLeBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 567
     monitor-exit p0
 
     return-void
 
-    .line 569
     :cond_4
     :goto_0
     :try_start_2
@@ -1884,7 +1762,6 @@
 
     move-result-object v1
 
-    .line 570
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1893,7 +1770,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 571
     monitor-exit p0
 
     return-void
@@ -1901,7 +1777,6 @@
     :cond_5
     const/4 v2, 0x0
 
-    .line 573
     :try_start_3
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1909,7 +1784,6 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 574
     invoke-interface {p2, v1}, Landroid/bluetooth/BluetoothProfile;->getConnectionState(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result p2
@@ -1918,7 +1792,6 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 575
     iget-object p2, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     new-instance v0, Lcom/android/server/audio/AudioDeviceBroker$BtDeviceChangedData;
@@ -1935,7 +1808,6 @@
 
     goto :goto_1
 
-    .line 580
     :cond_6
     iget-object p2, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -1953,7 +1825,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 585
     :goto_1
     monitor-exit p0
 
@@ -1995,7 +1866,6 @@
     :try_start_0
     const-string v0, "AS.BtHelper"
 
-    .line 547
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2004,7 +1874,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 548
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfile;->getProfileName(I)Ljava/lang/String;
 
     move-result-object p1
@@ -2015,24 +1884,20 @@
 
     move-result-object p1
 
-    .line 547
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 531
     :cond_0
     iput-object v1, p0, Lcom/android/server/audio/BtHelper;->mLeAudio:Landroid/bluetooth/BluetoothLeAudio;
 
     goto :goto_0
 
-    .line 528
     :cond_1
     iput-object v1, p0, Lcom/android/server/audio/BtHelper;->mHearingAid:Landroid/bluetooth/BluetoothHearingAid;
 
     goto :goto_0
 
-    .line 535
     :cond_2
     iput-object v1, p0, Lcom/android/server/audio/BtHelper;->mLeBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
@@ -2041,7 +1906,6 @@
     :cond_3
     const-string v0, "AS.BtHelper"
 
-    .line 541
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2050,7 +1914,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 542
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfile;->getProfileName(I)Ljava/lang/String;
 
     move-result-object p1
@@ -2061,18 +1924,15 @@
 
     move-result-object p1
 
-    .line 541
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 525
     :cond_4
     iput-object v1, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 551
     :goto_0
     monitor-exit p0
 
@@ -2091,21 +1951,17 @@
 
     monitor-enter p0
 
-    .line 591
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v0}, Lcom/android/server/audio/AudioDeviceBroker;->handleCancelFailureToConnectToBtHeadsetService()V
 
-    .line 592
     iput-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
-    .line 593
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object p1
 
-    .line 594
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -2114,12 +1970,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 596
     invoke-virtual {p1, v1}, Landroid/bluetooth/BluetoothAdapter;->getActiveDevices(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 598
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2143,10 +1997,8 @@
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->setBtScoActiveDevice(Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 600
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->checkScoAudioState()V
 
-    .line 601
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2157,12 +2009,10 @@
 
     if-eq p1, v0, :cond_2
 
-    .line 603
     monitor-exit p0
 
     return-void
 
-    .line 606
     :cond_2
     :try_start_1
     iget-object v3, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
@@ -2179,7 +2029,6 @@
 
     goto :goto_1
 
-    .line 617
     :cond_3
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
@@ -2191,12 +2040,10 @@
 
     const/4 v0, 0x5
 
-    .line 621
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_2
 
-    .line 609
     :cond_4
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
@@ -2208,7 +2055,6 @@
 
     const/4 v0, 0x3
 
-    .line 613
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_2
@@ -2221,15 +2067,12 @@
     :goto_2
     if-nez p1, :cond_7
 
-    .line 627
     iput v2, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 628
     invoke-virtual {p0, v2}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 630
     :cond_7
     monitor-exit p0
 
@@ -2264,7 +2107,6 @@
 
     goto/16 :goto_2
 
-    .line 343
     :pswitch_0
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
@@ -2274,12 +2116,10 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 346
     iput v4, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_0
 
-    .line 347
     :cond_0
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -2291,7 +2131,6 @@
 
     move v6, v5
 
-    .line 351
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
@@ -2302,7 +2141,6 @@
 
     goto :goto_3
 
-    .line 393
     :pswitch_1
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
@@ -2312,30 +2150,25 @@
 
     if-eq p1, v0, :cond_5
 
-    .line 396
     iput v4, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_2
 
-    .line 355
     :pswitch_2
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {p1}, Lcom/android/server/audio/AudioDeviceBroker;->muteRingtoneDuringVibration()V
 
-    .line 357
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {p1, v6, v2}, Lcom/android/server/audio/AudioDeviceBroker;->setBluetoothScoOn(ZLjava/lang/String;)V
 
-    .line 360
     sget-boolean p1, Lcom/samsung/android/audio/Rune;->SEC_AUDIO_REMOTE_MIC:Z
 
     if-eqz p1, :cond_2
 
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
-    .line 361
     invoke-virtual {p1}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2348,14 +2181,12 @@
 
     const/4 v1, -0x2
 
-    .line 360
     invoke-static {p1, v0, v6, v1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p1
 
     if-ne p1, v4, :cond_2
 
-    .line 364
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.samsung.media.action.ACTION_AUDIO_REMOTEMIC_SCO_RESUME"
@@ -2364,26 +2195,21 @@
 
     const/high16 v0, 0x4000000
 
-    .line 366
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 367
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->sendStickyBroadcastToAll(Landroid/content/Intent;)V
 
     const-string p1, "AS.BtHelper"
 
     const-string v0, "broadcast remote mic resume intent"
 
-    .line 368
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_2
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     if-ne p1, v5, :cond_3
 
-    .line 378
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-eqz p1, :cond_3
@@ -2394,19 +2220,16 @@
 
     iget v1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
-    .line 379
     invoke-static {p1, v0, v1}, Lcom/android/server/audio/BtHelper;->connectBluetoothScoAudioHelper(Landroid/bluetooth/BluetoothHeadset;Landroid/bluetooth/BluetoothDevice;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 381
     iput v3, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_4
 
-    .line 387
     :cond_3
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
@@ -2417,7 +2240,6 @@
     :cond_4
     move v5, v6
 
-    .line 390
     :goto_1
     iput v6, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
@@ -2435,10 +2257,8 @@
     :goto_4
     if-eqz v5, :cond_6
 
-    .line 403
     invoke-virtual {p0, v4}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
-    .line 406
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.media.SCO_AUDIO_STATE_CHANGED"
@@ -2447,10 +2267,8 @@
 
     const-string v0, "android.media.extra.SCO_AUDIO_STATE"
 
-    .line 407
     invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 408
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->sendStickyBroadcastToAll(Landroid/content/Intent;)V
 
     :cond_6
@@ -2473,17 +2291,13 @@
 
     const/4 v0, -0x1
 
-    .line 197
     :try_start_0
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoConnectionState:I
 
-    .line 198
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->resetBluetoothSco()V
 
-    .line 199
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->getBluetoothHeadset()Z
 
-    .line 203
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.media.SCO_AUDIO_STATE_CHANGED"
@@ -2494,20 +2308,16 @@
 
     const/4 v2, 0x0
 
-    .line 204
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 206
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->sendStickyBroadcastToAll(Landroid/content/Intent;)V
 
-    .line 208
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 210
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
@@ -2520,7 +2330,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
-    .line 212
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
@@ -2533,7 +2342,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
-    .line 214
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
@@ -2546,7 +2354,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
-    .line 217
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1}, Lcom/android/server/audio/AudioDeviceBroker;->getContext()Landroid/content/Context;
@@ -2559,7 +2366,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
-    .line 223
     :cond_0
     const-class v0, Lcom/android/server/vibrator/VibratorManagerInternal;
 
@@ -2573,7 +2379,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 226
     monitor-exit p0
 
     return-void
@@ -2591,7 +2396,6 @@
 
     monitor-enter p0
 
-    .line 301
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -2599,7 +2403,6 @@
 
     const-string v1, "AS.BtHelper"
 
-    .line 303
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2626,7 +2429,6 @@
 
     const-string v1, "android.bluetooth.headset.profile.action.ACTIVE_DEVICE_CHANGED"
 
-    .line 304
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2635,7 +2437,6 @@
 
     const-string v0, "android.bluetooth.device.extra.DEVICE"
 
-    .line 305
     const-class v1, Landroid/bluetooth/BluetoothDevice;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -2644,7 +2445,6 @@
 
     check-cast p1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 306
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->setBtScoActiveDevice(Landroid/bluetooth/BluetoothDevice;)V
 
     goto/16 :goto_0
@@ -2652,7 +2452,6 @@
     :cond_0
     const-string v1, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
 
-    .line 310
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2663,14 +2462,12 @@
 
     const/4 v1, -0x1
 
-    .line 311
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v1, "AS.BtHelper"
 
-    .line 312
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2687,7 +2484,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1, v0}, Lcom/android/server/audio/AudioDeviceBroker;->postScoAudioStateChanged(I)V
@@ -2700,14 +2496,12 @@
 
     const/4 v1, 0x7
 
-    .line 315
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     mul-int/lit8 p1, p1, 0xa
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     const-string v1, "BtHelper.receiveBtEvent"
@@ -2720,7 +2514,6 @@
 
     const-string v0, "AS.BtHelper"
 
-    .line 318
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2746,7 +2539,6 @@
     :cond_1
     const-string v1, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
 
-    .line 320
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2757,14 +2549,12 @@
 
     const/4 v1, 0x0
 
-    .line 321
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "android.bluetooth.device.extra.DEVICE_TYPE"
 
-    .line 323
     invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
@@ -2779,19 +2569,16 @@
 
     const-string v0, "android.bluetooth.device.extra.DEVICE"
 
-    .line 325
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 326
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->setBtScoActiveDevice(Landroid/bluetooth/BluetoothDevice;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 329
     :cond_2
     :goto_0
     monitor-exit p0
@@ -2809,7 +2596,6 @@
 .method public final requestScoState(II)Z
     .locals 8
 
-    .line 807
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->checkScoAudioState()V
 
     const/16 v0, 0xc
@@ -2830,17 +2616,14 @@
 
     if-ne p1, v0, :cond_b
 
-    .line 811
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     const/4 v0, 0x2
 
     if-eq p1, v4, :cond_0
 
-    .line 812
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
-    .line 814
     :cond_0
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
@@ -2854,7 +2637,6 @@
 
     if-eq p1, v2, :cond_1
 
-    .line 881
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2877,33 +2659,27 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
 
-    .line 862
     :cond_1
     iput v6, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto/16 :goto_0
 
-    .line 865
     :cond_2
     iput v4, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 866
     invoke-virtual {p0, v6}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     goto/16 :goto_0
 
-    .line 878
     :cond_3
     invoke-virtual {p0, v6}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     goto/16 :goto_0
 
-    .line 816
     :cond_4
     iput p2, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
@@ -2911,18 +2687,14 @@
 
     if-ne p2, p1, :cond_6
 
-    .line 818
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
-    .line 819
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz p1, :cond_6
 
-    .line 820
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
-    .line 821
     invoke-virtual {p1}, Lcom/android/server/audio/AudioDeviceBroker;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -2937,7 +2709,6 @@
 
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 823
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
@@ -2948,7 +2719,6 @@
 
     move-result-object p2
 
-    .line 820
     invoke-static {p1, p2, v7}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p1
@@ -2959,29 +2729,24 @@
 
     if-gez p1, :cond_6
 
-    .line 826
     :cond_5
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
-    .line 830
     :cond_6
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-nez p1, :cond_8
 
-    .line 831
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->getBluetoothHeadset()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 832
     iput v6, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto/16 :goto_0
 
-    .line 834
     :cond_7
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3001,18 +2766,15 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
 
-    .line 842
     :cond_8
     iget-object p2, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-nez p2, :cond_9
 
-    .line 843
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3031,12 +2793,10 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 845
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
 
-    .line 849
     :cond_9
     iget v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
@@ -3046,12 +2806,10 @@
 
     if-eqz p1, :cond_a
 
-    .line 851
     iput v4, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto/16 :goto_0
 
-    .line 853
     :cond_a
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3063,7 +2821,6 @@
 
     iget-object p2, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 854
     invoke-virtual {p0, p2}, Lcom/android/server/audio/BtHelper;->getAnonymizedAddress(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object p2
@@ -3082,10 +2839,8 @@
 
     move-result-object p1
 
-    .line 853
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 856
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
@@ -3095,14 +2850,12 @@
 
     if-ne p1, v0, :cond_12
 
-    .line 887
     iget p1, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     if-eq p1, v6, :cond_11
 
     if-eq p1, v4, :cond_c
 
-    .line 922
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3125,30 +2878,25 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 924
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
 
-    .line 889
     :cond_c
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
 
     if-nez p1, :cond_e
 
-    .line 890
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->getBluetoothHeadset()Z
 
     move-result p1
 
     if-eqz p1, :cond_d
 
-    .line 891
     iput v3, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_0
 
-    .line 893
     :cond_d
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3168,29 +2916,23 @@
 
     invoke-static {v5, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 895
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 896
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     return v7
 
-    .line 902
     :cond_e
     iget-object p2, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-nez p2, :cond_f
 
-    .line 903
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 904
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     goto :goto_0
 
-    .line 908
     :cond_f
     iget v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioMode:I
 
@@ -3200,25 +2942,20 @@
 
     if-eqz p1, :cond_10
 
-    .line 910
     iput v2, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
     goto :goto_0
 
-    .line 912
     :cond_10
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 913
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     goto :goto_0
 
-    .line 918
     :cond_11
     iput v7, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 919
     invoke-virtual {p0, v7}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
     :cond_12
@@ -3233,24 +2970,19 @@
 
     const/4 v0, 0x0
 
-    .line 507
     :try_start_0
     iput v0, p0, Lcom/android/server/audio/BtHelper;->mScoAudioState:I
 
-    .line 508
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->broadcastScoConnectionState(I)V
 
-    .line 509
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1, v0}, Lcom/android/server/audio/AudioDeviceBroker;->clearA2dpSuspended(Z)V
 
-    .line 510
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v1, v0}, Lcom/android/server/audio/AudioDeviceBroker;->clearLeAudioSuspended(Z)V
 
-    .line 511
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     const-string/jumbo v2, "resetBluetoothSco"
@@ -3259,7 +2991,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 512
     monitor-exit p0
 
     return-void
@@ -3277,15 +3008,12 @@
 
     const/high16 v0, 0x10000000
 
-    .line 934
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 935
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 937
     :try_start_0
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
@@ -3299,7 +3027,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 939
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -3309,7 +3036,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 940
     throw p0
 .end method
 
@@ -3318,13 +3044,11 @@
 
     monitor-enter p0
 
-    .line 244
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
 
     if-nez v0, :cond_0
 
-    .line 246
     sget-object p1, Lcom/android/server/audio/AudioService;->sVolumeLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v0, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -3335,29 +3059,24 @@
 
     const-string v1, "AS.BtHelper"
 
-    .line 247
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object v0
 
-    .line 246
     invoke-virtual {p1, v0}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 249
     monitor-exit p0
 
     return-void
 
-    .line 251
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/android/server/audio/BtHelper;->mAvrcpAbsVolSupported:Z
 
     if-nez v0, :cond_1
 
-    .line 252
     sget-object p1, Lcom/android/server/audio/AudioService;->sVolumeLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v0, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -3368,17 +3087,14 @@
 
     const-string v1, "AS.BtHelper"
 
-    .line 253
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object v0
 
-    .line 252
     invoke-virtual {p1, v0}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 254
     monitor-exit p0
 
     return-void
@@ -3387,7 +3103,6 @@
     :try_start_2
     const-string v0, "AS.BtHelper"
 
-    .line 257
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3404,7 +3119,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     sget-object v0, Lcom/android/server/audio/AudioService;->sVolumeLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/audio/AudioServiceEvents$VolumeEvent;
@@ -3415,12 +3129,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 262
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->setAvrcpAbsoluteVolumeIndexExt(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 270
     monitor-exit p0
 
     return-void
@@ -3436,14 +3148,12 @@
 .method public final setAvrcpAbsoluteVolumeIndexExt(I)V
     .locals 5
 
-    .line 1202
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {v0}, Lcom/android/server/audio/AudioDeviceBroker;->getA2dpDevices()Landroid/util/ArrayMap;
 
     move-result-object v0
 
-    .line 1203
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
@@ -3454,10 +3164,8 @@
 
     const-string v1, "No a2dp volume info"
 
-    .line 1204
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1205
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
 
     sget-object v0, Lcom/samsung/android/server/audio/DualA2dpVolumeManager;->FINE_VOLUME_TABLE:[F
@@ -3473,7 +3181,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1209
     :goto_0
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
 
@@ -3481,14 +3188,12 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 1210
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 1211
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3499,7 +3204,6 @@
 
     move-result v2
 
-    .line 1212
     iget-object v3, p0, Lcom/android/server/audio/BtHelper;->mA2dp:Landroid/bluetooth/BluetoothA2dp;
 
     sget-object v4, Lcom/samsung/android/server/audio/DualA2dpVolumeManager;->FINE_VOLUME_TABLE:[F
@@ -3521,13 +3225,11 @@
 
     monitor-enter p0
 
-    .line 239
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/audio/BtHelper;->mAvrcpAbsVolSupported:Z
 
     const-string v0, "AS.BtHelper"
 
-    .line 240
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3546,7 +3248,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 241
     monitor-exit p0
 
     return-void
@@ -3564,13 +3265,11 @@
 
     monitor-enter p0
 
-    .line 1192
     :try_start_0
     iput p1, p0, Lcom/android/server/audio/BtHelper;->mIsBtOffloadEnabled:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1193
     monitor-exit p0
 
     return-void
@@ -3586,7 +3285,6 @@
 .method public final setBtScoActiveDevice(Landroid/bluetooth/BluetoothDevice;)V
     .locals 5
 
-    .line 711
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3607,7 +3305,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 712
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->getAnonymizedAddress(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object v1
@@ -3620,13 +3317,10 @@
 
     const-string v1, "AS.BtHelper"
 
-    .line 711
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 713
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
-    .line 714
     invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -3638,14 +3332,12 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 717
     invoke-virtual {p0, v0, v2}, Lcom/android/server/audio/BtHelper;->handleBtScoActiveDeviceChange(Landroid/bluetooth/BluetoothDevice;Z)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 718
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3654,7 +3346,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 719
     invoke-virtual {p0, v0}, Lcom/android/server/audio/BtHelper;->getAnonymizedAddress(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object v4
@@ -3665,20 +3356,17 @@
 
     move-result-object v3
 
-    .line 718
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const/4 v3, 0x1
 
-    .line 721
     invoke-virtual {p0, p1, v3}, Lcom/android/server/audio/BtHelper;->handleBtScoActiveDeviceChange(Landroid/bluetooth/BluetoothDevice;Z)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 722
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3687,7 +3375,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 723
     invoke-virtual {p0, p1}, Lcom/android/server/audio/BtHelper;->getAnonymizedAddress(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object p1
@@ -3698,50 +3385,41 @@
 
     move-result-object p1
 
-    .line 722
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 727
     :cond_2
     iput-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-nez p1, :cond_3
 
-    .line 729
     invoke-virtual {p0}, Lcom/android/server/audio/BtHelper;->resetBluetoothSco()V
 
     :cond_3
     if-nez v0, :cond_4
 
-    .line 732
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz p1, :cond_4
 
-    .line 734
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     invoke-virtual {p1}, Lcom/android/server/audio/AudioDeviceBroker;->resetBtScoOnByApp()V
 
-    .line 737
     :cond_4
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mBluetoothHeadsetDevice:Landroid/bluetooth/BluetoothDevice;
 
     if-eqz p1, :cond_5
 
-    .line 738
     invoke-static {}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->isSplitSoundEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 739
     invoke-static {v2}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->setSplitSoundEnabled(Z)V
 
-    .line 740
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3750,7 +3428,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 742
     invoke-static {}, Lcom/samsung/android/server/audio/ScreenSharingHelper;->isSplitSoundEnabled()Z
 
     move-result v0
@@ -3761,10 +3438,8 @@
 
     move-result-object p1
 
-    .line 740
     invoke-static {p1}, Lcom/samsung/android/media/SemAudioSystem;->setPolicyParameters(Ljava/lang/String;)I
 
-    .line 743
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
 
     const/16 p1, 0x20
@@ -3780,7 +3455,6 @@
 
     monitor-enter p0
 
-    .line 464
     :try_start_0
     iget-object v0, p0, Lcom/android/server/audio/BtHelper;->mHearingAid:Landroid/bluetooth/BluetoothHearingAid;
 
@@ -3790,17 +3464,14 @@
 
     const-string/jumbo p2, "setHearingAidVolume: null mHearingAid"
 
-    .line 466
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 468
     monitor-exit p0
 
     return-void
 
-    .line 471
     :cond_0
     :try_start_1
     div-int/lit8 v0, p1, 0xa
@@ -3822,7 +3493,6 @@
     :cond_1
     const-string v0, "AS.BtHelper"
 
-    .line 477
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3847,7 +3517,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 482
     sget-object p3, Lcom/android/server/audio/AudioService;->sVolumeLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v0, Lcom/android/server/audio/AudioServiceEvents$VolumeEvent;
@@ -3860,7 +3529,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 486
     :cond_2
     :try_start_2
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mHearingAid:Landroid/bluetooth/BluetoothHearingAid;
@@ -3880,12 +3548,10 @@
 
     const-string p3, "Exception while setting hearing aid volume"
 
-    .line 488
     invoke-static {p2, p3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 490
     :goto_0
     monitor-exit p0
 
@@ -3904,7 +3570,6 @@
 
     monitor-enter p0
 
-    .line 440
     :try_start_0
     iget-object p3, p0, Lcom/android/server/audio/BtHelper;->mLeAudio:Landroid/bluetooth/BluetoothLeAudio;
 
@@ -3914,12 +3579,10 @@
 
     const-string/jumbo p2, "setLeAudioVolume: null mLeAudio"
 
-    .line 442
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 444
     monitor-exit p0
 
     return-void
@@ -3935,7 +3598,6 @@
 
     div-double/2addr v0, v2
 
-    .line 447
     :try_start_1
     invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
 
@@ -3945,7 +3607,6 @@
 
     const-string v0, "AS.BtHelper"
 
-    .line 450
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3968,7 +3629,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
     sget-object v0, Lcom/android/server/audio/AudioService;->sVolumeLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/audio/AudioServiceEvents$VolumeEvent;
@@ -3981,7 +3641,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 456
     :try_start_2
     iget-object p1, p0, Lcom/android/server/audio/BtHelper;->mLeAudio:Landroid/bluetooth/BluetoothLeAudio;
 
@@ -4000,12 +3659,10 @@
 
     const-string p3, "Exception while setting LE volume"
 
-    .line 458
     invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 460
     :goto_0
     monitor-exit p0
 
@@ -4024,7 +3681,6 @@
 
     monitor-enter p0
 
-    .line 428
     :try_start_0
     sget-object v0, Lcom/android/server/audio/AudioService;->sDeviceLogger:Lcom/android/server/utils/EventLogger;
 
@@ -4036,7 +3692,6 @@
 
     const/16 p2, 0xc
 
-    .line 429
     invoke-virtual {p0, p2, p1}, Lcom/android/server/audio/BtHelper;->requestScoState(II)Z
 
     move-result p1
@@ -4060,7 +3715,6 @@
 
     monitor-enter p0
 
-    .line 435
     :try_start_0
     sget-object v0, Lcom/android/server/audio/AudioService;->sDeviceLogger:Lcom/android/server/utils/EventLogger;
 
@@ -4074,7 +3728,6 @@
 
     const/4 v0, 0x0
 
-    .line 436
     invoke-virtual {p0, p1, v0}, Lcom/android/server/audio/BtHelper;->requestScoState(II)Z
 
     move-result p1
@@ -4096,7 +3749,6 @@
 .method public updateBtAppList(Landroid/content/Context;)V
     .locals 9
 
-    .line 1257
     sget-object v0, Lcom/samsung/android/server/audio/utils/BtUtils;->sAuracastLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/utils/EventLogger$StringEvent;
@@ -4107,26 +3759,21 @@
 
     const-string v2, "AS.BtHelper"
 
-    .line 1258
     invoke-virtual {v1, v2}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object v1
 
-    .line 1257
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1260
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/BtHelper;->mLeBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
 
     if-eqz v1, :cond_3
 
-    .line 1261
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothLeBroadcast;->getAuracastDbVersion()J
 
     move-result-wide v3
 
-    .line 1262
     sget-wide v5, Lcom/samsung/android/server/audio/utils/BtUtils;->sBtAppPackageListVersion:J
 
     cmp-long v1, v3, v5
@@ -4146,24 +3793,20 @@
 
     if-nez p0, :cond_3
 
-    .line 1274
     new-instance p0, Lcom/android/server/utils/EventLogger$StringEvent;
 
     const-string/jumbo p1, "updateBtAppList skipped version update : DB version is 0"
 
     invoke-direct {p0, p1}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 1275
     invoke-virtual {p0, v2}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object p0
 
-    .line 1274
     invoke-virtual {v0, p0}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
     goto :goto_1
 
-    .line 1263
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/server/audio/BtHelper;->mLeBroadcast:Landroid/bluetooth/BluetoothLeBroadcast;
@@ -4174,7 +3817,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1265
     new-instance v1, Lcom/android/server/utils/EventLogger$StringEvent;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -4191,7 +3833,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1267
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v6
@@ -4208,15 +3849,12 @@
 
     move-result-object v1
 
-    .line 1265
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1268
     invoke-static {p1, p0, v3, v4}, Lcom/samsung/android/server/audio/utils/BtUtils;->updateBtAppList(Landroid/content/Context;Ljava/util/List;J)V
 
     goto :goto_1
 
-    .line 1270
     :cond_2
     new-instance p0, Lcom/android/server/utils/EventLogger$StringEvent;
 
@@ -4224,12 +3862,10 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/utils/EventLogger$StringEvent;-><init>(Ljava/lang/String;)V
 
-    .line 1271
     invoke-virtual {p0, v2}, Lcom/android/server/utils/EventLogger$Event;->printLog(Ljava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object p0
 
-    .line 1270
     invoke-virtual {v0, p0}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -4239,7 +3875,6 @@
     :catch_0
     move-exception p0
 
-    .line 1279
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3

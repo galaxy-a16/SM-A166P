@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;Lcom/android/server/ibs/sleepmode/SleepModePolicyController;)V
     .locals 0
 
-    .line 976
     iput-object p1, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iput-object p2, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->val$this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -35,10 +34,8 @@
 
     const-string v1, "Wifi cancelAction"
 
-    .line 992
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 993
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     invoke-static {v0}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->-$$Nest$fgetmContext(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;)Landroid/content/Context;
@@ -55,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 994
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     invoke-static {v0}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->-$$Nest$fgetmContext(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;)Landroid/content/Context;
@@ -72,7 +68,6 @@
 
     invoke-static {v0, v3, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 996
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object v0, v0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -85,7 +80,6 @@
 
     invoke-virtual {v0, v3}, Lcom/android/server/ibs/sleepmode/SleepModeLogger;->add(Ljava/lang/String;)V
 
-    .line 998
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
@@ -105,10 +99,8 @@
 
     const-string v1, "Wifi triggerAction"
 
-    .line 979
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 980
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     invoke-static {v0}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->-$$Nest$fgetmContext(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;)Landroid/content/Context;
@@ -131,7 +123,6 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 982
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     invoke-static {v0}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->-$$Nest$fgetmContext(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;)Landroid/content/Context;
@@ -144,7 +135,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 984
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     invoke-static {v0}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->-$$Nest$fgetmContext(Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;)Landroid/content/Context;
@@ -155,7 +145,6 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/server/ibs/sleepmode/SharePrefUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 985
     iget-object v0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object v0, v0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;
@@ -168,7 +157,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/ibs/sleepmode/SleepModePolicyController;->-$$Nest$msetSysState(Lcom/android/server/ibs/sleepmode/SleepModePolicyController;I)V
 
-    .line 986
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction$3;->this$1:Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;
 
     iget-object p0, p0, Lcom/android/server/ibs/sleepmode/SleepModePolicyController$SleepModeAction;->this$0:Lcom/android/server/ibs/sleepmode/SleepModePolicyController;

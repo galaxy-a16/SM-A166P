@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerService;)V
     .locals 0
 
-    .line 2257
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +23,6 @@
 .method public onSessionActiveChanged(Lcom/android/server/pm/PackageInstallerSession;Z)V
     .locals 1
 
-    .line 2264
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmCallbacks(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -43,7 +41,6 @@
 .method public onSessionBadgingChanged(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 2
 
-    .line 2259
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmCallbacks(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -56,7 +53,6 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->-$$Nest$mnotifySessionBadgingChanged(Lcom/android/server/pm/PackageInstallerService$Callbacks;II)V
 
-    .line 2260
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmSettingsWriteRequest(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/utils/RequestThrottle;
@@ -71,10 +67,8 @@
 .method public onSessionChanged(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 2
 
-    .line 2274
     invoke-virtual {p1}, Lcom/android/server/pm/PackageInstallerSession;->markUpdated()V
 
-    .line 2275
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmSettingsWriteRequest(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/utils/RequestThrottle;
@@ -83,7 +77,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/pm/utils/RequestThrottle;->schedule()V
 
-    .line 2279
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmOkToSendBroadcasts(Lcom/android/server/pm/PackageInstallerService;)Z
@@ -104,21 +97,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 2282
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     const/4 v0, 0x0
 
     const/16 v1, 0x3e8
 
-    .line 2283
     invoke-virtual {p1, v0, v1}, Lcom/android/server/pm/PackageInstallerSession;->generateInfoForCaller(ZI)Landroid/content/pm/PackageInstaller$SessionInfo;
 
     move-result-object v0
 
     iget p1, p1, Lcom/android/server/pm/PackageInstallerSession;->userId:I
 
-    .line 2282
     invoke-static {p0, v0, p1}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$msendSessionUpdatedBroadcast(Lcom/android/server/pm/PackageInstallerService;Landroid/content/pm/PackageInstaller$SessionInfo;I)V
 
     :cond_0
@@ -128,7 +118,6 @@
 .method public onSessionFinished(Lcom/android/server/pm/PackageInstallerSession;Z)V
     .locals 3
 
-    .line 2289
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmCallbacks(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -141,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionFinished(IIZ)V
 
-    .line 2291
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmInstallHandler(Lcom/android/server/pm/PackageInstallerService;)Landroid/os/Handler;
@@ -160,7 +148,6 @@
 .method public onSessionPrepared(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 0
 
-    .line 2325
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmSettingsWriteRequest(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/utils/RequestThrottle;
@@ -175,7 +162,6 @@
 .method public onSessionProgressChanged(Lcom/android/server/pm/PackageInstallerSession;F)V
     .locals 1
 
-    .line 2269
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmCallbacks(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -194,7 +180,6 @@
 .method public onSessionSealedBlocking(Lcom/android/server/pm/PackageInstallerSession;)V
     .locals 0
 
-    .line 2332
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmSettingsWriteRequest(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/utils/RequestThrottle;

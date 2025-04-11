@@ -11,7 +11,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 1968
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -24,7 +23,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1969
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -47,7 +45,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1970
     iget-object p0, p0, Lcom/android/server/am/KillPolicyManager$SCPMReceiver;->this$0:Lcom/android/server/am/KillPolicyManager;
 
     invoke-virtual {p0}, Lcom/android/server/am/KillPolicyManager;->updateSCPMParametersFromDB()V

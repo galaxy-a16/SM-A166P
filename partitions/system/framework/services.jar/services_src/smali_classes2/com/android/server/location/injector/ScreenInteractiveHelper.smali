@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -29,7 +27,6 @@
 .method public final addListener(Lcom/android/server/location/injector/ScreenInteractiveHelper$ScreenInteractiveChangedListener;)V
     .locals 0
 
-    .line 52
     iget-object p0, p0, Lcom/android/server/location/injector/ScreenInteractiveHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -43,7 +40,6 @@
 .method public final notifyScreenInteractiveChanged(Z)V
     .locals 2
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,7 +58,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     iget-object p0, p0, Lcom/android/server/location/injector/ScreenInteractiveHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -82,7 +77,6 @@
 
     check-cast v0, Lcom/android/server/location/injector/ScreenInteractiveHelper$ScreenInteractiveChangedListener;
 
-    .line 68
     invoke-interface {v0, p1}, Lcom/android/server/location/injector/ScreenInteractiveHelper$ScreenInteractiveChangedListener;->onScreenInteractiveChanged(Z)V
 
     goto :goto_0
@@ -94,7 +88,6 @@
 .method public final removeListener(Lcom/android/server/location/injector/ScreenInteractiveHelper$ScreenInteractiveChangedListener;)V
     .locals 0
 
-    .line 59
     iget-object p0, p0, Lcom/android/server/location/injector/ScreenInteractiveHelper;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z

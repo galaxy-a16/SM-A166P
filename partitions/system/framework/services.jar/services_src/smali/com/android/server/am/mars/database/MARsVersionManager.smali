@@ -45,7 +45,6 @@
 
     const-string v1, "1020230413"
 
-    .line 219
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v2
@@ -110,7 +109,6 @@
 
     const-string v8, "337379600"
 
-    .line 229
     filled-new-array/range {v1 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
@@ -189,7 +187,6 @@
 
     const-string v3, "1"
 
-    .line 236
     filled-new-array {v0, v1, v2, v3, v3}, [Ljava/lang/String;
 
     move-result-object v1
@@ -200,7 +197,6 @@
 
     const-string v2, "8000"
 
-    .line 239
     filled-new-array {v1, v2}, [Ljava/lang/String;
 
     move-result-object v4
@@ -267,7 +263,6 @@
 
     sput-object v0, Lcom/android/server/am/mars/database/MARsVersionManager;->mCurrentImportantDefault:[[Ljava/lang/String;
 
-    .line 250
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -280,38 +275,32 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 247
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mMARsSettingsInfoList:Ljava/util/ArrayList;
 
-    .line 253
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mExcludeTargetList:Ljava/util/ArrayList;
 
-    .line 256
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mIsCurrentImportantList:Ljava/util/ArrayList;
 
-    .line 257
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mIsCurrentImportantMap:Landroid/util/ArrayMap;
 
-    .line 259
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -320,25 +309,20 @@
 
     const-wide/16 v0, 0x7d0
 
-    .line 262
     iput-wide v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mTrafficInterval:J
 
     const-wide/32 v0, 0xdbba0
 
-    .line 263
     iput-wide v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mUnusedTime:J
 
     const-wide/16 v0, 0x12c
 
-    .line 264
     iput-wide v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mTrafficAmount:J
 
     const-wide/16 v0, 0x0
 
-    .line 265
     iput-wide v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mNotifiUpdatedCount:J
 
-    .line 266
     iput-wide v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mApplicationSizeIncreased:J
 
     return-void
@@ -347,7 +331,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/database/MARsVersionManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/database/MARsVersionManager;-><init>()V
 
     return-void
@@ -356,7 +339,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/database/MARsVersionManager;
     .locals 1
 
-    .line 33
     invoke-static {}, Lcom/android/server/am/mars/database/MARsVersionManager$MARsVersionManagerHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/database/MARsVersionManager;
 
     move-result-object v0
@@ -371,14 +353,12 @@
 
     const-string v0, "##"
 
-    .line 571
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 572
     new-instance v0, Ljava/lang/String;
 
     invoke-static {}, Ljava/util/Base64;->getDecoder()Ljava/util/Base64$Decoder;
@@ -408,17 +388,14 @@
 .method public final convertListToMap(Ljava/util/ArrayList;)V
     .locals 4
 
-    .line 385
     iget-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mIsCurrentImportantMap:Landroid/util/ArrayMap;
 
     if-eqz v0, :cond_0
 
-    .line 386
     invoke-virtual {v0}, Landroid/util/ArrayMap;->clear()V
 
     const/4 v0, 0x0
 
-    .line 387
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -426,7 +403,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 388
     iget-object v1, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mIsCurrentImportantMap:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -464,7 +440,6 @@
 
     const-string/jumbo p1, "mIsCurrentImportantMap is null!"
 
-    .line 391
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -474,7 +449,6 @@
 .method public convertPolicyNumToName(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     if-nez p1, :cond_0
 
     const-string p0, "force"
@@ -544,7 +518,6 @@
 .method public final convertRestrictionTypeToName(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     if-eq p1, p0, :cond_5
@@ -609,7 +582,6 @@
 .method public getAdjustRestrictionFromDefaultValue()V
     .locals 1
 
-    .line 491
     invoke-static {}, Ljava/com/android/server/am/mars/database/MARsListManager;->getInstance()Ljava/com/android/server/am/mars/database/MARsListManager;
 
     move-result-object v0
@@ -618,7 +590,6 @@
 
     move-result-object v0
 
-    .line 492
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->setAdjustRestriction(Ljava/util/ArrayList;)V
 
     return-void
@@ -627,7 +598,6 @@
 .method public getExcludeTargetFromDefaultValue()V
     .locals 1
 
-    .line 473
     invoke-static {}, Ljava/com/android/server/am/mars/database/MARsListManager;->getInstance()Ljava/com/android/server/am/mars/database/MARsListManager;
 
     move-result-object v0
@@ -636,7 +606,6 @@
 
     move-result-object v0
 
-    .line 474
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->setAdjustTargetExcludePackage(Ljava/util/ArrayList;)V
 
     return-void
@@ -645,12 +614,10 @@
 .method public getIsCurrentImportantFromDefaultValue()V
     .locals 8
 
-    .line 478
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 479
     sget-object v1, Lcom/android/server/am/mars/database/MARsVersionManager;->mCurrentImportantDefault:[[Ljava/lang/String;
 
     array-length v2, v1
@@ -664,7 +631,6 @@
 
     aget-object v5, v1, v4
 
-    .line 480
     aget-object v6, v5, v3
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -673,26 +639,22 @@
 
     const/4 v7, 0x1
 
-    .line 481
     aget-object v5, v5, v7
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 483
     new-instance v7, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;
 
     invoke-direct {v7, p0, v6, v5}, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;-><init>(Lcom/android/server/am/mars/database/MARsVersionManager;II)V
 
-    .line 484
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 486
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->setAdjustTargetCurrentImportant(Ljava/util/ArrayList;)V
 
@@ -702,7 +664,6 @@
 .method public getMARsLocalVersionFromDefaultValue()Ljava/lang/String;
     .locals 7
 
-    .line 414
     sget-object p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mMARsSettingsInfoDefault:[[Ljava/lang/String;
 
     array-length v0, p0
@@ -718,7 +679,6 @@
 
     aget-object v4, p0, v3
 
-    .line 415
     aget-object v5, v4, v2
 
     const-string/jumbo v6, "marsversion"
@@ -731,7 +691,6 @@
 
     const/4 v1, 0x1
 
-    .line 416
     aget-object v1, v4, v1
 
     :cond_0
@@ -746,12 +705,10 @@
 .method public getMARsSettingsInfoFromDefaultValue()V
     .locals 8
 
-    .line 400
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 401
     sget-object v1, Lcom/android/server/am/mars/database/MARsVersionManager;->mMARsSettingsInfoDefault:[[Ljava/lang/String;
 
     array-length v2, v1
@@ -765,27 +722,22 @@
 
     aget-object v5, v1, v4
 
-    .line 402
     aget-object v6, v5, v3
 
     const/4 v7, 0x1
 
-    .line 403
     aget-object v5, v5, v7
 
-    .line 405
     new-instance v7, Lcom/android/server/am/mars/database/MARsVersionManager$MARsSettingsInfo;
 
     invoke-direct {v7, p0, v6, v5}, Lcom/android/server/am/mars/database/MARsVersionManager$MARsSettingsInfo;-><init>(Lcom/android/server/am/mars/database/MARsVersionManager;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 409
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->setMARsSettingsInfoList(Ljava/util/ArrayList;)V
 
@@ -797,12 +749,10 @@
 
     move-object/from16 v13, p0
 
-    .line 453
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 454
     sget-object v15, Lcom/android/server/am/mars/database/MARsVersionManager;->mPolicyInfoDefault:[[Ljava/lang/String;
 
     array-length v12, v15
@@ -816,7 +766,6 @@
 
     aget-object v0, v15, v10
 
-    .line 455
     aget-object v1, v0, v16
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -825,7 +774,6 @@
 
     const/4 v1, 0x1
 
-    .line 456
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -834,7 +782,6 @@
 
     const/4 v1, 0x2
 
-    .line 457
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -843,7 +790,6 @@
 
     const/4 v1, 0x3
 
-    .line 458
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -852,7 +798,6 @@
 
     const/4 v1, 0x4
 
-    .line 459
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -861,7 +806,6 @@
 
     const/4 v1, 0x5
 
-    .line 460
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -870,7 +814,6 @@
 
     const/4 v1, 0x6
 
-    .line 461
     aget-object v1, v0, v1
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -879,19 +822,16 @@
 
     const/4 v1, 0x7
 
-    .line 462
     aget-object v0, v0, v1
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v19
 
-    .line 463
     invoke-virtual {v13, v3}, Lcom/android/server/am/mars/database/MARsVersionManager;->convertPolicyNumToName(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 465
     new-instance v11, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;
 
     move-object v0, v11
@@ -912,7 +852,6 @@
 
     invoke-direct/range {v0 .. v12}, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;-><init>(Lcom/android/server/am/mars/database/MARsVersionManager;Ljava/lang/String;IIIIIJJI)V
 
-    .line 467
     invoke-virtual {v14, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v10, v20, 0x1
@@ -923,7 +862,6 @@
 
     goto :goto_0
 
-    .line 469
     :cond_0
     invoke-virtual {v13, v14}, Lcom/android/server/am/mars/database/MARsVersionManager;->setPolicy(Ljava/util/ArrayList;)V
 
@@ -933,7 +871,6 @@
 .method public getRestrictionFlag()I
     .locals 7
 
-    .line 438
     sget-object p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mMARsSettingsInfoDefault:[[Ljava/lang/String;
 
     array-length v0, p0
@@ -949,25 +886,21 @@
 
     aget-object v4, p0, v2
 
-    .line 439
     aget-object v5, v4, v1
 
     const/4 v6, 0x1
 
-    .line 440
     aget-object v4, v4, v6
 
     :try_start_0
     const-string/jumbo v6, "restriction_flag"
 
-    .line 442
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 443
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -979,7 +912,6 @@
     :catch_0
     move-exception v4
 
-    .line 446
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1011,7 +943,6 @@
 .method public final isActionMatch(Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;Ljava/lang/String;)Z
     .locals 1
 
-    .line 520
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->actionMatchType:Ljava/lang/String;
 
     const-string v0, "equals"
@@ -1022,7 +953,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 521
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->action:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1031,7 +961,6 @@
 
     goto :goto_0
 
-    .line 522
     :cond_0
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->actionMatchType:Ljava/lang/String;
 
@@ -1043,7 +972,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 523
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->action:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1052,7 +980,6 @@
 
     goto :goto_0
 
-    .line 524
     :cond_1
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->actionMatchType:Ljava/lang/String;
 
@@ -1064,7 +991,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 525
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->action:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1073,7 +999,6 @@
 
     goto :goto_0
 
-    .line 526
     :cond_2
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->actionMatchType:Ljava/lang/String;
 
@@ -1085,7 +1010,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 527
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->action:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1094,7 +1018,6 @@
 
     goto :goto_0
 
-    .line 528
     :cond_3
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->actionMatchType:Ljava/lang/String;
 
@@ -1106,7 +1029,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 529
     iget-object p0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->action:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -1125,7 +1047,6 @@
 .method public isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .line 544
     iget-object v0, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mRestrictionList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1145,24 +1066,20 @@
 
     check-cast v1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;
 
-    .line 545
     iget v2, v1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->restrictionType:I
 
     if-ne p1, v2, :cond_0
 
-    .line 546
     invoke-virtual {p0, v1, p2, p3, p4}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatchInternal(Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 547
     sget-boolean v0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_DATABASE:Z
 
     if-eqz v0, :cond_1
 
-    .line 548
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1227,7 +1144,6 @@
 .method public final isAdjustRestrictionMatchInternal(Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    .line 535
     iget-object v0, p1, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;->callee:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1252,7 +1168,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 536
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -1271,7 +1186,6 @@
 
     if-eqz p4, :cond_4
 
-    .line 537
     invoke-virtual {p0, p1, p4}, Lcom/android/server/am/mars/database/MARsVersionManager;->isActionMatch(Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;Ljava/lang/String;)Z
 
     move-result p0
@@ -1297,7 +1211,6 @@
 .method public final isRestrictionTypeAllowed(I)Z
     .locals 1
 
-    .line 0
     const/4 p0, 0x1
 
     if-eq p1, p0, :cond_0
@@ -1319,7 +1232,6 @@
 .method public setAdjustRestriction(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 396
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mRestrictionList:Ljava/util/ArrayList;
 
     return-void
@@ -1328,10 +1240,8 @@
 .method public setAdjustTargetCurrentImportant(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 380
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mIsCurrentImportantList:Ljava/util/ArrayList;
 
-    .line 381
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/database/MARsVersionManager;->convertListToMap(Ljava/util/ArrayList;)V
 
     return-void
@@ -1340,7 +1250,6 @@
 .method public setAdjustTargetExcludePackage(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 376
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mExcludeTargetList:Ljava/util/ArrayList;
 
     return-void
@@ -1349,7 +1258,6 @@
 .method public setMARsSettingsInfoList(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 368
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsVersionManager;->mMARsSettingsInfoList:Ljava/util/ArrayList;
 
     return-void
@@ -1358,7 +1266,6 @@
 .method public setPolicy(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 372
     sput-object p1, Lcom/android/server/am/mars/database/MARsVersionManager;->mPolicyInfoList:Ljava/util/ArrayList;
 
     return-void

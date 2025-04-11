@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/WindowChangeAnimationSpec;->$r8$lambda$vitfewbiFedy3AD_blhhfyU1ohA()Lcom/android/server/wm/WindowChangeAnimationSpec$TmpValues;
 
     move-result-object p0

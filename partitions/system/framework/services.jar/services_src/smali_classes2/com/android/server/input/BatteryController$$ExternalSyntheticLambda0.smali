@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/input/BatteryController$DeviceMonitor;
 
     invoke-static {p1}, Lcom/android/server/input/BatteryController;->$r8$lambda$OxoWV8H8ndEvuPa9syoua4TqmT0(Lcom/android/server/input/BatteryController$DeviceMonitor;)Z

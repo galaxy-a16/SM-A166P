@@ -21,20 +21,16 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 371
     new-instance v0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;
 
-    .line 374
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 375
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v2
 
-    .line 376
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v3
@@ -51,57 +47,46 @@
 .method public constructor <init>(ILjava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
     .locals 0
 
-    .line 383
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 384
     iput p1, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mActiveDataSubId:I
 
     const-string/jumbo p1, "subIdToInfoMap was null"
 
-    .line 385
     invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string/jumbo p1, "privilegedPackages was null"
 
-    .line 386
     invoke-static {p4, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string/jumbo p1, "subIdToCarrierConfigMap was null"
 
-    .line 387
     invoke-static {p3, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 389
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1, p2}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    .line 390
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
-    .line 392
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1, p3}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    .line 393
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToCarrierConfigMap:Ljava/util/Map;
 
-    .line 397
     new-instance p1, Landroid/util/ArrayMap;
 
     invoke-direct {p1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 398
     invoke-interface {p4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -123,7 +108,6 @@
 
     check-cast p3, Ljava/util/Map$Entry;
 
-    .line 400
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p4
@@ -140,12 +124,10 @@
 
     move-result-object p3
 
-    .line 399
     invoke-interface {p1, p4, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 402
     :cond_0
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -163,13 +145,10 @@
 
     const-string v0, "TelephonySubscriptionSnapshot:"
 
-    .line 519
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 520
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
-    .line 522
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,7 +167,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 523
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +185,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 524
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +203,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 525
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +221,6 @@
 
     invoke-virtual {p1, p0}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 527
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()Lcom/android/internal/util/IndentingPrintWriter;
 
     return-void
@@ -254,7 +229,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 505
     instance-of v0, p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;
 
     const/4 v1, 0x0
@@ -263,11 +237,9 @@
 
     return v1
 
-    .line 509
     :cond_0
     check-cast p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;
 
-    .line 511
     iget v0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mActiveDataSubId:I
 
     iget v2, p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mActiveDataSubId:I
@@ -278,7 +250,6 @@
 
     iget-object v2, p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
-    .line 512
     invoke-interface {v0, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -289,7 +260,6 @@
 
     iget-object v2, p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToCarrierConfigMap:Ljava/util/Map;
 
-    .line 513
     invoke-interface {v0, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -300,7 +270,6 @@
 
     iget-object p1, p1, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mPrivilegedPackages:Ljava/util/Map;
 
-    .line 514
     invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -316,7 +285,6 @@
 .method public getActiveDataSubscriptionGroup()Landroid/os/ParcelUuid;
     .locals 1
 
-    .line 413
     iget-object v0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-virtual {p0}, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->getActiveDataSubscriptionId()I
@@ -339,7 +307,6 @@
 
     return-object p0
 
-    .line 418
     :cond_0
     invoke-virtual {p0}, Landroid/telephony/SubscriptionInfo;->getGroupUuid()Landroid/os/ParcelUuid;
 
@@ -351,7 +318,6 @@
 .method public getActiveDataSubscriptionId()I
     .locals 0
 
-    .line 407
     iget p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mActiveDataSubId:I
 
     return p0
@@ -360,12 +326,10 @@
 .method public getAllSubIdsInGroup(Landroid/os/ParcelUuid;)Ljava/util/Set;
     .locals 3
 
-    .line 448
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    .line 450
     iget-object p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -390,7 +354,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 451
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -407,7 +370,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 452
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -425,7 +387,6 @@
 .method public getCarrierConfigForSubGrp(Landroid/os/ParcelUuid;)Lcom/android/server/vcn/util/PersistableBundleUtils$PersistableBundleWrapper;
     .locals 4
 
-    .line 477
     invoke-virtual {p0, p1}, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->getAllSubIdsInGroup(Landroid/os/ParcelUuid;)Ljava/util/Set;
 
     move-result-object p1
@@ -454,7 +415,6 @@
 
     move-result v1
 
-    .line 478
     iget-object v2, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToCarrierConfigMap:Ljava/util/Map;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -469,7 +429,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 485
     invoke-virtual {p0, v1}, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->isOpportunistic(I)Z
 
     move-result v0
@@ -490,7 +449,6 @@
 .method public getGroupForSubId(I)Landroid/os/ParcelUuid;
     .locals 2
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -503,7 +461,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 439
     iget-object p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -532,10 +489,8 @@
 .method public hashCode()I
     .locals 3
 
-    .line 496
     iget v0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mActiveDataSubId:I
 
-    .line 497
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -550,7 +505,6 @@
 
     move-result-object p0
 
-    .line 496
     invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result p0
@@ -561,7 +515,6 @@
 .method public isOpportunistic(I)Z
     .locals 2
 
-    .line 462
     iget-object v0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -574,7 +527,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 463
     iget-object p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mSubIdToInfoMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -603,7 +555,6 @@
 .method public packageHasPermissionsForSubscriptionGroup(Landroid/os/ParcelUuid;Ljava/lang/String;)Z
     .locals 0
 
-    .line 430
     iget-object p0, p0, Lcom/android/server/vcn/TelephonySubscriptionTracker$TelephonySubscriptionSnapshot;->mPrivilegedPackages:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -614,7 +565,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 432
     invoke-interface {p0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -635,7 +585,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 532
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

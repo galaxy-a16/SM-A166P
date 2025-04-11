@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/samsung/android/knox/analytics/activation/B2CListener;)V
     .locals 0
 
-    .line 47
     iput-object p1, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$ActivationReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 50
     invoke-static {}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -49,7 +47,6 @@
 
     invoke-static {p1, v0}, Lcom/samsung/android/knox/analytics/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -64,14 +61,12 @@
 
     const-string p1, "com.samsung.android.knox.analytics.intent.extra.B2C_PACKAGE_NAME"
 
-    .line 52
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "com.samsung.android.knox.analytics.intent.extra.B2C_FEATURE"
 
-    .line 53
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 
     const/4 v2, 0x0
 
-    .line 54
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
@@ -89,7 +83,6 @@
 
     move-result-object p2
 
-    .line 55
     iget-object v1, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$ActivationReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-static {v1}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$fgetmActivationMonitor(Lcom/samsung/android/knox/analytics/activation/B2CListener;)Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;
@@ -102,7 +95,6 @@
 
     invoke-virtual {v1, p1, v0, v2}, Lcom/samsung/android/knox/analytics/activation/ActivationMonitor;->checkB2C(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 57
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -119,7 +111,6 @@
 
     if-nez p1, :cond_0
 
-    .line 58
     iget-object p1, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$ActivationReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     new-instance p2, Lcom/samsung/android/knox/analytics/activation/B2CListener$PackageRemovedReceiver;
@@ -128,22 +119,18 @@
 
     invoke-static {p1, p2}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$fputmPackageRemovedReceiver(Lcom/samsung/android/knox/analytics/activation/B2CListener;Lcom/samsung/android/knox/analytics/activation/B2CListener$PackageRemovedReceiver;)V
 
-    .line 59
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p2, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
-    .line 60
     invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo p2, "package"
 
-    .line 61
     invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 63
     iget-object p2, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$ActivationReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-static {p2}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$fgetmContext(Lcom/samsung/android/knox/analytics/activation/B2CListener;)Landroid/content/Context;
@@ -168,7 +155,6 @@
 
     goto :goto_0
 
-    .line 64
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -176,7 +162,6 @@
 
     if-nez p1, :cond_1
 
-    .line 65
     iget-object p0, p0, Lcom/samsung/android/knox/analytics/activation/B2CListener$ActivationReceiver;->this$0:Lcom/samsung/android/knox/analytics/activation/B2CListener;
 
     invoke-static {p0}, Lcom/samsung/android/knox/analytics/activation/B2CListener;->-$$Nest$mcheckRemovedReceiver(Lcom/samsung/android/knox/analytics/activation/B2CListener;)V

@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/sepunion/VDCObserverService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 284
     iput-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$MyHandler;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
-    .line 285
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 290
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -46,7 +43,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0xa
@@ -63,20 +59,17 @@
 
     goto :goto_0
 
-    .line 299
     :cond_0
     iget-object p1, p0, Lcom/android/server/sepunion/VDCObserverService$MyHandler;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$munregisterUsageStatsWatcher(Lcom/android/server/sepunion/VDCObserverService;)V
 
-    .line 300
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$MyHandler;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/VDCObserverService;->-$$Nest$mregisterUsageStatsWatcher(Lcom/android/server/sepunion/VDCObserverService;)V
 
     goto :goto_0
 
-    .line 296
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$MyHandler;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 
@@ -88,7 +81,6 @@
 
     goto :goto_0
 
-    .line 293
     :cond_2
     iget-object p0, p0, Lcom/android/server/sepunion/VDCObserverService$MyHandler;->this$0:Lcom/android/server/sepunion/VDCObserverService;
 

@@ -17,19 +17,14 @@
 .method public constructor <init>(FFFJ)V
     .locals 0
 
-    .line 534
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 535
     iput p1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
 
-    .line 536
     iput p2, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
-    .line 537
     iput p3, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mWeight:F
 
-    .line 538
     iput-wide p4, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLastUserBrightnessTime:J
 
     return-void
@@ -40,7 +35,6 @@
 .method public copy()Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
     .locals 7
 
-    .line 586
     new-instance v6, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;
 
     iget v1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
@@ -61,7 +55,6 @@
 .method public getBrightness()F
     .locals 0
 
-    .line 578
     iget p0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
     return p0
@@ -70,7 +63,6 @@
 .method public getLastUserBrightnessTime()J
     .locals 2
 
-    .line 552
     iget-wide v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLastUserBrightnessTime:J
 
     return-wide v0
@@ -79,7 +71,6 @@
 .method public getLux()F
     .locals 0
 
-    .line 570
     iget p0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
 
     return p0
@@ -88,7 +79,6 @@
 .method public getWeight()F
     .locals 0
 
-    .line 582
     iget p0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mWeight:F
 
     return p0
@@ -97,28 +87,24 @@
 .method public readFromParcel(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 556
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
 
-    .line 557
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
-    .line 558
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mWeight:F
 
-    .line 559
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -131,13 +117,10 @@
 .method public set(FFF)V
     .locals 0
 
-    .line 542
     iput p1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
 
-    .line 543
     iput p2, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
-    .line 544
     iput p3, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mWeight:F
 
     return-void
@@ -146,7 +129,6 @@
 .method public setBrightness(F)V
     .locals 0
 
-    .line 574
     iput p1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
     return-void
@@ -155,7 +137,6 @@
 .method public setLastUserBrightnessTime(J)V
     .locals 0
 
-    .line 548
     iput-wide p1, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLastUserBrightnessTime:J
 
     return-void
@@ -164,12 +145,10 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 596
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 597
     invoke-virtual {p0}, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->getWeight()F
 
     move-result v1
@@ -180,7 +159,6 @@
 
     if-gez v2, :cond_0
 
-    .line 600
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -208,7 +186,6 @@
 
     float-to-int v1, v1
 
-    .line 601
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -232,7 +209,6 @@
 
     float-to-int v1, v1
 
-    .line 602
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -252,7 +228,6 @@
 
     div-float/2addr v1, v2
 
-    .line 603
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -267,7 +242,6 @@
 
     move-result-object v1
 
-    .line 605
     :goto_0
     iget p0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
@@ -289,7 +263,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 607
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -300,22 +273,18 @@
 .method public writeToParcel(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 563
     iget v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLux:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 564
     iget v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mBrightness:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 565
     iget v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mWeight:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 566
     iget-wide v0, p0, Lcom/android/server/display/AdaptiveBrightnessWeightStats$BrightnessWeights;->mLastUserBrightnessTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

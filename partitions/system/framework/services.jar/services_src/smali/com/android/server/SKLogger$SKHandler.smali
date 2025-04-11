@@ -19,19 +19,14 @@
 .method public constructor <init>(Lcom/android/server/SKLogger;Ljava/lang/String;J)V
     .locals 0
 
-    .line 177
     iput-object p1, p0, Lcom/android/server/SKLogger$SKHandler;->this$0:Lcom/android/server/SKLogger;
 
-    .line 178
     invoke-direct {p0}, Ljava/util/logging/Handler;-><init>()V
 
-    .line 179
     iput-object p2, p0, Lcom/android/server/SKLogger$SKHandler;->newLogFile:Ljava/lang/String;
 
-    .line 180
     iput-wide p3, p0, Lcom/android/server/SKLogger$SKHandler;->maxSize:J
 
-    .line 181
     invoke-virtual {p0}, Lcom/android/server/SKLogger$SKHandler;->getPrintWriter()Ljava/io/PrintWriter;
 
     return-void
@@ -42,13 +37,11 @@
 .method public close()V
     .locals 1
 
-    .line 232
     :try_start_0
     iget-object v0, p0, Lcom/android/server/SKLogger$SKHandler;->fileOutputStream:Ljava/io/FileOutputStream;
 
     if-eqz v0, :cond_0
 
-    .line 233
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -58,17 +51,14 @@
     :catch_0
     move-exception v0
 
-    .line 236
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 238
     :cond_0
     :goto_0
     iget-object p0, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
 
     if-eqz p0, :cond_1
 
-    .line 239
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
 
     :cond_1
@@ -78,12 +68,10 @@
 .method public flush()V
     .locals 0
 
-    .line 225
     iget-object p0, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
 
     if-eqz p0, :cond_0
 
-    .line 226
     invoke-virtual {p0}, Ljava/io/PrintWriter;->flush()V
 
     :cond_0
@@ -93,7 +81,6 @@
 .method public final getPrintWriter()Ljava/io/PrintWriter;
     .locals 7
 
-    .line 185
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/SKLogger$SKHandler;->newLogFile:Ljava/lang/String;
@@ -104,20 +91,16 @@
 
     const/4 v2, 0x0
 
-    .line 186
     invoke-virtual {v0, v1, v2}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 187
     invoke-virtual {v0, v1, v1}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 188
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 189
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v3
@@ -128,13 +111,11 @@
 
     if-gez v3, :cond_0
 
-    .line 191
     :try_start_0
     iget-object v3, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
 
     if-nez v3, :cond_0
 
-    .line 192
     new-instance v3, Ljava/io/FileOutputStream;
 
     iget-object v4, p0, Lcom/android/server/SKLogger$SKHandler;->newLogFile:Ljava/lang/String;
@@ -143,7 +124,6 @@
 
     iput-object v3, p0, Lcom/android/server/SKLogger$SKHandler;->fileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 193
     new-instance v3, Ljava/io/PrintWriter;
 
     iget-object v4, p0, Lcom/android/server/SKLogger$SKHandler;->fileOutputStream:Ljava/io/FileOutputStream;
@@ -159,23 +139,18 @@
     :catch_0
     move-exception v3
 
-    .line 196
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 200
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
 
     if-nez v3, :cond_1
 
-    .line 201
     invoke-virtual {v0, v1, v2}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 202
     invoke-virtual {v0, v1, v1}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 204
     :try_start_1
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -185,7 +160,6 @@
 
     iput-object v0, p0, Lcom/android/server/SKLogger$SKHandler;->fileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 205
     new-instance v0, Ljava/io/PrintWriter;
 
     iget-object v1, p0, Lcom/android/server/SKLogger$SKHandler;->fileOutputStream:Ljava/io/FileOutputStream;
@@ -201,10 +175,8 @@
     :catch_1
     move-exception v0
 
-    .line 207
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 210
     :cond_1
     :goto_1
     iget-object p0, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
@@ -215,7 +187,6 @@
 .method public publish(Ljava/util/logging/LogRecord;)V
     .locals 2
 
-    .line 214
     invoke-virtual {p0, p1}, Ljava/util/logging/Handler;->isLoggable(Ljava/util/logging/LogRecord;)Z
 
     move-result v0
@@ -224,16 +195,13 @@
 
     return-void
 
-    .line 217
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/SKLogger$SKHandler;->getPrintWriter()Ljava/io/PrintWriter;
 
-    .line 218
     iget-object v0, p0, Lcom/android/server/SKLogger$SKHandler;->printWriter:Ljava/io/PrintWriter;
 
     if-eqz v0, :cond_1
 
-    .line 219
     invoke-virtual {p0}, Ljava/util/logging/Handler;->getFormatter()Ljava/util/logging/Formatter;
 
     move-result-object v1
@@ -244,7 +212,6 @@
 
     invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 220
     invoke-virtual {p0}, Lcom/android/server/SKLogger$SKHandler;->flush()V
 
     :cond_1

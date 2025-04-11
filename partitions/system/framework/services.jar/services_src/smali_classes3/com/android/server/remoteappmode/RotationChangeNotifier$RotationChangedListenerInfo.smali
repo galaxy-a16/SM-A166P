@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$fgetlistener(Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;)Lcom/samsung/android/remoteappmode/IRotationChangeListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->listener:Lcom/samsung/android/remoteappmode/IRotationChangeListener;
 
     return-object p0
@@ -24,13 +23,10 @@
 .method public constructor <init>(Lcom/android/server/remoteappmode/RotationChangeNotifier;Lcom/samsung/android/remoteappmode/IRotationChangeListener;Ljava/lang/String;III)V
     .locals 0
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->this$0:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
-    .line 66
     invoke-direct {p0, p3, p4, p5}, Lcom/android/server/remoteappmode/ListenerInfo;-><init>(Ljava/lang/String;II)V
 
-    .line 67
     iput-object p2, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->listener:Lcom/samsung/android/remoteappmode/IRotationChangeListener;
 
     return-void
@@ -41,10 +37,8 @@
 .method public binderDied()V
     .locals 5
 
-    .line 72
     invoke-super {p0}, Lcom/android/server/remoteappmode/ListenerInfo;->binderDied()V
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->this$0:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
     invoke-static {v0}, Lcom/android/server/remoteappmode/RotationChangeNotifier;->-$$Nest$fgetmRotationChangedListeners(Lcom/android/server/remoteappmode/RotationChangeNotifier;)Ljava/util/Map;
@@ -53,7 +47,6 @@
 
     monitor-enter v0
 
-    .line 74
     :try_start_0
     iget-object v1, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->this$0:Lcom/android/server/remoteappmode/RotationChangeNotifier;
 
@@ -71,7 +64,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->unregisterRotationWatcher()V
     :try_end_1
@@ -83,7 +75,6 @@
     :catch_0
     move-exception v1
 
-    .line 78
     :try_start_2
     invoke-static {}, Lcom/android/server/remoteappmode/RotationChangeNotifier;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -109,13 +100,11 @@
 
     invoke-static {v2, v1}, Lcom/android/server/remoteappmode/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     :goto_0
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->listener:Lcom/samsung/android/remoteappmode/IRotationChangeListener;
 
     invoke-interface {v0}, Lcom/samsung/android/remoteappmode/IRotationChangeListener;->asBinder()Landroid/os/IBinder;
@@ -131,7 +120,6 @@
     :catchall_0
     move-exception p0
 
-    .line 80
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -143,19 +131,16 @@
 .method public registerRotationWatcher(I)V
     .locals 1
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->mWatcher:Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;
 
     if-nez v0, :cond_0
 
-    .line 87
     new-instance v0, Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;
 
     invoke-direct {v0}, Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->mWatcher:Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;
 
-    .line 88
     iget-object p0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->listener:Lcom/samsung/android/remoteappmode/IRotationChangeListener;
 
     invoke-virtual {v0, p1, p0}, Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;->setRotationChangeListener(ILcom/samsung/android/remoteappmode/IRotationChangeListener;)V
@@ -167,14 +152,12 @@
 .method public unregisterRotationWatcher()V
     .locals 0
 
-    .line 93
     iget-object p0, p0, Lcom/android/server/remoteappmode/RotationChangeNotifier$RotationChangedListenerInfo;->mWatcher:Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 96
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/remoteappmode/RemoteAppRotationWatcher;->removeRotationChangeListenr()V
 

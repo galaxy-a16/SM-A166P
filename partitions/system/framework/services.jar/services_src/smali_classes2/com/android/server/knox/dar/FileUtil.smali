@@ -15,7 +15,6 @@
 .method public static getEncUserDir(I)Ljava/io/File;
     .locals 4
 
-    .line 18
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
@@ -28,7 +27,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 19
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -41,7 +39,6 @@
 .method public static getUserSystemDir(I)Ljava/io/File;
     .locals 4
 
-    .line 13
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
@@ -54,7 +51,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 14
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0

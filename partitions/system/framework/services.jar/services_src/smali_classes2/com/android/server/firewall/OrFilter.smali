@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 39
     new-instance v0, Lcom/android/server/firewall/OrFilter$1;
 
     const-string/jumbo v1, "or"
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 26
     invoke-direct {p0}, Lcom/android/server/firewall/FilterList;-><init>()V
 
     return-void
@@ -43,7 +41,6 @@
 
     move v2, v1
 
-    .line 30
     :goto_0
     iget-object v3, v0, Lcom/android/server/firewall/FilterList;->children:Ljava/util/ArrayList;
 
@@ -53,7 +50,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 31
     iget-object v3, v0, Lcom/android/server/firewall/FilterList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

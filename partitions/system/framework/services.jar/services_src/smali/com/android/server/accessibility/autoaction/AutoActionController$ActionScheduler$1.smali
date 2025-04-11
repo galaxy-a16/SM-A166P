@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;)V
     .locals 0
 
-    .line 616
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;->this$1:Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;
 
     iput-object p2, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;->val$popup:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
@@ -31,14 +30,12 @@
 .method public onDismiss(Landroid/widget/PopupMenu;)V
     .locals 1
 
-    .line 619
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;->this$1:Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;->-$$Nest$fputmCornerActionType(Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler;I)V
 
-    .line 620
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/AutoActionController$ActionScheduler$1;->val$popup:Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;
 
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/CornerActionSelectPopup;->destroy()V

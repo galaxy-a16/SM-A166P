@@ -17,7 +17,6 @@
 .method public getDisplayBrightnessStrategySelector(Landroid/content/Context;I)Lcom/android/server/display/brightness/DisplayBrightnessStrategySelector;
     .locals 1
 
-    .line 469
     new-instance p0, Lcom/android/server/display/brightness/DisplayBrightnessStrategySelector;
 
     const/4 v0, 0x0

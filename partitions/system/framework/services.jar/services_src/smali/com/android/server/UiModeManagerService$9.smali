@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 421
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$9;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,7 +23,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 424
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$9;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-static {p0}, Lcom/android/server/UiModeManagerService;->-$$Nest$mupdateSystemProperties(Lcom/android/server/UiModeManagerService;)V

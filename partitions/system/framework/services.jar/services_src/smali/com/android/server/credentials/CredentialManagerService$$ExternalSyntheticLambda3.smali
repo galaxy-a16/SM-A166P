@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/credentials/CredentialOption;
 
     invoke-static {p1}, Lcom/android/server/credentials/CredentialManagerService;->$r8$lambda$YB4hzsa3akKjj9wlq8V9EsrEPQE(Landroid/credentials/CredentialOption;)Ljava/util/HashSet;

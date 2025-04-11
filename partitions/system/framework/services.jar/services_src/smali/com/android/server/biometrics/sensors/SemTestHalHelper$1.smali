@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 93
     invoke-static {}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->values()[Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     move-result-object v0

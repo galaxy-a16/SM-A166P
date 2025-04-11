@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/PowerStatusMonitorAction;I)V
     .locals 0
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->this$0:Lcom/android/server/hdmi/PowerStatusMonitorAction;
 
     iput p2, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->val$logicalAddress:I
@@ -33,7 +32,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 135
     iget-object p1, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->this$0:Lcom/android/server/hdmi/PowerStatusMonitorAction;
 
     iget p0, p0, Lcom/android/server/hdmi/PowerStatusMonitorAction$1;->val$logicalAddress:I

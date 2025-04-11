@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$iGyoLn2i1uqOmcHs0O-ulG4JLjw(Lcom/android/server/location/settings/SettingsStore;Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/settings/SettingsStore;->lambda$writeLazily$1(Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$l8C1GD_G9VrOBdVYmtjY839B-aI(Lcom/android/server/location/settings/SettingsStore;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/location/settings/SettingsStore;->lambda$deleteFile$0(Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
@@ -33,10 +31,8 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 1
 
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     new-instance v0, Landroid/util/AtomicFile;
 
     invoke-direct {v0, p1}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
@@ -49,12 +45,10 @@
 .method private synthetic lambda$deleteFile$0(Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 142
     iget-object p0, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0}, Landroid/util/AtomicFile;->delete()V
 
-    .line 143
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
@@ -65,7 +59,6 @@
 
     const/4 v0, 0x0
 
-    .line 152
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
@@ -73,22 +66,18 @@
 
     move-result-object v0
 
-    .line 153
     new-instance v1, Ljava/io/DataOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 154
     invoke-interface {p1}, Lcom/android/server/location/settings/SettingsStore$VersionedSettings;->getVersion()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 155
     invoke-virtual {p0, v1, p1}, Lcom/android/server/location/settings/SettingsStore;->write(Ljava/io/DataOutput;Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
 
-    .line 156
     iget-object p1, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p1, v0}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
@@ -101,18 +90,15 @@
     :catchall_0
     move-exception p1
 
-    .line 161
     iget-object p0, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
-    .line 162
     throw p1
 
     :catch_0
     move-exception p1
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
@@ -121,7 +107,6 @@
 
     const-string v0, "failure serializing location settings"
 
-    .line 159
     invoke-static {p0, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -135,7 +120,6 @@
 
     monitor-enter p0
 
-    .line 140
     :try_start_0
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
@@ -143,7 +127,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 141
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -154,12 +137,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 145
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 146
     monitor-exit p0
 
     return-void
@@ -177,7 +158,6 @@
 
     monitor-enter p0
 
-    .line 133
     :try_start_0
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
@@ -185,7 +165,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 134
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -196,12 +175,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 135
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     monitor-exit p0
 
     return-void
@@ -219,11 +196,9 @@
 
     monitor-enter p0
 
-    .line 110
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/settings/SettingsStore;->initializeCache()V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -245,13 +220,11 @@
 
     monitor-enter p0
 
-    .line 84
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/location/settings/SettingsStore;->mInitialized:Z
 
     if-nez v0, :cond_4
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/location/settings/SettingsStore;->mFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v0}, Landroid/util/AtomicFile;->exists()Z
@@ -268,7 +241,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     :try_start_1
     new-instance v0, Ljava/io/DataInputStream;
 
@@ -283,7 +255,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 87
     :try_start_2
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readInt()I
 
@@ -295,7 +266,6 @@
 
     iput-object v4, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
 
-    .line 88
     invoke-interface {v4}, Lcom/android/server/location/settings/SettingsStore$VersionedSettings;->getVersion()I
 
     move-result v4
@@ -314,7 +284,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 89
     :try_start_3
     invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
     :try_end_3
@@ -326,7 +295,6 @@
     :catchall_0
     move-exception v4
 
-    .line 86
     :try_start_4
     invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
     :try_end_4
@@ -352,7 +320,6 @@
     :try_start_6
     const-string v4, "LocationManagerService"
 
-    .line 90
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,7 +342,6 @@
 
     invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 95
     :cond_1
     :goto_2
     iget-object v0, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
@@ -384,7 +350,6 @@
 
     if-nez v0, :cond_3
 
-    .line 97
     :try_start_7
     new-instance v0, Ljava/io/DataInputStream;
 
@@ -402,7 +367,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
 
-    .line 99
     invoke-interface {v0}, Lcom/android/server/location/settings/SettingsStore$VersionedSettings;->getVersion()I
 
     move-result v0
@@ -422,7 +386,6 @@
     :catch_1
     move-exception v0
 
-    .line 101
     :try_start_8
     new-instance v1, Ljava/lang/AssertionError;
 
@@ -430,14 +393,12 @@
 
     throw v1
 
-    .line 105
     :cond_3
     :goto_3
     iput-boolean v3, p0, Lcom/android/server/location/settings/SettingsStore;->mInitialized:Z
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 107
     :cond_4
     monitor-exit p0
 
@@ -462,14 +423,11 @@
 
     monitor-enter p0
 
-    .line 115
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/settings/SettingsStore;->initializeCache()V
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
 
-    .line 118
     invoke-interface {p1, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -480,7 +438,6 @@
 
     check-cast p1, Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
 
-    .line 119
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -489,17 +446,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 120
     monitor-exit p0
 
     return-void
 
-    .line 123
     :cond_0
     :try_start_1
     iput-object p1, p0, Lcom/android/server/location/settings/SettingsStore;->mCache:Lcom/android/server/location/settings/SettingsStore$VersionedSettings;
 
-    .line 124
     invoke-interface {p1}, Lcom/android/server/location/settings/SettingsStore$VersionedSettings;->getVersion()I
 
     move-result v1
@@ -518,15 +472,12 @@
     :goto_0
     invoke-static {v1}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 126
     invoke-virtual {p0, p1}, Lcom/android/server/location/settings/SettingsStore;->writeLazily(Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
 
-    .line 128
     invoke-virtual {p0, v0, p1}, Lcom/android/server/location/settings/SettingsStore;->onChange(Lcom/android/server/location/settings/SettingsStore$VersionedSettings;Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 129
     monitor-exit p0
 
     return-void
@@ -545,7 +496,6 @@
 .method public final writeLazily(Lcom/android/server/location/settings/SettingsStore$VersionedSettings;)V
     .locals 2
 
-    .line 149
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0

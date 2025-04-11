@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -34,7 +33,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

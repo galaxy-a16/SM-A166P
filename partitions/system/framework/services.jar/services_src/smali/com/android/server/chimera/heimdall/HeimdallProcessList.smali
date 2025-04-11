@@ -15,24 +15,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mInProgressProcesses:Ljava/util/HashSet;
 
-    .line 21
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
-    .line 22
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -47,7 +43,6 @@
 .method public addProcessInProgress(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 0
 
-    .line 26
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mInProgressProcesses:Ljava/util/HashSet;
 
     iget-object p1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->processName:Ljava/lang/String;
@@ -62,10 +57,8 @@
 
     const-string v0, "\nProcess List"
 
-    .line 66
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +85,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mInProgressProcesses:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -114,7 +106,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 69
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,7 +122,6 @@
 
     goto :goto_0
 
-    .line 71
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -157,7 +147,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mProtectedProcesses:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -177,7 +166,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 73
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +182,6 @@
 
     goto :goto_1
 
-    .line 75
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -226,10 +213,8 @@
 .method public isProcessInProgress(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)Z
     .locals 0
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->updateReportedProcesses()V
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mInProgressProcesses:Ljava/util/HashSet;
 
     iget-object p1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->processName:Ljava/lang/String;
@@ -244,7 +229,6 @@
 .method public isProtectedProcesses(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)Z
     .locals 0
 
-    .line 47
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mProtectedProcesses:Ljava/util/HashSet;
 
     iget-object p1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->processName:Ljava/lang/String;
@@ -259,19 +243,16 @@
 .method public pushProcessToReported(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 2
 
-    .line 40
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->reportTime:J
 
-    .line 41
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
     invoke-interface {p0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 42
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,7 +279,6 @@
 .method public removeProcessInProgress(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 0
 
-    .line 30
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mInProgressProcesses:Ljava/util/HashSet;
 
     iget-object p1, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->processName:Ljava/lang/String;
@@ -311,7 +291,6 @@
 .method public final updateReportedProcesses()V
     .locals 5
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->isEmpty()Z
@@ -322,7 +301,6 @@
 
     return-void
 
-    .line 52
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -332,7 +310,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 53
     :goto_0
     iget-object v2, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
@@ -342,7 +319,6 @@
 
     if-nez v2, :cond_2
 
-    .line 54
     iget-object v2, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
     invoke-interface {v2}, Ljava/util/Queue;->peek()Ljava/lang/Object;
@@ -351,7 +327,6 @@
 
     check-cast v2, Lcom/android/server/chimera/heimdall/HeimdallProcessData;
 
-    .line 55
     iget-wide v3, v2, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->reportTime:J
 
     cmp-long v3, v3, v0
@@ -360,7 +335,6 @@
 
     goto :goto_1
 
-    .line 58
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -382,15 +356,12 @@
 
     invoke-static {v3}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 59
     iget-object v3, p0, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->mReportedProcesses:Ljava/util/Queue;
 
     invoke-interface {v3}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
-    .line 60
     invoke-virtual {p0, v2}, Lcom/android/server/chimera/heimdall/HeimdallProcessList;->removeProcessInProgress(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 61
     invoke-virtual {v2}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->recycle()V
 
     goto :goto_0

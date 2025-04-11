@@ -77,58 +77,48 @@
 .method public constructor <init>(Lcom/android/server/am/BaseAppStateTracker$Injector;Lcom/android/server/am/AppBatteryTracker;)V
     .locals 12
 
-    .line 1515
     iget-object v0, p2, Lcom/android/server/am/BaseAppStateTracker;->mContext:Landroid/content/Context;
 
-    .line 1516
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const v1, 0x1110048
 
-    .line 1517
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     const-string v1, "bg_current_drain_monitor_enabled"
 
-    .line 1515
     invoke-direct {p0, p1, p2, v1, v0}, Lcom/android/server/am/BaseAppStatePolicy;-><init>(Lcom/android/server/am/BaseAppStateTracker$Injector;Lcom/android/server/am/BaseAppStateTracker;Ljava/lang/String;Z)V
 
     const/4 p1, 0x2
 
     new-array v0, p1, [F
 
-    .line 1416
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     new-array p1, p1, [F
 
-    .line 1422
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
-    .line 1497
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
-    .line 1504
     new-instance p1, Landroid/util/SparseLongArray;
 
     invoke-direct {p1}, Landroid/util/SparseLongArray;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
-    .line 1518
     iget-object p1, p2, Lcom/android/server/am/BaseAppStateTracker;->mLock:Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
-    .line 1519
     iget-object p1, p2, Lcom/android/server/am/BaseAppStateTracker;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -137,7 +127,6 @@
 
     const p2, 0x107009f
 
-    .line 1520
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object p2
@@ -146,7 +135,6 @@
 
     move-result-object p2
 
-    .line 1523
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v0
@@ -169,7 +157,6 @@
 
     const v0, 0x107009e
 
-    .line 1524
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object v0
@@ -178,7 +165,6 @@
 
     move-result-object v0
 
-    .line 1527
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v3
@@ -197,7 +183,6 @@
 
     const v3, 0x10e003e
 
-    .line 1528
     invoke-virtual {p1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
@@ -208,12 +193,10 @@
 
     iput-wide v3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainWindowMs:J
 
-    .line 1530
     iput-wide v3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainInteractionGracePeriodMs:J
 
     const v5, 0x107009d
 
-    .line 1531
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object v5
@@ -222,7 +205,6 @@
 
     move-result-object v5
 
-    .line 1534
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v6
@@ -241,7 +223,6 @@
 
     const v6, 0x107009c
 
-    .line 1535
     invoke-virtual {p1, v6}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object v6
@@ -250,7 +231,6 @@
 
     move-result-object v6
 
-    .line 1538
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v7
@@ -269,7 +249,6 @@
 
     const v7, 0x10e003a
 
-    .line 1539
     invoke-virtual {p1, v7}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v7
@@ -282,7 +261,6 @@
 
     const v9, 0x10e0039
 
-    .line 1541
     invoke-virtual {p1, v9}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v9
@@ -295,7 +273,6 @@
 
     const v11, 0x1110046
 
-    .line 1543
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v11
@@ -304,7 +281,6 @@
 
     const v11, 0x1110045
 
-    .line 1545
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v11
@@ -313,7 +289,6 @@
 
     const v11, 0x10e003d
 
-    .line 1547
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v11
@@ -322,7 +297,6 @@
 
     const v11, 0x10e003c
 
-    .line 1549
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v11
@@ -331,7 +305,6 @@
 
     const v11, 0x10e003b
 
-    .line 1551
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v11
@@ -340,7 +313,6 @@
 
     const v11, 0x10e0038
 
-    .line 1553
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v11
@@ -349,43 +321,34 @@
 
     const v11, 0x1110047
 
-    .line 1555
     invoke-virtual {p1, v11}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainHighThresholdByBgLocation:Z
 
-    .line 1557
     iget-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     aput p2, p1, v2
 
-    .line 1559
     iget-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     aput v5, p1, v1
 
-    .line 1561
     iget-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     aput v0, p1, v2
 
-    .line 1563
     iget-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     aput v6, p1, v1
 
-    .line 1565
     iput-wide v3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainWindowMs:J
 
-    .line 1566
     iput-wide v3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainInteractionGracePeriodMs:J
 
-    .line 1568
     iput-wide v7, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainMediaPlaybackMinDuration:J
 
-    .line 1570
     iput-wide v9, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainLocationMinDuration:J
 
     return-void
@@ -394,14 +357,12 @@
 .method public static batteryUsageTypesToString(I)Ljava/lang/String;
     .locals 4
 
-    .line 1806
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1808
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v1
@@ -415,7 +376,6 @@
 
     const/16 v2, 0x7c
 
-    .line 1811
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -439,7 +399,6 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 1831
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -467,7 +426,6 @@
     :cond_1
     const-string v3, "CACHED"
 
-    .line 1828
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -475,7 +433,6 @@
     :cond_2
     const-string v3, "FOREGROUND_SERVICE"
 
-    .line 1825
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -483,7 +440,6 @@
     :cond_3
     const-string v3, "BACKGROUND"
 
-    .line 1822
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -491,7 +447,6 @@
     :cond_4
     const-string v3, "FOREGROUND"
 
-    .line 1819
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -499,7 +454,6 @@
     :cond_5
     const-string v3, "UNSPECIFIED"
 
-    .line 1816
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
@@ -507,7 +461,6 @@
 
     and-int/2addr p0, v1
 
-    .line 1809
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v1
@@ -517,10 +470,8 @@
     :cond_6
     const-string p0, "]"
 
-    .line 1835
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1836
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -531,12 +482,10 @@
 .method public static getFloatArray(Landroid/content/res/TypedArray;)[F
     .locals 4
 
-    .line 1574
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->length()I
 
     move-result v0
 
-    .line 1575
     new-array v1, v0, [F
 
     const/4 v2, 0x0
@@ -546,7 +495,6 @@
 
     const/high16 v3, 0x7fc00000    # Float.NaN
 
-    .line 1577
     invoke-virtual {p0, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v3
@@ -557,7 +505,6 @@
 
     goto :goto_0
 
-    .line 1579
     :cond_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -573,7 +520,6 @@
 
     if-lez p1, :cond_0
 
-    .line 1786
     iget-object v1, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast v1, Lcom/android/server/am/AppBatteryTracker;
@@ -596,7 +542,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 1787
     invoke-virtual {p1}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getPercentage()[D
 
     move-result-object v0
@@ -604,7 +549,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 1788
     :goto_1
     array-length v1, p2
 
@@ -612,7 +556,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1789
     aget-wide v1, v0, p1
 
     goto :goto_2
@@ -648,15 +591,12 @@
 
     move-object/from16 v7, p1
 
-    .line 2060
     invoke-virtual/range {p1 .. p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v1, "APP BATTERY TRACKER POLICY SETTINGS:"
 
-    .line 2061
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2063
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -673,30 +613,24 @@
 
     move-result-object v1
 
-    .line 2064
     invoke-super {v0, v7, v1}, Lcom/android/server/am/BaseAppStatePolicy;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 2065
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/BaseAppStatePolicy;->isEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 2066
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "bg_current_drain_threshold_to_restricted_bucket"
 
-    .line 2067
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const/16 v2, 0x3d
 
-    .line 2068
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2069
     iget-object v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     const/4 v8, 0x0
@@ -705,18 +639,14 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(F)V
 
-    .line 2071
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_high_threshold_to_restricted_bucket"
 
-    .line 2072
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2073
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2074
     iget-object v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     const/4 v9, 0x1
@@ -725,150 +655,114 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(F)V
 
-    .line 2076
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_threshold_to_bg_restricted"
 
-    .line 2077
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2078
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2079
     iget-object v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     aget v3, v3, v8
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(F)V
 
-    .line 2081
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_high_threshold_to_bg_restricted"
 
-    .line 2082
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2083
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2084
     iget-object v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     aget v3, v3, v9
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(F)V
 
-    .line 2086
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_window"
 
-    .line 2087
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2088
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2089
     iget-wide v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainWindowMs:J
 
     invoke-virtual {v7, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 2090
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_interaction_grace_period"
 
-    .line 2091
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2092
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2093
     iget-wide v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainInteractionGracePeriodMs:J
 
     invoke-virtual {v7, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 2094
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_media_playback_min_duration"
 
-    .line 2095
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2096
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2097
     iget-wide v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainMediaPlaybackMinDuration:J
 
     invoke-virtual {v7, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 2098
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_location_min_duration"
 
-    .line 2099
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2100
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2101
     iget-wide v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainLocationMinDuration:J
 
     invoke-virtual {v7, v3, v4}, Ljava/io/PrintWriter;->println(J)V
 
-    .line 2102
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_event_duration_based_threshold_enabled"
 
-    .line 2103
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2104
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2105
     iget-boolean v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainEventDurationBasedThresholdEnabled:Z
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 2106
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_auto_restrict_abusive_apps_enabled"
 
-    .line 2107
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2108
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2109
     iget-boolean v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainAutoRestrictAbusiveAppsEnabled:Z
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 2110
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_types_to_restricted_bucket"
 
-    .line 2111
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2112
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2113
     iget v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketTypes:I
 
     invoke-static {v3}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->batteryUsageTypesToString(I)Ljava/lang/String;
@@ -877,18 +771,14 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2114
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_types_to_bg_restricted"
 
-    .line 2115
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2116
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2117
     iget v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedTypes:I
 
     invoke-static {v3}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->batteryUsageTypesToString(I)Ljava/lang/String;
@@ -897,34 +787,26 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2118
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_power_components"
 
-    .line 2119
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2120
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2121
     iget v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainPowerComponents:I
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 2122
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_exempted_types"
 
-    .line 2123
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2124
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2125
     iget v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainExemptedTypes:I
 
     invoke-static {v3}, Lcom/android/server/am/BaseAppStateTracker;->stateTypesToString(I)Ljava/lang/String;
@@ -933,54 +815,42 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2126
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "bg_current_drain_high_threshold_by_bg_location"
 
-    .line 2127
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2128
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 2129
     iget-boolean v2, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainHighThresholdByBgLocation:Z
 
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 2130
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "Full charge capacity="
 
-    .line 2131
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2132
     iget v2, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryFullChargeMah:I
 
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->print(I)V
 
     const-string v2, " mAh"
 
-    .line 2133
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2135
     invoke-virtual {v7, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v2, "Excessive current drain detected:"
 
-    .line 2136
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2137
     iget-object v10, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 2138
     :try_start_0
     iget-object v2, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
@@ -988,7 +858,6 @@
 
     move-result v11
 
-    .line 2139
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1005,7 +874,6 @@
 
     if-lez v11, :cond_0
 
-    .line 2141
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v13
@@ -1015,38 +883,32 @@
     :goto_0
     if-ge v15, v11, :cond_1
 
-    .line 2143
     iget-object v1, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v15}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v16
 
-    .line 2144
     iget-object v1, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
-    .line 2145
     invoke-virtual {v1, v15}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 2146
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     move-object/from16 v17, v2
 
     check-cast v17, [J
 
-    .line 2147
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     move-object/from16 v18, v1
 
     check-cast v18, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 2148
     iget-wide v5, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainWindowMs:J
 
     move-object/from16 v1, p0
@@ -1067,7 +929,6 @@
 
     aput-object v12, v4, v8
 
-    .line 2152
     invoke-static/range {v16 .. v16}, Landroid/os/UserHandle;->formatUid(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1078,7 +939,6 @@
 
     aget v2, v2, v1
 
-    .line 2153
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -1091,7 +951,6 @@
 
     aget v1, v2, v1
 
-    .line 2154
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1114,7 +973,6 @@
 
     move-object/from16 v6, v16
 
-    .line 2155
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->formatHighBgBatteryRecord(JJLcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;)Ljava/lang/String;
 
     move-result-object v1
@@ -1131,7 +989,6 @@
 
     move-wide v4, v13
 
-    .line 2158
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->formatHighBgBatteryRecord(JJLcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;)Ljava/lang/String;
 
     move-result-object v1
@@ -1142,7 +999,6 @@
 
     move-object/from16 v1, v19
 
-    .line 2150
     invoke-virtual {v7, v1, v8}, Ljava/io/PrintWriter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
     add-int/lit8 v15, v15, 0x1
@@ -1151,16 +1007,13 @@
 
     goto :goto_0
 
-    .line 2164
     :cond_0
     invoke-virtual {v7, v12}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "(none)"
 
-    .line 2165
     invoke-virtual {v7, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2167
     :cond_1
     monitor-exit v10
 
@@ -1191,7 +1044,6 @@
 
     if-eqz p5, :cond_0
 
-    .line 2174
     invoke-static {p1, p2, p3, p4}, Landroid/util/TimeUtils;->formatTime(JJ)Ljava/lang/String;
 
     move-result-object p0
@@ -1210,7 +1062,6 @@
 
     const-string p1, "%s %s (%s)"
 
-    .line 2173
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1226,7 +1077,6 @@
 .method public final getCurrentDrainThresholdIndex(IJJ)I
     .locals 1
 
-    .line 1963
     invoke-virtual/range {p0 .. p5}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->hasMediaPlayback(IJJ)Z
 
     move-result v0
@@ -1265,13 +1115,11 @@
 
     return p1
 
-    .line 1761
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1762
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
@@ -1283,7 +1131,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1764
     iget-object v3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
     const-wide/16 v4, 0x0
@@ -1292,12 +1139,10 @@
 
     move-result-wide v6
 
-    .line 1765
     iget-object p2, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, [J
 
-    .line 1766
     aget-wide v2, p2, p1
 
     iget-wide v8, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainInteractionGracePeriodMs:J
@@ -1317,7 +1162,6 @@
     :cond_1
     move v2, p1
 
-    .line 1768
     :goto_0
     iget-object v6, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
@@ -1325,7 +1169,6 @@
 
     iget-object v6, v6, Lcom/android/server/am/BaseAppStateTracker;->mAppRestrictionController:Lcom/android/server/am/AppRestrictionController;
 
-    .line 1769
     invoke-virtual {v6}, Lcom/android/server/am/AppRestrictionController;->isAutoRestrictAbusiveAppEnabled()Z
 
     move-result v6
@@ -1355,7 +1198,6 @@
 
     if-le p3, p1, :cond_5
 
-    .line 1775
     aget-wide p2, p2, v3
 
     cmp-long p2, p2, v4
@@ -1364,7 +1206,6 @@
 
     move p0, p1
 
-    .line 1776
     :cond_4
     monitor-exit v1
 
@@ -1373,12 +1214,10 @@
     :cond_5
     if-ne p3, p1, :cond_6
 
-    .line 1778
     monitor-exit v1
 
     return p0
 
-    .line 1781
     :cond_6
     monitor-exit v1
 
@@ -1387,7 +1226,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1782
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1402,7 +1240,6 @@
 
     move/from16 v7, p1
 
-    .line 1840
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/BaseAppStatePolicy;->shouldExemptUid(I)I
 
     move-result v1
@@ -1413,7 +1250,6 @@
 
     return-void
 
-    .line 1851
     :cond_0
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getPercentage()[D
 
@@ -1425,7 +1261,6 @@
 
     move-result-wide v8
 
-    .line 1853
     invoke-virtual/range {p2 .. p2}, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->getPercentage()[D
 
     move-result-object v1
@@ -1436,12 +1271,10 @@
 
     move-result-wide v10
 
-    .line 1855
     iget-object v12, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 1856
     :try_start_0
     iget-object v1, v0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
@@ -1457,12 +1290,10 @@
 
     if-lt v13, v1, :cond_1
 
-    .line 1859
     monitor-exit v12
 
     return-void
 
-    .line 1861
     :cond_1
     iget-object v1, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
@@ -1472,12 +1303,10 @@
 
     move-result-wide v16
 
-    .line 1862
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v18
 
-    .line 1863
     iget-wide v5, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainWindowMs:J
 
     move-object/from16 v1, p0
@@ -1490,24 +1319,20 @@
 
     move-result v1
 
-    .line 1865
     iget-object v2, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v7}, Landroid/util/SparseArray;->indexOfKey(I)I
 
     move-result v2
 
-    .line 1866
     iget-boolean v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainDecoupleThresholds:Z
 
-    .line 1867
     iget-object v4, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     aget v4, v4, v1
 
     float-to-double v4, v4
 
-    .line 1868
     iget-object v6, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     aget v1, v6, v1
@@ -1526,7 +1351,6 @@
 
     if-ltz v2, :cond_3
 
-    .line 1873
     iget-wide v4, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainInteractionGracePeriodMs:J
 
     add-long v16, v16, v4
@@ -1543,7 +1367,6 @@
 
     aput-object p2, v4, v20
 
-    .line 1879
     iget-object v5, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-static {v2, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
@@ -1586,7 +1409,6 @@
 
     new-array v4, v6, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
 
-    .line 1889
     iget-object v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-static {v2, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
@@ -1595,11 +1417,9 @@
 
     invoke-virtual {v3, v7, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1891
     :cond_4
     aput-wide v18, v2, v1
 
-    .line 1892
     aput-object p2, v4, v1
 
     move v5, v1
@@ -1608,30 +1428,25 @@
 
     goto :goto_4
 
-    .line 1896
     :cond_5
     iget-object v6, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
-    .line 1897
     invoke-virtual {v6, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 1898
     iget-object v6, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v6, [J
 
-    .line 1899
     aget-wide v21, v6, v20
 
     cmpl-double v4, v8, v4
 
     if-ltz v4, :cond_8
 
-    .line 1901
     iget-wide v4, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainInteractionGracePeriodMs:J
 
     add-long v16, v16, v4
@@ -1646,10 +1461,8 @@
 
     if-nez v8, :cond_6
 
-    .line 1903
     aput-wide v18, v6, v20
 
-    .line 1904
     iget-object v4, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v4, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -1685,7 +1498,6 @@
 
     if-ne v13, v3, :cond_a
 
-    .line 1921
     iget-wide v3, v0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainWindowMs:J
 
     add-long v21, v21, v3
@@ -1700,10 +1512,8 @@
     :cond_a
     if-eqz v20, :cond_b
 
-    .line 1925
     aput-wide v18, v6, v1
 
-    .line 1926
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -1718,10 +1528,8 @@
     :cond_c
     const-wide/16 v8, 0x0
 
-    .line 1933
     aput-wide v8, v6, v1
 
-    .line 1934
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -1732,7 +1540,6 @@
 
     move/from16 v20, v4
 
-    .line 1938
     :cond_d
     :goto_4
     monitor-exit v12
@@ -1743,7 +1550,6 @@
 
     if-eqz v20, :cond_e
 
-    .line 1947
     iget-object v0, v0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast v0, Lcom/android/server/am/AppBatteryTracker;
@@ -1762,7 +1568,6 @@
     :catchall_0
     move-exception v0
 
-    .line 1938
     :try_start_1
     monitor-exit v12
     :try_end_1
@@ -1774,7 +1579,6 @@
 .method public final hasLocation(IJJ)Z
     .locals 10
 
-    .line 1975
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainHighThresholdByBgLocation:Z
 
     const/4 v1, 0x0
@@ -1783,7 +1587,6 @@
 
     return v1
 
-    .line 1978
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
@@ -1791,7 +1594,6 @@
 
     iget-object v2, v0, Lcom/android/server/am/BaseAppStateTracker;->mAppRestrictionController:Lcom/android/server/am/AppRestrictionController;
 
-    .line 1979
     iget-object v0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getPermissionManagerServiceInternal()Lcom/android/server/pm/permission/PermissionManagerServiceInternal;
@@ -1810,7 +1612,6 @@
 
     return v9
 
-    .line 1983
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainEventDurationBasedThresholdEnabled:Z
 
@@ -1823,7 +1624,6 @@
 
     sub-long p4, p2, p4
 
-    .line 1986
     invoke-static {v3, v4, p4, p5}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v4
@@ -1834,12 +1634,10 @@
 
     move-wide v6, p2
 
-    .line 1987
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/am/AppRestrictionController;->getForegroundServiceTotalDurationsSince(IJJI)J
 
     move-result-wide p1
 
-    .line 1989
     iget-wide p3, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainLocationMinDuration:J
 
     cmp-long p0, p1, p3
@@ -1855,7 +1653,6 @@
 .method public final hasMediaPlayback(IJJ)Z
     .locals 7
 
-    .line 1969
     iget-boolean v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainEventDurationBasedThresholdEnabled:Z
 
     if-eqz v0, :cond_0
@@ -1872,7 +1669,6 @@
 
     move-wide v5, p4
 
-    .line 1970
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/AppRestrictionController;->getCompositeMediaPlaybackDurations(IJJ)J
 
     move-result-wide p1
@@ -1901,13 +1697,11 @@
 
     return-void
 
-    .line 2020
     :cond_0
     iget-object p2, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter p2
 
-    .line 2023
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
@@ -1919,7 +1713,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 2025
     iget-object p1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p1, [J
@@ -1930,7 +1723,6 @@
 
     aput-wide v0, p1, p3
 
-    .line 2026
     iget-object p0, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast p0, [Lcom/android/server/am/AppBatteryTracker$ImmutableBatteryUsage;
@@ -1939,7 +1731,6 @@
 
     aput-object p1, p0, p3
 
-    .line 2028
     :cond_1
     monitor-exit p2
 
@@ -1958,7 +1749,6 @@
 .method public onPropertiesChanged(Ljava/lang/String;)V
     .locals 2
 
-    .line 1585
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -2228,60 +2018,50 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 1621
     invoke-super {p0, p1}, Lcom/android/server/am/BaseAppStatePolicy;->onPropertiesChanged(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 1600
     :pswitch_0
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainWindow()V
 
     goto :goto_1
 
-    .line 1615
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainExemptedTypes()V
 
     goto :goto_1
 
-    .line 1603
     :pswitch_2
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainInteractionGracePeriod()V
 
     goto :goto_1
 
-    .line 1597
     :pswitch_3
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateBgCurrentDrainAutoRestrictAbusiveAppsEnabled()V
 
     goto :goto_1
 
-    .line 1609
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainLocationMinDuration()V
 
     goto :goto_1
 
-    .line 1594
     :pswitch_5
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainThreshold()V
 
     goto :goto_1
 
-    .line 1606
     :pswitch_6
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainMediaPlaybackMinDuration()V
 
     goto :goto_1
 
-    .line 1618
     :pswitch_7
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainDecoupleThresholds()V
 
     goto :goto_1
 
-    .line 1612
     :pswitch_8
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainEventDurationBasedThresholdEnabled()V
 
@@ -2334,10 +2114,8 @@
 .method public onSystemReady()V
     .locals 1
 
-    .line 1740
     iget-object v0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
 
-    .line 1741
     invoke-virtual {v0}, Lcom/android/server/am/BaseAppStateTracker$Injector;->getBatteryManagerInternal()Landroid/os/BatteryManagerInternal;
 
     move-result-object v0
@@ -2350,34 +2128,24 @@
 
     iput v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryFullChargeMah:I
 
-    .line 1742
     invoke-super {p0}, Lcom/android/server/am/BaseAppStatePolicy;->onSystemReady()V
 
-    .line 1743
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainThreshold()V
 
-    .line 1744
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainWindow()V
 
-    .line 1745
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainInteractionGracePeriod()V
 
-    .line 1746
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainMediaPlaybackMinDuration()V
 
-    .line 1747
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainLocationMinDuration()V
 
-    .line 1748
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainEventDurationBasedThresholdEnabled()V
 
-    .line 1749
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainExemptedTypes()V
 
-    .line 1750
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateCurrentDrainDecoupleThresholds()V
 
-    .line 1751
     invoke-virtual {p0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->updateBgCurrentDrainAutoRestrictAbusiveAppsEnabled()V
 
     return-void
@@ -2386,7 +2154,6 @@
 .method public onTrackerEnabled(Z)V
     .locals 0
 
-    .line 1636
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppBatteryTracker;
@@ -2399,12 +2166,10 @@
 .method public onUidRemovedLocked(I)V
     .locals 1
 
-    .line 2054
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 2055
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseLongArray;->delete(I)V
@@ -2415,12 +2180,10 @@
 .method public onUserInteractionStarted(Ljava/lang/String;I)V
     .locals 4
 
-    .line 1994
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1995
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
@@ -2430,7 +2193,6 @@
 
     invoke-virtual {v1, p2, v2, v3}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 1996
     iget-object v1, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast v1, Lcom/android/server/am/AppBatteryTracker;
@@ -2449,7 +2211,6 @@
 
     goto :goto_0
 
-    .line 2002
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
@@ -2459,7 +2220,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 2004
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->removeAt(I)V
@@ -2472,7 +2232,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 2008
     :goto_1
     monitor-exit v0
     :try_end_0
@@ -2480,7 +2239,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 2011
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppBatteryTracker;
@@ -2499,7 +2257,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2008
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2511,7 +2268,6 @@
 .method public onUserRemovedLocked(I)V
     .locals 2
 
-    .line 2040
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -2523,7 +2279,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2041
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
@@ -2536,7 +2291,6 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 2042
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->removeAt(I)V
@@ -2546,7 +2300,6 @@
 
     goto :goto_0
 
-    .line 2045
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
@@ -2559,7 +2312,6 @@
     :goto_1
     if-ltz v0, :cond_3
 
-    .line 2046
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseLongArray;->keyAt(I)I
@@ -2572,7 +2324,6 @@
 
     if-ne v1, p1, :cond_2
 
-    .line 2047
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseLongArray;->removeAt(I)V
@@ -2589,17 +2340,14 @@
 .method public reset()V
     .locals 1
 
-    .line 2033
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mHighBgBatteryPackages:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 2034
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mLastInteractionTime:Landroid/util/SparseLongArray;
 
     invoke-virtual {v0}, Landroid/util/SparseLongArray;->clear()V
 
-    .line 2035
     iget-object p0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTracker:Lcom/android/server/am/BaseAppStateTracker;
 
     check-cast p0, Lcom/android/server/am/AppBatteryTracker;
@@ -2612,7 +2360,6 @@
 .method public final sumPercentageOfTypes([DI)D
     .locals 4
 
-    .line 1796
     invoke-static {p2}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
@@ -2622,12 +2369,10 @@
     :goto_0
     if-eqz p0, :cond_0
 
-    .line 1798
     invoke-static {p0}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
     move-result v2
 
-    .line 1799
     aget-wide v2, p1, v2
 
     add-double/2addr v0, v2
@@ -2636,7 +2381,6 @@
 
     and-int/2addr p2, p0
 
-    .line 1797
     invoke-static {p2}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
@@ -2652,7 +2396,6 @@
 
     const-string v0, "bg_current_drain_auto_restrict_abusive_apps_enabled"
 
-    .line 1732
     iget-boolean v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainAutoRestrictAbusiveAppsEnabled:Z
 
     const-string v2, "activity_manager"
@@ -2675,7 +2418,6 @@
 
     const-string v2, "activity_manager"
 
-    .line 1725
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -2690,7 +2432,6 @@
 
     const-string v0, "bg_current_drain_event_duration_based_threshold_enabled"
 
-    .line 1711
     iget-boolean v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainEventDurationBasedThresholdEnabled:Z
 
     const-string v2, "activity_manager"
@@ -2709,7 +2450,6 @@
 
     const-string v0, "bg_current_drain_exempted_types"
 
-    .line 1718
     iget v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainExemptedTypes:I
 
     const-string v2, "activity_manager"
@@ -2728,7 +2468,6 @@
 
     const-string v0, "bg_current_drain_interaction_grace_period"
 
-    .line 1690
     iget-wide v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainInteractionGracePeriodMs:J
 
     const-string v3, "activity_manager"
@@ -2747,7 +2486,6 @@
 
     const-string v0, "bg_current_drain_location_min_duration"
 
-    .line 1704
     iget-wide v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainLocationMinDuration:J
 
     const-string v3, "activity_manager"
@@ -2766,7 +2504,6 @@
 
     const-string v0, "bg_current_drain_media_playback_min_duration"
 
-    .line 1697
     iget-wide v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainMediaPlaybackMinDuration:J
 
     const-string v3, "activity_manager"
@@ -2783,7 +2520,6 @@
 .method public final updateCurrentDrainThreshold()V
     .locals 6
 
-    .line 1640
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     const-string v1, "bg_current_drain_threshold_to_restricted_bucket"
@@ -2792,7 +2528,6 @@
 
     const-string v3, "activity_manager"
 
-    .line 1641
     invoke-static {v3, v1, v2}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
     move-result v1
@@ -2801,14 +2536,12 @@
 
     aput v1, v0, v2
 
-    .line 1644
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainRestrictedBucketThreshold:[F
 
     const-string v1, "bg_current_drain_high_threshold_to_restricted_bucket"
 
     iget v4, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainRestrictedBucketHighThreshold:F
 
-    .line 1645
     invoke-static {v3, v1, v4}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
     move-result v1
@@ -2817,28 +2550,24 @@
 
     aput v1, v0, v4
 
-    .line 1648
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     const-string v1, "bg_current_drain_threshold_to_bg_restricted"
 
     iget v5, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainBgRestrictedThreshold:F
 
-    .line 1649
     invoke-static {v3, v1, v5}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
     move-result v1
 
     aput v1, v0, v2
 
-    .line 1652
     iget-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainBgRestrictedThreshold:[F
 
     const-string v1, "bg_current_drain_high_threshold_to_bg_restricted"
 
     iget v5, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainBgRestrictedHighThreshold:F
 
-    .line 1653
     invoke-static {v3, v1, v5}, Landroid/provider/DeviceConfig;->getFloat(Ljava/lang/String;Ljava/lang/String;F)F
 
     move-result v1
@@ -2847,10 +2576,8 @@
 
     const-string v0, "bg_current_drain_types_to_restricted_bucket"
 
-    .line 1656
     iget v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultCurrentDrainTypesToRestrictedBucket:I
 
-    .line 1657
     invoke-static {v3, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -2859,10 +2586,8 @@
 
     const-string v0, "bg_current_drain_types_to_bg_restricted"
 
-    .line 1660
     iget v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainTypesToBgRestricted:I
 
-    .line 1661
     invoke-static {v3, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -2871,24 +2596,20 @@
 
     const-string v0, "bg_current_drain_power_components"
 
-    .line 1664
     iget v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainPowerComponent:I
 
-    .line 1665
     invoke-static {v3, v0, v1}, Landroid/provider/DeviceConfig;->getInt(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainPowerComponents:I
 
-    .line 1668
     iget v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBgCurrentDrainPowerComponents:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 1669
     sget-object v0, Lcom/android/server/am/AppBatteryTracker$BatteryUsage;->BATT_DIMENS:[Landroid/os/BatteryConsumer$Dimensions;
 
     iput-object v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryDimensions:[Landroid/os/BatteryConsumer$Dimensions;
@@ -2900,13 +2621,11 @@
 
     new-array v1, v0, [Landroid/os/BatteryConsumer$Dimensions;
 
-    .line 1671
     iput-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryDimensions:[Landroid/os/BatteryConsumer$Dimensions;
 
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 1673
     iget-object v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryDimensions:[Landroid/os/BatteryConsumer$Dimensions;
 
     new-instance v4, Landroid/os/BatteryConsumer$Dimensions;
@@ -2925,10 +2644,8 @@
     :goto_1
     const-string v0, "bg_current_drain_high_threshold_by_bg_location"
 
-    .line 1676
     iget-boolean v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainHighThresholdByBgLocation:Z
 
-    .line 1677
     invoke-static {v3, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -2943,7 +2660,6 @@
 
     const-string v0, "bg_current_drain_window"
 
-    .line 1683
     iget-wide v1, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mDefaultBgCurrentDrainWindowMs:J
 
     const-string v3, "activity_manager"
@@ -2960,12 +2676,10 @@
 .method public updateTrackerEnabled()V
     .locals 1
 
-    .line 1627
     iget v0, p0, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->mBatteryFullChargeMah:I
 
     if-lez v0, :cond_0
 
-    .line 1628
     invoke-super {p0}, Lcom/android/server/am/BaseAppStatePolicy;->updateTrackerEnabled()V
 
     goto :goto_0
@@ -2973,10 +2687,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1630
     iput-boolean v0, p0, Lcom/android/server/am/BaseAppStatePolicy;->mTrackerEnabled:Z
 
-    .line 1631
     invoke-virtual {p0, v0}, Lcom/android/server/am/AppBatteryTracker$AppBatteryPolicy;->onTrackerEnabled(Z)V
 
     :goto_0

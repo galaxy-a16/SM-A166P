@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;
 
     invoke-static {p1}, Lcom/samsung/android/server/packagefeature/core/PackageFeatures;->$r8$lambda$adLWiRza5YvIFHXY_owka0bA_oU(Lcom/samsung/android/server/packagefeature/core/PackageFeatureGroupRecord;)V

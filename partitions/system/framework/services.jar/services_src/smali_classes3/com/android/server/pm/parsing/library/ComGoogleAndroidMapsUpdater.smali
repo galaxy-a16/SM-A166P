@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
     return-void
@@ -20,10 +19,8 @@
 
     const-string p0, "com.google.android.maps"
 
-    .line 34
     invoke-interface {p1, p0}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->removeUsesLibrary(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
-    .line 35
     invoke-interface {p1, p0}, Lcom/android/server/pm/parsing/pkg/ParsedPackage;->removeUsesOptionalLibrary(Ljava/lang/String;)Lcom/android/server/pm/parsing/pkg/ParsedPackage;
 
     return-void

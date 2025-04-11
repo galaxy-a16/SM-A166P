@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$ogMCk7Z3ZknlbYcWZd3fJAun71Q(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->lambda$onChange$0()V
 
     return-void
@@ -22,15 +21,12 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 16867
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 16868
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string p1, "device_policy_constants"
 
-    .line 16865
     invoke-static {p1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -43,7 +39,6 @@
 .method private synthetic lambda$onChange$0()V
     .locals 5
 
-    .line 16882
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.app.action.DEVICE_POLICY_CONSTANTS_CHANGED"
@@ -52,10 +47,8 @@
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 16884
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 16885
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -66,7 +59,6 @@
 
     const/4 v2, 0x0
 
-    .line 16886
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -74,7 +66,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 16887
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v3, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -106,7 +97,6 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 0
 
-    .line 16878
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$mloadConstants(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)Lcom/android/server/devicepolicy/DevicePolicyConstants;
@@ -115,10 +105,8 @@
 
     invoke-static {p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-$$Nest$fputmConstants(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Lcom/android/server/devicepolicy/DevicePolicyConstants;)V
 
-    .line 16879
     invoke-static {}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->invalidateBinderCaches()V
 
-    .line 16881
     iget-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object p1, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
@@ -135,7 +123,6 @@
 .method public register()V
     .locals 4
 
-    .line 16872
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyConstantsObserver;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;

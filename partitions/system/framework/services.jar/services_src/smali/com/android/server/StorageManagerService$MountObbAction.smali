@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;ILandroid/content/res/ObbInfo;)V
     .locals 0
 
-    .line 4857
     iput-object p1, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
-    .line 4858
     invoke-direct {p0, p2}, Lcom/android/server/StorageManagerService$ObbAction;-><init>(Lcom/android/server/StorageManagerService$ObbState;)V
 
-    .line 4859
     iput p3, p0, Lcom/android/server/StorageManagerService$MountObbAction;->mCallingUid:I
 
-    .line 4860
     iput-object p4, p0, Lcom/android/server/StorageManagerService$MountObbAction;->mObbInfo:Landroid/content/res/ObbInfo;
 
     return-void
@@ -35,12 +31,10 @@
 .method public handleExecute()V
     .locals 5
 
-    .line 4865
     iget-object v0, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {v0}, Lcom/android/server/StorageManagerService;->-$$Nest$mwarnOnNotMounted(Lcom/android/server/StorageManagerService;)V
 
-    .line 4867
     iget-object v0, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
     iget-object v1, p0, Lcom/android/server/StorageManagerService$MountObbAction;->mObbInfo:Landroid/content/res/ObbInfo;
@@ -55,7 +49,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4873
     iget-object v0, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {v0}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmObbMounts(Lcom/android/server/StorageManagerService;)Ljava/util/Map;
@@ -64,7 +57,6 @@
 
     monitor-enter v0
 
-    .line 4874
     :try_start_0
     iget-object v1, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
@@ -80,14 +72,12 @@
 
     move-result v1
 
-    .line 4875
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     if-nez v1, :cond_0
 
-    .line 4882
     :try_start_1
     iget-object v0, p0, Lcom/android/server/StorageManagerService$ObbAction;->mObbState:Lcom/android/server/StorageManagerService$ObbState;
 
@@ -109,7 +99,6 @@
 
     iput-object v1, v0, Lcom/android/server/StorageManagerService$ObbState;->volId:Ljava/lang/String;
 
-    .line 4883
     iget-object v0, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {v0}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmVold(Lcom/android/server/StorageManagerService;)Landroid/os/IVold;
@@ -128,7 +117,6 @@
 
     invoke-interface {v0, v1, v4, v2, v3}, Landroid/os/IVold;->mount(Ljava/lang/String;IILandroid/os/IVoldMountCallback;)V
 
-    .line 4888
     iget-object v0, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {v0}, Lcom/android/server/StorageManagerService;->-$$Nest$fgetmObbMounts(Lcom/android/server/StorageManagerService;)Ljava/util/Map;
@@ -139,7 +127,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 4889
     :try_start_2
     iget-object v1, p0, Lcom/android/server/StorageManagerService$MountObbAction;->this$0:Lcom/android/server/StorageManagerService;
 
@@ -147,14 +134,12 @@
 
     invoke-static {v1, v2}, Lcom/android/server/StorageManagerService;->-$$Nest$maddObbStateLocked(Lcom/android/server/StorageManagerService;Lcom/android/server/StorageManagerService$ObbState;)V
 
-    .line 4890
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     const/4 v0, 0x1
 
-    .line 4892
     :try_start_3
     invoke-virtual {p0, v0}, Lcom/android/server/StorageManagerService$ObbAction;->notifyObbStateChange(I)V
     :try_end_3
@@ -165,7 +150,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4890
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -179,7 +163,6 @@
     :catch_0
     move-exception p0
 
-    .line 4894
     new-instance v0, Lcom/android/server/StorageManagerService$ObbException;
 
     const/16 v1, 0x15
@@ -188,7 +171,6 @@
 
     throw v0
 
-    .line 4877
     :cond_0
     new-instance v0, Lcom/android/server/StorageManagerService$ObbException;
 
@@ -219,7 +201,6 @@
     :catchall_1
     move-exception p0
 
-    .line 4875
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -227,7 +208,6 @@
 
     throw p0
 
-    .line 4868
     :cond_1
     new-instance v0, Lcom/android/server/StorageManagerService$ObbException;
 
@@ -269,27 +249,22 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 4900
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "MountObbAction{"
 
-    .line 4901
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4902
     iget-object p0, p0, Lcom/android/server/StorageManagerService$ObbAction;->mObbState:Lcom/android/server/StorageManagerService$ObbState;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d
 
-    .line 4903
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 4904
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

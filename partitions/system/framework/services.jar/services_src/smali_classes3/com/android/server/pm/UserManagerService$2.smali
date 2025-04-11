@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 0
 
-    .line 640
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$2;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string v0, "android.intent.action.CONFIGURATION_CHANGED"
 
-    .line 643
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -39,7 +37,6 @@
 
     return-void
 
-    .line 646
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/UserManagerService$2;->this$0:Lcom/android/server/pm/UserManagerService;
 

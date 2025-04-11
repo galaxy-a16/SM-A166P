@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$o_OrcmiwSegk0Cl6DW0Phad6Mm8(Lcom/android/server/alarm/AlarmManagerService$3;Landroid/app/IAlarmCompleteListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/alarm/AlarmManagerService$3;->lambda$doAlarm$0(Landroid/app/IAlarmCompleteListener;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 2249
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/app/IAlarmListener$Stub;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$doAlarm$0(Landroid/app/IAlarmCompleteListener;)V
     .locals 5
 
-    .line 2260
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -50,7 +47,6 @@
 
     invoke-virtual {v0, v2, v3, v4, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2263
     :try_start_0
     invoke-interface {p1, p0}, Landroid/app/IAlarmCompleteListener;->alarmComplete(Landroid/os/IBinder;)V
     :try_end_0
@@ -65,7 +61,6 @@
 .method public doAlarm(Landroid/app/IAlarmCompleteListener;)V
     .locals 3
 
-    .line 2259
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object v0, v0, Lcom/android/server/alarm/AlarmManagerService;->mHandler:Lcom/android/server/alarm/AlarmManagerService$AlarmHandler;
@@ -76,14 +71,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2267
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p1, p1, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 2268
     :try_start_0
     iget-object v0, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -97,12 +90,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/alarm/AlarmManagerService;->-$$Nest$fputmLastTickReceived(Lcom/android/server/alarm/AlarmManagerService;J)V
 
-    .line 2269
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2270
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$3;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService;->mClockReceiver:Lcom/android/server/alarm/AlarmManagerService$ClockReceiver;
@@ -114,7 +105,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2269
     :try_start_1
     monitor-exit p1
     :try_end_1

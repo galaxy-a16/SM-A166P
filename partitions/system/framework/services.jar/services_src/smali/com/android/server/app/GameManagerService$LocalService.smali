@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/app/GameManagerService;)V
     .locals 0
 
-    .line 917
     iput-object p1, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-direct {p0}, Landroid/app/GameManagerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/app/GameManagerService;Lcom/android/server/app/GameManagerService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/app/GameManagerService$LocalService;-><init>(Lcom/android/server/app/GameManagerService;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method public getResolutionScalingFactor(Ljava/lang/String;I)F
     .locals 1
 
-    .line 920
     iget-object v0, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {v0, p1, p2}, Lcom/android/server/app/GameManagerService;->-$$Nest$mgetGameModeFromSettingsUnchecked(Lcom/android/server/app/GameManagerService;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 921
     iget-object p0, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/app/GameManagerService;->getResolutionScalingFactorInternal(Ljava/lang/String;II)F
@@ -53,7 +49,6 @@
 .method public updateResolutionScalingFactorInternal(Ljava/lang/String;F)V
     .locals 3
 
-    .line 926
     iget-object v0, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {v0}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmLock(Lcom/android/server/app/GameManagerService;)Ljava/lang/Object;
@@ -62,7 +57,6 @@
 
     monitor-enter v0
 
-    .line 927
     :try_start_0
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
@@ -90,39 +84,32 @@
 
     if-eqz v1, :cond_0
 
-    .line 928
     iget-object v1, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {v1}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmContext(Lcom/android/server/app/GameManagerService;)Landroid/content/Context;
 
     move-result-object v2
 
-    .line 929
     invoke-virtual {v2}, Landroid/content/Context;->getUserId()I
 
     move-result v2
 
-    .line 928
     invoke-static {v1, p1, v2}, Lcom/android/server/app/GameManagerService;->-$$Nest$mgetGameModeFromSettingsUnchecked(Lcom/android/server/app/GameManagerService;Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 930
     iget-object p0, p0, Lcom/android/server/app/GameManagerService$LocalService;->this$0:Lcom/android/server/app/GameManagerService;
 
     invoke-static {p0}, Lcom/android/server/app/GameManagerService;->-$$Nest$fgetmContext(Lcom/android/server/app/GameManagerService;)Landroid/content/Context;
 
     move-result-object v2
 
-    .line 931
     invoke-virtual {v2}, Landroid/content/Context;->getUserId()I
 
     move-result v2
 
-    .line 930
     invoke-virtual {p0, p1, v1, p2, v2}, Lcom/android/server/app/GameManagerService;->updateResolutionScalingFactor(Ljava/lang/String;IFI)V
 
-    .line 933
     :cond_0
     monitor-exit v0
 

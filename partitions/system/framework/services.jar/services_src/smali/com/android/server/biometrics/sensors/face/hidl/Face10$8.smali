@@ -15,7 +15,6 @@
 
     move-object v1, p1
 
-    .line 1198
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/face/hidl/Face10$8;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/Face10;
 
     move-object v1, p2
@@ -44,7 +43,6 @@
 .method public daemonResetLockout(Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1201
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->-$$Nest$sfgetmProviderExtImpl()Lcom/android/server/biometrics/sensors/face/hidl/Face10$ProviderExtensionImpl;
 
     move-result-object p0

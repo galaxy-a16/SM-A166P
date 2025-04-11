@@ -15,16 +15,12 @@
 .method public constructor <init>(Landroid/content/IntentFilter;Landroid/content/ComponentName;Z)V
     .locals 0
 
-    .line 60
     invoke-direct {p0, p1}, Lcom/android/server/pm/WatchedIntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    .line 61
     iput-object p2, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mComponent:Landroid/content/ComponentName;
 
-    .line 62
     iput-boolean p3, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mIsSetByDpm:Z
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredActivity;->makeCache()Lcom/android/server/utils/SnapshotCache;
 
     move-result-object p1
@@ -37,19 +33,16 @@
 .method public constructor <init>(Lcom/android/modules/utils/TypedXmlPullParser;)V
     .locals 8
 
-    .line 80
     invoke-direct {p0}, Lcom/android/server/pm/WatchedIntentFilter;-><init>()V
 
     const-string/jumbo v0, "name"
 
     const/4 v1, 0x0
 
-    .line 81
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 82
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
@@ -62,7 +55,6 @@
 
     if-nez v2, :cond_0
 
-    .line 84
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +67,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 87
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v0
@@ -86,7 +77,6 @@
 
     move-result-object v0
 
-    .line 84
     invoke-static {v4, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
     :cond_0
@@ -94,24 +84,20 @@
 
     const/4 v2, 0x0
 
-    .line 89
     invoke-interface {p1, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mIsSetByDpm:Z
 
-    .line 91
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 92
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 94
     :cond_1
     :goto_0
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -128,14 +114,12 @@
 
     if-ne v2, v5, :cond_2
 
-    .line 95
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getDepth()I
 
     move-result v7
 
     if-le v7, v0, :cond_5
 
-    .line 96
     :cond_2
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
@@ -154,7 +138,6 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 100
     invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -163,7 +146,6 @@
 
     goto :goto_1
 
-    .line 103
     :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -177,7 +159,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v5
@@ -188,15 +169,12 @@
 
     move-result-object v2
 
-    .line 103
     invoke-static {v4, v2}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 106
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 110
     :cond_5
     :goto_1
     invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -205,14 +183,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/pm/WatchedIntentFilter;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, p1}, Landroid/content/IntentFilter;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_2
 
-    .line 113
     :cond_6
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -222,7 +198,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 115
     invoke-interface {p1}, Lcom/android/modules/utils/TypedXmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v1
@@ -233,13 +208,10 @@
 
     move-result-object v0
 
-    .line 113
     invoke-static {v4, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 116
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 118
     :goto_2
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredActivity;->makeCache()Lcom/android/server/utils/SnapshotCache;
 
@@ -253,20 +225,16 @@
 .method public constructor <init>(Lcom/android/server/pm/PersistentPreferredActivity;)V
     .locals 1
 
-    .line 73
     invoke-direct {p0, p1}, Lcom/android/server/pm/WatchedIntentFilter;-><init>(Lcom/android/server/pm/WatchedIntentFilter;)V
 
-    .line 74
     iget-object v0, p1, Lcom/android/server/pm/PersistentPreferredActivity;->mComponent:Landroid/content/ComponentName;
 
     iput-object v0, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mComponent:Landroid/content/ComponentName;
 
-    .line 75
     iget-boolean p1, p1, Lcom/android/server/pm/PersistentPreferredActivity;->mIsSetByDpm:Z
 
     iput-boolean p1, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mIsSetByDpm:Z
 
-    .line 76
     new-instance p1, Lcom/android/server/utils/SnapshotCache$Sealed;
 
     invoke-direct {p1}, Lcom/android/server/utils/SnapshotCache$Sealed;-><init>()V
@@ -279,7 +247,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/pm/PersistentPreferredActivity-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/PersistentPreferredActivity;-><init>(Lcom/android/server/pm/PersistentPreferredActivity;)V
 
     return-void
@@ -288,7 +255,6 @@
 .method public constructor <init>(Lcom/android/server/pm/WatchedIntentFilter;Landroid/content/ComponentName;Z)V
     .locals 0
 
-    .line 68
     iget-object p1, p1, Lcom/android/server/pm/WatchedIntentFilter;->mFilter:Landroid/content/IntentFilter;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/PersistentPreferredActivity;-><init>(Landroid/content/IntentFilter;Landroid/content/ComponentName;Z)V
@@ -301,7 +267,6 @@
 .method public getIntentFilter()Landroid/content/IntentFilter;
     .locals 0
 
-    .line 130
     iget-object p0, p0, Lcom/android/server/pm/WatchedIntentFilter;->mFilter:Landroid/content/IntentFilter;
 
     return-object p0
@@ -310,7 +275,6 @@
 .method public final makeCache()Lcom/android/server/utils/SnapshotCache;
     .locals 1
 
-    .line 50
     new-instance v0, Lcom/android/server/pm/PersistentPreferredActivity$1;
 
     invoke-direct {v0, p0, p0, p0}, Lcom/android/server/pm/PersistentPreferredActivity$1;-><init>(Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/pm/PersistentPreferredActivity;Lcom/android/server/utils/Watchable;)V
@@ -321,7 +285,6 @@
 .method public snapshot()Lcom/android/server/pm/PersistentPreferredActivity;
     .locals 0
 
-    .line 141
     iget-object p0, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mSnapshot:Lcom/android/server/utils/SnapshotCache;
 
     invoke-virtual {p0}, Lcom/android/server/utils/SnapshotCache;->snapshot()Ljava/lang/Object;
@@ -336,7 +299,6 @@
 .method public bridge synthetic snapshot()Lcom/android/server/pm/WatchedIntentFilter;
     .locals 0
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredActivity;->snapshot()Lcom/android/server/pm/PersistentPreferredActivity;
 
     move-result-object p0
@@ -347,7 +309,6 @@
 .method public bridge synthetic snapshot()Ljava/lang/Object;
     .locals 0
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/pm/PersistentPreferredActivity;->snapshot()Lcom/android/server/pm/PersistentPreferredActivity;
 
     move-result-object p0
@@ -358,7 +319,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +343,6 @@
 
     iget-object v1, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mComponent:Landroid/content/ComponentName;
 
-    .line 136
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v1
@@ -412,7 +371,6 @@
 .method public writeToXml(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 3
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
@@ -427,22 +385,18 @@
 
     const-string/jumbo v0, "set-by-dpm"
 
-    .line 123
     iget-boolean v2, p0, Lcom/android/server/pm/PersistentPreferredActivity;->mIsSetByDpm:Z
 
     invoke-interface {p1, v1, v0, v2}, Lcom/android/modules/utils/TypedXmlSerializer;->attributeBoolean(Ljava/lang/String;Ljava/lang/String;Z)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v0, "filter"
 
-    .line 124
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/pm/WatchedIntentFilter;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p0, p1}, Landroid/content/IntentFilter;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 126
     invoke-interface {p1, v1, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void

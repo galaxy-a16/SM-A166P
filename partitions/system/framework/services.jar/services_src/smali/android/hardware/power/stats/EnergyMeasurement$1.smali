@@ -20,12 +20,10 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/hardware/power/stats/EnergyMeasurement;
     .locals 0
 
-    .line 16
     new-instance p0, Landroid/hardware/power/stats/EnergyMeasurement;
 
     invoke-direct {p0}, Landroid/hardware/power/stats/EnergyMeasurement;-><init>()V
 
-    .line 17
     invoke-virtual {p0, p1}, Landroid/hardware/power/stats/EnergyMeasurement;->readFromParcel(Landroid/os/Parcel;)V
 
     return-object p0
@@ -34,7 +32,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/hardware/power/stats/EnergyMeasurement$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/power/stats/EnergyMeasurement;
 
     move-result-object p0
@@ -45,7 +42,6 @@
 .method public newArray(I)[Landroid/hardware/power/stats/EnergyMeasurement;
     .locals 0
 
-    .line 22
     new-array p0, p1, [Landroid/hardware/power/stats/EnergyMeasurement;
 
     return-object p0
@@ -54,7 +50,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 13
     invoke-virtual {p0, p1}, Landroid/hardware/power/stats/EnergyMeasurement$1;->newArray(I)[Landroid/hardware/power/stats/EnergyMeasurement;
 
     move-result-object p0

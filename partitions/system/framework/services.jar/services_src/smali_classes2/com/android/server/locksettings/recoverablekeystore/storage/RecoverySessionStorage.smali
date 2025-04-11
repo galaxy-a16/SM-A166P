@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$zUa-X2p_WusEh1EHfQBUwz0CV0Q(Ljava/lang/String;Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->lambda$remove$0(Ljava/lang/String;Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)Z
 
     move-result p0
@@ -25,10 +24,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -41,7 +38,6 @@
 .method public static synthetic lambda$remove$0(Ljava/lang/String;Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)Z
     .locals 0
 
-    .line 82
     invoke-static {p1}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;->-$$Nest$fgetmSessionId(Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)Ljava/lang/String;
 
     move-result-object p1
@@ -58,7 +54,6 @@
 .method public add(ILcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)V
     .locals 2
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -67,7 +62,6 @@
 
     if-nez v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -76,7 +70,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 72
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
@@ -94,7 +87,6 @@
 .method public destroy()V
     .locals 4
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -106,7 +98,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 127
     iget-object v2, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -115,7 +106,6 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 128
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -133,7 +123,6 @@
 
     check-cast v3, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;
 
-    .line 129
     invoke-virtual {v3}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;->destroy()V
 
     goto :goto_1
@@ -150,7 +139,6 @@
 .method public get(ILjava/lang/String;)Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;
     .locals 2
 
-    .line 48
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -165,7 +153,6 @@
 
     return-object p1
 
-    .line 52
     :cond_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -184,7 +171,6 @@
 
     check-cast v0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;
 
-    .line 53
     invoke-static {v0}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;->-$$Nest$fgetmSessionId(Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;)Ljava/lang/String;
 
     move-result-object v1
@@ -204,7 +190,6 @@
 .method public remove(I)V
     .locals 2
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -217,7 +202,6 @@
 
     return-void
 
-    .line 97
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -236,12 +220,10 @@
 
     check-cast v1, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;
 
-    .line 98
     invoke-virtual {v1}, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage$Entry;->destroy()V
 
     goto :goto_0
 
-    .line 100
     :cond_1
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
@@ -253,7 +235,6 @@
 .method public remove(ILjava/lang/String;)V
     .locals 1
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -264,7 +245,6 @@
 
     return-void
 
-    .line 82
     :cond_0
     iget-object p0, p0, Lcom/android/server/locksettings/recoverablekeystore/storage/RecoverySessionStorage;->mSessionsByUid:Landroid/util/SparseArray;
 

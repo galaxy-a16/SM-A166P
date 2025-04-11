@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/chimera/PerProcessNandswap;)V
     .locals 0
 
-    .line 485
     iput-object p1, p0, Lcom/android/server/chimera/PerProcessNandswap$1;->this$0:Lcom/android/server/chimera/PerProcessNandswap;
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -24,7 +23,6 @@
 .method public removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 0
 
-    .line 488
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->size()I
 
     move-result p0

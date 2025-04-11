@@ -26,39 +26,32 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 137
     invoke-direct {p0}, Lcom/samsung/android/knox/net/apn/IApnSettingsPolicy$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 90
     iput-boolean v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->dunRequired:Z
 
     const/4 v0, 0x0
 
-    .line 104
     iput-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 106
     sget v0, Lcom/samsung/android/knox/KnoxInternalFeature;->KNOX_CONFIG_MDM_VERSION:I
 
     iput v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mMDMConfigVersion:I
 
-    .line 484
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mPendingGetApnList:Ljava/util/HashMap;
 
-    .line 138
     iput-object p1, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     return-void
@@ -80,7 +73,6 @@
     :try_start_0
     const-string v3, "ApnSettingsPolicyService"
 
-    .line 213
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +89,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -106,64 +97,52 @@
 
     if-nez v0, :cond_0
 
-    .line 220
     monitor-exit p0
 
     return-wide v3
 
-    .line 223
     :cond_0
     :try_start_1
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getId()J
 
     move-result-wide v5
 
-    .line 224
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getUser()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 225
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getServer()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 226
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getPassword()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 227
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getProxy()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 228
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getPort()I
 
     move-result v11
 
-    .line 229
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getMmsProxy()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 230
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getMmsc()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 231
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getType()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 232
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getAuthType()I
 
     move-result v15
 
-    .line 233
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -172,7 +151,6 @@
 
     move-result-object v3
 
-    .line 234
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getApn()Ljava/lang/String;
 
     move-result-object v4
@@ -190,7 +168,6 @@
     :cond_1
     move-object/from16 p1, v14
 
-    .line 241
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v14
@@ -205,12 +182,10 @@
 
     const-string v2, "APN name maximum length (65)"
 
-    .line 242
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 243
     monitor-exit p0
 
     :goto_0
@@ -218,7 +193,6 @@
 
     return-wide v1
 
-    .line 245
     :cond_2
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -233,17 +207,14 @@
 
     const-string v2, "APN excedes maximum length (120)"
 
-    .line 246
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 247
     monitor-exit p0
 
     goto :goto_0
 
-    .line 249
     :cond_3
     :try_start_3
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getMcc()Ljava/lang/String;
@@ -254,7 +225,6 @@
 
     move-result-object v13
 
-    .line 250
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getMnc()Ljava/lang/String;
 
     move-result-object v14
@@ -265,7 +235,6 @@
 
     move-object/from16 v17, v12
 
-    .line 251
     invoke-virtual/range {p3 .. p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->getMmsPort()Ljava/lang/String;
 
     move-result-object v12
@@ -276,10 +245,8 @@
 
     move-object/from16 v18, v10
 
-    .line 253
     iget-object v10, v0, Lcom/samsung/android/knox/net/apn/ApnSettings;->protocol:Ljava/lang/String;
 
-    .line 254
     invoke-virtual {v1, v10}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateProtocol(Ljava/lang/String;)Z
 
     move-result v19
@@ -290,12 +257,10 @@
 
     const-string v2, "Invalid protocol!"
 
-    .line 255
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 256
     monitor-exit p0
 
     goto :goto_0
@@ -303,11 +268,9 @@
     :cond_4
     move-object/from16 v19, v10
 
-    .line 259
     :try_start_4
     iget-object v10, v0, Lcom/samsung/android/knox/net/apn/ApnSettings;->roamingProtocol:Ljava/lang/String;
 
-    .line 260
     invoke-virtual {v1, v10}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateProtocol(Ljava/lang/String;)Z
 
     move-result v20
@@ -318,12 +281,10 @@
 
     const-string v2, "Invalid Roaming Protocol!"
 
-    .line 261
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 262
     monitor-exit p0
 
     goto :goto_0
@@ -331,11 +292,9 @@
     :cond_5
     move-object/from16 v20, v10
 
-    .line 265
     :try_start_5
     iget-object v10, v0, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_type:Ljava/lang/String;
 
-    .line 266
     invoke-virtual {v1, v10}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateMVNOType(Ljava/lang/String;)Z
 
     move-result v21
@@ -346,17 +305,14 @@
 
     const-string v2, "Invalid mvno type!"
 
-    .line 267
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 268
     monitor-exit p0
 
     goto :goto_0
 
-    .line 271
     :cond_6
     :try_start_6
     iget-object v0, v0, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_value:Ljava/lang/String;
@@ -371,14 +327,11 @@
 
     move-object/from16 p3, v10
 
-    .line 276
     :try_start_7
     invoke-static {v14}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 277
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 280
     invoke-virtual {v12}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -395,7 +348,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 281
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -417,7 +369,6 @@
     :cond_8
     if-eqz v13, :cond_a
 
-    .line 285
     invoke-virtual {v13}, Ljava/lang/String;->length()I
 
     move-result v25
@@ -432,7 +383,6 @@
 
     if-eqz v25, :cond_a
 
-    .line 286
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v25
@@ -481,7 +431,6 @@
 
     move-object/from16 v23, v12
 
-    .line 290
     :try_start_8
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -504,7 +453,6 @@
     :cond_b
     move-object/from16 v23, v12
 
-    .line 292
     :goto_3
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -516,7 +464,6 @@
 
     const-string v10, "addUpdateAp() : invalid ap name"
 
-    .line 293
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -526,7 +473,6 @@
 
     goto :goto_8
 
-    .line 295
     :cond_c
     :goto_4
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -539,13 +485,11 @@
 
     const-string v10, "addUpdateAp() : invalid ap apn"
 
-    .line 296
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_d
     if-eqz v13, :cond_e
 
-    .line 298
     invoke-virtual {v13}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -557,13 +501,11 @@
 
     const-string v10, "addUpdateAp() : invalid ap mcc"
 
-    .line 299
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_f
     if-eqz v14, :cond_11
 
-    .line 301
     invoke-virtual {v14}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -584,7 +526,6 @@
 
     const-string v10, "addUpdateAp() : invalid ap mnc"
 
-    .line 302
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_5
@@ -596,7 +537,6 @@
 
     const-string v10, "addUpdateAp() : invalid ap port"
 
-    .line 305
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, -0x1
@@ -608,7 +548,6 @@
 
     const-string v2, "addUpdateAp() : invalid ap iMmsPort"
 
-    .line 308
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_13
@@ -625,7 +564,6 @@
 
     const-string v2, "addUpdateAp() : invalid ap authType"
 
-    .line 311
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
@@ -638,7 +576,6 @@
 
     move-object/from16 v23, v12
 
-    .line 316
     :goto_8
     :try_start_9
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -650,27 +587,23 @@
     :goto_a
     if-eqz v0, :cond_24
 
-    .line 320
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v24
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 322
     :try_start_a
     iget-object v0, v1, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     const-string/jumbo v2, "phone"
 
-    .line 323
     invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 324
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
 
     move-result-object v0
@@ -679,7 +612,6 @@
 
     if-eqz v0, :cond_16
 
-    .line 326
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v12
@@ -690,12 +622,10 @@
 
     const/4 v12, 0x3
 
-    .line 328
     invoke-virtual {v0, v10, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v22
 
-    .line 330
     invoke-virtual {v0, v12}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v12
@@ -711,35 +641,29 @@
 
     const/4 v12, 0x0
 
-    .line 335
     :goto_b
     invoke-virtual {v1, v0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 336
     invoke-virtual {v1, v7}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 337
     invoke-virtual {v1, v8}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 338
     invoke-virtual {v1, v9}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     move-object/from16 v9, v18
 
-    .line 339
     invoke-virtual {v1, v9}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
     move-object/from16 v2, v17
 
-    .line 340
     invoke-virtual {v1, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -748,21 +672,18 @@
 
     move-object/from16 v5, v16
 
-    .line 341
     invoke-virtual {v1, v5}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     move-object/from16 v6, p1
 
-    .line 342
     invoke-virtual {v1, v6}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->validateString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     move-object/from16 p1, v10
 
-    .line 344
     new-instance v10, Landroid/content/ContentValues;
 
     invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
@@ -775,7 +696,6 @@
 
     move/from16 v6, p2
 
-    .line 346
     invoke-virtual {v1, v6, v10, v12, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "numeric"
@@ -786,7 +706,6 @@
 
     goto :goto_c
 
-    .line 349
     :cond_17
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -806,50 +725,41 @@
     :goto_c
     const/4 v12, 0x0
 
-    .line 348
     :goto_d
     invoke-virtual {v1, v6, v10, v3, v12}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "mcc"
 
-    .line 350
     invoke-virtual {v1, v6, v10, v3, v13}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "mnc"
 
-    .line 351
     invoke-virtual {v1, v6, v10, v3, v14}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "apn"
 
-    .line 352
     invoke-virtual {v1, v6, v10, v3, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v3, "user"
 
-    .line 353
     invoke-virtual {v1, v6, v10, v3, v0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "server"
 
-    .line 354
     invoke-virtual {v1, v6, v10, v0, v7}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "password"
 
-    .line 355
     invoke-virtual {v1, v6, v10, v0, v8}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "proxy"
 
-    .line 356
     invoke-virtual {v1, v6, v10, v0, v9}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "port"
 
     if-ltz v11, :cond_19
 
-    .line 357
     invoke-static {v11}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -864,19 +774,16 @@
 
     const-string/jumbo v0, "mmsproxy"
 
-    .line 359
     invoke-virtual {v1, v6, v10, v0, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "mmsport"
 
     move-object/from16 v2, v23
 
-    .line 360
     invoke-virtual {v1, v6, v10, v0, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "mmsc"
 
-    .line 361
     invoke-virtual {v1, v6, v10, v0, v5}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v6, :cond_1b
@@ -893,11 +800,9 @@
 
     goto :goto_f
 
-    .line 365
     :cond_1a
     sget v15, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->AUTH_TYPE_NOTSET:I
 
-    .line 364
     :goto_f
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -920,7 +825,6 @@
 
     const-string v0, "authtype"
 
-    .line 367
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -933,7 +837,6 @@
 
     move-object/from16 v2, v17
 
-    .line 370
     invoke-virtual {v1, v6, v10, v0, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v16, :cond_1d
@@ -942,7 +845,6 @@
 
     move-object/from16 v12, v16
 
-    .line 373
     invoke-virtual {v12, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -961,14 +863,12 @@
 
     const/4 v2, 0x1
 
-    .line 374
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v10, v0, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 375
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getDeviceSimSlotCnt()I
 
     move-result v0
@@ -979,12 +879,10 @@
 
     const-string v3, "IS DUAL SIM"
 
-    .line 376
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "current1"
 
-    .line 377
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -996,14 +894,12 @@
 
     const/4 v2, 0x1
 
-    .line 382
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v10, v0, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 384
     iget v0, v1, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mMDMConfigVersion:I
 
     const/16 v3, 0x11
@@ -1014,14 +910,12 @@
 
     move-object/from16 v3, v19
 
-    .line 387
     invoke-virtual {v1, v6, v10, v0, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "roaming_protocol"
 
     move-object/from16 v3, v20
 
-    .line 388
     invoke-virtual {v1, v6, v10, v0, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1e
@@ -1029,17 +923,14 @@
 
     move-object/from16 v3, v21
 
-    .line 391
     invoke-virtual {v1, v6, v10, v0, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "mvno_match_data"
 
     move-object/from16 v3, p3
 
-    .line 392
     invoke-virtual {v1, v6, v10, v0, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->setColumnValue(ZLandroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 394
     invoke-virtual {v10}, Landroid/content/ContentValues;->size()I
 
     move-result v0
@@ -1048,7 +939,6 @@
 
     if-eqz v6, :cond_20
 
-    .line 397
     iget-object v0, v1, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1057,7 +947,6 @@
 
     sget-object v3, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 398
     invoke-virtual {v0, v3, v10}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v0
@@ -1078,10 +967,8 @@
 
     const-string v3, "addUpdateAp Created rowUri : "
 
-    .line 401
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
     invoke-static {v0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v2
@@ -1091,7 +978,6 @@
 
     goto :goto_14
 
-    .line 406
     :cond_20
     sget-object v0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1101,7 +987,6 @@
 
     move-result-object v0
 
-    .line 407
     iget-object v3, v1, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1110,7 +995,6 @@
 
     const/4 v4, 0x0
 
-    .line 408
     invoke-virtual {v3, v0, v10, v4, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v3
@@ -1131,10 +1015,8 @@
 
     const-string v3, "addUpdateAp Updated rowUri : "
 
-    .line 411
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     invoke-static {v0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v2
@@ -1146,7 +1028,6 @@
 
     const-string v2, "addUpdateAp Error: Empty dataset."
 
-    .line 416
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
@@ -1155,7 +1036,6 @@
     :cond_23
     const-wide/16 v3, -0x1
 
-    .line 421
     :goto_14
     :try_start_b
     invoke-static/range {v24 .. v25}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1172,13 +1052,11 @@
     :catch_2
     move-exception v0
 
-    .line 419
     :try_start_c
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    .line 421
     :try_start_d
     invoke-static/range {v24 .. v25}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1187,7 +1065,6 @@
     :goto_15
     invoke-static/range {v24 .. v25}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 422
     throw v0
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
@@ -1196,7 +1073,6 @@
     :goto_16
     const-wide/16 v3, -0x1
 
-    .line 424
     :goto_17
     monitor-exit p0
 
@@ -1209,12 +1085,10 @@
 
     const-string v2, "Invalid value"
 
-    .line 237
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 238
     monitor-exit p0
 
     goto/16 :goto_0
@@ -1232,11 +1106,9 @@
 
     monitor-enter p0
 
-    .line 182
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
-    .line 184
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -1253,12 +1125,10 @@
 
     const-string p2, "deleteAp : apId is invalid"
 
-    .line 186
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 187
     monitor-exit p0
 
     return v2
@@ -1266,7 +1136,6 @@
     :cond_0
     const/4 p1, -0x1
 
-    .line 190
     :try_start_1
     sget-object v3, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1274,7 +1143,6 @@
 
     move-result-object p2
 
-    .line 191
     iget-object p3, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1289,7 +1157,6 @@
 
     const-string p2, "ApnSettingsPolicyService"
 
-    .line 192
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1309,7 +1176,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 196
     :goto_0
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -1326,7 +1192,6 @@
     :catch_0
     move-exception p2
 
-    .line 194
     :try_start_3
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
@@ -1339,18 +1204,15 @@
 
     const/4 v2, 0x1
 
-    .line 198
     :cond_1
     monitor-exit p0
 
     return v2
 
-    .line 196
     :goto_2
     :try_start_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 197
     throw p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -1366,7 +1228,6 @@
 .method public final enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
     .locals 2
 
-    .line 133
     invoke-virtual {p0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     move-result-object p0
@@ -1379,14 +1240,12 @@
 
     move-result-object v1
 
-    .line 134
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 133
     invoke-virtual {p0, p1, v0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->enforceOwnerOnlyAndActiveAdminPermission(Lcom/samsung/android/knox/ContextInfo;Ljava/util/List;)Lcom/samsung/android/knox/ContextInfo;
 
     move-result-object p0
@@ -1397,15 +1256,12 @@
 .method public getApnList(Lcom/samsung/android/knox/ContextInfo;I)Ljava/util/List;
     .locals 3
 
-    .line 488
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
-    .line 490
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 493
     iget-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mPendingGetApnList:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1418,7 +1274,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 494
     iget-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mPendingGetApnList:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1435,7 +1290,6 @@
 
     goto :goto_0
 
-    .line 496
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->retrieveApnListFromDatabase()Ljava/util/List;
 
@@ -1443,7 +1297,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 499
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1455,7 +1308,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 500
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mPendingGetApnList:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1474,7 +1326,6 @@
 
     invoke-virtual {p0, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 501
     sget p0, Lcom/samsung/android/knox/net/apn/ApnSettingsPolicy;->MAXIMUM_APNS_OVER_IPC:I
 
     invoke-interface {p1, v2, p0}, Ljava/util/List;->subList(II)Ljava/util/List;
@@ -1483,7 +1334,6 @@
 
     goto :goto_1
 
-    .line 505
     :cond_1
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mPendingGetApnList:Ljava/util/HashMap;
 
@@ -1493,7 +1343,6 @@
 
     invoke-virtual {p0, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 506
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1513,22 +1362,18 @@
 
     const-string v1, "ApnSettingsPolicyService"
 
-    .line 594
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
 
-    .line 598
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 599
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v0
@@ -1544,14 +1389,12 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 605
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 606
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
     move-result-object p1
@@ -1565,7 +1408,6 @@
     :cond_1
     move p1, v0
 
-    .line 612
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;
 
@@ -1573,21 +1415,17 @@
 
     if-eqz p0, :cond_2
 
-    .line 615
     invoke-virtual {p0}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
     move-result v0
 
-    .line 617
     :cond_2
     sget-object p0, Landroid/provider/Telephony$Carriers;->SIM_APN_URI:Landroid/net/Uri;
 
-    .line 618
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 617
     invoke-static {p0, p1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -1598,10 +1436,8 @@
     :goto_1
     const-string p0, "No SIM "
 
-    .line 600
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     sget-object p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
     :goto_2
@@ -1611,7 +1447,6 @@
 .method public getApnSettings(Lcom/samsung/android/knox/ContextInfo;J)Lcom/samsung/android/knox/net/apn/ApnSettings;
     .locals 9
 
-    .line 713
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
     const-wide/16 v0, 0x1
@@ -1626,18 +1461,15 @@
 
     const-string p1, "getApnSettings : apId is invalid"
 
-    .line 720
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 723
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 725
     :try_start_0
     sget-object p1, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1645,7 +1477,6 @@
 
     move-result-object v4
 
-    .line 726
     iget-object p1, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1669,7 +1500,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 727
     :try_start_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1677,14 +1507,12 @@
 
     if-eqz p2, :cond_6
 
-    .line 728
     new-instance p2, Lcom/samsung/android/knox/net/apn/ApnSettings;
 
     invoke-direct {p2}, Lcom/samsung/android/knox/net/apn/ApnSettings;-><init>()V
 
     const-string p3, "_id"
 
-    .line 729
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1693,12 +1521,10 @@
 
     move-result-wide v3
 
-    .line 730
     invoke-virtual {p2, v3, v4}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setId(J)V
 
     const-string/jumbo p3, "name"
 
-    .line 731
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1707,7 +1533,6 @@
 
     const-string/jumbo p3, "mcc"
 
-    .line 732
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1716,7 +1541,6 @@
 
     const-string/jumbo p3, "mnc"
 
-    .line 733
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1725,7 +1549,6 @@
 
     const-string p3, "apn"
 
-    .line 734
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1734,7 +1557,6 @@
 
     const-string/jumbo p3, "user"
 
-    .line 735
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1743,7 +1565,6 @@
 
     const-string/jumbo p3, "server"
 
-    .line 736
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1752,7 +1573,6 @@
 
     const-string/jumbo p3, "password"
 
-    .line 737
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1761,7 +1581,6 @@
 
     const-string/jumbo p3, "proxy"
 
-    .line 738
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1770,30 +1589,25 @@
 
     const-string/jumbo p3, "port"
 
-    .line 739
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 740
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 741
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p3
 
-    .line 742
     invoke-virtual {p2, p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setPort(I)V
 
     :cond_1
     const-string/jumbo p3, "mmsproxy"
 
-    .line 744
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1802,7 +1616,6 @@
 
     const-string/jumbo p3, "mmsport"
 
-    .line 745
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1811,7 +1624,6 @@
 
     const-string/jumbo p3, "mmsc"
 
-    .line 746
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1820,37 +1632,31 @@
 
     const-string p3, "authtype"
 
-    .line 747
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 748
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 749
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p3
 
-    .line 750
     invoke-virtual {p2, p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setAuthType(I)V
 
     :cond_2
     const-string/jumbo p3, "type"
 
-    .line 752
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setType(Ljava/lang/String;)V
 
-    .line 753
     iget p3, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mMDMConfigVersion:I
 
     const/16 v3, 0x11
@@ -1859,7 +1665,6 @@
 
     const-string/jumbo p3, "protocol"
 
-    .line 756
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1868,7 +1673,6 @@
 
     const-string/jumbo p3, "roaming_protocol"
 
-    .line 757
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
@@ -1878,47 +1682,39 @@
     :cond_3
     const-string/jumbo p3, "mvno_type"
 
-    .line 759
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p3
 
-    .line 760
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 761
     iput-object p3, p2, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_type:Ljava/lang/String;
 
     :cond_4
     const-string/jumbo p3, "mvno_match_data"
 
-    .line 763
     invoke-virtual {p0, p3, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 764
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p3
 
     if-nez p3, :cond_5
 
-    .line 765
     iput-object p0, p2, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_value:Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 773
     :cond_5
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 775
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object p2
@@ -1943,7 +1739,6 @@
 
     move-object p1, v0
 
-    .line 770
     :goto_0
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1952,11 +1747,9 @@
 
     if-eqz p1, :cond_7
 
-    .line 773
     :goto_1
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 775
     :cond_7
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1970,14 +1763,11 @@
     :goto_2
     if-eqz v0, :cond_8
 
-    .line 773
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 775
     :cond_8
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 776
     throw p0
 .end method
 
@@ -1986,7 +1776,6 @@
 
     const-string p0, ""
 
-    .line 818
     :try_start_0
     invoke-interface {p2, p1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
@@ -2010,7 +1799,6 @@
     :catch_0
     move-exception p1
 
-    .line 823
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -2020,7 +1808,6 @@
 .method public final getDeviceSimSlotCnt()I
     .locals 2
 
-    .line 668
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object p0
@@ -2029,7 +1816,6 @@
 
     move-result p0
 
-    .line 669
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2054,12 +1840,10 @@
 .method public final getEDM()Lcom/samsung/android/knox/EnterpriseDeviceManager;
     .locals 1
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/knox/EnterpriseDeviceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/knox/EnterpriseDeviceManager;
@@ -2068,7 +1852,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
-    .line 118
     :cond_0
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mEDM:Lcom/samsung/android/knox/EnterpriseDeviceManager;
 
@@ -2084,7 +1867,6 @@
 
     const-string v2, "0"
 
-    .line 675
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2093,12 +1875,10 @@
 
     const/4 v4, 0x1
 
-    .line 676
     invoke-virtual {p0, v3, v4, v2}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 678
     iget-object v5, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2120,7 +1900,6 @@
     :cond_0
     move v5, v1
 
-    .line 680
     :goto_0
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
@@ -2146,7 +1925,6 @@
     :goto_1
     if-eqz v5, :cond_2
 
-    .line 684
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2158,7 +1936,6 @@
     :cond_2
     if-eqz p0, :cond_3
 
-    .line 686
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2172,7 +1949,6 @@
     :cond_3
     const/4 v1, -0x1
 
-    .line 690
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2200,7 +1976,6 @@
 
     monitor-enter p0
 
-    .line 783
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
@@ -2208,10 +1983,8 @@
 
     const-string v1, "getPreferredApn():"
 
-    .line 787
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 789
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -2220,7 +1993,6 @@
 
     const/4 v2, 0x0
 
-    .line 791
     :try_start_1
     iget-object v3, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
@@ -2267,7 +2039,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 795
     :try_start_2
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -2277,7 +2048,6 @@
 
     const-string v4, "_id"
 
-    .line 796
     invoke-interface {v3, v4}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v4
@@ -2288,7 +2058,6 @@
 
     const-string v6, "ApnSettingsPolicyService"
 
-    .line 797
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2311,7 +2080,6 @@
 
     if-lez v6, :cond_0
 
-    .line 799
     invoke-virtual {p0, p1, v4, v5}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getApnSettings(Lcom/samsung/android/knox/ContextInfo;J)Lcom/samsung/android/knox/net/apn/ApnSettings;
 
     move-result-object p1
@@ -2332,11 +2100,9 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 807
     :try_start_3
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 809
     :cond_1
     :goto_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -2359,7 +2125,6 @@
     :try_start_4
     const-string v4, "ApnSettingsPolicyService"
 
-    .line 804
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2380,7 +2145,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 807
     :try_start_5
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
     :try_end_5
@@ -2388,7 +2152,6 @@
 
     goto :goto_1
 
-    .line 812
     :goto_3
     monitor-exit p0
 
@@ -2402,15 +2165,12 @@
     :goto_4
     if-eqz v2, :cond_2
 
-    .line 807
     :try_start_6
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 809
     :cond_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 810
     throw p1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
@@ -2426,7 +2186,6 @@
 .method public final getSubscriptionInfo(I)Landroid/telephony/SubscriptionInfo;
     .locals 0
 
-    .line 664
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -2445,19 +2204,16 @@
 
     const-string/jumbo p0, "ril.ICC_TYPE0"
 
-    .line 695
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v1, "ril.ICC_TYPE1"
 
-    .line 696
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 698
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2466,7 +2222,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 699
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -2480,7 +2235,6 @@
 
     goto :goto_1
 
-    .line 700
     :cond_1
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2490,7 +2244,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 701
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -2510,7 +2263,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 704
     :goto_1
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2518,12 +2270,10 @@
 
     if-eqz p0, :cond_4
 
-    .line 705
     invoke-static {p2, p1, p3}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 707
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2553,22 +2303,18 @@
 
     const-string v0, "getWhereClause"
 
-    .line 625
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 628
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string v0, "NOT (type=\'ia\' AND (apn=\"\" OR apn IS NULL))"
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 630
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
 
     move-result v0
 
-    .line 631
     invoke-static {v0}, Landroid/telephony/SubscriptionManager;->getSlotIndex(I)I
 
     move-result v0
@@ -2579,12 +2325,10 @@
 
     const-string v3, "0"
 
-    .line 632
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 633
     iget-object v4, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2611,7 +2355,6 @@
     :goto_0
     if-eqz v4, :cond_1
 
-    .line 638
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2625,7 +2368,6 @@
     :cond_1
     move v1, v2
 
-    .line 641
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getDeviceSimSlotCnt()I
 
@@ -2635,12 +2377,10 @@
 
     const-string/jumbo v4, "ril.ICC_TYPE1"
 
-    .line 642
     invoke-virtual {p0, v4, v6, v3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 643
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2665,7 +2405,6 @@
     :goto_2
     if-eqz p0, :cond_3
 
-    .line 646
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2681,7 +2420,6 @@
 
     const-string p0, " AND current = 1 "
 
-    .line 650
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
@@ -2693,7 +2431,6 @@
 
     const-string p0, " AND current1 = 1 "
 
-    .line 652
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
@@ -2705,10 +2442,8 @@
 
     const-string p0, " AND current = 1"
 
-    .line 656
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 660
     :cond_6
     :goto_3
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -2737,37 +2472,31 @@
 
     const-string v4, "_id"
 
-    .line 432
     filled-new-array {v4, v0, v3}, [Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v0, 0x0
 
-    .line 437
     :try_start_0
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionId()I
 
     move-result v3
 
-    .line 438
     iget-object v4, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     const-string/jumbo v5, "phone"
 
-    .line 439
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
-    .line 440
     invoke-virtual {v4, v3}, Landroid/telephony/TelephonyManager;->getSimOperator(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 443
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
 
     move-result v3
@@ -2776,12 +2505,10 @@
 
     const-string v6, "ETC"
 
-    .line 444
     invoke-static {v3, v5, v6}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 446
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2806,7 +2533,6 @@
 
     const-string v6, "CTC"
 
-    .line 447
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -2817,12 +2543,10 @@
 
     const-string v5, ""
 
-    .line 448
     invoke-static {v3, v4, v5}, Landroid/telephony/TelephonyManager;->getTelephonyProperty(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 450
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -2836,7 +2560,6 @@
     :cond_0
     move-object v4, v3
 
-    .line 451
     :goto_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2860,7 +2583,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_1
     sget-object v3, Lcom/android/server/enterprise/apn/ApnSettingsPolicy$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
@@ -2868,7 +2590,6 @@
 
     move-result-object v6
 
-    .line 455
     iget-object p0, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2887,7 +2608,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 457
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2914,7 +2634,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result p0
@@ -2932,7 +2651,6 @@
 
     const/4 p1, 0x1
 
-    .line 462
     :try_start_1
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -2952,7 +2670,6 @@
 
     if-eqz p2, :cond_4
 
-    .line 463
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -2998,7 +2715,6 @@
     :goto_2
     if-eqz v0, :cond_7
 
-    .line 475
     :goto_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -3012,7 +2728,6 @@
     :catch_1
     move-exception p0
 
-    .line 472
     :goto_4
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
@@ -3026,14 +2741,11 @@
     :goto_5
     if-eqz v0, :cond_5
 
-    .line 475
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 477
     :cond_5
     throw p0
 
-    .line 479
     :cond_6
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -3059,28 +2771,24 @@
 .method public notifyToAddSystemService(Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminAdded(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAdminRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPreAdminRemoval(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -3141,15 +2849,12 @@
 
     const-string/jumbo v5, "retrieveApnListFromDatabase"
 
-    .line 513
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 517
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v21
@@ -3239,7 +2944,6 @@
 
     aput-object v16, v5, v24
 
-    .line 529
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getFirstSlotIndex()I
 
     move-result v4
@@ -3248,21 +2952,18 @@
 
     move-object/from16 v6, p0
 
-    .line 530
     invoke-virtual {v6, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getApnListUri(I)Landroid/net/Uri;
 
     move-result-object v25
 
     move-object/from16 v32, v7
 
-    .line 532
     iget-object v7, v6, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v24
 
-    .line 533
     invoke-virtual {v6, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getWhereClause(I)Ljava/lang/String;
 
     move-result-object v27
@@ -3273,7 +2974,6 @@
 
     move-object/from16 v26, v5
 
-    .line 532
     invoke-virtual/range {v24 .. v29}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
@@ -3282,7 +2982,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 536
     :try_start_1
     invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -3290,13 +2989,11 @@
 
     if-eqz v5, :cond_6
 
-    .line 538
     :goto_0
     new-instance v5, Lcom/samsung/android/knox/net/apn/ApnSettings;
 
     invoke-direct {v5}, Lcom/samsung/android/knox/net/apn/ApnSettings;-><init>()V
 
-    .line 539
     invoke-virtual {v6, v3, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
@@ -3307,86 +3004,72 @@
 
     move-result-wide v7
 
-    .line 540
     invoke-virtual {v5, v7, v8}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setId(J)V
 
-    .line 541
     invoke-virtual {v6, v2, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setName(Ljava/lang/String;)V
 
-    .line 542
     invoke-virtual {v6, v1, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setMcc(Ljava/lang/String;)V
 
-    .line 543
     invoke-virtual {v6, v0, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setMnc(Ljava/lang/String;)V
 
-    .line 544
     invoke-virtual {v6, v15, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setApn(Ljava/lang/String;)V
 
-    .line 545
     invoke-virtual {v6, v14, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setUser(Ljava/lang/String;)V
 
-    .line 546
     invoke-virtual {v6, v13, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setServer(Ljava/lang/String;)V
 
-    .line 547
     invoke-virtual {v6, v12, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setPassword(Ljava/lang/String;)V
 
-    .line 548
     invoke-virtual {v6, v11, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setProxy(Ljava/lang/String;)V
 
-    .line 549
     invoke-virtual {v6, v10, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 550
     invoke-virtual {v7}, Ljava/lang/String;->isEmpty()Z
 
     move-result v8
 
     if-nez v8, :cond_0
 
-    .line 551
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 552
     invoke-virtual {v5, v7}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setPort(I)V
 
-    .line 554
     :cond_0
     invoke-virtual {v6, v9, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
@@ -3396,7 +3079,6 @@
 
     move-object/from16 v7, v24
 
-    .line 555
     invoke-virtual {v6, v7, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v8
@@ -3407,7 +3089,6 @@
 
     move-object/from16 v8, v32
 
-    .line 556
     invoke-virtual {v6, v8, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v0
@@ -3416,12 +3097,10 @@
 
     move-object/from16 v0, v31
 
-    .line 557
     invoke-virtual {v6, v0, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 558
     invoke-virtual/range {v23 .. v23}, Ljava/lang/String;->isEmpty()Z
 
     move-result v25
@@ -3430,12 +3109,10 @@
 
     move-object/from16 v31, v0
 
-    .line 559
     invoke-static/range {v23 .. v23}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 560
     invoke-virtual {v5, v0}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setAuthType(I)V
 
     goto :goto_1
@@ -3448,14 +3125,12 @@
 
     move-object/from16 v20, v1
 
-    .line 562
     invoke-virtual {v6, v0, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v5, v1}, Lcom/samsung/android/knox/net/apn/ApnSettings;->setType(Ljava/lang/String;)V
 
-    .line 563
     iget v1, v6, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mMDMConfigVersion:I
 
     move-object/from16 v23, v0
@@ -3466,7 +3141,6 @@
 
     move-object/from16 v1, v19
 
-    .line 566
     invoke-virtual {v6, v1, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v0
@@ -3477,7 +3151,6 @@
 
     move-object/from16 v0, v18
 
-    .line 567
     invoke-virtual {v6, v0, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v1
@@ -3494,19 +3167,16 @@
 
     move-object/from16 v1, v17
 
-    .line 570
     invoke-virtual {v6, v1, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 571
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v17
 
     if-nez v17, :cond_3
 
-    .line 572
     iput-object v0, v5, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_type:Ljava/lang/String;
 
     :cond_3
@@ -3514,28 +3184,23 @@
 
     move-object/from16 v0, v16
 
-    .line 574
     invoke-virtual {v6, v0, v4}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->getColumnValue(Ljava/lang/String;Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 575
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v16
 
     if-nez v16, :cond_4
 
-    .line 576
     iput-object v1, v5, Lcom/samsung/android/knox/net/apn/ApnSettings;->mvno_value:Ljava/lang/String;
 
     :cond_4
     move-object/from16 v1, v30
 
-    .line 578
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 580
     invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
@@ -3576,10 +3241,8 @@
     :goto_3
     if-eqz v4, :cond_7
 
-    .line 585
     invoke-interface {v4}, Landroid/database/Cursor;->close()V
 
-    .line 587
     :cond_7
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3591,14 +3254,11 @@
     :goto_4
     if-eqz v23, :cond_8
 
-    .line 585
     invoke-interface/range {v23 .. v23}, Landroid/database/Cursor;->close()V
 
-    .line 587
     :cond_8
     invoke-static/range {v21 .. v22}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 588
     throw v0
 .end method
 
@@ -3613,7 +3273,6 @@
 
     goto :goto_0
 
-    .line 838
     :cond_0
     invoke-virtual {p4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -3627,14 +3286,12 @@
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 842
     invoke-virtual {p4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p2, p3, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 845
     :cond_2
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -3669,11 +3326,9 @@
 
     monitor-enter p0
 
-    .line 149
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->enforceOwnerOnlyAndApnPermission(Lcom/samsung/android/knox/ContextInfo;)Lcom/samsung/android/knox/ContextInfo;
 
-    .line 151
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
@@ -3693,7 +3348,6 @@
     :try_start_1
     const-string p1, "ApnSettingsPolicyService"
 
-    .line 154
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3712,7 +3366,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->isValidApnId(J)Z
 
@@ -3720,7 +3373,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 157
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
@@ -3731,7 +3383,6 @@
 
     const-wide/16 p2, -0x1
 
-    .line 158
     :cond_1
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -3739,7 +3390,6 @@
 
     invoke-virtual {v3, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 159
     iget-object p1, p0, Lcom/android/server/enterprise/apn/ApnSettingsPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3763,7 +3413,6 @@
     :cond_2
     const-string p2, "ApnSettingsPolicyService"
 
-    .line 162
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3783,7 +3432,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 168
     :cond_3
     :goto_0
     :try_start_2
@@ -3801,7 +3449,6 @@
     :catch_0
     move-exception p1
 
-    .line 166
     :try_start_3
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
@@ -3809,18 +3456,15 @@
 
     goto :goto_0
 
-    .line 170
     :goto_1
     monitor-exit p0
 
     return v2
 
-    .line 168
     :goto_2
     :try_start_4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 169
     throw p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -3836,7 +3480,6 @@
 .method public systemReady()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -3847,7 +3490,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 927
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -3956,7 +3598,6 @@
 .method public final validateProtocol(Ljava/lang/String;)Z
     .locals 3
 
-    .line 913
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -3967,7 +3608,6 @@
 
     return v0
 
-    .line 916
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -4059,7 +3699,6 @@
 
     goto :goto_0
 
-    .line 850
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 

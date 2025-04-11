@@ -13,13 +13,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput p1, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mStartIndex:I
 
-    .line 32
     iput p2, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mEndIndex:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 47
     iget v0, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mStartIndex:I
 
     check-cast p1, Lcom/android/server/integrity/parser/RuleIndexRange;
@@ -43,7 +39,6 @@
 
     iget p0, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mEndIndex:I
 
-    .line 48
     invoke-virtual {p1}, Lcom/android/server/integrity/parser/RuleIndexRange;->getEndIndex()I
 
     move-result p1
@@ -64,7 +59,6 @@
 .method public getEndIndex()I
     .locals 0
 
-    .line 42
     iget p0, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mEndIndex:I
 
     return p0
@@ -73,7 +67,6 @@
 .method public getStartIndex()I
     .locals 0
 
-    .line 37
     iget p0, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mStartIndex:I
 
     return p0
@@ -82,7 +75,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 53
     iget v0, p0, Lcom/android/server/integrity/parser/RuleIndexRange;->mStartIndex:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

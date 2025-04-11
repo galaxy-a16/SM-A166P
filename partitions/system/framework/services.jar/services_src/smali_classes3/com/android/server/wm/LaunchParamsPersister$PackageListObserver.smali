@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/LaunchParamsPersister;)V
     .locals 0
 
-    .line 525
     iput-object p1, p0, Lcom/android/server/wm/LaunchParamsPersister$PackageListObserver;->this$0:Lcom/android/server/wm/LaunchParamsPersister;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/LaunchParamsPersister;Lcom/android/server/wm/LaunchParamsPersister$PackageListObserver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/wm/LaunchParamsPersister$PackageListObserver;-><init>(Lcom/android/server/wm/LaunchParamsPersister;)V
 
     return-void
@@ -36,14 +34,12 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 0
 
-    .line 531
     iget-object p2, p0, Lcom/android/server/wm/LaunchParamsPersister$PackageListObserver;->this$0:Lcom/android/server/wm/LaunchParamsPersister;
 
     invoke-static {p2}, Lcom/android/server/wm/LaunchParamsPersister;->-$$Nest$fgetmSupervisor(Lcom/android/server/wm/LaunchParamsPersister;)Lcom/android/server/wm/ActivityTaskSupervisor;
@@ -60,13 +56,11 @@
 
     monitor-enter p2
 
-    .line 532
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/LaunchParamsPersister$PackageListObserver;->this$0:Lcom/android/server/wm/LaunchParamsPersister;
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/LaunchParamsPersister;->removeRecordForPackage(Ljava/lang/String;)V
 
-    .line 533
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

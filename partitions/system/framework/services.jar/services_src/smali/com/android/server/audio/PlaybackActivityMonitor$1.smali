@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/PlaybackActivityMonitor;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1630
     iput-object p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .line 1633
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -51,7 +49,6 @@
 
     goto/16 :goto_2
 
-    .line 1691
     :cond_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -63,7 +60,6 @@
 
     const-string p1, "Received format event with no extras"
 
-    .line 1693
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_2
@@ -71,31 +67,26 @@
     :cond_1
     const-string v1, "android.media.extra.PLAYER_EVENT_SPATIALIZED"
 
-    .line 1696
     invoke-virtual {v0, v1, v2}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
     const-string v3, "android.media.extra.PLAYER_EVENT_SAMPLE_RATE"
 
-    .line 1698
     invoke-virtual {v0, v3, v2}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     const-string v4, "android.media.extra.PLAYER_EVENT_CHANNEL_MASK"
 
-    .line 1700
     invoke-virtual {v0, v4, v2}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1702
     new-instance v4, Landroid/media/AudioPlaybackConfiguration$FormatInfo;
 
     invoke-direct {v4, v1, v0, v3}, Landroid/media/AudioPlaybackConfiguration$FormatInfo;-><init>(ZII)V
 
-    .line 1705
     sget-object v0, Lcom/android/server/audio/PlaybackActivityMonitor;->sEventLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v1, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerFormatEvent;
@@ -106,7 +97,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1708
     iget-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v0}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmPlayerLock(Lcom/android/server/audio/PlaybackActivityMonitor;)Ljava/lang/Object;
@@ -115,7 +105,6 @@
 
     monitor-enter v0
 
-    .line 1709
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -135,14 +124,12 @@
 
     check-cast p1, Landroid/media/AudioPlaybackConfiguration;
 
-    .line 1710
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz p1, :cond_c
 
-    .line 1711
     invoke-virtual {p1, v4}, Landroid/media/AudioPlaybackConfiguration;->handleFormatEvent(Landroid/media/AudioPlaybackConfiguration$FormatInfo;)Z
 
     move-result p1
@@ -151,7 +138,6 @@
 
     goto/16 :goto_2
 
-    .line 1715
     :cond_2
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -162,7 +148,6 @@
     :catchall_0
     move-exception p0
 
-    .line 1710
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -170,7 +155,6 @@
 
     throw p0
 
-    .line 1676
     :cond_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -182,12 +166,10 @@
 
     const-string p1, "Received clear ports with invalid piid"
 
-    .line 1678
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_2
 
-    .line 1682
     :cond_4
     iget-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -197,7 +179,6 @@
 
     monitor-enter v0
 
-    .line 1684
     :goto_0
     :try_start_2
     iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
@@ -212,7 +193,6 @@
 
     if-ltz v1, :cond_5
 
-    .line 1685
     iget-object v2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v2}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmPortIdToPiid(Lcom/android/server/audio/PlaybackActivityMonitor;)Landroid/util/SparseIntArray;
@@ -223,7 +203,6 @@
 
     goto :goto_0
 
-    .line 1687
     :cond_5
     monitor-exit v0
 
@@ -238,7 +217,6 @@
 
     throw p0
 
-    .line 1651
     :cond_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -250,7 +228,6 @@
 
     const-string p1, "Received mute event with no extras"
 
-    .line 1653
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_2
@@ -258,12 +235,10 @@
     :cond_7
     const-string v1, "android.media.extra.PLAYER_EVENT_MUTE"
 
-    .line 1656
     invoke-virtual {v0, v1}, Landroid/os/PersistableBundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1658
     iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v1}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmPlayerLock(Lcom/android/server/audio/PlaybackActivityMonitor;)Ljava/lang/Object;
@@ -272,11 +247,9 @@
 
     monitor-enter v1
 
-    .line 1659
     :try_start_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    .line 1661
     sget-object v3, Lcom/android/server/audio/PlaybackActivityMonitor;->sEventLogger:Lcom/android/server/utils/EventLogger;
 
     new-instance v4, Lcom/android/server/audio/PlaybackActivityMonitor$PlayerEvent;
@@ -287,7 +260,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/utils/EventLogger;->enqueue(Lcom/android/server/utils/EventLogger$Event;)V
 
-    .line 1665
     iget-object v3, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v3}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmPlayerLock(Lcom/android/server/audio/PlaybackActivityMonitor;)Ljava/lang/Object;
@@ -298,7 +270,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 1666
     :try_start_4
     iget-object v4, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -316,14 +287,12 @@
 
     check-cast p1, Landroid/media/AudioPlaybackConfiguration;
 
-    .line 1667
     monitor-exit v3
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     if-eqz p1, :cond_9
 
-    .line 1668
     :try_start_5
     invoke-virtual {p1, v0}, Landroid/media/AudioPlaybackConfiguration;->handleMutedEvent(I)Z
 
@@ -333,18 +302,15 @@
 
     goto :goto_1
 
-    .line 1671
     :cond_8
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {p0, v2}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$mdispatchPlaybackChange(Lcom/android/server/audio/PlaybackActivityMonitor;Z)V
 
-    .line 1672
     monitor-exit v1
 
     goto :goto_2
 
-    .line 1669
     :cond_9
     :goto_1
     monitor-exit v1
@@ -356,7 +322,6 @@
     :catchall_2
     move-exception p0
 
-    .line 1667
     :try_start_6
     monitor-exit v3
     :try_end_6
@@ -368,14 +333,12 @@
     :catchall_3
     move-exception p0
 
-    .line 1672
     monitor-exit v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
     throw p0
 
-    .line 1645
     :cond_a
     iget-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -385,7 +348,6 @@
 
     monitor-enter v0
 
-    .line 1646
     :try_start_8
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
@@ -399,7 +361,6 @@
 
     invoke-virtual {p0, v1, p1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1647
     monitor-exit v0
 
     goto :goto_2
@@ -413,7 +374,6 @@
 
     throw p0
 
-    .line 1635
     :cond_b
     sget-object v0, Lcom/android/server/audio/PlaybackActivityMonitor;->sEventLogger:Lcom/android/server/utils/EventLogger;
 
@@ -443,7 +403,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/utils/EventLogger;->enqueueAndLog(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 1638
     iget-object v0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v0}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmPlayerLock(Lcom/android/server/audio/PlaybackActivityMonitor;)Ljava/lang/Object;
@@ -452,18 +411,15 @@
 
     monitor-enter v0
 
-    .line 1639
     :try_start_9
     iget-object v1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {v1}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$munmutePlayersExpectingDevice(Lcom/android/server/audio/PlaybackActivityMonitor;)V
 
-    .line 1640
     monitor-exit v0
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_5
 
-    .line 1641
     iget-object p0, p0, Lcom/android/server/audio/PlaybackActivityMonitor$1;->this$0:Lcom/android/server/audio/PlaybackActivityMonitor;
 
     invoke-static {p0}, Lcom/android/server/audio/PlaybackActivityMonitor;->-$$Nest$fgetmMuteAwaitConnectionTimeoutCb(Lcom/android/server/audio/PlaybackActivityMonitor;)Ljava/util/function/Consumer;
@@ -483,7 +439,6 @@
     :catchall_5
     move-exception p0
 
-    .line 1640
     :try_start_a
     monitor-exit v0
     :try_end_a

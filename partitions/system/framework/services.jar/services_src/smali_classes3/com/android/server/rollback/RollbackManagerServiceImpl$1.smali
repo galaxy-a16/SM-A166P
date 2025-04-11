@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$-9xPfxr4hqoRUIK5VyJvccVgPfY(Lcom/android/server/rollback/RollbackManagerServiceImpl$1;II)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->lambda$onReceive$0(II)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
     .locals 0
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -31,12 +29,10 @@
 .method private synthetic lambda$onReceive$0(II)V
     .locals 1
 
-    .line 251
     iget-object v0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$massertInWorkerThread(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
-    .line 252
     iget-object p0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p0, p1}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$menableRollback(Lcom/android/server/rollback/RollbackManagerServiceImpl;I)Z
@@ -52,7 +48,6 @@
     :cond_0
     const/4 p0, 0x1
 
-    .line 258
     :goto_0
     const-class p1, Landroid/content/pm/PackageManagerInternal;
 
@@ -62,7 +57,6 @@
 
     check-cast p1, Landroid/content/pm/PackageManagerInternal;
 
-    .line 260
     invoke-virtual {p1, p2, p0}, Landroid/content/pm/PackageManagerInternal;->setEnableRollbackCode(II)V
 
     return-void
@@ -73,12 +67,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 240
     iget-object p1, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$massertInWorkerThread(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
-    .line 242
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -95,24 +87,20 @@
 
     const/4 v0, -0x1
 
-    .line 243
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
     const-string v1, "android.content.pm.extra.ENABLE_ROLLBACK_SESSION_ID"
 
-    .line 245
     invoke-virtual {p2, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$mqueueSleepIfNeeded(Lcom/android/server/rollback/RollbackManagerServiceImpl;)V
 
-    .line 250
     iget-object v0, p0, Lcom/android/server/rollback/RollbackManagerServiceImpl$1;->this$0:Lcom/android/server/rollback/RollbackManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/rollback/RollbackManagerServiceImpl;->-$$Nest$mgetHandler(Lcom/android/server/rollback/RollbackManagerServiceImpl;)Landroid/os/Handler;

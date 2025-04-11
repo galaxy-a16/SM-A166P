@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/log/BiometricContextProvider;)V
     .locals 0
 
-    .line 98
     iput-object p1, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$1;->this$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 101
     iget-object p0, p0, Lcom/android/server/biometrics/log/BiometricContextProvider$1;->this$0:Lcom/android/server/biometrics/log/BiometricContextProvider;
 
     const-string p1, "android.intent.extra.DOCK_STATE"

@@ -15,16 +15,12 @@
 .method public constructor <init>(IZLandroid/content/ComponentName;)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput p1, p0, Lcom/android/server/app/GameTaskInfo;->mTaskId:I
 
-    .line 30
     iput-boolean p2, p0, Lcom/android/server/app/GameTaskInfo;->mIsGameTask:Z
 
-    .line 31
     iput-object p3, p0, Lcom/android/server/app/GameTaskInfo;->mComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -41,7 +37,6 @@
 
     return v0
 
-    .line 52
     :cond_0
     instance-of v1, p1, Lcom/android/server/app/GameTaskInfo;
 
@@ -51,11 +46,9 @@
 
     return v2
 
-    .line 56
     :cond_1
     check-cast p1, Lcom/android/server/app/GameTaskInfo;
 
-    .line 57
     iget v1, p0, Lcom/android/server/app/GameTaskInfo;->mTaskId:I
 
     iget v3, p1, Lcom/android/server/app/GameTaskInfo;->mTaskId:I
@@ -72,7 +65,6 @@
 
     iget-object p1, p1, Lcom/android/server/app/GameTaskInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 59
     invoke-virtual {p0, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -91,7 +83,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 64
     iget v0, p0, Lcom/android/server/app/GameTaskInfo;->mTaskId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -120,7 +111,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

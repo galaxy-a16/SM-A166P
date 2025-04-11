@@ -20,7 +20,6 @@
     :try_start_0
     const-string p0, "android.hardware.rebootescrow.IRebootEscrow/default"
 
-    .line 44
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
@@ -38,7 +37,6 @@
 
     const-string v0, "Device doesn\'t implement RebootEscrow HAL"
 
-    .line 47
     invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/autofill/Session;
 
     invoke-static {p1}, Lcom/android/server/autofill/Session;->$r8$lambda$EKh6qJPSgQNuG_FcUe23XvTKR3A(Lcom/android/server/autofill/Session;)V

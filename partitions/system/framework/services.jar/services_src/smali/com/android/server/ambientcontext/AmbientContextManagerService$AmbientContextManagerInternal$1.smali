@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal;Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;Landroid/app/PendingIntent;Landroid/os/RemoteCallback;)V
     .locals 0
 
-    .line 541
     iput-object p1, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->this$1:Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal;
 
     iput-object p2, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->val$service:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;
@@ -36,7 +35,6 @@
 .method public onEvents(Ljava/util/List;)V
     .locals 1
 
-    .line 544
     iget-object v0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->val$service:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;
 
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->val$resultPendingIntent:Landroid/app/PendingIntent;
@@ -49,7 +47,6 @@
 .method public onRegistrationComplete(I)V
     .locals 1
 
-    .line 549
     iget-object v0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->val$service:Lcom/android/server/ambientcontext/AmbientContextManagerPerUserService;
 
     iget-object p0, p0, Lcom/android/server/ambientcontext/AmbientContextManagerService$AmbientContextManagerInternal$1;->val$statusCallback:Landroid/os/RemoteCallback;

@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/net/NetworkStats$Entry;
 
     invoke-static {p1}, Lcom/android/server/stats/pull/StatsPullAtomService;->$r8$lambda$Ri4RS7Y325oMnN_XvuHcgqX08XU(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats$Entry;

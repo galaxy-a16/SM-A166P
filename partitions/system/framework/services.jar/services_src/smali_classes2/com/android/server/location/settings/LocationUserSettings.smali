@@ -14,10 +14,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-boolean p1, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     return-void
@@ -32,20 +30,17 @@
 
     const p1, 0x1110112
 
-    .line 71
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p0
 
     goto :goto_0
 
-    .line 75
     :cond_0
     invoke-interface {p2}, Ljava/io/DataInput;->readBoolean()Z
 
     move-result p0
 
-    .line 79
     :goto_0
     new-instance p1, Lcom/android/server/location/settings/LocationUserSettings;
 
@@ -65,7 +60,6 @@
 
     return v0
 
-    .line 87
     :cond_0
     instance-of v1, p1, Lcom/android/server/location/settings/LocationUserSettings;
 
@@ -75,11 +69,9 @@
 
     return v2
 
-    .line 90
     :cond_1
     check-cast p1, Lcom/android/server/location/settings/LocationUserSettings;
 
-    .line 91
     iget-boolean p0, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     iget-boolean p1, p1, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
@@ -98,7 +90,6 @@
 .method public getVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -107,7 +98,6 @@
 .method public hashCode()I
     .locals 0
 
-    .line 96
     iget-boolean p0, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -128,7 +118,6 @@
 .method public isAdasGnssLocationEnabled()Z
     .locals 0
 
-    .line 47
     iget-boolean p0, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     return p0
@@ -137,14 +126,12 @@
 .method public withAdasGnssLocationEnabled(Z)Lcom/android/server/location/settings/LocationUserSettings;
     .locals 1
 
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     if-ne p1, v0, :cond_0
 
     return-object p0
 
-    .line 56
     :cond_0
     new-instance p0, Lcom/android/server/location/settings/LocationUserSettings;
 
@@ -156,7 +143,6 @@
 .method public write(Ljava/io/DataOutput;)V
     .locals 0
 
-    .line 60
     iget-boolean p0, p0, Lcom/android/server/location/settings/LocationUserSettings;->mAdasGnssLocationEnabled:Z
 
     invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeBoolean(Z)V

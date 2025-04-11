@@ -15,7 +15,6 @@
 
     const-string v3, "carrier_list.pb"
 
-    .line 29
     invoke-direct {p0, v2, v3, v0, v1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -26,12 +25,10 @@
 .method public postInstall(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 34
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 35
     sget-object p1, Landroid/provider/Telephony$CarrierId$All;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo p2, "update_db"

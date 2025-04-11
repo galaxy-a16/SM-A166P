@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/isrb/IsrbManagerServiceImpl;)V
     .locals 0
 
-    .line 244
     iput-object p1, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$5;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,17 +30,14 @@
 
     const-string/jumbo v0, "showSystemErrDialog() dismissed"
 
-    .line 247
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     iget-object p1, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$5;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->-$$Nest$fputmIsSystemErrPopup(Lcom/android/server/isrb/IsrbManagerServiceImpl;Z)V
 
-    .line 249
     iget-object p0, p0, Lcom/android/server/isrb/IsrbManagerServiceImpl$5;->this$0:Lcom/android/server/isrb/IsrbManagerServiceImpl;
 
     invoke-virtual {p0}, Lcom/android/server/isrb/IsrbManagerServiceImpl;->setTipsTime()V

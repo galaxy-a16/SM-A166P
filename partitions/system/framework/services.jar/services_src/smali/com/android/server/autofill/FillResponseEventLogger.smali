@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$-nY7AUc28gNpnR9SGv8xmaSa-PM(Lcom/android/server/autofill/FillResponseEventLogger;Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetLatencyResponseProcessingMillis$14(Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$0IWIEgCjNzJMwmXEnpQ8R_UMdjI(Ljava/util/List;Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetDatasetsCountAfterPotentialPccFiltering$17(Ljava/util/List;Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static synthetic $r8$lambda$2X_3HeOOjEZ762PqAXwYae_1UvM(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetDetectionPreference$18(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -42,7 +39,6 @@
 .method public static synthetic $r8$lambda$LtUee-gVeNJyT1mfIlH7H6JIi4I(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetTotalDatasetsProvided$5(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -51,7 +47,6 @@
 .method public static synthetic $r8$lambda$TMpbYGTkM9IhbIP9wwrkzOJLVgc(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetAppPackageUid$1(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -60,7 +55,6 @@
 .method public static synthetic $r8$lambda$TublH16bXlMGojGIZL2kLef9tm4(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetSaveUiTriggerIds$6(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -69,7 +63,6 @@
 .method public static synthetic $r8$lambda$aTUCwGqRAE_-0ciiSu0yo5WlQDA(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetLatencyFillResponseReceivedMillis$7(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -78,7 +71,6 @@
 .method public static synthetic $r8$lambda$dEBbj9YOyz-juYdcAeGoONtRuiI(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetResponseStatus$13(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -87,7 +79,6 @@
 .method public static synthetic $r8$lambda$h-Dv78PjGGAnU5rbuTbdSSB2puQ(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetAvailableCount$4(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -96,7 +87,6 @@
 .method public static synthetic $r8$lambda$tmXY2McQxi3lcPqyrWXLDeS-lzg(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/FillResponseEventLogger;->lambda$maybeSetRequestId$0(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
 
     return-void
@@ -105,18 +95,14 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 72
     iput-wide v0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->startResponseProcessingTimestamp:J
 
-    .line 199
     iput p1, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mSessionId:I
 
-    .line 200
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object p1
@@ -129,7 +115,6 @@
 .method public static forSessionId(I)Lcom/android/server/autofill/FillResponseEventLogger;
     .locals 1
 
-    .line 207
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger;
 
     invoke-direct {v0, p0}, Lcom/android/server/autofill/FillResponseEventLogger;-><init>(I)V
@@ -140,7 +125,6 @@
 .method public static synthetic lambda$maybeSetAppPackageUid$1(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 234
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mAppPackageUid:I
 
     return-void
@@ -149,7 +133,6 @@
 .method public static synthetic lambda$maybeSetAvailableCount$4(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 261
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mAvailableCount:I
 
     return-void
@@ -162,7 +145,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 411
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -171,7 +153,6 @@
 
     move v3, v2
 
-    .line 412
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -179,7 +160,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 413
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -188,7 +168,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 415
     invoke-virtual {v4}, Landroid/service/autofill/Dataset;->getEligibleReason()I
 
     move-result v5
@@ -204,7 +183,6 @@
 
     goto :goto_2
 
-    .line 418
     :cond_0
     invoke-virtual {v4}, Landroid/service/autofill/Dataset;->getEligibleReason()I
 
@@ -232,14 +210,11 @@
 
     move v3, v1
 
-    .line 425
     :goto_3
     iput v0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mAvailablePccOnlyCount:I
 
-    .line 426
     iput v3, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mAvailablePccCount:I
 
-    .line 427
     iput v1, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mAvailableCount:I
 
     return-void
@@ -248,7 +223,6 @@
 .method public static synthetic lambda$maybeSetDetectionPreference$18(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 436
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mDetectionPref:I
 
     return-void
@@ -257,7 +231,6 @@
 .method public static synthetic lambda$maybeSetLatencyFillResponseReceivedMillis$7(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 309
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mLatencyFillResponseReceivedMillis:I
 
     return-void
@@ -266,7 +239,6 @@
 .method private synthetic lambda$maybeSetLatencyResponseProcessingMillis$14(Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 4
 
-    .line 376
     iget-wide v0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->startResponseProcessingTimestamp:J
 
     const-wide/16 v2, -0x1
@@ -283,10 +255,8 @@
 
     const-string/jumbo v1, "uninitialized startResponseProcessingTimestamp"
 
-    .line 377
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -304,7 +274,6 @@
 .method public static synthetic lambda$maybeSetRequestId$0(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 226
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mRequestId:I
 
     return-void
@@ -313,7 +282,6 @@
 .method public static synthetic lambda$maybeSetResponseStatus$13(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 363
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mResponseStatus:I
 
     return-void
@@ -322,7 +290,6 @@
 .method public static synthetic lambda$maybeSetSaveUiTriggerIds$6(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 0
 
-    .line 300
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mSaveUiTriggerIds:I
 
     return-void
@@ -331,14 +298,12 @@
 .method public static synthetic lambda$maybeSetTotalDatasetsProvided$5(ILcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;)V
     .locals 2
 
-    .line 274
     iget v0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mTotalDatasetsProvided:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 275
     iput p0, p1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mTotalDatasetsProvided:I
 
     :cond_0
@@ -352,7 +317,6 @@
 
     move-object/from16 v0, p0
 
-    .line 444
     iget-object v1, v0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v1}, Ljava/util/Optional;->isPresent()Z
@@ -365,12 +329,10 @@
 
     const-string v0, "Shouldn\'t be logging AutofillFillRequestReported again for same event"
 
-    .line 445
     invoke-static {v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 449
     :cond_0
     iget-object v1, v0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
@@ -380,12 +342,10 @@
 
     check-cast v1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;
 
-    .line 450
     sget-boolean v3, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz v3, :cond_1
 
-    .line 451
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +503,6 @@
     :cond_1
     const/16 v4, 0x25d
 
-    .line 471
     iget v5, v1, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;->mRequestId:I
 
     iget v6, v0, Lcom/android/server/autofill/FillResponseEventLogger;->mSessionId:I
@@ -608,7 +567,6 @@
 
     invoke-static/range {v4 .. v27}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIIIJIIIJJJIJIIII)V
 
-    .line 491
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object v1
@@ -621,7 +579,6 @@
 .method public maybeSetAppPackageUid(I)V
     .locals 1
 
-    .line 233
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda9;
@@ -636,7 +593,6 @@
 .method public maybeSetAvailableCount(I)V
     .locals 1
 
-    .line 260
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda2;
@@ -651,7 +607,6 @@
 .method public maybeSetDatasetsCountAfterPotentialPccFiltering(Ljava/util/List;)V
     .locals 1
 
-    .line 406
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda1;
@@ -666,7 +621,6 @@
 .method public maybeSetDetectionPreference(I)V
     .locals 1
 
-    .line 435
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda4;
@@ -681,7 +635,6 @@
 .method public maybeSetLatencyFillResponseReceivedMillis(I)V
     .locals 1
 
-    .line 308
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda8;
@@ -696,7 +649,6 @@
 .method public maybeSetLatencyResponseProcessingMillis()V
     .locals 2
 
-    .line 375
     iget-object v0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v1, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda3;
@@ -711,7 +663,6 @@
 .method public maybeSetRequestId(I)V
     .locals 1
 
-    .line 226
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda7;
@@ -726,7 +677,6 @@
 .method public maybeSetResponseStatus(I)V
     .locals 1
 
-    .line 362
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda6;
@@ -741,7 +691,6 @@
 .method public maybeSetSaveUiTriggerIds(I)V
     .locals 1
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda0;
@@ -756,7 +705,6 @@
 .method public maybeSetTotalDatasetsProvided(I)V
     .locals 1
 
-    .line 266
     iget-object p0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$$ExternalSyntheticLambda5;
@@ -771,7 +719,6 @@
 .method public startLogForNewResponse()V
     .locals 2
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/autofill/FillResponseEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isEmpty()Z
@@ -784,10 +731,8 @@
 
     const-string v1, "FillResponseEventLogger is not empty before starting for a new request"
 
-    .line 216
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     :cond_0
     new-instance v0, Lcom/android/server/autofill/FillResponseEventLogger$FillResponseEventInternal;
 
@@ -805,7 +750,6 @@
 .method public startResponseProcessingTime()V
     .locals 2
 
-    .line 368
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

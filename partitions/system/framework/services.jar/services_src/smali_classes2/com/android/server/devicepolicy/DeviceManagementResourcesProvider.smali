@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUpdatedDrawablesForSource(Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUpdatedDrawablesForStyle(Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
     return-object p0
@@ -37,7 +35,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUpdatedStrings(Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;)Ljava/util/Map;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
     return-object p0
@@ -46,7 +43,6 @@
 .method public static bridge synthetic -$$Nest$mgetResourcesFile(Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;)Ljava/io/File;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->getResourcesFile()Ljava/io/File;
 
     move-result-object p0
@@ -57,7 +53,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 86
     new-instance v0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$Injector;
 
     invoke-direct {v0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$Injector;-><init>()V
@@ -70,38 +65,32 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$Injector;)V
     .locals 1
 
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
-    .line 74
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
-    .line 80
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
-    .line 82
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
-    .line 90
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mInjector:Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$Injector;
@@ -114,12 +103,10 @@
 .method public getDrawable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/app/admin/ParcelableResource;
     .locals 1
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 184
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->getDrawableForSourceLocked(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/app/admin/ParcelableResource;
 
@@ -127,12 +114,10 @@
 
     if-eqz p3, :cond_0
 
-    .line 187
     monitor-exit v0
 
     return-object p3
 
-    .line 189
     :cond_0
     iget-object p3, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
@@ -142,14 +127,12 @@
 
     if-nez p3, :cond_1
 
-    .line 190
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 192
     :cond_1
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
@@ -172,7 +155,6 @@
     :catchall_0
     move-exception p0
 
-    .line 193
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -183,7 +165,6 @@
 .method public getDrawableForSourceLocked(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/app/admin/ParcelableResource;
     .locals 2
 
-    .line 199
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -196,7 +177,6 @@
 
     return-object v1
 
-    .line 202
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
@@ -214,7 +194,6 @@
 
     return-object v1
 
-    .line 205
     :cond_1
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
@@ -242,7 +221,6 @@
 .method public final getResourcesFile()Ljava/io/File;
     .locals 2
 
-    .line 279
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mInjector:Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$Injector;
@@ -261,12 +239,10 @@
 .method public getString(Ljava/lang/String;)Landroid/app/admin/ParcelableResource;
     .locals 1
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 263
     :try_start_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
@@ -283,7 +259,6 @@
     :catchall_0
     move-exception p0
 
-    .line 264
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -294,12 +269,10 @@
 .method public load()V
     .locals 3
 
-    .line 273
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 274
     :try_start_0
     new-instance v1, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$ResourcesReaderWriter;
 
@@ -309,7 +282,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$ResourcesReaderWriter;->readFromFileLocked()V
 
-    .line 275
     monitor-exit v0
 
     return-void
@@ -327,7 +299,6 @@
 .method public removeDrawables(Ljava/util/List;)Z
     .locals 7
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -338,7 +309,6 @@
 
     move v3, v2
 
-    .line 168
     :goto_0
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -349,14 +319,12 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 169
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 170
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
     invoke-interface {v6, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -367,7 +335,6 @@
 
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
-    .line 171
     invoke-interface {v6, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -390,16 +357,13 @@
     :cond_2
     if-nez v3, :cond_3
 
-    .line 174
     monitor-exit v0
 
     return v1
 
-    .line 176
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->write()V
 
-    .line 177
     monitor-exit v0
 
     return v5
@@ -407,7 +371,6 @@
     :catchall_0
     move-exception p0
 
-    .line 178
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -418,7 +381,6 @@
 .method public removeStrings(Ljava/util/List;)Z
     .locals 7
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -429,7 +391,6 @@
 
     move v3, v2
 
-    .line 248
     :goto_0
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -440,14 +401,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 249
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 250
     iget-object v6, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
     invoke-interface {v6, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -471,16 +430,13 @@
     :cond_1
     if-nez v3, :cond_2
 
-    .line 253
     monitor-exit v0
 
     return v1
 
-    .line 255
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->write()V
 
-    .line 256
     monitor-exit v0
 
     return v5
@@ -488,7 +444,6 @@
     :catchall_0
     move-exception p0
 
-    .line 257
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -499,12 +454,10 @@
 .method public final updateDrawable(Ljava/lang/String;Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
     .locals 3
 
-    .line 127
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 128
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
@@ -514,7 +467,6 @@
 
     if-nez v1, :cond_0
 
-    .line 129
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
     new-instance v2, Ljava/util/HashMap;
@@ -523,7 +475,6 @@
 
     invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     :cond_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
@@ -539,21 +490,18 @@
 
     check-cast v1, Landroid/app/admin/ParcelableResource;
 
-    .line 133
     invoke-virtual {p3, v1}, Landroid/app/admin/ParcelableResource;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 134
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 136
     :cond_1
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForStyle:Ljava/util/Map;
 
@@ -565,7 +513,6 @@
 
     invoke-interface {p0, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -575,7 +522,6 @@
     :catchall_0
     move-exception p0
 
-    .line 138
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -586,12 +532,10 @@
 .method public final updateDrawableForSource(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
     .locals 3
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 145
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
@@ -601,7 +545,6 @@
 
     if-nez v1, :cond_0
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
     new-instance v2, Ljava/util/HashMap;
@@ -610,25 +553,21 @@
 
     invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     :cond_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
-    .line 149
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map;
 
-    .line 150
     invoke-interface {v1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedDrawablesForSource:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -643,7 +582,6 @@
 
     invoke-interface {p0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
     :cond_1
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -657,21 +595,18 @@
 
     check-cast p0, Landroid/app/admin/ParcelableResource;
 
-    .line 154
     invoke-virtual {p4, p0}, Landroid/app/admin/ParcelableResource;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 155
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 157
     :cond_2
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -681,7 +616,6 @@
 
     invoke-interface {p0, p3, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -691,7 +625,6 @@
     :catchall_0
     move-exception p0
 
-    .line 159
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -708,7 +641,6 @@
 
     move v2, v1
 
-    .line 98
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -716,7 +648,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 99
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -727,7 +658,6 @@
 
     move-result-object v3
 
-    .line 100
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -738,7 +668,6 @@
 
     move-result-object v4
 
-    .line 101
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -749,7 +678,6 @@
 
     move-result-object v5
 
-    .line 102
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -762,41 +690,34 @@
 
     const-string v7, "drawableId must be provided."
 
-    .line 104
     invoke-static {v3, v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v7, "drawableStyle must be provided."
 
-    .line 105
     invoke-static {v4, v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v7, "drawableSource must be provided."
 
-    .line 106
     invoke-static {v5, v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v7, "ParcelableResource must be provided."
 
-    .line 107
     invoke-static {v6, v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v7, "UNDEFINED"
 
-    .line 109
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 110
     invoke-virtual {p0, v3, v4, v6}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->updateDrawable(Ljava/lang/String;Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
 
     move-result v3
 
     goto :goto_1
 
-    .line 112
     :cond_0
     invoke-virtual {p0, v3, v5, v4, v6}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->updateDrawableForSource(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
 
@@ -814,17 +735,14 @@
 
     return v0
 
-    .line 119
     :cond_2
     iget-object p1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 120
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->write()V
 
-    .line 121
     monitor-exit p1
 
     const/4 p0, 0x1
@@ -834,7 +752,6 @@
     :catchall_0
     move-exception p0
 
-    .line 122
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -845,12 +762,10 @@
 .method public final updateString(Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
     .locals 2
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 233
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
@@ -860,27 +775,23 @@
 
     check-cast v1, Landroid/app/admin/ParcelableResource;
 
-    .line 234
     invoke-virtual {p2, v1}, Landroid/app/admin/ParcelableResource;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 235
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 237
     :cond_0
     iget-object p0, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mUpdatedStrings:Ljava/util/Map;
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     monitor-exit v0
 
     const/4 p0, 0x1
@@ -890,7 +801,6 @@
     :catchall_0
     move-exception p0
 
-    .line 239
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -907,7 +817,6 @@
 
     move v2, v1
 
-    .line 213
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -915,7 +824,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 214
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -926,7 +834,6 @@
 
     move-result-object v3
 
-    .line 215
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -939,15 +846,12 @@
 
     const-string/jumbo v5, "stringId must be provided."
 
-    .line 217
     invoke-static {v3, v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v5, "ParcelableResource must be provided."
 
-    .line 218
     invoke-static {v4, v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 220
     invoke-virtual {p0, v3, v4}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->updateString(Ljava/lang/String;Landroid/app/admin/ParcelableResource;)Z
 
     move-result v3
@@ -963,17 +867,14 @@
 
     return v0
 
-    .line 225
     :cond_1
     iget-object p1, p0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 226
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider;->write()V
 
-    .line 227
     monitor-exit p1
 
     const/4 p0, 0x1
@@ -983,7 +884,6 @@
     :catchall_0
     move-exception p0
 
-    .line 228
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -998,10 +898,8 @@
 
     const-string v1, "Writing updated resources to file."
 
-    .line 268
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     new-instance v0, Lcom/android/server/devicepolicy/DeviceManagementResourcesProvider$ResourcesReaderWriter;
 
     const/4 v1, 0x0

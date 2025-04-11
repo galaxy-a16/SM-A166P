@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/power/AbuseWakeLockDetector$WakeLockInfoPair;
 
     invoke-static {p1}, Lcom/android/server/power/AbuseWakeLockDetector;->$r8$lambda$o9q99KInUPKh41B8Q1OpHwkDHFk(Lcom/android/server/power/AbuseWakeLockDetector$WakeLockInfoPair;)Ljava/lang/String;

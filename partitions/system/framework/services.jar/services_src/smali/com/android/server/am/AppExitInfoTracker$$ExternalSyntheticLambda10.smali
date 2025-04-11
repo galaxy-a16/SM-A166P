@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/io/File;
 
     invoke-static {p1}, Lcom/android/server/am/AppExitInfoTracker;->$r8$lambda$FzcoEfxHiIkTmqfTPnCAl4nCLHA(Ljava/io/File;)V

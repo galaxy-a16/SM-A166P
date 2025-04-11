@@ -7,7 +7,6 @@
 .method public static diagnoseCheckers(Ljava/util/List;)V
     .locals 13
 
-    .line 72
     new-instance v0, Ljava/io/PrintWriter;
 
     new-instance v1, Landroid/util/LogWriter;
@@ -30,14 +29,12 @@
 
     const/4 v5, 0x0
 
-    .line 74
     invoke-static {v4, v1, v3, v2, v5}, Landroid/util/Log;->printlns(IILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v2, 0x0
 
     move v6, v2
 
-    .line 75
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -45,7 +42,6 @@
 
     if-ge v6, v7, :cond_2
 
-    .line 76
     invoke-interface {p0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -56,7 +52,6 @@
 
     move-result-object v7
 
-    .line 77
     invoke-static {v7, v0}, Lcom/android/server/WatchdogDiagnostics;->printAnnotatedStack(Ljava/lang/Thread;Ljava/io/PrintWriter;)Z
 
     move-result v8
@@ -65,13 +60,11 @@
 
     goto :goto_2
 
-    .line 83
     :cond_0
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 84
     invoke-virtual {v7}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -86,15 +79,12 @@
 
     move-result-object v8
 
-    .line 83
     invoke-static {v4, v1, v3, v8, v5}, Landroid/util/Log;->printlns(IILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 85
     invoke-virtual {v7}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v7
 
-    .line 86
     array-length v8, v7
 
     move v9, v2
@@ -104,7 +94,6 @@
 
     aget-object v10, v7, v9
 
-    .line 88
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +127,6 @@
 .method public static getBlockedOnString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
-    .line 38
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v0
@@ -161,7 +149,6 @@
 
     const-string v0, "- waiting to lock <0x%08x> (a %s)"
 
-    .line 37
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -172,7 +159,6 @@
 .method public static getLockedString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
-    .line 42
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v0
@@ -181,7 +167,6 @@
 
     move-result-object v0
 
-    .line 43
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -196,7 +181,6 @@
 
     const-string v0, "- locked <0x%08x> (a %s)"
 
-    .line 42
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -207,7 +191,6 @@
 .method public static printAnnotatedStack(Ljava/lang/Thread;Ljava/io/PrintWriter;)Z
     .locals 9
 
-    .line 52
     invoke-static {p0}, Ldalvik/system/VMStack;->getAnnotatedThreadStackTrace(Ljava/lang/Thread;)[Ldalvik/system/AnnotatedStackTraceElement;
 
     move-result-object v0
@@ -218,7 +201,6 @@
 
     return v1
 
-    .line 56
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -244,7 +226,6 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 57
     array-length p0, v0
 
     move v2, v1
@@ -254,7 +235,6 @@
 
     aget-object v3, v0, v2
 
-    .line 58
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,7 +255,6 @@
 
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 59
     invoke-virtual {v3}, Ldalvik/system/AnnotatedStackTraceElement;->getBlockedOn()Ljava/lang/Object;
 
     move-result-object v4
@@ -284,7 +263,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 60
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,7 +285,6 @@
 
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 62
     :cond_1
     invoke-virtual {v3}, Ldalvik/system/AnnotatedStackTraceElement;->getHeldLocks()[Ljava/lang/Object;
 
@@ -315,7 +292,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 63
     invoke-virtual {v3}, Ldalvik/system/AnnotatedStackTraceElement;->getHeldLocks()[Ljava/lang/Object;
 
     move-result-object v3
@@ -329,7 +305,6 @@
 
     aget-object v7, v3, v6
 
-    .line 64
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V

@@ -74,7 +74,6 @@
 
     move/from16 v11, p11
 
-    .line 227
     invoke-direct/range {v0 .. v13}, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;-><init>(Lcom/android/server/wm/Session;Lcom/android/server/wm/WindowManagerService;Landroid/view/IWindow;Lcom/android/server/wm/WindowState;IIIILandroid/os/IBinder;Ljava/lang/String;ZLandroid/view/SurfaceControl;Landroid/window/WindowContainerToken;)V
 
     return-void
@@ -83,36 +82,27 @@
 .method public constructor <init>(Lcom/android/server/wm/Session;Lcom/android/server/wm/WindowManagerService;Landroid/view/IWindow;Lcom/android/server/wm/WindowState;IIIILandroid/os/IBinder;Ljava/lang/String;ZLandroid/view/SurfaceControl;Landroid/window/WindowContainerToken;)V
     .locals 1
 
-    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 235
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_CAPTION_SHELL:Z
 
     if-eqz v0, :cond_0
 
-    .line 236
     iput-object p12, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 237
     iput-object p13, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mTaskToken:Landroid/window/WindowContainerToken;
 
-    .line 240
     :cond_0
     iput-object p1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mSession:Lcom/android/server/wm/Session;
 
-    .line 241
     iput-object p2, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 242
     iput-object p3, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mClient:Landroid/view/IWindow;
 
-    .line 243
     iput-object p4, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     if-eqz p4, :cond_1
 
-    .line 244
     iget-object p2, p4, Lcom/android/server/wm/WindowState;->mActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     goto :goto_0
@@ -120,28 +110,21 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 245
     :goto_0
     iput-object p2, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
-    .line 246
     iput p5, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mOwnerUid:I
 
-    .line 247
     iput p6, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mOwnerPid:I
 
-    .line 248
     iput p7, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWindowType:I
 
-    .line 249
     iput p8, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mDisplayId:I
 
-    .line 250
     iput-object p9, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mFocusGrantToken:Landroid/os/IBinder;
 
     if-eqz p4, :cond_2
 
-    .line 252
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,11 +152,9 @@
     :cond_2
     const-string p2, ""
 
-    .line 254
     :goto_1
     iput-boolean p11, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mIsFocusable:Z
 
-    .line 255
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -196,7 +177,6 @@
 
     iput-object p2, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mName:Ljava/lang/String;
 
-    .line 258
     iget p1, p1, Lcom/android/server/wm/Session;->mUid:I
 
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
@@ -213,7 +193,6 @@
 .method public canScreenshotIme()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -222,21 +201,18 @@
 .method public dumpProto(Landroid/util/proto/ProtoOutputStream;JI)V
     .locals 4
 
-    .line 439
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide p2
 
     const-wide v0, 0x10b00000002L
 
-    .line 441
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->start(J)J
 
     move-result-wide v0
 
     const-wide v2, 0x10500000001L
 
-    .line 442
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -247,13 +223,10 @@
 
     const-string p0, "EmbeddedWindow"
 
-    .line 443
     invoke-virtual {p1, v2, v3, p0}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
-    .line 444
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
-    .line 445
     invoke-virtual {p1, p2, p3}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     return-void
@@ -262,7 +235,6 @@
 .method public getActivityRecord()Lcom/android/server/wm/ActivityRecord;
     .locals 0
 
-    .line 433
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostActivityRecord:Lcom/android/server/wm/ActivityRecord;
 
     return-object p0
@@ -271,14 +243,12 @@
 .method public getApplicationHandle()Landroid/view/InputApplicationHandle;
     .locals 1
 
-    .line 269
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     if-eqz v0, :cond_1
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mInputWindowHandle:Lcom/android/server/wm/InputWindowHandleWrapper;
 
-    .line 270
     invoke-virtual {v0}, Lcom/android/server/wm/InputWindowHandleWrapper;->getInputApplicationHandle()Landroid/view/InputApplicationHandle;
 
     move-result-object v0
@@ -287,7 +257,6 @@
 
     goto :goto_0
 
-    .line 273
     :cond_0
     new-instance v0, Landroid/view/InputApplicationHandle;
 
@@ -295,7 +264,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/WindowState;->mInputWindowHandle:Lcom/android/server/wm/InputWindowHandleWrapper;
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/wm/InputWindowHandleWrapper;->getInputApplicationHandle()Landroid/view/InputApplicationHandle;
 
     move-result-object p0
@@ -314,7 +282,6 @@
 .method public getDisplayContent()Lcom/android/server/wm/DisplayContent;
     .locals 1
 
-    .line 333
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mRoot:Lcom/android/server/wm/RootWindowContainer;
@@ -333,7 +300,6 @@
 .method public getDisplayId()I
     .locals 0
 
-    .line 328
     iget p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mDisplayId:I
 
     return p0
@@ -342,7 +308,6 @@
 .method public getFocusGrantToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 356
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mFocusGrantToken:Landroid/os/IBinder;
 
     return-object p0
@@ -351,7 +316,6 @@
 .method public getIWindow()Landroid/view/IWindow;
     .locals 0
 
-    .line 338
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mClient:Landroid/view/IWindow;
 
     return-object p0
@@ -360,19 +324,16 @@
 .method public getImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
     .locals 1
 
-    .line 420
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     if-eqz v0, :cond_0
 
-    .line 421
     invoke-virtual {v0}, Lcom/android/server/wm/WindowState;->getImeControlTarget()Lcom/android/server/wm/InsetsControlTarget;
 
     move-result-object p0
 
     return-object p0
 
-    .line 423
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -388,12 +349,10 @@
 .method public getInputChannelToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 360
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mInputChannel:Landroid/view/InputChannel;
 
     if-eqz p0, :cond_0
 
-    .line 361
     invoke-virtual {p0}, Landroid/view/InputChannel;->getToken()Landroid/os/IBinder;
 
     move-result-object p0
@@ -409,7 +368,6 @@
 .method public getPid()I
     .locals 0
 
-    .line 347
     iget p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mOwnerPid:I
 
     return p0
@@ -418,7 +376,6 @@
 .method public getWindowState()Lcom/android/server/wm/WindowState;
     .locals 0
 
-    .line 323
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     return-object p0
@@ -427,7 +384,6 @@
 .method public getWindowToken()Landroid/os/IBinder;
     .locals 0
 
-    .line 342
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mClient:Landroid/view/IWindow;
 
     invoke-interface {p0}, Landroid/view/IWindow;->asBinder()Landroid/os/IBinder;
@@ -440,17 +396,14 @@
 .method public final handleTap(Z)V
     .locals 4
 
-    .line 380
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mInputChannel:Landroid/view/InputChannel;
 
     if-eqz v0, :cond_1
 
-    .line 381
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     if-eqz v0, :cond_0
 
-    .line 384
     iget-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
@@ -463,14 +416,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 390
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowState;->handleTapOutsideFocusInsideSelf()V
 
     goto :goto_0
 
-    .line 393
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
@@ -490,7 +441,6 @@
 
     const/4 v0, 0x1
 
-    .line 405
     invoke-virtual {p0, v0}, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->handleTap(Z)V
 
     return-void
@@ -501,7 +451,6 @@
 
     const/4 v0, 0x0
 
-    .line 400
     invoke-virtual {p0, v0}, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->handleTap(Z)V
 
     return-void
@@ -510,7 +459,6 @@
 .method public isInputMethodClientFocus(II)Z
     .locals 1
 
-    .line 428
     iget v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mOwnerUid:I
 
     if-ne p1, v0, :cond_0
@@ -533,15 +481,12 @@
 .method public onGrantFocusChanged(Z)V
     .locals 2
 
-    .line 313
     iget-boolean v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mFocusGranted:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 314
     iput-boolean p1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mFocusGranted:Z
 
-    .line 315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -564,7 +509,6 @@
 
     const/4 p0, 0x2
 
-    .line 316
     invoke-static {p0}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object p0
@@ -577,7 +521,6 @@
 
     const-string p1, "EmbeddedWindow"
 
-    .line 315
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -587,12 +530,10 @@
 .method public onRemoved()V
     .locals 4
 
-    .line 285
     iget-boolean v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mFocusGranted:Z
 
     if-eqz v0, :cond_0
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mSession:Lcom/android/server/wm/Session;
@@ -603,7 +544,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/wm/WindowManagerService;->grantEmbeddedWindowFocus(Lcom/android/server/wm/Session;Landroid/os/IBinder;Z)V
 
-    .line 293
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mInputChannel:Landroid/view/InputChannel;
 
@@ -611,7 +551,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 294
     iget-object v2, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
@@ -622,38 +561,30 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/input/InputManagerService;->removeInputChannel(Landroid/os/IBinder;)V
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mInputChannel:Landroid/view/InputChannel;
 
     invoke-virtual {v0}, Landroid/view/InputChannel;->dispose()V
 
-    .line 296
     iput-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mInputChannel:Landroid/view/InputChannel;
 
-    .line 299
     :cond_1
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_CAPTION_SHELL:Z
 
     if-eqz v0, :cond_3
 
-    .line 300
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mTaskToken:Landroid/window/WindowContainerToken;
 
     if-eqz v0, :cond_2
 
-    .line 301
     iput-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mTaskToken:Landroid/window/WindowContainerToken;
 
-    .line 303
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mSurface:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_3
 
-    .line 304
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->release()V
 
-    .line 305
     iput-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mSurface:Landroid/view/SurfaceControl;
 
     :cond_3
@@ -663,12 +594,10 @@
 .method public openInputChannel()Landroid/view/InputChannel;
     .locals 2
 
-    .line 278
     invoke-virtual {p0}, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 279
     iget-object v1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mWmService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowManagerService;->mInputManager:Lcom/android/server/input/InputManagerService;
@@ -685,7 +614,6 @@
 .method public receiveFocusFromTapOutside()Z
     .locals 0
 
-    .line 376
     iget-boolean p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mIsFocusable:Z
 
     return p0
@@ -694,7 +622,6 @@
 .method public setIsFocusable(Z)V
     .locals 0
 
-    .line 367
     iput-boolean p1, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mIsFocusable:Z
 
     return-void
@@ -703,7 +630,6 @@
 .method public shouldControlIme()Z
     .locals 0
 
-    .line 410
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mHostWindowState:Lcom/android/server/wm/WindowState;
 
     if-eqz p0, :cond_0
@@ -722,7 +648,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 265
     iget-object p0, p0, Lcom/android/server/wm/EmbeddedWindowController$EmbeddedWindow;->mName:Ljava/lang/String;
 
     return-object p0

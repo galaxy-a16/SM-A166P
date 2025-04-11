@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)V
     .locals 0
 
-    .line 734
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$9;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 3
 
-    .line 737
     iget-object v0, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$9;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;->-$$Nest$fgetmCoverStateLock(Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 738
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/cover/CoverManagerServiceImpl$9;->this$0:Lcom/android/server/sepunion/cover/CoverManagerServiceImpl;
 
@@ -66,7 +63,6 @@
 
     invoke-virtual {v1, v2, p0}, Lcom/android/server/sepunion/cover/StateNotifier;->updatePowerState(IZ)V
 
-    .line 739
     monitor-exit v0
 
     return-void

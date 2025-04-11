@@ -13,7 +13,6 @@
 
     const-string v0, "com.samsung.android.knox.app.networkfilter"
 
-    .line 67
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0

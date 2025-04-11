@@ -19,26 +19,21 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 828
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 829
     monitor-enter p0
 
     const/4 p1, 0x0
 
-    .line 830
     :try_start_0
     iput-object p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
-    .line 831
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
-    .line 832
     monitor-exit p0
 
     return-void
@@ -56,7 +51,6 @@
 .method public static setLoggingEnabled(Z)Z
     .locals 1
 
-    .line 902
     sget-boolean v0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->sDebugLogging:Z
 
     if-ne v0, p0, :cond_0
@@ -65,7 +59,6 @@
 
     return p0
 
-    .line 905
     :cond_0
     sput-boolean p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->sDebugLogging:Z
 
@@ -79,29 +72,23 @@
 .method public addPoint(FFF)V
     .locals 1
 
-    .line 836
     monitor-enter p0
 
-    .line 837
     :try_start_0
     new-instance v0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;-><init>(FFF)V
 
-    .line 838
     invoke-virtual {p0, v0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->removeRedundantUserPoint(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)V
 
-    .line 839
     iget-object p2, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
     iput p1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mLastAddedLux:F
 
     const/4 p1, 0x0
 
-    .line 842
     :goto_0
     iget-object p2, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
@@ -113,7 +100,6 @@
 
     const-string p2, "BrightnessMappingStrategy"
 
-    .line 843
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,11 +132,9 @@
 
     goto :goto_0
 
-    .line 846
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->updateCurve()V
 
-    .line 847
     monitor-exit p0
 
     return-void
@@ -168,16 +152,13 @@
 .method public clear()V
     .locals 4
 
-    .line 851
     monitor-enter p0
 
-    .line 852
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
     if-eqz v0, :cond_0
 
-    .line 853
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object v0
@@ -200,21 +181,17 @@
 
     check-cast v2, [F
 
-    .line 854
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/server/display/utils/Plog;->logCurve(Ljava/lang/String;[F[F)Lcom/android/server/display/utils/Plog;
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 857
     iput-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
-    .line 858
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 859
     monitor-exit p0
 
     return-void
@@ -232,14 +209,12 @@
 .method public final convertFloatArrayListToArray(Ljava/util/ArrayList;)[F
     .locals 3
 
-    .line 984
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
     new-array p0, p0, [F
 
-    .line 986
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -263,7 +238,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 987
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
     move-result v1
@@ -289,15 +263,12 @@
 
     const-string v0, "UserOffsetManager:"
 
-    .line 887
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 889
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
     if-eqz v0, :cond_0
 
-    .line 890
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -331,7 +302,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 893
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
@@ -341,7 +311,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 894
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -374,11 +343,9 @@
 
     goto :goto_0
 
-    .line 897
     :cond_1
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 898
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -403,17 +370,14 @@
 .method public final formatCurve([F[F)Ljava/lang/String;
     .locals 4
 
-    .line 910
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "curve: ["
 
-    .line 911
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 912
     array-length v0, p1
 
     array-length v1, p2
@@ -433,7 +397,6 @@
     :goto_1
     if-ge v1, v0, :cond_1
 
-    .line 914
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -471,10 +434,8 @@
     :cond_1
     const-string p1, "]"
 
-    .line 916
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 917
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -485,16 +446,13 @@
 .method public getCurve()Landroid/util/Pair;
     .locals 3
 
-    .line 863
     monitor-enter p0
 
-    .line 865
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
     if-eqz v0, :cond_0
 
-    .line 866
     iget-object v0, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     move-object v1, v0
@@ -521,12 +479,10 @@
 
     array-length v1, v1
 
-    .line 867
     invoke-static {v2, v1}, Ljava/util/Arrays;->copyOf([FI)[F
 
     move-result-object v1
 
-    .line 866
     invoke-static {v0, v1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v0
@@ -536,7 +492,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 870
     :goto_0
     monitor-exit p0
 
@@ -545,7 +500,6 @@
     :catchall_0
     move-exception v0
 
-    .line 871
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -556,10 +510,8 @@
 .method public getLastAddedLux()F
     .locals 1
 
-    .line 881
     monitor-enter p0
 
-    .line 882
     :try_start_0
     iget v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mLastAddedLux:F
 
@@ -570,7 +522,6 @@
     :catchall_0
     move-exception v0
 
-    .line 883
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -581,10 +532,8 @@
 .method public hasUserDataPoints()Z
     .locals 1
 
-    .line 875
     monitor-enter p0
 
-    .line 876
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
@@ -609,7 +558,6 @@
     :catchall_0
     move-exception v0
 
-    .line 877
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -620,14 +568,12 @@
 .method public final removeRedundantUserPoint(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)V
     .locals 1
 
-    .line 973
     iget-object p0, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 974
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -636,21 +582,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 975
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;
 
-    .line 977
     invoke-virtual {p1, v0}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->isInSameBoundary(Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 978
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -662,31 +605,26 @@
 .method public final updateCurve()V
     .locals 11
 
-    .line 921
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mUserPoints:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 922
     invoke-static {}, Ljava/util/Comparator;->naturalOrder()Ljava/util/Comparator;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->sort(Ljava/util/Comparator;)V
 
-    .line 924
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 925
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 927
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -698,7 +636,6 @@
     :goto_0
     if-ge v5, v3, :cond_4
 
-    .line 929
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -711,14 +648,12 @@
 
     add-int/lit8 v8, v5, -0x1
 
-    .line 934
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;
 
-    .line 935
     iget v9, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLowerBoundary:F
 
     invoke-virtual {v8, v9}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->isInSameBoundary(F)Z
@@ -739,7 +674,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 940
     iget v8, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLowerBoundary:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -748,14 +682,12 @@
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 941
     invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 945
     :cond_1
     iget v8, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mLux:F
 
@@ -765,7 +697,6 @@
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 946
     iget v8, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mBrightnessOffset:F
 
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -780,14 +711,12 @@
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 951
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;
 
-    .line 952
     iget v10, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mUpperBoundary:F
 
     invoke-virtual {v8, v10}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->isInSameBoundary(F)Z
@@ -801,7 +730,6 @@
     :cond_2
     if-eqz v7, :cond_3
 
-    .line 957
     iget v6, v6, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager$UserPoint;->mUpperBoundary:F
 
     invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -810,7 +738,6 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 958
     invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
@@ -822,30 +749,25 @@
 
     goto :goto_0
 
-    .line 962
     :cond_4
     invoke-virtual {p0, v1}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->convertFloatArrayListToArray(Ljava/util/ArrayList;)[F
 
     move-result-object v0
 
-    .line 963
     invoke-virtual {p0, v2}, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->convertFloatArrayListToArray(Ljava/util/ArrayList;)[F
 
     move-result-object v1
 
-    .line 965
     invoke-static {v0, v1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->mCurve:Landroid/util/Pair;
 
-    .line 967
     sget-boolean p0, Lcom/android/server/display/BrightnessMappingStrategy$UserOffsetManager;->sDebugLogging:Z
 
     if-eqz p0, :cond_5
 
-    .line 968
     invoke-static {}, Lcom/android/server/display/BrightnessMappingStrategy;->-$$Nest$sfgetPLOG()Lcom/android/server/display/utils/Plog;
 
     move-result-object p0

@@ -11,32 +11,26 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 2
 
-    .line 6066
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$InteractiveStateReceiver;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 6067
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.SCREEN_OFF"
 
-    .line 6068
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.SCREEN_ON"
 
-    .line 6069
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const/16 v1, 0x3e8
 
-    .line 6070
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 6071
     invoke-virtual {p1}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -51,14 +45,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 6076
     iget-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$InteractiveStateReceiver;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     iget-object p1, p1, Lcom/android/server/alarm/AlarmManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 6077
     :try_start_0
     iget-object p0, p0, Lcom/android/server/alarm/AlarmManagerService$InteractiveStateReceiver;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
@@ -74,7 +66,6 @@
 
     invoke-virtual {p0, p2}, Lcom/android/server/alarm/AlarmManagerService;->interactiveStateChangedLocked(Z)V
 
-    .line 6078
     monitor-exit p1
 
     return-void

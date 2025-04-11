@@ -29,26 +29,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 15544
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 15545
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     const/4 v1, 0x1
 
-    .line 15551
     iput-boolean v1, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->redact:Z
 
-    .line 15552
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->proto:Z
 
-    .line 15553
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->criticalPriority:Z
 
-    .line 15554
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->normalPriority:Z
 
     return-void
@@ -57,7 +51,6 @@
 .method public static parseFromArguments([Ljava/lang/String;)Lcom/android/server/notification/NotificationManagerService$DumpFilter;
     .locals 8
 
-    .line 15558
     new-instance v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     invoke-direct {v0}, Lcom/android/server/notification/NotificationManagerService$DumpFilter;-><init>()V
@@ -66,18 +59,15 @@
 
     move v2, v1
 
-    .line 15559
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_f
 
-    .line 15560
     aget-object v3, p0, v2
 
     const-string v4, "--proto"
 
-    .line 15561
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -86,7 +76,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 15562
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->proto:Z
 
     goto/16 :goto_4
@@ -94,7 +83,6 @@
     :cond_0
     const-string v4, "--noredact"
 
-    .line 15563
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -114,7 +102,6 @@
     :cond_1
     const-string/jumbo v4, "p"
 
-    .line 15565
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -142,7 +129,6 @@
     :cond_2
     const-string v4, "--zen"
 
-    .line 15575
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -162,7 +148,6 @@
     :cond_3
     const-string v4, "--stats"
 
-    .line 15578
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -171,10 +156,8 @@
 
     if-eqz v4, :cond_5
 
-    .line 15579
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->stats:Z
 
-    .line 15580
     array-length v3, p0
 
     sub-int/2addr v3, v5
@@ -183,7 +166,6 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 15582
     aget-object v3, p0, v2
 
     invoke-static {v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -194,7 +176,6 @@
 
     goto/16 :goto_4
 
-    .line 15584
     :cond_4
     iput-wide v6, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->since:J
 
@@ -203,17 +184,14 @@
     :cond_5
     const-string v4, "--remote-view-stats"
 
-    .line 15586
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 15587
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->rvStats:Z
 
-    .line 15588
     array-length v3, p0
 
     sub-int/2addr v3, v5
@@ -222,7 +200,6 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 15590
     aget-object v3, p0, v2
 
     invoke-static {v3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -233,7 +210,6 @@
 
     goto :goto_4
 
-    .line 15592
     :cond_6
     iput-wide v6, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->since:J
 
@@ -242,14 +218,12 @@
     :cond_7
     const-string v4, "--dump-priority"
 
-    .line 15594
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_e
 
-    .line 15598
     array-length v3, p0
 
     sub-int/2addr v3, v5
@@ -258,7 +232,6 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 15600
     aget-object v3, p0, v2
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
@@ -281,29 +254,24 @@
 
     goto :goto_4
 
-    .line 15602
     :cond_8
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->criticalPriority:Z
 
     goto :goto_4
 
-    .line 15605
     :cond_9
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->normalPriority:Z
 
     goto :goto_4
 
-    .line 15576
     :cond_a
     :goto_1
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
-    .line 15577
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->zen:Z
 
     goto :goto_4
 
-    .line 15566
     :cond_b
     :goto_2
     array-length v3, p0
@@ -314,7 +282,6 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 15568
     aget-object v3, p0, v2
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -327,7 +294,6 @@
 
     iput-object v3, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->pkgFilter:Ljava/lang/String;
 
-    .line 15569
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
@@ -336,18 +302,15 @@
 
     const/4 v3, 0x0
 
-    .line 15570
     iput-object v3, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->pkgFilter:Ljava/lang/String;
 
     goto :goto_4
 
-    .line 15572
     :cond_c
     iput-boolean v5, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     goto :goto_4
 
-    .line 15564
     :cond_d
     :goto_3
     iput-boolean v1, v0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->redact:Z
@@ -367,7 +330,6 @@
 .method public matches(Landroid/content/ComponentName;)Z
     .locals 2
 
-    .line 15621
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     const/4 v1, 0x1
@@ -376,7 +338,6 @@
 
     return v1
 
-    .line 15622
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->zen:Z
 
@@ -409,7 +370,6 @@
 .method public matches(Landroid/service/notification/StatusBarNotification;)Z
     .locals 2
 
-    .line 15615
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     const/4 v1, 0x1
@@ -418,7 +378,6 @@
 
     return v1
 
-    .line 15616
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->zen:Z
 
@@ -429,7 +388,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 15617
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -463,7 +421,6 @@
 .method public matches(Ljava/lang/String;)Z
     .locals 2
 
-    .line 15626
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->filtered:Z
 
     const/4 v1, 0x1
@@ -472,7 +429,6 @@
 
     return v1
 
-    .line 15627
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->zen:Z
 
@@ -507,7 +463,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 15632
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->stats:Z
 
     if-eqz v0, :cond_0

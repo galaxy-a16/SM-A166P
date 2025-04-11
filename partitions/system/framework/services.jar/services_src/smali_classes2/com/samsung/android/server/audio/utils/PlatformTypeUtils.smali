@@ -7,7 +7,6 @@
 .method public static getOneUIVersion(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .line 33
     sget v0, Landroid/os/Build$VERSION;->SEM_PLATFORM_INT:I
 
     const v1, 0x15f90
@@ -16,12 +15,10 @@
 
     div-int/lit16 v1, v1, 0x2710
 
-    .line 34
     rem-int/lit16 v0, v0, 0x2710
 
     div-int/lit8 v0, v0, 0x64
 
-    .line 35
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -41,7 +38,6 @@
     :cond_0
     const-string p0, ""
 
-    .line 37
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -67,7 +63,6 @@
 .method public static getPlatformType(Landroid/content/Context;)I
     .locals 1
 
-    .line 55
     invoke-static {p0}, Lcom/samsung/android/server/audio/utils/PlatformTypeUtils;->hasCmcFeature(Landroid/content/Context;)Z
 
     move-result v0
@@ -78,7 +73,6 @@
 
     return p0
 
-    .line 58
     :cond_0
     invoke-static {p0}, Landroid/media/AudioSystem;->getPlatformType(Landroid/content/Context;)I
 
@@ -92,7 +86,6 @@
 
     const/4 v0, 0x0
 
-    .line 42
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -104,7 +97,6 @@
 
     move-result-object p0
 
-    .line 44
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -113,12 +105,10 @@
 
     const-string v1, "\\."
 
-    .line 45
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 47
     array-length v1, p0
 
     const/4 v2, 0x4
@@ -149,7 +139,6 @@
 
     const-string v2, "hasCmcFeature error"
 
-    .line 49
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -158,7 +147,6 @@
 .method public static ignoreVoiceKey(Landroid/content/Context;)Z
     .locals 1
 
-    .line 67
     invoke-static {p0}, Lcom/samsung/android/server/audio/utils/PlatformTypeUtils;->isDeviceProvisioned(Landroid/content/Context;)Z
 
     move-result p0
@@ -169,7 +157,6 @@
 
     const-string v0, "don\'t call VoiceInteraction during setup-wizard"
 
-    .line 68
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -185,7 +172,6 @@
 .method public static isDeviceProvisioned(Landroid/content/Context;)Z
     .locals 2
 
-    .line 62
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

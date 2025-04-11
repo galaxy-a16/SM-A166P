@@ -30,10 +30,8 @@
 
     const/4 v0, 0x0
 
-    .line 86
     invoke-direct {p0, p1, p2, v0, v0}, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;-><init>(Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;II)V
 
-    .line 87
     iput p3, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->value:I
 
     return-void
@@ -42,29 +40,22 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;II)V
     .locals 0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callbackType:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
-    .line 78
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
-    .line 79
     iput p3, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->code:I
 
-    .line 80
     iput p4, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->vendorCode:I
 
-    .line 81
     new-instance p1, Ljava/util/Random;
 
     invoke-direct {p1}, Ljava/util/Random;-><init>()V
 
     const/16 p2, 0x3e8
 
-    .line 82
     invoke-virtual {p1, p2}, Ljava/util/Random;->nextInt(I)I
 
     move-result p1
@@ -81,7 +72,6 @@
 .method public getCallbackType()Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
     .locals 0
 
-    .line 129
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callbackType:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     return-object p0
@@ -90,7 +80,6 @@
 .method public getCode()I
     .locals 0
 
-    .line 133
     iget p0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->code:I
 
     return p0
@@ -99,7 +88,6 @@
 .method public getDelay()J
     .locals 2
 
-    .line 125
     iget-wide v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->delay:J
 
     return-wide v0
@@ -108,7 +96,6 @@
 .method public getValue()I
     .locals 0
 
-    .line 141
     iget p0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->value:I
 
     return p0
@@ -117,7 +104,6 @@
 .method public getVendorCode()I
     .locals 0
 
-    .line 137
     iget p0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->vendorCode:I
 
     return p0
@@ -126,7 +112,6 @@
 .method public isFinishEnroll()Z
     .locals 2
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callbackType:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
 
     sget-object v1, Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;->ENROLL_RESULT:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
@@ -151,7 +136,6 @@
 .method public run()V
     .locals 3
 
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,7 +158,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     sget-object v0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$1;->$SwitchMap$com$android$server$biometrics$sensors$SemTestHalHelper$CallbackType:[I
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callbackType:Lcom/android/server/biometrics/sensors/SemTestHalHelper$CallbackType;
@@ -189,7 +172,6 @@
 
     goto :goto_0
 
-    .line 110
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -203,7 +185,6 @@
 
     goto :goto_0
 
-    .line 107
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -213,7 +194,6 @@
 
     goto :goto_0
 
-    .line 104
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -223,7 +203,6 @@
 
     goto :goto_0
 
-    .line 101
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -233,7 +212,6 @@
 
     goto :goto_0
 
-    .line 98
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -245,7 +223,6 @@
 
     goto :goto_0
 
-    .line 95
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->callback:Lcom/android/server/biometrics/sensors/SemTestHalHelper$Callback;
 
@@ -272,7 +249,6 @@
 .method public setDelay(J)Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;
     .locals 0
 
-    .line 120
     iput-wide p1, p0, Lcom/android/server/biometrics/sensors/SemTestHalHelper$Action;->delay:J
 
     return-object p0
@@ -281,7 +257,6 @@
 .method public toDebugString()Ljava/lang/String;
     .locals 3
 
-    .line 145
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

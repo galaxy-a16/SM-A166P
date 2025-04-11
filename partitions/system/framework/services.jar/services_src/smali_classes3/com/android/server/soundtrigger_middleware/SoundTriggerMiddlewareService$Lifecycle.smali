@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 237
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -18,12 +17,10 @@
 .method public onStart()V
     .locals 9
 
-    .line 242
     new-instance v0, Lcom/android/server/soundtrigger_middleware/SoundTriggerInjection;
 
     invoke-direct {v0}, Lcom/android/server/soundtrigger_middleware/SoundTriggerInjection;-><init>()V
 
-    .line 243
     new-instance v1, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;
 
     invoke-direct {v1}, Lcom/android/server/soundtrigger_middleware/DefaultHalFactory;-><init>()V
@@ -36,12 +33,10 @@
 
     move-result-object v1
 
-    .line 246
     new-instance v2, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareService;
 
     new-instance v3, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareLogging;
 
-    .line 248
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -60,7 +55,6 @@
 
     invoke-direct {v6, v7}, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareValidation;-><init>(Lcom/android/server/soundtrigger_middleware/ISoundTriggerMiddlewareInternal;)V
 
-    .line 253
     invoke-virtual {p0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -79,7 +73,6 @@
 
     const-string/jumbo v0, "soundtrigger_middleware"
 
-    .line 246
     invoke-virtual {p0, v0, v2}, Lcom/android/server/SystemService;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void

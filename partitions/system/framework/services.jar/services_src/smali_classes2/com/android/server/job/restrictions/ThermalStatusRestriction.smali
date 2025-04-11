@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fgetmForceRestricted(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mForceRestricted:Z
 
     return p0
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIncrease(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mIncrease:Z
 
     return p0
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmThermalStatus(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
     return p0
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fputmForceRestricted(Lcom/android/server/job/restrictions/ThermalStatusRestriction;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mForceRestricted:Z
 
     return-void
@@ -53,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$fputmIncrease(Lcom/android/server/job/restrictions/ThermalStatusRestriction;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mIncrease:Z
 
     return-void
@@ -62,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$fputmThermalStatus(Lcom/android/server/job/restrictions/ThermalStatusRestriction;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
     return-void
@@ -77,32 +71,26 @@
 
     const/4 v2, 0x4
 
-    .line 57
     invoke-direct {p0, p1, v2, v0, v1}, Lcom/android/server/job/restrictions/JobRestriction;-><init>(Lcom/android/server/job/JobSchedulerService;III)V
 
     const/4 p1, 0x0
 
-    .line 50
     iput p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
-    .line 163
     new-instance p1, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;
 
     invoke-direct {p1, p0}, Lcom/android/server/job/restrictions/ThermalStatusRestriction$2;-><init>(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)V
 
     iput-object p1, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mSIOPTracker:Landroid/content/BroadcastReceiver;
 
-    .line 61
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "com.samsung.intent.action.SIOP_LEVEL_CHANGED"
 
-    .line 62
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
@@ -123,10 +111,8 @@
 
     const-string v0, "Thermal status: "
 
-    .line 159
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 160
     iget p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(I)V
@@ -137,7 +123,6 @@
 .method public getThermalStatus()I
     .locals 0
 
-    .line 154
     iget p0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
     return p0
@@ -146,7 +131,6 @@
 .method public isJobRestricted(Lcom/android/server/job/controllers/JobStatus;)Z
     .locals 5
 
-    .line 106
     iget v0, p1, Lcom/android/server/job/controllers/JobStatus;->overrideState:I
 
     const/4 v1, 0x0
@@ -157,7 +141,6 @@
 
     const-string v0, "android"
 
-    .line 107
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -168,7 +151,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 108
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJobId()I
 
     move-result v0
@@ -188,7 +170,6 @@
     :cond_0
     return v1
 
-    .line 114
     :cond_1
     iget v0, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
@@ -204,18 +185,15 @@
 
     goto :goto_0
 
-    .line 117
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEffectivePriority()I
 
     move-result v0
 
-    .line 118
     iget v3, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
     if-lt v3, v2, :cond_a
 
-    .line 127
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsUserInitiatedJob()Z
 
     move-result v2
@@ -224,7 +202,6 @@
 
     return v1
 
-    .line 130
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->shouldTreatAsExpeditedJob()Z
 
@@ -232,7 +209,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 131
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getNumPreviousAttempts()I
 
     move-result v0
@@ -241,7 +217,6 @@
 
     iget-object v0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 132
     invoke-virtual {v0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyRunningLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -250,7 +225,6 @@
 
     iget-object p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 133
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isJobInOvertimeLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result p0
@@ -268,7 +242,6 @@
 
     if-ne v0, v2, :cond_9
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyRunningLocked(Lcom/android/server/job/controllers/JobStatus;)Z
@@ -279,7 +252,6 @@
 
     iget-object p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 137
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isJobInOvertimeLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result p0
@@ -295,7 +267,6 @@
     :cond_9
     return v4
 
-    .line 141
     :cond_a
     iget v2, p0, Lcom/android/server/job/restrictions/ThermalStatusRestriction;->mThermalStatus:I
 
@@ -309,10 +280,8 @@
 
     if-ne v0, v2, :cond_c
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 146
     invoke-virtual {v0, p1}, Lcom/android/server/job/JobSchedulerService;->isCurrentlyRunningLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result v0
@@ -321,7 +290,6 @@
 
     iget-object p0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 147
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobSchedulerService;->isJobInOvertimeLocked(Lcom/android/server/job/controllers/JobStatus;)Z
 
     move-result p0
@@ -342,10 +310,8 @@
 .method public onSystemServicesReady()V
     .locals 2
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/job/restrictions/JobRestriction;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 69
     invoke-virtual {v0}, Lcom/android/server/job/JobSchedulerService;->getTestableContext()Landroid/content/Context;
 
     move-result-object v0
@@ -358,7 +324,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 71
     new-instance v1, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/job/restrictions/ThermalStatusRestriction$1;-><init>(Lcom/android/server/job/restrictions/ThermalStatusRestriction;)V

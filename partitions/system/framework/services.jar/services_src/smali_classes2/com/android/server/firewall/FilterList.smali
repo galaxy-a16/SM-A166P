@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -32,12 +30,10 @@
 .method public readChild(Lorg/xmlpull/v1/XmlPullParser;)V
     .locals 0
 
-    .line 38
     invoke-static {p1}, Lcom/android/server/firewall/IntentFirewall;->parseFilter(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/firewall/Filter;
 
     move-result-object p1
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/firewall/FilterList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -48,12 +44,10 @@
 .method public readFromXml(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/firewall/FilterList;
     .locals 2
 
-    .line 30
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 31
     :goto_0
     invoke-static {p1, v0}, Lcom/android/internal/util/XmlUtils;->nextElementWithin(Lorg/xmlpull/v1/XmlPullParser;I)Z
 
@@ -61,7 +55,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 32
     invoke-virtual {p0, p1}, Lcom/android/server/firewall/FilterList;->readChild(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0

@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr;
@@ -27,7 +26,6 @@
 .method public final onResult(Z)V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr;
 
     invoke-static {p0, p1}, Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr;->$r8$lambda$o2ZWgsTgH48KM-TY3PeaPy4RKt0(Lcom/android/server/hdmi/SystemAudioInitiationActionFromAvr;Z)V

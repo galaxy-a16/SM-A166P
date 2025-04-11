@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/notification/ValidateNotificationPeople;Landroid/os/Handler;Landroid/content/Context;)V
     .locals 0
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     iput-object p3, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->val$context:Landroid/content/Context;
@@ -28,10 +27,8 @@
 .method public onChange(ZLandroid/net/Uri;I)V
     .locals 7
 
-    .line 132
     invoke-super {p0, p1, p2, p3}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;I)V
 
-    .line 133
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetDEBUG()Z
 
     move-result p1
@@ -48,7 +45,6 @@
 
     if-nez p1, :cond_1
 
-    .line 134
     :cond_0
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$sfgetVERBOSE()Z
 
@@ -80,7 +76,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
     :cond_1
     iget-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -90,7 +85,6 @@
 
     invoke-virtual {p1}, Landroid/util/LruCache;->evictAll()V
 
-    .line 137
     iget-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-static {p1}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$fgetmEvictionCount(Lcom/android/server/notification/ValidateNotificationPeople;)I
@@ -101,7 +95,6 @@
 
     invoke-static {p1, v0}, Lcom/android/server/notification/ValidateNotificationPeople;->-$$Nest$fputmEvictionCount(Lcom/android/server/notification/ValidateNotificationPeople;I)V
 
-    .line 139
     iget-object v1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     iget-object v2, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->val$context:Landroid/content/Context;

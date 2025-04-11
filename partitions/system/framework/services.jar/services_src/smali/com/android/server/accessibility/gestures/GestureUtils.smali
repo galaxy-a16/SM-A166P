@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public static distance(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)D
     .locals 2
 
-    .line 39
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -53,7 +51,6 @@
 
     const/4 v1, 0x0
 
-    .line 53
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -61,7 +58,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 54
     iget v2, p0, Landroid/graphics/PointF;->x:F
 
     iget v3, p0, Landroid/graphics/PointF;->y:F
@@ -70,12 +66,10 @@
 
     move-result v4
 
-    .line 55
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v5
 
-    .line 54
     invoke-static {v2, v3, v4, v5}, Landroid/util/MathUtils;->dist(FFFF)F
 
     move-result v2
@@ -100,7 +94,6 @@
 .method public static eventsWithinTimeAndDistanceSlop(Landroid/view/MotionEvent;Landroid/view/MotionEvent;II)Z
     .locals 1
 
-    .line 28
     invoke-static {p0, p1, p2}, Lcom/android/server/accessibility/gestures/GestureUtils;->isTimedOut(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)Z
 
     move-result p2
@@ -111,7 +104,6 @@
 
     return v0
 
-    .line 31
     :cond_0
     invoke-static {p0, p1}, Lcom/android/server/accessibility/gestures/GestureUtils;->distance(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)D
 
@@ -134,7 +126,6 @@
 .method public static getActionIndex(Landroid/view/MotionEvent;)I
     .locals 1
 
-    .line 118
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p0
@@ -174,7 +165,6 @@
 
     float-to-double v3, p5
 
-    .line 85
     invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v1
@@ -212,7 +202,6 @@
 
     float-to-double v1, p7
 
-    .line 98
     invoke-static {p1, p2, v1, v2}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide p1
@@ -258,7 +247,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/accessibility/gestures/GestureUtils;->eventsWithinTimeAndDistanceSlop(Landroid/view/MotionEvent;Landroid/view/MotionEvent;II)Z
 
@@ -276,7 +264,6 @@
 .method public static isTimedOut(Landroid/view/MotionEvent;Landroid/view/MotionEvent;I)Z
     .locals 2
 
-    .line 64
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/trust/TrustAgentWrapper;)V
     .locals 0
 
-    .line 699
     iput-object p1, p0, Lcom/android/server/trust/TrustAgentWrapper$6;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAlarm()V
     .locals 1
 
-    .line 702
     iget-object p0, p0, Lcom/android/server/trust/TrustAgentWrapper$6;->this$0:Lcom/android/server/trust/TrustAgentWrapper;
 
     const/4 v0, 0x0

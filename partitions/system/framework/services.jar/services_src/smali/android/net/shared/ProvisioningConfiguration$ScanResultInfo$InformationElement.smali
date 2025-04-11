@@ -13,13 +13,10 @@
 .method public constructor <init>(ILjava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 319
     iput p1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
 
-    .line 320
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -42,7 +39,6 @@
 
     return-object p0
 
-    .line 373
     :cond_0
     new-instance v0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;
 
@@ -50,7 +46,6 @@
 
     iget-object p0, p0, Landroid/net/InformationElementParcelable;->payload:[B
 
-    .line 374
     invoke-virtual {p0}, [B->clone()Ljava/lang/Object;
 
     move-result-object p0
@@ -81,7 +76,6 @@
 
     return v0
 
-    .line 341
     :cond_0
     instance-of v1, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;
 
@@ -91,11 +85,9 @@
 
     return v2
 
-    .line 342
     :cond_1
     check-cast p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;
 
-    .line 343
     iget v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
 
     iget v3, p1, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
@@ -124,7 +116,6 @@
 .method public getId()I
     .locals 0
 
-    .line 327
     iget p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
 
     return p0
@@ -133,7 +124,6 @@
 .method public getPayload()Ljava/nio/ByteBuffer;
     .locals 0
 
-    .line 335
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mPayload:[B
 
     invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -150,7 +140,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 348
     iget v0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -181,17 +170,14 @@
 .method public toStableParcelable()Landroid/net/InformationElementParcelable;
     .locals 2
 
-    .line 360
     new-instance v0, Landroid/net/InformationElementParcelable;
 
     invoke-direct {v0}, Landroid/net/InformationElementParcelable;-><init>()V
 
-    .line 361
     iget v1, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mId:I
 
     iput v1, v0, Landroid/net/InformationElementParcelable;->id:I
 
-    .line 362
     iget-object p0, p0, Landroid/net/shared/ProvisioningConfiguration$ScanResultInfo$InformationElement;->mPayload:[B
 
     if-eqz p0, :cond_0
@@ -216,7 +202,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 353
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

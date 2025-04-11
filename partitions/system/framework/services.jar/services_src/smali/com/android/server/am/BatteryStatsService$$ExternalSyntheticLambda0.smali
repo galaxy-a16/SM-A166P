@@ -42,7 +42,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/BatteryStatsService;IIIIIIIIJIIIIZ)V
     .locals 3
 
-    .line 0
     move-object v0, p0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -115,7 +114,6 @@
 .method public final run()V
     .locals 17
 
-    .line 0
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/BatteryStatsService$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/am/BatteryStatsService;

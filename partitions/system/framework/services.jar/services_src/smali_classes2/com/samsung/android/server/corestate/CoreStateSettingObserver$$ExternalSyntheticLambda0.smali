@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/server/corestate/CoreStateSettingObserver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/server/corestate/CoreStateSettingObserver$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/samsung/android/server/corestate/CoreStateSettingObserver$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/server/corestate/CoreStateSettingObserver;
 
     invoke-static {p0}, Lcom/samsung/android/server/corestate/CoreStateSettingObserver;->$r8$lambda$dwmL4SHKQltGtB70uBrIEEmX63o(Lcom/samsung/android/server/corestate/CoreStateSettingObserver;)V

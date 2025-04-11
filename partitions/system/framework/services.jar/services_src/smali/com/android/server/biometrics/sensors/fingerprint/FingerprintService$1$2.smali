@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;Landroid/hardware/fingerprint/IFingerprintServiceReceiver;)V
     .locals 0
 
-    .line 695
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->this$1:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
@@ -26,13 +25,10 @@
 
     const/4 p2, 0x0
 
-    .line 696
     iput p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->sensorsFinishedRemoving:I
 
-    .line 697
     iget-object p2, p1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService;
 
-    .line 698
     invoke-virtual {p2}, Lcom/android/server/SystemService;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -41,12 +37,10 @@
 
     move-result-object p2
 
-    .line 697
     invoke-virtual {p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1;->getSensorPropertiesInternal(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 698
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -63,14 +57,12 @@
 
     if-nez p2, :cond_0
 
-    .line 702
     iget p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->sensorsFinishedRemoving:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->sensorsFinishedRemoving:I
 
-    .line 703
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,14 +91,12 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 705
     iget p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->sensorsFinishedRemoving:I
 
     iget p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->numSensors:I
 
     if-ne p1, p2, :cond_0
 
-    .line 706
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintService$1$2;->val$receiver:Landroid/hardware/fingerprint/IFingerprintServiceReceiver;
 
     const/4 p1, 0x0

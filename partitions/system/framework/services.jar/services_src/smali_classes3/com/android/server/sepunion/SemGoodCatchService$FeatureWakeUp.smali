@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$dd_JV_cy0E1q3DTSOC-2vuZ6tzY(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;Lcom/android/server/power/PowerHistorian$WakeUpRecord;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->lambda$update$0(Lcom/android/server/power/PowerHistorian$WakeUpRecord;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOnStateListener(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;)Lcom/samsung/android/sepunion/SemGoodCatchManager$OnStateChangeListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->mOnStateListener:Lcom/samsung/android/sepunion/SemGoodCatchManager$OnStateChangeListener;
 
     return-object p0
@@ -33,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fputmSemGoodCatchManager(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;Lcom/samsung/android/sepunion/SemGoodCatchManager;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->mSemGoodCatchManager:Lcom/samsung/android/sepunion/SemGoodCatchManager;
 
     return-void
@@ -42,32 +39,26 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemGoodCatchService;)V
     .locals 3
 
-    .line 951
     iput-object p1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     const-string v0, "FeatureWakeUp"
 
-    .line 952
     invoke-direct {p0, p1, v0}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;-><init>(Lcom/android/server/sepunion/SemGoodCatchService;Ljava/lang/String;)V
 
-    .line 936
     new-instance v0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$1;-><init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->mOnStateListener:Lcom/samsung/android/sepunion/SemGoodCatchManager$OnStateChangeListener;
 
-    .line 954
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.android.server.sepunion.semgoodcatchservice.GOOD_CATCH_STATE_CHANGED"
 
-    .line 955
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 956
     invoke-static {p1}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemGoodCatchService;)Landroid/content/Context;
 
     move-result-object v1
@@ -84,39 +75,32 @@
 .method private synthetic lambda$update$0(Lcom/android/server/power/PowerHistorian$WakeUpRecord;)V
     .locals 15
 
-    .line 975
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->isOn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 976
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->getRecordedTimeMillis()J
 
     move-result-wide v0
 
-    .line 977
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 978
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->getReasonInt()I
 
     move-result v2
 
-    .line 979
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->getReasonStr()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 980
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/power/PowerHistorian$WakeUpRecord;->getForegroundPackageName()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 982
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v3
@@ -159,12 +143,10 @@
 
     const-string/jumbo v5, "wakeup"
 
-    .line 986
     invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 987
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -181,7 +163,6 @@
 
     move-object v0, p0
 
-    .line 988
     iget-object v0, v0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {v0}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmGoodCatchHandler(Lcom/android/server/sepunion/SemGoodCatchService;)Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;
@@ -211,12 +192,10 @@
 
     const-string/jumbo v1, "wakeup_done"
 
-    .line 1001
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1002
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
@@ -225,22 +204,18 @@
 
     const-string v5, "FeatureWakeUp"
 
-    .line 1003
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "function"
 
-    .line 1004
     invoke-virtual {v3, v4, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v1, "value"
 
     const-string/jumbo v4, "on"
 
-    .line 1005
     invoke-virtual {v3, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1008
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
@@ -260,7 +235,6 @@
 
     invoke-virtual {v1, p0, v3, v0, v2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 1009
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -276,7 +250,6 @@
     :catch_0
     move-exception p0
 
-    .line 1011
     invoke-static {}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -304,7 +277,6 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 1021
     invoke-super {p0, p1}, Lcom/android/server/sepunion/SemGoodCatchService$SecFeature;->dump(Ljava/io/PrintWriter;)V
 
     return-void
@@ -313,7 +285,6 @@
 .method public update()V
     .locals 6
 
-    .line 973
     invoke-static {}, Lcom/android/server/power/PowerHistorian;->getInstance()Lcom/android/server/power/PowerHistorian;
 
     move-result-object v0
@@ -322,14 +293,12 @@
 
     move-result-object v0
 
-    .line 974
     new-instance v1, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 991
     iget-object p0, p0, Lcom/android/server/sepunion/SemGoodCatchService$FeatureWakeUp;->this$0:Lcom/android/server/sepunion/SemGoodCatchService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemGoodCatchService;->-$$Nest$fgetmGoodCatchHandler(Lcom/android/server/sepunion/SemGoodCatchService;)Lcom/android/server/sepunion/SemGoodCatchService$GoodCatchHandler;

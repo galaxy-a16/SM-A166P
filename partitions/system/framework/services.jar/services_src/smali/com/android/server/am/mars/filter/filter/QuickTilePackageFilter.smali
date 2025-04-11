@@ -26,7 +26,6 @@
 .method public static bridge synthetic -$$Nest$mgetActiveQuickTilePackages(Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->getActiveQuickTilePackages()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +58,6 @@
 
     const-string v0, "custom"
 
-    .line 18
     sput-object v0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->CUSTOM_PREFIX:Ljava/lang/String;
 
     return-void
@@ -69,23 +66,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 19
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    .line 21
     iput-boolean v1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
 
-    .line 22
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mQuickTileContentObserver:Landroid/database/ContentObserver;
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -98,7 +90,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;-><init>()V
 
     return-void
@@ -107,7 +98,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;
     .locals 1
 
-    .line 32
     invoke-static {}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$QuickTilePackageFilterHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;
 
     move-result-object v0
@@ -120,7 +110,6 @@
 .method public deInit()V
     .locals 0
 
-    .line 52
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->unregisterContentObserver()V
 
     return-void
@@ -129,7 +118,6 @@
 .method public filter(Ljava/lang/String;III)I
     .locals 0
 
-    .line 57
     iget-object p3, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     if-eqz p3, :cond_1
@@ -140,14 +128,12 @@
 
     if-ne p2, p3, :cond_1
 
-    .line 58
     iget-object p2, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
     monitor-enter p2
 
     if-eqz p1, :cond_0
 
-    .line 59
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
@@ -157,14 +143,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 60
     monitor-exit p2
 
     const/16 p0, 0x15
 
     return p0
 
-    .line 62
     :cond_0
     monitor-exit p2
 
@@ -189,23 +173,19 @@
 .method public final getActiveQuickTilePackages()V
     .locals 8
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 69
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 70
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -222,7 +202,6 @@
 
     const-string v1, ","
 
-    .line 73
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -231,12 +210,10 @@
 
     const-string v1, ","
 
-    .line 74
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -248,7 +225,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 76
     sget-object v4, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->CUSTOM_PREFIX:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -260,7 +236,6 @@
     :try_start_1
     const-string v4, "("
 
-    .line 78
     invoke-virtual {v3, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
@@ -277,14 +252,12 @@
 
     move-result-object v3
 
-    .line 79
     iget-object v4, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
     monitor-enter v4
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 80
     :try_start_2
     iget-object v5, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
@@ -294,17 +267,14 @@
 
     if-nez v5, :cond_0
 
-    .line 81
     iget-object v5, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mActiveQuickTilePackages:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 82
     sget-boolean v5, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_FILTER:Z
 
     if-eqz v5, :cond_0
 
-    .line 83
     sget-object v5, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -323,7 +293,6 @@
 
     invoke-static {v5, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_0
     monitor-exit v4
 
@@ -344,7 +313,6 @@
     :catch_0
     move-exception v3
 
-    .line 87
     sget-object v4, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -375,7 +343,6 @@
     :catchall_1
     move-exception p0
 
-    .line 70
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -387,13 +354,10 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 45
     invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->setContext(Landroid/content/Context;)V
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->getActiveQuickTilePackages()V
 
-    .line 47
     invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->registerContentObserver()V
 
     return-void
@@ -402,12 +366,10 @@
 .method public final registerContentObserver()V
     .locals 5
 
-    .line 95
     iget-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
 
     if-nez v0, :cond_0
 
-    .line 96
     new-instance v0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -418,7 +380,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mQuickTileContentObserver:Landroid/database/ContentObserver;
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -435,19 +396,16 @@
 
     iget-object v3, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
-    .line 104
     invoke-virtual {v3}, Landroid/content/Context;->getUserId()I
 
     move-result v3
 
     const/4 v4, 0x0
 
-    .line 103
     invoke-virtual {v0, v1, v4, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     const/4 v0, 0x1
 
-    .line 105
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
 
     :cond_0
@@ -457,7 +415,6 @@
 .method public final setContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     return-void
@@ -466,13 +423,11 @@
 .method public final unregisterContentObserver()V
     .locals 2
 
-    .line 111
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
 
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -485,14 +440,12 @@
 
     const/4 v0, 0x0
 
-    .line 113
     iput-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 116
     :catch_0
     sget-object p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->TAG:Ljava/lang/String;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;)V
     .locals 0
 
-    .line 4924
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 4930
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -38,7 +36,6 @@
 
     return-void
 
-    .line 4934
     :cond_1
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
@@ -48,7 +45,6 @@
 
     return-void
 
-    .line 4938
     :cond_2
     iget-object p2, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -56,7 +52,6 @@
 
     move-result-object v1
 
-    .line 4939
     invoke-interface {v1, p1}, Lcom/android/server/pm/Computer;->getPackage(Ljava/lang/String;)Lcom/android/server/pm/pkg/AndroidPackage;
 
     move-result-object p1
@@ -65,7 +60,6 @@
 
     return-void
 
-    .line 4943
     :cond_3
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -77,7 +71,6 @@
 
     new-instance v4, Ljava/util/ArrayList;
 
-    .line 4945
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -88,14 +81,12 @@
 
     invoke-direct {v4, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 4946
     invoke-interface {p1}, Lcom/android/server/pm/pkg/AndroidPackage;->getUid()I
 
     move-result v5
 
     const-string v6, "android.intent.action.OVERLAY_CHANGED"
 
-    .line 4943
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService;->sendPackageChangedBroadcast(Lcom/android/server/pm/Computer;Ljava/lang/String;ZLjava/util/ArrayList;ILjava/lang/String;)V
 
     return-void

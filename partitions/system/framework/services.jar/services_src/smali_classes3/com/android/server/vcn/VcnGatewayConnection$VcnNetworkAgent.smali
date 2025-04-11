@@ -11,18 +11,14 @@
 .method public constructor <init>(Lcom/android/server/vcn/VcnContext;Ljava/lang/String;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;Landroid/net/NetworkScore;Landroid/net/NetworkAgentConfig;Landroid/net/NetworkProvider;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
     .locals 13
 
-    .line 2919
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2920
     new-instance v12, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent$1;
 
-    .line 2922
     invoke-virtual {p1}, Lcom/android/server/vcn/VcnContext;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 2923
     invoke-virtual {p1}, Lcom/android/server/vcn/VcnContext;->getLooper()Landroid/os/Looper;
 
     move-result-object v3
@@ -61,7 +57,6 @@
 .method public getNetwork()Landroid/net/Network;
     .locals 0
 
-    .line 2975
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->getNetwork()Landroid/net/Network;
@@ -74,7 +69,6 @@
 .method public markConnected()V
     .locals 0
 
-    .line 2949
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->markConnected()V
@@ -85,7 +79,6 @@
 .method public register()V
     .locals 0
 
-    .line 2944
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->register()Landroid/net/Network;
@@ -96,7 +89,6 @@
 .method public sendLinkProperties(Landroid/net/LinkProperties;)V
     .locals 0
 
-    .line 2964
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0, p1}, Landroid/net/NetworkAgent;->sendLinkProperties(Landroid/net/LinkProperties;)V
@@ -107,7 +99,6 @@
 .method public sendNetworkCapabilities(Landroid/net/NetworkCapabilities;)V
     .locals 0
 
-    .line 2959
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0, p1}, Landroid/net/NetworkAgent;->sendNetworkCapabilities(Landroid/net/NetworkCapabilities;)V
@@ -118,7 +109,6 @@
 .method public setUnderlyingNetworks(Ljava/util/List;)V
     .locals 0
 
-    .line 2969
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0, p1}, Landroid/net/NetworkAgent;->setUnderlyingNetworks(Ljava/util/List;)V
@@ -129,7 +119,6 @@
 .method public unregister()V
     .locals 0
 
-    .line 2954
     iget-object p0, p0, Lcom/android/server/vcn/VcnGatewayConnection$VcnNetworkAgent;->mImpl:Landroid/net/NetworkAgent;
 
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->unregister()V

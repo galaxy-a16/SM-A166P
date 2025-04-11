@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$TimerStatusValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$TimerStatusValidator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public isValid([B)I
     .locals 1
 
-    .line 1081
     array-length p0, p1
 
     const/4 v0, 0x1
@@ -43,7 +41,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 1084
     invoke-static {p1, p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidTimerStatusData([BI)Z
 
     move-result p0

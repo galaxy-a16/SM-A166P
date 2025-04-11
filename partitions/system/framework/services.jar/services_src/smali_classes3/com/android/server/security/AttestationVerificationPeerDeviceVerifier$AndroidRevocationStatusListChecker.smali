@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;)V
     .locals 0
 
-    .line 517
     iput-object p1, p0, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->this$0:Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;
 
     invoke-direct {p0}, Ljava/security/cert/PKIXCertPathChecker;-><init>()V
@@ -26,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;-><init>(Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;)V
 
     return-void
@@ -37,10 +35,8 @@
 .method public check(Ljava/security/cert/Certificate;Ljava/util/Collection;)V
     .locals 3
 
-    .line 549
     check-cast p1, Ljava/security/cert/X509Certificate;
 
-    .line 551
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getSerialNumber()Ljava/math/BigInteger;
 
     move-result-object p1
@@ -53,7 +49,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 557
     iget-object p2, p0, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->mJsonStatusMap:Lorg/json/JSONObject;
 
     invoke-virtual {p2, p1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -64,7 +59,6 @@
 
     return-void
 
-    .line 562
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->mJsonStatusMap:Lorg/json/JSONObject;
@@ -75,21 +69,18 @@
 
     const-string/jumbo p2, "status"
 
-    .line 563
     invoke-virtual {p0, p2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string/jumbo v0, "reason"
 
-    .line 564
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 569
     new-instance v0, Ljava/security/cert/CertPathValidatorException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -122,7 +113,6 @@
 
     throw v0
 
-    .line 566
     :catchall_0
     new-instance p0, Ljava/security/cert/CertPathValidatorException;
 
@@ -144,7 +134,6 @@
 
     throw p0
 
-    .line 554
     :cond_1
     new-instance p0, Ljava/security/cert/CertPathValidatorException;
 
@@ -158,7 +147,6 @@
 .method public final getRevocationListUrl()Ljava/lang/String;
     .locals 1
 
-    .line 596
     iget-object p0, p0, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->this$0:Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;
 
     invoke-static {p0}, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;->-$$Nest$fgetmContext(Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier;)Landroid/content/Context;
@@ -181,7 +169,6 @@
 .method public final getStatusMap(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 4
 
-    .line 579
     :try_start_0
     new-instance v0, Ljava/net/URL;
 
@@ -189,7 +176,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    .line 585
     :try_start_1
     invoke-virtual {v0}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
 
@@ -197,13 +183,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 586
     :try_start_2
     new-instance v0, Lorg/json/JSONObject;
 
     new-instance v1, Ljava/lang/String;
 
-    .line 587
     invoke-virtual {p1}, Ljava/io/InputStream;->readAllBytes()[B
 
     move-result-object v2
@@ -216,14 +200,12 @@
 
     const-string v1, "entries"
 
-    .line 588
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 589
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -236,7 +218,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 585
     :try_start_4
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -259,7 +240,6 @@
     :catchall_2
     move-exception p1
 
-    .line 590
     new-instance v0, Ljava/security/cert/CertPathValidatorException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -285,7 +265,6 @@
     :catchall_3
     move-exception p1
 
-    .line 581
     new-instance v0, Ljava/security/cert/CertPathValidatorException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -312,7 +291,6 @@
 .method public getSupportedExtensions()Ljava/util/Set;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -321,7 +299,6 @@
 .method public init(Z)V
     .locals 0
 
-    .line 526
     invoke-virtual {p0}, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->getRevocationListUrl()Ljava/lang/String;
 
     move-result-object p1
@@ -330,14 +307,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 527
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 533
     iget-object p1, p0, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->mStatusUrl:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/server/security/AttestationVerificationPeerDeviceVerifier$AndroidRevocationStatusListChecker;->getStatusMap(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -348,7 +323,6 @@
 
     return-void
 
-    .line 528
     :cond_0
     new-instance p0, Ljava/security/cert/CertPathValidatorException;
 
@@ -362,7 +336,6 @@
 .method public isForwardCheckingSupported()Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-static {p1}, Lcom/samsung/android/knox/custom/KnoxCustomManagerService;->$r8$lambda$eFRyS5PLRSSpwiKccPNpGxJhy74(Ljava/lang/Boolean;)V

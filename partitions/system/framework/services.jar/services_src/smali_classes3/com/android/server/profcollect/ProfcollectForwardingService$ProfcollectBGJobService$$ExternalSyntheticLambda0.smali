@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/profcollect/ProfcollectForwardingService$ProfcollectBGJobService;->$r8$lambda$4RkC8yFOMblNJ968ne_uHF_3o9Q()V
 
     return-void

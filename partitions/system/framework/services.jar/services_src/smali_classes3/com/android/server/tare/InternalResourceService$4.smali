@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 0
 
-    .line 324
     iput-object p1, p0, Lcom/android/server/tare/InternalResourceService$4;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onAlarm()V
     .locals 8
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/tare/InternalResourceService$4;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {v0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmLock(Lcom/android/server/tare/InternalResourceService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 328
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tare/InternalResourceService$4;->this$0:Lcom/android/server/tare/InternalResourceService;
 
@@ -52,7 +49,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/tare/Agent;->reclaimUnusedAssetsLocked(DJZ)V
 
-    .line 330
     iget-object v1, p0, Lcom/android/server/tare/InternalResourceService$4;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {v1}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$fgetmScribe(Lcom/android/server/tare/InternalResourceService;)Lcom/android/server/tare/Scribe;
@@ -65,12 +61,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/tare/Scribe;->setLastReclamationTimeLocked(J)V
 
-    .line 331
     iget-object p0, p0, Lcom/android/server/tare/InternalResourceService$4;->this$0:Lcom/android/server/tare/InternalResourceService;
 
     invoke-static {p0}, Lcom/android/server/tare/InternalResourceService;->-$$Nest$mscheduleUnusedWealthReclamationLocked(Lcom/android/server/tare/InternalResourceService;)V
 
-    .line 332
     monitor-exit v0
 
     return-void

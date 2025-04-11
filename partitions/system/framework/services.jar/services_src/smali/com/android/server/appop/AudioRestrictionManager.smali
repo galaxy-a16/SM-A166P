@@ -17,17 +17,14 @@
 .method public static constructor <clinit>()V
     .locals 10
 
-    .line 44
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    .line 45
     new-instance v1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v1}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    .line 46
     sget-object v2, Landroid/media/AudioAttributes;->SDK_USAGES:[I
 
     array-length v3, v2
@@ -41,7 +38,6 @@
 
     aget v6, v2, v4
 
-    .line 47
     sget-object v7, Landroid/media/AudioAttributes;->SUPPRESSIBLE_USAGES:Landroid/util/SparseIntArray;
 
     invoke-virtual {v7, v6}, Landroid/util/SparseIntArray;->get(I)I
@@ -73,7 +69,6 @@
 
     if-eq v7, v5, :cond_2
 
-    .line 56
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,12 +89,10 @@
 
     goto :goto_2
 
-    .line 51
     :cond_1
     :goto_1
     invoke-virtual {v0, v6, v8}, Landroid/util/SparseBooleanArray;->append(IZ)V
 
-    .line 52
     invoke-virtual {v1, v6, v8}, Landroid/util/SparseBooleanArray;->append(IZ)V
 
     :cond_2
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 59
     :cond_3
     new-instance v2, Landroid/util/SparseArray;
 
@@ -118,10 +110,8 @@
 
     const/16 v3, 0x1c
 
-    .line 60
     invoke-virtual {v2, v3, v0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 61
     invoke-virtual {v2, v5, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     return-void
@@ -130,10 +120,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -142,7 +130,6 @@
 
     const/4 v0, 0x0
 
-    .line 39
     iput v0, p0, Lcom/android/server/appop/AudioRestrictionManager;->mCameraAudioRestriction:I
 
     return-void
@@ -151,7 +138,6 @@
 .method public static cameraRestrictionModeToName(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     if-eqz p0, :cond_2
 
     const/4 v0, 0x1
@@ -187,10 +173,8 @@
 .method public checkAudioOperation(IIILjava/lang/String;)I
     .locals 3
 
-    .line 71
     monitor-enter p0
 
-    .line 73
     :try_start_0
     iget v0, p0, Lcom/android/server/appop/AudioRestrictionManager;->mCameraAudioRestriction:I
 
@@ -206,7 +190,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 77
     :cond_0
     sget-object v0, Lcom/android/server/appop/AudioRestrictionManager;->CAMERA_AUDIO_RESTRICTIONS:Landroid/util/SparseArray;
 
@@ -218,21 +201,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 79
     invoke-virtual {v0, p2}, Landroid/util/SparseBooleanArray;->get(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 80
     monitor-exit p0
 
     const/4 p0, 0x1
 
     return p0
 
-    .line 86
     :cond_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/appop/AudioRestrictionManager;->checkZenModeRestrictionLocked(IIILjava/lang/String;)I
 
@@ -240,12 +220,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 88
     monitor-exit p0
 
     return p1
 
-    .line 90
     :cond_2
     monitor-exit p0
 
@@ -266,7 +244,6 @@
 .method public final checkZenModeRestrictionLocked(IIILjava/lang/String;)I
     .locals 0
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -277,7 +254,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 97
     invoke-virtual {p0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -286,7 +262,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 98
     iget-object p1, p0, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->exceptionPackages:Landroid/util/ArraySet;
 
     invoke-virtual {p1, p4}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -295,7 +270,6 @@
 
     if-nez p1, :cond_0
 
-    .line 99
     iget p0, p0, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->mode:I
 
     return p0
@@ -309,12 +283,10 @@
 .method public dump(Ljava/io/PrintWriter;)Z
     .locals 10
 
-    .line 150
     invoke-virtual {p0}, Lcom/android/server/appop/AudioRestrictionManager;->hasActiveRestrictions()Z
 
     move-result v0
 
-    .line 152
     monitor-enter p0
 
     const/4 v1, 0x0
@@ -323,7 +295,6 @@
 
     move v3, v2
 
-    .line 153
     :goto_0
     :try_start_0
     iget-object v4, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
@@ -334,7 +305,6 @@
 
     if-ge v2, v4, :cond_3
 
-    .line 154
     iget-object v4, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->keyAt(I)I
@@ -345,7 +315,6 @@
 
     move-result-object v4
 
-    .line 155
     iget-object v5, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -356,7 +325,6 @@
 
     move v6, v1
 
-    .line 156
     :goto_1
     invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
 
@@ -368,12 +336,10 @@
 
     const-string v3, "  Zen Mode Audio Restrictions:"
 
-    .line 158
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
-    .line 162
     :cond_0
     invoke-virtual {v5, v6}, Landroid/util/SparseArray;->keyAt(I)I
 
@@ -381,14 +347,12 @@
 
     const-string v8, "    "
 
-    .line 163
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p1, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v8, " usage="
 
-    .line 164
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v7}, Landroid/media/AudioAttributes;->usageToString(I)Ljava/lang/String;
@@ -397,7 +361,6 @@
 
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 165
     invoke-virtual {v5, v6}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -406,7 +369,6 @@
 
     const-string v8, ": mode="
 
-    .line 166
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget v8, v7, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->mode:I
@@ -417,7 +379,6 @@
 
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 167
     iget-object v8, v7, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->exceptionPackages:Landroid/util/ArraySet;
 
     invoke-virtual {v8}, Landroid/util/ArraySet;->isEmpty()Z
@@ -428,12 +389,10 @@
 
     const-string v8, "      Exceptions:"
 
-    .line 168
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     move v8, v1
 
-    .line 169
     :goto_2
     iget-object v9, v7, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->exceptionPackages:Landroid/util/ArraySet;
 
@@ -445,7 +404,6 @@
 
     const-string v9, "        "
 
-    .line 170
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object v9, v7, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->exceptionPackages:Landroid/util/ArraySet;
@@ -472,13 +430,11 @@
 
     goto/16 :goto_0
 
-    .line 175
     :cond_3
     iget v1, p0, Lcom/android/server/appop/AudioRestrictionManager;->mCameraAudioRestriction:I
 
     if-eqz v1, :cond_4
 
-    .line 176
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -489,7 +445,6 @@
 
     iget v2, p0, Lcom/android/server/appop/AudioRestrictionManager;->mCameraAudioRestriction:I
 
-    .line 177
     invoke-static {v2}, Lcom/android/server/appop/AudioRestrictionManager;->cameraRestrictionModeToName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -500,10 +455,8 @@
 
     move-result-object v1
 
-    .line 176
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 179
     :cond_4
     monitor-exit p0
 
@@ -522,10 +475,8 @@
 .method public hasActiveRestrictions()Z
     .locals 1
 
-    .line 140
     monitor-enter p0
 
-    .line 141
     :try_start_0
     iget-object v0, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
@@ -550,7 +501,6 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 143
     :goto_1
     monitor-exit p0
 
@@ -569,14 +519,11 @@
 .method public setCameraAudioRestriction(I)V
     .locals 0
 
-    .line 133
     monitor-enter p0
 
-    .line 134
     :try_start_0
     iput p1, p0, Lcom/android/server/appop/AudioRestrictionManager;->mCameraAudioRestriction:I
 
-    .line 135
     monitor-exit p0
 
     return-void
@@ -594,10 +541,8 @@
 .method public setZenModeAudioRestriction(IIII[Ljava/lang/String;)V
     .locals 3
 
-    .line 107
     monitor-enter p0
 
-    .line 108
     :try_start_0
     iget-object p3, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
@@ -609,38 +554,31 @@
 
     if-nez p3, :cond_0
 
-    .line 110
     new-instance p3, Landroid/util/SparseArray;
 
     invoke-direct {p3}, Landroid/util/SparseArray;-><init>()V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/appop/AudioRestrictionManager;->mZenModeAudioRestrictions:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 113
     :cond_0
     invoke-virtual {p3, p2}, Landroid/util/SparseArray;->remove(I)V
 
     if-eqz p4, :cond_3
 
-    .line 115
     new-instance p1, Lcom/android/server/appop/AudioRestrictionManager$Restriction;
 
     const/4 v0, 0x0
 
     invoke-direct {p1, v0}, Lcom/android/server/appop/AudioRestrictionManager$Restriction;-><init>(Lcom/android/server/appop/AudioRestrictionManager$Restriction-IA;)V
 
-    .line 116
     iput p4, p1, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->mode:I
 
     if-eqz p5, :cond_2
 
-    .line 118
     array-length p4, p5
 
-    .line 119
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0, p4}, Landroid/util/ArraySet;-><init>(I)V
@@ -652,12 +590,10 @@
     :goto_0
     if-ge v0, p4, :cond_2
 
-    .line 121
     aget-object v1, p5, v0
 
     if-eqz v1, :cond_1
 
-    .line 123
     iget-object v2, p1, Lcom/android/server/appop/AudioRestrictionManager$Restriction;->exceptionPackages:Landroid/util/ArraySet;
 
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -671,11 +607,9 @@
 
     goto :goto_0
 
-    .line 127
     :cond_2
     invoke-virtual {p3, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 129
     :cond_3
     monitor-exit p0
 

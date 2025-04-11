@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/SemDeviceInfoManagerService;Landroid/content/BroadcastReceiver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
@@ -31,7 +30,6 @@
 .method public final run()V
     .locals 1
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService$$ExternalSyntheticLambda3;->f$0:Lcom/android/server/sepunion/SemDeviceInfoManagerService;
 
     iget-object p0, p0, Lcom/android/server/sepunion/SemDeviceInfoManagerService$$ExternalSyntheticLambda3;->f$1:Landroid/content/BroadcastReceiver;

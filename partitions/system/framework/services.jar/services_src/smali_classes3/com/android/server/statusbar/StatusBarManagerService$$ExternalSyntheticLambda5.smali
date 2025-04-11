@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/statusbar/StatusBarManagerService;->$r8$lambda$YtRdcv3RLLjrdHJseslyNV1q5Ck()V
 
     return-void

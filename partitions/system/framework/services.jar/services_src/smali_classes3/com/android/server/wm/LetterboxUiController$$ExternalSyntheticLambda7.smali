@@ -20,7 +20,6 @@
 .method public final getAsBoolean()Z
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/wm/LetterboxUiController;->$r8$lambda$MgRpYjyDMQsaDZPUiTyhF_rH284()Z
 
     move-result p0

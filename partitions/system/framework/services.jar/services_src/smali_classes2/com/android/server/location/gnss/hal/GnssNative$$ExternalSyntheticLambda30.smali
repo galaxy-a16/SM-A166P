@@ -20,7 +20,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/location/gnss/hal/GnssNative;->$r8$lambda$MqrWTu9-FWqRh1MPbg8xpLEBGWs()V
 
     return-void

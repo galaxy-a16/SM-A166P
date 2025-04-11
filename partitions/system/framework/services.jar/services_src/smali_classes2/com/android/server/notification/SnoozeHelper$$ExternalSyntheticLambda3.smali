@@ -16,7 +16,6 @@
 .method public synthetic constructor <init>(JLcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/android/server/notification/SnoozeHelper$$ExternalSyntheticLambda3;->f$0:J
@@ -31,7 +30,6 @@
 .method public final insert(Ljava/lang/Object;)V
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/notification/SnoozeHelper$$ExternalSyntheticLambda3;->f$0:J
 
     iget-object p0, p0, Lcom/android/server/notification/SnoozeHelper$$ExternalSyntheticLambda3;->f$1:Lcom/android/modules/utils/TypedXmlSerializer;

@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$AXDNBSjnBA-ZfBSzViyMGJuONtY(Lcom/android/server/display/HighBrightnessModeController$HdrListener;IIIF)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->lambda$onHdrInfoChanged$0(IIIF)V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static synthetic $r8$lambda$qf9cEHC1eLIqX_jTucliToBWxTM(Lcom/android/server/display/HighBrightnessModeController$HdrListener;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->lambda$onHdrInfoChanged$1()V
 
     return-void
@@ -39,22 +37,18 @@
 .method public constructor <init>(Lcom/android/server/display/HighBrightnessModeController;)V
     .locals 0
 
-    .line 750
     iput-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-direct {p0}, Landroid/view/SurfaceControlHdrLayerInfoListener;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 752
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
-    .line 753
     iput-boolean p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUpPrev:Z
 
     const-string p1, "display"
 
-    .line 756
     invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p1
@@ -67,10 +61,8 @@
 
     const/4 p1, 0x0
 
-    .line 758
     iput-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mRefreshRateToken:Lcom/samsung/android/hardware/display/IRefreshRateToken;
 
-    .line 759
     new-instance p1, Landroid/os/Binder;
 
     invoke-direct {p1}, Landroid/os/Binder;-><init>()V
@@ -83,7 +75,6 @@
 .method private synthetic lambda$onHdrInfoChanged$0(IIIF)V
     .locals 1
 
-    .line 835
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     if-lez p1, :cond_0
@@ -128,7 +119,6 @@
     :goto_0
     invoke-static {v0, p1}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fputmIsHdrLayerPresent(Lcom/android/server/display/HighBrightnessModeController;Z)V
 
-    .line 841
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {p1}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmIsHdrLayerPresent(Lcom/android/server/display/HighBrightnessModeController;)Z
@@ -157,14 +147,12 @@
 
     if-ltz p1, :cond_2
 
-    .line 846
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {p1, p4}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fputmMaxDesiredHdrSdrRatio(Lcom/android/server/display/HighBrightnessModeController;F)V
 
     goto :goto_2
 
-    .line 848
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -184,12 +172,10 @@
 
     invoke-static {p3, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 850
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {p1, p2}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fputmMaxDesiredHdrSdrRatio(Lcom/android/server/display/HighBrightnessModeController;F)V
 
-    .line 855
     :goto_2
     iget-object p1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
@@ -217,14 +203,12 @@
 .method private synthetic lambda$onHdrInfoChanged$1()V
     .locals 3
 
-    .line 870
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     iget-boolean v1, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
     invoke-static {v0, v1}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fputmIsHdrLayerPresent(Lcom/android/server/display/HighBrightnessModeController;Z)V
 
-    .line 875
     iget-object v0, p0, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v0}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmBrightness(Lcom/android/server/display/HighBrightnessModeController;)F
@@ -263,10 +247,8 @@
 
     const/4 v0, 0x0
 
-    .line 767
     iput-boolean v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
-    .line 769
     iget-object v1, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v1}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmSupportHdrSolution(Lcom/android/server/display/HighBrightnessModeController;)Z
@@ -287,7 +269,6 @@
 
     if-lez v7, :cond_9
 
-    .line 770
     iget-object v1, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v1}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmWidth(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -304,7 +285,6 @@
 
     move-result v1
 
-    .line 771
     iget-object v3, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v3}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmWidth(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -321,12 +301,10 @@
 
     move-result v3
 
-    .line 772
     invoke-static/range {p3 .. p4}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 773
     invoke-static/range {p3 .. p4}, Ljava/lang/Math;->min(II)I
 
     move-result v5
@@ -339,7 +317,6 @@
 
     mul-int v0, v8, v9
 
-    .line 777
     iget-object v2, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v2}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmWidth(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -374,7 +351,6 @@
 
     mul-float/2addr v1, v4
 
-    .line 780
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v1
@@ -384,7 +360,6 @@
     :cond_0
     div-float/2addr v7, v4
 
-    .line 781
     invoke-static {v7}, Ljava/lang/Math;->round(F)I
 
     move-result v1
@@ -412,7 +387,6 @@
 
     div-float/2addr v5, v10
 
-    .line 787
     iget-object v10, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v10}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmSDRDimming(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -473,7 +447,6 @@
     :goto_4
     iput-boolean v10, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
-    .line 789
     iget-object v10, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v10}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmLogLevel(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -495,7 +468,6 @@
 
     goto/16 :goto_6
 
-    .line 790
     :cond_6
     :goto_5
     new-instance v10, Ljava/lang/StringBuilder;
@@ -613,7 +585,6 @@
 
     move-object v7, v14
 
-    .line 796
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v0}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmLogLevel(Lcom/android/server/display/HighBrightnessModeController;)I
@@ -624,7 +595,6 @@
 
     if-le v0, v1, :cond_8
 
-    .line 797
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -687,7 +657,6 @@
     :goto_6
     move-object/from16 v10, v16
 
-    .line 802
     :goto_7
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
@@ -697,7 +666,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 803
     iget-boolean v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
     if-eqz v0, :cond_a
@@ -706,7 +674,6 @@
 
     if-nez v0, :cond_a
 
-    .line 805
     :try_start_0
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
 
@@ -722,7 +689,6 @@
 
     const-string v0, "Request Vrr to 120Hz @HDR"
 
-    .line 806
     invoke-static {v7, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -732,7 +698,6 @@
     :catch_0
     const-string v0, "Error : RemoteException occured at acquireRefreshRateMinLimitToken"
 
-    .line 808
     invoke-static {v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_8
@@ -740,14 +705,12 @@
     :cond_9
     move-object v7, v14
 
-    .line 813
     :cond_a
     :goto_8
     iget-boolean v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
     iput-boolean v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUpPrev:Z
 
-    .line 815
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
     invoke-static {v0}, Lcom/android/server/display/HighBrightnessModeController;->-$$Nest$fgetmStaticVRR(Lcom/android/server/display/HighBrightnessModeController;)Z
@@ -756,28 +719,23 @@
 
     if-eqz v0, :cond_b
 
-    .line 816
     iget-boolean v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mIsBrightnessScaledUp:Z
 
     if-nez v0, :cond_b
 
-    .line 819
     :try_start_1
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mRefreshRateToken:Lcom/samsung/android/hardware/display/IRefreshRateToken;
 
     if-eqz v0, :cond_b
 
-    .line 820
     invoke-interface {v0}, Lcom/samsung/android/hardware/display/IRefreshRateToken;->release()V
 
     const/4 v0, 0x0
 
-    .line 821
     iput-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->mRefreshRateToken:Lcom/samsung/android/hardware/display/IRefreshRateToken;
 
     const-string v0, "Release Vrr @HDR"
 
-    .line 822
     invoke-static {v7, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -787,10 +745,8 @@
     :catch_1
     const-string v0, "Error : RemoteException occured at releaseRefreshRateMinLimitToken"
 
-    .line 825
     invoke-static {v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 832
     :cond_b
     :goto_9
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
@@ -815,7 +771,6 @@
 
     goto :goto_a
 
-    .line 864
     :cond_c
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
 
@@ -829,7 +784,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 878
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -874,7 +828,6 @@
 
     goto/16 :goto_b
 
-    .line 834
     :cond_d
     :goto_a
     iget-object v0, v6, Lcom/android/server/display/HighBrightnessModeController$HdrListener;->this$0:Lcom/android/server/display/HighBrightnessModeController;
@@ -905,7 +858,6 @@
 
     invoke-virtual {v15, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 858
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

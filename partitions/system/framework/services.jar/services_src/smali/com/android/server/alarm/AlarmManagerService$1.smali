@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/alarm/AlarmManagerService;)V
     .locals 0
 
-    .line 1603
     iput-object p1, p0, Lcom/android/server/alarm/AlarmManagerService$1;->this$0:Lcom/android/server/alarm/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Lcom/android/server/alarm/Alarm;Lcom/android/server/alarm/Alarm;)I
     .locals 8
 
-    .line 1608
     iget p0, p1, Lcom/android/server/alarm/Alarm;->flags:I
 
     and-int/lit8 p0, p0, 0x10
@@ -45,7 +43,6 @@
     :cond_0
     move p0, v0
 
-    .line 1609
     :goto_0
     iget v2, p2, Lcom/android/server/alarm/Alarm;->flags:I
 
@@ -72,7 +69,6 @@
     :cond_2
     return v1
 
-    .line 1615
     :cond_3
     iget-object p0, p1, Lcom/android/server/alarm/Alarm;->priorityClass:Lcom/android/server/alarm/AlarmManagerService$PriorityClass;
 
@@ -91,7 +87,6 @@
 
     return v1
 
-    .line 1622
     :cond_5
     invoke-virtual {p1}, Lcom/android/server/alarm/Alarm;->getRequestedElapsed()J
 
@@ -107,7 +102,6 @@
 
     return v3
 
-    .line 1624
     :cond_6
     invoke-virtual {p1}, Lcom/android/server/alarm/Alarm;->getRequestedElapsed()J
 
@@ -130,7 +124,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1603
     check-cast p1, Lcom/android/server/alarm/Alarm;
 
     check-cast p2, Lcom/android/server/alarm/Alarm;

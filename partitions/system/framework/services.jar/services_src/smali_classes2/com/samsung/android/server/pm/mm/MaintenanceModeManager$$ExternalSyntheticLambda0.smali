@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/pm/UserInfo;
 
     invoke-static {p1}, Lcom/samsung/android/server/pm/mm/MaintenanceModeManager;->$r8$lambda$xgEwyqFDZhkP2qZUXgdfO1goSs8(Landroid/content/pm/UserInfo;)Z

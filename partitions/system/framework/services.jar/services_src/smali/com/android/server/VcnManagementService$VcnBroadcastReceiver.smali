@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/VcnManagementService;)V
     .locals 0
 
-    .line 499
     iput-object p1, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/VcnManagementService;Lcom/android/server/VcnManagementService$VcnBroadcastReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;-><init>(Lcom/android/server/VcnManagementService;)V
 
     return-void
@@ -33,12 +31,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .line 502
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 504
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -132,7 +128,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 541
     invoke-static {}, Lcom/android/server/VcnManagementService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -155,7 +150,6 @@
 
     goto/16 :goto_4
 
-    .line 514
     :pswitch_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -167,7 +161,6 @@
 
     if-eqz p2, :cond_a
 
-    .line 516
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -176,7 +169,6 @@
 
     goto :goto_3
 
-    .line 522
     :cond_5
     iget-object p1, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 
@@ -186,13 +178,11 @@
 
     monitor-enter v0
 
-    .line 523
     :try_start_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 524
     iget-object v1, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 
     invoke-static {v1}, Lcom/android/server/VcnManagementService;->-$$Nest$fgetmConfigs(Lcom/android/server/VcnManagementService;)Ljava/util/Map;
@@ -221,7 +211,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 525
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -238,7 +227,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 526
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -249,7 +237,6 @@
 
     goto :goto_1
 
-    .line 530
     :cond_7
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -268,14 +255,12 @@
 
     check-cast v1, Landroid/os/ParcelUuid;
 
-    .line 531
     iget-object v2, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 
     invoke-static {v2, v1}, Lcom/android/server/VcnManagementService;->-$$Nest$mstopAndClearVcnConfigInternalLocked(Lcom/android/server/VcnManagementService;Landroid/os/ParcelUuid;)V
 
     goto :goto_2
 
-    .line 534
     :cond_8
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -283,12 +268,10 @@
 
     if-nez p1, :cond_9
 
-    .line 535
     iget-object p0, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 
     invoke-static {p0}, Lcom/android/server/VcnManagementService;->-$$Nest$mwriteConfigsToDiskLocked(Lcom/android/server/VcnManagementService;)V
 
-    .line 537
     :cond_9
     monitor-exit v0
 
@@ -303,7 +286,6 @@
 
     throw p0
 
-    .line 517
     :cond_a
     :goto_3
     iget-object p0, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
@@ -326,7 +308,6 @@
 
     return-void
 
-    .line 509
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/VcnManagementService$VcnBroadcastReceiver;->this$0:Lcom/android/server/VcnManagementService;
 

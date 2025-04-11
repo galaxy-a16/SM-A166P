@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/BatteryService;Landroid/content/Intent;)V
     .locals 0
 
-    .line 3461
     iput-object p1, p0, Lcom/android/server/BatteryService$32;->this$0:Lcom/android/server/BatteryService;
 
     iput-object p2, p0, Lcom/android/server/BatteryService$32;->val$intent:Landroid/content/Intent;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 2
 
-    .line 3464
     invoke-static {}, Lcom/android/server/BatteryService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3465
     iget-object p0, p0, Lcom/android/server/BatteryService$32;->val$intent:Landroid/content/Intent;
 
     const/4 v0, -0x1

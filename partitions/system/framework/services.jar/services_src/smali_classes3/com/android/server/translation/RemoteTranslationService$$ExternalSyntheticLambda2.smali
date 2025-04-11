@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(IILandroid/os/ResultReceiver;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/translation/RemoteTranslationService$$ExternalSyntheticLambda2;->f$0:I
@@ -35,7 +34,6 @@
 .method public final runNoResult(Ljava/lang/Object;)V
     .locals 2
 
-    .line 0
     iget v0, p0, Lcom/android/server/translation/RemoteTranslationService$$ExternalSyntheticLambda2;->f$0:I
 
     iget v1, p0, Lcom/android/server/translation/RemoteTranslationService$$ExternalSyntheticLambda2;->f$1:I

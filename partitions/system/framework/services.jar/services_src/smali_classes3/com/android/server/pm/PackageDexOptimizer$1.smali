@@ -20,7 +20,6 @@
 .method public getAppHibernationManagerInternal()Lcom/android/server/apphibernation/AppHibernationManagerInternal;
     .locals 0
 
-    .line 155
     const-class p0, Lcom/android/server/apphibernation/AppHibernationManagerInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -35,7 +34,6 @@
 .method public getPowerManager(Landroid/content/Context;)Landroid/os/PowerManager;
     .locals 0
 
-    .line 160
     const-class p0, Landroid/os/PowerManager;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;

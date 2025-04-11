@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -20,14 +19,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/texttospeech/TextToSpeechManagerService;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 60
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/infra/AbstractPerUserSystemService;-><init>(Lcom/android/server/infra/AbstractMasterSystemService;Ljava/lang/Object;I)V
 
     return-void
@@ -36,7 +33,6 @@
 .method public static runSessionCallbackMethod(Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$ThrowingRunnable;)V
     .locals 3
 
-    .line 175
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService$ThrowingRunnable;->runOrThrow()V
     :try_end_0
@@ -47,7 +43,6 @@
     :catch_0
     move-exception p0
 
-    .line 177
     sget-object v0, Lcom/android/server/texttospeech/TextToSpeechManagerPerUserService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -75,7 +70,6 @@
 .method public createSessionLocked(Ljava/lang/String;Landroid/speech/tts/ITextToSpeechSessionCallback;)V
     .locals 1
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -90,7 +84,6 @@
 .method public newServiceInfoLocked(Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
     .locals 3
 
-    .line 74
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -108,7 +101,6 @@
 
     return-object p0
 
-    .line 77
     :catch_0
     new-instance p0, Landroid/content/pm/PackageManager$NameNotFoundException;
 

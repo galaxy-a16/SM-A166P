@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 124
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MM-dd HH:mm:ss:SSS"
@@ -32,10 +31,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -63,7 +60,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 187
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
     move-result-object p1
@@ -72,7 +68,6 @@
 
     goto :goto_0
 
-    .line 183
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
@@ -82,7 +77,6 @@
 
     goto :goto_0
 
-    .line 180
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;
 
@@ -109,7 +102,6 @@
 
     const/4 v0, 0x0
 
-    .line 150
     invoke-virtual {p0, v0, p1}, Lcom/android/server/utils/EventLogger$Event;->printLog(ILjava/lang/String;)Lcom/android/server/utils/EventLogger$Event;
 
     move-result-object p0
@@ -120,7 +112,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 134
     new-instance v0, Ljava/lang/StringBuilder;
 
     sget-object v1, Lcom/android/server/utils/EventLogger$Event;->sFormat:Ljava/text/SimpleDateFormat;
@@ -139,7 +130,6 @@
 
     const-string v1, " "
 
-    .line 135
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/android/server/utils/EventLogger$Event;->eventToString()Ljava/lang/String;

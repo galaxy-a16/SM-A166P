@@ -13,19 +13,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 14
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/ChunkableDataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
 
-    .line 11
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lco/nstant/in/cbor/model/Map;->keys:Ljava/util/List;
 
-    .line 15
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -38,19 +35,16 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 19
     sget-object v0, Lco/nstant/in/cbor/model/MajorType;->MAP:Lco/nstant/in/cbor/model/MajorType;
 
     invoke-direct {p0, v0}, Lco/nstant/in/cbor/model/ChunkableDataItem;-><init>(Lco/nstant/in/cbor/model/MajorType;)V
 
-    .line 11
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lco/nstant/in/cbor/model/Map;->keys:Ljava/util/List;
 
-    .line 20
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(I)V
@@ -65,19 +59,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 49
     instance-of v0, p1, Lco/nstant/in/cbor/model/Map;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 50
     move-object v0, p1
 
     check-cast v0, Lco/nstant/in/cbor/model/Map;
 
-    .line 51
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/ChunkableDataItem;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -103,7 +94,6 @@
 .method public get(Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/DataItem;
     .locals 0
 
-    .line 31
     iget-object p0, p0, Lco/nstant/in/cbor/model/Map;->map:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -118,7 +108,6 @@
 .method public getKeys()Ljava/util/Collection;
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lco/nstant/in/cbor/model/Map;->keys:Ljava/util/List;
 
     return-object p0
@@ -127,7 +116,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 58
     invoke-super {p0}, Lco/nstant/in/cbor/model/ChunkableDataItem;->hashCode()I
 
     move-result v0
@@ -146,7 +134,6 @@
 .method public bridge synthetic isChunked()Z
     .locals 0
 
-    .line 8
     invoke-super {p0}, Lco/nstant/in/cbor/model/ChunkableDataItem;->isChunked()Z
 
     move-result p0
@@ -157,7 +144,6 @@
 .method public put(Lco/nstant/in/cbor/model/DataItem;Lco/nstant/in/cbor/model/DataItem;)Lco/nstant/in/cbor/model/Map;
     .locals 1
 
-    .line 24
     iget-object v0, p0, Lco/nstant/in/cbor/model/Map;->map:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -166,7 +152,6 @@
 
     if-nez p2, :cond_0
 
-    .line 25
     iget-object p2, p0, Lco/nstant/in/cbor/model/Map;->keys:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -178,7 +163,6 @@
 .method public bridge synthetic setChunked(Z)Lco/nstant/in/cbor/model/ChunkableDataItem;
     .locals 0
 
-    .line 8
     invoke-super {p0, p1}, Lco/nstant/in/cbor/model/ChunkableDataItem;->setChunked(Z)Lco/nstant/in/cbor/model/ChunkableDataItem;
 
     move-result-object p0
@@ -189,12 +173,10 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 64
     invoke-virtual {p0}, Lco/nstant/in/cbor/model/Map;->isChunked()Z
 
     move-result v1
@@ -203,7 +185,6 @@
 
     const-string/jumbo v1, "{_ "
 
-    .line 65
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -211,10 +192,8 @@
     :cond_0
     const-string/jumbo v1, "{ "
 
-    .line 67
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 69
     :goto_0
     iget-object v1, p0, Lco/nstant/in/cbor/model/Map;->keys:Ljava/util/List;
 
@@ -237,7 +216,6 @@
 
     check-cast v2, Lco/nstant/in/cbor/model/DataItem;
 
-    .line 70
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v4, ": "
@@ -256,7 +234,6 @@
 
     goto :goto_1
 
-    .line 72
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -268,7 +245,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 73
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p0
@@ -280,10 +256,8 @@
     :cond_2
     const-string p0, " }"
 
-    .line 75
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

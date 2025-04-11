@@ -16,20 +16,16 @@
 .method public constructor <init>(Lcom/android/server/power/PowerManagerService;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 10161
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 10162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10163
     iput-object p2, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->binder:Landroid/os/IBinder;
 
     if-eqz p2, :cond_0
 
     const/4 p1, 0x0
 
-    .line 10166
     :try_start_0
     invoke-interface {p2, p0, p1}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_0
@@ -37,7 +33,6 @@
 
     goto :goto_0
 
-    .line 10169
     :catch_0
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->binderDied()V
 
@@ -51,7 +46,6 @@
 .method public binderDied()V
     .locals 4
 
-    .line 10174
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$fgetmLock(Lcom/android/server/power/PowerManagerService;)Ljava/lang/Object;
@@ -65,10 +59,8 @@
 
     const-string v2, "LCDFlashModeLock : binderDied"
 
-    .line 10175
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10176
     iget-object v1, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     iget-object v2, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->binder:Landroid/os/IBinder;
@@ -77,12 +69,10 @@
 
     invoke-static {v1, v3, v2}, Lcom/android/server/power/PowerManagerService;->-$$Nest$msetLCDFlashModeInternal(Lcom/android/server/power/PowerManagerService;ZLandroid/os/IBinder;)V
 
-    .line 10177
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$LCDFlashModeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->-$$Nest$minitLCDFlashMode(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 10178
     monitor-exit v0
 
     return-void

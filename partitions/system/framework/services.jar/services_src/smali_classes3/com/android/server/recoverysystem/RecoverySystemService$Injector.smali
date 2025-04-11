@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 267
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 268
     iput-object p1, p0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->mContext:Landroid/content/Context;
 
-    .line 269
     new-instance v0, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
 
     invoke-direct {v0, p1}, Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;-><init>(Landroid/content/Context;)V
@@ -34,19 +31,16 @@
 .method public connectService()Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;
     .locals 1
 
-    .line 305
     new-instance p0, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;
 
     invoke-direct {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;-><init>()V
 
-    .line 306
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->connectService()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 307
     invoke-virtual {p0}, Lcom/android/server/recoverysystem/RecoverySystemService$UncryptSocket;->close()V
 
     const/4 p0, 0x0
@@ -58,7 +52,6 @@
 .method public getBootControl()Landroid/hardware/boot/IBootControl;
     .locals 3
 
-    .line 318
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +68,6 @@
 
     move-result-object p0
 
-    .line 319
     invoke-static {p0}, Landroid/os/ServiceManager;->isDeclared(Ljava/lang/String;)Z
 
     move-result v0
@@ -84,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 320
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,25 +92,21 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     invoke-static {p0}, Landroid/os/ServiceManager;->waitForDeclaredService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 322
     invoke-static {p0}, Landroid/hardware/boot/IBootControl$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/boot/IBootControl;
 
     move-result-object p0
 
     return-object p0
 
-    .line 326
     :cond_0
     invoke-static {}, Lcom/android/server/recoverysystem/hal/BootControlHIDL;->getService()Lcom/android/server/recoverysystem/hal/BootControlHIDL;
 
     move-result-object p0
 
-    .line 327
     invoke-static {}, Lcom/android/server/recoverysystem/hal/BootControlHIDL;->isServicePresent()Z
 
     move-result v0
@@ -130,12 +117,10 @@
 
     const-string p0, "Neither AIDL nor HIDL version of the BootControl HAL is present."
 
-    .line 328
     invoke-static {v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
 
-    .line 332
     :cond_1
     invoke-static {}, Lcom/android/server/recoverysystem/hal/BootControlHIDL;->isV1_2ServicePresent()Z
 
@@ -145,7 +130,6 @@
 
     const-string p0, "Device doesn\'t implement boot control HAL V1_2."
 
-    .line 333
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -157,7 +141,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
-    .line 273
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -166,7 +149,6 @@
 .method public getCurrentTimeMillis()J
     .locals 2
 
-    .line 357
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -177,7 +159,6 @@
 .method public getLockSettingsService()Lcom/android/internal/widget/LockSettingsInternal;
     .locals 0
 
-    .line 277
     const-class p0, Lcom/android/internal/widget/LockSettingsInternal;
 
     invoke-static {p0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -192,7 +173,6 @@
 .method public getMetricsPrefs()Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
     .locals 0
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->mPrefs:Lcom/android/server/recoverysystem/RecoverySystemService$PreferencesManager;
 
     return-object p0
@@ -201,7 +181,6 @@
 .method public getPowerManager()Landroid/os/PowerManager;
     .locals 1
 
-    .line 281
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->mContext:Landroid/content/Context;
 
     const-string/jumbo v0, "power"
@@ -218,7 +197,6 @@
 .method public getUidFromPackageName(Ljava/lang/String;)I
     .locals 1
 
-    .line 345
     :try_start_0
     iget-object p0, p0, Lcom/android/server/recoverysystem/RecoverySystemService$Injector;->mContext:Landroid/content/Context;
 
@@ -236,7 +214,6 @@
 
     return p0
 
-    .line 347
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -264,7 +241,6 @@
 .method public getUncryptPackageFileName()Ljava/lang/String;
     .locals 0
 
-    .line 297
     sget-object p0, Landroid/os/RecoverySystem;->UNCRYPT_PACKAGE_FILE:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -277,7 +253,6 @@
 .method public getUncryptPackageFileWriter()Ljava/io/FileWriter;
     .locals 1
 
-    .line 301
     new-instance p0, Ljava/io/FileWriter;
 
     sget-object v0, Landroid/os/RecoverySystem;->UNCRYPT_PACKAGE_FILE:Ljava/io/File;
@@ -292,7 +267,6 @@
 
     const/16 p0, 0x154
 
-    .line 368
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIII)V
 
     return-void
@@ -303,7 +277,6 @@
 
     const/16 p0, 0x153
 
-    .line 362
     invoke-static {p0, p1, p2, p3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIII)V
 
     return-void
@@ -330,7 +303,6 @@
 
     move/from16 v8, p8
 
-    .line 375
     invoke-static/range {v0 .. v8}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIIIIZZII)V
 
     return-void
@@ -339,7 +311,6 @@
 .method public systemPropertiesGet(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 285
     invoke-static {p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -350,7 +321,6 @@
 .method public systemPropertiesSet(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 289
     invoke-static {p1, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -359,7 +329,6 @@
 .method public threadSleep(J)V
     .locals 0
 
-    .line 340
     invoke-static {p1, p2}, Ljava/lang/Thread;->sleep(J)V
 
     return-void
@@ -368,7 +337,6 @@
 .method public uncryptPackageFileDelete()Z
     .locals 0
 
-    .line 293
     sget-object p0, Landroid/os/RecoverySystem;->UNCRYPT_PACKAGE_FILE:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z

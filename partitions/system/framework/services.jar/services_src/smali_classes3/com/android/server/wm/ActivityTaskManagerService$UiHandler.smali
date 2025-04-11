@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 2
 
-    .line 7197
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$UiHandler;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 7198
     invoke-static {}, Lcom/android/server/UiThread;->get()Lcom/android/server/UiThread;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 7203
     iget p0, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -46,13 +43,11 @@
 
     goto :goto_0
 
-    .line 7205
     :cond_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Landroid/app/Dialog;
 
-    .line 7206
     invoke-virtual {p0}, Landroid/app/Dialog;->dismiss()V
 
     :goto_0

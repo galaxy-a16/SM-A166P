@@ -17,7 +17,6 @@
 
     const/4 v1, 0x3
 
-    .line 101
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -30,7 +29,6 @@
 .method public static isInUse()Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     return v0

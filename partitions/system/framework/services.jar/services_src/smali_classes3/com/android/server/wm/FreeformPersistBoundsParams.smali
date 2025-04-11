@@ -15,17 +15,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
-    .line 43
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -51,7 +48,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 109
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -64,11 +60,9 @@
 
     goto :goto_0
 
-    .line 111
     :cond_1
     check-cast p1, Lcom/android/server/wm/FreeformPersistBoundsParams;
 
-    .line 113
     iget-object v2, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     iget-object v3, p1, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
@@ -83,7 +77,6 @@
 
     iget-object v3, p1, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
-    .line 114
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -109,7 +102,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 123
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
@@ -118,7 +110,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 124
     iget-object v1, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->hashCode()I
@@ -129,7 +120,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 125
     iget p0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
 
     add-int/2addr v0, p0
@@ -140,7 +130,6 @@
 .method public isValid()Z
     .locals 1
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -177,19 +166,16 @@
 .method public reset()V
     .locals 1
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     const/4 v0, -0x1
 
-    .line 89
     iput v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
 
     return-void
@@ -198,7 +184,6 @@
 .method public restore(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 52
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -262,7 +247,6 @@
 
     goto :goto_1
 
-    .line 54
     :pswitch_0
     invoke-static {p2}, Landroid/graphics/Rect;->unflattenFromString(Ljava/lang/String;)Landroid/graphics/Rect;
 
@@ -270,14 +254,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 56
     iget-object p0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_1
 
-    .line 61
     :pswitch_1
     invoke-static {p2}, Landroid/graphics/Rect;->unflattenFromString(Ljava/lang/String;)Landroid/graphics/Rect;
 
@@ -285,14 +267,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 63
     iget-object p0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_1
 
-    .line 68
     :pswitch_2
     invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -322,7 +302,6 @@
 .method public saveToXml(Lcom/android/modules/utils/TypedXmlSerializer;)V
     .locals 3
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->flattenToString()Ljava/lang/String;
@@ -335,7 +314,6 @@
 
     invoke-interface {p1, v1, v2, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 76
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->flattenToString()Ljava/lang/String;
@@ -346,7 +324,6 @@
 
     invoke-interface {p1, v1, v2, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 77
     iget p0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -363,21 +340,18 @@
 .method public set(Lcom/android/server/wm/FreeformPersistBoundsParams;)V
     .locals 2
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/android/server/wm/FreeformPersistBoundsParams;->mFreeformBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/android/server/wm/FreeformPersistBoundsParams;->mDisplayBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 83
     iget p1, p1, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
 
     iput p1, p0, Lcom/android/server/wm/FreeformPersistBoundsParams;->mRotation:I
@@ -388,12 +362,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 100
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,7 +384,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,7 +402,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,7 +424,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

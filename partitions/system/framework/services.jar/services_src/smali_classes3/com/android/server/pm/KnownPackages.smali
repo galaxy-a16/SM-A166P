@@ -45,92 +45,74 @@
 
     move-object v0, p0
 
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
-    .line 106
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mDefaultAppProvider:Lcom/android/server/pm/DefaultAppProvider;
 
     move-object v1, p2
 
-    .line 107
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRequiredInstallerPackage:Ljava/lang/String;
 
     move-object v1, p3
 
-    .line 108
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRequiredUninstallerPackage:Ljava/lang/String;
 
     move-object v1, p4
 
-    .line 109
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mSetupWizardPackage:Ljava/lang/String;
 
     move-object v1, p5
 
-    .line 110
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRequiredVerifierPackages:[Ljava/lang/String;
 
     move-object v1, p6
 
-    .line 111
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mDefaultTextClassifierPackage:Ljava/lang/String;
 
     move-object v1, p7
 
-    .line 112
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mSystemTextClassifierPackageName:Ljava/lang/String;
 
     move-object v1, p8
 
-    .line 113
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRequiredPermissionControllerPackage:Ljava/lang/String;
 
     move-object v1, p9
 
-    .line 114
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mConfiguratorPackage:Ljava/lang/String;
 
     move-object v1, p10
 
-    .line 115
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mIncidentReportApproverPackage:Ljava/lang/String;
 
     move-object v1, p11
 
-    .line 116
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mAmbientContextDetectionPackage:Ljava/lang/String;
 
     move-object v1, p12
 
-    .line 117
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mWearableSensingPackage:Ljava/lang/String;
 
     move-object v1, p13
 
-    .line 118
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mAppPredictionServicePackage:Ljava/lang/String;
 
     move-object/from16 v1, p14
 
-    .line 119
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mCompanionPackage:Ljava/lang/String;
 
     move-object/from16 v1, p15
 
-    .line 120
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRetailDemoPackage:Ljava/lang/String;
 
     move-object/from16 v1, p16
 
-    .line 121
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mOverlayConfigSignaturePackage:Ljava/lang/String;
 
     move-object/from16 v1, p17
 
-    .line 122
     iput-object v1, v0, Lcom/android/server/pm/KnownPackages;->mRecentsPackage:Ljava/lang/String;
 
     return-void
@@ -139,7 +121,6 @@
 .method public static knownPackageToString(I)Ljava/lang/String;
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const-string p0, "Unknown"
@@ -276,12 +257,10 @@
 .method public getKnownPackageNames(Lcom/android/server/pm/Computer;II)[Ljava/lang/String;
     .locals 1
 
-    .line 179
     const-class v0, Ljava/lang/String;
 
     packed-switch p2, :pswitch_data_0
 
-    .line 218
     :pswitch_0
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->emptyArray(Ljava/lang/Class;)[Ljava/lang/Object;
 
@@ -291,7 +270,6 @@
 
     return-object p0
 
-    .line 204
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mWearableSensingPackage:Ljava/lang/String;
 
@@ -305,7 +283,6 @@
 
     return-object p0
 
-    .line 202
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mAmbientContextDetectionPackage:Ljava/lang/String;
 
@@ -319,7 +296,6 @@
 
     return-object p0
 
-    .line 216
     :pswitch_3
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRecentsPackage:Ljava/lang/String;
 
@@ -333,7 +309,6 @@
 
     return-object p0
 
-    .line 210
     :pswitch_4
     iget-object p1, p0, Lcom/android/server/pm/KnownPackages;->mRetailDemoPackage:Ljava/lang/String;
 
@@ -343,7 +318,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 211
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->emptyArray(Ljava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -352,7 +326,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRetailDemoPackage:Ljava/lang/String;
 
@@ -363,7 +336,6 @@
     :goto_0
     return-object p0
 
-    .line 208
     :pswitch_5
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mCompanionPackage:Ljava/lang/String;
 
@@ -377,7 +349,6 @@
 
     return-object p0
 
-    .line 214
     :pswitch_6
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mOverlayConfigSignaturePackage:Ljava/lang/String;
 
@@ -391,7 +362,6 @@
 
     return-object p0
 
-    .line 206
     :pswitch_7
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mAppPredictionServicePackage:Ljava/lang/String;
 
@@ -405,7 +375,6 @@
 
     return-object p0
 
-    .line 200
     :pswitch_8
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mIncidentReportApproverPackage:Ljava/lang/String;
 
@@ -419,7 +388,6 @@
 
     return-object p0
 
-    .line 198
     :pswitch_9
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mConfiguratorPackage:Ljava/lang/String;
 
@@ -433,7 +401,6 @@
 
     return-object p0
 
-    .line 196
     :pswitch_a
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRequiredPermissionControllerPackage:Ljava/lang/String;
 
@@ -447,7 +414,6 @@
 
     return-object p0
 
-    .line 193
     :pswitch_b
     iget-object p2, p0, Lcom/android/server/pm/KnownPackages;->mDefaultTextClassifierPackage:Ljava/lang/String;
 
@@ -463,7 +429,6 @@
 
     return-object p0
 
-    .line 181
     :pswitch_c
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mDefaultAppProvider:Lcom/android/server/pm/DefaultAppProvider;
 
@@ -477,7 +442,6 @@
 
     return-object p0
 
-    .line 191
     :pswitch_d
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRequiredVerifierPackages:[Ljava/lang/String;
 
@@ -487,7 +451,6 @@
 
     return-object p0
 
-    .line 185
     :pswitch_e
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRequiredUninstallerPackage:Ljava/lang/String;
 
@@ -501,7 +464,6 @@
 
     return-object p0
 
-    .line 183
     :pswitch_f
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mRequiredInstallerPackage:Ljava/lang/String;
 
@@ -515,7 +477,6 @@
 
     return-object p0
 
-    .line 187
     :pswitch_10
     iget-object p0, p0, Lcom/android/server/pm/KnownPackages;->mSetupWizardPackage:Ljava/lang/String;
 
@@ -532,7 +493,6 @@
     :pswitch_11
     const-string p0, "android"
 
-    .line 189
     filled-new-array {p0}, [Ljava/lang/String;
 
     move-result-object p0

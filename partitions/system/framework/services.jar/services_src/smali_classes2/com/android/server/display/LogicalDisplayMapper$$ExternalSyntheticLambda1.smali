@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/LogicalDisplayMapper;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/LogicalDisplayMapper$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/display/LogicalDisplayMapper;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/display/LogicalDisplayMapper$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/display/LogicalDisplayMapper;
 
     invoke-static {p0}, Lcom/android/server/display/LogicalDisplayMapper;->$r8$lambda$navUETscq1Jv29lec9_SCtSD_bg(Lcom/android/server/display/LogicalDisplayMapper;)V

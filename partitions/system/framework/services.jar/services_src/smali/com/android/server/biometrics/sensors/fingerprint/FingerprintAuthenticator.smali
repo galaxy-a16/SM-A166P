@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/hardware/fingerprint/IFingerprintService;I)V
     .locals 0
 
-    .line 40
     invoke-direct {p0}, Landroid/hardware/biometrics/IBiometricAuthenticator$Stub;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
-    .line 42
     iput p2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public cancelAuthenticationFromService(Landroid/os/IBinder;Ljava/lang/String;J)V
     .locals 6
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -49,7 +45,6 @@
 .method public createTestSession(Landroid/hardware/biometrics/ITestSessionCallback;Ljava/lang/String;)Landroid/hardware/biometrics/ITestSession;
     .locals 1
 
-    .line 48
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -64,7 +59,6 @@
 .method public dumpSensorServiceStateProto(Z)[B
     .locals 1
 
-    .line 59
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -79,7 +73,6 @@
 .method public getAuthenticatorId(I)J
     .locals 1
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -94,7 +87,6 @@
 .method public getLockoutModeForUser(I)I
     .locals 1
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -109,7 +101,6 @@
 .method public getSensorProperties(Ljava/lang/String;)Landroid/hardware/biometrics/SensorPropertiesInternal;
     .locals 1
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -124,7 +115,6 @@
 .method public hasEnrolledTemplates(ILjava/lang/String;)Z
     .locals 1
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -139,7 +129,6 @@
 .method public invalidateAuthenticatorId(ILandroid/hardware/biometrics/IInvalidationCallback;)V
     .locals 1
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -152,7 +141,6 @@
 .method public isHardwareDetected(Ljava/lang/String;)Z
     .locals 1
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -169,7 +157,6 @@
 
     move-object v0, p0
 
-    .line 67
     iget-object v1, v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     new-instance v2, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
@@ -178,26 +165,22 @@
 
     iget v0, v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
 
-    .line 69
     invoke-virtual {v2, v0}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->setSensorId(I)Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
 
     move-result-object v0
 
     move v2, p5
 
-    .line 70
     invoke-virtual {v0, p5}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->setUserId(I)Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
 
     move-result-object v0
 
     move-object/from16 v2, p7
 
-    .line 71
     invoke-virtual {v0, v2}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->setOpPackageName(Ljava/lang/String;)Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
 
     move-result-object v0
 
-    .line 72
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->build()Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;
 
     move-result-object v5
@@ -216,7 +199,6 @@
 
     move/from16 v9, p11
 
-    .line 67
     invoke-interface/range {v0 .. v9}, Landroid/hardware/fingerprint/IFingerprintService;->prepareForAuthentication(Landroid/os/IBinder;JLandroid/hardware/biometrics/IBiometricSensorReceiver;Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;JIZ)V
 
     return-void
@@ -225,7 +207,6 @@
 .method public resetLockout(Landroid/os/IBinder;Ljava/lang/String;I[B)V
     .locals 6
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget v2, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I
@@ -246,7 +227,6 @@
 .method public startPreparedClient(I)V
     .locals 1
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mFingerprintService:Landroid/hardware/fingerprint/IFingerprintService;
 
     iget p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintAuthenticator;->mSensorId:I

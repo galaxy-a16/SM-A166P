@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/android/server/biometrics/log/BiometricFrameworkStatsLogger;->$r8$lambda$nYQU3-TfXt2fUfpWfjYNqqwvwgs(Ljava/lang/Integer;)I

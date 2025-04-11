@@ -15,10 +15,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 2892
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2893
     iput-object p1, p0, Lcom/android/server/content/SyncManager$AccountSyncStats;->name:Ljava/lang/String;
 
     return-void
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/android/server/content/SyncManager$AccountSyncStats-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/content/SyncManager$AccountSyncStats;-><init>(Ljava/lang/String;)V
 
     return-void

@@ -17,7 +17,6 @@
 .method public getProcessName(I)Ljava/lang/String;
     .locals 0
 
-    .line 672
     invoke-static {p1}, Lcom/android/server/am/PhantomProcessList;->getProcessName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -28,7 +27,6 @@
 .method public openCgroupProcs(Ljava/lang/String;)Ljava/io/InputStream;
     .locals 0
 
-    .line 664
     new-instance p0, Ljava/io/FileInputStream;
 
     invoke-direct {p0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
@@ -39,7 +37,6 @@
 .method public readCgroupProcs(Ljava/io/InputStream;[BII)I
     .locals 0
 
-    .line 668
     invoke-virtual {p1, p2, p3, p4}, Ljava/io/InputStream;->read([BII)I
 
     move-result p0

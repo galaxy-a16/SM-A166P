@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/display/AutomaticBrightnessController;)V
     .locals 0
 
-    .line 2357
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$TaskStackListenerImpl;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Landroid/app/TaskStackListener;-><init>()V
@@ -24,7 +23,6 @@
 .method public onTaskStackChanged()V
     .locals 1
 
-    .line 2360
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$TaskStackListenerImpl;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-static {p0}, Lcom/android/server/display/AutomaticBrightnessController;->-$$Nest$fgetmHandler(Lcom/android/server/display/AutomaticBrightnessController;)Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;

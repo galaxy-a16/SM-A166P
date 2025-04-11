@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/server/am/UserController;JLjava/lang/String;JJLandroid/util/ArraySet;Ljava/util/concurrent/atomic/AtomicInteger;Lcom/android/server/am/UserState;II)V
     .locals 0
 
-    .line 2535
     iput-object p1, p0, Lcom/android/server/am/UserController$7;->this$0:Lcom/android/server/am/UserController;
 
     iput-wide p2, p0, Lcom/android/server/am/UserController$7;->val$dispatchStartedTimeForObserver:J
@@ -60,7 +59,6 @@
 .method public sendResult(Landroid/os/Bundle;)V
     .locals 5
 
-    .line 2538
     iget-object p1, p0, Lcom/android/server/am/UserController$7;->this$0:Lcom/android/server/am/UserController;
 
     invoke-static {p1}, Lcom/android/server/am/UserController;->-$$Nest$fgetmLock(Lcom/android/server/am/UserController;)Ljava/lang/Object;
@@ -69,7 +67,6 @@
 
     monitor-enter p1
 
-    .line 2539
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -87,7 +84,6 @@
 
     const-string v2, "ActivityManager"
 
-    .line 2542
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +112,6 @@
 
     invoke-static {v2, v0}, Lcom/android/server/utils/Slogf;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2547
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -126,7 +121,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 2549
     iget-wide v2, p0, Lcom/android/server/am/UserController$7;->val$userSwitchTimeoutMs:J
 
     cmp-long v2, v0, v2
@@ -135,7 +129,6 @@
 
     const-string v2, "ActivityManager"
 
-    .line 2550
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,7 +157,6 @@
 
     invoke-static {v2, v0}, Lcom/android/server/utils/Slogf;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2555
     :cond_1
     new-instance v0, Lcom/android/server/utils/TimingsTraceAndSlog;
 
@@ -172,7 +164,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/utils/TimingsTraceAndSlog;-><init>(Ljava/lang/String;)V
 
-    .line 2556
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,14 +182,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/utils/TimingsTraceAndSlog;->traceBegin(Ljava/lang/String;)V
 
-    .line 2557
     iget-object v1, p0, Lcom/android/server/am/UserController$7;->val$curWaitingUserSwitchCallbacks:Landroid/util/ArraySet;
 
     iget-object v2, p0, Lcom/android/server/am/UserController$7;->val$name:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 2560
     iget-object v1, p0, Lcom/android/server/am/UserController$7;->val$waitingCallbacksCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -217,7 +206,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 2563
     iget-object v1, p0, Lcom/android/server/am/UserController$7;->this$0:Lcom/android/server/am/UserController;
 
     iget-object v2, p0, Lcom/android/server/am/UserController$7;->val$uss:Lcom/android/server/am/UserState;
@@ -228,11 +216,9 @@
 
     invoke-static {v1, v2, v3, p0}, Lcom/android/server/am/UserController;->-$$Nest$msendContinueUserSwitchLU(Lcom/android/server/am/UserController;Lcom/android/server/am/UserState;II)V
 
-    .line 2565
     :cond_2
     invoke-virtual {v0}, Landroid/util/TimingsTraceLog;->traceEnd()V
 
-    .line 2566
     monitor-exit p1
 
     return-void

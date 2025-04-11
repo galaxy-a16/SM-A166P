@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/autofill/ui/SaveUi;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/autofill/ui/SaveUi$$ExternalSyntheticLambda4;->f$0:Lcom/android/server/autofill/ui/SaveUi;
@@ -27,7 +26,6 @@
 .method public final onInteraction(Landroid/view/View;Landroid/app/PendingIntent;Landroid/widget/RemoteViews$RemoteResponse;)Z
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/autofill/ui/SaveUi$$ExternalSyntheticLambda4;->f$0:Lcom/android/server/autofill/ui/SaveUi;
 
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/autofill/ui/SaveUi;->$r8$lambda$jCga0iAPfsy8ykT-sC_IfLAcShY(Lcom/android/server/autofill/ui/SaveUi;Landroid/view/View;Landroid/app/PendingIntent;Landroid/widget/RemoteViews$RemoteResponse;)Z

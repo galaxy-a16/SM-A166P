@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 62
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->SAFE_DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
@@ -41,31 +40,26 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;)V
     .locals 2
 
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CoreStateController;->mLock:Ljava/lang/Object;
 
-    .line 72
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
-    .line 75
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/CoreStateController;->mCallbacks:Ljava/util/ArrayList;
 
-    .line 78
     sget-boolean v0, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -76,7 +70,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_0
     iput-object p1, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -86,7 +79,6 @@
 .method public static isPrimarySystemUIProcess(Lcom/android/server/wm/WindowProcessController;)Z
     .locals 1
 
-    .line 210
     iget v0, p0, Lcom/android/server/wm/WindowProcessController;->mUserId:I
 
     if-nez v0, :cond_0
@@ -117,12 +109,10 @@
 .method public getCoreStates(I)Landroid/os/Bundle;
     .locals 3
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
@@ -132,7 +122,6 @@
 
     if-nez v1, :cond_0
 
-    .line 117
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
     new-instance v2, Landroid/os/Bundle;
@@ -141,7 +130,6 @@
 
     invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 119
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
@@ -164,7 +152,6 @@
     :catchall_0
     move-exception p0
 
-    .line 120
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -175,14 +162,12 @@
 .method public initializeLocked()V
     .locals 3
 
-    .line 86
     sget-object v0, Lcom/android/server/wm/CoreStateController;->TAG:Ljava/lang/String;
 
     const-string v1, "initializeLocked()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -197,7 +182,6 @@
 
     iput-object v0, p0, Lcom/android/server/wm/CoreStateController;->mH:Landroid/os/Handler;
 
-    .line 88
     new-instance v0, Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -210,14 +194,12 @@
 
     iput-object v0, p0, Lcom/android/server/wm/CoreStateController;->mObserverController:Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
-    .line 89
     invoke-virtual {v0}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->init()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    .line 90
     invoke-virtual {p0, v0, v1}, Lcom/android/server/wm/CoreStateController;->notifyCoreStatesChangedLocked(ILjava/lang/Runnable;)V
 
     return-void
@@ -226,12 +208,10 @@
 .method public final insertCoreStates(Landroid/os/Bundle;I)V
     .locals 4
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
@@ -241,7 +221,6 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 126
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/os/Bundle;->deepCopy()Landroid/os/Bundle;
@@ -250,12 +229,10 @@
 
     invoke-virtual {p0, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 127
     sget-boolean p0, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
 
     if-eqz p0, :cond_0
 
-    .line 128
     sget-object p0, Lcom/android/server/wm/CoreStateController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -286,7 +263,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     :cond_0
     monitor-exit v0
 
@@ -305,12 +281,10 @@
 .method public final notifyCoreStatesChangedLocked(ILjava/lang/Runnable;)V
     .locals 9
 
-    .line 152
     invoke-virtual {p0, p1}, Lcom/android/server/wm/CoreStateController;->getCoreStates(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 153
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v1, v1, Lcom/android/server/wm/ActivityTaskManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -331,10 +305,8 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 156
     invoke-virtual {p0, v0}, Lcom/android/server/wm/CoreStateController;->notifyToSystemThreadLocked(Landroid/os/Bundle;)V
 
-    .line 159
     :cond_1
     iget-object v3, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -344,7 +316,6 @@
 
     move-result-object v3
 
-    .line 160
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
     move-result v4
@@ -354,19 +325,16 @@
     :goto_1
     if-ltz v4, :cond_6
 
-    .line 161
     invoke-virtual {v3, v4}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
 
-    .line 162
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/wm/WindowProcessController;
 
-    .line 164
     invoke-virtual {v5}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v6
@@ -377,7 +345,6 @@
 
     goto :goto_2
 
-    .line 169
     :cond_2
     iget v6, v5, Lcom/android/server/wm/WindowProcessController;->mUserId:I
 
@@ -385,14 +352,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 170
     invoke-static {v5}, Lcom/android/server/wm/CoreStateController;->isPrimarySystemUIProcess(Lcom/android/server/wm/WindowProcessController;)Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    .line 179
     :cond_3
     :try_start_0
     invoke-virtual {v5}, Lcom/android/server/wm/WindowProcessController;->getThread()Landroid/app/IApplicationThread;
@@ -401,12 +366,10 @@
 
     if-eqz v5, :cond_5
 
-    .line 181
     sget-boolean v6, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
 
     if-eqz v6, :cond_4
 
-    .line 182
     sget-object v6, Lcom/android/server/wm/CoreStateController;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -428,31 +391,26 @@
     :cond_4
     const/4 v2, 0x0
 
-    .line 185
     invoke-static {v5, v2}, Landroid/app/servertransaction/ClientTransaction;->obtain(Landroid/app/IApplicationThread;Landroid/os/IBinder;)Landroid/app/servertransaction/ClientTransaction;
 
     move-result-object v6
 
-    .line 186
     invoke-static {v0}, Landroid/app/servertransaction/CoreStatesChangeItem;->obtain(Landroid/os/Bundle;)Landroid/app/servertransaction/CoreStatesChangeItem;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/app/servertransaction/ClientTransaction;->addCallback(Landroid/app/servertransaction/ClientTransactionItem;)V
 
-    .line 187
     iget-object v6, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v6}, Lcom/android/server/wm/ActivityTaskManagerService;->getLifecycleManager()Lcom/android/server/wm/ClientLifecycleManager;
 
     move-result-object v6
 
-    .line 188
     invoke-static {v0}, Landroid/app/servertransaction/CoreStatesChangeItem;->obtain(Landroid/os/Bundle;)Landroid/app/servertransaction/CoreStatesChangeItem;
 
     move-result-object v7
 
-    .line 187
     invoke-virtual {v6, v5, v2, v7}, Lcom/android/server/wm/ClientLifecycleManager;->scheduleTransaction(Landroid/app/IApplicationThread;Landroid/os/IBinder;Landroid/app/servertransaction/ClientTransactionItem;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -462,7 +420,6 @@
     :catch_0
     move-exception v2
 
-    .line 191
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_5
@@ -474,7 +431,6 @@
     :cond_6
     if-eqz p2, :cond_7
 
-    .line 196
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     :cond_7
@@ -484,7 +440,6 @@
 .method public final notifyToSystemThreadLocked(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 201
     invoke-static {}, Lcom/samsung/android/multiwindow/MultiWindowCoreState;->getInstance()Lcom/samsung/android/multiwindow/MultiWindowCoreState;
 
     move-result-object v0
@@ -493,12 +448,10 @@
 
     move-result p1
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mCallbacks:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 203
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mCallbacks:Ljava/util/ArrayList;
 
@@ -519,12 +472,10 @@
 
     check-cast v1, Lcom/samsung/android/server/corestate/CoreStateCallback;
 
-    .line 204
     invoke-interface {v1, p1}, Lcom/samsung/android/server/corestate/CoreStateCallback;->onCoreStateChanged(I)V
 
     goto :goto_0
 
-    .line 206
     :cond_0
     monitor-exit v0
 
@@ -543,10 +494,8 @@
 .method public onCoreStateChanged(Landroid/os/Bundle;IZLjava/lang/Runnable;)V
     .locals 0
 
-    .line 142
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/CoreStateController;->insertCoreStates(Landroid/os/Bundle;I)V
 
-    .line 144
     iget-object p1, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p1, p1, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -557,11 +506,9 @@
 
     if-eqz p3, :cond_0
 
-    .line 146
     :try_start_0
     invoke-virtual {p0, p2, p4}, Lcom/android/server/wm/CoreStateController;->notifyCoreStatesChangedLocked(ILjava/lang/Runnable;)V
 
-    .line 148
     :cond_0
     monitor-exit p1
     :try_end_0
@@ -587,18 +534,15 @@
 .method public registerCallbackLocked(Lcom/samsung/android/server/corestate/CoreStateCallback;)V
     .locals 1
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mCallbacks:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 95
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
     monitor-exit v0
 
     return-void
@@ -616,18 +560,15 @@
 .method public final removeCoreStates(I)V
     .locals 1
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 135
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mStatesForUser:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 136
     monitor-exit v0
 
     return-void
@@ -645,7 +586,6 @@
 .method public setSharedPreferenceEdited(I)V
     .locals 1
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -654,13 +594,11 @@
 
     monitor-enter v0
 
-    .line 215
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/CoreStateController;->mObserverController:Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
     invoke-virtual {p0, p1}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->onCoreStateChanged(I)V
 
-    .line 216
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -685,7 +623,6 @@
 .method public setVolatileState(Ljava/lang/String;Ljava/lang/Object;IZZLjava/lang/Runnable;)V
     .locals 8
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mAtm:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mGlobalLock:Lcom/android/server/wm/WindowManagerGlobalLock;
@@ -694,7 +631,6 @@
 
     monitor-enter v0
 
-    .line 222
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/CoreStateController;->mObserverController:Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
@@ -712,7 +648,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->setVolatileState(Ljava/lang/String;Ljava/lang/Object;IZZLjava/lang/Runnable;)V
 
-    .line 224
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -737,12 +672,10 @@
 .method public startUserLocked(IZZ)V
     .locals 3
 
-    .line 100
     sget-boolean v0, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 101
     sget-object v0, Lcom/android/server/wm/CoreStateController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -771,7 +704,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mObserverController:Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
@@ -779,7 +711,6 @@
 
     const/4 p2, 0x0
 
-    .line 104
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/CoreStateController;->notifyCoreStatesChangedLocked(ILjava/lang/Runnable;)V
 
     return-void
@@ -788,7 +719,6 @@
 .method public stopUserLocked(IZ)V
     .locals 3
 
-    .line 108
     sget-boolean v0, Lcom/android/server/wm/CoreStateController;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -815,13 +745,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/CoreStateController;->mObserverController:Lcom/samsung/android/server/corestate/CoreStateObserverController;
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/server/corestate/CoreStateObserverController;->stopUserLocked(IZ)V
 
-    .line 110
     invoke-virtual {p0, p1}, Lcom/android/server/wm/CoreStateController;->removeCoreStates(I)V
 
     return-void

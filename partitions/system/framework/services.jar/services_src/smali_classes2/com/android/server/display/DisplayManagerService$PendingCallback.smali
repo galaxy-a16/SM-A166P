@@ -13,20 +13,16 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService$CallbackRecord;II)V
     .locals 0
 
-    .line 4995
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4996
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mCallbackRecord:Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
-    .line 4997
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
-    .line 4998
     new-instance p0, Landroid/util/Pair;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -49,7 +45,6 @@
 .method public addDisplayEvent(II)V
     .locals 3
 
-    .line 5003
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -64,7 +59,6 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 5004
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
@@ -85,7 +79,6 @@
 
     if-ne v0, p2, :cond_0
 
-    .line 5005
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +123,6 @@
 
     return-void
 
-    .line 5013
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
@@ -151,7 +143,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 5014
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -172,12 +163,10 @@
 
     if-ne v2, p2, :cond_1
 
-    .line 5015
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 5022
     :cond_2
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
@@ -203,7 +192,6 @@
 
     const/4 v0, 0x0
 
-    .line 5026
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
@@ -213,7 +201,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 5027
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -222,7 +209,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 5033
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mCallbackRecord:Lcom/android/server/display/DisplayManagerService$CallbackRecord;
 
     iget-object v3, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -237,19 +223,16 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 5034
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    .line 5033
     invoke-virtual {v2, v3, v1}, Lcom/android/server/display/DisplayManagerService$CallbackRecord;->notifyDisplayEventAsync(II)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 5035
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +262,6 @@
 
     goto :goto_0
 
-    .line 5039
     :cond_1
     :goto_1
     iget-object p0, p0, Lcom/android/server/display/DisplayManagerService$PendingCallback;->mDisplayEvents:Ljava/util/ArrayList;

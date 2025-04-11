@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/FlashNotificationsController;)V
     .locals 0
 
-    .line 219
     iput-object p1, p0, Lcom/android/server/accessibility/FlashNotificationsController$2;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCameraClosed(Ljava/lang/String;)V
     .locals 1
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/accessibility/FlashNotificationsController$2;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {v0}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$fgetmCameraId(Lcom/android/server/accessibility/FlashNotificationsController;)Ljava/lang/String;
@@ -45,7 +43,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 230
     iget-object p0, p0, Lcom/android/server/accessibility/FlashNotificationsController$2;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     const/4 p1, 0x0
@@ -59,7 +56,6 @@
 .method public onCameraOpened(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 222
     iget-object p2, p0, Lcom/android/server/accessibility/FlashNotificationsController$2;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {p2}, Lcom/android/server/accessibility/FlashNotificationsController;->-$$Nest$fgetmCameraId(Lcom/android/server/accessibility/FlashNotificationsController;)Ljava/lang/String;
@@ -80,7 +76,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 223
     iget-object p0, p0, Lcom/android/server/accessibility/FlashNotificationsController$2;->this$0:Lcom/android/server/accessibility/FlashNotificationsController;
 
     const/4 p1, 0x1

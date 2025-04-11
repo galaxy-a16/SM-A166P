@@ -20,7 +20,6 @@
 .method public final apply(I)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$30IQe2nwJMgEr5Bj1TUXIaoFjbc(I)[Ljava/lang/Integer;
 
     move-result-object p0

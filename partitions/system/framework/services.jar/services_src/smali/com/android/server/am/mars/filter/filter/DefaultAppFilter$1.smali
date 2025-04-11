@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;Landroid/os/Handler;)V
     .locals 0
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -24,12 +23,10 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 0
 
-    .line 172
     sget-boolean p1, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_FILTER:Z
 
     if-eqz p1, :cond_0
 
-    .line 173
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
     invoke-static {p1}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->-$$Nest$fgetTAG(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;)Ljava/lang/String;
@@ -40,7 +37,6 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
@@ -54,7 +50,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->-$$Nest$mgetDefaultIMEPackage(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;I)V
 
-    .line 177
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
     invoke-static {p1}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->-$$Nest$fgetmContext(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;)Landroid/content/Context;
@@ -95,7 +90,6 @@
 
     if-gt p1, p2, :cond_1
 
-    .line 180
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
     invoke-static {p0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->-$$Nest$fgetmSecureFolderUserId(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;)I

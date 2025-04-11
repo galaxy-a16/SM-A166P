@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/location/contexthub/ContextHubClientBroker;)V
     .locals 0
 
-    .line 264
     iput-object p1, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$1;->this$0:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
     invoke-direct {p0}, Landroid/hardware/location/IContextHubTransactionCallback$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onQueryResponse(ILjava/util/List;)V
     .locals 5
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$1;->this$0:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
     invoke-static {v0}, Lcom/android/server/location/contexthub/ContextHubClientBroker;->-$$Nest$fgetmIsPermQueryIssued(Lcom/android/server/location/contexthub/ContextHubClientBroker;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -43,7 +41,6 @@
 
     const-string p1, "Permissions query failed, but still received nanoapp state"
 
-    .line 272
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -51,7 +48,6 @@
     :cond_0
     if-eqz p2, :cond_2
 
-    .line 274
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -70,7 +66,6 @@
 
     check-cast p2, Landroid/hardware/location/NanoAppState;
 
-    .line 275
     iget-object v0, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$1;->this$0:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
     invoke-static {v0}, Lcom/android/server/location/contexthub/ContextHubClientBroker;->-$$Nest$fgetmMessageChannelNanoappIdMap(Lcom/android/server/location/contexthub/ContextHubClientBroker;)Ljava/util/Map;
@@ -91,12 +86,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 276
     invoke-virtual {p2}, Landroid/hardware/location/NanoAppState;->getNanoAppPermissions()Ljava/util/List;
 
     move-result-object v0
 
-    .line 277
     iget-object v2, p0, Lcom/android/server/location/contexthub/ContextHubClientBroker$1;->this$0:Lcom/android/server/location/contexthub/ContextHubClientBroker;
 
     invoke-virtual {p2}, Landroid/hardware/location/NanoAppState;->getNanoAppId()J
@@ -115,6 +108,5 @@
 .method public onTransactionComplete(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

@@ -16,10 +16,8 @@
 .method public constructor <init>(Lcom/android/server/pm/snapshot/PackageDataSnapshot;)V
     .locals 0
 
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     check-cast p1, Lcom/android/server/pm/Computer;
 
     iput-object p1, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl;->mSnapshot:Lcom/android/server/pm/Computer;
@@ -30,7 +28,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/snapshot/PackageDataSnapshot;Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl;-><init>(Lcom/android/server/pm/snapshot/PackageDataSnapshot;)V
 
     return-void
@@ -41,14 +38,12 @@
 .method public checkClosed()V
     .locals 1
 
-    .line 95
     iget-boolean p0, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl;->mClosed:Z
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 96
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -64,12 +59,10 @@
 
     const/4 v0, 0x1
 
-    .line 88
     iput-boolean v0, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl;->mClosed:Z
 
     const/4 v0, 0x0
 
-    .line 89
     iput-object v0, p0, Lcom/android/server/pm/local/PackageManagerLocalImpl$BaseSnapshotImpl;->mSnapshot:Lcom/android/server/pm/Computer;
 
     return-void

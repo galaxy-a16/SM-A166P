@@ -18,20 +18,16 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/view/IRotationWatcher;)V
     .locals 1
 
-    .line 201
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 199
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mOwnerUid:I
 
-    .line 202
     iput-object p1, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWms:Lcom/android/server/wm/WindowManagerService;
 
-    .line 203
     iput-object p2, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWatcher:Landroid/view/IRotationWatcher;
 
     return-void
@@ -42,7 +38,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 220
     iget-object v0, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWms:Lcom/android/server/wm/WindowManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWatcher:Landroid/view/IRotationWatcher;
@@ -55,7 +50,6 @@
 .method public notifyRotation(I)V
     .locals 0
 
-    .line 208
     :try_start_0
     iget-object p0, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWatcher:Landroid/view/IRotationWatcher;
 
@@ -70,7 +64,6 @@
 .method public unlinkToDeath()V
     .locals 2
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/wm/RotationWatcherController$RotationWatcher;->mWatcher:Landroid/view/IRotationWatcher;
 
     invoke-interface {v0}, Landroid/view/IRotationWatcher;->asBinder()Landroid/os/IBinder;

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/accessibility/FlashNotificationsController;
 
     invoke-static {p1}, Lcom/android/server/accessibility/FlashNotificationsController;->$r8$lambda$4ijwIT9g7IadU8EzDtmAbe0hDHY(Lcom/android/server/accessibility/FlashNotificationsController;)V

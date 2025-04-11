@@ -19,7 +19,6 @@
 .method public static synthetic $r8$lambda$vAmrOmGuofOP3-8gz3hoKflsJh4(Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;ILjava/lang/String;)Lcom/android/server/people/data/PackageData;
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->lambda$new$0(ILjava/lang/String;)Lcom/android/server/people/data/PackageData;
 
     move-result-object p0
@@ -30,12 +29,10 @@
 .method public constructor <init>(Lcom/android/server/people/data/DataManager;I)V
     .locals 2
 
-    .line 1321
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1322
     invoke-static {p1}, Lcom/android/server/people/data/DataManager;->-$$Nest$fgetmInjector(Lcom/android/server/people/data/DataManager;)Lcom/android/server/people/data/DataManager$Injector;
 
     move-result-object p1
@@ -50,7 +47,6 @@
 
     iput-object p1, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->mUsageStatsQueryHelper:Lcom/android/server/people/data/UsageStatsQueryHelper;
 
-    .line 1324
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -67,7 +63,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/people/data/DataManager;ILcom/android/server/people/data/DataManager$UsageStatsQueryRunnable-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;-><init>(Lcom/android/server/people/data/DataManager;I)V
 
     return-void
@@ -76,7 +71,6 @@
 .method private synthetic lambda$new$0(ILjava/lang/String;)Lcom/android/server/people/data/PackageData;
     .locals 0
 
-    .line 1323
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-virtual {p0, p2, p1}, Lcom/android/server/people/data/DataManager;->getPackage(Ljava/lang/String;I)Lcom/android/server/people/data/PackageData;
@@ -91,7 +85,6 @@
 .method public onEvent(Lcom/android/server/people/data/PackageData;Lcom/android/server/people/data/ConversationInfo;Lcom/android/server/people/data/Event;)V
     .locals 2
 
-    .line 1337
     invoke-virtual {p3}, Lcom/android/server/people/data/Event;->getType()I
 
     move-result v0
@@ -100,12 +93,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1339
     new-instance v0, Lcom/android/server/people/data/ConversationInfo$Builder;
 
     invoke-direct {v0, p2}, Lcom/android/server/people/data/ConversationInfo$Builder;-><init>(Lcom/android/server/people/data/ConversationInfo;)V
 
-    .line 1340
     invoke-virtual {p3}, Lcom/android/server/people/data/Event;->getTimestamp()J
 
     move-result-wide p2
@@ -114,19 +105,16 @@
 
     move-result-object p2
 
-    .line 1341
     invoke-virtual {p2}, Lcom/android/server/people/data/ConversationInfo$Builder;->build()Lcom/android/server/people/data/ConversationInfo;
 
     move-result-object p2
 
-    .line 1342
     iget-object p0, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->this$0:Lcom/android/server/people/data/DataManager;
 
     invoke-virtual {p1}, Lcom/android/server/people/data/PackageData;->getConversationStore()Lcom/android/server/people/data/ConversationStore;
 
     move-result-object p3
 
-    .line 1344
     invoke-virtual {p1}, Lcom/android/server/people/data/PackageData;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -135,7 +123,6 @@
 
     move-result p1
 
-    .line 1342
     invoke-virtual {p0, p3, p2, v0, p1}, Lcom/android/server/people/data/DataManager;->updateConversationStoreThenNotifyListeners(Lcom/android/server/people/data/ConversationStore;Lcom/android/server/people/data/ConversationInfo;Ljava/lang/String;I)V
 
     :cond_0
@@ -145,7 +132,6 @@
 .method public run()V
     .locals 3
 
-    .line 1329
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->mUsageStatsQueryHelper:Lcom/android/server/people/data/UsageStatsQueryHelper;
 
     iget-wide v1, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->mLastEventTimestamp:J
@@ -156,7 +142,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1330
     iget-object v0, p0, Lcom/android/server/people/data/DataManager$UsageStatsQueryRunnable;->mUsageStatsQueryHelper:Lcom/android/server/people/data/UsageStatsQueryHelper;
 
     invoke-virtual {v0}, Lcom/android/server/people/data/UsageStatsQueryHelper;->getLastEventTimestamp()J

@@ -20,7 +20,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0
@@ -29,7 +28,6 @@
 .method public handleCcm([BI)I
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return p0

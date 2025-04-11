@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/hdmi/HdmiControlService;)V
     .locals 0
 
-    .line 913
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$13;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 3
 
-    .line 916
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$13;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const-string v1, "enable_numeric_soundbar_volume_ui_on_tv"
@@ -40,7 +38,6 @@
 
     invoke-static {v0, p1}, Lcom/android/server/hdmi/HdmiControlService;->-$$Nest$fputmNumericSoundbarVolumeUiOnTvFeatureFlagEnabled(Lcom/android/server/hdmi/HdmiControlService;Z)V
 
-    .line 919
     iget-object p0, p0, Lcom/android/server/hdmi/HdmiControlService$13;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {p0}, Lcom/android/server/hdmi/HdmiControlService;->checkAndUpdateAbsoluteVolumeBehavior()V

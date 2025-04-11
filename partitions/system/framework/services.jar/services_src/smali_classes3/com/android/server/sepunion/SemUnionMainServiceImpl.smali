@@ -33,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/sepunion/SemUnionMainServiceImpl;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -42,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$maddSepUnionServiceMapInternal(Lcom/android/server/sepunion/SemUnionMainServiceImpl;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->addSepUnionServiceMapInternal(Ljava/lang/String;Landroid/content/Context;)V
 
     return-void
@@ -51,7 +49,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsLock()Ljava/lang/Object;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     return-object v0
@@ -69,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsSemSystemServiceMap()Ljava/util/HashMap;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
     return-object v0
@@ -78,7 +73,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsUnionIbinderMap()Ljava/util/HashMap;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sUnionIbinderMap:Ljava/util/HashMap;
 
     return-object v0
@@ -87,7 +81,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 66
     const-class v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -96,42 +89,36 @@
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
-    .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sConstructorMap:Ljava/util/HashMap;
 
-    .line 73
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
-    .line 75
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sUnionIbinderMap:Ljava/util/HashMap;
 
-    .line 77
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sDumpInformationMap:Ljava/util/HashMap;
 
-    .line 79
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     sput-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sPendingSepUnionServiceCreators:Ljava/util/Map;
 
-    .line 82
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -144,25 +131,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 157
     invoke-direct {p0}, Lcom/samsung/android/sepunion/IUnionManager$Stub;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 83
     iput-boolean v0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mIsBootCompleted:Z
 
-    .line 85
     new-instance v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl$1;-><init>(Lcom/android/server/sepunion/SemUnionMainServiceImpl;)V
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mSemUnionManagerLocal:Lcom/samsung/android/sepunion/SemUnionManagerLocal;
 
-    .line 158
     iput-object p1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mContext:Landroid/content/Context;
 
-    .line 159
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -173,13 +155,10 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mHandler:Landroid/os/Handler;
 
-    .line 161
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->initializeSystemMapData()V
 
-    .line 162
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->createServiceByStartType()V
 
-    .line 163
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->makeDirectoryForAppLog()V
 
     return-void
@@ -188,12 +167,10 @@
 .method public static getSemSystemService(Ljava/lang/String;)Lcom/android/server/sepunion/AbsSemSystemService;
     .locals 3
 
-    .line 201
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 202
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -203,7 +180,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 203
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -212,12 +188,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 205
     monitor-exit v0
 
     return-object p0
 
-    .line 208
     :cond_0
     monitor-exit v0
 
@@ -240,7 +214,6 @@
 .method public final addSepUnionServiceMapInternal(Ljava/lang/String;Landroid/content/Context;)V
     .locals 3
 
-    .line 238
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -259,12 +232,10 @@
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 240
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sConstructorMap:Ljava/util/HashMap;
 
@@ -274,7 +245,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 241
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -283,7 +253,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 243
     :try_start_1
     filled-new-array {p2}, [Ljava/lang/Object;
 
@@ -295,15 +264,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 245
     check-cast p2, Lcom/android/server/sepunion/AbsSemSystemService;
 
-    .line 246
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sUnionIbinderMap:Ljava/util/HashMap;
 
     move-object v1, p2
@@ -312,7 +278,6 @@
 
     invoke-virtual {p0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     new-instance p0, Landroid/os/Bundle;
 
     invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
@@ -324,7 +289,6 @@
     :cond_0
     const-string p1, "addSepUnionServiceMapInternal : obj is NULL"
 
-    .line 250
     invoke-static {p0, p1}, Lcom/samsung/android/sepunion/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_0
@@ -337,11 +301,9 @@
     :catch_0
     move-exception p0
 
-    .line 253
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
-    .line 256
     :cond_1
     :goto_0
     monitor-exit v0
@@ -361,12 +323,10 @@
 .method public final createPendingSepUnionService(Ljava/lang/String;)V
     .locals 3
 
-    .line 213
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 214
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sPendingSepUnionServiceCreators:Ljava/util/Map;
 
@@ -376,7 +336,6 @@
 
     invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     monitor-exit v0
 
     return-void
@@ -394,7 +353,6 @@
 .method public final createServiceByStartType()V
     .locals 3
 
-    .line 181
     sget-object v0, Lcom/samsung/android/sepunion/UnionConstants;->sServiceStartType:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->entrySet()Ljava/util/Set;
@@ -418,14 +376,12 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 182
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 183
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -438,14 +394,12 @@
 
     if-nez v1, :cond_0
 
-    .line 184
     iget-object v1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mSemUnionManagerLocal:Lcom/samsung/android/sepunion/SemUnionManagerLocal;
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/sepunion/SemUnionManagerLocal;->createSemSystemService(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 186
     :cond_0
     invoke-virtual {p0, v2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->createPendingSepUnionService(Ljava/lang/String;)V
 
@@ -458,7 +412,6 @@
 .method public dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 6
 
-    .line 449
     iget-object v0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mContext:Landroid/content/Context;
 
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
@@ -471,24 +424,20 @@
 
     return-void
 
-    .line 451
     :cond_0
     array-length v0, p3
 
     if-gtz v0, :cond_1
 
-    .line 453
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpInternal(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     return-void
 
-    .line 460
     :cond_1
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 461
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -514,7 +463,6 @@
 
     goto :goto_0
 
-    .line 463
     :cond_2
     sget-object v2, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sDumpInformationMap:Ljava/util/HashMap;
 
@@ -541,7 +489,6 @@
 
     move v5, v2
 
-    .line 466
     :goto_0
     monitor-exit v0
     :try_end_0
@@ -549,10 +496,8 @@
 
     if-eqz v2, :cond_6
 
-    .line 469
     monitor-enter v0
 
-    .line 471
     :try_start_1
     aget-object p0, p3, v3
 
@@ -564,19 +509,16 @@
 
     if-eqz p0, :cond_5
 
-    .line 474
     array-length v1, p3
 
     if-ne v1, v4, :cond_4
 
     const/4 p3, 0x0
 
-    .line 475
     invoke-interface {p0, p1, p2, p3}, Lcom/android/server/sepunion/AbsSemSystemService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 477
     :cond_4
     array-length v1, p3
 
@@ -588,7 +530,6 @@
 
     invoke-interface {p0, p1, p2, p3}, Lcom/android/server/sepunion/AbsSemSystemService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 480
     :cond_5
     :goto_1
     monitor-exit v0
@@ -607,10 +548,8 @@
     :cond_6
     if-eqz v5, :cond_8
 
-    .line 483
     monitor-enter v0
 
-    .line 484
     :try_start_2
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sDumpInformationMap:Ljava/util/HashMap;
 
@@ -622,7 +561,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 485
     aget-object p1, p3, v3
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -635,13 +573,11 @@
 
     goto :goto_2
 
-    .line 487
     :cond_7
     aget-object v1, p3, v3
 
     invoke-virtual {p0, v1, p1, p2, p3}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpHistoryLog(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 489
     :goto_2
     monitor-exit v0
 
@@ -656,7 +592,6 @@
 
     throw p0
 
-    .line 490
     :cond_8
     aget-object v0, p3, v3
 
@@ -668,12 +603,10 @@
 
     if-eqz v0, :cond_9
 
-    .line 491
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpServiceList(Ljava/io/PrintWriter;)V
 
     goto :goto_3
 
-    .line 494
     :cond_9
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpInternal(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
@@ -683,7 +616,6 @@
     :catchall_2
     move-exception p0
 
-    .line 466
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -695,19 +627,16 @@
 .method public final dumpFromFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 551
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 553
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 554
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -728,7 +657,6 @@
 
     return-void
 
-    .line 558
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -758,7 +686,6 @@
 
     const/4 p1, 0x0
 
-    .line 565
     :try_start_0
     new-instance p2, Ljava/io/FileInputStream;
 
@@ -768,7 +695,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_6
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 566
     :try_start_1
     new-instance p0, Ljava/io/InputStreamReader;
 
@@ -778,7 +704,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 567
     :try_start_2
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -788,7 +713,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 569
     :try_start_3
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -796,7 +720,6 @@
 
     const/4 v1, 0x0
 
-    .line 573
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -808,19 +731,16 @@
 
     if-gt v1, v3, :cond_1
 
-    .line 574
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v2, 0xa
 
-    .line 575
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 578
     :cond_1
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -918,7 +838,6 @@
 
     move-object p0, v0
 
-    .line 583
     :goto_3
     :try_start_4
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
@@ -937,20 +856,16 @@
 
     move-object p0, v0
 
-    .line 581
     :goto_5
     invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 585
     :goto_6
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 586
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 587
     invoke-static {p2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     return-void
@@ -958,24 +873,19 @@
     :catchall_3
     move-exception p1
 
-    .line 585
     :goto_7
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 586
     invoke-static {p0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 587
     invoke-static {p2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 588
     throw p1
 .end method
 
 .method public final dumpHistoryLog(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 1
 
-    .line 595
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1002,7 +912,6 @@
 
     invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 597
     invoke-static {p1, p2, p3, p4}, Lcom/samsung/android/sepunion/Log;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     return-void
@@ -1013,18 +922,14 @@
 
     const-string v0, "\n##### SEP UNION Main SERVICE #####\n##### (dumpsys sepunion) #####\n"
 
-    .line 500
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 502
     invoke-virtual {p0, p2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpServiceList(Ljava/io/PrintWriter;)V
 
-    .line 504
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 506
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -1050,7 +955,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 507
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -1059,12 +963,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 509
     invoke-interface {v2, p1, p2, p3}, Lcom/android/server/sepunion/AbsSemSystemService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 514
     :cond_1
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sDumpInformationMap:Ljava/util/HashMap;
 
@@ -1089,14 +991,12 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 515
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 516
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -1105,18 +1005,15 @@
 
     if-eqz v2, :cond_2
 
-    .line 518
     invoke-virtual {p0, v3, v2, p2}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpFromFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/PrintWriter;)V
 
     goto :goto_1
 
-    .line 520
     :cond_2
     invoke-virtual {p0, v3, p1, p2, p3}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->dumpHistoryLog(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 523
     :cond_3
     monitor-exit v0
 
@@ -1139,12 +1036,10 @@
 
     const-string v0, ""
 
-    .line 531
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 532
     :try_start_0
     sget-object v2, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -1172,7 +1067,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 533
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -1181,7 +1075,6 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 535
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1206,7 +1099,6 @@
 
     goto :goto_0
 
-    .line 538
     :cond_1
     sget-object v2, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sPendingSepUnionServiceCreators:Ljava/util/Map;
 
@@ -1232,14 +1124,12 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 539
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
     if-eqz v5, :cond_2
 
-    .line 540
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1264,13 +1154,11 @@
 
     goto :goto_1
 
-    .line 543
     :cond_3
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 544
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1287,7 +1175,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 545
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1304,7 +1191,6 @@
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 546
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1326,7 +1212,6 @@
     :catchall_0
     move-exception p0
 
-    .line 543
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1338,12 +1223,10 @@
 .method public final enforeCallingPermission(Ljava/lang/String;)V
     .locals 2
 
-    .line 413
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 414
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1360,7 +1243,6 @@
 
     return-void
 
-    .line 418
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -1386,12 +1268,10 @@
 
     move-result-object p0
 
-    .line 420
     sget-object p1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     invoke-static {p1, p0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     new-instance p1, Ljava/lang/SecurityException;
 
     invoke-direct {p1, p0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
@@ -1402,7 +1282,6 @@
 .method public final getConstructor(Ljava/lang/String;)Ljava/lang/reflect/Constructor;
     .locals 2
 
-    .line 193
     :try_start_0
     invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -1430,7 +1309,6 @@
     :catch_0
     move-exception p0
 
-    .line 195
     invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -1441,7 +1319,6 @@
 .method public getSemSystemService(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/IBinder;
     .locals 3
 
-    .line 278
     sget-object p2, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1460,12 +1337,10 @@
 
     invoke-static {p2, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 280
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sUnionIbinderMap:Ljava/util/HashMap;
 
@@ -1477,12 +1352,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 282
     monitor-exit v0
 
     return-object v1
 
-    .line 284
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mIsBootCompleted:Z
 
@@ -1490,23 +1363,19 @@
 
     const-string p0, "getSemSystemService : boot is not completed"
 
-    .line 285
     invoke-static {p2, p0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 289
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->getSepUnionService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 290
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1529,7 +1398,6 @@
 
     invoke-static {p2, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     monitor-exit v0
 
     return-object p0
@@ -1537,7 +1405,6 @@
     :catchall_0
     move-exception p0
 
-    .line 292
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1548,12 +1415,10 @@
 .method public final getSepUnionService(Ljava/lang/String;)Landroid/os/IBinder;
     .locals 5
 
-    .line 220
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 221
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sPendingSepUnionServiceCreators:Ljava/util/Map;
 
@@ -1565,25 +1430,21 @@
 
     if-nez v2, :cond_0
 
-    .line 223
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 225
     :cond_0
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 229
     :try_start_1
     iget-object p0, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mContext:Landroid/content/Context;
 
@@ -1593,11 +1454,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 231
     :try_start_2
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 233
     monitor-exit v0
 
     return-object p0
@@ -1605,16 +1464,13 @@
     :catchall_0
     move-exception p0
 
-    .line 231
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 232
     throw p0
 
     :catchall_1
     move-exception p0
 
-    .line 233
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -1625,12 +1481,10 @@
 .method public final initializeSystemMapData()V
     .locals 5
 
-    .line 167
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 168
     :try_start_0
     sget-object v1, Lcom/samsung/android/sepunion/UnionConstants;->sClassPathForService:Landroid/util/ArrayMap;
 
@@ -1656,7 +1510,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 169
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -1669,33 +1522,28 @@
 
     if-eqz v3, :cond_0
 
-    .line 171
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 172
     sget-object v4, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sConstructorMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v3, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v3, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sUnionIbinderMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 177
     :cond_1
     monitor-exit v0
 
@@ -1714,14 +1562,12 @@
 .method public final makeDirectoryForAppLog()V
     .locals 2
 
-    .line 406
     new-instance p0, Ljava/io/File;
 
     const-string v0, "/data/log/sepunion/"
 
     invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 407
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -1738,7 +1584,6 @@
 
     const/4 v1, -0x1
 
-    .line 408
     invoke-static {p0, v0, v1, v1}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
     :cond_0
@@ -1748,12 +1593,10 @@
 .method public onBootPhase(I)V
     .locals 3
 
-    .line 313
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 314
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -1779,7 +1622,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 315
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -1788,7 +1630,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 317
     invoke-interface {v2, p1}, Lcom/android/server/sepunion/AbsSemSystemService;->onBootPhase(I)V
 
     goto :goto_0
@@ -1798,17 +1639,14 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 320
     iget-boolean p1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mIsBootCompleted:Z
 
     if-nez p1, :cond_2
 
     const/4 p1, 0x1
 
-    .line 321
     iput-boolean p1, p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->mIsBootCompleted:Z
 
-    .line 323
     :cond_2
     monitor-exit v0
 
@@ -1829,7 +1667,6 @@
 
     move-object v0, p4
 
-    .line 428
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -1849,10 +1686,8 @@
 
     move-object/from16 v1, p6
 
-    .line 430
     invoke-virtual {v1, v0, v2}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    .line 431
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Shell commands are only callable by ADB"
@@ -1865,18 +1700,15 @@
     :goto_0
     move-object/from16 v1, p6
 
-    .line 434
     sget-object v10, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 435
     :try_start_0
     array-length v3, v0
 
     if-lez v3, :cond_3
 
-    .line 436
     sget-object v3, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
     const/4 v4, 0x0
@@ -1891,7 +1723,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 438
     array-length v4, v0
 
     const/4 v5, 0x1
@@ -1927,21 +1758,17 @@
 
     move-object/from16 v9, p6
 
-    .line 439
     invoke-interface/range {v3 .. v9}, Lcom/android/server/sepunion/AbsSemSystemService;->onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
 
-    .line 440
     monitor-exit v10
 
     return-void
 
-    .line 443
     :cond_3
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 444
     invoke-super/range {p0 .. p6}, Lcom/samsung/android/sepunion/IUnionManager$Stub;->onShellCommand(Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;Ljava/io/FileDescriptor;[Ljava/lang/String;Landroid/os/ShellCallback;Landroid/os/ResultReceiver;)V
 
     return-void
@@ -1949,7 +1776,6 @@
     :catchall_0
     move-exception v0
 
-    .line 443
     :try_start_1
     monitor-exit v10
     :try_end_1
@@ -1961,19 +1787,16 @@
 .method public onUserStarting(I)V
     .locals 3
 
-    .line 330
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserStarting"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 332
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -1999,7 +1822,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 333
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2008,19 +1830,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 334
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 335
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserStarting(I)V
 
     goto :goto_0
 
-    .line 338
     :cond_1
     monitor-exit p0
 
@@ -2039,19 +1858,16 @@
 .method public onUserStopped(I)V
     .locals 3
 
-    .line 390
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserStopped"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 391
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 392
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -2077,7 +1893,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 393
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2086,19 +1901,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 394
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 395
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserStopped(I)V
 
     goto :goto_0
 
-    .line 398
     :cond_1
     monitor-exit p0
 
@@ -2117,19 +1929,16 @@
 .method public onUserStopping(I)V
     .locals 3
 
-    .line 378
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserStopping"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 380
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -2155,7 +1964,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 381
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2164,19 +1972,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 382
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 383
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserStopping(I)V
 
     goto :goto_0
 
-    .line 386
     :cond_1
     monitor-exit p0
 
@@ -2195,19 +2000,16 @@
 .method public onUserSwitching(II)V
     .locals 3
 
-    .line 366
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserSwitching"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 367
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 368
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -2233,7 +2035,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 369
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2242,19 +2043,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 370
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 371
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1, p2}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserSwitching(II)V
 
     goto :goto_0
 
-    .line 374
     :cond_1
     monitor-exit p0
 
@@ -2273,19 +2071,16 @@
 .method public onUserUnlocked(I)V
     .locals 3
 
-    .line 354
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserUnlocked"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 356
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -2311,7 +2106,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 357
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2320,19 +2114,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 358
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 359
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserUnlocked(I)V
 
     goto :goto_0
 
-    .line 362
     :cond_1
     monitor-exit p0
 
@@ -2351,19 +2142,16 @@
 .method public onUserUnlocking(I)V
     .locals 3
 
-    .line 342
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onUserUnlocking"
 
     invoke-static {p0, v0}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 344
     :try_start_0
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sSemSystemServiceMap:Ljava/util/HashMap;
 
@@ -2389,7 +2177,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 345
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2398,19 +2185,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 346
     instance-of v2, v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     if-eqz v2, :cond_0
 
-    .line 347
     check-cast v1, Lcom/android/server/sepunion/AbsSemSystemServiceForS;
 
     invoke-interface {v1, p1}, Lcom/android/server/sepunion/AbsSemSystemServiceForS;->onUserUnlocking(I)V
 
     goto :goto_0
 
-    .line 350
     :cond_1
     monitor-exit p0
 
@@ -2429,7 +2213,6 @@
 .method public setDumpEnabled(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 300
     sget-object v0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2450,15 +2233,12 @@
 
     const-string/jumbo v1, "setDumpEnabled"
 
-    .line 301
     invoke-virtual {p0, v1}, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->enforeCallingPermission(Ljava/lang/String;)V
 
-    .line 303
     sget-object p0, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sLock:Ljava/lang/Object;
 
     monitor-enter p0
 
-    .line 304
     :try_start_0
     sget-object v1, Lcom/android/server/sepunion/SemUnionMainServiceImpl;->sDumpInformationMap:Ljava/util/HashMap;
 
@@ -2474,16 +2254,13 @@
 
     const-string/jumbo p1, "setDumpEnabled Already Exist"
 
-    .line 305
     invoke-static {v0, p1}, Lcom/samsung/android/sepunion/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 307
     :cond_0
     invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 309
     :goto_0
     monitor-exit p0
 

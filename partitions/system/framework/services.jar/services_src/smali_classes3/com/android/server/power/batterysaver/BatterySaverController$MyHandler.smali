@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/power/batterysaver/BatterySaverController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 269
     iput-object p1, p0, Lcom/android/server/power/batterysaver/BatterySaverController$MyHandler;->this$0:Lcom/android/server/power/batterysaver/BatterySaverController;
 
-    .line 270
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public dispatchMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 284
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -34,7 +31,6 @@
 
     goto :goto_1
 
-    .line 286
     :cond_0
     iget-object p0, p0, Lcom/android/server/power/batterysaver/BatterySaverController$MyHandler;->this$0:Lcom/android/server/power/batterysaver/BatterySaverController;
 
@@ -61,12 +57,10 @@
 
     const/4 v0, 0x1
 
-    .line 274
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 275
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -79,7 +73,6 @@
 
     const/4 v1, 0x0
 
-    .line 279
     invoke-virtual {p0, v0, v1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0

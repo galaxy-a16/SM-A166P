@@ -9,33 +9,28 @@
 
     const-string/jumbo v0, "packageName"
 
-    .line 168
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v0, "id"
 
-    .line 169
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "hasAutoVerifyDomains"
 
-    .line 170
     invoke-interface {p0, v1}, Lcom/android/server/pm/SettingsXml$ReadSection;->getBoolean(Ljava/lang/String;)Z
 
     move-result v4
 
     const-string/jumbo v1, "signature"
 
-    .line 171
     invoke-interface {p0, v1}, Lcom/android/server/pm/SettingsXml$ReadSection;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 172
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -50,28 +45,23 @@
 
     goto :goto_1
 
-    .line 175
     :cond_0
     invoke-static {v0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v3
 
-    .line 177
     new-instance v5, Landroid/util/ArrayMap;
 
     invoke-direct {v5}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 178
     new-instance v6, Landroid/util/SparseArray;
 
     invoke-direct {v6}, Landroid/util/SparseArray;-><init>()V
 
-    .line 180
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
 
-    .line 181
     :goto_0
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext()Z
 
@@ -79,7 +69,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 182
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -104,19 +93,16 @@
 
     goto :goto_0
 
-    .line 184
     :cond_1
     invoke-static {p0, v5}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->readDomainStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArrayMap;)V
 
     goto :goto_0
 
-    .line 187
     :cond_2
     invoke-static {p0, v6}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->readUserStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/SparseArray;)V
 
     goto :goto_0
 
-    .line 192
     :cond_3
     new-instance p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
@@ -138,7 +124,6 @@
 
     const-string/jumbo v0, "userId"
 
-    .line 288
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getInt(Ljava/lang/String;)I
 
     move-result v0
@@ -156,17 +141,14 @@
 
     const/4 v2, 0x0
 
-    .line 293
     invoke-interface {p0, v1, v2}, Lcom/android/server/pm/SettingsXml$ReadSection;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 294
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 296
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
@@ -174,19 +156,16 @@
     :goto_0
     const-string v3, "enabled-hosts"
 
-    .line 297
     invoke-interface {p0, v3}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 298
     invoke-static {p0, v2}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->readEnabledHosts(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArraySet;)V
 
     goto :goto_0
 
-    .line 301
     :cond_1
     new-instance p0, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;
 
@@ -198,7 +177,6 @@
 .method public static readDomainStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArrayMap;)V
     .locals 3
 
-    .line 209
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
@@ -206,7 +184,6 @@
     :goto_0
     const-string v0, "domain"
 
-    .line 210
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext(Ljava/lang/String;)Z
 
     move-result v0
@@ -215,7 +192,6 @@
 
     const-string/jumbo v0, "name"
 
-    .line 211
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -224,12 +200,10 @@
 
     const/4 v2, 0x0
 
-    .line 212
     invoke-interface {p0, v1, v2}, Lcom/android/server/pm/SettingsXml$ReadSection;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 213
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -245,7 +219,6 @@
 .method public static readEnabledHosts(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArraySet;)V
     .locals 2
 
-    .line 306
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
@@ -254,7 +227,6 @@
     :goto_0
     const-string v0, "host"
 
-    .line 307
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext(Ljava/lang/String;)Z
 
     move-result v0
@@ -263,19 +235,16 @@
 
     const-string/jumbo v0, "name"
 
-    .line 308
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 309
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 310
     invoke-virtual {p1, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -287,17 +256,14 @@
 .method public static readFromXml(Lcom/android/modules/utils/TypedXmlPullParser;)Lcom/android/server/pm/verify/domain/DomainVerificationPersistence$ReadResult;
     .locals 4
 
-    .line 131
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 132
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 134
     invoke-static {p0}, Lcom/android/server/pm/SettingsXml;->parser(Lcom/android/modules/utils/TypedXmlPullParser;)Lcom/android/server/pm/SettingsXml$ReadSection;
 
     move-result-object p0
@@ -306,7 +272,6 @@
 
     move-result-object p0
 
-    .line 135
     :goto_0
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext()Z
 
@@ -314,7 +279,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 136
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -339,19 +303,16 @@
 
     goto :goto_0
 
-    .line 141
     :cond_0
     invoke-static {p0, v1}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->readPackageStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArrayMap;)V
 
     goto :goto_0
 
-    .line 138
     :cond_1
     invoke-static {p0, v0}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->readPackageStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArrayMap;)V
 
     goto :goto_0
 
-    .line 146
     :cond_2
     new-instance p0, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence$ReadResult;
 
@@ -363,7 +324,6 @@
 .method public static readPackageStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/ArrayMap;)V
     .locals 2
 
-    .line 151
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
@@ -372,21 +332,18 @@
     :goto_0
     const-string/jumbo v0, "package-state"
 
-    .line 152
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 153
     invoke-static {p0}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->createPkgStateFromXml(Lcom/android/server/pm/SettingsXml$ReadSection;)Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 156
     invoke-virtual {v0}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -402,7 +359,6 @@
 .method public static readUserStates(Lcom/android/server/pm/SettingsXml$ReadSection;Landroid/util/SparseArray;)V
     .locals 2
 
-    .line 198
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$ReadSection;->children()Lcom/android/server/pm/SettingsXml$ChildSection;
 
     move-result-object p0
@@ -411,21 +367,18 @@
     :goto_0
     const-string/jumbo v0, "user-state"
 
-    .line 199
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$ChildSection;->moveToNext(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 200
     invoke-static {p0}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->createUserStateFromXml(Lcom/android/server/pm/SettingsXml$ReadSection;)Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 202
     invoke-virtual {v0}, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;->getUserId()I
 
     move-result v1
@@ -441,7 +394,6 @@
 .method public static writePackageStates(Lcom/android/server/pm/SettingsXml$WriteSection;Ljava/util/Collection;ILjava/util/function/Function;)V
     .locals 1
 
-    .line 119
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -450,7 +402,6 @@
 
     return-void
 
-    .line 123
     :cond_0
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -469,7 +420,6 @@
 
     check-cast v0, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
-    .line 124
     invoke-static {p0, v0, p2, p3}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->writePkgStateToXml(Lcom/android/server/pm/SettingsXml$WriteSection;Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;ILjava/util/function/Function;)V
 
     goto :goto_0
@@ -481,7 +431,6 @@
 .method public static writePkgStateToXml(Lcom/android/server/pm/SettingsXml$WriteSection;Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;ILjava/util/function/Function;)V
     .locals 3
 
-    .line 220
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -492,7 +441,6 @@
 
     goto :goto_0
 
-    .line 222
     :cond_0
     invoke-interface {p3, v0}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -503,7 +451,6 @@
     :goto_0
     if-nez p3, :cond_1
 
-    .line 227
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getBackupSignatureHash()Ljava/lang/String;
 
     move-result-object p3
@@ -511,19 +458,16 @@
     :cond_1
     const-string/jumbo v1, "package-state"
 
-    .line 231
     invoke-interface {p0, v1}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v1
 
     const-string/jumbo v2, "packageName"
 
-    .line 232
     invoke-interface {v1, v2, v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->attribute(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v0
 
-    .line 233
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getId()Ljava/util/UUID;
 
     move-result-object v1
@@ -540,24 +484,20 @@
 
     const-string v1, "hasAutoVerifyDomains"
 
-    .line 235
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->isHasAutoVerifyDomains()Z
 
     move-result v2
 
-    .line 234
     invoke-interface {v0, v1, v2}, Lcom/android/server/pm/SettingsXml$WriteSection;->attribute(Ljava/lang/String;Z)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v0
 
     const-string/jumbo v1, "signature"
 
-    .line 236
     invoke-interface {v0, v1, p3}, Lcom/android/server/pm/SettingsXml$WriteSection;->attribute(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p3
 
-    .line 237
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getStateMap()Landroid/util/ArrayMap;
 
@@ -565,7 +505,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->writeStateMap(Lcom/android/server/pm/SettingsXml$WriteSection;Landroid/util/ArrayMap;)V
 
-    .line 238
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;->getUserStates()Landroid/util/SparseArray;
 
     move-result-object p1
@@ -576,7 +515,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 239
     invoke-interface {p3}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
 
     :cond_2
@@ -587,7 +525,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 230
     :try_start_1
     invoke-interface {p3}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_1
@@ -608,7 +545,6 @@
 .method public static writeStateMap(Lcom/android/server/pm/SettingsXml$WriteSection;Landroid/util/ArrayMap;)V
     .locals 6
 
-    .line 266
     invoke-virtual {p1}, Landroid/util/ArrayMap;->isEmpty()Z
 
     move-result v0
@@ -620,12 +556,10 @@
     :cond_0
     const-string/jumbo v0, "state"
 
-    .line 270
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p0
 
-    .line 271
     :try_start_0
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
@@ -638,14 +572,12 @@
 
     const-string v3, "domain"
 
-    .line 273
     invoke-interface {p0, v3}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v3
 
     const-string/jumbo v4, "name"
 
-    .line 274
     invoke-virtual {p1, v2}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -656,7 +588,6 @@
 
     move-result-object v3
 
-    .line 275
     invoke-virtual {p1, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -671,7 +602,6 @@
 
     move-result-object v3
 
-    .line 276
     invoke-interface {v3}, Lcom/android/server/pm/SettingsXml$WriteSection;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -683,7 +613,6 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 278
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
 
     :cond_2
@@ -694,7 +623,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 270
     :try_start_1
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_1
@@ -715,7 +643,6 @@
 .method public static writeToXml(Lcom/android/modules/utils/TypedXmlSerializer;Lcom/android/server/pm/verify/domain/models/DomainVerificationStateMap;Landroid/util/ArrayMap;Landroid/util/ArrayMap;ILjava/util/function/Function;)V
     .locals 6
 
-    .line 84
     invoke-static {p0}, Lcom/android/server/pm/SettingsXml;->serializer(Lcom/android/modules/utils/TypedXmlSerializer;)Lcom/android/server/pm/SettingsXml$Serializer;
 
     move-result-object p0
@@ -723,20 +650,17 @@
     :try_start_0
     const-string v0, "domain-verifications"
 
-    .line 85
     invoke-virtual {p0, v0}, Lcom/android/server/pm/SettingsXml$Serializer;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_6
 
-    .line 91
     :try_start_1
     new-instance v1, Landroid/util/ArraySet;
 
     invoke-direct {v1}, Landroid/util/ArraySet;-><init>()V
 
-    .line 93
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationStateMap;->size()I
 
     move-result v2
@@ -748,7 +672,6 @@
     :goto_0
     if-ge v4, v2, :cond_0
 
-    .line 95
     invoke-virtual {p1, v4}, Lcom/android/server/pm/verify/domain/models/DomainVerificationStateMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -761,7 +684,6 @@
 
     goto :goto_0
 
-    .line 98
     :cond_0
     invoke-virtual {p2}, Landroid/util/ArrayMap;->size()I
 
@@ -770,7 +692,6 @@
     :goto_1
     if-ge v3, p1, :cond_1
 
-    .line 100
     invoke-virtual {p2, v3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -786,14 +707,12 @@
     :cond_1
     const-string p1, "active"
 
-    .line 103
     invoke-virtual {p0, p1}, Lcom/android/server/pm/SettingsXml$Serializer;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
-    .line 104
     :try_start_2
     invoke-static {p1, v1, p4, p5}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->writePackageStates(Lcom/android/server/pm/SettingsXml$WriteSection;Ljava/util/Collection;ILjava/util/function/Function;)V
     :try_end_2
@@ -801,21 +720,18 @@
 
     if-eqz p1, :cond_2
 
-    .line 105
     :try_start_3
     invoke-interface {p1}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
 
     :cond_2
     const-string/jumbo p1, "restored"
 
-    .line 107
     invoke-virtual {p0, p1}, Lcom/android/server/pm/SettingsXml$Serializer;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    .line 109
     :try_start_4
     invoke-virtual {p3}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
@@ -827,7 +743,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 111
     :try_start_5
     invoke-interface {p1}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_5
@@ -836,13 +751,11 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 112
     :try_start_6
     invoke-interface {v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_6
 
-    .line 113
     :cond_4
     invoke-virtual {p0}, Lcom/android/server/pm/SettingsXml$Serializer;->close()V
 
@@ -853,7 +766,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 107
     :try_start_7
     invoke-interface {p1}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_7
@@ -878,7 +790,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 103
     :try_start_9
     invoke-interface {p1}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_9
@@ -903,7 +814,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 85
     :try_start_b
     invoke-interface {v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_b
@@ -928,7 +838,6 @@
 
     if-eqz p0, :cond_8
 
-    .line 84
     :try_start_d
     invoke-virtual {p0}, Lcom/android/server/pm/SettingsXml$Serializer;->close()V
     :try_end_d
@@ -951,12 +860,10 @@
 
     const-string/jumbo v0, "user-state"
 
-    .line 318
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p0
 
-    .line 319
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;->getUserId()I
 
     move-result v0
@@ -969,23 +876,19 @@
 
     const-string v0, "allowLinkHandling"
 
-    .line 321
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;->isLinkHandlingAllowed()Z
 
     move-result v1
 
-    .line 320
     invoke-interface {p0, v0, v1}, Lcom/android/server/pm/SettingsXml$WriteSection;->attribute(Ljava/lang/String;Z)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p0
 
-    .line 322
     :try_start_0
     invoke-virtual {p1}, Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;->getEnabledHosts()Landroid/util/ArraySet;
 
     move-result-object p1
 
-    .line 323
     invoke-virtual {p1}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result v0
@@ -994,14 +897,12 @@
 
     const-string v0, "enabled-hosts"
 
-    .line 325
     invoke-interface {p0, v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 326
     :try_start_1
     invoke-virtual {p1}, Landroid/util/ArraySet;->size()I
 
@@ -1014,14 +915,12 @@
 
     const-string v3, "host"
 
-    .line 328
     invoke-interface {v0, v3}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object v3
 
     const-string/jumbo v4, "name"
 
-    .line 329
     invoke-virtual {p1, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1032,7 +931,6 @@
 
     move-result-object v3
 
-    .line 330
     invoke-interface {v3}, Lcom/android/server/pm/SettingsXml$WriteSection;->finish()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1044,7 +942,6 @@
     :cond_0
     if-eqz v0, :cond_2
 
-    .line 332
     :try_start_2
     invoke-interface {v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_2
@@ -1057,7 +954,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 324
     :try_start_3
     invoke-interface {v0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_3
@@ -1081,7 +977,6 @@
     :goto_2
     if-eqz p0, :cond_3
 
-    .line 334
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
 
     :cond_3
@@ -1092,7 +987,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 317
     :try_start_5
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_5
@@ -1113,7 +1007,6 @@
 .method public static writeUserStates(Lcom/android/server/pm/SettingsXml$WriteSection;ILandroid/util/SparseArray;)V
     .locals 2
 
-    .line 245
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -1125,7 +1018,6 @@
     :cond_0
     const-string/jumbo v1, "user-states"
 
-    .line 250
     invoke-interface {p0, v1}, Lcom/android/server/pm/SettingsXml$WriteSection;->startSection(Ljava/lang/String;)Lcom/android/server/pm/SettingsXml$WriteSection;
 
     move-result-object p0
@@ -1139,7 +1031,6 @@
     :goto_0
     if-ge p1, v0, :cond_2
 
-    .line 253
     :try_start_0
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -1153,7 +1044,6 @@
 
     goto :goto_0
 
-    .line 256
     :cond_1
     invoke-virtual {p2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1163,7 +1053,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 258
     invoke-static {p0, p1}, Lcom/android/server/pm/verify/domain/DomainVerificationPersistence;->writeUserStateToXml(Lcom/android/server/pm/SettingsXml$WriteSection;Lcom/android/server/pm/verify/domain/models/DomainVerificationInternalUserState;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1171,7 +1060,6 @@
     :cond_2
     if-eqz p0, :cond_3
 
-    .line 261
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
 
     :cond_3
@@ -1182,7 +1070,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 250
     :try_start_1
     invoke-interface {p0}, Lcom/android/server/pm/SettingsXml$WriteSection;->close()V
     :try_end_1

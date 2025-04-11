@@ -11,19 +11,16 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 28
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 29
     invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object v0
 
-    .line 30
     invoke-virtual {v0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
     move-result-object v0
@@ -42,7 +39,6 @@
 
     return v0
 
-    .line 104
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getRole()I
 
@@ -54,7 +50,6 @@
 
     return v0
 
-    .line 108
     :cond_1
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getType()I
 
@@ -93,7 +88,6 @@
 
     return v0
 
-    .line 76
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getRole()I
 
@@ -105,7 +99,6 @@
 
     return v0
 
-    .line 80
     :cond_1
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getType()I
 
@@ -154,7 +147,6 @@
 .method public static mapToMediaRouteType(Landroid/media/AudioDeviceAttributes;)I
     .locals 2
 
-    .line 39
     invoke-virtual {p0}, Landroid/media/AudioDeviceAttributes;->getType()I
 
     move-result p0

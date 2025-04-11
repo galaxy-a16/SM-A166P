@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;)V
     .locals 0
 
-    .line 363
     iput-object p1, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,14 +23,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 366
     iget-object p1, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {p1}, Lcom/android/server/content/SyncManager;->-$$Nest$fgetmDataConnectionIsConnected(Lcom/android/server/content/SyncManager;)Z
 
     move-result p1
 
-    .line 370
     iget-object p2, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {p2}, Lcom/android/server/content/SyncManager;->-$$Nest$mreadDataConnectionState(Lcom/android/server/content/SyncManager;)Z
@@ -40,7 +37,6 @@
 
     invoke-static {p2, v0}, Lcom/android/server/content/SyncManager;->-$$Nest$fputmDataConnectionIsConnected(Lcom/android/server/content/SyncManager;Z)V
 
-    .line 371
     iget-object p2, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {p2}, Lcom/android/server/content/SyncManager;->-$$Nest$fgetmDataConnectionIsConnected(Lcom/android/server/content/SyncManager;)Z
@@ -55,7 +51,6 @@
 
     const-string p2, "SyncManager"
 
-    .line 373
     invoke-static {p2, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
@@ -64,10 +59,8 @@
 
     const-string p1, "Reconnection detected: clearing all backoffs"
 
-    .line 374
     invoke-static {p2, p1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_0
     iget-object p0, p0, Lcom/android/server/content/SyncManager$2;->this$0:Lcom/android/server/content/SyncManager;
 

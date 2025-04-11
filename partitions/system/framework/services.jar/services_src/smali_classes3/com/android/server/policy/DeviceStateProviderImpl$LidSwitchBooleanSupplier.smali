@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/policy/DeviceStateProviderImpl;Z)V
     .locals 0
 
-    .line 572
     iput-object p1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 573
     iput-boolean p2, p0, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;->mExpectedOpen:Z
 
     return-void
@@ -32,7 +30,6 @@
 .method public getAsBoolean()Z
     .locals 2
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     invoke-static {v0}, Lcom/android/server/policy/DeviceStateProviderImpl;->-$$Nest$fgetmLock(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/lang/Object;
@@ -41,7 +38,6 @@
 
     monitor-enter v0
 
-    .line 579
     :try_start_0
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
@@ -51,7 +47,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 589
     iget-object v1, p0, Lcom/android/server/policy/DeviceStateProviderImpl$LidSwitchBooleanSupplier;->this$0:Lcom/android/server/policy/DeviceStateProviderImpl;
 
     invoke-static {v1}, Lcom/android/server/policy/DeviceStateProviderImpl;->-$$Nest$fgetmIsLidOpen(Lcom/android/server/policy/DeviceStateProviderImpl;)Ljava/lang/Boolean;
@@ -78,7 +73,6 @@
 
     return p0
 
-    .line 586
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -91,7 +85,6 @@
     :catchall_0
     move-exception p0
 
-    .line 590
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

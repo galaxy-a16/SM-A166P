@@ -13,7 +13,6 @@
 
     const-string v0, "Compressed data is corrupt"
 
-    .line 25
     invoke-direct {p0, v0}, Lorg/tukaani/xz/XZIOException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 35
     invoke-direct {p0, p1}, Lorg/tukaani/xz/XZIOException;-><init>(Ljava/lang/String;)V
 
     return-void

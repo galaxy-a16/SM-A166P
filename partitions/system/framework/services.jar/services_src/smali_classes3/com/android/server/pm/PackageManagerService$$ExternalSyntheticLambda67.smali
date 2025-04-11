@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda67;->f$0:Landroid/content/Context;
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService$$ExternalSyntheticLambda67;->f$0:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/pm/PackageManagerService;->$r8$lambda$SlhzEF6Q-DEnjDRDFQHRqgkfYFE(Landroid/content/Context;)Landroid/app/role/RoleManager;

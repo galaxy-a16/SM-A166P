@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -44,7 +43,6 @@
 
     new-array v0, v0, [Lcom/android/server/tare/Modifier;
 
-    .line 200
     sput-object v0, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     return-void
@@ -53,13 +51,10 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 3
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
     iput-object p1, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
-    .line 204
     invoke-virtual {p0}, Lcom/android/server/tare/EconomicPolicy;->getCostModifiers()[I
 
     move-result-object p0
@@ -73,7 +68,6 @@
 
     aget v2, p0, v1
 
-    .line 205
     invoke-static {v2, p1}, Lcom/android/server/tare/EconomicPolicy;->initModifier(ILcom/android/server/tare/InternalResourceService;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -211,7 +205,6 @@
 
     return-object p0
 
-    .line 422
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -265,7 +258,6 @@
 .method public static dumpAction(Landroid/util/IndentingPrintWriter;Lcom/android/server/tare/EconomicPolicy$Action;)V
     .locals 2
 
-    .line 517
     iget v0, p1, Lcom/android/server/tare/EconomicPolicy$Action;->id:I
 
     invoke-static {v0}, Lcom/android/server/tare/EconomicPolicy;->actionToString(I)Ljava/lang/String;
@@ -276,15 +268,12 @@
 
     const-string v0, ": "
 
-    .line 518
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "ctp="
 
-    .line 519
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 520
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Action;->costToProduce:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -295,10 +284,8 @@
 
     const-string v0, ", basePrice="
 
-    .line 521
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 522
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Action;->basePrice:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -307,7 +294,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 523
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->println()V
 
     return-void
@@ -325,23 +311,18 @@
 
     const-string v1, "Modifier "
 
-    .line 501
     invoke-virtual {p0, v1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 502
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->println(I)V
 
-    .line 503
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 505
     sget-object v1, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_0
 
-    .line 507
     invoke-virtual {v1, p0}, Lcom/android/server/tare/Modifier;->dump(Landroid/util/IndentingPrintWriter;)V
 
     goto :goto_1
@@ -349,10 +330,8 @@
     :cond_0
     const-string v1, "NOT ACTIVE"
 
-    .line 509
     invoke-virtual {p0, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 512
     :goto_1
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
@@ -367,7 +346,6 @@
 .method public static dumpReward(Landroid/util/IndentingPrintWriter;Lcom/android/server/tare/EconomicPolicy$Reward;)V
     .locals 2
 
-    .line 527
     iget v0, p1, Lcom/android/server/tare/EconomicPolicy$Reward;->id:I
 
     invoke-static {v0}, Lcom/android/server/tare/EconomicPolicy;->rewardToString(I)Ljava/lang/String;
@@ -378,15 +356,12 @@
 
     const-string v0, ": "
 
-    .line 528
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     const-string v0, "instant="
 
-    .line 529
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 530
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Reward;->instantReward:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -397,10 +372,8 @@
 
     const-string v0, ", ongoing/sec="
 
-    .line 531
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 532
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Reward;->ongoingRewardPerSecond:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -411,10 +384,8 @@
 
     const-string v0, ", maxDaily="
 
-    .line 533
     invoke-virtual {p0, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 534
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Reward;->maxDailyReward:J
 
     invoke-static {v0, v1}, Lcom/android/server/tare/TareUtils;->cakeToString(J)Ljava/lang/String;
@@ -423,7 +394,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 535
     invoke-virtual {p0}, Landroid/util/IndentingPrintWriter;->println()V
 
     return-void
@@ -446,7 +416,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 365
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -467,7 +436,6 @@
 
     return-object p0
 
-    .line 356
     :cond_0
     invoke-static {p0}, Lcom/android/server/tare/EconomicPolicy;->actionToString(I)Ljava/lang/String;
 
@@ -475,7 +443,6 @@
 
     return-object p0
 
-    .line 359
     :cond_1
     invoke-static {p0}, Lcom/android/server/tare/EconomicPolicy;->regulationToString(I)Ljava/lang/String;
 
@@ -483,7 +450,6 @@
 
     return-object p0
 
-    .line 362
     :cond_2
     invoke-static {p0}, Lcom/android/server/tare/EconomicPolicy;->rewardToString(I)Ljava/lang/String;
 
@@ -495,7 +461,6 @@
 .method public static getEventType(I)I
     .locals 1
 
-    .line 0
     const/high16 v0, -0x40000000    # -2.0f
 
     and-int/2addr p0, v0
@@ -508,21 +473,18 @@
 
     if-ltz p0, :cond_1
 
-    .line 332
     sget-object v0, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     array-length v1, v0
 
     if-ge p0, v1, :cond_1
 
-    .line 335
     aget-object v0, v0, p0
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 337
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -548,7 +510,6 @@
 
     throw v0
 
-    .line 333
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -578,14 +539,12 @@
 
     if-ltz p0, :cond_5
 
-    .line 305
     sget-object v1, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     array-length v2, v1
 
     if-ge p0, v2, :cond_5
 
-    .line 308
     aget-object v2, v1, p0
 
     if-nez v2, :cond_4
@@ -604,14 +563,12 @@
 
     if-ne p0, v2, :cond_0
 
-    .line 321
     new-instance v0, Lcom/android/server/tare/ProcessStateModifier;
 
     invoke-direct {v0, p1}, Lcom/android/server/tare/ProcessStateModifier;-><init>(Lcom/android/server/tare/InternalResourceService;)V
 
     goto :goto_0
 
-    .line 324
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -631,7 +588,6 @@
 
     throw p1
 
-    .line 318
     :cond_1
     new-instance v0, Lcom/android/server/tare/PowerSaveModeModifier;
 
@@ -639,7 +595,6 @@
 
     goto :goto_0
 
-    .line 315
     :cond_2
     new-instance v0, Lcom/android/server/tare/DeviceIdleModifier;
 
@@ -647,20 +602,17 @@
 
     goto :goto_0
 
-    .line 312
     :cond_3
     new-instance v0, Lcom/android/server/tare/ChargingModifier;
 
     invoke-direct {v0, p1}, Lcom/android/server/tare/ChargingModifier;-><init>(Lcom/android/server/tare/InternalResourceService;)V
 
-    .line 326
     :goto_0
     aput-object v0, v1, p0
 
     :cond_4
     return-void
 
-    .line 306
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -684,7 +636,6 @@
 .method public static isReward(I)Z
     .locals 1
 
-    .line 349
     invoke-static {p0}, Lcom/android/server/tare/EconomicPolicy;->getEventType(I)I
 
     move-result p0
@@ -709,7 +660,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 445
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -796,7 +746,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 464
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -882,7 +831,6 @@
 
     move-wide v4, p4
 
-    .line 469
     invoke-virtual/range {v0 .. v7}, Lcom/android/server/tare/EconomicPolicy;->getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;JJ)J
 
     move-result-wide p0
@@ -893,7 +841,6 @@
 .method public getConstantAsCake(Landroid/util/KeyValueListParser;Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;JJ)J
     .locals 1
 
-    .line 477
     invoke-virtual {p1}, Landroid/util/KeyValueListParser;->size()I
 
     move-result p0
@@ -902,7 +849,6 @@
 
     if-lez p0, :cond_0
 
-    .line 482
     invoke-virtual {p1, p3, v0}, Landroid/util/KeyValueListParser;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -911,7 +857,6 @@
 
     move-result-wide p0
 
-    .line 481
     invoke-static {p6, p7, p0, p1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -921,7 +866,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 486
     invoke-virtual {p2, p3, v0}, Landroid/provider/DeviceConfig$Properties;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -930,14 +874,12 @@
 
     move-result-wide p0
 
-    .line 485
     invoke-static {p6, p7, p0, p1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
 
     return-wide p0
 
-    .line 488
     :cond_1
     invoke-static {p6, p7, p4, p5}, Ljava/lang/Math;->max(JJ)J
 
@@ -952,14 +894,12 @@
 .method public final getCostOfAction(IILjava/lang/String;)Lcom/android/server/tare/EconomicPolicy$Cost;
     .locals 12
 
-    .line 277
     invoke-virtual {p0, p1}, Lcom/android/server/tare/EconomicPolicy;->getAction(I)Lcom/android/server/tare/EconomicPolicy$Action;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 278
     iget-object v0, p0, Lcom/android/server/tare/EconomicPolicy;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {v0, p2, p3}, Lcom/android/server/tare/InternalResourceService;->isVip(ILjava/lang/String;)Z
@@ -970,19 +910,15 @@
 
     goto :goto_2
 
-    .line 281
     :cond_0
     iget-wide v0, p1, Lcom/android/server/tare/EconomicPolicy$Action;->costToProduce:J
 
-    .line 282
     iget-wide v2, p1, Lcom/android/server/tare/EconomicPolicy$Action;->basePrice:J
 
-    .line 283
     invoke-virtual {p0}, Lcom/android/server/tare/EconomicPolicy;->getCostModifiers()[I
 
     move-result-object p0
 
-    .line 285
     array-length p1, p0
 
     const/4 v4, 0x0
@@ -1004,18 +940,15 @@
 
     goto :goto_1
 
-    .line 289
     :cond_1
     invoke-static {v5}, Lcom/android/server/tare/EconomicPolicy;->getModifier(I)Lcom/android/server/tare/Modifier;
 
     move-result-object v3
 
-    .line 290
     invoke-virtual {v3, v0, v1}, Lcom/android/server/tare/Modifier;->getModifiedCostToProduce(J)J
 
     move-result-wide v0
 
-    .line 291
     invoke-virtual {v3, v10, v11}, Lcom/android/server/tare/Modifier;->getModifiedPrice(J)J
 
     move-result-wide v5
@@ -1030,7 +963,6 @@
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 297
     invoke-static {v3}, Lcom/android/server/tare/EconomicPolicy;->getModifier(I)Lcom/android/server/tare/Modifier;
 
     move-result-object p0
@@ -1045,12 +977,10 @@
 
     move-wide v8, v0
 
-    .line 298
     invoke-virtual/range {v5 .. v11}, Lcom/android/server/tare/ProcessStateModifier;->getModifiedPrice(ILjava/lang/String;JJ)J
 
     move-result-wide v10
 
-    .line 300
     :cond_3
     new-instance p0, Lcom/android/server/tare/EconomicPolicy$Cost;
 
@@ -1058,7 +988,6 @@
 
     return-object p0
 
-    .line 279
     :cond_4
     :goto_2
     new-instance p0, Lcom/android/server/tare/EconomicPolicy$Cost;
@@ -1098,14 +1027,12 @@
 
     if-ge p0, p1, :cond_1
 
-    .line 212
     sget-object p1, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     aget-object p1, p1, p0
 
     if-eqz p1, :cond_0
 
-    .line 214
     invoke-virtual {p1}, Lcom/android/server/tare/Modifier;->setup()V
 
     :cond_0
@@ -1127,14 +1054,12 @@
 
     if-ge p0, v0, :cond_1
 
-    .line 222
     sget-object v0, Lcom/android/server/tare/EconomicPolicy;->COST_MODIFIER_BY_INDEX:[Lcom/android/server/tare/Modifier;
 
     aget-object v0, v0, p0
 
     if-eqz v0, :cond_0
 
-    .line 224
     invoke-virtual {v0}, Lcom/android/server/tare/Modifier;->tearDown()V
 
     :cond_0

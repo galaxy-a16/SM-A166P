@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/RadioEventLogger;->mTag:Ljava/lang/String;
 
-    .line 30
     new-instance p1, Landroid/util/LocalLog;
 
     invoke-direct {p1, p2}, Landroid/util/LocalLog;-><init>(I)V
@@ -34,7 +31,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 42
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioEventLogger;->mEventLogger:Landroid/util/LocalLog;
 
     invoke-virtual {p0, p1}, Landroid/util/LocalLog;->dump(Ljava/io/PrintWriter;)V
@@ -45,17 +41,14 @@
 .method public varargs logRadioEvent(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 34
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 35
     iget-object p2, p0, Lcom/android/server/broadcastradio/hal2/RadioEventLogger;->mEventLogger:Landroid/util/LocalLog;
 
     invoke-virtual {p2, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 36
     iget-object p2, p0, Lcom/android/server/broadcastradio/hal2/RadioEventLogger;->mTag:Ljava/lang/String;
 
     const/4 v0, 0x3
@@ -66,7 +59,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 37
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioEventLogger;->mTag:Ljava/lang/String;
 
     invoke-static {p0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I

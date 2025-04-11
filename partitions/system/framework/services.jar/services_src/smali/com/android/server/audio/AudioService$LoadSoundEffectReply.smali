@@ -14,12 +14,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 6735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 6742
     iput v0, p0, Lcom/android/server/audio/AudioService$LoadSoundEffectReply;->mStatus:I
 
     return-void
@@ -28,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/AudioService$LoadSoundEffectReply-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/audio/AudioService$LoadSoundEffectReply;-><init>()V
 
     return-void
@@ -50,17 +47,14 @@
     :cond_0
     const/4 p1, -0x1
 
-    .line 6746
     :goto_0
     :try_start_0
     iput p1, p0, Lcom/android/server/audio/AudioService$LoadSoundEffectReply;->mStatus:I
 
-    .line 6747
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6748
     monitor-exit p0
 
     return-void
@@ -78,7 +72,6 @@
 
     monitor-enter p0
 
-    .line 6751
     :goto_0
     :try_start_0
     iget v0, p0, Lcom/android/server/audio/AudioService$LoadSoundEffectReply;->mStatus:I
@@ -95,7 +88,6 @@
 
     const-wide/16 v0, 0x1388
 
-    .line 6753
     :try_start_1
     invoke-virtual {p0, v0, v1}, Ljava/lang/Object;->wait(J)V
     :try_end_1
@@ -110,7 +102,6 @@
 
     const-string v0, "Interrupted while waiting sound pool loaded."
 
-    .line 6755
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -128,7 +119,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 6758
     :goto_2
     monitor-exit p0
 

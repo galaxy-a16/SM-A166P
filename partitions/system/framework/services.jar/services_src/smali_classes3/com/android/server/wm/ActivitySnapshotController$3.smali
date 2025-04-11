@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivitySnapshotController;Lcom/android/server/wm/BaseAppSnapshotPersister$PersistInfoProvider;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 490
     iput-object p1, p0, Lcom/android/server/wm/ActivitySnapshotController$3;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     iput-object p3, p0, Lcom/android/server/wm/ActivitySnapshotController$3;->val$files:Ljava/util/ArrayList;
@@ -28,7 +27,6 @@
 .method public write()V
     .locals 5
 
-    .line 493
     iget-object v0, p0, Lcom/android/server/wm/ActivitySnapshotController$3;->val$files:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -40,7 +38,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 494
     iget-object v1, p0, Lcom/android/server/wm/ActivitySnapshotController$3;->val$files:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -49,7 +46,6 @@
 
     check-cast v1, Lcom/android/server/wm/ActivitySnapshotController$UserSavedFile;
 
-    .line 495
     iget-object v2, p0, Lcom/android/server/wm/ActivitySnapshotController$3;->this$0:Lcom/android/server/wm/ActivitySnapshotController;
 
     invoke-static {v2}, Lcom/android/server/wm/ActivitySnapshotController;->-$$Nest$fgetmSnapshotPersistQueue(Lcom/android/server/wm/ActivitySnapshotController;)Lcom/android/server/wm/SnapshotPersistQueue;

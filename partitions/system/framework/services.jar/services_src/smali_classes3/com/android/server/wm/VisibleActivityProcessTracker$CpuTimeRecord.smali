@@ -22,12 +22,10 @@
 .method public constructor <init>(Lcom/android/server/wm/VisibleActivityProcessTracker;Lcom/android/server/wm/WindowProcessController;)V
     .locals 0
 
-    .line 124
     iput-object p1, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->this$0:Lcom/android/server/wm/VisibleActivityProcessTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     iput-object p2, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mProc:Lcom/android/server/wm/WindowProcessController;
 
     return-void
@@ -38,7 +36,6 @@
 .method public run()V
     .locals 4
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mProc:Lcom/android/server/wm/WindowProcessController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getPid()I
@@ -49,7 +46,6 @@
 
     return-void
 
-    .line 134
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mHasStartCpuTime:Z
 
@@ -57,10 +53,8 @@
 
     const/4 v0, 0x1
 
-    .line 135
     iput-boolean v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mHasStartCpuTime:Z
 
-    .line 136
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mProc:Lcom/android/server/wm/WindowProcessController;
 
     invoke-virtual {v0}, Lcom/android/server/wm/WindowProcessController;->getCpuTime()J
@@ -71,7 +65,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->mProc:Lcom/android/server/wm/WindowProcessController;
 
@@ -89,7 +82,6 @@
 
     if-lez v2, :cond_2
 
-    .line 140
     iget-object v2, p0, Lcom/android/server/wm/VisibleActivityProcessTracker$CpuTimeRecord;->this$0:Lcom/android/server/wm/VisibleActivityProcessTracker;
 
     iget-object v2, v2, Lcom/android/server/wm/VisibleActivityProcessTracker;->mAtms:Lcom/android/server/wm/ActivityTaskManagerService;

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/audio/SoundEffectsHelper;)V
     .locals 0
 
-    .line 530
     iput-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/audio/SoundEffectsHelper;Lcom/android/server/audio/SoundEffectsHelper$SfxHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;-><init>(Lcom/android/server/audio/SoundEffectsHelper;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 533
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_3
@@ -52,7 +49,6 @@
 
     goto :goto_0
 
-    .line 552
     :cond_0
     iget-object p1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
@@ -62,7 +58,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 553
     iget-object p0, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     invoke-static {p0}, Lcom/android/server/audio/SoundEffectsHelper;->-$$Nest$fgetmSoundPoolLoader(Lcom/android/server/audio/SoundEffectsHelper;)Lcom/android/server/audio/SoundEffectsHelper$SoundPoolLoader;
@@ -73,13 +68,11 @@
 
     goto :goto_0
 
-    .line 541
     :cond_1
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    .line 542
     iget-object v1, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
     new-instance v2, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler$1;
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 538
     :cond_2
     iget-object p0, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 
@@ -98,7 +90,6 @@
 
     goto :goto_0
 
-    .line 535
     :cond_3
     iget-object p0, p0, Lcom/android/server/audio/SoundEffectsHelper$SfxHandler;->this$0:Lcom/android/server/audio/SoundEffectsHelper;
 

@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 81
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const/16 v1, 0x71
 
-    .line 82
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -35,7 +33,6 @@
 
     const/16 v1, 0x72
 
-    .line 83
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -50,7 +47,6 @@
 
     const/16 v1, 0x39
 
-    .line 84
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -65,7 +61,6 @@
 
     const/16 v1, 0x3a
 
-    .line 85
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -80,7 +75,6 @@
 
     const/16 v1, 0x3b
 
-    .line 86
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -95,7 +89,6 @@
 
     const/16 v1, 0x3c
 
-    .line 87
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -110,7 +103,6 @@
 
     const/16 v1, 0x75
 
-    .line 88
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -125,7 +117,6 @@
 
     const/16 v1, 0x76
 
-    .line 89
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -138,21 +129,18 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/input/InputShellCommand;->MODIFIER:Ljava/util/Map;
 
-    .line 97
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const/16 v1, 0x101
 
-    .line 98
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -163,7 +151,6 @@
 
     const/16 v1, 0x201
 
-    .line 99
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -174,7 +161,6 @@
 
     const/16 v1, 0x401
 
-    .line 100
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -185,7 +171,6 @@
 
     const/16 v1, 0x1002
 
-    .line 101
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -196,7 +181,6 @@
 
     const/16 v1, 0x2002
 
-    .line 102
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -207,7 +191,6 @@
 
     const/16 v1, 0x4002
 
-    .line 103
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -218,7 +201,6 @@
 
     const v1, 0x10004
 
-    .line 104
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -229,7 +211,6 @@
 
     const v1, 0x100008
 
-    .line 105
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -240,7 +221,6 @@
 
     const/high16 v1, 0x200000
 
-    .line 106
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -251,7 +231,6 @@
 
     const v1, 0x1000010
 
-    .line 107
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -260,7 +239,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -273,7 +251,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 63
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
     return-void
@@ -284,12 +261,10 @@
 .method public final getAction()I
     .locals 7
 
-    .line 455
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 456
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0
@@ -379,7 +354,6 @@
     :goto_0
     packed-switch v6, :pswitch_data_0
 
-    .line 466
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -434,14 +408,12 @@
 .method public final getDisplayId()I
     .locals 3
 
-    .line 129
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "INVALID_DISPLAY"
 
-    .line 130
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -455,7 +427,6 @@
     :cond_0
     const-string v0, "DEFAULT_DISPLAY"
 
-    .line 132
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -466,7 +437,6 @@
 
     return v2
 
-    .line 136
     :cond_1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -477,7 +447,6 @@
 
     return v1
 
-    .line 140
     :cond_2
     invoke-static {p0, v2}, Ljava/lang/Math;->max(II)I
 
@@ -487,7 +456,6 @@
 
     return p0
 
-    .line 142
     :catch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -501,12 +469,10 @@
 .method public final getInputDeviceId(I)I
     .locals 5
 
-    .line 118
     invoke-static {}, Landroid/view/InputDevice;->getDeviceIds()[I
 
     move-result-object p0
 
-    .line 119
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -518,12 +484,10 @@
 
     aget v3, p0, v2
 
-    .line 120
     invoke-static {v3}, Landroid/view/InputDevice;->getDevice(I)Landroid/view/InputDevice;
 
     move-result-object v4
 
-    .line 121
     invoke-virtual {v4, p1}, Landroid/view/InputDevice;->supportsSource(I)Z
 
     move-result v4
@@ -544,7 +508,6 @@
 .method public final getSource(II)I
     .locals 0
 
-    .line 0
     if-nez p1, :cond_0
 
     move p1, p2
@@ -556,7 +519,6 @@
 .method public final getToolType(I)I
     .locals 0
 
-    .line 0
     sparse-switch p1, :sswitch_data_0
 
     const/4 p0, 0x0
@@ -596,7 +558,6 @@
 .method public final injectKeyEvent(Landroid/view/KeyEvent;)V
     .locals 1
 
-    .line 113
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object p0
@@ -611,7 +572,6 @@
 .method public final injectKeyEventAsync(Landroid/view/KeyEvent;)V
     .locals 1
 
-    .line 534
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object p0
@@ -626,7 +586,6 @@
 .method public final injectMotionEvent(IIJJFFFI)V
     .locals 18
 
-    .line 165
     new-instance v0, Landroid/view/MotionEvent$PointerProperties;
 
     invoke-direct {v0}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
@@ -637,19 +596,16 @@
 
     const/4 v0, 0x0
 
-    .line 166
     aget-object v1, v7, v0
 
     iput v0, v1, Landroid/view/MotionEvent$PointerProperties;->id:I
 
-    .line 167
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/input/InputShellCommand;->getToolType(I)I
 
     move-result v2
 
     iput v2, v1, Landroid/view/MotionEvent$PointerProperties;->toolType:I
 
-    .line 168
     new-instance v1, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v1}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
@@ -658,7 +614,6 @@
 
     move-result-object v8
 
-    .line 169
     aget-object v1, v8, v0
 
     move/from16 v2, p7
@@ -667,17 +622,14 @@
 
     move/from16 v2, p8
 
-    .line 170
     iput v2, v1, Landroid/view/MotionEvent$PointerCoords;->y:F
 
     move/from16 v2, p9
 
-    .line 171
     iput v2, v1, Landroid/view/MotionEvent$PointerCoords;->pressure:F
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 172
     iput v2, v1, Landroid/view/MotionEvent$PointerCoords;->size:F
 
     const/4 v1, -0x1
@@ -708,7 +660,6 @@
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    .line 180
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/input/InputShellCommand;->getInputDeviceId(I)I
 
     move-result v13
@@ -725,12 +676,10 @@
 
     move/from16 v15, p1
 
-    .line 178
     invoke-static/range {v1 .. v17}, Landroid/view/MotionEvent;->obtain(JJII[Landroid/view/MotionEvent$PointerProperties;[Landroid/view/MotionEvent$PointerCoords;IIFFIIIII)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 182
     invoke-static {}, Landroid/hardware/input/InputManagerGlobal;->getInstance()Landroid/hardware/input/InputManagerGlobal;
 
     move-result-object v1
@@ -745,7 +694,6 @@
 .method public final lerp(FFF)F
     .locals 0
 
-    .line 0
     sub-float/2addr p2, p1
 
     mul-float/2addr p2, p3
@@ -758,7 +706,6 @@
 .method public final onCommand(Ljava/lang/String;)I
     .locals 5
 
-    .line 218
     sget-object v0, Lcom/android/server/input/InputShellCommand;->SOURCES:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -769,7 +716,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 219
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -780,7 +726,6 @@
 
     move-result p1
 
-    .line 220
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -799,19 +744,16 @@
     :goto_0
     const-string v1, "-d"
 
-    .line 225
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 226
     invoke-virtual {p0}, Lcom/android/server/input/InputShellCommand;->getDisplayId()I
 
     move-result p1
 
-    .line 227
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -831,14 +773,12 @@
     :try_start_0
     const-string/jumbo v3, "text"
 
-    .line 231
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 232
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runText(II)V
 
     goto :goto_2
@@ -846,14 +786,12 @@
     :cond_2
     const-string v3, "keyevent"
 
-    .line 233
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 234
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runKeyEvent(II)V
 
     goto :goto_2
@@ -861,14 +799,12 @@
     :cond_3
     const-string/jumbo v3, "tap"
 
-    .line 235
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 236
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runTap(II)V
 
     goto :goto_2
@@ -876,14 +812,12 @@
     :cond_4
     const-string/jumbo v3, "swipe"
 
-    .line 237
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 238
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runSwipe(II)V
 
     goto :goto_2
@@ -891,14 +825,12 @@
     :cond_5
     const-string v3, "draganddrop"
 
-    .line 239
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 240
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runDragAndDrop(II)V
 
     goto :goto_2
@@ -906,14 +838,12 @@
     :cond_6
     const-string/jumbo v3, "press"
 
-    .line 241
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    .line 242
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runPress(II)V
 
     goto :goto_2
@@ -921,14 +851,12 @@
     :cond_7
     const-string/jumbo v3, "roll"
 
-    .line 243
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    .line 244
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runRoll(II)V
 
     goto :goto_2
@@ -936,14 +864,12 @@
     :cond_8
     const-string/jumbo v3, "motionevent"
 
-    .line 245
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    .line 246
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runMotionEvent(II)V
 
     goto :goto_2
@@ -951,19 +877,16 @@
     :cond_9
     const-string v3, "keycombination"
 
-    .line 247
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_a
 
-    .line 248
     invoke-virtual {p0, v0, v1}, Lcom/android/server/input/InputShellCommand;->runKeyCombination(II)V
 
     goto :goto_2
 
-    .line 250
     :cond_a
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
     :try_end_0
@@ -972,7 +895,6 @@
     :goto_2
     return v2
 
-    .line 253
     :catch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -998,7 +920,6 @@
 .method public final onHelp()V
     .locals 4
 
-    .line 260
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -1006,18 +927,14 @@
     :try_start_0
     const-string v0, "Usage: input [<source>] [-d DISPLAY_ID] <command> [<arg>...]"
 
-    .line 261
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 262
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "The sources are: "
 
-    .line 263
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 264
     sget-object v0, Lcom/android/server/input/InputShellCommand;->SOURCES:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -1041,7 +958,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 265
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1060,7 +976,6 @@
 
     goto :goto_0
 
-    .line 267
     :cond_0
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
@@ -1072,7 +987,6 @@
 
     const/4 v2, -0x1
 
-    .line 270
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1089,65 +1003,52 @@
 
     aput-object v2, v1, v3
 
-    .line 268
     invoke-virtual {p0, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 271
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "The commands and default sources are:"
 
-    .line 272
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      text <string> (Default: touchscreen)"
 
-    .line 273
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      keyevent [--longpress|--doubletap] <key code number or name> ... (Default: keyboard)"
 
-    .line 274
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      tap <x> <y> (Default: touchscreen)"
 
-    .line 276
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      swipe <x1> <y1> <x2> <y2> [duration(ms)] (Default: touchscreen)"
 
-    .line 277
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      draganddrop <x1> <y1> <x2> <y2> [duration(ms)] (Default: touchscreen)"
 
-    .line 279
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      press (Default: trackball)"
 
-    .line 281
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      roll <dx> <dy> (Default: trackball)"
 
-    .line 282
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      motionevent <DOWN|UP|MOVE|CANCEL> <x> <y> (Default: touchscreen)"
 
-    .line 283
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "      keycombination [-t duration(ms)] <key code 1> <key code 2> ... (Default: keyboard, the key order is important here.)"
 
-    .line 284
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 286
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
 
     return-void
@@ -1157,7 +1058,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 260
     :try_start_1
     invoke-virtual {p0}, Ljava/io/PrintWriter;->close()V
     :try_end_1
@@ -1180,14 +1080,12 @@
 
     const/16 v0, 0x1002
 
-    .line 431
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
     const/4 v0, 0x1
 
-    .line 432
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/input/InputShellCommand;->sendSwipe(IIZ)V
 
     return-void
@@ -1196,33 +1094,28 @@
 .method public final runKeyCombination(II)V
     .locals 7
 
-    .line 505
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "-t"
 
-    .line 509
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 510
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 511
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
     int-to-long v0, v0
 
-    .line 512
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v2
@@ -1238,7 +1131,6 @@
 
     move-wide v5, v1
 
-    .line 515
     :goto_0
     new-instance v3, Landroid/util/IntArray;
 
@@ -1247,24 +1139,20 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 517
     invoke-static {v0}, Landroid/view/KeyEvent;->keyCodeFromString(Ljava/lang/String;)I
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 521
     invoke-virtual {v3, v1}, Landroid/util/IntArray;->add(I)V
 
-    .line 522
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 519
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1286,7 +1174,6 @@
 
     throw p0
 
-    .line 526
     :cond_2
     invoke-virtual {v3}, Landroid/util/IntArray;->size()I
 
@@ -1302,12 +1189,10 @@
 
     move v4, p2
 
-    .line 530
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/input/InputShellCommand;->sendKeyCombination(ILandroid/util/IntArray;IJ)V
 
     return-void
 
-    .line 527
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1321,21 +1206,18 @@
 .method public final runKeyEvent(II)V
     .locals 3
 
-    .line 330
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "--longpress"
 
-    .line 331
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 333
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1345,39 +1227,32 @@
     :cond_0
     const-string v2, "--doubletap"
 
-    .line 335
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 337
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 338
     invoke-static {v0}, Landroid/view/KeyEvent;->keyCodeFromString(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 339
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/input/InputShellCommand;->sendKeyDoubleTap(III)V
 
     return-void
 
-    .line 345
     :cond_1
     :goto_0
     invoke-static {v0}, Landroid/view/KeyEvent;->keyCodeFromString(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 346
     invoke-virtual {p0, p1, v0, v1, p2}, Lcom/android/server/input/InputShellCommand;->sendKeyEvent(IIZI)V
 
-    .line 347
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -1392,12 +1267,10 @@
 
     const/16 v0, 0x1002
 
-    .line 471
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result v2
 
-    .line 472
     invoke-virtual {p0}, Lcom/android/server/input/InputShellCommand;->getAction()I
 
     move-result v3
@@ -1414,13 +1287,11 @@
 
     goto :goto_0
 
-    .line 481
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 482
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
@@ -1429,12 +1300,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 484
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p1
 
-    .line 485
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v0
@@ -1450,7 +1319,6 @@
 
     goto :goto_2
 
-    .line 477
     :cond_2
     :goto_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
@@ -1461,7 +1329,6 @@
 
     move-result p1
 
-    .line 478
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1480,7 +1347,6 @@
 
     move v6, p2
 
-    .line 489
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/input/InputShellCommand;->sendMotionEvent(IIFFI)V
 
     return-void
@@ -1491,14 +1357,12 @@
 
     const v0, 0x10004
 
-    .line 389
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
     const/4 v0, 0x0
 
-    .line 390
     invoke-virtual {p0, p1, v0, v0, p2}, Lcom/android/server/input/InputShellCommand;->sendTap(IFFI)V
 
     return-void
@@ -1509,12 +1373,10 @@
 
     const v0, 0x10004
 
-    .line 436
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
-    .line 437
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1523,7 +1385,6 @@
 
     move-result v0
 
-    .line 438
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -1532,7 +1393,6 @@
 
     move-result v1
 
-    .line 437
     invoke-virtual {p0, p1, v0, v1, p2}, Lcom/android/server/input/InputShellCommand;->sendMove(IFFI)V
 
     return-void
@@ -1543,14 +1403,12 @@
 
     const/16 v0, 0x1002
 
-    .line 394
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
     const/4 v0, 0x0
 
-    .line 395
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/input/InputShellCommand;->sendSwipe(IIZ)V
 
     return-void
@@ -1561,12 +1419,10 @@
 
     const/16 v0, 0x1002
 
-    .line 376
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
-    .line 377
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1575,7 +1431,6 @@
 
     move-result v0
 
-    .line 378
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v1
@@ -1584,7 +1439,6 @@
 
     move-result v1
 
-    .line 377
     invoke-virtual {p0, p1, v0, v1, p2}, Lcom/android/server/input/InputShellCommand;->sendTap(IFFI)V
 
     return-void
@@ -1595,12 +1449,10 @@
 
     const/16 v0, 0x101
 
-    .line 290
     invoke-virtual {p0, p1, v0}, Lcom/android/server/input/InputShellCommand;->getSource(II)I
 
     move-result p1
 
-    .line 291
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -1615,22 +1467,18 @@
 
     move-object/from16 v0, p0
 
-    .line 540
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
 
-    .line 541
     invoke-virtual/range {p2 .. p2}, Landroid/util/IntArray;->size()I
 
     move-result v13
 
-    .line 542
     new-array v12, v13, [Landroid/view/KeyEvent;
 
     const/16 v16, 0x0
 
-    .line 552
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
@@ -1644,12 +1492,10 @@
 
     move-object/from16 v9, p2
 
-    .line 545
     invoke-virtual {v9, v10}, Landroid/util/IntArray;->get(I)I
 
     move-result v18
 
-    .line 546
     new-instance v8, Landroid/view/KeyEvent;
 
     const/4 v6, 0x0
@@ -1700,13 +1546,10 @@
 
     move-object/from16 v2, v23
 
-    .line 549
     invoke-virtual {v2, v1}, Landroid/view/KeyEvent;->setDisplayId(I)V
 
-    .line 550
     aput-object v2, v20, v19
 
-    .line 552
     sget-object v2, Lcom/android/server/input/InputShellCommand;->MODIFIER:Ljava/util/Map;
 
     invoke-static/range {v18 .. v18}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1753,10 +1596,8 @@
     :goto_1
     if-ge v1, v14, :cond_1
 
-    .line 555
     aget-object v2, v20, v1
 
-    .line 558
     invoke-virtual {v0, v2}, Lcom/android/server/input/InputShellCommand;->injectKeyEventAsync(Landroid/view/KeyEvent;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -1766,7 +1607,6 @@
     :cond_1
     move-wide/from16 v1, p4
 
-    .line 561
     invoke-virtual {v0, v1, v2}, Lcom/android/server/input/InputShellCommand;->sleep(J)V
 
     move/from16 v13, v16
@@ -1774,15 +1614,12 @@
     :goto_2
     if-ge v13, v14, :cond_2
 
-    .line 563
     aget-object v1, v20, v13
 
-    .line 564
     invoke-virtual {v1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v16
 
-    .line 565
     new-instance v12, Landroid/view/KeyEvent;
 
     const/4 v6, 0x1
@@ -1817,10 +1654,8 @@
 
     move-object/from16 v1, v25
 
-    .line 568
     invoke-virtual {v0, v1}, Lcom/android/server/input/InputShellCommand;->injectKeyEventAsync(Landroid/view/KeyEvent;)V
 
-    .line 569
     sget-object v1, Lcom/android/server/input/InputShellCommand;->MODIFIER:Ljava/util/Map;
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1854,10 +1689,8 @@
 
     const/4 v0, 0x0
 
-    .line 370
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/input/InputShellCommand;->sendKeyEvent(IIZI)V
 
-    .line 371
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I
 
     move-result v1
@@ -1866,7 +1699,6 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/android/server/input/InputShellCommand;->sleep(J)V
 
-    .line 372
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/input/InputShellCommand;->sendKeyEvent(IIZI)V
 
     return-void
@@ -1877,12 +1709,10 @@
 
     move-object/from16 v0, p0
 
-    .line 351
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
 
-    .line 353
     new-instance v13, Landroid/view/KeyEvent;
 
     const/4 v6, 0x0
@@ -1915,17 +1745,14 @@
 
     move/from16 v1, p4
 
-    .line 356
     invoke-virtual {v14, v1}, Landroid/view/KeyEvent;->setDisplayId(I)V
 
-    .line 358
     invoke-virtual {v0, v14}, Lcom/android/server/input/InputShellCommand;->injectKeyEvent(Landroid/view/KeyEvent;)V
 
     const/4 v1, 0x1
 
     if-eqz p3, :cond_0
 
-    .line 360
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v2
@@ -1934,7 +1761,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/input/InputShellCommand;->sleep(J)V
 
-    .line 362
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v2
@@ -1945,14 +1771,12 @@
 
     const/16 v4, 0x80
 
-    .line 363
     invoke-static {v14, v2, v3, v1, v4}, Landroid/view/KeyEvent;->changeTimeRepeat(Landroid/view/KeyEvent;JII)Landroid/view/KeyEvent;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lcom/android/server/input/InputShellCommand;->injectKeyEvent(Landroid/view/KeyEvent;)V
 
-    .line 366
     :cond_0
     invoke-static {v14, v1}, Landroid/view/KeyEvent;->changeAction(Landroid/view/KeyEvent;I)Landroid/view/KeyEvent;
 
@@ -1988,7 +1812,6 @@
     :goto_1
     move v9, v0
 
-    .line 500
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
@@ -2007,7 +1830,6 @@
 
     move/from16 v10, p5
 
-    .line 501
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     return-void
@@ -2016,7 +1838,6 @@
 .method public final sendMove(IFFI)V
     .locals 11
 
-    .line 449
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
@@ -2037,7 +1858,6 @@
 
     move v10, p4
 
-    .line 450
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     return-void
@@ -2048,7 +1868,6 @@
 
     move-object/from16 v11, p0
 
-    .line 400
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -2057,7 +1876,6 @@
 
     move-result v12
 
-    .line 401
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -2066,7 +1884,6 @@
 
     move-result v13
 
-    .line 402
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -2075,7 +1892,6 @@
 
     move-result v14
 
-    .line 403
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -2084,14 +1900,12 @@
 
     move-result v15
 
-    .line 404
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 405
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -2109,7 +1923,6 @@
     :cond_1
     move v10, v0
 
-    .line 410
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v16
@@ -2136,12 +1949,10 @@
 
     move/from16 v10, p2
 
-    .line 411
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     if-eqz p3, :cond_2
 
-    .line 415
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v0
@@ -2150,7 +1961,6 @@
 
     invoke-virtual {v11, v0, v1}, Lcom/android/server/input/InputShellCommand;->sleep(J)V
 
-    .line 417
     :cond_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -2177,7 +1987,6 @@
 
     const/4 v2, 0x2
 
-    .line 423
     invoke-virtual {v11, v12, v14, v0}, Lcom/android/server/input/InputShellCommand;->lerp(FFF)F
 
     move-result v7
@@ -2198,10 +2007,8 @@
 
     move/from16 v10, p2
 
-    .line 422
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
-    .line 424
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
@@ -2225,7 +2032,6 @@
 
     move/from16 v10, p2
 
-    .line 426
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     return-void
@@ -2234,7 +2040,6 @@
 .method public final sendTap(IFFI)V
     .locals 13
 
-    .line 382
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v11
@@ -2257,14 +2062,12 @@
 
     move/from16 v10, p4
 
-    .line 383
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     const/4 v2, 0x1
 
     const/4 v9, 0x0
 
-    .line 385
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/input/InputShellCommand;->injectMotionEvent(IIJJFFFI)V
 
     return-void
@@ -2273,7 +2076,6 @@
 .method public final sendText(ILjava/lang/String;I)V
     .locals 5
 
-    .line 301
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -2284,7 +2086,6 @@
 
     move v2, v1
 
-    .line 303
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -2294,7 +2095,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 306
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v2
@@ -2305,18 +2105,15 @@
 
     const/16 v2, 0x20
 
-    .line 307
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 308
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
     :cond_0
     move v2, p2
 
-    .line 311
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->charAt(I)C
 
@@ -2333,7 +2130,6 @@
 
     goto :goto_0
 
-    .line 316
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2345,40 +2141,32 @@
 
     const/4 v1, -0x1
 
-    .line 317
     invoke-static {v1}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
 
     move-result-object v1
 
-    .line 318
     invoke-virtual {v1, v0}, Landroid/view/KeyCharacterMap;->getEvents([C)[Landroid/view/KeyEvent;
 
     move-result-object v0
 
-    .line 319
     :goto_1
     array-length v1, v0
 
     if-ge p2, v1, :cond_5
 
-    .line 320
     aget-object v1, v0, p2
 
-    .line 321
     invoke-virtual {v1}, Landroid/view/KeyEvent;->getSource()I
 
     move-result v2
 
     if-eq p1, v2, :cond_4
 
-    .line 322
     invoke-virtual {v1, p1}, Landroid/view/KeyEvent;->setSource(I)V
 
-    .line 324
     :cond_4
     invoke-virtual {v1, p3}, Landroid/view/KeyEvent;->setDisplayId(I)V
 
-    .line 325
     invoke-virtual {p0, v1}, Lcom/android/server/input/InputShellCommand;->injectKeyEvent(Landroid/view/KeyEvent;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -2392,7 +2180,6 @@
 .method public final sleep(J)V
     .locals 0
 
-    .line 580
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -2403,7 +2190,6 @@
     :catch_0
     move-exception p0
 
-    .line 582
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

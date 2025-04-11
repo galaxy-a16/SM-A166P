@@ -13,47 +13,38 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 115
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 112
     iput-boolean v0, p0, Lcom/android/server/chimera/SystemRepositoryDefault$SmartSwitchEventReceiver;->mOnStart:Z
 
-    .line 113
     iput-boolean v0, p0, Lcom/android/server/chimera/SystemRepositoryDefault$SmartSwitchEventReceiver;->mOnTransfer:Z
 
-    .line 116
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.samsung.android.intent.SMARTSWITCH_TRANSFER"
 
-    .line 117
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.intent.action.SMARTSWITCH_WORK_START"
 
-    .line 118
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.intent.action.SMARTSWITCH_WORK_ONGOING"
 
-    .line 119
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.samsung.android.intent.action.SMARTSWITCH_WORK_FINISH"
 
-    .line 120
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "com.wssnps.permission.COM_WSSNPS"
 
     const/4 v2, 0x0
 
-    .line 121
     invoke-virtual {p1, p0, v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
@@ -64,7 +55,6 @@
 .method public isSmartSwitchWorking()Z
     .locals 1
 
-    .line 145
     iget-boolean v0, p0, Lcom/android/server/chimera/SystemRepositoryDefault$SmartSwitchEventReceiver;->mOnStart:Z
 
     if-nez v0, :cond_1
@@ -95,7 +85,6 @@
 
     return-void
 
-    .line 129
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -184,7 +173,6 @@
 
     goto :goto_1
 
-    .line 138
     :pswitch_0
     iput-boolean v2, p0, Lcom/android/server/chimera/SystemRepositoryDefault$SmartSwitchEventReceiver;->mOnStart:Z
 
@@ -193,7 +181,6 @@
     :pswitch_1
     const-string/jumbo p1, "smartswitch_transfer"
 
-    .line 131
     invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -202,11 +189,9 @@
 
     goto :goto_1
 
-    .line 135
     :pswitch_2
     iput-boolean v1, p0, Lcom/android/server/chimera/SystemRepositoryDefault$SmartSwitchEventReceiver;->mOnStart:Z
 
-    .line 141
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
 

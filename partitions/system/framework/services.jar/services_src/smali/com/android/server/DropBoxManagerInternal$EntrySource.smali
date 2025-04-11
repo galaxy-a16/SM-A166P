@@ -10,14 +10,12 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public length()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0

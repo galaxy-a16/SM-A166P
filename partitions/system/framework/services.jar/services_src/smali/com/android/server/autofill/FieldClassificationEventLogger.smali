@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$Gbxo9WgdzMUKK_1lUgG7kXa371c(JLcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/FieldClassificationEventLogger;->lambda$maybeSetLatencyMillis$0(JLcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;)V
 
     return-void
@@ -20,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object v0
@@ -36,7 +33,6 @@
 .method public static createLogger()Lcom/android/server/autofill/FieldClassificationEventLogger;
     .locals 1
 
-    .line 43
     new-instance v0, Lcom/android/server/autofill/FieldClassificationEventLogger;
 
     invoke-direct {v0}, Lcom/android/server/autofill/FieldClassificationEventLogger;-><init>()V
@@ -47,7 +43,6 @@
 .method public static synthetic lambda$maybeSetLatencyMillis$0(JLcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;)V
     .locals 0
 
-    .line 63
     iput-wide p0, p2, Lcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;->mLatencyClassificationRequestMillis:J
 
     return-void
@@ -58,7 +53,6 @@
 .method public logAndEndEvent()V
     .locals 5
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/autofill/FieldClassificationEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
@@ -71,12 +65,10 @@
 
     const-string p0, "Shouldn\'t be logging AutofillFieldClassificationEventInternal again for same event"
 
-    .line 72
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 76
     :cond_0
     iget-object v0, p0, Lcom/android/server/autofill/FieldClassificationEventLogger;->mEventInternal:Ljava/util/Optional;
 
@@ -86,12 +78,10 @@
 
     check-cast v0, Lcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;
 
-    .line 77
     sget-boolean v2, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz v2, :cond_1
 
-    .line 78
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,12 +103,10 @@
     :cond_1
     const/16 v1, 0x293
 
-    .line 82
     iget-wide v2, v0, Lcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;->mLatencyClassificationRequestMillis:J
 
     invoke-static {v1, v2, v3}, Lcom/android/internal/util/FrameworkStatsLog;->write(IJ)V
 
-    .line 85
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
 
     move-result-object v0
@@ -131,7 +119,6 @@
 .method public maybeSetLatencyMillis(J)V
     .locals 1
 
-    .line 62
     iget-object p0, p0, Lcom/android/server/autofill/FieldClassificationEventLogger;->mEventInternal:Ljava/util/Optional;
 
     new-instance v0, Lcom/android/server/autofill/FieldClassificationEventLogger$$ExternalSyntheticLambda0;
@@ -146,7 +133,6 @@
 .method public startNewLogForRequest()V
     .locals 2
 
-    .line 51
     iget-object v0, p0, Lcom/android/server/autofill/FieldClassificationEventLogger;->mEventInternal:Ljava/util/Optional;
 
     invoke-virtual {v0}, Ljava/util/Optional;->isEmpty()Z
@@ -159,10 +145,8 @@
 
     const-string v1, "FieldClassificationEventLogger is not empty before starting for a new request"
 
-    .line 52
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :cond_0
     new-instance v0, Lcom/android/server/autofill/FieldClassificationEventLogger$FieldClassificationEventInternal;
 

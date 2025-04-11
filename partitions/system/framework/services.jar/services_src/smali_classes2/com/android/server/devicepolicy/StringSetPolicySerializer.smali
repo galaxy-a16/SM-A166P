@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 34
     invoke-direct {p0}, Lcom/android/server/devicepolicy/PolicySerializer;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 
     const/4 v0, 0x0
 
-    .line 48
     invoke-interface {p1, v0, p0}, Lcom/android/modules/utils/TypedXmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -33,7 +31,6 @@
 
     const-string p1, "Error parsing StringSet policy value."
 
-    .line 50
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -41,7 +38,6 @@
     :cond_0
     const-string p1, ";"
 
-    .line 53
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -50,7 +46,6 @@
 
     move-result-object p0
 
-    .line 54
     new-instance p1, Landroid/app/admin/StringSetPolicyValue;
 
     invoke-direct {p1, p0}, Landroid/app/admin/StringSetPolicyValue;-><init>(Ljava/util/Set;)V
@@ -61,7 +56,6 @@
 .method public bridge synthetic saveToXml(Landroid/app/admin/PolicyKey;Lcom/android/modules/utils/TypedXmlSerializer;Ljava/lang/Object;)V
     .locals 0
 
-    .line 34
     check-cast p3, Ljava/util/Set;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/devicepolicy/StringSetPolicySerializer;->saveToXml(Landroid/app/admin/PolicyKey;Lcom/android/modules/utils/TypedXmlSerializer;Ljava/util/Set;)V
@@ -72,12 +66,10 @@
 .method public saveToXml(Landroid/app/admin/PolicyKey;Lcom/android/modules/utils/TypedXmlSerializer;Ljava/util/Set;)V
     .locals 0
 
-    .line 40
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, ";"
 
-    .line 42
     invoke-static {p0, p3}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p0
@@ -86,7 +78,6 @@
 
     const-string/jumbo p3, "strings"
 
-    .line 41
     invoke-interface {p2, p1, p3, p0}, Lcom/android/modules/utils/TypedXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     return-void

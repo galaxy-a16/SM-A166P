@@ -24,7 +24,6 @@
 
     if-nez p2, :cond_0
 
-    .line 502
     iget-object p1, p1, Lcom/android/server/usage/IntervalStats;->packageStats:Landroid/util/ArrayMap;
 
     invoke-virtual {p1}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -35,7 +34,6 @@
 
     return p0
 
-    .line 506
     :cond_0
     iget-object p2, p1, Lcom/android/server/usage/IntervalStats;->packageStats:Landroid/util/ArrayMap;
 
@@ -48,7 +46,6 @@
     :goto_0
     if-ge v0, p2, :cond_1
 
-    .line 508
     new-instance v1, Landroid/app/usage/UsageStats;
 
     iget-object v2, p1, Lcom/android/server/usage/IntervalStats;->packageStats:Landroid/util/ArrayMap;

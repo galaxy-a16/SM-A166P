@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
     .locals 0
 
-    .line 220
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 223
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -45,7 +43,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -60,7 +57,6 @@
 
     const-string p1, "com.samsung.android.knox.intent.action.EDM_BOOT_COMPLETED_INTERNAL"
 
-    .line 225
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -71,7 +67,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 226
     :cond_0
     new-instance p1, Ljava/lang/Thread;
 
@@ -81,7 +76,6 @@
 
     invoke-direct {p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 230
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     :cond_1

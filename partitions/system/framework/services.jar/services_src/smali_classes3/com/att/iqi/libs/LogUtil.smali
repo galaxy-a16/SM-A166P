@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -28,7 +27,6 @@
 .method public static canLog()Z
     .locals 1
 
-    .line 50
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     return v0
@@ -37,7 +35,6 @@
 .method public static enableLogging(Z)V
     .locals 0
 
-    .line 46
     sput-boolean p0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     return-void
@@ -46,7 +43,6 @@
 .method public static logd(Ljava/lang/String;)V
     .locals 1
 
-    .line 30
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -62,7 +58,6 @@
 .method public static logd(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 34
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -78,7 +73,6 @@
 .method public static loge(Ljava/lang/String;)V
     .locals 1
 
-    .line 22
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -94,7 +88,6 @@
 .method public static loge(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 26
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -110,7 +103,6 @@
 .method public static logw(Ljava/lang/String;)V
     .locals 1
 
-    .line 38
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0
@@ -126,7 +118,6 @@
 .method public static logw(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 42
     sget-boolean v0, Lcom/att/iqi/libs/LogUtil;->sDebug:Z
 
     if-eqz v0, :cond_0

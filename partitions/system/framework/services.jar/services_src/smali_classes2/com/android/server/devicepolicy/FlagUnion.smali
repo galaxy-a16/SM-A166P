@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 26
     invoke-direct {p0}, Lcom/android/server/devicepolicy/ResolutionMechanism;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getParcelableResolutionMechanism()Landroid/app/admin/FlagUnion;
     .locals 0
 
-    .line 45
     sget-object p0, Landroid/app/admin/FlagUnion;->FLAG_UNION:Landroid/app/admin/FlagUnion;
 
     return-object p0
@@ -27,7 +25,6 @@
 .method public bridge synthetic getParcelableResolutionMechanism()Landroid/app/admin/ResolutionMechanism;
     .locals 0
 
-    .line 26
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/FlagUnion;->getParcelableResolutionMechanism()Landroid/app/admin/FlagUnion;
 
     move-result-object p0
@@ -38,10 +35,8 @@
 .method public resolve(Ljava/util/LinkedHashMap;)Landroid/app/admin/IntegerPolicyValue;
     .locals 1
 
-    .line 31
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
     move-result p0
@@ -55,12 +50,10 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 36
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    .line 37
     invoke-virtual {p1}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
     move-result-object p1
@@ -82,7 +75,6 @@
 
     check-cast v0, Landroid/app/admin/PolicyValue;
 
-    .line 38
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 40
     :cond_1
     new-instance p1, Landroid/app/admin/IntegerPolicyValue;
 
@@ -121,7 +112,6 @@
 .method public bridge synthetic resolve(Ljava/util/LinkedHashMap;)Landroid/app/admin/PolicyValue;
     .locals 0
 
-    .line 26
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/FlagUnion;->resolve(Ljava/util/LinkedHashMap;)Landroid/app/admin/IntegerPolicyValue;
 
     move-result-object p0
@@ -132,7 +122,6 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "IntegerUnion {}"
 
     return-object p0

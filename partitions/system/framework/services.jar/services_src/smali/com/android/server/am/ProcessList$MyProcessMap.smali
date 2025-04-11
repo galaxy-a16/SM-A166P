@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessList;)V
     .locals 0
 
-    .line 918
     iput-object p1, p0, Lcom/android/server/am/ProcessList$MyProcessMap;->this$0:Lcom/android/server/am/ProcessList;
 
     invoke-direct {p0}, Lcom/android/internal/app/ProcessMap;-><init>()V
@@ -24,14 +23,12 @@
 .method public put(Ljava/lang/String;ILcom/android/server/am/ProcessRecord;)Lcom/android/server/am/ProcessRecord;
     .locals 0
 
-    .line 921
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/app/ProcessMap;->put(Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/server/am/ProcessRecord;
 
-    .line 922
     iget-object p0, p0, Lcom/android/server/am/ProcessList$MyProcessMap;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -50,7 +47,6 @@
 .method public bridge synthetic put(Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 918
     check-cast p3, Lcom/android/server/am/ProcessRecord;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ProcessList$MyProcessMap;->put(Ljava/lang/String;ILcom/android/server/am/ProcessRecord;)Lcom/android/server/am/ProcessRecord;
@@ -63,14 +59,12 @@
 .method public remove(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
     .locals 1
 
-    .line 928
     invoke-super {p0, p1, p2}, Lcom/android/internal/app/ProcessMap;->remove(Ljava/lang/String;I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
 
-    .line 929
     iget-object p0, p0, Lcom/android/server/am/ProcessList$MyProcessMap;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p0, p0, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -85,7 +79,6 @@
 .method public bridge synthetic remove(Ljava/lang/String;I)Ljava/lang/Object;
     .locals 0
 
-    .line 918
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ProcessList$MyProcessMap;->remove(Ljava/lang/String;I)Lcom/android/server/am/ProcessRecord;
 
     move-result-object p0

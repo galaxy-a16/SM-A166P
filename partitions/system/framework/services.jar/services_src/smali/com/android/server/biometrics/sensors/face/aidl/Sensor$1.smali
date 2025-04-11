@@ -20,7 +20,6 @@
 .method public static synthetic $r8$lambda$QpxVSL1yQ2L5We2LEoJn7w-vlWw(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->lambda$getStartUserClient$1()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static synthetic $r8$lambda$qnwlbK1gK0ffUiNWWznayxVLt9M(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->lambda$getStopUserClient$0()V
 
     return-void
@@ -38,7 +36,6 @@
 .method public static synthetic $r8$lambda$wCR4UKG5aRXtXYlU2RxaGRRybfQ(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;ILcom/android/server/biometrics/sensors/face/aidl/FaceProvider;ILandroid/hardware/biometrics/face/ISession;I)V
     .locals 0
 
-    .line 0
     invoke-direct/range {p0 .. p6}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->lambda$getStartUserClient$2(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;ILcom/android/server/biometrics/sensors/face/aidl/FaceProvider;ILandroid/hardware/biometrics/face/ISession;I)V
 
     return-void
@@ -47,7 +44,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;Lcom/android/server/biometrics/log/BiometricContext;Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;)V
     .locals 0
 
-    .line 674
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     iput-object p2, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->val$biometricContext:Lcom/android/server/biometrics/log/BiometricContext;
@@ -64,7 +60,6 @@
 .method private synthetic lambda$getStartUserClient$1()V
     .locals 2
 
-    .line 695
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Ljava/lang/String;
@@ -75,7 +70,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 696
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     const/4 v0, 0x0
@@ -88,7 +82,6 @@
 .method private synthetic lambda$getStartUserClient$2(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;ILcom/android/server/biometrics/sensors/face/aidl/FaceProvider;ILandroid/hardware/biometrics/face/ISession;I)V
     .locals 3
 
-    .line 705
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Ljava/lang/String;
@@ -117,7 +110,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     new-instance v1, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;
@@ -126,7 +118,6 @@
 
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->mCurrentSession:Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;
 
-    .line 710
     invoke-static {p2}, Lcom/android/server/biometrics/sensors/face/FaceUtils;->getLegacyInstance(I)Lcom/android/server/biometrics/sensors/face/FaceUtils;
 
     move-result-object p1
@@ -137,14 +128,12 @@
 
     move-result-object p5
 
-    .line 711
     invoke-virtual {p1, p5, p4}, Lcom/android/server/biometrics/sensors/face/FaceUtils;->isInvalidationInProgress(Landroid/content/Context;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 712
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {p0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Ljava/lang/String;
@@ -173,7 +162,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     invoke-virtual {p3, p2, p4}, Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;->scheduleInvalidationRequest(II)V
 
     :cond_0
@@ -183,7 +171,6 @@
 .method private synthetic lambda$getStopUserClient$0()V
     .locals 1
 
-    .line 682
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     const/4 v0, 0x0
@@ -198,7 +185,6 @@
 .method public getStartUserClient(I)Lcom/android/server/biometrics/sensors/StartUserClient;
     .locals 13
 
-    .line 688
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Ljava/lang/String;
@@ -225,7 +211,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 689
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmSensorProperties(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Landroid/hardware/face/FaceSensorPropertiesInternal;
@@ -234,7 +219,6 @@
 
     iget v0, v0, Landroid/hardware/face/FaceSensorPropertiesInternal;->sensorId:I
 
-    .line 691
     new-instance v12, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
@@ -271,7 +255,6 @@
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->val$biometricContext:Lcom/android/server/biometrics/log/BiometricContext;
 
-    .line 694
     invoke-interface {v1}, Lcom/android/server/biometrics/log/BiometricContext;->getAuthSessionCoordinator()Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
     move-result-object v10
@@ -288,7 +271,6 @@
 
     invoke-direct/range {v1 .. v11}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;-><init>(Landroid/content/Context;Landroid/os/Handler;Ljava/lang/String;Lcom/android/server/biometrics/sensors/UserAwareBiometricScheduler;IILcom/android/server/biometrics/sensors/LockoutCache;Lcom/android/server/biometrics/sensors/LockoutResetDispatcher;Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback$Callback;)V
 
-    .line 700
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v1}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmLockoutHalImpl(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Lcom/android/server/biometrics/sensors/face/aidl/SemFaceAidlLockoutHalImpl;
@@ -297,14 +279,12 @@
 
     invoke-virtual {v12, v1}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;->setLockoutImpl(Lcom/android/server/biometrics/sensors/face/aidl/SemFaceAidlLockoutHalImpl;)V
 
-    .line 703
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->val$provider:Lcom/android/server/biometrics/sensors/face/aidl/FaceProvider;
 
     new-instance v10, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1$$ExternalSyntheticLambda2;
 
     invoke-direct {v10, p0, v12, v0, v1}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;Lcom/android/server/biometrics/sensors/face/aidl/Sensor$HalSessionCallback;ILcom/android/server/biometrics/sensors/face/aidl/FaceProvider;)V
 
-    .line 722
     new-instance v0, Lcom/android/server/biometrics/sensors/face/aidl/FaceStartUserClient;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
@@ -341,7 +321,6 @@
 
     move-result-object v1
 
-    .line 724
     invoke-static {v1}, Lcom/android/server/biometrics/log/BiometricLogger;->ofUnknown(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v7
@@ -362,7 +341,6 @@
 .method public getStopUserClient(I)Lcom/android/server/biometrics/sensors/StopUserClient;
     .locals 11
 
-    .line 678
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/face/aidl/Sensor;->-$$Nest$fgetmTag(Lcom/android/server/biometrics/sensors/face/aidl/Sensor;)Ljava/lang/String;
@@ -389,7 +367,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 679
     new-instance v0, Lcom/android/server/biometrics/sensors/face/aidl/FaceStopUserClient;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/Sensor$1;->this$0:Lcom/android/server/biometrics/sensors/face/aidl/Sensor;
@@ -424,7 +401,6 @@
 
     move-result-object v1
 
-    .line 681
     invoke-static {v1}, Lcom/android/server/biometrics/log/BiometricLogger;->ofUnknown(Landroid/content/Context;)Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v8

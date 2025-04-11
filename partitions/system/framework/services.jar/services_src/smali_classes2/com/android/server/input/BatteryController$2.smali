@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/input/BatteryController;)V
     .locals 0
 
-    .line 474
     iput-object p1, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onInputDeviceAdded(I)V
     .locals 4
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-static {v0}, Lcom/android/server/input/BatteryController;->-$$Nest$fgetmLock(Lcom/android/server/input/BatteryController;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 478
     :try_start_0
     iget-object v1, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
@@ -62,7 +59,6 @@
 
     if-nez v1, :cond_0
 
-    .line 480
     iget-object v1, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-static {v1}, Lcom/android/server/input/BatteryController;->-$$Nest$fgetmDeviceMonitors(Lcom/android/server/input/BatteryController;)Landroid/util/ArrayMap;
@@ -81,7 +77,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 482
     :cond_0
     monitor-exit v0
 
@@ -100,7 +95,6 @@
 .method public onInputDeviceChanged(I)V
     .locals 3
 
-    .line 490
     iget-object v0, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
     invoke-static {v0}, Lcom/android/server/input/BatteryController;->-$$Nest$fgetmLock(Lcom/android/server/input/BatteryController;)Ljava/lang/Object;
@@ -109,7 +103,6 @@
 
     monitor-enter v0
 
-    .line 491
     :try_start_0
     iget-object p0, p0, Lcom/android/server/input/BatteryController$2;->this$0:Lcom/android/server/input/BatteryController;
 
@@ -129,21 +122,17 @@
 
     if-nez p0, :cond_0
 
-    .line 493
     monitor-exit v0
 
     return-void
 
-    .line 495
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 496
     invoke-virtual {p0, v1, v2}, Lcom/android/server/input/BatteryController$DeviceMonitor;->onConfiguration(J)V
 
-    .line 497
     monitor-exit v0
 
     return-void
@@ -161,6 +150,5 @@
 .method public onInputDeviceRemoved(I)V
     .locals 0
 
-    .line 0
     return-void
 .end method

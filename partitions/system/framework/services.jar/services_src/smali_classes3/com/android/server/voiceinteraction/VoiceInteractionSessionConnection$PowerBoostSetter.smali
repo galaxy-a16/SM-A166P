@@ -18,12 +18,10 @@
 .method public constructor <init>(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;Ljava/time/Instant;)V
     .locals 0
 
-    .line 157
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-object p2, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->mExpiryTime:Ljava/time/Instant;
 
     return-void
@@ -34,7 +32,6 @@
 .method public cancel()V
     .locals 2
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     iget-object v0, v0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->mLock:Ljava/lang/Object;
@@ -43,11 +40,9 @@
 
     const/4 v1, 0x1
 
-    .line 183
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->mCanceled:Z
 
-    .line 184
     monitor-exit v0
 
     return-void
@@ -65,25 +60,21 @@
 .method public run()V
     .locals 4
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     iget-object v0, v0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 164
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->mCanceled:Z
 
     if-eqz v1, :cond_0
 
-    .line 165
     monitor-exit v0
 
     return-void
 
-    .line 169
     :cond_0
     invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
 
@@ -99,7 +90,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 170
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-static {v1}, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;)Landroid/os/PowerManagerInternal;
@@ -110,7 +100,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/PowerManagerInternal;->setPowerBoost(II)V
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-static {v1}, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->-$$Nest$fgetmSetPowerBoostRunnable(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;)Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;
@@ -119,7 +108,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 172
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-static {v1}, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->-$$Nest$fgetmFgHandler(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;)Landroid/os/Handler;
@@ -145,10 +133,8 @@
 
     const-string v3, "Reset power boost INTERACTION because reaching max timeout."
 
-    .line 175
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection$PowerBoostSetter;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;
 
     invoke-static {p0}, Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;->-$$Nest$fgetmPowerManagerInternal(Lcom/android/server/voiceinteraction/VoiceInteractionSessionConnection;)Landroid/os/PowerManagerInternal;
@@ -159,7 +145,6 @@
 
     invoke-virtual {p0, v2, v1}, Landroid/os/PowerManagerInternal;->setPowerBoost(II)V
 
-    .line 178
     :cond_2
     :goto_0
     monitor-exit v0

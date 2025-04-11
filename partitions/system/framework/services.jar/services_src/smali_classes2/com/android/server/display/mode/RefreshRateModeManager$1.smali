@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$LsnHUjh_12_1NmkoW4-j7eIajIg(Lcom/android/server/display/mode/RefreshRateModeManager$1;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/mode/RefreshRateModeManager$1;->lambda$onFinish$0(Z)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/display/mode/RefreshRateModeManager;)V
     .locals 0
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,7 +32,6 @@
 .method private synthetic lambda$onFinish$0(Z)V
     .locals 1
 
-    .line 161
     iget-object v0, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-static {v0}, Lcom/android/server/display/mode/RefreshRateModeManager;->-$$Nest$fgetmLock(Lcom/android/server/display/mode/RefreshRateModeManager;)Ljava/lang/Object;
@@ -43,7 +40,6 @@
 
     monitor-enter v0
 
-    .line 162
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
@@ -53,7 +49,6 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/mode/RefreshRateController;->onDisplayStateChangeLocked(Z)V
 
-    .line 163
     monitor-exit v0
 
     return-void
@@ -91,7 +86,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 150
     :goto_0
     iget-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
@@ -105,7 +99,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 152
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -114,7 +107,6 @@
 
     return-void
 
-    .line 156
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -140,7 +132,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     iget-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-virtual {p1}, Lcom/android/server/display/mode/RefreshRateModeManager;->getController()Lcom/android/server/display/mode/RefreshRateController;
@@ -149,7 +140,6 @@
 
     invoke-virtual {p1, p3, v0}, Lcom/android/server/display/mode/RefreshRateController;->setPowerModeOnByDisplayType(IZ)V
 
-    .line 160
     iget-object p1, p0, Lcom/android/server/display/mode/RefreshRateModeManager$1;->this$0:Lcom/android/server/display/mode/RefreshRateModeManager;
 
     invoke-static {p1}, Lcom/android/server/display/mode/RefreshRateModeManager;->-$$Nest$fgetmHandler(Lcom/android/server/display/mode/RefreshRateModeManager;)Landroid/os/Handler;

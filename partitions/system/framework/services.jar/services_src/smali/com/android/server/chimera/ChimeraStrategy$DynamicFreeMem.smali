@@ -25,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$msetReentry(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;F)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->setReentry(F)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$msetThresholdMax(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;J)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->setThresholdMax(J)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$msetThresholdMin(Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;J)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->setThresholdMin(J)V
 
     return-void
@@ -52,27 +49,22 @@
 .method public constructor <init>(Lcom/android/server/chimera/ChimeraStrategy;)V
     .locals 5
 
-    .line 168
     iput-object p1, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 156
     iput v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mTriggerCnt:I
 
-    .line 157
     iput v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
-    .line 159
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getRamSizeGb()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->ramSizeGb:I
 
-    .line 160
     invoke-static {v0}, Lcom/android/server/chimera/ChimeraStrategy$DefaultParameters;->getReentry(I)F
 
     move-result v0
@@ -81,13 +73,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 162
     iput-wide v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEM_SOME_THRESHOLD_MIN:J
 
-    .line 163
     iput-wide v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEN_SOME_THRESHOLD_MAX:J
 
-    .line 169
     iget v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->ramSizeGb:I
 
     const/4 v1, 0x6
@@ -100,7 +89,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 170
     invoke-static {v4, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -117,7 +105,6 @@
 
     const-string v0, "150"
 
-    .line 171
     invoke-static {v3, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -137,7 +124,6 @@
     :cond_0
     const-string v0, "60"
 
-    .line 173
     invoke-static {v4, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -152,7 +138,6 @@
 
     iput-wide v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEM_SOME_THRESHOLD_MIN:J
 
-    .line 174
     invoke-static {v3, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -167,7 +152,6 @@
 
     iput-wide v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEN_SOME_THRESHOLD_MAX:J
 
-    .line 176
     :goto_0
     new-instance v0, Lcom/android/server/chimera/ReentryCounter;
 
@@ -179,7 +163,6 @@
 
     iput-object v0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentryCounter:Lcom/android/server/chimera/ReentryCounter;
 
-    .line 177
     iget p0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentry:F
 
     invoke-virtual {v0, p0}, Lcom/android/server/chimera/ReentryCounter;->setTargetReentryCount(F)V
@@ -192,10 +175,8 @@
 .method public final setReentry(F)V
     .locals 0
 
-    .line 266
     iput p1, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentry:F
 
-    .line 267
     iget-object p0, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentryCounter:Lcom/android/server/chimera/ReentryCounter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/ReentryCounter;->setTargetReentryCount(F)V
@@ -206,7 +187,6 @@
 .method public final setThresholdMax(J)V
     .locals 0
 
-    .line 262
     iput-wide p1, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEN_SOME_THRESHOLD_MAX:J
 
     return-void
@@ -215,7 +195,6 @@
 .method public final setThresholdMin(J)V
     .locals 0
 
-    .line 258
     iput-wide p1, p0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEM_SOME_THRESHOLD_MIN:J
 
     return-void
@@ -226,7 +205,6 @@
 
     move-object/from16 v0, p0
 
-    .line 182
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentryCounter:Lcom/android/server/chimera/ReentryCounter;
 
     invoke-virtual {v1}, Lcom/android/server/chimera/ReentryCounter;->isReentryEnabled()Z
@@ -247,7 +225,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 183
     iget-object v1, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {v1}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fgetmRecentAppManager(Lcom/android/server/chimera/ChimeraStrategy;)Lcom/android/server/chimera/ChimeraRecentAppManager;
@@ -260,7 +237,6 @@
 
     const/4 v2, 0x4
 
-    .line 184
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -277,14 +253,12 @@
 
     if-lez v4, :cond_d
 
-    .line 187
     iget-object v4, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentryCounter:Lcom/android/server/chimera/ReentryCounter;
 
     invoke-virtual {v4}, Lcom/android/server/chimera/ReentryCounter;->getReentry()F
 
     move-result v4
 
-    .line 191
     iget-wide v5, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEM_SOME_THRESHOLD_MIN:J
 
     cmp-long v5, v2, v5
@@ -301,7 +275,6 @@
 
     goto :goto_0
 
-    .line 193
     :cond_0
     iget-wide v9, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEN_SOME_THRESHOLD_MAX:J
 
@@ -323,10 +296,8 @@
 
     if-nez v5, :cond_4
 
-    .line 199
     iput v8, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
-    .line 200
     iget v6, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentry:F
 
     cmpg-float v7, v4, v6
@@ -363,14 +334,12 @@
     :cond_4
     if-ne v5, v7, :cond_7
 
-    .line 210
     iget v11, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentry:F
 
     cmpg-float v12, v4, v11
 
     if-gez v12, :cond_5
 
-    .line 211
     iget v10, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
     add-int/2addr v10, v7
@@ -379,7 +348,6 @@
 
     if-le v10, v9, :cond_6
 
-    .line 215
     iput v8, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
     goto :goto_3
@@ -389,7 +357,6 @@
 
     if-lez v6, :cond_6
 
-    .line 218
     iput v8, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
     goto :goto_1
@@ -399,7 +366,6 @@
 
     goto :goto_3
 
-    .line 223
     :cond_7
     iget v10, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mReentry:F
 
@@ -407,7 +373,6 @@
 
     if-gez v10, :cond_9
 
-    .line 224
     iget v10, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
     add-int/2addr v10, v7
@@ -418,7 +383,6 @@
 
     if-le v10, v11, :cond_8
 
-    .line 228
     iput v8, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->mKeepCnt:I
 
     goto :goto_2
@@ -434,7 +398,6 @@
     :goto_2
     const-wide/16 v10, 0x2
 
-    .line 234
     iget-wide v12, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->PSI_MEN_SOME_THRESHOLD_MAX:J
 
     mul-long/2addr v12, v10
@@ -445,7 +408,6 @@
 
     move v6, v7
 
-    .line 239
     :cond_a
     :goto_3
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
@@ -464,7 +426,6 @@
 
     invoke-static {v7, v10, v11}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fputmMemFreeTarget(Lcom/android/server/chimera/ChimeraStrategy;J)V
 
-    .line 241
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {v7}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fgetmMemFreeTarget(Lcom/android/server/chimera/ChimeraStrategy;)J
@@ -491,7 +452,6 @@
 
     if-lez v7, :cond_b
 
-    .line 243
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {v7}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraStrategy;)Lcom/android/server/chimera/SystemRepository;
@@ -502,7 +462,6 @@
 
     invoke-interface {v7, v8, v9}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 244
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getRamSizeGb()I
@@ -521,7 +480,6 @@
 
     goto :goto_4
 
-    .line 245
     :cond_b
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
@@ -545,7 +503,6 @@
 
     if-gez v7, :cond_c
 
-    .line 247
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {v7}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fgetmSystemRepository(Lcom/android/server/chimera/ChimeraStrategy;)Lcom/android/server/chimera/SystemRepository;
@@ -556,7 +513,6 @@
 
     invoke-interface {v7, v8, v10}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 
     invoke-static {}, Lcom/android/server/chimera/ChimeraCommonUtil;->getRamSizeGb()I
@@ -573,7 +529,6 @@
 
     invoke-static {v7, v9, v10}, Lcom/android/server/chimera/ChimeraStrategy;->-$$Nest$fputmMemFreeTarget(Lcom/android/server/chimera/ChimeraStrategy;J)V
 
-    .line 250
     :cond_c
     :goto_4
     iget-object v7, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
@@ -638,7 +593,6 @@
 
     invoke-interface {v7, v8, v1}, Lcom/android/server/chimera/SystemRepository;->logDebug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
     :cond_d
     iget-object v0, v0, Lcom/android/server/chimera/ChimeraStrategy$DynamicFreeMem;->this$0:Lcom/android/server/chimera/ChimeraStrategy;
 

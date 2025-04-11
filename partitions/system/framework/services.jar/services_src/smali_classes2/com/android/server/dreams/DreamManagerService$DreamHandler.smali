@@ -11,7 +11,6 @@
 
     const/4 v1, 0x1
 
-    .line 864
     invoke-direct {p0, p1, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void

@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mhandleOnProviderBound(Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->handleOnProviderBound()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderMetricsLogger;Lcom/android/server/timezonedetector/location/ThreadingDomain;Ljava/lang/String;Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;Z)V
     .locals 6
 
-    .line 50
     new-instance v4, Lcom/android/server/timezonedetector/location/ZoneInfoDbTimeZoneProviderEventPreProcessor;
 
     invoke-direct {v4}, Lcom/android/server/timezonedetector/location/ZoneInfoDbTimeZoneProviderEventPreProcessor;-><init>()V
@@ -37,7 +35,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;-><init>(Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderMetricsLogger;Lcom/android/server/timezonedetector/location/ThreadingDomain;Ljava/lang/String;Lcom/android/server/timezonedetector/location/TimeZoneProviderEventPreProcessor;Z)V
 
-    .line 52
     invoke-static {p4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p4, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
@@ -50,7 +47,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;[Ljava/lang/String;)V
     .locals 3
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mSharedLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -58,10 +54,8 @@
     :try_start_0
     const-string/jumbo v1, "{BinderLocationTimeZoneProvider}"
 
-    .line 134
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 135
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +74,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 136
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +92,6 @@
 
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 137
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,37 +112,28 @@
 
     const-string v1, "State history:"
 
-    .line 139
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 140
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 141
     iget-object v1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mCurrentState:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
     invoke-virtual {v1, p1}, Lcom/android/server/timezonedetector/ReferenceWithHistory;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 142
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     const-string v1, "Proxy details:"
 
-    .line 144
     invoke-virtual {p1, v1}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 146
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
 
     invoke-interface {p0, p1, p2}, Lcom/android/server/timezonedetector/Dumpable;->dump(Landroid/util/IndentingPrintWriter;[Ljava/lang/String;)V
 
-    .line 147
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 148
     monitor-exit v0
 
     return-void
@@ -168,17 +151,14 @@
 .method public final handleOnProviderBound()V
     .locals 4
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mThreadingDomain:Lcom/android/server/timezonedetector/location/ThreadingDomain;
 
     invoke-virtual {v0}, Lcom/android/server/timezonedetector/location/ThreadingDomain;->assertCurrentThread()V
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mSharedLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 86
     :try_start_0
     iget-object v1, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mCurrentState:Lcom/android/server/timezonedetector/ReferenceWithHistory;
 
@@ -188,17 +168,14 @@
 
     check-cast v1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;
 
-    .line 87
     iget v2, v1, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider$ProviderState;->stateEnum:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 109
     new-instance p0, Ljava/lang/IllegalStateException;
 
     goto :goto_1
 
-    .line 102
     :pswitch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -230,7 +207,6 @@
 
     goto :goto_0
 
-    .line 96
     :pswitch_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -262,7 +238,6 @@
 
     goto :goto_0
 
-    .line 91
     :pswitch_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -292,13 +267,11 @@
 
     invoke-static {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneManagerService;->debugLog(Ljava/lang/String;)V
 
-    .line 112
     :goto_0
     monitor-exit v0
 
     return-void
 
-    .line 109
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -321,7 +294,6 @@
     :catchall_0
     move-exception p0
 
-    .line 112
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -344,7 +316,6 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
 
     invoke-virtual {p0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;->destroy()V
@@ -355,7 +326,6 @@
 .method public onInitialize()Z
     .locals 2
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
 
     new-instance v1, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider$1;
@@ -372,12 +342,10 @@
 .method public onStartUpdates(Ljava/time/Duration;Ljava/time/Duration;)V
     .locals 0
 
-    .line 120
     invoke-static {p1, p2}, Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;->createStartUpdatesRequest(Ljava/time/Duration;Ljava/time/Duration;)Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;
 
     move-result-object p1
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
 
     invoke-virtual {p0, p1}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;->setRequest(Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;)V
@@ -388,12 +356,10 @@
 .method public onStopUpdates()V
     .locals 1
 
-    .line 127
     invoke-static {}, Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;->createStopUpdatesRequest()Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;
 
     move-result-object v0
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/timezonedetector/location/BinderLocationTimeZoneProvider;->mProxy:Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;
 
     invoke-virtual {p0, v0}, Lcom/android/server/timezonedetector/location/LocationTimeZoneProviderProxy;->setRequest(Lcom/android/server/timezonedetector/location/TimeZoneProviderRequest;)V
@@ -404,12 +370,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/timezonedetector/location/LocationTimeZoneProvider;->mSharedLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 154
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -454,7 +418,6 @@
     :catchall_0
     move-exception p0
 
-    .line 159
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

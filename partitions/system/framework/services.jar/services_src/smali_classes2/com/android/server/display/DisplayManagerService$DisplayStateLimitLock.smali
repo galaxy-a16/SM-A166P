@@ -22,25 +22,20 @@
 .method public constructor <init>(Lcom/android/server/display/DisplayManagerService;Landroid/os/IBinder;IJ)V
     .locals 0
 
-    .line 7219
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7220
     invoke-static {}, Lcom/android/server/power/PowerManagerUtil;->callerInfoToString()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->mTag:Ljava/lang/String;
 
-    .line 7221
     iput-object p2, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->mLock:Landroid/os/IBinder;
 
-    .line 7222
     iput p3, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->mLastRequestedState:I
 
-    .line 7223
     iput-wide p4, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->mLastRequestedTime:J
 
     return-void
@@ -51,7 +46,6 @@
 .method public binderDied()V
     .locals 4
 
-    .line 7228
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmRequestDisplayStateLock(Lcom/android/server/display/DisplayManagerService;)Ljava/lang/Object;
@@ -63,7 +57,6 @@
     :try_start_0
     const-string v1, "DisplayManagerService"
 
-    .line 7229
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +73,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7231
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     invoke-static {v1}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$fgetmDisplayStateLimitLocks(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
@@ -93,12 +85,10 @@
 
     if-gez v1, :cond_0
 
-    .line 7233
     monitor-exit v0
 
     return-void
 
-    .line 7236
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$DisplayStateLimitLock;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -108,7 +98,6 @@
 
     invoke-static {v1, p0, v2}, Lcom/android/server/display/DisplayManagerService;->-$$Nest$msetDisplayStateLimitInternal(Lcom/android/server/display/DisplayManagerService;Landroid/os/IBinder;I)V
 
-    .line 7237
     monitor-exit v0
 
     return-void
@@ -126,12 +115,10 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 7242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7243
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7244
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,7 +163,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7245
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +185,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7246
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +201,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7248
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

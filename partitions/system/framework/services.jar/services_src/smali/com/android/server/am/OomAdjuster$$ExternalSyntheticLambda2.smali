@@ -20,7 +20,6 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/am/OomAdjuster;->$r8$lambda$CxsEyTIlQ9DHd8L_GVqYsMNnVWU(Landroid/os/Message;)Z
 
     move-result p0

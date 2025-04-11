@@ -13,13 +13,10 @@
 .method public constructor <init>(IJ)V
     .locals 0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     iput p1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
 
-    .line 37
     iput-wide p2, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mQuirkExpiry:J
 
     return-void
@@ -34,7 +31,6 @@
 
     return-object p0
 
-    .line 57
     :cond_0
     new-instance v0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
 
@@ -56,7 +52,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 62
     const-class v1, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -67,11 +62,9 @@
 
     goto :goto_0
 
-    .line 63
     :cond_0
     check-cast p1, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;
 
-    .line 64
     iget v1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
 
     iget v2, p1, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
@@ -96,7 +89,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 69
     iget v0, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -123,17 +115,14 @@
 .method public toStableParcelable()Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
     .locals 3
 
-    .line 44
     new-instance v0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;
 
     invoke-direct {v0}, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;-><init>()V
 
-    .line 45
     iget v1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
 
     iput v1, v0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;->detectionCount:I
 
-    .line 46
     iget-wide v1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mQuirkExpiry:J
 
     iput-wide v1, v0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirkParcelable;->quirkExpiry:J
@@ -144,14 +133,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 74
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v1, "detection count: "
 
-    .line 75
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     iget v1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mDetectionCount:I
@@ -160,14 +147,12 @@
 
     const-string v1, ", quirk expiry: "
 
-    .line 76
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     iget-wide v1, p0, Landroid/net/networkstack/aidl/quirks/IPv6ProvisioningLossQuirk;->mQuirkExpiry:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
-    .line 77
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0

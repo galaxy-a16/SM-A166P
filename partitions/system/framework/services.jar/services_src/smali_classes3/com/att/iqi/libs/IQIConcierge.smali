@@ -43,7 +43,6 @@
 .method public static synthetic $r8$lambda$ci1DVrSjz0Lo-3thrLARnsaaRZg(Lcom/att/iqi/libs/IQIConcierge;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/att/iqi/libs/IQIConcierge;->lambda$new$0(Ljava/lang/String;)V
 
     return-void
@@ -54,14 +53,12 @@
 
     const-string v0, "iqi_bridge"
 
-    .line 156
     invoke-static {v0}, Ljava/lang/System;->mapLibraryName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/att/iqi/libs/IQIConcierge;->BRIDGE_LIBRARY_NAME:Ljava/lang/String;
 
-    .line 290
     invoke-static {}, Lcom/att/iqi/libs/IQIConcierge;->createNetIdPairList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -74,10 +71,8 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 6
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
     new-instance v1, Lcom/att/iqi/libs/IQIConcierge$1;
 
     invoke-direct {v1, p0}, Lcom/att/iqi/libs/IQIConcierge$1;-><init>(Lcom/att/iqi/libs/IQIConcierge;)V
@@ -86,13 +81,10 @@
 
     const-string v0, "IQI Concierge version: 11.1-padre"
 
-    .line 78
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 81
     invoke-static {}, Lcom/att/iqi/lib/IQIManager;->getInstance()Lcom/att/iqi/lib/IQIManager;
 
-    .line 83
     new-instance v2, Landroid/content/IntentFilter;
 
     const-string v0, "com.att.iqi.action.ACTION_MCC_MNC_VALIDATION_STATE_CHANGED"
@@ -101,7 +93,6 @@
 
     const-string v3, "com.att.iqi.permission.MODIFY_MNC_MCC_VALIDATION_STATE"
 
-    .line 85
     invoke-static {}, Lcom/att/iqi/libs/WorkerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
@@ -110,10 +101,8 @@
 
     move-object v0, p1
 
-    .line 84
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    .line 87
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object p1
@@ -124,7 +113,6 @@
 
     invoke-virtual {p1, v0}, Lcom/att/iqi/libs/PreferenceStore;->registerPreferenceChangeListener(Lcom/att/iqi/libs/PreferenceStore$PreferenceChangeListener;)V
 
-    .line 92
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIConcierge;->updateMccMncValidationStateFromPrefStore()V
 
     return-void
@@ -133,19 +121,16 @@
 .method private static copyBridgeLibrary(Ljava/lang/String;)V
     .locals 6
 
-    .line 206
     sget-object v0, Lcom/att/iqi/libs/IQIConcierge;->BRIDGE_LIBRARY_NAME:Ljava/lang/String;
 
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 207
     invoke-static {p0, v0}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object p0
 
-    .line 209
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object v0
@@ -158,7 +143,6 @@
 
     move-result-object v0
 
-    .line 210
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -171,14 +155,12 @@
 
     new-array v0, v4, [Ljava/nio/file/LinkOption;
 
-    .line 212
     invoke-static {p0, v0}, Ljava/nio/file/Files;->exists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 213
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,12 +179,10 @@
 
     invoke-static {v0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 214
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object v0
 
-    .line 215
     invoke-interface {p0}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -211,7 +191,6 @@
 
     goto/16 :goto_0
 
-    .line 217
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -238,12 +217,10 @@
     :cond_1
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 221
     invoke-static {v0, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
     move-result-object v0
 
-    .line 223
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,7 +245,6 @@
 
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 225
     invoke-static {p0, v0}, Lcom/att/iqi/libs/IQIConcierge;->shouldCopy(Ljava/nio/file/Path;Ljava/nio/file/Path;)Z
 
     move-result v1
@@ -277,7 +253,6 @@
 
     const-string v1, "Performing copy..."
 
-    .line 226
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     const/4 v1, 0x2
@@ -285,7 +260,6 @@
     :try_start_0
     new-array v2, v1, [Ljava/nio/file/CopyOption;
 
-    .line 230
     sget-object v3, Ljava/nio/file/StandardCopyOption;->REPLACE_EXISTING:Ljava/nio/file/StandardCopyOption;
 
     aput-object v3, v2, v4
@@ -298,7 +272,6 @@
 
     invoke-static {v0, p0, v2}, Ljava/nio/file/Files;->copy(Ljava/nio/file/Path;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)Ljava/nio/file/Path;
 
-    .line 234
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v2, 0x7
@@ -341,19 +314,16 @@
 
     aput-object v1, v2, v3
 
-    .line 235
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 243
     invoke-static {p0, v0}, Ljava/nio/file/Files;->setPosixFilePermissions(Ljava/nio/file/Path;Ljava/util/Set;)Ljava/nio/file/Path;
 
     const-string p0, "Copy completed"
 
-    .line 244
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -363,7 +333,6 @@
     :catch_0
     move-exception p0
 
-    .line 246
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -375,7 +344,6 @@
     :cond_2
     const-string p0, "No copy needed"
 
-    .line 249
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     :goto_0
@@ -385,23 +353,19 @@
 .method private static createNetIdPairList()Ljava/util/ArrayList;
     .locals 4
 
-    .line 293
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 295
     :try_start_0
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v1
 
-    .line 296
     invoke-virtual {v1}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v1
 
-    .line 299
     const-class v2, Lcom/att/iqi/libs/IQIConcierge;
 
     const-string v3, "/mccmnc.xml"
@@ -412,13 +376,10 @@
 
     const/4 v3, 0x0
 
-    .line 300
     invoke-interface {v1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 301
     invoke-static {v1, v0}, Lcom/att/iqi/libs/IQIConcierge;->parseXmlConfig(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashSet;)V
 
-    .line 302
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_2
@@ -430,7 +391,6 @@
     :catch_0
     const-string v1, "XML resource reader failure"
 
-    .line 308
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
     goto :goto_0
@@ -438,7 +398,6 @@
     :catch_1
     const-string v1, "IQI XML resource not found"
 
-    .line 306
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
     goto :goto_0
@@ -446,10 +405,8 @@
     :catch_2
     const-string v1, "failed to start XML parser"
 
-    .line 304
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;)V
 
-    .line 311
     :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -461,25 +418,21 @@
 .method private static getNativeLibraryDirPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 189
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/16 v0, 0x400
 
-    .line 192
     :try_start_0
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    .line 193
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz p0, :cond_0
 
-    .line 195
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -496,7 +449,6 @@
 .method private static getVendorLibraryDirPath()Ljava/nio/file/Path;
     .locals 1
 
-    .line 0
     const/4 v0, 0x0
 
     return-object v0
@@ -505,7 +457,6 @@
 .method public static getVersion()Ljava/lang/String;
     .locals 1
 
-    .line 0
     const-string v0, "11.1-padre"
 
     return-object v0
@@ -514,12 +465,10 @@
 .method public static init(Landroid/content/Context;)V
     .locals 1
 
-    .line 114
     sget-object v0, Lcom/att/iqi/libs/IQIConcierge;->sInstance:Lcom/att/iqi/libs/IQIConcierge;
 
     if-nez v0, :cond_0
 
-    .line 115
     new-instance v0, Lcom/att/iqi/libs/IQIConcierge;
 
     invoke-direct {v0, p0}, Lcom/att/iqi/libs/IQIConcierge;-><init>(Landroid/content/Context;)V
@@ -533,7 +482,6 @@
 .method public static isServiceBindingAllowed()Z
     .locals 4
 
-    .line 124
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object v0
@@ -542,12 +490,10 @@
 
     const/4 v2, 0x1
 
-    .line 125
     invoke-virtual {v0, v1, v2}, Lcom/att/iqi/libs/PreferenceStore;->getInteger(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 126
     sget-boolean v1, Lcom/att/iqi/libs/IQIConcierge;->sMccMncValidationDisabled:Z
 
     if-nez v1, :cond_0
@@ -564,7 +510,6 @@
     :cond_1
     const/4 v2, 0x0
 
-    .line 128
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -626,14 +571,12 @@
 
     const-string v0, "disable_mcc_mnc_validation"
 
-    .line 88
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 89
     invoke-direct {p0}, Lcom/att/iqi/libs/IQIConcierge;->updateMccMncValidationStateFromPrefStore()V
 
     :cond_0
@@ -643,14 +586,12 @@
 .method public static loadBridgeLibrary(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 160
     invoke-static {}, Lcom/att/iqi/libs/IQIConcierge;->getVendorLibraryDirPath()Ljava/nio/file/Path;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 162
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -671,14 +612,12 @@
 
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 163
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object p0
 
     const-string p1, "bridge_path"
 
-    .line 164
     invoke-interface {v0}, Ljava/nio/file/Path;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -687,13 +626,11 @@
 
     goto :goto_0
 
-    .line 166
     :cond_0
     invoke-static {p0, p1}, Lcom/att/iqi/libs/IQIConcierge;->getNativeLibraryDirPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 167
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -712,7 +649,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 169
     invoke-static {p0}, Lcom/att/iqi/libs/IQIConcierge;->copyBridgeLibrary(Ljava/lang/String;)V
 
     :cond_1
@@ -723,17 +659,14 @@
 .method private static matchesNetId(Landroid/telephony/SubscriptionInfo;)Z
     .locals 6
 
-    .line 334
     invoke-virtual {p0}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 335
     invoke-virtual {p0}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 336
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -756,7 +689,6 @@
 
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 338
     sget-object v1, Lcom/att/iqi/libs/IQIConcierge;->sMCCMNCs:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -776,7 +708,6 @@
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 339
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -805,7 +736,6 @@
 
     invoke-static {v4}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 340
     iget-object v4, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v4, Ljava/lang/String;
@@ -830,7 +760,6 @@
 
     return p0
 
-    .line 345
     :cond_1
     sget-object p0, Lcom/att/iqi/libs/IQIConcierge;->sMCCMNCs:Ljava/util/ArrayList;
 
@@ -844,7 +773,6 @@
 .method private static parseXmlConfig(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashSet;)V
     .locals 4
 
-    .line 317
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -858,7 +786,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 320
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -867,35 +794,30 @@
 
     const-string v1, "carrier"
 
-    .line 321
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 322
     new-instance v0, Landroid/util/Pair;
 
     const-string/jumbo v1, "mcc"
 
     const/4 v2, 0x0
 
-    .line 323
     invoke-interface {p0, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v3, "mnc"
 
-    .line 324
     invoke-interface {p0, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 325
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -926,10 +848,8 @@
 
     invoke-static {v1}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 326
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 329
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -948,14 +868,12 @@
 
     new-array v1, v0, [Ljava/nio/file/LinkOption;
 
-    .line 256
     invoke-static {p0, v1}, Ljava/nio/file/Files;->exists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result v1
 
     new-array v2, v0, [Ljava/nio/file/LinkOption;
 
-    .line 257
     invoke-static {p1, v2}, Ljava/nio/file/Files;->exists(Ljava/nio/file/Path;[Ljava/nio/file/LinkOption;)Z
 
     move-result v2
@@ -964,18 +882,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 262
     :try_start_0
     const-class v5, Ljava/nio/file/attribute/BasicFileAttributes;
 
     new-array v6, v0, [Ljava/nio/file/LinkOption;
 
-    .line 263
     invoke-static {p0, v5, v6}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
 
     move-result-object p0
 
-    .line 264
     invoke-interface {p0}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
 
     move-result-object p0
@@ -991,7 +906,6 @@
     :catch_0
     move-exception p0
 
-    .line 266
     invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1004,18 +918,15 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 271
     :try_start_1
     const-class p0, Ljava/nio/file/attribute/BasicFileAttributes;
 
     new-array v7, v0, [Ljava/nio/file/LinkOption;
 
-    .line 272
     invoke-static {p1, p0, v7}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
 
     move-result-object p0
 
-    .line 273
     invoke-interface {p0}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
 
     move-result-object p0
@@ -1031,14 +942,12 @@
     :catch_1
     move-exception p0
 
-    .line 275
     invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {p1, p0}, Lcom/att/iqi/libs/LogUtil;->loge(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 278
     :cond_1
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -1097,7 +1006,6 @@
 .method private updateMccMncValidationStateFromPrefStore()V
     .locals 2
 
-    .line 96
     invoke-static {}, Lcom/att/iqi/libs/PreferenceStore;->getInstance()Lcom/att/iqi/libs/PreferenceStore;
 
     move-result-object p0
@@ -1106,7 +1014,6 @@
 
     const/4 v1, 0x0
 
-    .line 97
     invoke-virtual {p0, v0, v1}, Lcom/att/iqi/libs/PreferenceStore;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -1121,7 +1028,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 138
     invoke-virtual {p0}, Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;
 
     move-result-object p0
@@ -1130,14 +1036,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 139
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 140
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1155,7 +1059,6 @@
 
     check-cast v1, Landroid/telephony/SubscriptionInfo;
 
-    .line 141
     invoke-static {v1}, Lcom/att/iqi/libs/IQIConcierge;->matchesNetId(Landroid/telephony/SubscriptionInfo;)Z
 
     move-result v1
@@ -1164,7 +1067,6 @@
 
     const-string p0, "Non-AT&T SIM found"
 
-    .line 142
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1179,14 +1081,11 @@
     :cond_2
     const-string/jumbo p0, "updateSubscriptions - no active subscriptions"
 
-    .line 148
     invoke-static {p0}, Lcom/att/iqi/libs/LogUtil;->logd(Ljava/lang/String;)V
 
-    .line 151
     :goto_0
     sput-boolean v0, Lcom/att/iqi/libs/IQIConcierge;->sSimDisabled:Z
 
-    .line 153
     :cond_3
     invoke-static {}, Lcom/att/iqi/libs/IQIConcierge;->isServiceBindingAllowed()Z
 

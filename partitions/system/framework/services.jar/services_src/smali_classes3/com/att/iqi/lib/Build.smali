@@ -15,7 +15,6 @@
 .method public static getSdkVersion()Ljava/lang/String;
     .locals 1
 
-    .line 0
     const-string v0, "eb56a444 (API level: 14)"
 
     return-object v0

@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverServiceManager;Landroid/os/Looper;)V
     .locals 1
 
-    .line 906
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$H;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 907
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 912
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -42,13 +39,11 @@
 
     goto :goto_0
 
-    .line 917
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;
 
-    .line 918
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$H;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 
     invoke-static {p1}, Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;->-$$Nest$fgetcomponent(Lcom/android/server/sepunion/cover/CoverServiceManager$CoverServiceInfo;)Landroid/content/ComponentName;
@@ -67,7 +62,6 @@
 
     goto :goto_0
 
-    .line 914
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverServiceManager$H;->this$0:Lcom/android/server/sepunion/cover/CoverServiceManager;
 

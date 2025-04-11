@@ -17,7 +17,6 @@
 .method public static synthetic $r8$lambda$b0FU-iOelCXTgK8AJIhgP4Ueeus(Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->lambda$registerAll$0(Ljava/util/function/Supplier;)V
 
     return-void
@@ -26,17 +25,14 @@
 .method public constructor <init>(Ljava/util/function/Supplier;)V
     .locals 1
 
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 67
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mBiometricServiceSupplier:Ljava/util/function/Supplier;
 
     return-void
@@ -45,7 +41,6 @@
 .method private synthetic lambda$registerAll$0(Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 103
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->registerAllInBackground(Ljava/util/function/Supplier;)V
 
     return-void
@@ -65,17 +60,14 @@
 
     const-string v0, "addAllRegisteredCallback, callback is null"
 
-    .line 148
     invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 149
     monitor-exit p0
 
     return-void
 
-    .line 152
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
@@ -84,7 +76,6 @@
 
     move-result p1
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mServiceProviders:Ljava/util/List;
 
     if-eqz v0, :cond_1
@@ -101,7 +92,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 155
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->broadcastAllAuthenticatorsRegistered()V
 
     goto :goto_1
@@ -113,12 +103,10 @@
 
     const-string v0, "addAllRegisteredCallback failed to register callback"
 
-    .line 157
     invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 159
     :cond_3
     :goto_1
     monitor-exit p0
@@ -138,7 +126,6 @@
 
     monitor-enter p0
 
-    .line 162
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -151,7 +138,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2, v1}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -160,7 +146,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 166
     :try_start_1
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
@@ -169,7 +154,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 170
     :try_start_2
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -193,12 +177,10 @@
 
     const-string v5, "Remote exception in broadcastAllAuthenticatorsRegistered"
 
-    .line 168
     invoke-static {v4, v5, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 170
     :try_start_4
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -214,10 +196,8 @@
 
     invoke-virtual {v1, v2}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 171
     throw v0
 
-    .line 173
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mRegisteredCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -225,7 +205,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 174
     monitor-exit p0
 
     return-void
@@ -243,7 +222,6 @@
 
     monitor-enter p0
 
-    .line 135
     :try_start_0
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -251,19 +229,16 @@
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mServiceProviders:Ljava/util/List;
 
-    .line 136
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
-    .line 137
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->broadcastAllAuthenticatorsRegistered()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 138
     monitor-exit p0
 
     return-void
@@ -279,7 +254,6 @@
 .method public getAllProperties()Ljava/util/List;
     .locals 1
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -300,12 +274,10 @@
 .method public getProviderForSensor(I)Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
     .locals 2
 
-    .line 193
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mServiceProviders:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 194
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mServiceProviders:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -325,7 +297,6 @@
 
     check-cast v0, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
 
-    .line 195
     invoke-interface {v0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;->containsSensor(I)Z
 
     move-result v1
@@ -343,7 +314,6 @@
 .method public getProviders()Ljava/util/List;
     .locals 1
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mServiceProviders:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -364,7 +334,6 @@
 .method public getSingleProvider()Landroid/util/Pair;
     .locals 5
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -383,7 +352,6 @@
 
     goto/16 :goto_1
 
-    .line 221
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
@@ -396,7 +364,6 @@
 
     if-le v0, v3, :cond_1
 
-    .line 222
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +374,6 @@
 
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
-    .line 223
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v3
@@ -418,10 +384,8 @@
 
     move-result-object v0
 
-    .line 222
     invoke-static {v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
@@ -435,14 +399,12 @@
 
     iget v0, v0, Landroid/hardware/biometrics/SensorPropertiesInternal;->sensorId:I
 
-    .line 227
     invoke-virtual {p0, v0}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->getProviderForSensor(I)Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
-    .line 229
     new-instance v1, Landroid/util/Pair;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -453,7 +415,6 @@
 
     return-object v1
 
-    .line 232
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -482,7 +443,6 @@
     :catch_0
     move-exception v0
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mAllProps:Ljava/util/List;
 
     if-nez v1, :cond_3
@@ -491,7 +451,6 @@
 
     goto :goto_0
 
-    .line 239
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -513,7 +472,6 @@
 
     move-result-object p0
 
-    .line 241
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -531,14 +489,12 @@
 
     invoke-static {v2, p0, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 242
     throw v0
 
     :cond_4
     :goto_1
     const-string p0, "No sensors found"
 
-    .line 215
     invoke-static {v2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -550,7 +506,6 @@
 .method public registerAll(Ljava/util/function/Supplier;)V
     .locals 4
 
-    .line 99
     new-instance v0, Lcom/android/server/ServiceThread;
 
     const/16 v1, 0xa
@@ -561,10 +516,8 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
-    .line 101
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 102
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -573,14 +526,12 @@
 
     invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 103
     new-instance v2, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p0, p1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;Ljava/util/function/Supplier;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 104
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
     return-void
@@ -589,7 +540,6 @@
 .method public registerAllInBackground(Ljava/util/function/Supplier;)V
     .locals 6
 
-    .line 110
     invoke-interface {p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -598,12 +548,10 @@
 
     if-nez p1, :cond_0
 
-    .line 112
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 115
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->mBiometricServiceSupplier:Ljava/util/function/Supplier;
 
@@ -615,12 +563,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 121
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 122
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -638,12 +584,10 @@
 
     check-cast v3, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;
 
-    .line 123
     invoke-interface {v3}, Lcom/android/server/biometrics/sensors/BiometricServiceProvider;->getSensorProperties()Ljava/util/List;
 
     move-result-object v3
 
-    .line 124
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -661,24 +605,20 @@
 
     check-cast v5, Landroid/hardware/biometrics/SensorPropertiesInternal;
 
-    .line 125
     invoke-virtual {p0, v0, v5}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->registerService(Landroid/hardware/biometrics/IBiometricService;Landroid/hardware/biometrics/SensorPropertiesInternal;)V
 
     goto :goto_1
 
-    .line 127
     :cond_1
     invoke-interface {v1, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 130
     :cond_2
     invoke-virtual {p0, p1, v1}, Lcom/android/server/biometrics/sensors/BiometricServiceRegistry;->finishRegistration(Ljava/util/List;Ljava/util/List;)V
 
     return-void
 
-    .line 117
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 

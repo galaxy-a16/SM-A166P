@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 137
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_TABLET_MIN_ASPECT_RATIO_MODE:Z
 
     if-eqz v0, :cond_0
@@ -26,7 +25,6 @@
     :cond_0
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 138
     :goto_0
     sput v0, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;->DEFAULT_RATIO:F
 
@@ -36,10 +34,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 140
     invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    .line 141
     sget-object v0, Lcom/samsung/android/server/packagefeature/PackageFeature;->FIXED_ASPECT_RATIO:Lcom/samsung/android/server/packagefeature/PackageFeature;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/server/packagefeature/PackageFeature;->registerCallback(Lcom/samsung/android/server/packagefeature/PackageFeatureCallback;)V
@@ -50,7 +46,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/FixedAspectRatioController$SystemChange-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;-><init>()V
 
     return-void
@@ -61,10 +56,8 @@
 .method public getAspectRatio(Ljava/lang/String;)F
     .locals 0
 
-    .line 145
     monitor-enter p0
 
-    .line 146
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -74,7 +67,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 147
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
@@ -92,7 +84,6 @@
     :catchall_0
     move-exception p1
 
-    .line 148
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -103,14 +94,11 @@
 .method public onPackageFeatureDataChanged(Lcom/samsung/android/server/packagefeature/PackageFeatureData;)V
     .locals 6
 
-    .line 153
     monitor-enter p0
 
-    .line 154
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 155
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -132,21 +120,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 156
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 157
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 158
     sget-object v2, Lcom/samsung/android/server/packagefeature/PackageFeatureData;->EMPTY_STRING:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -155,7 +140,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 159
     sget v0, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;->DEFAULT_RATIO:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -172,14 +156,12 @@
     :try_start_1
     const-string v2, ":"
 
-    .line 163
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 164
     aget-object v3, v2, v3
 
     invoke-static {v3}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -188,7 +170,6 @@
 
     const/4 v4, 0x1
 
-    .line 165
     aget-object v2, v2, v4
 
     invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -197,7 +178,6 @@
 
     div-float/2addr v3, v2
 
-    .line 166
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -215,7 +195,6 @@
     :try_start_2
     const-string v3, "PackageSettingsManager"
 
-    .line 168
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -238,7 +217,6 @@
 
     invoke-static {v3, v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 170
     sget v0, Lcom/android/server/wm/FixedAspectRatioController$SystemChange;->DEFAULT_RATIO:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -249,7 +227,6 @@
 
     goto :goto_0
 
-    .line 173
     :cond_1
     monitor-exit p0
 

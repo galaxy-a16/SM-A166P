@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/companion/AssociationInfo;
 
     invoke-static {p1}, Lcom/android/server/companion/AssociationStoreImpl;->$r8$lambda$9u5K-LoQsOFqxhiVIFuhODRc5wg(Landroid/companion/AssociationInfo;)V

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/mars/database/MARsDBManager;)V
     .locals 0
 
-    .line 256
     iput-object p1, p0, Lcom/android/server/am/mars/database/MARsDBManager$1;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 2
 
-    .line 260
     invoke-static {}, Lcom/android/server/am/mars/database/FASDataManager;->getInstance()Lcom/android/server/am/mars/database/FASDataManager;
 
     move-result-object v0
@@ -38,14 +36,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 261
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 263
     invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
 
     move-result-object p0
@@ -54,7 +50,6 @@
 
     goto :goto_0
 
-    .line 265
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsDBManager$1;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 

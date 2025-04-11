@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;
 
     invoke-static {p1}, Lcom/android/server/am/AppRestrictionController$RestrictionSettings;->$r8$lambda$vVkvGrzzeOXCioeXQUrD3M_GgSs(Lcom/android/server/am/AppRestrictionController$RestrictionSettings$PkgSettings;)V

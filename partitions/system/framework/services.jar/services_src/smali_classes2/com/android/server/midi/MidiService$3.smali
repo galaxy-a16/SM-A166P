@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/midi/MidiService;Landroid/bluetooth/BluetoothDevice;)V
     .locals 0
 
-    .line 1058
     iput-object p1, p0, Lcom/android/server/midi/MidiService$3;->this$0:Lcom/android/server/midi/MidiService;
 
     iput-object p2, p0, Lcom/android/server/midi/MidiService$3;->val$bluetoothDevice:Landroid/bluetooth/BluetoothDevice;
@@ -31,7 +30,6 @@
 .method public onDeviceOpened(Landroid/media/midi/MidiDevice;)V
     .locals 4
 
-    .line 1061
     iget-object v0, p0, Lcom/android/server/midi/MidiService$3;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v0}, Lcom/android/server/midi/MidiService;->-$$Nest$fgetmBleMidiDeviceMap(Lcom/android/server/midi/MidiService;)Ljava/util/HashMap;
@@ -43,7 +41,6 @@
     :try_start_0
     const-string v1, "MidiService"
 
-    .line 1062
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1063
     iget-object v1, p0, Lcom/android/server/midi/MidiService$3;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v1}, Lcom/android/server/midi/MidiService;->-$$Nest$fgetmBleMidiDeviceMap(Lcom/android/server/midi/MidiService;)Ljava/util/HashMap;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v1, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1064
     monitor-exit v0
 
     return-void

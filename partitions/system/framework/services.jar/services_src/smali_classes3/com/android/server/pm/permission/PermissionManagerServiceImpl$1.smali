@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$5Ix503j6rCPxSTiPe8XLMGU_n14(II)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->lambda$onGidsChanged$0(II)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$GGR4cIlEKNtcEQ9TfJfsuFhcSyw(Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;Ljava/lang/String;ILjava/lang/String;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->lambda$onPermissionRevoked$1(Ljava/lang/String;ILjava/lang/String;I)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)V
     .locals 0
 
-    .line 372
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     const/4 p1, 0x0
@@ -44,7 +41,6 @@
 
     const-string/jumbo v0, "permission grant or revoke changed gids"
 
-    .line 375
     invoke-static {p0, p1, v0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$smkillUid(IILjava/lang/String;)V
 
     return-void
@@ -55,14 +51,12 @@
 
     const-string v0, "android.permission.POST_NOTIFICATIONS"
 
-    .line 400
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 401
     invoke-virtual {p0, p2}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->isAppBackupAndRestoreRunning(I)Z
 
     move-result p0
@@ -71,7 +65,6 @@
 
     return-void
 
-    .line 405
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -81,12 +74,10 @@
 
     const-string/jumbo p1, "permissions revoked"
 
-    .line 407
     invoke-static {p0, p4, p1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$smkillUid(IILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 409
     :cond_1
     invoke-static {p0, p4, p3}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$smkillUid(IILjava/lang/String;)V
 
@@ -99,7 +90,6 @@
 .method public final isAppBackupAndRestoreRunning(I)Z
     .locals 4
 
-    .line 415
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     const-string v1, "android.permission.BACKUP"
@@ -114,14 +104,12 @@
 
     return v1
 
-    .line 420
     :cond_0
     :try_start_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
 
-    .line 421
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/Context;
@@ -149,7 +137,6 @@
     :cond_1
     move v0, v1
 
-    .line 423
     :goto_0
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
@@ -157,14 +144,12 @@
 
     move-result-object p0
 
-    .line 424
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     const-string/jumbo v3, "user_setup_personalization_state"
 
-    .line 423
     invoke-static {p0, v3, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -194,7 +179,6 @@
     :catch_0
     move-exception p0
 
-    .line 429
     invoke-static {}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$sfgetLOG_TAG()Ljava/lang/String;
 
     move-result-object p1
@@ -221,7 +205,6 @@
 .method public onGidsChanged(II)V
     .locals 1
 
-    .line 375
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmHandler(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/os/Handler;
@@ -240,7 +223,6 @@
 .method public onInstallPermissionGranted()V
     .locals 1
 
-    .line 386
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -257,7 +239,6 @@
 .method public onInstallPermissionRevoked()V
     .locals 1
 
-    .line 436
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -274,7 +255,6 @@
 .method public onInstallPermissionUpdated()V
     .locals 1
 
-    .line 444
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -291,10 +271,8 @@
 .method public onInstallPermissionUpdatedNotifyListener(I)V
     .locals 0
 
-    .line 459
     invoke-virtual {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->onInstallPermissionUpdated()V
 
-    .line 460
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmOnPermissionChangeListeners(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;
@@ -309,7 +287,6 @@
 .method public onPermissionGranted(II)V
     .locals 0
 
-    .line 379
     iget-object p2, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p2}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmOnPermissionChangeListeners(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;
@@ -318,7 +295,6 @@
 
     invoke-virtual {p2, p1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;->onPermissionsChanged(I)V
 
-    .line 382
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -335,7 +311,6 @@
 .method public onPermissionRemoved()V
     .locals 1
 
-    .line 448
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -352,7 +327,6 @@
 .method public onPermissionRevoked(IILjava/lang/String;ZLjava/lang/String;)V
     .locals 7
 
-    .line 391
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmOnPermissionChangeListeners(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;
@@ -361,7 +335,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;->onPermissionsChanged(I)V
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {v0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -376,7 +349,6 @@
 
     return-void
 
-    .line 399
     :cond_0
     iget-object p4, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
@@ -408,7 +380,6 @@
 .method public onPermissionUpdated([IZ)V
     .locals 0
 
-    .line 440
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {p0}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmPackageManagerInt(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Landroid/content/pm/PackageManagerInternal;
@@ -425,18 +396,15 @@
 .method public onPermissionUpdatedNotifyListener([IZI)V
     .locals 2
 
-    .line 452
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->onPermissionUpdated([IZ)V
 
     const/4 p2, 0x0
 
-    .line 453
     :goto_0
     array-length v0, p1
 
     if-ge p2, v0, :cond_0
 
-    .line 454
     aget v0, p1, p2
 
     invoke-static {p3}, Landroid/os/UserHandle;->getAppId(I)I
@@ -447,7 +415,6 @@
 
     move-result v0
 
-    .line 455
     iget-object v1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceImpl$1;->this$0:Lcom/android/server/pm/permission/PermissionManagerServiceImpl;
 
     invoke-static {v1}, Lcom/android/server/pm/permission/PermissionManagerServiceImpl;->-$$Nest$fgetmOnPermissionChangeListeners(Lcom/android/server/pm/permission/PermissionManagerServiceImpl;)Lcom/android/server/pm/permission/PermissionManagerServiceImpl$OnPermissionChangeListeners;

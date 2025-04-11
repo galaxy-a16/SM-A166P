@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/print/UserState;
 
     invoke-static {p1}, Lcom/android/server/print/UserState;->$r8$lambda$Z26VE6un20f2mMYjm7BU680MSHA(Lcom/android/server/print/UserState;)V

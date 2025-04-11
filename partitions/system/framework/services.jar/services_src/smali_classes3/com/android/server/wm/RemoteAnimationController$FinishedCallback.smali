@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/wm/RemoteAnimationController;)V
     .locals 0
 
-    .line 505
     invoke-direct {p0}, Landroid/view/IRemoteAnimationFinishedCallback$Stub;-><init>()V
 
-    .line 506
     iput-object p1, p0, Lcom/android/server/wm/RemoteAnimationController$FinishedCallback;->mOuter:Lcom/android/server/wm/RemoteAnimationController;
 
     return-void
@@ -25,7 +23,6 @@
 .method public onAnimationFinished()V
     .locals 5
 
-    .line 511
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_REMOTE_ANIMATIONS_enabled:Z
 
     if-eqz v0, :cond_0
@@ -50,29 +47,24 @@
 
     invoke-static {v1, v3, v4, v2, v0}, Lcom/android/internal/protolog/ProtoLogImpl;->d(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 512
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 514
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wm/RemoteAnimationController$FinishedCallback;->mOuter:Lcom/android/server/wm/RemoteAnimationController;
 
     if-eqz v2, :cond_1
 
-    .line 515
     invoke-static {v2}, Lcom/android/server/wm/RemoteAnimationController;->-$$Nest$monAnimationFinished(Lcom/android/server/wm/RemoteAnimationController;)V
 
     const/4 v2, 0x0
 
-    .line 519
     iput-object v2, p0, Lcom/android/server/wm/RemoteAnimationController$FinishedCallback;->mOuter:Lcom/android/server/wm/RemoteAnimationController;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 522
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -83,14 +75,12 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 523
     throw p0
 .end method
 
 .method public release()V
     .locals 5
 
-    .line 531
     sget-boolean v0, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_REMOTE_ANIMATIONS_enabled:Z
 
     if-eqz v0, :cond_0
@@ -118,7 +108,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 532
     iput-object v0, p0, Lcom/android/server/wm/RemoteAnimationController$FinishedCallback;->mOuter:Lcom/android/server/wm/RemoteAnimationController;
 
     return-void

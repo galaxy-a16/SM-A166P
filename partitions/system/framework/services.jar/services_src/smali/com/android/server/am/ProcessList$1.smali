@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/am/ProcessList;)V
     .locals 0
 
-    .line 1023
     iput-object p1, p0, Lcom/android/server/am/ProcessList$1;->this$0:Lcom/android/server/am/ProcessList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +34,6 @@
 
     return v1
 
-    .line 1055
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
@@ -63,13 +61,11 @@
 
     return v1
 
-    .line 1087
     :cond_2
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result p0
 
-    .line 1088
     invoke-static {p0}, Lcom/android/server/am/LmkdStatsReporter;->logStateChanged(I)V
 
     return v3
@@ -81,23 +77,19 @@
 
     return v1
 
-    .line 1076
     :cond_4
     sget-object p0, Lcom/android/server/am/ActiveServices;->sNumForegroundServices:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 1077
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/util/Pair;
 
-    .line 1078
     iget-object p2, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Integer;
 
-    .line 1079
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -106,12 +98,10 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 1080
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
-    .line 1078
     invoke-static {p1, p2, p0}, Lcom/android/server/am/LmkdStatsReporter;->logKillOccurred(Ljava/io/DataInputStream;II)V
 
     return v3
@@ -123,25 +113,21 @@
 
     return v1
 
-    .line 1060
     :cond_6
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result p2
 
-    .line 1061
     invoke-virtual {p1}, Ljava/io/DataInputStream;->readInt()I
 
     move-result p1
 
-    .line 1062
     iget-object v0, p0, Lcom/android/server/am/ProcessList$1;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object v0, v0, Lcom/android/server/am/ProcessList;->mAppExitInfoTracker:Lcom/android/server/am/AppExitInfoTracker;
 
     invoke-virtual {v0, p2, p1}, Lcom/android/server/am/AppExitInfoTracker;->scheduleNoteLmkdProcKilled(II)V
 
-    .line 1064
     iget-object p1, p0, Lcom/android/server/am/ProcessList$1;->this$0:Lcom/android/server/am/ProcessList;
 
     iget-object p1, p1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -150,7 +136,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/server/am/KillPolicyManager;->calculateLmkdStatus(I)V
 
-    .line 1065
     invoke-static {}, Lcom/android/server/am/pmm/PersonalizedMemoryManager;->getInstance()Lcom/android/server/am/pmm/PersonalizedMemoryManager;
 
     move-result-object p1
@@ -174,7 +159,6 @@
 
     const-string p1, "Invalid buffer data. Failed to log LMK_KILL_OCCURRED"
 
-    .line 1094
     invoke-static {p0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
@@ -183,7 +167,6 @@
 .method public isReplyExpected(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;I)Z
     .locals 1
 
-    .line 1043
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
@@ -194,7 +177,6 @@
 
     if-ne p3, p0, :cond_0
 
-    .line 1044
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result p0
@@ -218,10 +200,8 @@
 
     const-string v1, "Connection with lmkd established"
 
-    .line 1026
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1027
     iget-object p0, p0, Lcom/android/server/am/ProcessList$1;->this$0:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/ProcessList;->onLmkdConnect(Ljava/io/OutputStream;)Z
@@ -238,10 +218,8 @@
 
     const-string v0, "Lost connection to lmkd"
 
-    .line 1032
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1034
     sget-object p0, Lcom/android/server/am/ProcessList;->sKillHandler:Lcom/android/server/am/ProcessList$KillHandler;
 
     const/16 v0, 0xfa1

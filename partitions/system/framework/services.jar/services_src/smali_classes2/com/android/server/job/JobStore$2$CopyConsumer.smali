@@ -18,7 +18,6 @@
 .method public static bridge synthetic -$$Nest$fgetmJobStoreCopy(Lcom/android/server/job/JobStore$2$CopyConsumer;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
     return-object p0
@@ -27,7 +26,6 @@
 .method public static bridge synthetic -$$Nest$mprepare(Lcom/android/server/job/JobStore$2$CopyConsumer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/JobStore$2$CopyConsumer;->prepare()V
 
     return-void
@@ -36,7 +34,6 @@
 .method public static bridge synthetic -$$Nest$mreset(Lcom/android/server/job/JobStore$2$CopyConsumer;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/job/JobStore$2$CopyConsumer;->reset()V
 
     return-void
@@ -45,12 +42,10 @@
 .method public constructor <init>(Lcom/android/server/job/JobStore$2;)V
     .locals 0
 
-    .line 640
     iput-object p1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 641
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -65,7 +60,6 @@
 .method public accept(Lcom/android/server/job/controllers/JobStatus;)V
     .locals 2
 
-    .line 686
     iget-object v0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
     iget-object v0, v0, Lcom/android/server/job/JobStore$2;->this$0:Lcom/android/server/job/JobStore;
@@ -85,7 +79,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 687
     :goto_0
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->isPersisted()Z
 
@@ -111,7 +104,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 688
     :cond_1
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
@@ -123,17 +115,14 @@
 
     if-nez v1, :cond_2
 
-    .line 690
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 691
     iget-object p0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 693
     :cond_2
     new-instance p0, Lcom/android/server/job/controllers/JobStatus;
 
@@ -148,7 +137,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 640
     check-cast p1, Lcom/android/server/job/controllers/JobStatus;
 
     invoke-virtual {p0, p1}, Lcom/android/server/job/JobStore$2$CopyConsumer;->accept(Lcom/android/server/job/controllers/JobStatus;)V
@@ -161,7 +149,6 @@
 
     const-string v0, "JobStore"
 
-    .line 645
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
     iget-object v1, v1, Lcom/android/server/job/JobStore$2;->this$0:Lcom/android/server/job/JobStore;
@@ -204,7 +191,6 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mCopyAllJobs:Z
 
-    .line 646
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
     iget-object v1, v1, Lcom/android/server/job/JobStore$2;->this$0:Lcom/android/server/job/JobStore;
@@ -215,7 +201,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 649
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
     iget-object v1, v1, Lcom/android/server/job/JobStore$2;->this$0:Lcom/android/server/job/JobStore;
@@ -230,7 +215,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 656
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
 
@@ -250,12 +234,10 @@
 
     const-string p0, "Couldn\'t get job file list"
 
-    .line 662
     invoke-static {v0, p0}, Landroid/util/Slog;->wtfStack(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 664
     :cond_2
     array-length v0, v1
 
@@ -264,7 +246,6 @@
 
     aget-object v3, v1, v2
 
-    .line 665
     invoke-static {v3}, Lcom/android/server/job/JobStore;->extractUidFromJobFileName(Ljava/io/File;)I
 
     move-result v3
@@ -273,7 +254,6 @@
 
     if-eq v3, v4, :cond_3
 
-    .line 667
     iget-object v4, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
     new-instance v5, Ljava/util/ArrayList;
@@ -292,12 +272,10 @@
 
     const-string v1, "Not allowed to read job file directory"
 
-    .line 658
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
 
-    .line 672
     :cond_4
     :goto_3
     iget-object v0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
@@ -314,7 +292,6 @@
 
     if-ge v2, v0, :cond_6
 
-    .line 673
     iget-object v0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
     iget-object v1, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->this$1:Lcom/android/server/job/JobStore$2;
@@ -339,7 +316,6 @@
 
     goto :goto_3
 
-    .line 680
     :cond_5
     iget-object p0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
@@ -357,7 +333,6 @@
 .method public final reset()V
     .locals 0
 
-    .line 698
     iget-object p0, p0, Lcom/android/server/job/JobStore$2$CopyConsumer;->mJobStoreCopy:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V

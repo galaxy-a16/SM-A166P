@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/UrspService;)V
     .locals 0
 
-    .line 132
     iput-object p1, p0, Lcom/android/server/net/UrspService$2;->this$0:Lcom/android/server/net/UrspService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +25,6 @@
 
     const-string p1, "android.intent.extra.USER"
 
-    .line 135
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -37,7 +35,6 @@
 
     if-nez p1, :cond_0
 
-    .line 139
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     return-void
 
-    .line 143
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -76,7 +72,6 @@
 
     if-nez v1, :cond_1
 
-    .line 148
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +94,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_1
     iget-object p0, p0, Lcom/android/server/net/UrspService$2;->this$0:Lcom/android/server/net/UrspService;
 

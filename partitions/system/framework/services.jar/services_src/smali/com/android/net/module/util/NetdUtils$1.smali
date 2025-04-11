@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 265
     invoke-static {}, Lcom/android/net/module/util/NetdUtils$ModifyOperation;->values()[Lcom/android/net/module/util/NetdUtils$ModifyOperation;
 
     move-result-object v0

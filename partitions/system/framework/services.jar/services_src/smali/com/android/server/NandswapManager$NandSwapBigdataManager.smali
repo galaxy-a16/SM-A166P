@@ -15,7 +15,6 @@
 .method public static bridge synthetic -$$Nest$smuploadBigdataToHQM()V
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->uploadBigdataToHQM()V
 
     return-void
@@ -62,7 +61,6 @@
 
     const-string/jumbo v18, "swap_used"
 
-    .line 1101
     filled-new-array/range {v0 .. v18}, [Ljava/lang/String;
 
     move-result-object v0
@@ -75,15 +73,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1110
     sput-object p1, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->mContext:Landroid/content/Context;
 
     const-string p0, "HqmManagerService"
 
-    .line 1112
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -92,7 +87,6 @@
 
     sput-object p0, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->semHqmManager:Landroid/os/SemHqmManager;
 
-    .line 1115
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object p0
@@ -113,7 +107,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1116
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object p0
@@ -127,7 +120,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/server/NandswapManager$NandSwapBigdataManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/NandswapManager$NandSwapBigdataManager;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -136,7 +128,6 @@
 .method public static makeJsonFormat()Ljava/lang/String;
     .locals 16
 
-    .line 1142
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v0
@@ -145,7 +136,6 @@
 
     move-result-object v0
 
-    .line 1143
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v1
@@ -154,12 +144,10 @@
 
     move-result-object v1
 
-    .line 1144
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$smgetMemInfo()Ljava/util/HashMap;
 
     move-result-object v2
 
-    .line 1146
     invoke-virtual {v1}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
@@ -182,7 +170,6 @@
 
     goto/16 :goto_5
 
-    .line 1153
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -208,7 +195,6 @@
 
     move-result-object v3
 
-    .line 1155
     sget-object v6, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->bigdataJsonFormat:[Ljava/lang/String;
 
     array-length v7, v6
@@ -224,7 +210,6 @@
 
     const-string v11, "count_average"
 
-    .line 1157
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -233,7 +218,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 1158
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
@@ -261,14 +245,12 @@
     :cond_1
     const-string/jumbo v11, "size_average"
 
-    .line 1159
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_2
 
-    .line 1160
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
@@ -296,14 +278,12 @@
     :cond_2
     const-string/jumbo v11, "ppr_count_average"
 
-    .line 1161
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_3
 
-    .line 1162
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
@@ -331,14 +311,12 @@
     :cond_3
     const-string/jumbo v11, "ppr_size_average"
 
-    .line 1163
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_4
 
-    .line 1164
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
@@ -366,7 +344,6 @@
     :cond_4
     const-string/jumbo v11, "objcnt"
 
-    .line 1165
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -388,7 +365,6 @@
     :cond_5
     const-string/jumbo v11, "max_count"
 
-    .line 1167
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -405,7 +381,6 @@
 
     const-string/jumbo v11, "ppr_max_count"
 
-    .line 1168
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -425,14 +400,12 @@
     :cond_6
     const-string/jumbo v11, "reads"
 
-    .line 1170
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_7
 
-    .line 1171
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -486,14 +459,12 @@
     :cond_7
     const-string/jumbo v11, "writes"
 
-    .line 1172
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_8
 
-    .line 1173
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -547,14 +518,12 @@
     :cond_8
     const-string/jumbo v11, "ppr_reads"
 
-    .line 1174
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_9
 
-    .line 1175
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -608,14 +577,12 @@
     :cond_9
     const-string/jumbo v11, "ppr_writes"
 
-    .line 1176
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_a
 
-    .line 1177
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -669,14 +636,12 @@
     :cond_a
     const-string/jumbo v11, "objreads"
 
-    .line 1178
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_b
 
-    .line 1179
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -730,14 +695,12 @@
     :cond_b
     const-string/jumbo v11, "objwrites"
 
-    .line 1180
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_c
 
-    .line 1181
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v1, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -791,7 +754,6 @@
     :cond_c
     const-string v11, "gpu_total_mem"
 
-    .line 1182
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -802,7 +764,6 @@
 
     const-string v11, "KgslShmemUsage"
 
-    .line 1183
     invoke-virtual {v2, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v13
@@ -828,7 +789,6 @@
     :cond_e
     const-string v11, "gpu_reclaimed_mem"
 
-    .line 1184
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -837,7 +797,6 @@
 
     const-string v11, "KgslReclaimed"
 
-    .line 1185
     invoke-virtual {v2, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v13
@@ -860,7 +819,6 @@
     :cond_10
     const-string/jumbo v11, "swap_used"
 
-    .line 1186
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -869,7 +827,6 @@
 
     const-string v11, "SwapTotal"
 
-    .line 1187
     invoke-virtual {v2, v11}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v11
@@ -903,7 +860,6 @@
     :cond_11
     return-object v4
 
-    .line 1169
     :cond_12
     :goto_2
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -946,7 +902,6 @@
 
     goto :goto_4
 
-    .line 1166
     :cond_13
     :goto_3
     sget-object v11, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -963,7 +918,6 @@
 
     move-result-object v11
 
-    .line 1191
     :goto_4
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -993,7 +947,6 @@
 
     goto/16 :goto_0
 
-    .line 1193
     :cond_14
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1001,7 +954,6 @@
 
     if-eqz v0, :cond_15
 
-    .line 1194
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1015,12 +967,10 @@
     :cond_15
     return-object v3
 
-    .line 1147
     :cond_16
     :goto_5
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 1148
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
     move-result v1
@@ -1053,7 +1003,6 @@
 
     const-string v1, "%s(%d) or bd_stat(%d) or meminfo(%d) is empty..."
 
-    .line 1147
     invoke-static {v3, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1068,7 +1017,6 @@
 .method public static uploadBigdataToHQM()V
     .locals 12
 
-    .line 1121
     sget-object v0, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->semHqmManager:Landroid/os/SemHqmManager;
 
     const-string v1, "NandswapManager"
@@ -1077,12 +1025,10 @@
 
     const-string v0, "Bigdata semHqmManager isn\'t initialized..."
 
-    .line 1122
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1126
     :cond_0
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
@@ -1096,15 +1042,12 @@
 
     const-string v0, "Upload Bigdata..."
 
-    .line 1127
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1128
     invoke-static {}, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->makeJsonFormat()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 1130
     sget-object v2, Lcom/android/server/NandswapManager$NandSwapBigdataManager;->semHqmManager:Landroid/os/SemHqmManager;
 
     const/4 v3, 0x0
@@ -1127,31 +1070,26 @@
 
     const-string v0, "Initialize bigdata information..."
 
-    .line 1132
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/NandswapManager$NandswapClient;->initBigdataInfoProp()V
 
-    .line 1134
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/NandswapManager$NandswapClient;->clearAverageList()V
 
-    .line 1135
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/server/NandswapManager$NandswapClient;->setPreviousInfo()V
 
-    .line 1136
     invoke-static {}, Lcom/android/server/NandswapManager;->-$$Nest$sfgetmClient()Lcom/android/server/NandswapManager$NandswapClient;
 
     move-result-object v0

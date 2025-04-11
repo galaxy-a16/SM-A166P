@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/content/ContentService;)V
     .locals 0
 
-    .line 215
     iput-object p1, p0, Lcom/android/server/content/ContentService$1;->this$0:Lcom/android/server/content/ContentService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 218
     iget-object p1, p0, Lcom/android/server/content/ContentService$1;->this$0:Lcom/android/server/content/ContentService;
 
     invoke-static {p1}, Lcom/android/server/content/ContentService;->-$$Nest$fgetmCache(Lcom/android/server/content/ContentService;)Landroid/util/SparseArray;
@@ -36,7 +34,6 @@
     :try_start_0
     const-string v0, "android.intent.action.LOCALE_CHANGED"
 
-    .line 219
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -47,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 220
     iget-object p0, p0, Lcom/android/server/content/ContentService$1;->this$0:Lcom/android/server/content/ContentService;
 
     invoke-static {p0}, Lcom/android/server/content/ContentService;->-$$Nest$fgetmCache(Lcom/android/server/content/ContentService;)Landroid/util/SparseArray;
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 222
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -70,24 +65,20 @@
 
     const/16 v2, -0x2710
 
-    .line 224
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 226
     invoke-virtual {v0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 227
     iget-object p0, p0, Lcom/android/server/content/ContentService$1;->this$0:Lcom/android/server/content/ContentService;
 
     const/4 v1, 0x0
 
     invoke-static {p0, p2, v0, v1}, Lcom/android/server/content/ContentService;->-$$Nest$minvalidateCacheLocked(Lcom/android/server/content/ContentService;ILjava/lang/String;Landroid/net/Uri;)V
 
-    .line 230
     :cond_1
     :goto_0
     monitor-exit p1

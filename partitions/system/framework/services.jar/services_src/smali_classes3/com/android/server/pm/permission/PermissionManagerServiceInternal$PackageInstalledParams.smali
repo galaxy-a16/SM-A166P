@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 364
     new-instance v0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;
 
     invoke-direct {v0}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams$Builder;-><init>()V
@@ -36,16 +35,12 @@
 .method public constructor <init>(Landroid/util/ArrayMap;Ljava/util/List;I)V
     .locals 0
 
-    .line 375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 376
     iput-object p1, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mPermissionStates:Landroid/util/ArrayMap;
 
-    .line 377
     iput-object p2, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mAllowlistedRestrictedPermissions:Ljava/util/List;
 
-    .line 378
     iput p3, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mAutoRevokePermissionsMode:I
 
     return-void
@@ -54,7 +49,6 @@
 .method public synthetic constructor <init>(Landroid/util/ArrayMap;Ljava/util/List;ILcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;-><init>(Landroid/util/ArrayMap;Ljava/util/List;I)V
 
     return-void
@@ -65,7 +59,6 @@
 .method public getAllowlistedRestrictedPermissions()Ljava/util/List;
     .locals 0
 
-    .line 398
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mAllowlistedRestrictedPermissions:Ljava/util/List;
 
     return-object p0
@@ -74,7 +67,6 @@
 .method public getAutoRevokePermissionsMode()I
     .locals 0
 
-    .line 407
     iget p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mAutoRevokePermissionsMode:I
 
     return p0
@@ -83,7 +75,6 @@
 .method public getPermissionStates()Landroid/util/ArrayMap;
     .locals 0
 
-    .line 388
     iget-object p0, p0, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PackageInstalledParams;->mPermissionStates:Landroid/util/ArrayMap;
 
     return-object p0

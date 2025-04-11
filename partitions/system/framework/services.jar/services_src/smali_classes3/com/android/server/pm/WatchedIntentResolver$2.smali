@@ -20,12 +20,10 @@
 .method public compare(Lcom/android/server/pm/WatchedIntentFilter;Lcom/android/server/pm/WatchedIntentFilter;)I
     .locals 0
 
-    .line 129
     invoke-virtual {p1}, Lcom/android/server/pm/WatchedIntentFilter;->getPriority()I
 
     move-result p0
 
-    .line 130
     invoke-virtual {p2}, Lcom/android/server/pm/WatchedIntentFilter;->getPriority()I
 
     move-result p1
@@ -53,7 +51,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 127
     check-cast p1, Lcom/android/server/pm/WatchedIntentFilter;
 
     check-cast p2, Lcom/android/server/pm/WatchedIntentFilter;

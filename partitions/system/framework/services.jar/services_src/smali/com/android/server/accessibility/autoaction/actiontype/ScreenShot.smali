@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 32
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/actiontype/CornerActionType;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;->mContext:Landroid/content/Context;
 
     return-void
@@ -23,7 +21,6 @@
 .method public static createAction(Landroid/content/Context;)Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;
     .locals 1
 
-    .line 37
     new-instance v0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;-><init>(Landroid/content/Context;)V
@@ -34,7 +31,6 @@
 .method public static getStringResId()I
     .locals 1
 
-    .line 0
     const v0, 0x1040127
 
     return v0
@@ -47,7 +43,6 @@
 
     if-nez p1, :cond_0
 
-    .line 48
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "SYSTEM_ACTION_TAKE_SCREENSHOT"
@@ -56,7 +51,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_0
     new-instance p1, Landroid/content/Intent;
 
@@ -68,17 +62,14 @@
 
     const/4 v1, 0x4
 
-    .line 51
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v0, "type"
 
     const-string v1, "Fullscreen"
 
-    .line 52
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 54
     :goto_0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenShot;->mContext:Landroid/content/Context;
 

@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/nio/file/Path;
 
     invoke-static {p1}, Lcom/android/server/pm/InitAppsHelper;->$r8$lambda$q3ztBvhJX_q2PBoMWTL61XhgmE0(Ljava/nio/file/Path;)V

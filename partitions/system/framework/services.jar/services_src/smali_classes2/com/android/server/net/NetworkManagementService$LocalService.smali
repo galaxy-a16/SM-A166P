@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkManagementService;)V
     .locals 0
 
-    .line 2090
     iput-object p1, p0, Lcom/android/server/net/NetworkManagementService$LocalService;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-direct {p0}, Lcom/android/server/net/NetworkManagementInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/net/NetworkManagementService;Lcom/android/server/net/NetworkManagementService$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkManagementService$LocalService;-><init>(Lcom/android/server/net/NetworkManagementService;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public isNetworkRestrictedForUid(I)Z
     .locals 0
 
-    .line 2093
     iget-object p0, p0, Lcom/android/server/net/NetworkManagementService$LocalService;->this$0:Lcom/android/server/net/NetworkManagementService;
 
     invoke-static {p0, p1}, Lcom/android/server/net/NetworkManagementService;->-$$Nest$misNetworkRestrictedInternal(Lcom/android/server/net/NetworkManagementService;I)Z

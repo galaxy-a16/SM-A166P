@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/security/SecureBox$AesGcmOperation;
     .locals 2
 
-    .line 101
     sget-object v0, Lcom/android/security/SecureBox$AesGcmOperation;->ENCRYPT:Lcom/android/security/SecureBox$AesGcmOperation;
 
     sget-object v1, Lcom/android/security/SecureBox$AesGcmOperation;->DECRYPT:Lcom/android/security/SecureBox$AesGcmOperation;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 102
     new-instance v0, Lcom/android/security/SecureBox$AesGcmOperation;
 
     const-string v1, "ENCRYPT"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/security/SecureBox$AesGcmOperation;->ENCRYPT:Lcom/android/security/SecureBox$AesGcmOperation;
 
-    .line 103
     new-instance v0, Lcom/android/security/SecureBox$AesGcmOperation;
 
     const-string v1, "DECRYPT"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/security/SecureBox$AesGcmOperation;->DECRYPT:Lcom/android/security/SecureBox$AesGcmOperation;
 
-    .line 101
     invoke-static {}, Lcom/android/security/SecureBox$AesGcmOperation;->$values()[Lcom/android/security/SecureBox$AesGcmOperation;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 101
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/security/SecureBox$AesGcmOperation;
     .locals 1
 
-    .line 101
     const-class v0, Lcom/android/security/SecureBox$AesGcmOperation;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/security/SecureBox$AesGcmOperation;
     .locals 1
 
-    .line 101
     sget-object v0, Lcom/android/security/SecureBox$AesGcmOperation;->$VALUES:[Lcom/android/security/SecureBox$AesGcmOperation;
 
     invoke-virtual {v0}, [Lcom/android/security/SecureBox$AesGcmOperation;->clone()Ljava/lang/Object;

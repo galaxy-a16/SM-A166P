@@ -23,7 +23,6 @@
 .method public static synthetic $r8$lambda$TOcYtUFp4wvdbDFzognfFhEe6Vo(Lcom/android/server/tare/ProcessStateModifier;I)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/tare/ProcessStateModifier;->lambda$notifyStateChangedLocked$0(I)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/tare/ProcessStateModifier;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -41,7 +39,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUidProcStateBucketCache(Lcom/android/server/tare/ProcessStateModifier;)Landroid/util/SparseIntArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidProcStateBucketCache:Landroid/util/SparseIntArray;
 
     return-object p0
@@ -50,7 +47,6 @@
 .method public static bridge synthetic -$$Nest$mgetProcStateBucket(Lcom/android/server/tare/ProcessStateModifier;I)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/tare/ProcessStateModifier;->getProcStateBucket(I)I
 
     move-result p0
@@ -61,7 +57,6 @@
 .method public static bridge synthetic -$$Nest$mnotifyStateChangedLocked(Lcom/android/server/tare/ProcessStateModifier;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/tare/ProcessStateModifier;->notifyStateChangedLocked(I)V
 
     return-void
@@ -70,7 +65,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/tare/ProcessStateModifier;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -79,7 +73,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 37
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,38 +101,32 @@
 .method public constructor <init>(Lcom/android/server/tare/InternalResourceService;)V
     .locals 1
 
-    .line 92
     invoke-direct {p0}, Lcom/android/server/tare/Modifier;-><init>()V
 
-    .line 56
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mLock:Ljava/lang/Object;
 
-    .line 60
     new-instance v0, Landroid/util/SparseArrayMap;
 
     invoke-direct {v0}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mPackageToUidCache:Landroid/util/SparseArrayMap;
 
-    .line 62
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidProcStateBucketCache:Landroid/util/SparseIntArray;
 
-    .line 65
     new-instance v0, Lcom/android/server/tare/ProcessStateModifier$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/tare/ProcessStateModifier$1;-><init>(Lcom/android/server/tare/ProcessStateModifier;)V
 
     iput-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidObserver:Landroid/app/IUidObserver;
 
-    .line 93
     iput-object p1, p0, Lcom/android/server/tare/ProcessStateModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     return-void
@@ -148,7 +135,6 @@
 .method private synthetic lambda$notifyStateChangedLocked$0(I)V
     .locals 0
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
     invoke-virtual {p0, p1}, Lcom/android/server/tare/InternalResourceService;->onUidStateChanged(I)V
@@ -163,10 +149,8 @@
 
     const-string v0, "Proc state bucket cache = "
 
-    .line 153
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 154
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidProcStateBucketCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
@@ -177,30 +161,25 @@
 .method public getModifiedPrice(ILjava/lang/String;JJ)J
     .locals 2
 
-    .line 129
     iget-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 130
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidProcStateBucketCache:Landroid/util/SparseIntArray;
 
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mIrs:Lcom/android/server/tare/InternalResourceService;
 
-    .line 131
     invoke-virtual {p0, p1, p2}, Lcom/android/server/tare/InternalResourceService;->getUid(ILjava/lang/String;)I
 
     move-result p0
 
     const/4 p1, 0x0
 
-    .line 130
     invoke-virtual {v1, p0, p1}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result p0
 
-    .line 132
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -243,7 +222,6 @@
 
     return-wide p0
 
-    .line 138
     :cond_2
     invoke-static {p3, p4, p5, p6}, Ljava/lang/Math;->min(JJ)J
 
@@ -259,7 +237,6 @@
     :catchall_0
     move-exception p0
 
-    .line 132
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -271,7 +248,6 @@
 .method public final getProcStateBucket(I)I
     .locals 1
 
-    .line 0
     const/4 p0, 0x2
 
     if-gt p1, p0, :cond_0
@@ -303,7 +279,6 @@
 .method public final notifyStateChangedLocked(I)V
     .locals 2
 
-    .line 174
     invoke-static {}, Lcom/android/server/tare/TareHandlerThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -320,7 +295,6 @@
 .method public setup()V
     .locals 4
 
-    .line 100
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -345,7 +319,6 @@
 .method public tearDown()V
     .locals 2
 
-    .line 112
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -357,13 +330,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 116
     :catch_0
     iget-object v0, p0, Lcom/android/server/tare/ProcessStateModifier;->mPackageToUidCache:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0}, Landroid/util/SparseArrayMap;->clear()V
 
-    .line 117
     iget-object p0, p0, Lcom/android/server/tare/ProcessStateModifier;->mUidProcStateBucketCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->clear()V

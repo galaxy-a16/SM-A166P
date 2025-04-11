@@ -20,7 +20,6 @@
 .method public final getId(Z)I
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/display/LogicalDisplayMapper;->$r8$lambda$6XhYSFR1oBUAcptZK7tw3vX8AOY(Z)I
 
     move-result p0

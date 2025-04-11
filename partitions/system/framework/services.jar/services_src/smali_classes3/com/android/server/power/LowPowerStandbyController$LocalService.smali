@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;)V
     .locals 0
 
-    .line 1394
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$LocalService;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-direct {p0}, Lcom/android/server/power/LowPowerStandbyControllerInternal;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/LowPowerStandbyController;Lcom/android/server/power/LowPowerStandbyController$LocalService-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/power/LowPowerStandbyController$LocalService;-><init>(Lcom/android/server/power/LowPowerStandbyController;)V
 
     return-void
@@ -33,7 +31,6 @@
 .method public addToAllowlist(II)V
     .locals 0
 
-    .line 1397
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$LocalService;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/power/LowPowerStandbyController;->-$$Nest$maddToAllowlistInternal(Lcom/android/server/power/LowPowerStandbyController;II)V
@@ -44,7 +41,6 @@
 .method public removeFromAllowlist(II)V
     .locals 0
 
-    .line 1402
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$LocalService;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-static {p0, p1, p2}, Lcom/android/server/power/LowPowerStandbyController;->-$$Nest$mremoveFromAllowlistInternal(Lcom/android/server/power/LowPowerStandbyController;II)V

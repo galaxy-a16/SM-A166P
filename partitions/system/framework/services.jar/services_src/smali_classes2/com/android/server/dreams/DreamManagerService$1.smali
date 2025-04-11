@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/dreams/DreamManagerService;)V
     .locals 0
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$1;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onActivityLaunched(Landroid/app/TaskInfo;Landroid/content/pm/ActivityInfo;Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)V
     .locals 3
 
-    .line 164
     invoke-virtual {p1}, Landroid/app/TaskInfo;->getActivityType()I
 
     move-result p1
@@ -59,7 +57,6 @@
     :goto_0
     move p1, v1
 
-    .line 170
     :goto_1
     iget-object p3, p0, Lcom/android/server/dreams/DreamManagerService$1;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -69,7 +66,6 @@
 
     monitor-enter p3
 
-    .line 171
     :try_start_0
     iget-object v2, p0, Lcom/android/server/dreams/DreamManagerService$1;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -103,7 +99,6 @@
 
     move v0, v1
 
-    .line 173
     :cond_2
     monitor-exit p3
     :try_end_0
@@ -111,7 +106,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 176
     iget-object p0, p0, Lcom/android/server/dreams/DreamManagerService$1;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -138,7 +132,6 @@
     :catchall_0
     move-exception p0
 
-    .line 173
     :try_start_1
     monitor-exit p3
     :try_end_1
@@ -150,7 +143,6 @@
 .method public onInterceptActivityLaunch(Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptorInfo;)Lcom/android/server/wm/ActivityInterceptorCallback$ActivityInterceptResult;
     .locals 0
 
-    .line 0
     const/4 p0, 0x0
 
     return-object p0

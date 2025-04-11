@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageManagerService;Lcom/android/server/compat/PlatformCompat;)V
     .locals 0
 
-    .line 2137
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$3;->val$platformCompat:Lcom/android/server/compat/PlatformCompat;
@@ -28,7 +27,6 @@
 .method public hasFeature(Ljava/lang/String;)Z
     .locals 1
 
-    .line 2145
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService$3;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v0, 0x0
@@ -43,7 +41,6 @@
 .method public isChangeEnabled(JLandroid/content/pm/ApplicationInfo;)Z
     .locals 0
 
-    .line 2140
     iget-object p0, p0, Lcom/android/server/pm/PackageManagerService$3;->val$platformCompat:Lcom/android/server/compat/PlatformCompat;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/compat/PlatformCompat;->isChangeEnabled(JLandroid/content/pm/ApplicationInfo;)Z

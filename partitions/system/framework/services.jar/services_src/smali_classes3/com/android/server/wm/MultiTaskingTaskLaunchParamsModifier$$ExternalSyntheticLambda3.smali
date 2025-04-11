@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/Task;
 
     check-cast p2, Ljava/lang/String;

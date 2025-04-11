@@ -20,7 +20,6 @@
 .method public final onBytesRead(J)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/backup/restore/FullRestoreEngine;->$r8$lambda$9EmAUEe9_epChT2y0OzArtH8-H8(J)V
 
     return-void

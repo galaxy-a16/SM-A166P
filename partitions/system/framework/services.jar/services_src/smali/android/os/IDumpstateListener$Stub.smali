@@ -22,12 +22,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 56
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "android.os.IDumpstateListener"
 
-    .line 57
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -45,24 +43,20 @@
     :cond_0
     const-string v0, "android.os.IDumpstateListener"
 
-    .line 68
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 69
     instance-of v1, v0, Landroid/os/IDumpstateListener;
 
     if-eqz v1, :cond_1
 
-    .line 70
     check-cast v0, Landroid/os/IDumpstateListener;
 
     return-object v0
 
-    .line 72
     :cond_1
     new-instance v0, Landroid/os/IDumpstateListener$Stub$Proxy;
 
@@ -76,7 +70,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
@@ -93,7 +86,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 82
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -119,77 +111,62 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 133
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 128
     :cond_1
     invoke-interface {p0}, Landroid/os/IDumpstateListener;->onUiIntensiveBugreportDumpsFinished()V
 
     goto :goto_0
 
-    .line 121
     :cond_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readBoolean()Z
 
     move-result p1
 
-    .line 122
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 123
     invoke-interface {p0, p1}, Landroid/os/IDumpstateListener;->onScreenshotTaken(Z)V
 
     goto :goto_0
 
-    .line 113
     :cond_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 114
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 115
     invoke-interface {p0, p1}, Landroid/os/IDumpstateListener;->onFinished(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 105
     :cond_4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 106
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 107
     invoke-interface {p0, p1}, Landroid/os/IDumpstateListener;->onError(I)V
 
     goto :goto_0
 
-    .line 97
     :cond_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 98
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 99
     invoke-interface {p0, p1}, Landroid/os/IDumpstateListener;->onProgress(I)V
 
     :goto_0
     return v1
 
-    .line 88
     :cond_6
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

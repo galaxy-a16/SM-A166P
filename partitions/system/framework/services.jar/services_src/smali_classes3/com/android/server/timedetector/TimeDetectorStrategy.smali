@@ -34,7 +34,6 @@
 
     return-object p0
 
-    .line 204
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -93,11 +92,9 @@
     :cond_0
     move v2, v0
 
-    .line 213
     :goto_0
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkArgument(Z)V
 
-    .line 215
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -198,7 +195,6 @@
     :goto_2
     packed-switch v0, :pswitch_data_0
 
-    .line 227
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;

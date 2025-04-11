@@ -43,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 34
     new-instance v0, Lcom/att/iqi/lib/Metric$ID;
 
     const-string v1, "MM05"
@@ -52,7 +51,6 @@
 
     sput-object v0, Lcom/att/iqi/lib/metrics/mm/MM05;->ID:Lcom/att/iqi/lib/Metric$ID;
 
-    .line 136
     new-instance v0, Lcom/att/iqi/lib/metrics/mm/MM05$1;
 
     invoke-direct {v0}, Lcom/att/iqi/lib/metrics/mm/MM05$1;-><init>()V
@@ -65,10 +63,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 58
     invoke-direct {p0}, Lcom/att/iqi/lib/Metric;-><init>()V
 
-    .line 59
     invoke-virtual {p0}, Lcom/att/iqi/lib/metrics/mm/MM05;->reset()V
 
     return-void
@@ -77,10 +73,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 73
     invoke-direct {p0, p1}, Lcom/att/iqi/lib/Metric;-><init>(Landroid/os/Parcel;)V
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -89,14 +83,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p1
@@ -112,7 +104,6 @@
 .method public getCallId()Ljava/lang/String;
     .locals 0
 
-    .line 117
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_szCallId:Ljava/lang/String;
 
     return-object p0
@@ -121,7 +112,6 @@
 .method public getRegState()B
     .locals 0
 
-    .line 97
     iget-byte p0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
     return p0
@@ -132,12 +122,10 @@
 
     const/4 v0, 0x0
 
-    .line 67
     iput-byte v0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
     const-string v0, ""
 
-    .line 68
     iput-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_szCallId:Ljava/lang/String;
 
     return-void
@@ -146,17 +134,14 @@
 .method public serialize(Ljava/nio/ByteBuffer;)I
     .locals 1
 
-    .line 122
     iget-byte v0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 123
     iget-object v0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_szCallId:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v0}, Lcom/att/iqi/lib/Metric;->stringOut(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
-    .line 124
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p0
@@ -167,7 +152,6 @@
 .method public setCallId(Ljava/lang/String;)Lcom/att/iqi/lib/metrics/mm/MM05;
     .locals 0
 
-    .line 108
     iput-object p1, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_szCallId:Ljava/lang/String;
 
     return-object p0
@@ -176,7 +160,6 @@
 .method public setCallState(B)Lcom/att/iqi/lib/metrics/mm/MM05;
     .locals 0
 
-    .line 88
     iput-byte p1, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
     return-object p0
@@ -185,15 +168,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 129
     invoke-super {p0, p1, p2}, Lcom/att/iqi/lib/Metric;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 132
     iget-byte p2, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_ucCallState:B
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 133
     iget-object p0, p0, Lcom/att/iqi/lib/metrics/mm/MM05;->m_szCallId:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

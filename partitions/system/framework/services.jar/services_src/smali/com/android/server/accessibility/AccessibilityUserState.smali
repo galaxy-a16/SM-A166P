@@ -123,7 +123,6 @@
 .method public static synthetic $r8$lambda$_XkBoubKqkCs1YeUhOg_UPjXotM(Landroid/content/ComponentName;Ljava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->lambda$removeShortcutTargetLocked$0(Landroid/content/ComponentName;Ljava/lang/String;)Z
 
     move-result p0
@@ -134,101 +133,86 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(ILandroid/content/Context;Lcom/android/server/accessibility/AccessibilityUserState$ServiceInfoChangeListener;)V
     .locals 2
 
-    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserClients:Landroid/os/RemoteCallbackList;
 
-    .line 90
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
-    .line 92
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
-    .line 95
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
-    .line 97
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledShortcuts:Ljava/util/List;
 
-    .line 99
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindingServices:Ljava/util/Set;
 
-    .line 101
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
-    .line 103
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mEnabledServices:Ljava/util/Set;
 
-    .line 105
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
 
-    .line 111
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityShortcutKeyTargets:Ljava/util/LinkedHashSet;
 
-    .line 112
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityButtonTargets:Ljava/util/LinkedHashSet;
 
-    .line 113
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityDirectAccessTargets:Ljava/util/LinkedHashSet;
 
-    .line 144
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x0
@@ -237,18 +221,14 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceDetectsGestures:Landroid/util/SparseArray;
 
-    .line 147
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mNonInteractiveUiTimeout:I
 
-    .line 148
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInteractiveUiTimeout:I
 
     const/4 v0, -0x1
 
-    .line 149
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mLastSentClientState:I
 
-    .line 154
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
@@ -257,28 +237,20 @@
 
     const/4 v0, 0x1
 
-    .line 156
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationCapabilities:I
 
-    .line 158
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationFollowTypingEnabled:Z
 
-    .line 160
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAlwaysOnMagnificationEnabled:Z
 
-    .line 180
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
-    .line 198
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
-    .line 199
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mContext:Landroid/content/Context;
 
-    .line 200
     iput-object p3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceInfoChangeListener:Lcom/android/server/accessibility/AccessibilityUserState$ServiceInfoChangeListener;
 
-    .line 201
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -291,7 +263,6 @@
 
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidthDefaultValue:I
 
-    .line 203
     iget-object p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -306,13 +277,10 @@
 
     iput p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColorDefaultValue:I
 
-    .line 205
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidth:I
 
-    .line 206
     iput p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColor:I
 
-    .line 208
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSupportWindowMagnification:Z
 
     return-void
@@ -329,7 +297,6 @@
 
     goto :goto_0
 
-    .line 1135
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
@@ -341,7 +308,6 @@
 
     return v2
 
-    .line 1138
     :cond_1
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -351,7 +317,6 @@
 
     return v0
 
-    .line 1142
     :cond_2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -370,14 +335,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1143
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 1144
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
@@ -400,7 +363,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 969
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object p1
@@ -409,7 +371,6 @@
 
     goto :goto_0
 
-    .line 972
     :cond_0
     invoke-virtual {p1, p0}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
@@ -429,7 +390,6 @@
 .method public addServiceLocked(Lcom/android/server/accessibility/AccessibilityServiceConnection;)V
     .locals 2
 
-    .line 300
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -438,15 +398,12 @@
 
     if-nez v0, :cond_0
 
-    .line 301
     invoke-virtual {p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->onAdded()V
 
-    .line 302
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 303
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->getComponentName()Landroid/content/ComponentName;
@@ -455,7 +412,6 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 304
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceInfoChangeListener:Lcom/android/server/accessibility/AccessibilityUserState$ServiceInfoChangeListener;
 
     invoke-interface {p1, p0}, Lcom/android/server/accessibility/AccessibilityUserState$ServiceInfoChangeListener;->onServiceInfoChangedLocked(Lcom/android/server/accessibility/AccessibilityUserState;)V
@@ -469,15 +425,12 @@
 
     const-string v0, "User state["
 
-    .line 590
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 591
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     const-string v0, "     attributes:{id="
 
-    .line 592
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -492,7 +445,6 @@
 
     const-string v0, ", mIsTapDurationEnabled="
 
-    .line 594
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -507,7 +459,6 @@
 
     const-string v0, ", mIsTouchBlockingEnabled="
 
-    .line 597
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -522,7 +473,6 @@
 
     const-string v0, ", mIsStickyKeysEnabled="
 
-    .line 600
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -537,7 +487,6 @@
 
     const-string v0, ", mIsBounceKeysEnabled="
 
-    .line 601
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -552,7 +501,6 @@
 
     const-string v0, ", mIsSlowKeysEnabled="
 
-    .line 602
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -567,7 +515,6 @@
 
     const-string v0, ", mIsAutoActionEnabled="
 
-    .line 605
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -582,7 +529,6 @@
 
     const-string v0, ", mIsCornerActionEnabled="
 
-    .line 606
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -597,7 +543,6 @@
 
     const-string v0, ", mIsAMEnabled="
 
-    .line 609
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -612,7 +557,6 @@
 
     const-string v0, ", autoActionEnabled="
 
-    .line 612
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -627,7 +571,6 @@
 
     const-string v0, ", cornerActionEnabled="
 
-    .line 613
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -642,7 +585,6 @@
 
     const-string v0, ", AmEnabled="
 
-    .line 616
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -657,7 +599,6 @@
 
     const-string v0, ", touchExplorationEnabled="
 
-    .line 618
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -672,14 +613,12 @@
 
     const-string v0, ", serviceHandlesDoubleTap="
 
-    .line 619
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceHandlesDoubleTap:Z
 
-    .line 620
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -688,14 +627,12 @@
 
     const-string v0, ", requestMultiFingerGestures="
 
-    .line 621
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestMultiFingerGestures:Z
 
-    .line 622
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -704,14 +641,12 @@
 
     const-string v0, ", requestTwoFingerPassthrough="
 
-    .line 623
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestTwoFingerPassthrough:Z
 
-    .line 624
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -720,7 +655,6 @@
 
     const-string v0, ", sendMotionEventsEnabled"
 
-    .line 625
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -735,7 +669,6 @@
 
     const-string v0, ", displayMagnificationEnabled="
 
-    .line 626
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -750,7 +683,6 @@
 
     const-string v0, ", autoclickEnabled="
 
-    .line 628
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -765,7 +697,6 @@
 
     const-string v0, ", nonInteractiveUiTimeout="
 
-    .line 629
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -780,7 +711,6 @@
 
     const-string v0, ", interactiveUiTimeout="
 
-    .line 630
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -795,7 +725,6 @@
 
     const-string v0, ", installedServiceCount="
 
-    .line 631
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -814,7 +743,6 @@
 
     const-string v0, ", magnificationModes="
 
-    .line 632
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
@@ -829,14 +757,12 @@
 
     const-string v0, ", magnificationCapabilities="
 
-    .line 633
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationCapabilities:I
 
-    .line 634
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
@@ -845,14 +771,12 @@
 
     const-string v0, ", audioDescriptionByDefaultEnabled="
 
-    .line 635
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAudioDescriptionByDefaultRequested:Z
 
-    .line 636
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -861,14 +785,12 @@
 
     const-string v0, ", magnificationFollowTypingEnabled="
 
-    .line 637
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationFollowTypingEnabled:Z
 
-    .line 638
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -877,14 +799,12 @@
 
     const-string v0, ", alwaysOnMagnificationEnabled="
 
-    .line 639
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v0
 
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAlwaysOnMagnificationEnabled:Z
 
-    .line 640
     invoke-static {v1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v1
@@ -893,18 +813,14 @@
 
     const-string/jumbo v0, "}"
 
-    .line 641
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 642
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "     shortcut key:{"
 
-    .line 643
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 653
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityShortcutKeyTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->toString()Ljava/lang/String;
@@ -913,15 +829,12 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 654
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "     button:{"
 
-    .line 655
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 664
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityButtonTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->toString()Ljava/lang/String;
@@ -930,15 +843,12 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 666
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "     direct access:{"
 
-    .line 668
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 669
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityDirectAccessTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->toString()Ljava/lang/String;
@@ -947,12 +857,10 @@
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 670
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "     button target:{"
 
-    .line 672
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -961,21 +869,16 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 673
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 676
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "     installed services: {"
 
-    .line 677
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 678
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 679
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -989,7 +892,6 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 681
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1018,7 +920,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 682
     iget-object v5, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1047,10 +948,8 @@
 
     move-result-object v4
 
-    .line 681
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 683
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     add-int/lit8 v3, v3, 0x1
@@ -1060,18 +959,14 @@
     :cond_1
     const-string v1, "     }"
 
-    .line 685
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 686
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     const-string v1, "     Bound services:{"
 
-    .line 688
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 689
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1087,18 +982,14 @@
 
     if-lez v3, :cond_2
 
-    .line 692
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 693
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     const-string v4, "                     "
 
-    .line 694
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 696
     :cond_2
     iget-object v4, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
@@ -1108,51 +999,43 @@
 
     check-cast v4, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 697
     invoke-virtual {v4, p1, p2, p3}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 699
     :cond_3
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p1, "     Enabled services:{"
 
-    .line 700
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 701
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mEnabledServices:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 702
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p3
 
     if-eqz p3, :cond_4
 
-    .line 703
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 704
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 705
     :goto_3
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1160,17 +1043,14 @@
 
     if-eqz p3, :cond_4
 
-    .line 706
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 707
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 708
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
@@ -1179,44 +1059,37 @@
 
     goto :goto_3
 
-    .line 711
     :cond_4
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p1, "     Binding services:{"
 
-    .line 712
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 713
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindingServices:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 714
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p3
 
     if-eqz p3, :cond_5
 
-    .line 715
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 716
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 717
     :goto_4
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1224,17 +1097,14 @@
 
     if-eqz p3, :cond_5
 
-    .line 718
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 719
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 720
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
@@ -1243,44 +1113,37 @@
 
     goto :goto_4
 
-    .line 723
     :cond_5
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p1, "     Crashed services:{"
 
-    .line 724
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 725
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 726
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p3
 
     if-eqz p3, :cond_6
 
-    .line 727
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 728
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 729
     :goto_5
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1288,17 +1151,14 @@
 
     if-eqz p3, :cond_6
 
-    .line 730
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/content/ComponentName;
 
-    .line 731
     invoke-virtual {p2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    .line 732
     invoke-virtual {p3}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
 
     move-result-object p3
@@ -1307,16 +1167,13 @@
 
     goto :goto_5
 
-    .line 735
     :cond_6
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string p1, "     Client list info:{"
 
-    .line 736
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 737
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserClients:Landroid/os/RemoteCallbackList;
 
     const-string p3, "          Client list "
@@ -1325,10 +1182,8 @@
 
     const-string p1, "          Registered clients:{"
 
-    .line 738
     invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 739
     :goto_6
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserClients:Landroid/os/RemoteCallbackList;
 
@@ -1338,17 +1193,14 @@
 
     if-ge v2, p1, :cond_7
 
-    .line 740
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserClients:Landroid/os/RemoteCallbackList;
 
-    .line 741
     invoke-virtual {p1, v2}, Landroid/os/RemoteCallbackList;->getRegisteredCallbackCookie(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/server/accessibility/AccessibilityManagerService$Client;
 
-    .line 742
     iget-object p1, p1, Lcom/android/server/accessibility/AccessibilityManagerService$Client;->mPackageNames:[Ljava/lang/String;
 
     invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
@@ -1364,7 +1216,6 @@
     :cond_7
     const-string/jumbo p0, "}]"
 
-    .line 744
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -1373,7 +1224,6 @@
 .method public getBindInstantServiceAllowedLocked()Z
     .locals 0
 
-    .line 433
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindInstantServiceAllowed:Z
 
     return p0
@@ -1382,7 +1232,6 @@
 .method public getBindingServicesLocked()Ljava/util/Set;
     .locals 0
 
-    .line 445
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindingServices:Ljava/util/Set;
 
     return-object p0
@@ -1393,7 +1242,6 @@
 
     if-nez p1, :cond_1
 
-    .line 490
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->isHandlingAccessibilityEventsLocked()Z
 
     move-result p1
@@ -1414,7 +1262,6 @@
     :goto_1
     if-eqz p1, :cond_2
 
-    .line 496
     iget-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTouchExplorationEnabled:Z
 
     if-nez v0, :cond_3
@@ -1433,7 +1280,6 @@
 
     or-int/lit8 p1, p1, 0x10
 
-    .line 508
     :cond_4
     iget-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTextHighContrastEnabled:Z
 
@@ -1441,7 +1287,6 @@
 
     or-int/lit8 p1, p1, 0x4
 
-    .line 511
     :cond_5
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAudioDescriptionByDefaultRequested:Z
 
@@ -1458,7 +1303,6 @@
 .method public getCrashedServicesLocked()Ljava/util/Set;
     .locals 0
 
-    .line 452
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
     return-object p0
@@ -1467,7 +1311,6 @@
 .method public getEnabledServicesLocked()Ljava/util/Set;
     .locals 0
 
-    .line 459
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mEnabledServices:Ljava/util/Set;
 
     return-object p0
@@ -1476,7 +1319,6 @@
 .method public getFocusColorLocked()I
     .locals 0
 
-    .line 1164
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColor:I
 
     return p0
@@ -1485,7 +1327,6 @@
 .method public getFocusStrokeWidthLocked()I
     .locals 0
 
-    .line 1156
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidth:I
 
     return p0
@@ -1496,7 +1337,6 @@
 
     const/4 v0, 0x0
 
-    .line 980
     :goto_0
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
@@ -1506,7 +1346,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 981
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1515,7 +1354,6 @@
 
     check-cast v1, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 982
     invoke-virtual {v1}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -1542,7 +1380,6 @@
 .method public getInteractiveUiTimeoutLocked()I
     .locals 0
 
-    .line 800
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInteractiveUiTimeout:I
 
     return p0
@@ -1551,7 +1388,6 @@
 .method public getLastSentClientStateLocked()I
     .locals 0
 
-    .line 808
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mLastSentClientState:I
 
     return p0
@@ -1560,7 +1396,6 @@
 .method public getMagnificationCapabilitiesLocked()I
     .locals 0
 
-    .line 851
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationCapabilities:I
 
     return p0
@@ -1569,7 +1404,6 @@
 .method public getMagnificationModeLocked(I)I
     .locals 2
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationModes:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -1582,7 +1416,6 @@
 
     const/4 v0, 0x1
 
-    .line 835
     invoke-virtual {p0, p1, v0}, Lcom/android/server/accessibility/AccessibilityUserState;->setMagnificationModeLocked(II)V
 
     :cond_0
@@ -1592,7 +1425,6 @@
 .method public getNonInteractiveUiTimeoutLocked()I
     .locals 0
 
-    .line 997
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mNonInteractiveUiTimeout:I
 
     return p0
@@ -1601,7 +1433,6 @@
 .method public final getOriginalHardKeyboardValue()Z
     .locals 3
 
-    .line 562
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v1, "accessibility_soft_keyboard_mode"
@@ -1627,7 +1458,6 @@
 .method public final getSecureIntForUser(Ljava/lang/String;II)I
     .locals 0
 
-    .line 577
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1644,7 +1474,6 @@
 .method public getServiceConnectionLocked(Landroid/content/ComponentName;)Lcom/android/server/accessibility/AccessibilityServiceConnection;
     .locals 0
 
-    .line 993
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1663,7 +1492,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 912
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityShortcutKeyTargets:Ljava/util/LinkedHashSet;
 
     return-object p0
@@ -1671,7 +1499,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 914
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityButtonTargets:Ljava/util/LinkedHashSet;
 
     return-object p0
@@ -1681,7 +1508,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 918
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityDirectAccessTargets:Ljava/util/LinkedHashSet;
 
     return-object p0
@@ -1695,7 +1521,6 @@
 .method public getSoftKeyboardShowModeLocked()I
     .locals 0
 
-    .line 404
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
     return p0
@@ -1706,7 +1531,6 @@
 
     const/4 v0, 0x0
 
-    .line 556
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v2, "accessibility_soft_keyboard_mode"
@@ -1723,7 +1547,6 @@
 .method public getTargetAssignedToAccessibilityButton()Ljava/lang/String;
     .locals 0
 
-    .line 1106
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mTargetAssignedToAccessibilityButton:Ljava/lang/String;
 
     return-object p0
@@ -1732,7 +1555,6 @@
 .method public getUserInteractiveUiTimeoutLocked()I
     .locals 0
 
-    .line 1084
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserInteractiveUiTimeout:I
 
     return p0
@@ -1741,7 +1563,6 @@
 .method public getUserNonInteractiveUiTimeoutLocked()I
     .locals 0
 
-    .line 1092
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserNonInteractiveUiTimeout:I
 
     return p0
@@ -1750,7 +1571,6 @@
 .method public final hasUserOverriddenHardKeyboardSetting()Z
     .locals 3
 
-    .line 530
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v1, "accessibility_soft_keyboard_mode"
@@ -1776,10 +1596,8 @@
 .method public final isA11yHelperIsBound()Z
     .locals 5
 
-    .line 218
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
-    .line 219
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1791,14 +1609,12 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 220
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 221
     iget-object v3, v3, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->mComponentName:Landroid/content/ComponentName;
 
     invoke-virtual {v3}, Landroid/content/ComponentName;->toString()Ljava/lang/String;
@@ -1829,7 +1645,6 @@
 .method public isAMEnabledLocked()Z
     .locals 0
 
-    .line 775
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAMEnabled:Z
 
     return p0
@@ -1838,7 +1653,6 @@
 .method public isAlwaysOnMagnificationEnabled()Z
     .locals 0
 
-    .line 878
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAlwaysOnMagnificationEnabled:Z
 
     return p0
@@ -1847,7 +1661,6 @@
 .method public isAudioDescriptionByDefaultEnabledLocked()Z
     .locals 0
 
-    .line 1037
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAudioDescriptionByDefaultRequested:Z
 
     return p0
@@ -1856,7 +1669,6 @@
 .method public isAutoActionEnabledLocked()Z
     .locals 0
 
-    .line 757
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoActionEnabled:Z
 
     return p0
@@ -1865,7 +1677,6 @@
 .method public isAutoclickEnabledLocked()Z
     .locals 0
 
-    .line 748
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoclickEnabled:Z
 
     return p0
@@ -1874,7 +1685,6 @@
 .method public isCornerActionEnabledLocked()Z
     .locals 0
 
-    .line 765
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsCornerActionEnabled:Z
 
     return p0
@@ -1883,7 +1693,6 @@
 .method public isDisplayMagnificationEnabledLocked()Z
     .locals 0
 
-    .line 784
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsDisplayMagnificationEnabled:Z
 
     return p0
@@ -1892,7 +1701,6 @@
 .method public isFilterKeyEventsEnabledLocked()Z
     .locals 0
 
-    .line 792
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsFilterKeyEventsEnabled:Z
 
     return p0
@@ -1901,7 +1709,6 @@
 .method public isHandlingAccessibilityEventsLocked()Z
     .locals 1
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1936,7 +1743,6 @@
 .method public isMagnificationFollowTypingEnabled()Z
     .locals 0
 
-    .line 870
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationFollowTypingEnabled:Z
 
     return p0
@@ -1945,7 +1751,6 @@
 .method public isMultiFingerGesturesEnabledLocked()Z
     .locals 0
 
-    .line 1061
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestMultiFingerGestures:Z
 
     return p0
@@ -1954,7 +1759,6 @@
 .method public isPerformGesturesEnabledLocked()Z
     .locals 0
 
-    .line 1005
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsPerformGesturesEnabled:Z
 
     return p0
@@ -1963,7 +1767,6 @@
 .method public isSendMotionEventsEnabled()Z
     .locals 0
 
-    .line 1076
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSendMotionEventsEnabled:Z
 
     return p0
@@ -1972,7 +1775,6 @@
 .method public isServiceDetectsGesturesEnabled(I)Z
     .locals 1
 
-    .line 1187
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceDetectsGestures:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->contains(I)Z
@@ -1981,7 +1783,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1188
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceDetectsGestures:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2005,7 +1806,6 @@
 .method public isServiceHandlesDoubleTapEnabledLocked()Z
     .locals 0
 
-    .line 1053
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceHandlesDoubleTap:Z
 
     return p0
@@ -2014,7 +1814,6 @@
 .method public isShortcutMagnificationEnabledLocked()Z
     .locals 2
 
-    .line 819
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityShortcutKeyTargets:Ljava/util/LinkedHashSet;
 
     const-string v1, "com.android.server.accessibility.MagnificationController"
@@ -2027,7 +1826,6 @@
 
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityButtonTargets:Ljava/util/LinkedHashSet;
 
-    .line 820
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2036,7 +1834,6 @@
 
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityDirectAccessTargets:Ljava/util/LinkedHashSet;
 
-    .line 821
     invoke-virtual {p0, v1}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2061,7 +1858,6 @@
 .method public isShortcutTargetInstalledLocked(Ljava/lang/String;)Z
     .locals 4
 
-    .line 931
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2075,7 +1871,6 @@
     :cond_0
     const-string v0, "com.android.server.accessibility.MagnificationController"
 
-    .line 934
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2086,7 +1881,6 @@
 
     return v2
 
-    .line 938
     :cond_1
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -2096,13 +1890,11 @@
 
     return v1
 
-    .line 942
     :cond_2
     invoke-static {}, Lcom/android/internal/accessibility/AccessibilityShortcutController;->getFrameworkShortcutFeaturesMap()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 943
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2111,7 +1903,6 @@
 
     return v2
 
-    .line 946
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->getInstalledServiceInfoLocked(Landroid/content/ComponentName;)Landroid/accessibilityservice/AccessibilityServiceInfo;
 
@@ -2124,7 +1915,6 @@
     :cond_4
     move v0, v1
 
-    .line 949
     :goto_0
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledShortcuts:Ljava/util/List;
 
@@ -2134,7 +1924,6 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 950
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledShortcuts:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2167,7 +1956,6 @@
 .method public isTextHighContrastEnabledLocked()Z
     .locals 0
 
-    .line 1029
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTextHighContrastEnabled:Z
 
     return p0
@@ -2176,7 +1964,6 @@
 .method public isTouchExplorationEnabledLocked()Z
     .locals 0
 
-    .line 1045
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTouchExplorationEnabled:Z
 
     return p0
@@ -2185,7 +1972,6 @@
 .method public isTwoFingerPassthroughEnabledLocked()Z
     .locals 0
 
-    .line 1068
     iget-boolean p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestTwoFingerPassthrough:Z
 
     return p0
@@ -2194,12 +1980,10 @@
 .method public isValidMagnificationModeLocked(I)Z
     .locals 2
 
-    .line 184
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->getMagnificationModeLocked(I)I
 
     move-result p1
 
-    .line 185
     iget-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSupportWindowMagnification:Z
 
     const/4 v1, 0x0
@@ -2212,7 +1996,6 @@
 
     return v1
 
-    .line 189
     :cond_0
     iget p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationCapabilities:I
 
@@ -2229,140 +2012,104 @@
 .method public onSwitchToAnotherUserLocked()V
     .locals 2
 
-    .line 236
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->unbindAllServicesLocked()V
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindingServices:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 241
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     const/4 v0, -0x1
 
-    .line 244
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mLastSentClientState:I
 
     const/4 v0, 0x0
 
-    .line 247
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mNonInteractiveUiTimeout:I
 
-    .line 248
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInteractiveUiTimeout:I
 
-    .line 251
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mEnabledServices:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    .line 253
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityShortcutKeyTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->clear()V
 
-    .line 254
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityButtonTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashSet;->clear()V
 
     const/4 v1, 0x0
 
-    .line 255
     iput-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mTargetAssignedToAccessibilityButton:Ljava/lang/String;
 
-    .line 256
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTouchExplorationEnabled:Z
 
-    .line 257
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceHandlesDoubleTap:Z
 
-    .line 258
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestMultiFingerGestures:Z
 
-    .line 259
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestTwoFingerPassthrough:Z
 
-    .line 260
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSendMotionEventsEnabled:Z
 
-    .line 261
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsDisplayMagnificationEnabled:Z
 
-    .line 262
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoclickEnabled:Z
 
-    .line 263
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserNonInteractiveUiTimeout:I
 
-    .line 264
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserInteractiveUiTimeout:I
 
-    .line 265
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationModes:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 266
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidthDefaultValue:I
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidth:I
 
-    .line 267
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColorDefaultValue:I
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColor:I
 
     const/4 v1, 0x1
 
-    .line 268
     iput-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationFollowTypingEnabled:Z
 
-    .line 269
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAlwaysOnMagnificationEnabled:Z
 
-    .line 272
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoActionEnabled:Z
 
-    .line 273
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsCornerActionEnabled:Z
 
-    .line 276
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTapDurationEnabled:Z
 
-    .line 279
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTouchBlockingEnabled:Z
 
-    .line 283
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAMEnabled:Z
 
-    .line 287
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsStickyKeysEnabled:Z
 
-    .line 288
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsBounceKeysEnabled:Z
 
-    .line 289
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsSlowKeysEnabled:Z
 
-    .line 292
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsGestureNaviBar:Z
 
-    .line 295
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityDirectAccessTargets:Ljava/util/LinkedHashSet;
 
     invoke-virtual {p0}, Ljava/util/LinkedHashSet;->clear()V
@@ -2373,12 +2120,10 @@
 .method public final putSecureIntForUser(Ljava/lang/String;II)V
     .locals 2
 
-    .line 581
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 583
     :try_start_0
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mContext:Landroid/content/Context;
 
@@ -2390,7 +2135,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 585
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -2400,21 +2144,18 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 586
     throw p0
 .end method
 
 .method public reconcileSoftKeyboardModeWithSettingsLocked()V
     .locals 5
 
-    .line 412
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string/jumbo v1, "show_ime_with_hard_keyboard"
 
     const/4 v2, 0x0
 
-    .line 413
     invoke-virtual {p0, v1, v2, v0}, Lcom/android/server/accessibility/AccessibilityUserState;->getSecureIntForUser(Ljava/lang/String;II)I
 
     move-result v0
@@ -2428,7 +2169,6 @@
     :cond_0
     move v0, v2
 
-    .line 414
     :goto_0
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
@@ -2440,13 +2180,10 @@
 
     if-nez v0, :cond_1
 
-    .line 418
     invoke-virtual {p0, v2, v4}, Lcom/android/server/accessibility/AccessibilityUserState;->setSoftKeyboardModeLocked(ILandroid/content/ComponentName;)Z
 
-    .line 419
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->setUserOverridesHardKeyboardSetting()V
 
-    .line 424
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->getSoftKeyboardValueFromSettings()I
 
@@ -2456,19 +2193,16 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 425
     sget-object v0, Lcom/android/server/accessibility/AccessibilityUserState;->LOG_TAG:Ljava/lang/String;
 
     const-string v1, "Show IME setting inconsistent with internal state. Overwriting"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     invoke-virtual {p0, v2, v4}, Lcom/android/server/accessibility/AccessibilityUserState;->setSoftKeyboardModeLocked(ILandroid/content/ComponentName;)Z
 
     const-string v0, "accessibility_soft_keyboard_mode"
 
-    .line 427
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     invoke-virtual {p0, v0, v2, v1}, Lcom/android/server/accessibility/AccessibilityUserState;->putSecureIntForUser(Ljava/lang/String;II)V
@@ -2480,7 +2214,6 @@
 .method public removeDisabledServicesFromTemporaryStatesLocked()V
     .locals 4
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -2492,7 +2225,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 467
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInstalledServices:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2501,17 +2233,14 @@
 
     check-cast v2, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 469
     invoke-virtual {v2}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getId()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 468
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
 
-    .line 471
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mEnabledServices:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2520,12 +2249,10 @@
 
     if-nez v3, :cond_0
 
-    .line 473
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 478
     iget-object v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindingServices:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -2542,22 +2269,18 @@
 .method public removeServiceLocked(Lcom/android/server/accessibility/AccessibilityServiceConnection;)V
     .locals 3
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 317
     invoke-virtual {p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->onRemoved()V
 
-    .line 318
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceChangingSoftKeyboardMode:Landroid/content/ComponentName;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 320
     invoke-virtual {p1}, Lcom/android/server/accessibility/AccessibilityServiceConnection;->getServiceInfo()Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     move-result-object p1
@@ -2566,7 +2289,6 @@
 
     move-result-object p1
 
-    .line 319
     invoke-virtual {v0, p1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -2575,16 +2297,13 @@
 
     const/4 p1, 0x0
 
-    .line 321
     invoke-virtual {p0, v1, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->setSoftKeyboardModeLocked(ILandroid/content/ComponentName;)Z
 
-    .line 325
     :cond_0
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->clear()V
 
-    .line 326
     :goto_0
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
@@ -2594,7 +2313,6 @@
 
     if-ge v1, p1, :cond_1
 
-    .line 327
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2603,7 +2321,6 @@
 
     check-cast p1, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mComponentNameToServiceMap:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->getComponentName()Landroid/content/ComponentName;
@@ -2616,7 +2333,6 @@
 
     goto :goto_0
 
-    .line 330
     :cond_1
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceInfoChangeListener:Lcom/android/server/accessibility/AccessibilityUserState$ServiceInfoChangeListener;
 
@@ -2628,7 +2344,6 @@
 .method public removeShortcutTargetLocked(ILandroid/content/ComponentName;)Z
     .locals 0
 
-    .line 966
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->getShortcutTargetsLocked(I)Ljava/util/LinkedHashSet;
 
     move-result-object p0
@@ -2647,7 +2362,6 @@
 .method public resetServiceDetectsGestures()V
     .locals 0
 
-    .line 1183
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceDetectsGestures:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
@@ -2660,7 +2374,6 @@
 
     const/4 v0, 0x0
 
-    .line 547
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v2, "accessibility_soft_keyboard_mode"
@@ -2673,7 +2386,6 @@
 
     or-int/2addr p1, v0
 
-    .line 551
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     invoke-virtual {p0, v2, p1, v0}, Lcom/android/server/accessibility/AccessibilityUserState;->putSecureIntForUser(Ljava/lang/String;II)V
@@ -2684,10 +2396,8 @@
 .method public serviceDisconnectedLocked(Lcom/android/server/accessibility/AccessibilityServiceConnection;)V
     .locals 0
 
-    .line 343
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->removeServiceLocked(Lcom/android/server/accessibility/AccessibilityServiceConnection;)V
 
-    .line 344
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mCrashedServices:Ljava/util/Set;
 
     invoke-virtual {p1}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->getComponentName()Landroid/content/ComponentName;
@@ -2702,7 +2412,6 @@
 .method public setAMEnabledLocked(Z)V
     .locals 0
 
-    .line 779
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAMEnabled:Z
 
     return-void
@@ -2711,7 +2420,6 @@
 .method public setAccessibilityFocusOnlyInActiveWindow(Z)V
     .locals 0
 
-    .line 1017
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAccessibilityFocusOnlyInActiveWindow:Z
 
     return-void
@@ -2720,7 +2428,6 @@
 .method public setAlwaysOnMagnificationEnabled(Z)V
     .locals 0
 
-    .line 874
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mAlwaysOnMagnificationEnabled:Z
 
     return-void
@@ -2729,7 +2436,6 @@
 .method public setAudioDescriptionByDefaultEnabledLocked(Z)V
     .locals 0
 
-    .line 1041
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAudioDescriptionByDefaultRequested:Z
 
     return-void
@@ -2738,7 +2444,6 @@
 .method public setAutoActionEnabledLocked(Z)V
     .locals 0
 
-    .line 761
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoActionEnabled:Z
 
     return-void
@@ -2747,7 +2452,6 @@
 .method public setAutoclickEnabledLocked(Z)V
     .locals 0
 
-    .line 752
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsAutoclickEnabled:Z
 
     return-void
@@ -2756,7 +2460,6 @@
 .method public setBindInstantServiceAllowedLocked(Z)V
     .locals 0
 
-    .line 438
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBindInstantServiceAllowed:Z
 
     return-void
@@ -2765,7 +2468,6 @@
 .method public setCornerActionEnabledLocked(Z)V
     .locals 0
 
-    .line 769
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsCornerActionEnabled:Z
 
     return-void
@@ -2774,7 +2476,6 @@
 .method public setDisplayMagnificationEnabledLocked(Z)V
     .locals 0
 
-    .line 788
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsDisplayMagnificationEnabled:Z
 
     return-void
@@ -2783,7 +2484,6 @@
 .method public setFilterKeyEventsEnabledLocked(Z)V
     .locals 0
 
-    .line 796
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsFilterKeyEventsEnabled:Z
 
     return-void
@@ -2792,10 +2492,8 @@
 .method public setFocusAppearanceLocked(II)V
     .locals 0
 
-    .line 1174
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusStrokeWidth:I
 
-    .line 1175
     iput p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mFocusColor:I
 
     return-void
@@ -2804,7 +2502,6 @@
 .method public setInteractiveUiTimeoutLocked(I)V
     .locals 0
 
-    .line 804
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mInteractiveUiTimeout:I
 
     return-void
@@ -2813,7 +2510,6 @@
 .method public setLastSentClientStateLocked(I)V
     .locals 0
 
-    .line 812
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mLastSentClientState:I
 
     return-void
@@ -2822,7 +2518,6 @@
 .method public setMagnificationCapabilitiesLocked(I)V
     .locals 0
 
-    .line 862
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationCapabilities:I
 
     return-void
@@ -2831,7 +2526,6 @@
 .method public setMagnificationFollowTypingEnabled(Z)V
     .locals 0
 
-    .line 866
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationFollowTypingEnabled:Z
 
     return-void
@@ -2840,7 +2534,6 @@
 .method public setMagnificationModeLocked(II)V
     .locals 0
 
-    .line 888
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mMagnificationModes:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
@@ -2851,7 +2544,6 @@
 .method public setMultiFingerGesturesLocked(Z)V
     .locals 0
 
-    .line 1065
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestMultiFingerGestures:Z
 
     return-void
@@ -2860,7 +2552,6 @@
 .method public setNonInteractiveUiTimeoutLocked(I)V
     .locals 0
 
-    .line 1001
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mNonInteractiveUiTimeout:I
 
     return-void
@@ -2869,7 +2560,6 @@
 .method public final setOriginalHardKeyboardValue(Z)V
     .locals 4
 
-    .line 537
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v1, "accessibility_soft_keyboard_mode"
@@ -2891,7 +2581,6 @@
     :cond_0
     or-int p1, v0, v2
 
-    .line 542
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     invoke-virtual {p0, v1, p1, v0}, Lcom/android/server/accessibility/AccessibilityUserState;->putSecureIntForUser(Ljava/lang/String;II)V
@@ -2902,7 +2591,6 @@
 .method public setPerformGesturesEnabledLocked(Z)V
     .locals 0
 
-    .line 1009
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsPerformGesturesEnabled:Z
 
     return-void
@@ -2911,7 +2599,6 @@
 .method public setSendMotionEventsEnabled(Z)V
     .locals 0
 
-    .line 1080
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSendMotionEventsEnabled:Z
 
     return-void
@@ -2920,7 +2607,6 @@
 .method public setServiceDetectsGesturesEnabled(IZ)V
     .locals 0
 
-    .line 1179
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceDetectsGestures:Landroid/util/SparseArray;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2935,7 +2621,6 @@
 .method public setServiceHandlesDoubleTapLocked(Z)V
     .locals 0
 
-    .line 1057
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceHandlesDoubleTap:Z
 
     return-void
@@ -2956,7 +2641,6 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 367
     sget-object p0, Lcom/android/server/accessibility/AccessibilityUserState;->LOG_TAG:Ljava/lang/String;
 
     const-string p1, "Invalid soft keyboard mode"
@@ -2965,7 +2649,6 @@
 
     return v0
 
-    .line 370
     :cond_0
     iget v3, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
@@ -2978,7 +2661,6 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 375
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->hasUserOverriddenHardKeyboardSetting()Z
 
     move-result v3
@@ -2987,7 +2669,6 @@
 
     return v0
 
-    .line 382
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->getSoftKeyboardValueFromSettings()I
 
@@ -2995,7 +2676,6 @@
 
     if-eq v3, v1, :cond_4
 
-    .line 383
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     invoke-virtual {p0, v4, v0, v1}, Lcom/android/server/accessibility/AccessibilityUserState;->getSecureIntForUser(Ljava/lang/String;II)I
@@ -3009,7 +2689,6 @@
     :cond_3
     invoke-virtual {p0, v0}, Lcom/android/server/accessibility/AccessibilityUserState;->setOriginalHardKeyboardValue(Z)V
 
-    .line 386
     :cond_4
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
@@ -3020,28 +2699,22 @@
     :cond_5
     if-ne v3, v1, :cond_6
 
-    .line 389
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityUserState;->getOriginalHardKeyboardValue()Z
 
     move-result v0
 
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
-    .line 388
     invoke-virtual {p0, v4, v0, v1}, Lcom/android/server/accessibility/AccessibilityUserState;->putSecureIntForUser(Ljava/lang/String;II)V
 
-    .line 392
     :cond_6
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/AccessibilityUserState;->saveSoftKeyboardValueToSettings(I)V
 
-    .line 393
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
-    .line 394
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mServiceChangingSoftKeyboardMode:Landroid/content/ComponentName;
 
-    .line 395
     iget-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -3053,7 +2726,6 @@
     :goto_1
     if-ltz p1, :cond_7
 
-    .line 396
     iget-object p2, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3062,7 +2734,6 @@
 
     check-cast p2, Lcom/android/server/accessibility/AccessibilityServiceConnection;
 
-    .line 397
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mSoftKeyboardShowMode:I
 
     invoke-virtual {p2, v0}, Lcom/android/server/accessibility/AbstractAccessibilityServiceConnection;->notifySoftKeyboardShowModeChangedLocked(I)V
@@ -3078,7 +2749,6 @@
 .method public setTargetAssignedToAccessibilityButton(Ljava/lang/String;)V
     .locals 0
 
-    .line 1116
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mTargetAssignedToAccessibilityButton:Ljava/lang/String;
 
     return-void
@@ -3087,7 +2757,6 @@
 .method public setTextHighContrastEnabledLocked(Z)V
     .locals 0
 
-    .line 1033
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTextHighContrastEnabled:Z
 
     return-void
@@ -3096,7 +2765,6 @@
 .method public setTouchExplorationEnabledLocked(Z)V
     .locals 0
 
-    .line 1049
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mIsTouchExplorationEnabled:Z
 
     return-void
@@ -3105,7 +2773,6 @@
 .method public setTwoFingerPassthroughLocked(Z)V
     .locals 0
 
-    .line 1072
     iput-boolean p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mRequestTwoFingerPassthrough:Z
 
     return-void
@@ -3114,7 +2781,6 @@
 .method public setUserInteractiveUiTimeoutLocked(I)V
     .locals 0
 
-    .line 1088
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserInteractiveUiTimeout:I
 
     return-void
@@ -3123,7 +2789,6 @@
 .method public setUserNonInteractiveUiTimeoutLocked(I)V
     .locals 0
 
-    .line 1096
     iput p1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserNonInteractiveUiTimeout:I
 
     return-void
@@ -3134,7 +2799,6 @@
 
     const/4 v0, 0x0
 
-    .line 522
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     const-string v2, "accessibility_soft_keyboard_mode"
@@ -3147,7 +2811,6 @@
 
     or-int/2addr v0, v1
 
-    .line 524
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mUserId:I
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/accessibility/AccessibilityUserState;->putSecureIntForUser(Ljava/lang/String;II)V
@@ -3158,10 +2821,8 @@
 .method public final unbindAllServicesLocked()V
     .locals 2
 
-    .line 568
     iget-object p0, p0, Lcom/android/server/accessibility/AccessibilityUserState;->mBoundServices:Ljava/util/ArrayList;
 
-    .line 569
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -3171,7 +2832,6 @@
 
     const/4 v1, 0x0
 
-    .line 572
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1

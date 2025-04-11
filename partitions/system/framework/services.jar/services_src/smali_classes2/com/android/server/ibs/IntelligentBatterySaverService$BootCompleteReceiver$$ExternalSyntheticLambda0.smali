@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;
 
     invoke-static {p1}, Lcom/android/server/ibs/IntelligentBatterySaverService$BootCompleteReceiver;->$r8$lambda$t3PUrtsqU54v7XpwA0L6oqNwsss(Lcom/android/server/ibs/IntelligentBatterySaverFastDrainPolicy;)V

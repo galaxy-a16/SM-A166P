@@ -7,7 +7,6 @@
 .method public static hashSignature(Landroid/content/pm/Signature;)[B
     .locals 0
 
-    .line 118
     invoke-virtual {p0}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object p0
@@ -25,15 +24,12 @@
     :try_start_0
     const-string v0, "SHA-256"
 
-    .line 108
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 109
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 110
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -47,7 +43,6 @@
 
     const-string v0, "No SHA-256 algorithm found!"
 
-    .line 112
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -64,7 +59,6 @@
 
     return-object p0
 
-    .line 138
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -74,7 +68,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 139
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -92,7 +85,6 @@
 
     check-cast v1, [B
 
-    .line 140
     invoke-static {v1}, Lcom/android/server/backup/BackupUtils;->hashSignature([B)[B
 
     move-result-object v1
@@ -114,7 +106,6 @@
 
     return-object p0
 
-    .line 126
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -122,7 +113,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 127
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -132,7 +122,6 @@
 
     aget-object v3, p0, v2
 
-    .line 128
     invoke-static {v3}, Lcom/android/server/backup/BackupUtils;->hashSignature(Landroid/content/pm/Signature;)[B
 
     move-result-object v3
@@ -154,14 +143,12 @@
 
     if-eqz p1, :cond_9
 
-    .line 42
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
     goto :goto_3
 
-    .line 50
     :cond_0
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -175,7 +162,6 @@
 
     return v2
 
-    .line 56
     :cond_1
     invoke-static {p0}, Lcom/android/internal/util/ArrayUtils;->isEmpty(Ljava/util/Collection;)Z
 
@@ -185,7 +171,6 @@
 
     return v0
 
-    .line 60
     :cond_2
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
@@ -195,12 +180,10 @@
 
     const-string/jumbo p1, "signingInfo is empty, app was either unsigned or the flag PackageManager#GET_SIGNING_CERTIFICATES was not specified"
 
-    .line 62
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 73
     :cond_3
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -208,7 +191,6 @@
 
     if-ne v3, v2, :cond_4
 
-    .line 80
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -223,7 +205,6 @@
 
     return p0
 
-    .line 86
     :cond_4
     invoke-virtual {v1}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
 
@@ -233,7 +214,6 @@
 
     move-result-object p1
 
-    .line 87
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p2
@@ -248,7 +228,6 @@
     :goto_1
     if-ge v4, p2, :cond_6
 
-    .line 92
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5

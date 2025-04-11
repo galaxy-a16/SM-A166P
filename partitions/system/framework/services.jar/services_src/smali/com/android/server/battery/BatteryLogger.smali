@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +37,6 @@
 
     const-string/jumbo v0, "yyyy-MM-dd HH:mm:ss.SSS"
 
-    .line 18
     invoke-static {v0}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
@@ -51,7 +49,6 @@
 .method public static writeToFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .line 21
     sget-object v0, Lcom/android/server/battery/BatteryLogger;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,12 +67,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 24
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -83,7 +78,6 @@
 
     if-nez v2, :cond_1
 
-    .line 25
     invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v2
@@ -94,20 +88,17 @@
 
     if-nez v2, :cond_0
 
-    .line 26
     invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
-    .line 28
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
     move-result v2
 
-    .line 29
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -139,17 +130,14 @@
     :catch_0
     move-exception p0
 
-    .line 34
     sget-object v0, Lcom/android/server/battery/BatteryLogger;->TAG:Ljava/lang/String;
 
     const-string v2, "[writeToFile]Exception - createNewFile"
 
     invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 38
     :cond_1
     :try_start_1
     new-instance p0, Ljava/io/FileWriter;
@@ -167,7 +155,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 40
     :try_start_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -195,19 +182,16 @@
 
     invoke-virtual {v0, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 41
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->newLine()V
 
     if-eqz p1, :cond_2
 
-    .line 43
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 44
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,32 +208,26 @@
 
     invoke-virtual {v0, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 45
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->newLine()V
 
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 48
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_3
 
-    .line 49
     invoke-virtual {v0, p2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->newLine()V
 
-    .line 52
     :cond_3
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->newLine()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 53
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_4
@@ -265,7 +243,6 @@
     :catchall_0
     move-exception p1
 
-    .line 38
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_6
@@ -308,14 +285,12 @@
     :catch_1
     move-exception p0
 
-    .line 54
     sget-object p1, Lcom/android/server/battery/BatteryLogger;->TAG:Ljava/lang/String;
 
     const-string p2, "[writeToFile]Exception"
 
     invoke-static {p1, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_2

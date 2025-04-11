@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 196
     invoke-direct {p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 
     const-string p0, "android.test.base"
 
-    .line 202
     invoke-static {p1, p0}, Lcom/android/server/pm/parsing/library/PackageSharedLibraryUpdater;->removeLibrary(Lcom/android/server/pm/parsing/pkg/ParsedPackage;Ljava/lang/String;)V
 
     return-void

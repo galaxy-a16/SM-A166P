@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;Lcom/android/server/am/ServiceRecord;Landroid/content/Intent;ZLandroid/app/IServiceConnection;)V
     .locals 0
 
-    .line 1374
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
     iput-object p2, p0, Lcom/android/server/am/ActiveServices$2;->val$r:Lcom/android/server/am/ServiceRecord;
@@ -43,7 +42,6 @@
 .method public onResult(Landroid/os/Bundle;)V
     .locals 11
 
-    .line 1377
     iget-object p1, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object p1, p1, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -52,7 +50,6 @@
 
     monitor-enter p1
 
-    .line 1378
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -60,7 +57,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 1380
     :try_start_1
     iget-object v2, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -76,7 +72,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1409
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -84,12 +79,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1381
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
     return-void
 
-    .line 1387
     :cond_0
     :try_start_3
     iget-object v2, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
@@ -106,7 +99,6 @@
 
     iget v3, v3, Lcom/android/server/am/ServiceRecord;->userId:I
 
-    .line 1388
     invoke-virtual {v2, v4, v3}, Landroid/content/pm/PackageManagerInternal;->isPermissionsReviewRequired(Ljava/lang/String;I)Z
 
     move-result v2
@@ -117,7 +109,6 @@
 
     const/4 v2, 0x6
 
-    .line 1391
     :try_start_4
     iget-object v3, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -125,7 +116,6 @@
 
     iget-object v5, p0, Lcom/android/server/am/ActiveServices$2;->val$service:Landroid/content/Intent;
 
-    .line 1392
     invoke-virtual {v5}, Landroid/content/Intent;->getFlags()I
 
     move-result v5
@@ -140,13 +130,11 @@
 
     const/4 v10, 0x1
 
-    .line 1391
     invoke-static/range {v3 .. v10}, Lcom/android/server/am/ActiveServices;->-$$Nest$mbringUpServiceLocked(Lcom/android/server/am/ActiveServices;Lcom/android/server/am/ServiceRecord;IZZZZZ)Ljava/lang/String;
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1402
     :try_start_5
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -166,10 +154,8 @@
 
     invoke-virtual {p0, v2}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjPendingTargetsLocked(I)V
 
-    .line 1404
     throw v3
 
-    .line 1402
     :catch_0
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -177,7 +163,6 @@
 
     goto :goto_0
 
-    .line 1406
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ActiveServices$2;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -187,12 +172,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1409
     :goto_1
     :try_start_6
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1411
     monitor-exit p1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
@@ -204,17 +187,14 @@
     :catchall_1
     move-exception p0
 
-    .line 1409
     :try_start_7
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1410
     throw p0
 
     :catchall_2
     move-exception p0
 
-    .line 1411
     monitor-exit p1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2

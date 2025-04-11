@@ -21,7 +21,6 @@
 .method public static synthetic $r8$lambda$RXnawYfIOH5P2wjXR5pHPcL805c(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->lambda$resolveRotationLocked$0()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLatencyTracker(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;)Lcom/android/internal/util/LatencyTracker;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mLatencyTracker:Lcom/android/internal/util/LatencyTracker;
 
     return-object p0
@@ -39,17 +37,14 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/rotationresolver/RotationResolverManagerService;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 74
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/infra/AbstractPerUserSystemService;-><init>(Lcom/android/server/infra/AbstractMasterSystemService;Ljava/lang/Object;I)V
 
-    .line 75
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -66,12 +61,10 @@
 .method private synthetic lambda$resolveRotationLocked$0()V
     .locals 3
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 149
     :try_start_0
     iget-object v1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
@@ -81,19 +74,16 @@
 
     if-nez v1, :cond_0
 
-    .line 150
     sget-object v1, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->TAG:Ljava/lang/String;
 
     const-string v2, "Trying to cancel the remote request. Reason: Client cancelled."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;->cancelInternal()V
 
-    .line 153
     :cond_0
     monitor-exit v0
 
@@ -114,20 +104,17 @@
 .method public final cancelLocked()V
     .locals 1
 
-    .line 214
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 217
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;->cancelInternal()V
 
     const/4 v0, 0x0
 
-    .line 218
     iput-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     return-void
@@ -136,21 +123,18 @@
 .method public destroyLocked()V
     .locals 2
 
-    .line 80
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->isVerbose()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 81
     sget-object v0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->TAG:Ljava/lang/String;
 
     const-string v1, "destroyLocked()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_0
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
@@ -158,7 +142,6 @@
 
     return-void
 
-    .line 87
     :cond_1
     sget-object v0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->TAG:Ljava/lang/String;
 
@@ -166,20 +149,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->cancelLocked()V
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mRemoteService:Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
     if-eqz v0, :cond_2
 
-    .line 91
     invoke-virtual {v0}, Lcom/android/internal/infra/ServiceConnector$Impl;->unbind()V
 
     const/4 v0, 0x0
 
-    .line 92
     iput-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mRemoteService:Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
     :cond_2
@@ -189,12 +168,10 @@
 .method public dumpInternal(Landroid/util/IndentingPrintWriter;)V
     .locals 3
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 230
     :try_start_0
     iget-object v1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mRemoteService:Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
@@ -202,19 +179,15 @@
 
     const-string v2, ""
 
-    .line 231
     invoke-virtual {v1, v2, p1}, Lcom/android/internal/infra/ServiceConnector$Impl;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 233
     :cond_0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     if-eqz p0, :cond_1
 
-    .line 234
     invoke-virtual {p0, p1}, Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;->dump(Landroid/util/IndentingPrintWriter;)V
 
-    .line 236
     :cond_1
     monitor-exit v0
 
@@ -233,10 +206,8 @@
 .method public dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 224
     invoke-super {p0, p1, p2}, Lcom/android/server/infra/AbstractPerUserSystemService;->dumpLocked(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 225
     new-instance p1, Landroid/util/IndentingPrintWriter;
 
     const-string v0, "  "
@@ -251,12 +222,10 @@
 .method public final ensureRemoteServiceInitiated()V
     .locals 7
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mRemoteService:Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
     if-nez v0, :cond_0
 
-    .line 164
     new-instance v0, Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getContext()Landroid/content/Context;
@@ -265,7 +234,6 @@
 
     iget-object v3, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
-    .line 165
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->getUserId()I
 
     move-result v4
@@ -285,7 +253,6 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 0
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
     return-object p0
@@ -294,19 +261,16 @@
 .method public isServiceAvailableLocked()Z
     .locals 1
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
     if-nez v0, :cond_0
 
-    .line 183
     invoke-virtual {p0}, Lcom/android/server/infra/AbstractPerUserSystemService;->updateServiceInfoLocked()Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
-    .line 185
     :cond_0
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mComponentName:Landroid/content/ComponentName;
 
@@ -328,7 +292,6 @@
 
     const-string v0, "android.permission.BIND_ROTATION_RESOLVER_SERVICE"
 
-    .line 193
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -344,10 +307,8 @@
 
     if-eqz p0, :cond_1
 
-    .line 196
     iget-object v1, p0, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
-    .line 197
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -356,7 +317,6 @@
 
     goto :goto_0
 
-    .line 198
     :cond_0
     new-instance v1, Ljava/lang/SecurityException;
 
@@ -366,7 +326,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 200
     invoke-virtual {p0}, Landroid/content/pm/ServiceInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
@@ -385,7 +344,6 @@
 
     aput-object p0, v3, v0
 
-    .line 198
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -400,7 +358,6 @@
     :goto_0
     return-object p0
 
-    .line 206
     :catch_0
     new-instance p0, Landroid/content/pm/PackageManager$NameNotFoundException;
 
@@ -426,14 +383,12 @@
 .method public resolveRotationLocked(Landroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;Landroid/service/rotationresolver/RotationResolutionRequest;Landroid/os/CancellationSignal;)V
     .locals 3
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->isServiceAvailableLocked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 104
     sget-object p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->TAG:Ljava/lang/String;
 
     const-string p3, "Service is not available at this moment."
@@ -442,10 +397,8 @@
 
     const/4 p0, 0x0
 
-    .line 105
     invoke-interface {p1, p0}, Landroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;->onFailure(I)V
 
-    .line 106
     invoke-virtual {p2}, Landroid/service/rotationresolver/RotationResolutionRequest;->getProposedRotation()I
 
     move-result p0
@@ -460,11 +413,9 @@
 
     return-void
 
-    .line 111
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->ensureRemoteServiceInitiated()V
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     if-eqz v0, :cond_1
@@ -473,16 +424,13 @@
 
     if-nez v0, :cond_1
 
-    .line 115
     invoke-virtual {p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->cancelLocked()V
 
-    .line 118
     :cond_1
     iget-object v0, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 119
     :try_start_0
     iget-object v1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mLatencyTracker:Lcom/android/internal/util/LatencyTracker;
 
@@ -490,17 +438,14 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/util/LatencyTracker;->onActionStart(I)V
 
-    .line 120
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
     new-instance v0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$1;-><init>(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;Landroid/rotationresolver/RotationResolverInternal$RotationResolverCallbackInternal;)V
 
-    .line 144
     new-instance p1, Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     iget-object v1, p0, Lcom/android/server/infra/AbstractPerUserSystemService;->mLock:Ljava/lang/Object;
@@ -509,21 +454,18 @@
 
     iput-object p1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
-    .line 147
     new-instance p1, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;)V
 
     invoke-virtual {p3, p1}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 157
     iget-object p1, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mRemoteService:Lcom/android/server/rotationresolver/RemoteRotationResolverService;
 
     iget-object p2, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     invoke-virtual {p1, p2}, Lcom/android/server/rotationresolver/RemoteRotationResolverService;->resolveRotation(Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;)V
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/rotationresolver/RotationResolverManagerPerUserService;->mCurrentRequest:Lcom/android/server/rotationresolver/RemoteRotationResolverService$RotationRequest;
 
     const/4 p1, 0x1
@@ -535,7 +477,6 @@
     :catchall_0
     move-exception p0
 
-    .line 120
     :try_start_1
     monitor-exit v0
     :try_end_1

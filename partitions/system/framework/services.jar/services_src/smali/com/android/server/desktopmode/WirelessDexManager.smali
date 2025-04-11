@@ -61,7 +61,6 @@
 .method public static synthetic $r8$lambda$8-FIq-InjeZBPbs7X8VXecIepaM(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->lambda$new$1()V
 
     return-void
@@ -70,7 +69,6 @@
 .method public static synthetic $r8$lambda$LKv5xmdnQgPzETFrafDYIbqaaKs(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->lambda$new$0()V
 
     return-void
@@ -79,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -88,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDesktopDisplayId(Lcom/android/server/desktopmode/WirelessDexManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDesktopDisplayId:I
 
     return p0
@@ -97,7 +93,6 @@
 .method public static bridge synthetic -$$Nest$fgetmDesktopPointerEventListener(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDesktopPointerEventListener:Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
 
     return-object p0
@@ -106,7 +101,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -115,7 +109,6 @@
 .method public static bridge synthetic -$$Nest$fgetmInputManager(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/hardware/input/InputManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mInputManager:Landroid/hardware/input/InputManager;
 
     return-object p0
@@ -124,7 +117,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsLowLatencyMode(Lcom/android/server/desktopmode/WirelessDexManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsLowLatencyMode:Z
 
     return p0
@@ -133,7 +125,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsPointerEventListener(Lcom/android/server/desktopmode/WirelessDexManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerEventListener:Z
 
     return p0
@@ -142,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsPointerIconListener(Lcom/android/server/desktopmode/WirelessDexManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerIconListener:Z
 
     return p0
@@ -151,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$fgetmIsWirelessDexEntered(Lcom/android/server/desktopmode/WirelessDexManager;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsWirelessDexEntered:Z
 
     return p0
@@ -160,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMotionEventStartTime(Lcom/android/server/desktopmode/WirelessDexManager;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mMotionEventStartTime:J
 
     return-wide v0
@@ -169,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPointerIconChangedListener(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/hardware/input/InputManager$SemOnPointerIconChangedListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mPointerIconChangedListener:Landroid/hardware/input/InputManager$SemOnPointerIconChangedListener;
 
     return-object p0
@@ -178,7 +165,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPointerIconSync(Lcom/android/server/desktopmode/WirelessDexManager;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mPointerIconSync:I
 
     return p0
@@ -187,7 +173,6 @@
 .method public static bridge synthetic -$$Nest$fgetmResolver(Lcom/android/server/desktopmode/WirelessDexManager;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -196,7 +181,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRunnableDisableLowLatencyMode(Lcom/android/server/desktopmode/WirelessDexManager;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mRunnableDisableLowLatencyMode:Ljava/lang/Runnable;
 
     return-object p0
@@ -205,7 +189,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRunnableEnableLowLatencyMode(Lcom/android/server/desktopmode/WirelessDexManager;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mRunnableEnableLowLatencyMode:Ljava/lang/Runnable;
 
     return-object p0
@@ -214,7 +197,6 @@
 .method public static bridge synthetic -$$Nest$fgetmStateManager(Lcom/android/server/desktopmode/WirelessDexManager;)Lcom/android/server/desktopmode/IStateManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     return-object p0
@@ -223,7 +205,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTvTizenVersion(Lcom/android/server/desktopmode/WirelessDexManager;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mTvTizenVersion:Ljava/lang/String;
 
     return-object p0
@@ -232,7 +213,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWindowManager(Lcom/android/server/desktopmode/WirelessDexManager;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -241,7 +221,6 @@
 .method public static bridge synthetic -$$Nest$fputmConnectedDeviceName(Lcom/android/server/desktopmode/WirelessDexManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mConnectedDeviceName:Ljava/lang/String;
 
     return-void
@@ -250,7 +229,6 @@
 .method public static bridge synthetic -$$Nest$fputmDesktopDisplayId(Lcom/android/server/desktopmode/WirelessDexManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDesktopDisplayId:I
 
     return-void
@@ -259,7 +237,6 @@
 .method public static bridge synthetic -$$Nest$fputmFrequencyValue(Lcom/android/server/desktopmode/WirelessDexManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mFrequencyValue:I
 
     return-void
@@ -268,7 +245,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsLowLatencyMode(Lcom/android/server/desktopmode/WirelessDexManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsLowLatencyMode:Z
 
     return-void
@@ -277,7 +253,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsPointerEventListener(Lcom/android/server/desktopmode/WirelessDexManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerEventListener:Z
 
     return-void
@@ -286,7 +261,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsPointerIconListener(Lcom/android/server/desktopmode/WirelessDexManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerIconListener:Z
 
     return-void
@@ -295,7 +269,6 @@
 .method public static bridge synthetic -$$Nest$fputmIsWirelessDexEntered(Lcom/android/server/desktopmode/WirelessDexManager;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsWirelessDexEntered:Z
 
     return-void
@@ -304,7 +277,6 @@
 .method public static bridge synthetic -$$Nest$fputmMotionEventStartTime(Lcom/android/server/desktopmode/WirelessDexManager;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mMotionEventStartTime:J
 
     return-void
@@ -313,7 +285,6 @@
 .method public static bridge synthetic -$$Nest$fputmPointerIconSync(Lcom/android/server/desktopmode/WirelessDexManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mPointerIconSync:I
 
     return-void
@@ -322,7 +293,6 @@
 .method public static bridge synthetic -$$Nest$fputmReducedLatency(Lcom/android/server/desktopmode/WirelessDexManager;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mReducedLatency:I
 
     return-void
@@ -331,7 +301,6 @@
 .method public static bridge synthetic -$$Nest$fputmTvTizenVersion(Lcom/android/server/desktopmode/WirelessDexManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mTvTizenVersion:Ljava/lang/String;
 
     return-void
@@ -340,7 +309,6 @@
 .method public static bridge synthetic -$$Nest$mremoveNotifications(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->removeNotifications()V
 
     return-void
@@ -349,7 +317,6 @@
 .method public static bridge synthetic -$$Nest$msetConnectedDeviceName(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->setConnectedDeviceName()V
 
     return-void
@@ -358,7 +325,6 @@
 .method public static bridge synthetic -$$Nest$msetWirelessDeXPointerIcon(Lcom/android/server/desktopmode/WirelessDexManager;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/WirelessDexManager;->setWirelessDeXPointerIcon(I)V
 
     return-void
@@ -367,7 +333,6 @@
 .method public static bridge synthetic -$$Nest$mshowQosDialog(Lcom/android/server/desktopmode/WirelessDexManager;Lcom/android/server/desktopmode/State;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/desktopmode/WirelessDexManager;->showQosDialog(Lcom/android/server/desktopmode/State;)V
 
     return-void
@@ -376,7 +341,6 @@
 .method public static bridge synthetic -$$Nest$mshowToastToNotifyNetworkDisconnection(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->showToastToNotifyNetworkDisconnection()V
 
     return-void
@@ -385,7 +349,6 @@
 .method public static bridge synthetic -$$Nest$mshowToastWeakNetwork(Lcom/android/server/desktopmode/WirelessDexManager;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->showToastWeakNetwork()V
 
     return-void
@@ -394,7 +357,6 @@
 .method public static bridge synthetic -$$Nest$sfgetTAG()Ljava/lang/String;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/desktopmode/WirelessDexManager;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -403,7 +365,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,114 +393,90 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/desktopmode/IStateManager;Lcom/android/server/desktopmode/UiManager;Landroid/hardware/display/DisplayManager;Landroid/hardware/input/InputManager;Lcom/android/server/ServiceThread;Lcom/android/server/wm/WindowManagerService;)V
     .locals 2
 
-    .line 247
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 105
     iput-boolean v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsLowLatencyMode:Z
 
-    .line 106
     iput-boolean v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerEventListener:Z
 
-    .line 107
     iput-boolean v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsPointerIconListener:Z
 
-    .line 108
     iput-boolean v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsWirelessDexEntered:Z
 
     const/4 v1, -0x1
 
-    .line 109
     iput v1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mReducedLatency:I
 
-    .line 110
     iput v1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mPointerIconSync:I
 
-    .line 111
     iput v1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDesktopDisplayId:I
 
-    .line 112
     iput v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mFrequencyValue:I
 
     const-string v0, ""
 
-    .line 114
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mConnectedDeviceName:Ljava/lang/String;
 
-    .line 118
     new-instance v0, Lcom/android/server/desktopmode/WirelessDexManager$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/WirelessDexManager$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mRunnableEnableLowLatencyMode:Ljava/lang/Runnable;
 
-    .line 122
     new-instance v0, Lcom/android/server/desktopmode/WirelessDexManager$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/WirelessDexManager$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mRunnableDisableLowLatencyMode:Ljava/lang/Runnable;
 
-    .line 164
     new-instance v0, Lcom/android/server/desktopmode/WirelessDexManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/WirelessDexManager$1;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mSemWifiDisplayParameterListener:Landroid/hardware/display/SemWifiDisplayParameterListener;
 
-    .line 207
     new-instance v0, Lcom/android/server/desktopmode/WirelessDexManager$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/WirelessDexManager$2;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mPointerIconChangedListener:Landroid/hardware/input/InputManager$SemOnPointerIconChangedListener;
 
-    .line 216
     new-instance v0, Lcom/android/server/desktopmode/WirelessDexManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/desktopmode/WirelessDexManager$3;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;)V
 
     iput-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDesktopPointerEventListener:Landroid/view/WindowManagerPolicyConstants$PointerEventListener;
 
-    .line 248
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mContext:Landroid/content/Context;
 
-    .line 249
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mResolver:Landroid/content/ContentResolver;
 
-    .line 250
     iput-object p4, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 251
     iget-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mSemWifiDisplayParameterListener:Landroid/hardware/display/SemWifiDisplayParameterListener;
 
     const/4 v0, 0x0
 
     invoke-virtual {p4, p1, v0}, Landroid/hardware/display/DisplayManager;->semRegisterWifiDisplayParameterListener(Landroid/hardware/display/SemWifiDisplayParameterListener;Landroid/os/Handler;)V
 
-    .line 253
     iput-object p5, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mInputManager:Landroid/hardware/input/InputManager;
 
-    .line 254
     iput-object p7, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    .line 255
     iput-object p2, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
-    .line 256
     new-instance p1, Lcom/android/server/desktopmode/WirelessDexManager$StateListener;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/desktopmode/WirelessDexManager$StateListener;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;Lcom/android/server/desktopmode/WirelessDexManager$StateListener-IA;)V
 
     invoke-interface {p2, p1}, Lcom/android/server/desktopmode/IStateManager;->registerListener(Lcom/android/server/desktopmode/StateManager$StateListener;)V
 
-    .line 257
     new-instance p1, Landroid/os/Handler;
 
     invoke-virtual {p6}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -550,10 +487,8 @@
 
     iput-object p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mHandler:Landroid/os/Handler;
 
-    .line 258
     iput-object p3, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mUiManager:Lcom/android/server/desktopmode/UiManager;
 
-    .line 259
     new-instance p1, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;
 
     invoke-direct {p1, p0, v0}, Lcom/android/server/desktopmode/WirelessDexManager$Receiver;-><init>(Lcom/android/server/desktopmode/WirelessDexManager;Lcom/android/server/desktopmode/WirelessDexManager$Receiver-IA;)V
@@ -568,7 +503,6 @@
 
     const/4 v0, 0x1
 
-    .line 119
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/WirelessDexManager;->setLowLatencyModeEnabled(Z)V
 
     return-void
@@ -579,7 +513,6 @@
 
     const/4 v0, 0x0
 
-    .line 123
     invoke-virtual {p0, v0}, Lcom/android/server/desktopmode/WirelessDexManager;->setLowLatencyModeEnabled(Z)V
 
     return-void
@@ -590,7 +523,6 @@
 .method public disconnect()V
     .locals 3
 
-    .line 359
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -601,7 +533,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -611,14 +542,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 361
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getActiveDisplay()Landroid/hardware/display/SemWifiDisplay;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 362
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getConnectedState()I
 
     move-result v1
@@ -627,7 +556,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 363
     invoke-virtual {v0}, Landroid/hardware/display/SemWifiDisplayStatus;->getConnectedState()I
 
     move-result v0
@@ -636,7 +564,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 364
     :cond_1
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
@@ -649,7 +576,6 @@
 .method public dump(Landroid/util/IndentingPrintWriter;)V
     .locals 2
 
-    .line 441
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -676,10 +602,8 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 442
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 443
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -698,7 +622,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 444
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -717,7 +640,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 445
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -736,7 +658,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 446
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,7 +676,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -774,7 +694,6 @@
 
     invoke-virtual {p1, v0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 448
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -793,7 +712,6 @@
 
     invoke-virtual {p1, p0}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 449
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
     return-void
@@ -802,7 +720,6 @@
 .method public final getConnectedDeviceAddress()Ljava/lang/String;
     .locals 0
 
-    .line 349
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {p0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
@@ -815,7 +732,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 350
     invoke-virtual {p0}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
     move-result-object p0
@@ -832,7 +748,6 @@
 .method public final isQosDialogClosedDevice()Z
     .locals 4
 
-    .line 338
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "wireless_dex_qos_notification_deleted"
@@ -843,7 +758,6 @@
 
     move-result-object v0
 
-    .line 340
     sget-boolean v1, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -873,7 +787,6 @@
 
     return v1
 
-    .line 344
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->getConnectedDeviceAddress()Ljava/lang/String;
 
@@ -881,7 +794,6 @@
 
     const-string v2, ""
 
-    .line 345
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -903,7 +815,6 @@
 .method public final removeNotifications()V
     .locals 1
 
-    .line 437
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mUiManager:Lcom/android/server/desktopmode/UiManager;
 
     const/16 v0, 0xcc
@@ -916,7 +827,6 @@
 .method public final setConnectedDeviceName()V
     .locals 1
 
-    .line 354
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
@@ -929,7 +839,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 355
     invoke-virtual {v0}, Landroid/hardware/display/WifiDisplay;->getDeviceName()Ljava/lang/String;
 
     move-result-object v0
@@ -948,7 +857,6 @@
 .method public setDefaultSettings()V
     .locals 3
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v1, "wireless_dex"
@@ -957,7 +865,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;I)V
 
-    .line 370
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mResolver:Landroid/content/ContentResolver;
 
     const-string/jumbo v0, "wireless_dex_scan_device"
@@ -972,12 +879,10 @@
 .method public final setLowLatencyModeEnabled(Z)V
     .locals 1
 
-    .line 290
     iget-boolean v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsLowLatencyMode:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 291
     iput-boolean p1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mIsLowLatencyMode:Z
 
     if-eqz p1, :cond_0
@@ -992,7 +897,6 @@
     :goto_0
     const-string/jumbo v0, "wfd_sec_low_latency_mode"
 
-    .line 292
     invoke-virtual {p0, v0, p1}, Lcom/android/server/desktopmode/WirelessDexManager;->setWifiDisplayParameters(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -1002,7 +906,6 @@
 .method public final setWifiDisplayParameters(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 297
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1035,13 +938,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     :cond_0
     new-instance v0, Landroid/hardware/display/SemWifiDisplayParameter;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/display/SemWifiDisplayParameter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 299
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     const-string/jumbo p1, "setparams"
@@ -1089,7 +990,6 @@
     :goto_0
     const-string/jumbo v0, "wfd_sec_uibc_mouse_cursor_idx"
 
-    .line 286
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1112,14 +1012,12 @@
 .method public final showQosDialog(Lcom/android/server/desktopmode/State;)V
     .locals 3
 
-    .line 315
     invoke-virtual {p0}, Lcom/android/server/desktopmode/WirelessDexManager;->isQosDialogClosedDevice()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mTvTizenVersion:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1134,7 +1032,6 @@
 
     const-string v2, "TIZEN-WFD-SINK"
 
-    .line 317
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1143,7 +1040,6 @@
 
     goto :goto_0
 
-    .line 320
     :cond_0
     iget v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mFrequencyValue:I
 
@@ -1155,7 +1051,6 @@
 
     if-le v0, v2, :cond_3
 
-    .line 322
     :cond_1
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mUiManager:Lcom/android/server/desktopmode/UiManager;
 
@@ -1169,7 +1064,6 @@
 
     goto :goto_1
 
-    .line 318
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mUiManager:Lcom/android/server/desktopmode/UiManager;
@@ -1190,7 +1084,6 @@
 .method public final showToastToNotifyNetworkDisconnection()V
     .locals 3
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mConnectedDeviceName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1199,7 +1092,6 @@
 
     if-nez v0, :cond_1
 
-    .line 330
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1228,13 +1120,11 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mContext:Landroid/content/Context;
 
     const v1, 0x1040424
 
-    .line 333
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1245,7 +1135,6 @@
 
     move-result-object p0
 
-    .line 332
     invoke-static {v1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1259,14 +1148,12 @@
 .method public final showToastWeakNetwork()V
     .locals 4
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mStateManager:Lcom/android/server/desktopmode/IStateManager;
 
     invoke-interface {v0}, Lcom/android/server/desktopmode/IStateManager;->getState()Lcom/android/server/desktopmode/State;
 
     move-result-object v0
 
-    .line 306
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->isWirelessDexConnected()Z
 
     move-result v1
@@ -1287,7 +1174,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 308
     iget-object v1, p0, Lcom/android/server/desktopmode/WirelessDexManager;->mContext:Landroid/content/Context;
 
     invoke-interface {v0}, Lcom/android/server/desktopmode/State;->getDesktopDisplayId()I
@@ -1302,7 +1188,6 @@
 
     const v2, 0x1040442
 
-    .line 309
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1311,7 +1196,6 @@
 
     const v2, 0x1040c35
 
-    .line 310
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1320,12 +1204,10 @@
 
     move-result-object p0
 
-    .line 309
     invoke-static {v1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 308
     invoke-static {v0, p0}, Lcom/android/server/desktopmode/ToastManager;->showToast(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0

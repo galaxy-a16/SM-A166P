@@ -13,7 +13,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 85
     invoke-interface {p2, p1}, Lcom/android/server/permission/jarjar/kotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -31,7 +30,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_1
     instance-of p2, p1, Ljava/lang/CharSequence;
 
@@ -44,7 +42,6 @@
 
     goto :goto_1
 
-    .line 87
     :cond_2
     instance-of p2, p1, Ljava/lang/Character;
 
@@ -60,7 +57,6 @@
 
     goto :goto_1
 
-    .line 88
     :cond_3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/broadcastradio/hal2/RadioModule;Lcom/android/server/broadcastradio/hal2/Mutable;)V
     .locals 0
 
-    .line 429
     iput-object p1, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$3;->this$0:Lcom/android/server/broadcastradio/hal2/RadioModule;
 
     iput-object p2, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$3;->val$hwCloseHandle:Lcom/android/server/broadcastradio/hal2/Mutable;
@@ -28,7 +27,6 @@
 .method public close()V
     .locals 3
 
-    .line 432
     :try_start_0
     iget-object v0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$3;->val$hwCloseHandle:Lcom/android/server/broadcastradio/hal2/Mutable;
 
@@ -49,10 +47,8 @@
 
     const-string v2, "Failed closing announcement listener"
 
-    .line 434
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 436
     :goto_0
     iget-object p0, p0, Lcom/android/server/broadcastradio/hal2/RadioModule$3;->val$hwCloseHandle:Lcom/android/server/broadcastradio/hal2/Mutable;
 

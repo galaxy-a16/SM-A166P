@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;I)V
     .locals 0
 
-    .line 2012
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2013
     iput-object p1, p0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;->mPkgState:Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
-    .line 2014
     iput p2, p0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;->mErrorCode:I
 
     return-void
@@ -28,7 +25,6 @@
 .method public static error(I)Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;
     .locals 2
 
-    .line 2019
     new-instance v0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;
 
     const/4 v1, 0x0
@@ -41,7 +37,6 @@
 .method public static success(Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;)Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;
     .locals 2
 
-    .line 2024
     new-instance v0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;
 
     const/4 v1, 0x0
@@ -56,7 +51,6 @@
 .method public getErrorCode()I
     .locals 0
 
-    .line 2037
     iget p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;->mErrorCode:I
 
     return p0
@@ -65,7 +59,6 @@
 .method public getPkgState()Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
     .locals 0
 
-    .line 2029
     iget-object p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;->mPkgState:Lcom/android/server/pm/verify/domain/models/DomainVerificationPkgState;
 
     return-object p0
@@ -74,7 +67,6 @@
 .method public isError()Z
     .locals 0
 
-    .line 2033
     iget p0, p0, Lcom/android/server/pm/verify/domain/DomainVerificationService$GetAttachedResult;->mErrorCode:I
 
     if-eqz p0, :cond_0

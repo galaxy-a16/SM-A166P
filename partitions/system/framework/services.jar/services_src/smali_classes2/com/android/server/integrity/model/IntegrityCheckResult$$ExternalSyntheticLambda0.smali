@@ -20,7 +20,6 @@
 .method public final test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/integrity/Rule;
 
     invoke-static {p1}, Lcom/android/server/integrity/model/IntegrityCheckResult;->$r8$lambda$Rr3Ve_Mln_IcycjIZ9OQLZ-yWGs(Landroid/content/integrity/Rule;)Z

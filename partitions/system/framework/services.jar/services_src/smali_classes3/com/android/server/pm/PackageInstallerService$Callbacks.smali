@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySessionActiveChanged(Lcom/android/server/pm/PackageInstallerService$Callbacks;IIZ)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionActiveChanged(IIZ)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySessionBadgingChanged(Lcom/android/server/pm/PackageInstallerService$Callbacks;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionBadgingChanged(II)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySessionCreated(Lcom/android/server/pm/PackageInstallerService$Callbacks;II)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionCreated(II)V
 
     return-void
@@ -40,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$mnotifySessionProgressChanged(Lcom/android/server/pm/PackageInstallerService$Callbacks;IIF)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionProgressChanged(IIF)V
 
     return-void
@@ -49,13 +45,10 @@
 .method public constructor <init>(Lcom/android/server/pm/PackageInstallerService;Landroid/os/Looper;)V
     .locals 0
 
-    .line 2058
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
-    .line 2059
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2055
     new-instance p1, Landroid/os/RemoteCallbackList;
 
     invoke-direct {p1}, Landroid/os/RemoteCallbackList;-><init>()V
@@ -70,20 +63,16 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 8
 
-    .line 2072
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 2073
     iget v1, p1, Landroid/os/Message;->arg2:I
 
-    .line 2074
     iget-object v2, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v2
 
-    .line 2075
     iget-object v3, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v3}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$fgetmPm(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageManagerService;
@@ -99,7 +88,6 @@
     :goto_0
     if-ge v4, v2, :cond_1
 
-    .line 2077
     iget-object v5, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v5, v4}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -108,7 +96,6 @@
 
     check-cast v5, Landroid/content/pm/IPackageInstallerCallback;
 
-    .line 2078
     iget-object v6, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v6, v4}, Landroid/os/RemoteCallbackList;->getBroadcastCookie(I)Ljava/lang/Object;
@@ -117,7 +104,6 @@
 
     check-cast v6, Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;
 
-    .line 2079
     iget-object v7, v6, Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;->userCheck:Ljava/util/function/IntPredicate;
 
     invoke-interface {v7, v1}, Ljava/util/function/IntPredicate;->test(I)Z
@@ -130,14 +116,12 @@
 
     iget v6, v6, Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;->callingUid:I
 
-    .line 2080
     invoke-static {v7, v3, v6, v0}, Lcom/android/server/pm/PackageInstallerService;->-$$Nest$mshouldFilterSession(Lcom/android/server/pm/PackageInstallerService;Lcom/android/server/pm/Computer;II)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 2082
     :try_start_0
     invoke-virtual {p0, v5, p1}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->invokeCallback(Landroid/content/pm/IPackageInstallerCallback;Landroid/os/Message;)V
     :try_end_0
@@ -149,7 +133,6 @@
 
     goto :goto_0
 
-    .line 2087
     :cond_1
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -161,10 +144,8 @@
 .method public final invokeCallback(Landroid/content/pm/IPackageInstallerCallback;Landroid/os/Message;)V
     .locals 2
 
-    .line 2092
     iget p0, p2, Landroid/os/Message;->arg1:I
 
-    .line 2093
     iget v0, p2, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -189,7 +170,6 @@
 
     goto :goto_0
 
-    .line 2107
     :cond_0
     iget-object p2, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -203,7 +183,6 @@
 
     goto :goto_0
 
-    .line 2104
     :cond_1
     iget-object p2, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -217,7 +196,6 @@
 
     goto :goto_0
 
-    .line 2101
     :cond_2
     iget-object p2, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -231,13 +209,11 @@
 
     goto :goto_0
 
-    .line 2098
     :cond_3
     invoke-interface {p1, p0}, Landroid/content/pm/IPackageInstallerCallback;->onSessionBadgingChanged(I)V
 
     goto :goto_0
 
-    .line 2095
     :cond_4
     invoke-interface {p1, p0}, Landroid/content/pm/IPackageInstallerCallback;->onSessionCreated(I)V
 
@@ -250,7 +226,6 @@
 
     const/4 v0, 0x3
 
-    .line 2121
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p3
@@ -269,7 +244,6 @@
 
     const/4 v0, 0x2
 
-    .line 2117
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0
@@ -284,7 +258,6 @@
 
     const/4 v0, 0x1
 
-    .line 2113
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0
@@ -299,7 +272,6 @@
 
     const/4 v0, 0x5
 
-    .line 2129
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p3
@@ -318,7 +290,6 @@
 
     const/4 v0, 0x4
 
-    .line 2125
     invoke-static {p3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p3
@@ -335,7 +306,6 @@
 .method public register(Landroid/content/pm/IPackageInstallerCallback;Lcom/android/server/pm/PackageInstallerService$BroadcastCookie;)V
     .locals 0
 
-    .line 2063
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0, p1, p2}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;Ljava/lang/Object;)Z
@@ -346,7 +316,6 @@
 .method public unregister(Landroid/content/pm/IPackageInstallerCallback;)V
     .locals 0
 
-    .line 2067
     iget-object p0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {p0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z

@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->mFile:Ljava/io/File;
 
     return-void
@@ -27,7 +25,6 @@
 
     const-string v0, "DevicePolicyManagerService"
 
-    .line 295
     iget-object v1, p0, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->mFile:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -38,7 +35,6 @@
 
     return-void
 
-    .line 304
     :cond_0
     new-instance v1, Landroid/util/AtomicFile;
 
@@ -48,20 +44,17 @@
 
     const/4 v2, 0x0
 
-    .line 307
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object v2
 
-    .line 308
     invoke-static {v2}, Landroid/util/Xml;->resolvePullParser(Ljava/io/InputStream;)Lcom/android/modules/utils/TypedXmlPullParser;
 
     move-result-object v1
 
     const/4 v3, 0x0
 
-    .line 312
     :cond_1
     :goto_0
     invoke-interface {v1}, Lcom/android/modules/utils/TypedXmlPullParser;->next()I
@@ -90,7 +83,6 @@
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
-    .line 324
     invoke-interface {v1}, Lcom/android/modules/utils/TypedXmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -99,14 +91,12 @@
 
     const-string/jumbo v5, "root"
 
-    .line 326
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    .line 327
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,12 +117,10 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 340
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     return-void
 
-    .line 333
     :cond_4
     :try_start_1
     invoke-virtual {p0, v1, v3, v4}, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->readInner(Lcom/android/modules/utils/TypedXmlPullParser;ILjava/lang/String;)Z
@@ -145,7 +133,6 @@
 
     if-nez v4, :cond_1
 
-    .line 340
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     return-void
@@ -161,12 +148,10 @@
     :try_start_2
     const-string v1, "Error parsing owners information file"
 
-    .line 338
     invoke-static {v0, v1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 340
     :cond_5
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -175,7 +160,6 @@
     :goto_1
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 341
     throw p0
 .end method
 
@@ -193,7 +177,6 @@
 
     const-string/jumbo v0, "root"
 
-    .line 243
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->shouldWrite()Z
 
     move-result v1
@@ -204,7 +187,6 @@
 
     if-nez v1, :cond_1
 
-    .line 248
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -213,7 +195,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->mFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
@@ -222,7 +203,6 @@
 
     if-nez v0, :cond_0
 
-    .line 253
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +228,6 @@
     :cond_0
     return v3
 
-    .line 262
     :cond_1
     new-instance v1, Landroid/util/AtomicFile;
 
@@ -258,7 +237,6 @@
 
     const/4 v4, 0x0
 
-    .line 265
     :try_start_0
     invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
@@ -266,33 +244,25 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 266
     :try_start_1
     invoke-static {v5}, Landroid/util/Xml;->resolveSerializer(Ljava/io/OutputStream;)Lcom/android/modules/utils/TypedXmlSerializer;
 
     move-result-object v6
 
-    .line 269
     sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-interface {v6, v4, v7}, Lcom/android/modules/utils/TypedXmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 270
     invoke-interface {v6, v4, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 273
     invoke-virtual {p0, v6}, Lcom/android/server/devicepolicy/OwnersData$FileReadWriter;->writeInner(Lcom/android/modules/utils/TypedXmlSerializer;)V
 
-    .line 276
     invoke-interface {v6, v4, v0}, Lcom/android/modules/utils/TypedXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 277
     invoke-interface {v6}, Lcom/android/modules/utils/TypedXmlSerializer;->endDocument()V
 
-    .line 278
     invoke-interface {v6}, Lcom/android/modules/utils/TypedXmlSerializer;->flush()V
 
-    .line 281
     invoke-virtual {v1, v5}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -312,12 +282,10 @@
     :goto_0
     const-string v0, "Exception when writing"
 
-    .line 285
     invoke-static {v2, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     if-eqz v4, :cond_2
 
-    .line 287
     invoke-virtual {v1, v4}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
 
     :cond_2

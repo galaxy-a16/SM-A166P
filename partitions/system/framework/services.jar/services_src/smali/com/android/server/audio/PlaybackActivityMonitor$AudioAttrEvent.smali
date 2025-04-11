@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/media/AudioAttributes;)V
     .locals 0
 
-    .line 1433
     invoke-direct {p0}, Lcom/android/server/utils/EventLogger$Event;-><init>()V
 
-    .line 1434
     iput p1, p0, Lcom/android/server/audio/PlaybackActivityMonitor$AudioAttrEvent;->mPlayerIId:I
 
-    .line 1435
     iput-object p2, p0, Lcom/android/server/audio/PlaybackActivityMonitor$AudioAttrEvent;->mPlayerAttr:Landroid/media/AudioAttributes;
 
     return-void
@@ -30,7 +27,6 @@
 .method public eventToString()Ljava/lang/String;
     .locals 3
 
-    .line 1440
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

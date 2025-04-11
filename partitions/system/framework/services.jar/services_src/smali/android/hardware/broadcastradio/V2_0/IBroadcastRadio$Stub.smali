@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 652
     invoke-direct {p0}, Landroid/os/HwBinder;-><init>()V
 
     return-void
@@ -21,26 +20,22 @@
 .method public asBinder()Landroid/os/IHwBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
     .locals 2
 
-    .line 705
     new-instance p0, Landroid/hidl/base/V1_0/DebugInfo;
 
     invoke-direct {p0}, Landroid/hidl/base/V1_0/DebugInfo;-><init>()V
 
-    .line 706
     invoke-static {}, Landroid/os/HidlSupport;->getPidIfSharable()I
 
     move-result v0
@@ -49,12 +44,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 707
     iput-wide v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->ptr:J
 
     const/4 v0, 0x0
 
-    .line 708
     iput v0, p0, Landroid/hidl/base/V1_0/DebugInfo;->arch:I
 
     return-object p0
@@ -63,7 +56,6 @@
 .method public final getHashChain()Ljava/util/ArrayList;
     .locals 2
 
-    .line 680
     new-instance p0, Ljava/util/ArrayList;
 
     const/16 v0, 0x20
@@ -164,7 +156,6 @@
 .method public final interfaceChain()Ljava/util/ArrayList;
     .locals 2
 
-    .line 660
     new-instance p0, Ljava/util/ArrayList;
 
     const-string v0, "android.hardware.broadcastradio@2.0::IBroadcastRadio"
@@ -187,7 +178,6 @@
 .method public final interfaceDescriptor()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "android.hardware.broadcastradio@2.0::IBroadcastRadio"
 
     return-object p0
@@ -196,7 +186,6 @@
 .method public final linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -205,7 +194,6 @@
 .method public final notifySyspropsChanged()V
     .locals 0
 
-    .line 715
     invoke-static {}, Landroid/os/HwBinder;->enableInstrumentation()V
 
     return-void
@@ -226,94 +214,73 @@
 
     goto/16 :goto_1
 
-    .line 937
     :sswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 939
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->notifySyspropsChanged()V
 
     goto/16 :goto_1
 
-    .line 926
     :sswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 928
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;
 
     move-result-object p0
 
-    .line 929
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 930
     invoke-virtual {p0, p3}, Landroid/hidl/base/V1_0/DebugInfo;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 931
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 916
     :sswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 918
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->ping()V
 
-    .line 919
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 920
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 903
     :sswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 905
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->setHALInstrumentation()V
 
     goto/16 :goto_1
 
-    .line 869
     :sswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 871
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->getHashChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 872
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 874
     new-instance p1, Landroid/os/HwBlob;
 
     const/16 p2, 0x10
 
     invoke-direct {p1, p2}, Landroid/os/HwBlob;-><init>(I)V
 
-    .line 876
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result p2
 
     const-wide/16 v1, 0x8
 
-    .line 877
     invoke-virtual {p1, v1, v2, p2}, Landroid/os/HwBlob;->putInt32(JI)V
 
     const-wide/16 v1, 0xc
 
-    .line 878
     invoke-virtual {p1, v1, v2, v0}, Landroid/os/HwBlob;->putBool(JZ)V
 
-    .line 879
     new-instance p4, Landroid/os/HwBlob;
 
     mul-int/lit8 v1, p2, 0x20
@@ -327,7 +294,6 @@
 
     int-to-long v1, v1
 
-    .line 883
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -336,21 +302,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 885
     array-length v4, v3
 
     const/16 v5, 0x20
 
     if-ne v4, v5, :cond_0
 
-    .line 889
     invoke-virtual {p4, v1, v2, v3}, Landroid/os/HwBlob;->putInt8Array(J[B)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 886
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -363,92 +326,70 @@
     :cond_1
     const-wide/16 v0, 0x0
 
-    .line 893
     invoke-virtual {p1, v0, v1, p4}, Landroid/os/HwBlob;->putBlob(JLandroid/os/HwBlob;)V
 
-    .line 895
     invoke-virtual {p3, p1}, Landroid/os/HwParcel;->writeBuffer(Landroid/os/HwBlob;)V
 
-    .line 897
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 858
     :sswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 860
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->interfaceDescriptor()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 861
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 862
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 863
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 846
     :sswitch_6
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 848
     invoke-virtual {p2}, Landroid/os/HwParcel;->readNativeHandle()Landroid/os/NativeHandle;
 
     move-result-object p1
 
-    .line 849
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 850
     invoke-virtual {p0, p1, p2}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
 
-    .line 851
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 852
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto/16 :goto_1
 
-    .line 835
     :sswitch_7
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 837
     invoke-virtual {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;->interfaceChain()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 838
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 839
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeStringVector(Ljava/util/ArrayList;)V
 
-    .line 840
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 818
     :pswitch_0
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 820
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    .line 821
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p2
@@ -457,7 +398,6 @@
 
     move-result-object p2
 
-    .line 822
     new-instance p4, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$4;
 
     invoke-direct {p4, p0, p3}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$4;-><init>(Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;Landroid/os/HwParcel;)V
@@ -466,36 +406,28 @@
 
     goto :goto_1
 
-    .line 806
     :pswitch_1
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 808
     invoke-virtual {p2}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p1
 
-    .line 809
     invoke-interface {p0, p1}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio;->getImage(I)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 810
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 811
     invoke-virtual {p3, p0}, Landroid/os/HwParcel;->writeInt8Vector(Ljava/util/ArrayList;)V
 
-    .line 812
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     goto :goto_1
 
-    .line 790
     :pswitch_2
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 792
     invoke-virtual {p2}, Landroid/os/HwParcel;->readStrongBinder()Landroid/os/IHwBinder;
 
     move-result-object p1
@@ -504,7 +436,6 @@
 
     move-result-object p1
 
-    .line 793
     new-instance p2, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$3;
 
     invoke-direct {p2, p0, p3}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$3;-><init>(Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;Landroid/os/HwParcel;)V
@@ -513,11 +444,9 @@
 
     goto :goto_1
 
-    .line 775
     :pswitch_3
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 777
     new-instance p1, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$2;
 
     invoke-direct {p1, p0, p3}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$2;-><init>(Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;Landroid/os/HwParcel;)V
@@ -526,16 +455,13 @@
 
     goto :goto_1
 
-    .line 759
     :pswitch_4
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 761
     invoke-virtual {p2}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p1
 
-    .line 762
     new-instance p2, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$1;
 
     invoke-direct {p2, p0, p3}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub$1;-><init>(Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio$Stub;Landroid/os/HwParcel;)V
@@ -544,22 +470,17 @@
 
     goto :goto_1
 
-    .line 748
     :pswitch_5
     invoke-virtual {p2, p4}, Landroid/os/HwParcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 750
     invoke-interface {p0}, Landroid/hardware/broadcastradio/V2_0/IBroadcastRadio;->getProperties()Landroid/hardware/broadcastradio/V2_0/Properties;
 
     move-result-object p0
 
-    .line 751
     invoke-virtual {p3, v0}, Landroid/os/HwParcel;->writeStatus(I)V
 
-    .line 752
     invoke-virtual {p0, p3}, Landroid/hardware/broadcastradio/V2_0/Properties;->writeToParcel(Landroid/os/HwParcel;)V
 
-    .line 753
     invoke-virtual {p3}, Landroid/os/HwParcel;->send()V
 
     :goto_1
@@ -593,7 +514,6 @@
 .method public final ping()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -602,7 +522,6 @@
 
     const-string v0, "android.hardware.broadcastradio@2.0::IBroadcastRadio"
 
-    .line 727
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -620,14 +539,12 @@
 .method public final setHALInstrumentation()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 739
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -652,7 +569,6 @@
 .method public final unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

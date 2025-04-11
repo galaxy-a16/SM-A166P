@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/DlnaController;)V
     .locals 0
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/display/DlnaController$1;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,17 +30,14 @@
 
     const-string/jumbo v1, "sendDisconnectionRequestBroadcast::DLNA_DISCONNECTION_REQUEST"
 
-    .line 81
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.android.screensharing.DLNA_DISCONNECTION_REQUEST"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 83
     iget-object v1, p0, Lcom/android/server/display/DlnaController$1;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {v1}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmDevice(Lcom/android/server/display/DlnaController;)Landroid/hardware/display/SemDlnaDevice;
@@ -56,7 +52,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 84
     iget-object p0, p0, Lcom/android/server/display/DlnaController$1;->this$0:Lcom/android/server/display/DlnaController;
 
     invoke-static {p0}, Lcom/android/server/display/DlnaController;->-$$Nest$fgetmContext(Lcom/android/server/display/DlnaController;)Landroid/content/Context;

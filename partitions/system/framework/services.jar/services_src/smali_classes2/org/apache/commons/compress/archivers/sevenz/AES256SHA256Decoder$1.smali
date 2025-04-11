@@ -23,7 +23,6 @@
 .method public constructor <init>(Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder;Lorg/apache/commons/compress/archivers/sevenz/Coder;Ljava/lang/String;[BLjava/io/InputStream;)V
     .locals 0
 
-    .line 36
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->this$0:Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder;
 
     iput-object p2, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$coder:Lorg/apache/commons/compress/archivers/sevenz/Coder;
@@ -38,12 +37,10 @@
 
     const/4 p1, 0x0
 
-    .line 37
     iput-boolean p1, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->isInitialized:Z
 
     const/4 p1, 0x0
 
-    .line 38
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->cipherInputStream:Ljavax/crypto/CipherInputStream;
 
     return-void
@@ -54,24 +51,20 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public final init()Ljavax/crypto/CipherInputStream;
     .locals 15
 
-    .line 41
     iget-boolean v0, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->isInitialized:Z
 
     if-eqz v0, :cond_0
 
-    .line 42
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->cipherInputStream:Ljavax/crypto/CipherInputStream;
 
     return-object p0
 
-    .line 44
     :cond_0
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$coder:Lorg/apache/commons/compress/archivers/sevenz/Coder;
 
@@ -87,7 +80,6 @@
 
     const/4 v4, 0x1
 
-    .line 46
     aget-byte v5, v0, v4
 
     and-int/lit16 v5, v5, 0xff
@@ -112,31 +104,26 @@
 
     add-int v7, v5, v6
 
-    .line 49
     array-length v8, v0
 
     if-gt v7, v8, :cond_6
 
-    .line 52
     new-array v7, v2, [B
 
     const/4 v8, 0x2
 
-    .line 53
     invoke-static {v0, v8, v7, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
-    .line 55
     iget-object v9, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$coder:Lorg/apache/commons/compress/archivers/sevenz/Coder;
 
     iget-object v9, v9, Lorg/apache/commons/compress/archivers/sevenz/Coder;->properties:[B
 
     invoke-static {v9, v5, v0, v1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 57
     iget-object v5, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$passwordBytes:[B
 
     if-eqz v5, :cond_5
@@ -149,22 +136,18 @@
 
     new-array v3, v3, [B
 
-    .line 63
     invoke-static {v7, v1, v3, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 64
     iget-object v5, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$passwordBytes:[B
 
     array-length v6, v5
 
     rsub-int/lit8 v7, v2, 0x20
 
-    .line 65
     invoke-static {v6, v7}, Ljava/lang/Math;->min(II)I
 
     move-result v6
 
-    .line 64
     invoke-static {v5, v1, v3, v2, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_3
@@ -173,7 +156,6 @@
     :try_start_0
     const-string v2, "SHA-256"
 
-    .line 69
     invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v2
@@ -195,15 +177,12 @@
 
     if-gez v13, :cond_4
 
-    .line 76
     invoke-virtual {v2, v7}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 77
     iget-object v13, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$passwordBytes:[B
 
     invoke-virtual {v2, v13}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 78
     invoke-virtual {v2, v6}, Ljava/security/MessageDigest;->update([B)V
 
     move v13, v1
@@ -211,7 +190,6 @@
     :goto_1
     if-ge v13, v5, :cond_3
 
-    .line 80
     aget-byte v14, v6, v13
 
     add-int/2addr v14, v4
@@ -235,13 +213,11 @@
 
     goto :goto_0
 
-    .line 86
     :cond_4
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v3
 
-    .line 89
     :goto_3
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -252,19 +228,16 @@
     :try_start_1
     const-string v2, "AES/CBC/NoPadding"
 
-    .line 91
     invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
-    .line 92
     new-instance v3, Ljavax/crypto/spec/IvParameterSpec;
 
     invoke-direct {v3, v0}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
     invoke-virtual {v2, v8, v1, v3}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 93
     new-instance v0, Ljavax/crypto/CipherInputStream;
 
     iget-object v1, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->val$in:Ljava/io/InputStream;
@@ -273,7 +246,6 @@
 
     iput-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->cipherInputStream:Ljavax/crypto/CipherInputStream;
 
-    .line 94
     iput-boolean v4, p0, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->isInitialized:Z
     :try_end_1
     .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_0
@@ -283,7 +255,6 @@
     :catch_0
     move-exception p0
 
-    .line 97
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Decryption error (do you have the JCE Unlimited Strength Jurisdiction Policy Files installed?)"
@@ -295,7 +266,6 @@
     :catch_1
     move-exception p0
 
-    .line 71
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "SHA-256 is unsupported by your Java implementation"
@@ -304,7 +274,6 @@
 
     throw v0
 
-    .line 58
     :cond_5
     new-instance v0, Lorg/apache/commons/compress/PasswordRequiredException;
 
@@ -314,7 +283,6 @@
 
     throw v0
 
-    .line 50
     :cond_6
     new-instance v0, Ljava/io/IOException;
 
@@ -342,7 +310,6 @@
 .method public read()I
     .locals 0
 
-    .line 105
     invoke-virtual {p0}, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->init()Ljavax/crypto/CipherInputStream;
 
     move-result-object p0
@@ -357,7 +324,6 @@
 .method public read([BII)I
     .locals 0
 
-    .line 110
     invoke-virtual {p0}, Lorg/apache/commons/compress/archivers/sevenz/AES256SHA256Decoder$1;->init()Ljavax/crypto/CipherInputStream;
 
     move-result-object p0

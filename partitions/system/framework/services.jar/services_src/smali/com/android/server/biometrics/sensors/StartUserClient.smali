@@ -13,7 +13,6 @@
 
     const/4 v4, 0x0
 
-    .line 53
     invoke-virtual {p1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -40,7 +39,6 @@
 
     move-object/from16 v1, p8
 
-    .line 55
     iput-object v1, v0, Lcom/android/server/biometrics/sensors/StartUserClient;->mUserStartedCallback:Lcom/android/server/biometrics/sensors/StartUserClient$UserStartedCallback;
 
     return-void
@@ -51,7 +49,6 @@
 .method public getProtoEnum()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x11
 
     return p0

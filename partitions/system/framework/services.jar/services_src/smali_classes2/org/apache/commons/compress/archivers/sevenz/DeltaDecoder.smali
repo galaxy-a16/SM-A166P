@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
     const-class v0, Ljava/lang/Number;
 
     filled-new-array {v0}, [Ljava/lang/Class;
@@ -24,7 +23,6 @@
 .method public decode(Ljava/lang/String;Ljava/io/InputStream;JLorg/apache/commons/compress/archivers/sevenz/Coder;[B)Ljava/io/InputStream;
     .locals 0
 
-    .line 35
     new-instance p1, Lorg/tukaani/xz/DeltaOptions;
 
     invoke-virtual {p0, p5}, Lorg/apache/commons/compress/archivers/sevenz/DeltaDecoder;->getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
@@ -43,7 +41,6 @@
 .method public final getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
     .locals 1
 
-    .line 62
     iget-object p0, p1, Lorg/apache/commons/compress/archivers/sevenz/Coder;->properties:[B
 
     const/4 p1, 0x1
@@ -59,7 +56,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 65
     aget-byte p0, p0, v0
 
     and-int/lit16 p0, p0, 0xff
@@ -76,7 +72,6 @@
 .method public getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;Ljava/io/InputStream;)Ljava/lang/Object;
     .locals 0
 
-    .line 58
     invoke-virtual {p0, p1}, Lorg/apache/commons/compress/archivers/sevenz/DeltaDecoder;->getOptionsFromCoder(Lorg/apache/commons/compress/archivers/sevenz/Coder;)I
 
     move-result p0

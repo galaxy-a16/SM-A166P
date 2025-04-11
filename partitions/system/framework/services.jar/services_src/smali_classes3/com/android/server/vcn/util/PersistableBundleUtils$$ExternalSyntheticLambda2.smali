@@ -20,7 +20,6 @@
 .method public final toPersistableBundle(Ljava/lang/Object;)Landroid/os/PersistableBundle;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/vcn/util/PersistableBundleUtils;->$r8$lambda$4QphMxyrUiifNTLRcefek75g5iA(Ljava/lang/String;)Landroid/os/PersistableBundle;

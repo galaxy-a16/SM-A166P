@@ -17,19 +17,16 @@
 .method public suspendUnknownSourceAppsAsUser(Landroid/content/Context;[Ljava/lang/String;ZI)V
     .locals 8
 
-    .line 362
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 363
     new-instance p0, Landroid/content/pm/SuspendDialogInfo$Builder;
 
     invoke-direct {p0}, Landroid/content/pm/SuspendDialogInfo$Builder;-><init>()V
 
     const v1, 0x1040e6c
 
-    .line 364
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -40,7 +37,6 @@
 
     const v1, 0x1040e6b
 
-    .line 365
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -49,7 +45,6 @@
 
     move-result-object p0
 
-    .line 366
     invoke-virtual {p0}, Landroid/content/pm/SuspendDialogInfo$Builder;->build()Landroid/content/pm/SuspendDialogInfo;
 
     move-result-object v5
@@ -67,7 +62,6 @@
 
     move v7, p4
 
-    .line 369
     invoke-interface/range {v0 .. v7}, Landroid/content/pm/IPackageManager;->setPackagesSuspendedAsUser([Ljava/lang/String;ZLandroid/os/PersistableBundle;Landroid/os/PersistableBundle;Landroid/content/pm/SuspendDialogInfo;Ljava/lang/String;I)[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -78,7 +72,6 @@
     :catch_0
     move-exception p0
 
-    .line 372
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -88,7 +81,6 @@
 .method public suspendUnknownSourceAppsForAllUsers(Landroid/content/Context;[Ljava/lang/String;Z)V
     .locals 2
 
-    .line 354
     const-class v0, Landroid/os/UserManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -97,7 +89,6 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    .line 355
     invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v0
@@ -119,7 +110,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 356
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {p0, p1, p2, p3, v1}, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$Helper;->suspendUnknownSourceAppsAsUser(Landroid/content/Context;[Ljava/lang/String;ZI)V

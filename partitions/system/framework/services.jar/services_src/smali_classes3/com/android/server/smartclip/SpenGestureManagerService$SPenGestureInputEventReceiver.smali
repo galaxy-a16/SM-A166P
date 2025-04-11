@@ -16,14 +16,12 @@
 .method public constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
     .locals 0
 
-    .line 797
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 799
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sCfmsService:Landroid/os/ICustomFrequencyManager;
 
     return-void
@@ -32,7 +30,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/smartclip/SpenGestureManagerService;Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;-><init>(Lcom/android/server/smartclip/SpenGestureManagerService;)V
 
     return-void
@@ -45,20 +42,17 @@
 
     const-string/jumbo v0, "onPointerEvent : total time = "
 
-    .line 825
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v1
 
     const-wide/32 v3, 0x3b9aca00
 
-    .line 827
     :try_start_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v5
 
-    .line 828
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getButtonState()I
 
     move-result v6
@@ -82,7 +76,6 @@
     :cond_0
     move v6, v7
 
-    .line 830
     :goto_0
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -94,12 +87,10 @@
 
     if-lt v9, v10, :cond_a
 
-    .line 832
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v9, p1, v5, v6}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$mprocessMotionEventForAirCMD(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/view/MotionEvent;IZ)V
 
-    .line 835
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v9}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHoverListeners(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/RemoteCallbackList;
@@ -120,7 +111,6 @@
 
     if-lez v9, :cond_1
 
-    .line 836
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v9, p1, v5, v6}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$mcheckHoverStay(Lcom/android/server/smartclip/SpenGestureManagerService;Landroid/view/MotionEvent;IZ)V
@@ -136,7 +126,6 @@
 
     if-eq v5, v9, :cond_2
 
-    .line 842
     sget-object v10, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -147,7 +136,6 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 843
     invoke-static {v5}, Landroid/view/MotionEvent;->actionToString(I)Ljava/lang/String;
 
     move-result-object v12
@@ -176,13 +164,11 @@
 
     move-result-object v11
 
-    .line 842
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 850
     iget-object v6, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v6}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmClearCoverOpened(Lcom/android/server/smartclip/SpenGestureManagerService;)Z
@@ -203,20 +189,16 @@
 
     if-ne v5, v10, :cond_4
 
-    .line 854
     invoke-virtual {p0, v5}, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sendEventToCfmsService(I)V
 
-    .line 856
     new-instance v7, Landroid/os/Message;
 
     invoke-direct {v7}, Landroid/os/Message;-><init>()V
 
     const/16 v9, 0x301b
 
-    .line 857
     iput v9, v7, Landroid/os/Message;->what:I
 
-    .line 858
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v9}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/Handler;
@@ -234,18 +216,14 @@
 
     if-ne v5, v10, :cond_5
 
-    .line 861
     invoke-virtual {p0, v5}, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sendEventToCfmsService(I)V
 
-    .line 863
     new-instance v7, Landroid/os/Message;
 
     invoke-direct {v7}, Landroid/os/Message;-><init>()V
 
-    .line 864
     iput v11, v7, Landroid/os/Message;->what:I
 
-    .line 865
     iget-object v9, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v9}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/Handler;
@@ -261,7 +239,6 @@
     :cond_5
     if-nez v5, :cond_7
 
-    .line 867
     iget-object v10, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v10}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/Handler;
@@ -274,7 +251,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 868
     iget-object v10, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-static {v10}, Lcom/android/server/smartclip/SpenGestureManagerService;->-$$Nest$fgetmHandler(Lcom/android/server/smartclip/SpenGestureManagerService;)Landroid/os/Handler;
@@ -283,14 +259,12 @@
 
     invoke-virtual {v10, v11}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 869
     sget-object v10, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string v11, "[HOVER] sending hover exit br is canceled by touch event."
 
     invoke-static {v10, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 872
     :cond_6
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->getToolType(I)I
 
@@ -298,7 +272,6 @@
 
     if-ne v7, v9, :cond_7
 
-    .line 873
     invoke-virtual {p0, v5}, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sendEventToCfmsService(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -311,14 +284,12 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 904
     :pswitch_0
     :try_start_1
     sget-object p0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     goto :goto_3
 
-    .line 897
     :pswitch_1
     iget-object v5, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -334,7 +305,6 @@
 
     goto :goto_4
 
-    .line 900
     :cond_8
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -346,7 +316,6 @@
 
     goto :goto_4
 
-    .line 883
     :pswitch_2
     iget-object v5, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -362,7 +331,6 @@
 
     goto :goto_4
 
-    .line 886
     :cond_9
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -377,12 +345,10 @@
     :goto_3
     const-string/jumbo p1, "onPointerEvent : default"
 
-    .line 904
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 910
     :cond_a
     :goto_4
     :pswitch_3
@@ -396,7 +362,6 @@
 
     if-lez v1, :cond_b
 
-    .line 914
     sget-object v1, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -419,7 +384,6 @@
     :catchall_0
     move-exception p0
 
-    .line 910
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v5
@@ -430,7 +394,6 @@
 
     if-lez p1, :cond_c
 
-    .line 914
     sget-object p1, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -447,7 +410,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 916
     :cond_c
     throw p0
 
@@ -470,7 +432,6 @@
 .method public final sendEventToCfmsService(I)V
     .locals 2
 
-    .line 803
     :try_start_0
     iget-object v0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sCfmsService:Landroid/os/ICustomFrequencyManager;
 
@@ -478,21 +439,18 @@
 
     const-string v0, "CustomFrequencyManagerService"
 
-    .line 804
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 806
     invoke-static {v0}, Landroid/os/ICustomFrequencyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/ICustomFrequencyManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sCfmsService:Landroid/os/ICustomFrequencyManager;
 
-    .line 809
     :cond_0
     iget-object p0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$SPenGestureInputEventReceiver;->sCfmsService:Landroid/os/ICustomFrequencyManager;
     :try_end_0
@@ -509,7 +467,6 @@
     :try_start_1
     const-string p1, "1"
 
-    .line 811
     invoke-interface {p0, v1, p1}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -521,7 +478,6 @@
 
     const-string p1, "0"
 
-    .line 813
     invoke-interface {p0, v1, p1}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -531,7 +487,6 @@
 
     const-string p1, "3"
 
-    .line 815
     invoke-interface {p0, v1, p1}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -541,7 +496,6 @@
     :catch_0
     move-exception p0
 
-    .line 819
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3

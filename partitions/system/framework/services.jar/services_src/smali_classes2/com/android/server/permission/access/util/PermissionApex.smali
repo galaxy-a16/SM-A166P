@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 0
     new-instance v0, Lcom/android/server/permission/access/util/PermissionApex;
 
     invoke-direct {v0}, Lcom/android/server/permission/access/util/PermissionApex;-><init>()V
@@ -36,7 +35,6 @@
 
     const-string p0, "com.android.permission"
 
-    .line 39
     invoke-static {p0}, Landroid/content/ApexEnvironment;->getApexEnvironment(Ljava/lang/String;)Landroid/content/ApexEnvironment;
 
     move-result-object p0
@@ -47,7 +45,6 @@
 .method public final getSystemDataDirectory()Ljava/io/File;
     .locals 0
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/server/permission/access/util/PermissionApex;->getApexEnvironment()Landroid/content/ApexEnvironment;
 
     move-result-object p0
@@ -62,7 +59,6 @@
 .method public final getUserDataDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 36
     invoke-virtual {p0}, Lcom/android/server/permission/access/util/PermissionApex;->getApexEnvironment()Landroid/content/ApexEnvironment;
 
     move-result-object p0

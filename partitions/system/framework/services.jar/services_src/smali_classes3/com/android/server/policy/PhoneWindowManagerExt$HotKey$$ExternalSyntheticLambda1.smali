@@ -20,7 +20,6 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/policy/PhoneWindowManagerExt$HotKey;->$r8$lambda$DoDFPPiPq_Oax_OMxtF6IGNSOGw(Landroid/content/DialogInterface;I)V
 
     return-void

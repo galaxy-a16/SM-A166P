@@ -21,7 +21,6 @@
 .method public getSurfaceControlProxy()Lcom/android/server/display/LocalDisplayAdapter$SurfaceControlProxy;
     .locals 0
 
-    .line 1718
     new-instance p0, Lcom/android/server/display/LocalDisplayAdapter$SurfaceControlProxy;
 
     invoke-direct {p0}, Lcom/android/server/display/LocalDisplayAdapter$SurfaceControlProxy;-><init>()V
@@ -32,7 +31,6 @@
 .method public setDisplayEventListenerLocked(Landroid/os/Looper;Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;)V
     .locals 1
 
-    .line 1715
     new-instance v0, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/display/LocalDisplayAdapter$ProxyDisplayEventReceiver;-><init>(Landroid/os/Looper;Lcom/android/server/display/LocalDisplayAdapter$DisplayEventListener;)V

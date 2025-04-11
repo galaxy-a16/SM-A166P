@@ -15,16 +15,12 @@
 .method public constructor <init>(Lcom/android/server/pm/Installer;Ljava/lang/Object;Landroid/content/Context;)V
     .locals 0
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object p2, p0, Lcom/android/server/pm/UserDataPreparer;->mInstallLock:Ljava/lang/Object;
 
-    .line 61
     iput-object p3, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
-    .line 62
     iput-object p1, p0, Lcom/android/server/pm/UserDataPreparer;->mInstaller:Lcom/android/server/pm/Installer;
 
     return-void
@@ -33,7 +29,6 @@
 .method public static getSerialNumber(Ljava/io/File;)I
     .locals 3
 
-    .line 338
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -45,14 +40,12 @@
 
     move-result-object p0
 
-    .line 339
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 341
     :try_start_1
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -63,7 +56,6 @@
 
     return p0
 
-    .line 343
     :catch_0
     :try_start_2
     new-instance p0, Ljava/io/IOException;
@@ -91,7 +83,6 @@
     :catch_1
     move-exception p0
 
-    .line 346
     iget v0, p0, Landroid/system/ErrnoException;->errno:I
 
     sget v1, Landroid/system/OsConstants;->ENODATA:I
@@ -102,7 +93,6 @@
 
     return p0
 
-    .line 349
     :cond_0
     invoke-virtual {p0}, Landroid/system/ErrnoException;->rethrowAsIOException()Ljava/io/IOException;
 
@@ -114,7 +104,6 @@
 .method public static setSerialNumber(Ljava/io/File;I)V
     .locals 2
 
-    .line 323
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -126,7 +115,6 @@
 
     move-result-object p1
 
-    .line 324
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -144,7 +132,6 @@
     :catch_0
     move-exception p0
 
-    .line 326
     invoke-virtual {p0}, Landroid/system/ErrnoException;->rethrowAsIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -157,12 +144,10 @@
 .method public destroyUserData(II)V
     .locals 3
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/pm/UserDataPreparer;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 143
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
@@ -174,7 +159,6 @@
 
     check-cast v1, Landroid/os/storage/StorageManager;
 
-    .line 148
     invoke-virtual {v1}, Landroid/os/storage/StorageManager;->getWritablePrivateVolumes()Ljava/util/List;
 
     move-result-object v1
@@ -197,14 +181,12 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 149
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getFsUuid()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 151
     invoke-virtual {p0, v2, p1, p2}, Lcom/android/server/pm/UserDataPreparer;->destroyUserDataLI(Ljava/lang/String;II)V
 
     goto :goto_0
@@ -212,10 +194,8 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 154
     invoke-virtual {p0, v1, p1, p2}, Lcom/android/server/pm/UserDataPreparer;->destroyUserDataLI(Ljava/lang/String;II)V
 
-    .line 155
     monitor-exit v0
 
     return-void
@@ -233,7 +213,6 @@
 .method public destroyUserDataLI(Ljava/lang/String;II)V
     .locals 2
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/storage/StorageManager;
@@ -244,13 +223,11 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    .line 162
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/UserDataPreparer;->mInstaller:Lcom/android/server/pm/Installer;
 
     invoke-virtual {v1, p1, p2, p3}, Lcom/android/server/pm/Installer;->destroyUserData(Ljava/lang/String;II)V
 
-    .line 165
     sget-object v1, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     invoke-static {p1, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -263,14 +240,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 167
     invoke-virtual {p0, p2}, Lcom/android/server/pm/UserDataPreparer;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v1
 
     invoke-static {v1}, Landroid/os/FileUtils;->deleteContentsAndDir(Ljava/io/File;)Z
 
-    .line 170
     invoke-virtual {p0, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataSystemDeDirectory(I)Ljava/io/File;
 
     move-result-object v1
@@ -282,14 +257,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 175
     invoke-virtual {p0, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataSystemCeDirectory(I)Ljava/io/File;
 
     move-result-object p0
 
     invoke-static {p0}, Landroid/os/FileUtils;->deleteContents(Ljava/io/File;)Z
 
-    .line 180
     :cond_1
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/storage/StorageManager;->destroyUserStorage(Ljava/lang/String;II)V
     :try_end_0
@@ -300,7 +273,6 @@
     :catch_0
     move-exception p0
 
-    .line 183
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,12 +310,10 @@
 .method public enforceSerialNumber(Ljava/io/File;I)V
     .locals 2
 
-    .line 299
     invoke-static {p1}, Lcom/android/server/pm/UserDataPreparer;->getSerialNumber(Ljava/io/File;)I
 
     move-result p0
 
-    .line 300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -372,7 +342,6 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 303
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,7 +362,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     :try_start_0
     invoke-static {p1, p2}, Lcom/android/server/pm/UserDataPreparer;->setSerialNumber(Ljava/io/File;I)V
     :try_end_0
@@ -404,7 +372,6 @@
     :catch_0
     move-exception p0
 
-    .line 307
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -429,7 +396,6 @@
     :goto_0
     return-void
 
-    .line 311
     :cond_1
     new-instance p1, Ljava/io/IOException;
 
@@ -461,7 +427,6 @@
 .method public getDataMiscCeDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 257
     invoke-static {p1}, Landroid/os/Environment;->getDataMiscCeDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -472,7 +437,6 @@
 .method public getDataMiscDeDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 267
     invoke-static {p1}, Landroid/os/Environment;->getDataMiscDeDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -483,7 +447,6 @@
 .method public getDataSystemCeDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 262
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemCeDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -494,7 +457,6 @@
 .method public getDataSystemDeDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 282
     invoke-static {p1}, Landroid/os/Environment;->getDataSystemDeDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -505,7 +467,6 @@
 .method public getDataUserCeDirectory(Ljava/lang/String;I)Ljava/io/File;
     .locals 0
 
-    .line 277
     invoke-static {p1, p2}, Landroid/os/Environment;->getDataUserCeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
@@ -516,7 +477,6 @@
 .method public getDataUserDeDirectory(Ljava/lang/String;I)Ljava/io/File;
     .locals 0
 
-    .line 287
     invoke-static {p1, p2}, Landroid/os/Environment;->getDataUserDeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
@@ -527,7 +487,6 @@
 .method public getUserSystemDirectory(I)Ljava/io/File;
     .locals 0
 
-    .line 272
     invoke-static {p1}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object p0
@@ -538,12 +497,10 @@
 .method public prepareUserData(III)V
     .locals 9
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/pm/UserDataPreparer;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 70
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
@@ -567,10 +524,8 @@
 
     move v6, p3
 
-    .line 75
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/pm/UserDataPreparer;->prepareUserDataLI(Ljava/lang/String;IIIZ)V
 
-    .line 76
     invoke-virtual {v1}, Landroid/os/storage/StorageManager;->getWritablePrivateVolumes()Ljava/util/List;
 
     move-result-object v1
@@ -593,7 +548,6 @@
 
     check-cast v2, Landroid/os/storage/VolumeInfo;
 
-    .line 77
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getFsUuid()Ljava/lang/String;
 
     move-result-object v4
@@ -610,12 +564,10 @@
 
     move v7, p3
 
-    .line 79
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/pm/UserDataPreparer;->prepareUserDataLI(Ljava/lang/String;IIIZ)V
 
     goto :goto_0
 
-    .line 82
     :cond_1
     monitor-exit v0
 
@@ -636,7 +588,6 @@
 
     const-string v0, "UserDataPreparer"
 
-    .line 89
     iget-object v1, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
     const-class v2, Landroid/os/storage/StorageManager;
@@ -647,7 +598,6 @@
 
     check-cast v1, Landroid/os/storage/StorageManager;
 
-    .line 91
     :try_start_0
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/os/storage/StorageManager;->prepareUserStorage(Ljava/lang/String;III)V
 
@@ -655,14 +605,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataUserDeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object v1
 
     invoke-virtual {p0, v1, p3}, Lcom/android/server/pm/UserDataPreparer;->enforceSerialNumber(Ljava/io/File;I)V
 
-    .line 95
     sget-object v1, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     invoke-static {p1, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -671,7 +619,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 96
     invoke-virtual {p0, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataSystemDeDirectory(I)Ljava/io/File;
 
     move-result-object v1
@@ -683,14 +630,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 100
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataUserCeDirectory(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object v2
 
     invoke-virtual {p0, v2, p3}, Lcom/android/server/pm/UserDataPreparer;->enforceSerialNumber(Ljava/io/File;I)V
 
-    .line 101
     sget-object v2, Landroid/os/storage/StorageManager;->UUID_PRIVATE_INTERNAL:Ljava/lang/String;
 
     invoke-static {p1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -699,14 +644,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 102
     invoke-virtual {p0, p2}, Lcom/android/server/pm/UserDataPreparer;->getDataSystemCeDirectory(I)Ljava/io/File;
 
     move-result-object v2
 
     invoke-virtual {p0, v2, p3}, Lcom/android/server/pm/UserDataPreparer;->enforceSerialNumber(Ljava/io/File;I)V
 
-    .line 106
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/UserDataPreparer;->mInstaller:Lcom/android/server/pm/Installer;
 
@@ -716,7 +659,6 @@
 
     if-nez p2, :cond_3
 
-    .line 111
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -735,7 +677,6 @@
 
     move-result-object v1
 
-    .line 112
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -758,7 +699,6 @@
 
     const-string/jumbo v2, "true"
 
-    .line 113
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -768,7 +708,6 @@
     :catch_0
     move-exception v1
 
-    .line 116
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -799,7 +738,6 @@
 
     invoke-static {v3, v2}, Lcom/android/server/pm/PackageManagerServiceUtils;->logCriticalInfo(ILjava/lang/String;)V
 
-    .line 118
     invoke-virtual {p0, p1, p2, p4}, Lcom/android/server/pm/UserDataPreparer;->destroyUserDataLI(Ljava/lang/String;II)V
 
     if-eqz p5, :cond_2
@@ -816,12 +754,10 @@
 
     move v7, p3
 
-    .line 122
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/pm/UserDataPreparer;->prepareUserDataLI(Ljava/lang/String;IIIZ)V
 
     goto :goto_0
 
-    .line 126
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -842,7 +778,6 @@
 
     if-nez p2, :cond_3
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/pm/UserDataPreparer;->mContext:Landroid/content/Context;
 
     const-string/jumbo p1, "prepareUserData failed for system user"
@@ -858,7 +793,6 @@
     :catch_1
     move-exception p0
 
-    .line 132
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "error rebooting into recovery"
@@ -871,12 +805,10 @@
 .method public reconcileUsers(Ljava/lang/String;Ljava/util/List;)V
     .locals 2
 
-    .line 194
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 196
     invoke-static {p1}, Landroid/os/Environment;->getDataUserDeDirectory(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
@@ -885,10 +817,8 @@
 
     move-result-object v1
 
-    .line 195
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 198
     invoke-static {p1}, Landroid/os/Environment;->getDataUserCeDirectory(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
@@ -897,10 +827,8 @@
 
     move-result-object v1
 
-    .line 197
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 200
     invoke-static {}, Landroid/os/Environment;->getDataSystemDeDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -909,10 +837,8 @@
 
     move-result-object v1
 
-    .line 199
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 202
     invoke-static {}, Landroid/os/Environment;->getDataSystemCeDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -921,10 +847,8 @@
 
     move-result-object v1
 
-    .line 201
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 204
     invoke-static {}, Landroid/os/Environment;->getDataMiscCeDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -933,10 +857,8 @@
 
     move-result-object v1
 
-    .line 203
     invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 205
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/pm/UserDataPreparer;->reconcileUsers(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
     return-void
@@ -945,12 +867,10 @@
 .method public reconcileUsers(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
     .locals 8
 
-    .line 210
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 211
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1, v0}, Landroid/util/SparseArray;-><init>(I)V
@@ -962,14 +882,12 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    .line 213
     invoke-interface {p2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/content/pm/UserInfo;
 
-    .line 214
     iget v5, v4, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v1, v5, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -978,7 +896,6 @@
 
     goto :goto_0
 
-    .line 216
     :cond_0
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -998,7 +915,6 @@
 
     check-cast p3, Ljava/io/File;
 
-    .line 217
     invoke-virtual {p3}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -1007,7 +923,6 @@
 
     goto :goto_1
 
-    .line 224
     :cond_2
     :try_start_0
     invoke-virtual {p3}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -1018,7 +933,6 @@
 
     move-result v0
 
-    .line 225
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1033,7 +947,6 @@
 
     if-nez v3, :cond_3
 
-    .line 233
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1056,7 +969,6 @@
 
     goto :goto_2
 
-    .line 238
     :cond_3
     :try_start_1
     iget v3, v3, Landroid/content/pm/UserInfo;->serialNumber:I
@@ -1072,7 +984,6 @@
     :catch_0
     move-exception v3
 
-    .line 240
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1098,18 +1009,15 @@
     :goto_2
     if-eqz v5, :cond_1
 
-    .line 247
     iget-object p3, p0, Lcom/android/server/pm/UserDataPreparer;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter p3
 
     const/4 v3, 0x3
 
-    .line 248
     :try_start_2
     invoke-virtual {p0, p1, v0, v3}, Lcom/android/server/pm/UserDataPreparer;->destroyUserDataLI(Ljava/lang/String;II)V
 
-    .line 250
     monitor-exit p3
 
     goto :goto_1
@@ -1126,7 +1034,6 @@
     :catch_1
     const-string v0, "UserDataPreparer"
 
-    .line 227
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

@@ -20,7 +20,6 @@
 .method public final get(Ljava/lang/Object;)Ljava/util/Locale;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/view/inputmethod/InputMethodSubtype;
 
     invoke-static {p1}, Lcom/android/server/inputmethod/SubtypeUtils;->$r8$lambda$aOiycoaScBgqxruAvwFMIhsgpB4(Landroid/view/inputmethod/InputMethodSubtype;)Ljava/util/Locale;

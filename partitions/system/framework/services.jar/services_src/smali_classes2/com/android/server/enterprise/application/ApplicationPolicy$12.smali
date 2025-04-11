@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/application/ApplicationPolicy;I)V
     .locals 0
 
-    .line 10507
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iput p2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->val$userId:I
@@ -32,7 +31,6 @@
 
     const-string v1, "adminUid"
 
-    .line 10511
     :try_start_0
     iget v2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->val$userId:I
 
@@ -46,12 +44,10 @@
 
     const-string v0, "User removed"
 
-    .line 10512
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 10527
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -75,7 +71,6 @@
 
     aput-object v0, v2, v3
 
-    .line 10532
     iget-object v3, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-static {v3}, Lcom/android/server/enterprise/application/ApplicationPolicy;->-$$Nest$fgetmEdmStorageProvider(Lcom/android/server/enterprise/application/ApplicationPolicy;)Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -92,14 +87,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 10534
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 10535
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -118,12 +111,10 @@
 
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 10536
     invoke-virtual {v3, v1}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
 
-    .line 10537
     invoke-virtual {v3, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -132,7 +123,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 10539
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
@@ -141,7 +131,6 @@
 
     goto :goto_0
 
-    .line 10542
     :cond_2
     iget-object v5, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -162,7 +151,6 @@
     :catch_0
     move-exception p0
 
-    .line 10547
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3
@@ -172,7 +160,6 @@
 .method public final userExist(I)Z
     .locals 2
 
-    .line 10552
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$12;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object p0, p0, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;
@@ -185,12 +172,10 @@
 
     check-cast p0, Landroid/os/UserManager;
 
-    .line 10554
     invoke-virtual {p0}, Landroid/os/UserManager;->getAliveUsers()Ljava/util/List;
 
     move-result-object p0
 
-    .line 10555
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -210,14 +195,12 @@
 
     check-cast v0, Landroid/content/pm/UserInfo;
 
-    .line 10556
     iget v0, v0, Landroid/content/pm/UserInfo;->id:I
 
     if-ne v0, p1, :cond_0
 
     const-string p0, "User found"
 
-    .line 10557
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
@@ -227,7 +210,6 @@
     :cond_1
     const-string p0, "User not found"
 
-    .line 10561
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/wm/PopOverController;ZLcom/android/server/wm/WindowState;F)V
     .locals 0
 
-    .line 168
     iput-object p1, p0, Lcom/android/server/wm/PopOverController$1;->this$0:Lcom/android/server/wm/PopOverController;
 
     iput-boolean p2, p0, Lcom/android/server/wm/PopOverController$1;->val$apply:Z
@@ -39,7 +38,6 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    .line 181
     iget-object p1, p0, Lcom/android/server/wm/PopOverController$1;->this$0:Lcom/android/server/wm/PopOverController;
 
     invoke-static {p1}, Lcom/android/server/wm/PopOverController;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/PopOverController;)Lcom/android/server/wm/DisplayContent;
@@ -54,7 +52,6 @@
 
     monitor-enter p1
 
-    .line 182
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/PopOverController$1;->val$win:Lcom/android/server/wm/WindowState;
 
@@ -74,7 +71,6 @@
     :goto_0
     iput v1, v0, Lcom/android/server/wm/WindowStateAnimator;->mPopOverAlpha:F
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/wm/PopOverController$1;->this$0:Lcom/android/server/wm/PopOverController;
 
     invoke-static {p0}, Lcom/android/server/wm/PopOverController;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/PopOverController;)Lcom/android/server/wm/DisplayContent;
@@ -83,7 +79,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->scheduleAnimation()V
 
-    .line 184
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -108,19 +103,16 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 2
 
-    .line 171
     iget-boolean p1, p0, Lcom/android/server/wm/PopOverController$1;->val$apply:Z
 
     if-nez p1, :cond_0
 
-    .line 172
     iget-object p1, p0, Lcom/android/server/wm/PopOverController$1;->this$0:Lcom/android/server/wm/PopOverController;
 
     invoke-static {p1}, Lcom/android/server/wm/PopOverController;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/PopOverController;)Lcom/android/server/wm/DisplayContent;
@@ -135,7 +127,6 @@
 
     monitor-enter p1
 
-    .line 173
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/PopOverController$1;->val$win:Lcom/android/server/wm/WindowState;
 
@@ -145,7 +136,6 @@
 
     iput v1, v0, Lcom/android/server/wm/WindowStateAnimator;->mPopOverAlpha:F
 
-    .line 174
     iget-object p0, p0, Lcom/android/server/wm/PopOverController$1;->this$0:Lcom/android/server/wm/PopOverController;
 
     invoke-static {p0}, Lcom/android/server/wm/PopOverController;->-$$Nest$fgetmDisplayContent(Lcom/android/server/wm/PopOverController;)Lcom/android/server/wm/DisplayContent;
@@ -154,7 +144,6 @@
 
     invoke-virtual {p0}, Lcom/android/server/wm/WindowContainer;->scheduleAnimation()V
 
-    .line 175
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

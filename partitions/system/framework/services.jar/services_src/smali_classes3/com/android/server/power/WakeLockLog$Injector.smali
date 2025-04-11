@@ -17,7 +17,6 @@
 .method public currentTimeMillis()J
     .locals 2
 
-    .line 1309
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -28,7 +27,6 @@
 .method public getDateFormat()Ljava/text/SimpleDateFormat;
     .locals 0
 
-    .line 1313
     invoke-static {}, Lcom/android/server/power/WakeLockLog;->-$$Nest$sfgetDATE_FORMAT()Ljava/text/SimpleDateFormat;
 
     move-result-object p0
@@ -39,7 +37,6 @@
 .method public getLogSize()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x2800
 
     return p0
@@ -48,7 +45,6 @@
 .method public getTagDatabaseSize()I
     .locals 0
 
-    .line 0
     const/16 p0, 0x80
 
     return p0

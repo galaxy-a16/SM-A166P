@@ -16,7 +16,6 @@
 .method public constructor <init>(Lcom/android/server/pm/MovePackageHelper;Lcom/android/server/pm/MovePackageHelper$SdcardParams;)V
     .locals 0
 
-    .line 620
     iput-object p1, p0, Lcom/android/server/pm/MovePackageHelper$2;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iput-object p2, p0, Lcom/android/server/pm/MovePackageHelper$2;->val$sdParams:Lcom/android/server/pm/MovePackageHelper$SdcardParams;
@@ -31,7 +30,6 @@
 .method public run()V
     .locals 7
 
-    .line 624
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/MovePackageHelper$2;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
@@ -68,7 +66,6 @@
 
     const-string v1, "PackageManager"
 
-    .line 626
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,7 +86,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 627
     iget-object v1, p0, Lcom/android/server/pm/MovePackageHelper$2;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object v1, v1, Lcom/android/server/pm/MovePackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -104,12 +100,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/pm/MovePackageHelper$MoveCallbacks;->notifyStatusChanged(II)V
 
-    .line 629
     sget-object v1, Lcom/android/server/pm/MovePackageHelper;->sMoveIdMapForSd:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 630
     :try_start_1
     sget-object v2, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
@@ -119,20 +113,17 @@
 
     if-lez v2, :cond_0
 
-    .line 631
     sget-object v2, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 632
     :cond_0
     iget v0, v0, Lcom/android/server/pm/PackageManagerException;->error:I
 
     if-ne v0, v3, :cond_2
 
-    .line 633
     sget-object v0, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -152,7 +143,6 @@
 
     check-cast v2, Lcom/android/server/pm/MovePackageHelper$SdcardParams;
 
-    .line 634
     iget-object v3, p0, Lcom/android/server/pm/MovePackageHelper$2;->this$0:Lcom/android/server/pm/MovePackageHelper;
 
     iget-object v3, v3, Lcom/android/server/pm/MovePackageHelper;->mPm:Lcom/android/server/pm/PackageManagerService;
@@ -167,13 +157,11 @@
 
     goto :goto_0
 
-    .line 636
     :cond_1
     sget-object p0, Lcom/android/server/pm/MovePackageHelper;->sPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
-    .line 638
     :cond_2
     monitor-exit v1
 

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/content/SyncManager;)V
     .locals 0
 
-    .line 2638
     iput-object p1, p0, Lcom/android/server/content/SyncManager$13;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public compare(Lcom/android/server/content/SyncManager$AuthoritySyncStats;Lcom/android/server/content/SyncManager$AuthoritySyncStats;)I
     .locals 2
 
-    .line 2642
     iget p0, p2, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->times:I
 
     iget v0, p1, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->times:I
@@ -38,7 +36,6 @@
 
     if-nez p0, :cond_0
 
-    .line 2644
     iget-wide v0, p2, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->elapsedTime:J
 
     iget-wide p0, p1, Lcom/android/server/content/SyncManager$AuthoritySyncStats;->elapsedTime:J
@@ -54,7 +51,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 2638
     check-cast p1, Lcom/android/server/content/SyncManager$AuthoritySyncStats;
 
     check-cast p2, Lcom/android/server/content/SyncManager$AuthoritySyncStats;

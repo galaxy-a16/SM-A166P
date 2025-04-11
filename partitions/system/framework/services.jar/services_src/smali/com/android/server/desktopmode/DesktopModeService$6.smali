@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DesktopModeService;ZLjava/lang/String;)V
     .locals 0
 
-    .line 1436
     iput-object p1, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     iput-boolean p2, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->val$startWelcomeActivity:Z
@@ -32,19 +31,16 @@
 .method public onClickButtonPositive()V
     .locals 3
 
-    .line 1439
     iget-object v0, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$msetUserRequest(Lcom/android/server/desktopmode/DesktopModeService;I)V
 
-    .line 1440
     iget-boolean v0, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->val$startWelcomeActivity:Z
 
     if-nez v0, :cond_0
 
-    .line 1441
     iget-object v0, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmResolver(Lcom/android/server/desktopmode/DesktopModeService;)Landroid/content/ContentResolver;
@@ -55,7 +51,6 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/server/desktopmode/DesktopModeSettings;->setSettings(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1444
     :cond_0
     iget-object p0, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
@@ -67,7 +62,6 @@
 .method public onDismiss()V
     .locals 2
 
-    .line 1449
     iget-object v0, p0, Lcom/android/server/desktopmode/DesktopModeService$6;->this$0:Lcom/android/server/desktopmode/DesktopModeService;
 
     invoke-static {v0}, Lcom/android/server/desktopmode/DesktopModeService;->-$$Nest$fgetmResolver(Lcom/android/server/desktopmode/DesktopModeService;)Landroid/content/ContentResolver;

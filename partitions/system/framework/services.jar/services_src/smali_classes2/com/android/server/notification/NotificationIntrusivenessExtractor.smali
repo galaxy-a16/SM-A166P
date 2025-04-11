@@ -20,7 +20,6 @@
 
     const/4 v1, 0x3
 
-    .line 33
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -43,7 +42,6 @@
 .method public initialize(Landroid/content/Context;Lcom/android/server/notification/NotificationUsageStats;)V
     .locals 0
 
-    .line 41
     sget-boolean p1, Lcom/android/server/notification/NotificationIntrusivenessExtractor;->DBG:Z
 
     if-eqz p1, :cond_0
@@ -89,7 +87,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 45
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v1
@@ -98,7 +95,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -116,7 +112,6 @@
 
     if-gez v1, :cond_3
 
-    .line 51
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getImportance()I
 
     move-result v1
@@ -125,7 +120,6 @@
 
     if-lt v1, v2, :cond_3
 
-    .line 52
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getSound()Landroid/net/Uri;
 
     move-result-object v1
@@ -142,10 +136,8 @@
 
     if-eq v1, v5, :cond_1
 
-    .line 53
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
-    .line 55
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getVibration()Landroid/os/VibrationEffect;
 
@@ -153,10 +145,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 56
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
-    .line 58
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -166,10 +156,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 59
     invoke-virtual {p1, v2}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
-    .line 63
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->isRecentlyIntrusive()Z
 
@@ -179,7 +167,6 @@
 
     return-object v0
 
-    .line 67
     :cond_4
     new-instance v0, Lcom/android/server/notification/NotificationIntrusivenessExtractor$1;
 
@@ -191,7 +178,6 @@
 
     return-object v0
 
-    .line 46
     :cond_5
     :goto_0
     sget-boolean p0, Lcom/android/server/notification/NotificationIntrusivenessExtractor;->DBG:Z
@@ -211,13 +197,11 @@
 .method public setConfig(Lcom/android/server/notification/RankingConfig;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public setZenHelper(Lcom/android/server/notification/ZenModeHelper;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

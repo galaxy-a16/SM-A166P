@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/wm/LetterboxUiController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/wm/LetterboxUiController$$ExternalSyntheticLambda20;->f$0:Lcom/android/server/wm/LetterboxUiController;
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/LetterboxUiController$$ExternalSyntheticLambda20;->f$0:Lcom/android/server/wm/LetterboxUiController;
 
     invoke-static {p0}, Lcom/android/server/wm/LetterboxUiController;->$r8$lambda$k6_wrZk39leYcaKenBUn37V7FJ0(Lcom/android/server/wm/LetterboxUiController;)I

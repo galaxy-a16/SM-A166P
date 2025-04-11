@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$AdapterStateChangedHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity$AdapterStateChangedHandler;-><init>()V
 
     return-void

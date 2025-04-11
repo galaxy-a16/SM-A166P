@@ -20,7 +20,6 @@
 
     const-string/jumbo v2, "vendor$samsung$hardware$tlc$ddar$ISehDdar"
 
-    .line 627
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0

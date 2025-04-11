@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 312
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 313
     iput-object p1, p0, Lcom/android/server/RescueParty$RescuePartyMonitorCallback;->mContext:Landroid/content/Context;
 
     return-void
@@ -28,7 +26,6 @@
 .method public onDeviceConfigAccess(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 322
     iget-object p0, p0, Lcom/android/server/RescueParty$RescuePartyMonitorCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/server/RescueParty$RescuePartyObserver;->getInstance(Landroid/content/Context;)Lcom/android/server/RescueParty$RescuePartyObserver;
@@ -43,7 +40,6 @@
 .method public onNamespaceUpdate(Ljava/lang/String;)V
     .locals 0
 
-    .line 317
     iget-object p0, p0, Lcom/android/server/RescueParty$RescuePartyMonitorCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0, p1}, Lcom/android/server/RescueParty;->-$$Nest$smstartObservingPackages(Landroid/content/Context;Ljava/lang/String;)V

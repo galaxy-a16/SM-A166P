@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/slice/SliceManagerService;)V
     .locals 0
 
-    .line 604
     iput-object p1, p0, Lcom/android/server/slice/SliceManagerService$1;->this$0:Lcom/android/server/slice/SliceManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     const/16 v0, -0x2710
 
-    .line 607
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -37,7 +35,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 609
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +53,6 @@
 
     return-void
 
-    .line 612
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -64,7 +60,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 613
     invoke-virtual {v0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
@@ -77,7 +72,6 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 615
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +90,6 @@
 
     return-void
 
-    .line 618
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -127,14 +120,12 @@
 
     const/4 v2, 0x0
 
-    .line 621
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
     if-nez p2, :cond_5
 
-    .line 623
     iget-object p0, p0, Lcom/android/server/slice/SliceManagerService$1;->this$0:Lcom/android/server/slice/SliceManagerService;
 
     invoke-static {p0}, Lcom/android/server/slice/SliceManagerService;->-$$Nest$fgetmPermissions(Lcom/android/server/slice/SliceManagerService;)Lcom/android/server/slice/SlicePermissionManager;
@@ -145,7 +136,6 @@
 
     goto :goto_1
 
-    .line 627
     :cond_4
     iget-object p0, p0, Lcom/android/server/slice/SliceManagerService$1;->this$0:Lcom/android/server/slice/SliceManagerService;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 0
 
-    .line 1399
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,14 +25,12 @@
 
     const-string p1, "android.intent.extra.changed_package_list"
 
-    .line 1403
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.intent.action.PACKAGES_SUSPENDED"
 
-    .line 1405
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -42,7 +39,6 @@
 
     move-result p2
 
-    .line 1406
     iget-object p0, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     new-instance v0, Landroid/util/ArraySet;

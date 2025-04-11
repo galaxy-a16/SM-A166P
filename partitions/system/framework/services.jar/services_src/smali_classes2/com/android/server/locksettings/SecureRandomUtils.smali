@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 23
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
@@ -24,10 +23,8 @@
 .method public static randomBytes(I)[B
     .locals 1
 
-    .line 27
     new-array p0, p0, [B
 
-    .line 28
     sget-object v0, Lcom/android/server/locksettings/SecureRandomUtils;->RNG:Ljava/security/SecureRandom;
 
     invoke-virtual {v0, p0}, Ljava/security/SecureRandom;->nextBytes([B)V
@@ -38,7 +35,6 @@
 .method public static randomLong()J
     .locals 2
 
-    .line 34
     sget-object v0, Lcom/android/server/locksettings/SecureRandomUtils;->RNG:Ljava/security/SecureRandom;
 
     invoke-virtual {v0}, Ljava/security/SecureRandom;->nextLong()J

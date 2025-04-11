@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
     .locals 0
 
-    .line 1598
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -24,7 +23,6 @@
 .method public onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
     .locals 6
 
-    .line 1603
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
@@ -33,7 +31,6 @@
 
     const/16 v1, 0xb
 
-    .line 1605
     :try_start_0
     invoke-virtual {p2, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
@@ -52,7 +49,6 @@
     :cond_0
     move v1, v3
 
-    .line 1606
     :goto_0
     iget-object v4, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -66,7 +62,6 @@
 
     const/16 v5, 0x12
 
-    .line 1610
     invoke-virtual {p2, v5}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p2
@@ -80,7 +75,6 @@
     :cond_1
     move p2, v3
 
-    .line 1611
     :goto_1
     iget-object v5, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -105,7 +99,6 @@
     :goto_2
     if-eqz v4, :cond_4
 
-    .line 1617
     iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v3}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLogger(Lcom/android/server/net/NetworkPolicyManagerService;)Lcom/android/server/net/NetworkPolicyLogger;
@@ -121,7 +114,6 @@
     :cond_4
     if-eqz v5, :cond_5
 
-    .line 1621
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {v1}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLogger(Lcom/android/server/net/NetworkPolicyManagerService;)Lcom/android/server/net/NetworkPolicyLogger;
@@ -137,12 +129,10 @@
     :cond_5
     if-eqz v2, :cond_6
 
-    .line 1625
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkRulesNL()V
 
-    .line 1627
     :cond_6
     monitor-exit v0
 
@@ -161,14 +151,12 @@
 .method public onLinkPropertiesChanged(Landroid/net/Network;Landroid/net/LinkProperties;)V
     .locals 3
 
-    .line 1632
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1633
     :try_start_0
     new-instance v1, Landroid/util/ArraySet;
 
@@ -178,7 +166,6 @@
 
     invoke-direct {v1, p2}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    .line 1634
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p1}, Landroid/net/Network;->getNetId()I
@@ -191,7 +178,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1637
     iget-object p2, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-static {p2}, Lcom/android/server/net/NetworkPolicyManagerService;->-$$Nest$fgetmLogger(Lcom/android/server/net/NetworkPolicyManagerService;)Lcom/android/server/net/NetworkPolicyLogger;
@@ -204,12 +190,10 @@
 
     invoke-virtual {p2, p1, v1}, Lcom/android/server/net/NetworkPolicyLogger;->interfacesChanged(ILandroid/util/ArraySet;)V
 
-    .line 1638
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkRulesNL()V
 
-    .line 1640
     :cond_0
     monitor-exit v0
 
@@ -228,14 +212,12 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 1
 
-    .line 1645
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mNetworkPoliciesSecondLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 1646
     :try_start_0
     iget-object p0, p0, Lcom/android/server/net/NetworkPolicyManagerService$11;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -249,7 +231,6 @@
 
     invoke-virtual {p0, p1}, Landroid/util/SparseSetArray;->remove(I)V
 
-    .line 1647
     monitor-exit v0
 
     return-void

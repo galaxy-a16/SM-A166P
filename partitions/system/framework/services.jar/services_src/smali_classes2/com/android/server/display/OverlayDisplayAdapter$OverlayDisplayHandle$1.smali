@@ -15,7 +15,6 @@
 
     move-object v1, p0
 
-    .line 514
     iput-object v0, v1, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     iget-object v2, v0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->this$0:Lcom/android/server/display/OverlayDisplayAdapter;
@@ -56,7 +55,6 @@
 .method public onModeChangedLocked(I)V
     .locals 0
 
-    .line 517
     iget-object p0, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-static {p0, p1}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->-$$Nest$monActiveModeChangedLocked(Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;I)V

@@ -51,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCallback(Lcom/android/server/AnyMotionDetector;)Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mCallback:Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;
 
     return-object p0
@@ -60,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/AnyMotionDetector;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -69,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLock(Lcom/android/server/AnyMotionDetector;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -78,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmMeasurementTimeoutIsActive(Lcom/android/server/AnyMotionDetector;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
     return p0
@@ -87,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmNumSufficientSamples(Lcom/android/server/AnyMotionDetector;)I
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/AnyMotionDetector;->mNumSufficientSamples:I
 
     return p0
@@ -96,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmRunningStats(Lcom/android/server/AnyMotionDetector;)Lcom/android/server/AnyMotionDetector$RunningSignalStats;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     return-object p0
@@ -105,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmSensorRestartIsActive(Lcom/android/server/AnyMotionDetector;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestartIsActive:Z
 
     return p0
@@ -114,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWakelockTimeout(Lcom/android/server/AnyMotionDetector;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeout:Ljava/lang/Runnable;
 
     return-object p0
@@ -123,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWakelockTimeoutIsActive(Lcom/android/server/AnyMotionDetector;)Z
     .locals 0
 
-    .line 0
     iget-boolean p0, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
     return p0
@@ -132,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$fputmMeasurementTimeoutIsActive(Lcom/android/server/AnyMotionDetector;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
     return-void
@@ -141,7 +131,6 @@
 .method public static bridge synthetic -$$Nest$fputmSensorRestartIsActive(Lcom/android/server/AnyMotionDetector;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestartIsActive:Z
 
     return-void
@@ -150,7 +139,6 @@
 .method public static bridge synthetic -$$Nest$fputmWakelockTimeoutIsActive(Lcom/android/server/AnyMotionDetector;Z)V
     .locals 0
 
-    .line 0
     iput-boolean p1, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
     return-void
@@ -159,7 +147,6 @@
 .method public static bridge synthetic -$$Nest$mstartOrientationMeasurementLocked(Lcom/android/server/AnyMotionDetector;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/AnyMotionDetector;->startOrientationMeasurementLocked()V
 
     return-void
@@ -168,7 +155,6 @@
 .method public static bridge synthetic -$$Nest$mstopOrientationMeasurementLocked(Lcom/android/server/AnyMotionDetector;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/AnyMotionDetector;->stopOrientationMeasurementLocked()I
 
     move-result p0
@@ -179,15 +165,12 @@
 .method public constructor <init>(Landroid/os/PowerManager;Landroid/os/Handler;Landroid/hardware/SensorManager;Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;F)V
     .locals 3
 
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x40a00000    # 5.0f
 
-    .line 64
     iput v0, p0, Lcom/android/server/AnyMotionDetector;->THRESHOLD_ENERGY:F
 
-    .line 88
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -196,41 +179,34 @@
 
     const/4 v1, 0x0
 
-    .line 116
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 121
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mPreviousGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 307
     new-instance v1, Lcom/android/server/AnyMotionDetector$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/AnyMotionDetector$1;-><init>(Lcom/android/server/AnyMotionDetector;)V
 
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mListener:Landroid/hardware/SensorEventListener;
 
-    .line 333
     new-instance v1, Lcom/android/server/AnyMotionDetector$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/AnyMotionDetector$2;-><init>(Lcom/android/server/AnyMotionDetector;)V
 
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestart:Ljava/lang/Runnable;
 
-    .line 345
     new-instance v1, Lcom/android/server/AnyMotionDetector$3;
 
     invoke-direct {v1, p0}, Lcom/android/server/AnyMotionDetector$3;-><init>(Lcom/android/server/AnyMotionDetector;)V
 
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeout:Ljava/lang/Runnable;
 
-    .line 366
     new-instance v1, Lcom/android/server/AnyMotionDetector$4;
 
     invoke-direct {v1, p0}, Lcom/android/server/AnyMotionDetector$4;-><init>(Lcom/android/server/AnyMotionDetector;)V
 
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeout:Ljava/lang/Runnable;
 
-    .line 134
     monitor-enter v0
 
     :try_start_0
@@ -238,7 +214,6 @@
 
     const/4 v2, 0x1
 
-    .line 135
     invoke-virtual {p1, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
@@ -247,44 +222,32 @@
 
     const/4 v1, 0x0
 
-    .line 136
     invoke-virtual {p1, v1}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 137
     iput-object p2, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
-    .line 138
     iput-object p3, p0, Lcom/android/server/AnyMotionDetector;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 139
     invoke-virtual {p3, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/AnyMotionDetector;->mAccelSensor:Landroid/hardware/Sensor;
 
-    .line 140
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
-    .line 141
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
-    .line 142
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
-    .line 143
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestartIsActive:Z
 
-    .line 144
     iput v1, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
-    .line 145
     iput-object p4, p0, Lcom/android/server/AnyMotionDetector;->mCallback:Lcom/android/server/AnyMotionDetector$DeviceIdleCallback;
 
-    .line 146
     iput p5, p0, Lcom/android/server/AnyMotionDetector;->mThresholdAngle:F
 
-    .line 147
     new-instance p1, Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     invoke-direct {p1}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;-><init>()V
@@ -293,7 +256,6 @@
 
     const-wide p1, 0x404f400000000000L    # 62.5
 
-    .line 148
     invoke-static {p1, p2}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide p1
@@ -302,7 +264,6 @@
 
     iput p1, p0, Lcom/android/server/AnyMotionDetector;->mNumSufficientSamples:I
 
-    .line 151
     monitor-exit v0
 
     return-void
@@ -322,12 +283,10 @@
 .method public checkForAnyMotion()V
     .locals 6
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 169
     :try_start_0
     iget v1, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
@@ -339,26 +298,20 @@
 
     const-string v3, "[DEEP] INACTIVE to ACTIVE"
 
-    .line 170
     invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     iput v2, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
     const/4 v1, 0x0
 
-    .line 172
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 173
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mPreviousGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 174
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 175
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeout:Ljava/lang/Runnable;
@@ -367,20 +320,16 @@
 
     move-result-object v1
 
-    .line 176
     iget-object v3, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0x7530
 
     invoke-virtual {v3, v1, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 177
     iput-boolean v2, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
-    .line 178
     invoke-virtual {p0}, Lcom/android/server/AnyMotionDetector;->startOrientationMeasurementLocked()V
 
-    .line 180
     :cond_0
     monitor-exit v0
 
@@ -399,7 +348,6 @@
 .method public final getStationaryStatusLocked()I
     .locals 7
 
-    .line 279
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mPreviousGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
     const/4 v1, -0x1
@@ -412,25 +360,21 @@
 
     goto :goto_0
 
-    .line 282
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/AnyMotionDetector$Vector3;->normalized()Lcom/android/server/AnyMotionDetector$Vector3;
 
     move-result-object v0
 
-    .line 283
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
     invoke-virtual {v2}, Lcom/android/server/AnyMotionDetector$Vector3;->normalized()Lcom/android/server/AnyMotionDetector$Vector3;
 
     move-result-object v2
 
-    .line 284
     invoke-virtual {v0, v2}, Lcom/android/server/AnyMotionDetector$Vector3;->angleBetween(Lcom/android/server/AnyMotionDetector$Vector3;)F
 
     move-result v0
 
-    .line 287
     iget v2, p0, Lcom/android/server/AnyMotionDetector;->mThresholdAngle:F
 
     cmpg-float v2, v0, v2
@@ -453,7 +397,6 @@
 
     return p0
 
-    .line 289
     :cond_1
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -465,7 +408,6 @@
 
     return v2
 
-    .line 297
     :cond_2
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
@@ -496,7 +438,6 @@
 .method public hasSensor()Z
     .locals 0
 
-    .line 158
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mAccelSensor:Landroid/hardware/Sensor;
 
     if-eqz p0, :cond_0
@@ -515,7 +456,6 @@
 .method public final startOrientationMeasurementLocked()V
     .locals 5
 
-    .line 211
     iget-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
     if-nez v0, :cond_1
@@ -524,7 +464,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 212
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mListener:Landroid/hardware/SensorEventListener;
@@ -539,15 +478,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 214
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
-    .line 215
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     invoke-virtual {v0}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;->reset()V
 
-    .line 217
     :cond_0
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
@@ -557,14 +493,12 @@
 
     move-result-object v0
 
-    .line 218
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v3, 0xbb8
 
     invoke-virtual {v2, v0, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 219
     iput-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
     :cond_1
@@ -574,12 +508,10 @@
 .method public stop()V
     .locals 4
 
-    .line 184
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 185
     :try_start_0
     iget v1, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
@@ -593,13 +525,10 @@
 
     const-string v2, "[DEEP] ACTIVE to INACTIVE"
 
-    .line 186
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     iput v3, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
-    .line 189
     :cond_0
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
@@ -607,28 +536,22 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 190
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestart:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 191
     iput-boolean v3, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
-    .line 192
     iput-boolean v3, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestartIsActive:Z
 
-    .line 193
     iget-boolean v1, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
     if-eqz v1, :cond_1
 
-    .line 194
     iput-boolean v3, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
-    .line 195
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mListener:Landroid/hardware/SensorEventListener;
@@ -638,13 +561,10 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 197
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 198
     iput-object v1, p0, Lcom/android/server/AnyMotionDetector;->mPreviousGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 199
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -653,22 +573,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 200
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeout:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 201
     iput-boolean v3, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
-    .line 202
     iget-object p0, p0, Lcom/android/server/AnyMotionDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 204
     :cond_2
     monitor-exit v0
 
@@ -687,14 +603,12 @@
 .method public final stopOrientationMeasurementLocked()I
     .locals 5
 
-    .line 228
     iget-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
     const/4 v1, -0x1
 
     if-eqz v0, :cond_3
 
-    .line 229
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeout:Ljava/lang/Runnable;
@@ -703,25 +617,20 @@
 
     const/4 v0, 0x0
 
-    .line 230
     iput-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementTimeoutIsActive:Z
 
-    .line 231
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v3, p0, Lcom/android/server/AnyMotionDetector;->mListener:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 232
     iput-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mMeasurementInProgress:Z
 
-    .line 233
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
     iput-object v2, p0, Lcom/android/server/AnyMotionDetector;->mPreviousGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 234
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     invoke-virtual {v2}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;->getRunningAverage()Lcom/android/server/AnyMotionDetector$Vector3;
@@ -730,7 +639,6 @@
 
     iput-object v2, p0, Lcom/android/server/AnyMotionDetector;->mCurrentGravityVector:Lcom/android/server/AnyMotionDetector$Vector3;
 
-    .line 235
     iget-object v2, p0, Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     invoke-virtual {v2}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;->getSampleCount()I
@@ -743,23 +651,19 @@
 
     const-string v2, "No accelerometer data acquired for orientation measurement."
 
-    .line 236
     invoke-static {v3, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/AnyMotionDetector;->getStationaryStatusLocked()I
 
     move-result v2
 
-    .line 248
     iget-object v4, p0, Lcom/android/server/AnyMotionDetector;->mRunningStats:Lcom/android/server/AnyMotionDetector$RunningSignalStats;
 
     invoke-virtual {v4}, Lcom/android/server/AnyMotionDetector$RunningSignalStats;->reset()V
 
     if-eq v2, v1, :cond_2
 
-    .line 251
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -768,22 +672,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     iget-object v4, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeout:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 253
     iput-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mWakelockTimeoutIsActive:Z
 
-    .line 254
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 256
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -801,12 +701,10 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     iput v0, p0, Lcom/android/server/AnyMotionDetector;->mState:I
 
     goto :goto_0
 
-    .line 266
     :cond_2
     iget-object v0, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
@@ -816,7 +714,6 @@
 
     move-result-object v0
 
-    .line 267
     iget-object v1, p0, Lcom/android/server/AnyMotionDetector;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v3, 0x1388
@@ -825,7 +722,6 @@
 
     const/4 v0, 0x1
 
-    .line 268
     iput-boolean v0, p0, Lcom/android/server/AnyMotionDetector;->mSensorRestartIsActive:Z
 
     :goto_0

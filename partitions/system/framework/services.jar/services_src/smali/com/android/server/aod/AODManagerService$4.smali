@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/aod/AODManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1035
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$4;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 1040
     :cond_0
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetAOD_SETTING_CLOCK_TYPE_URI_PARSED()Landroid/net/Uri;
 
@@ -40,7 +38,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1041
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$4;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {p1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$mgetAODClockType(Lcom/android/server/aod/AODManagerService;)I
@@ -61,7 +58,6 @@
     :goto_0
     invoke-static {p1, v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fputmIsAODAnalogLiveClock(Lcom/android/server/aod/AODManagerService;Z)V
 
-    .line 1042
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1

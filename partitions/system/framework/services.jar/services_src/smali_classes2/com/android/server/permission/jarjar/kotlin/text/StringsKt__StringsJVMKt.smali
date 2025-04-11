@@ -17,7 +17,6 @@
 
     if-nez p5, :cond_0
 
-    .line 654
     invoke-virtual {p0, p1, p2, p3, p4}, Ljava/lang/String;->regionMatches(ILjava/lang/String;II)Z
 
     move-result p0
@@ -37,7 +36,6 @@
 
     move v5, p4
 
-    .line 656
     invoke-virtual/range {v0 .. v5}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
 
     move-result p0
@@ -59,7 +57,6 @@
 
     if-nez p2, :cond_0
 
-    .line 418
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -71,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 420
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -98,7 +94,6 @@
 
     const/4 p2, 0x0
 
-    .line 416
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/android/server/permission/jarjar/kotlin/text/StringsKt__StringsJVMKt;->startsWith(Ljava/lang/String;Ljava/lang/String;Z)Z
 

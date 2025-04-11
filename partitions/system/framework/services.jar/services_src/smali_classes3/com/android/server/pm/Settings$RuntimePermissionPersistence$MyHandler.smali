@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)V
     .locals 0
 
-    .line 6241
     iput-object p1, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
-    .line 6242
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -33,15 +31,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .line 6247
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 6248
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Runnable;
 
-    .line 6251
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -62,7 +57,6 @@
 
     sub-long/2addr v3, v1
 
-    .line 6254
     iget-object p1, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
     invoke-static {p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->-$$Nest$fgetmAsyncHandler(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)Landroid/os/Handler;
@@ -73,7 +67,6 @@
 
     move-result-object p1
 
-    .line 6255
     iget-object p0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
     invoke-static {p0}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->-$$Nest$fgetmAsyncHandler(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)Landroid/os/Handler;
@@ -84,7 +77,6 @@
 
     return-void
 
-    .line 6260
     :cond_0
     iget-object p0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;->this$0:Lcom/android/server/pm/Settings$RuntimePermissionPersistence;
 
@@ -100,7 +92,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6262
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_1

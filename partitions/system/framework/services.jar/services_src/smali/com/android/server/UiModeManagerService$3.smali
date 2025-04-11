@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/UiModeManagerService;)V
     .locals 0
 
-    .line 317
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$3;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 320
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -43,7 +41,6 @@
 
     goto :goto_1
 
-    .line 322
     :cond_0
     iget-object p1, p0, Lcom/android/server/UiModeManagerService$3;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -65,7 +62,6 @@
     :goto_0
     invoke-static {p1, p2}, Lcom/android/server/UiModeManagerService;->-$$Nest$fputmCharging(Lcom/android/server/UiModeManagerService;Z)V
 
-    .line 325
     :goto_1
     iget-object p1, p0, Lcom/android/server/UiModeManagerService$3;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -75,7 +71,6 @@
 
     monitor-enter p1
 
-    .line 326
     :try_start_0
     iget-object p2, p0, Lcom/android/server/UiModeManagerService$3;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -95,20 +90,17 @@
 
     move-result p2
 
-    .line 328
     invoke-static {p2}, Lcom/android/server/UiModeManagerService;->-$$Nest$smisDeskDockState(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 330
     :cond_2
     iget-object p0, p0, Lcom/android/server/UiModeManagerService$3;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {p0, v0, v0}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    .line 332
     :cond_3
     monitor-exit p1
 

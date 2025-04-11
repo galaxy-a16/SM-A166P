@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/wm/WindowState;
 
     invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->cleanupAnimatingExitWindow()V

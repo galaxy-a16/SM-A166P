@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1987
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1989
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -29,12 +27,10 @@
 .method public getCurrentProfileIds()Landroid/util/IntArray;
     .locals 5
 
-    .line 2009
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 2010
     :try_start_0
     new-instance v1, Landroid/util/IntArray;
 
@@ -46,7 +42,6 @@
 
     invoke-direct {v1, v2}, Landroid/util/IntArray;-><init>(I)V
 
-    .line 2011
     iget-object v2, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
@@ -58,7 +53,6 @@
     :goto_0
     if-ge v3, v2, :cond_0
 
-    .line 2013
     iget-object v4, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->keyAt(I)I
@@ -71,7 +65,6 @@
 
     goto :goto_0
 
-    .line 2015
     :cond_0
     monitor-exit v0
 
@@ -80,7 +73,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2016
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -91,12 +83,10 @@
 .method public isCurrentProfile(I)Z
     .locals 1
 
-    .line 2020
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 2021
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -121,7 +111,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2022
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -132,12 +121,10 @@
 .method public isProfileUser(I)Z
     .locals 2
 
-    .line 2026
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 2027
     :try_start_0
     iget-object p0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
@@ -151,12 +138,10 @@
 
     if-nez p0, :cond_0
 
-    .line 2029
     monitor-exit v0
 
     return p1
 
-    .line 2031
     :cond_0
     invoke-virtual {p0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -172,13 +157,11 @@
 
     goto :goto_0
 
-    .line 2034
     :cond_1
     monitor-exit v0
 
     return p1
 
-    .line 2032
     :cond_2
     :goto_0
     monitor-exit v0
@@ -190,7 +173,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2035
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -203,7 +185,6 @@
 
     const-string/jumbo v0, "user"
 
-    .line 1992
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -212,28 +193,23 @@
 
     if-eqz p1, :cond_1
 
-    .line 1994
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
-    .line 1995
     invoke-virtual {p1, v0}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
 
     move-result-object p1
 
-    .line 1996
     iget-object v0, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     monitor-enter v0
 
-    .line 1997
     :try_start_0
     iget-object v1, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->clear()V
 
-    .line 1998
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -251,7 +227,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 1999
     iget-object v2, p0, Lcom/android/server/notification/ManagedServices$UserProfiles;->mCurrentProfiles:Landroid/util/SparseArray;
 
     iget v3, v1, Landroid/content/pm/UserInfo;->id:I
@@ -260,7 +235,6 @@
 
     goto :goto_0
 
-    .line 2001
     :cond_0
     monitor-exit v0
 

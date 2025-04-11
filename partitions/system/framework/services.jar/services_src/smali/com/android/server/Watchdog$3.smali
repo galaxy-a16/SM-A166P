@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/Watchdog;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/io/File;Ljava/util/UUID;Lcom/android/server/am/BinderTransaction$BinderProcsInfo;)V
     .locals 0
 
-    .line 1551
     iput-object p1, p0, Lcom/android/server/Watchdog$3;->this$0:Lcom/android/server/Watchdog;
 
     iput-object p3, p0, Lcom/android/server/Watchdog$3;->val$dropboxTag:Ljava/lang/String;
@@ -46,7 +45,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1555
     iget-object v1, v0, Lcom/android/server/Watchdog$3;->this$0:Lcom/android/server/Watchdog;
 
     invoke-static {v1}, Lcom/android/server/Watchdog;->-$$Nest$fgetmActivity(Lcom/android/server/Watchdog;)Lcom/android/server/am/ActivityManagerService;
@@ -55,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1556
     iget-object v1, v0, Lcom/android/server/Watchdog$3;->this$0:Lcom/android/server/Watchdog;
 
     invoke-static {v1}, Lcom/android/server/Watchdog;->-$$Nest$fgetmActivity(Lcom/android/server/Watchdog;)Lcom/android/server/am/ActivityManagerService;
@@ -78,7 +75,6 @@
 
     iget-object v1, v0, Lcom/android/server/Watchdog$3;->val$report:Ljava/lang/StringBuilder;
 
-    .line 1558
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -97,7 +93,6 @@
 
     move-object/from16 v16, v0
 
-    .line 1556
     invoke-virtual/range {v2 .. v16}, Lcom/android/server/am/ActivityManagerService;->addErrorToDropBox(Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Landroid/app/ApplicationErrorReport$CrashInfo;Ljava/lang/Float;Landroid/os/incremental/IncrementalMetrics;Ljava/util/UUID;Lcom/android/server/am/BinderTransaction$BinderProcsInfo;)V
 
     :cond_0

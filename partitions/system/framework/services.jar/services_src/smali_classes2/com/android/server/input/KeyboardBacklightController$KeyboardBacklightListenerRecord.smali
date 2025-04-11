@@ -18,15 +18,12 @@
 .method public constructor <init>(Lcom/android/server/input/KeyboardBacklightController;ILandroid/hardware/input/IKeyboardBacklightListener;)V
     .locals 0
 
-    .line 456
     iput-object p1, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->this$0:Lcom/android/server/input/KeyboardBacklightController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 457
     iput p2, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->mPid:I
 
-    .line 458
     iput-object p3, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->mListener:Landroid/hardware/input/IKeyboardBacklightListener;
 
     return-void
@@ -37,14 +34,12 @@
 .method public binderDied()V
     .locals 2
 
-    .line 463
     invoke-static {}, Lcom/android/server/input/KeyboardBacklightController;->-$$Nest$sfgetDEBUG()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 464
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +64,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 466
     :cond_0
     iget-object v0, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->this$0:Lcom/android/server/input/KeyboardBacklightController;
 
@@ -83,7 +77,6 @@
 .method public notifyKeyboardBacklightChanged(ILandroid/hardware/input/IKeyboardBacklightState;Z)V
     .locals 1
 
-    .line 472
     :try_start_0
     iget-object v0, p0, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->mListener:Landroid/hardware/input/IKeyboardBacklightListener;
 
@@ -96,7 +89,6 @@
     :catch_0
     move-exception p1
 
-    .line 474
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +113,6 @@
 
     invoke-static {p3, p2, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 476
     invoke-virtual {p0}, Lcom/android/server/input/KeyboardBacklightController$KeyboardBacklightListenerRecord;->binderDied()V
 
     :goto_0

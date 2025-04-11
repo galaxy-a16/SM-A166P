@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$fputmChannel(Lcom/android/server/notification/NotificationHistoryFilter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mChannel:Ljava/lang/String;
 
     return-void
@@ -26,7 +25,6 @@
 .method public static bridge synthetic -$$Nest$fputmNotificationCount(Lcom/android/server/notification/NotificationHistoryFilter;I)V
     .locals 0
 
-    .line 0
     iput p1, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mNotificationCount:I
 
     return-void
@@ -35,7 +33,6 @@
 .method public static bridge synthetic -$$Nest$fputmPackage(Lcom/android/server/notification/NotificationHistoryFilter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mPackage:Ljava/lang/String;
 
     return-void
@@ -44,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$fputmSbnKey(Lcom/android/server/notification/NotificationHistoryFilter;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     iput-object p1, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mSbnKey:Ljava/lang/String;
 
     return-void
@@ -61,7 +57,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/notification/NotificationHistoryFilter-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/notification/NotificationHistoryFilter;-><init>()V
 
     return-void
@@ -72,7 +67,6 @@
 .method public getChannel()Ljava/lang/String;
     .locals 0
 
-    .line 39
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mChannel:Ljava/lang/String;
 
     return-object p0
@@ -81,7 +75,6 @@
 .method public getPackage()Ljava/lang/String;
     .locals 0
 
-    .line 35
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mPackage:Ljava/lang/String;
 
     return-object p0
@@ -90,7 +83,6 @@
 .method public getSbnKey()Ljava/lang/String;
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/android/server/notification/NotificationHistoryFilter;->mSbnKey:Ljava/lang/String;
 
     return-object p0
@@ -99,7 +91,6 @@
 .method public isFiltering()Z
     .locals 1
 
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -136,7 +127,6 @@
 .method public isSbnFilter()Z
     .locals 0
 
-    .line 48
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getSbnKey()Ljava/lang/String;
 
     move-result-object p0
@@ -157,7 +147,6 @@
 .method public matchesCountFilter(Landroid/app/NotificationHistory;)Z
     .locals 0
 
-    .line 107
     invoke-virtual {p1}, Landroid/app/NotificationHistory;->getHistoryCount()I
 
     move-result p1
@@ -180,7 +169,6 @@
 .method public matchesPackageAndChannelFilter(Landroid/app/NotificationHistory$HistoricalNotification;)Z
     .locals 2
 
-    .line 69
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -191,7 +179,6 @@
 
     if-nez v0, :cond_1
 
-    .line 70
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -210,7 +197,6 @@
 
     return v1
 
-    .line 73
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getChannel()Ljava/lang/String;
 
@@ -222,7 +208,6 @@
 
     if-nez v0, :cond_1
 
-    .line 74
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getChannel()Ljava/lang/String;
 
     move-result-object p0
@@ -248,7 +233,6 @@
 .method public matchesPackageAndSbnKeyFilter(Landroid/app/NotificationHistory$HistoricalNotification;)Z
     .locals 2
 
-    .line 89
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -259,7 +243,6 @@
 
     if-nez v0, :cond_1
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -278,7 +261,6 @@
 
     return v1
 
-    .line 93
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getSbnKey()Ljava/lang/String;
 
@@ -290,7 +272,6 @@
 
     if-nez v0, :cond_1
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationHistoryFilter;->getSbnKey()Ljava/lang/String;
 
     move-result-object p0

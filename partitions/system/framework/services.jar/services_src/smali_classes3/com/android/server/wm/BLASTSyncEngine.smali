@@ -27,7 +27,6 @@
 .method public static synthetic $r8$lambda$7HyLcOVlVtLTkuzuKsxPrcu8n-w(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)Ljava/lang/Integer;
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/wm/BLASTSyncEngine;->lambda$onSurfacePlacement$0(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)Ljava/lang/Integer;
 
     move-result-object p0
@@ -38,7 +37,6 @@
 .method public static bridge synthetic -$$Nest$fgetmActiveSyncs(Lcom/android/server/wm/BLASTSyncEngine;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/wm/BLASTSyncEngine;)Landroid/os/Handler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static bridge synthetic -$$Nest$fgetmOnIdleListeners(Lcom/android/server/wm/BLASTSyncEngine;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mOnIdleListeners:Ljava/util/ArrayList;
 
     return-object p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$fgetmPendingSyncSets(Lcom/android/server/wm/BLASTSyncEngine;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mPendingSyncSets:Ljava/util/ArrayList;
 
     return-object p0
@@ -74,7 +69,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTmpFringe(Lcom/android/server/wm/BLASTSyncEngine;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFringe:Ljava/util/ArrayList;
 
     return-object p0
@@ -83,7 +77,6 @@
 .method public static bridge synthetic -$$Nest$fgetmWm(Lcom/android/server/wm/BLASTSyncEngine;)Lcom/android/server/wm/WindowManagerService;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mWm:Lcom/android/server/wm/WindowManagerService;
 
     return-object p0
@@ -92,7 +85,6 @@
 .method public static bridge synthetic -$$Nest$mremoveFromDependencies(Lcom/android/server/wm/BLASTSyncEngine;Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->removeFromDependencies(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
 
     return-void
@@ -101,7 +93,6 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;)V
     .locals 1
 
-    .line 503
     iget-object v0, p1, Lcom/android/server/wm/WindowManagerService;->mH:Lcom/android/server/wm/WindowManagerService$H;
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/wm/BLASTSyncEngine;-><init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/Handler;)V
@@ -112,56 +103,46 @@
 .method public constructor <init>(Lcom/android/server/wm/WindowManagerService;Landroid/os/Handler;)V
     .locals 2
 
-    .line 507
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 481
     iput v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mNextSyncId:I
 
-    .line 484
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
-    .line 491
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mPendingSyncSets:Ljava/util/ArrayList;
 
-    .line 493
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mOnIdleListeners:Ljava/util/ArrayList;
 
-    .line 495
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFinishQueue:Ljava/util/ArrayList;
 
-    .line 496
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFringe:Ljava/util/ArrayList;
 
-    .line 499
     iput v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mDeferDepth:I
 
-    .line 508
     iput-object p1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mWm:Lcom/android/server/wm/WindowManagerService;
 
-    .line 509
     iput-object p2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -170,7 +151,6 @@
 .method public static synthetic lambda$onSurfacePlacement$0(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)Ljava/lang/Integer;
     .locals 0
 
-    .line 652
     iget p0, p0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mSyncId:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -185,12 +165,10 @@
 .method public abort(I)V
     .locals 2
 
-    .line 609
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->getSyncGroup(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object v0
 
-    .line 611
     sget-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
     if-eqz v1, :cond_0
@@ -199,7 +177,6 @@
 
     if-lez v1, :cond_0
 
-    .line 613
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,16 +197,13 @@
 
     const/4 p0, 0x1
 
-    .line 614
     iput-boolean p0, v0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mAborted:Z
 
     return-void
 
-    .line 618
     :cond_0
     invoke-static {v0}, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->-$$Nest$mfinishNow(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
 
-    .line 619
     invoke-virtual {p0, v0}, Lcom/android/server/wm/BLASTSyncEngine;->removeFromDependencies(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
 
     return-void
@@ -238,7 +212,6 @@
 .method public addOnIdleListener(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 735
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mOnIdleListeners:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -249,7 +222,6 @@
 .method public addToSyncSet(ILcom/android/server/wm/WindowContainer;)V
     .locals 0
 
-    .line 573
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->getSyncGroup(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object p0
@@ -262,7 +234,6 @@
 .method public final getSyncGroup(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
     .locals 2
 
-    .line 623
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->getSyncSet(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object p0
@@ -271,7 +242,6 @@
 
     return-object p0
 
-    .line 625
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -299,7 +269,6 @@
 
     const/4 v0, 0x0
 
-    .line 556
     :goto_0
     iget-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
@@ -309,7 +278,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 557
     iget-object v1, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -326,7 +294,6 @@
 
     goto :goto_0
 
-    .line 558
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
@@ -347,7 +314,6 @@
 .method public hasActiveSync()Z
     .locals 0
 
-    .line 564
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -370,7 +336,6 @@
 .method public hasPendingSyncSets()Z
     .locals 0
 
-    .line 731
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mPendingSyncSets:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -385,7 +350,6 @@
 .method public onSurfacePlacement()V
     .locals 8
 
-    .line 647
     iget-object v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -396,7 +360,6 @@
 
     return-void
 
-    .line 649
     :cond_0
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->MW_SHELL_TRANSITION_BUG_FIX:Z
 
@@ -413,7 +376,6 @@
 
     if-lez v0, :cond_2
 
-    .line 651
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,7 +386,6 @@
 
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
-    .line 652
     invoke-virtual {p0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
@@ -441,7 +402,6 @@
 
     move-result-object p0
 
-    .line 651
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -456,7 +416,6 @@
 
     return-void
 
-    .line 658
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFinishQueue:Ljava/util/ArrayList;
 
@@ -464,7 +423,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 662
     iget-object v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -483,7 +441,6 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 663
     :cond_3
     :goto_0
     iget-object v2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFinishQueue:Ljava/util/ArrayList;
@@ -498,13 +455,11 @@
 
     const-string v2, "Trying to finish more syncs than theoretically possible. This should never happen. Most likely a dependency cycle wasn\'t detected."
 
-    .line 665
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     add-int/lit8 v0, v0, -0x1
 
-    .line 669
     iget-object v2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFinishQueue:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
@@ -515,7 +470,6 @@
 
     check-cast v2, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
-    .line 670
     iget-object v4, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
@@ -526,7 +480,6 @@
 
     goto :goto_0
 
-    .line 674
     :cond_5
     sget-boolean v5, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_BUG_FIX:Z
 
@@ -536,12 +489,10 @@
 
     if-eqz v5, :cond_6
 
-    .line 675
     invoke-static {v2}, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->-$$Nest$mfinishNow(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)V
 
     goto :goto_0
 
-    .line 679
     :cond_6
     invoke-static {v2}, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->-$$Nest$mtryFinish(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;)Z
 
@@ -554,7 +505,6 @@
     :cond_7
     move v5, v3
 
-    .line 682
     :goto_1
     iget-object v6, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
@@ -564,7 +514,6 @@
 
     if-ge v3, v6, :cond_3
 
-    .line 683
     iget-object v6, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -573,7 +522,6 @@
 
     check-cast v6, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
-    .line 684
     iget-object v7, v6, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mDependencies:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -589,7 +537,6 @@
 
     goto :goto_2
 
-    .line 687
     :cond_9
     iget-object v6, v6, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mDependencies:Ljava/util/ArrayList;
 
@@ -601,7 +548,6 @@
 
     goto :goto_2
 
-    .line 690
     :cond_a
     iget-object v6, p0, Lcom/android/server/wm/BLASTSyncEngine;->mTmpFinishQueue:Ljava/util/ArrayList;
 
@@ -629,7 +575,6 @@
 .method public pause()V
     .locals 1
 
-    .line 740
     iget v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mDeferDepth:I
 
     add-int/lit8 v0, v0, 0x1
@@ -642,7 +587,6 @@
 .method public prepareSyncSet(Lcom/android/server/wm/BLASTSyncEngine$TransactionReadyListener;Ljava/lang/String;)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
     .locals 7
 
-    .line 517
     new-instance v6, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     iget v3, p0, Lcom/android/server/wm/BLASTSyncEngine;->mNextSyncId:I
@@ -669,12 +613,10 @@
 .method public queueSyncSet(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 718
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_LOG:Z
 
     if-eqz v0, :cond_0
 
-    .line 719
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +641,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 723
     :cond_0
     new-instance v0, Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;
 
@@ -707,13 +648,10 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;-><init>(Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet-IA;)V
 
-    .line 724
     invoke-static {v0, p1}, Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;->-$$Nest$fputmStartSync(Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;Ljava/lang/Runnable;)V
 
-    .line 725
     invoke-static {v0, p2}, Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;->-$$Nest$fputmApplySync(Lcom/android/server/wm/BLASTSyncEngine$PendingSyncSet;Ljava/lang/Runnable;)V
 
-    .line 726
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mPendingSyncSets:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -728,7 +666,6 @@
 
     move v1, v0
 
-    .line 636
     :goto_0
     iget-object v2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
@@ -738,7 +675,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 637
     iget-object v2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -747,7 +683,6 @@
 
     check-cast v2, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
-    .line 638
     iget-object v3, v2, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mDependencies:Ljava/util/ArrayList;
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -758,7 +693,6 @@
 
     goto :goto_1
 
-    .line 639
     :cond_0
     iget-object v2, v2, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mDependencies:Ljava/util/ArrayList;
 
@@ -783,7 +717,6 @@
 
     return-void
 
-    .line 643
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mWm:Lcom/android/server/wm/WindowManagerService;
 
@@ -797,7 +730,6 @@
 .method public resume()V
     .locals 1
 
-    .line 744
     iget v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mDeferDepth:I
 
     add-int/lit8 v0, v0, -0x1
@@ -810,7 +742,6 @@
 .method public scheduleTimeout(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;J)V
     .locals 0
 
-    .line 569
     iget-object p0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mHandler:Landroid/os/Handler;
 
     iget-object p1, p1, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mOnTimeout:Ljava/lang/Runnable;
@@ -825,7 +756,6 @@
 
     const/4 v0, 0x1
 
-    .line 598
     invoke-virtual {p0, p1, v0}, Lcom/android/server/wm/BLASTSyncEngine;->setReady(IZ)Z
 
     return-void
@@ -834,7 +764,6 @@
 .method public setReady(IZ)Z
     .locals 0
 
-    .line 594
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->getSyncGroup(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object p0
@@ -849,12 +778,10 @@
 .method public setSyncMethod(II)V
     .locals 2
 
-    .line 577
     invoke-virtual {p0, p1}, Lcom/android/server/wm/BLASTSyncEngine;->getSyncGroup(I)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object p0
 
-    .line 578
     iget-object v0, p0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mRootMembers:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->isEmpty()Z
@@ -863,12 +790,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 584
     sget-boolean v0, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_LOG:Z
 
     if-eqz v0, :cond_0
 
-    .line 585
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -891,7 +816,6 @@
 
     const/4 p1, 0x3
 
-    .line 586
     invoke-static {p1}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object p1
@@ -904,16 +828,13 @@
 
     const-string v0, "WindowManager"
 
-    .line 585
     invoke-static {v0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 590
     :cond_0
     iput p2, p0, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mSyncMethod:I
 
     return-void
 
-    .line 579
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -939,15 +860,12 @@
 .method public startSyncSet(Lcom/android/server/wm/BLASTSyncEngine$TransactionReadyListener;JLjava/lang/String;Z)I
     .locals 0
 
-    .line 522
     invoke-virtual {p0, p1, p4}, Lcom/android/server/wm/BLASTSyncEngine;->prepareSyncSet(Lcom/android/server/wm/BLASTSyncEngine$TransactionReadyListener;Ljava/lang/String;)Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;
 
     move-result-object p1
 
-    .line 523
     invoke-virtual {p0, p1, p2, p3, p5}, Lcom/android/server/wm/BLASTSyncEngine;->startSyncSet(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;JZ)V
 
-    .line 524
     iget p0, p1, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mSyncId:I
 
     return p0
@@ -960,7 +878,6 @@
 
     const/4 v2, 0x0
 
-    .line 528
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/server/wm/BLASTSyncEngine;->startSyncSet(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;JZ)V
 
     return-void
@@ -969,7 +886,6 @@
 .method public startSyncSet(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;JZ)V
     .locals 6
 
-    .line 532
     iget-object v0, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -992,7 +908,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 535
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1017,23 +932,19 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/BLASTSyncEngine;->mActiveSyncs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 540
     iput-boolean p4, p1, Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;->mIgnoreIndirectMembers:Z
 
-    .line 542
     sget-boolean v2, Lcom/samsung/android/rune/CoreRune;->FW_CUSTOM_SHELL_TRANSITION_LOG:Z
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_2
 
-    .line 543
     sget-boolean p4, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_SYNC_ENGINE_enabled:Z
 
     if-eqz p4, :cond_4
@@ -1074,7 +985,6 @@
 
     goto :goto_2
 
-    .line 547
     :cond_2
     sget-boolean v2, Lcom/android/server/wm/ProtoLogCache;->WM_DEBUG_SYNC_ENGINE_enabled:Z
 
@@ -1116,7 +1026,6 @@
 
     invoke-static {v2, v0, v1, v3, p4}, Lcom/android/internal/protolog/ProtoLogImpl;->v(Lcom/android/internal/protolog/common/IProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 551
     :cond_4
     :goto_2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/wm/BLASTSyncEngine;->scheduleTimeout(Lcom/android/server/wm/BLASTSyncEngine$SyncGroup;J)V

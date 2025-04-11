@@ -7,7 +7,6 @@
 .method public static gestureIdToString(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/16 v0, 0xc9
 
     if-eq p0, v0, :cond_1
@@ -78,7 +77,6 @@
 .method public static getMagnificationMultiTapTimeout(Landroid/content/Context;)I
     .locals 2
 
-    .line 92
     invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
 
     move-result v0

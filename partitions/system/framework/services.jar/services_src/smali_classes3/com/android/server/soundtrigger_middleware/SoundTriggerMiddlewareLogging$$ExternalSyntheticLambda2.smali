@@ -20,7 +20,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     invoke-static {}, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareLogging;->$r8$lambda$I_emGpEJmjxBK0sQozSYZJuIoto()Landroid/os/BatteryStatsInternal;
 
     move-result-object p0

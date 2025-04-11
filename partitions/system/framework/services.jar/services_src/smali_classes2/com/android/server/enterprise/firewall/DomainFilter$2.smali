@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
     .locals 0
 
-    .line 205
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 208
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -45,7 +43,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -58,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 210
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-static {p0, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$monUserRemoved(Lcom/android/server/enterprise/firewall/DomainFilter;Landroid/content/Intent;)V
@@ -68,7 +64,6 @@
     :cond_0
     const-string p1, "android.intent.action.USER_ADDED"
 
-    .line 211
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -79,7 +74,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 212
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-static {p0, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->-$$Nest$monUserAdded(Lcom/android/server/enterprise/firewall/DomainFilter;Landroid/content/Intent;)V

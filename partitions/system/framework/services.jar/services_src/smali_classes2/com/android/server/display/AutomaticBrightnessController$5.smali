@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/AutomaticBrightnessController;)V
     .locals 0
 
-    .line 2287
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,14 +26,12 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 1
 
-    .line 2299
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-static {v0}, Lcom/android/server/display/AutomaticBrightnessController;->-$$Nest$fgetmLuxInjected(Lcom/android/server/display/AutomaticBrightnessController;)Z
@@ -45,7 +42,6 @@
 
     return-void
 
-    .line 2303
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 

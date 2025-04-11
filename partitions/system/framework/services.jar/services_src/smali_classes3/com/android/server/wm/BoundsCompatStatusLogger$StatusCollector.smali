@@ -7,7 +7,6 @@
 .method public collectIfNeededLocked(ILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0

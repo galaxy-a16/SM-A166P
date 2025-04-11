@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityRecord;)V
     .locals 0
 
-    .line 1228
     iput-object p1, p0, Lcom/android/server/wm/ActivityRecord$3;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 6
 
-    .line 1231
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord$3;->this$0:Lcom/android/server/wm/ActivityRecord;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -41,7 +39,6 @@
     :try_start_0
     const-string v1, "ActivityTaskManager"
 
-    .line 1232
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,7 +57,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1234
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v1
@@ -71,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1235
     invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
 
     move-result-object v1
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)Z
 
-    .line 1238
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/ActivityRecord$3;->this$0:Lcom/android/server/wm/ActivityRecord;
 
@@ -98,7 +92,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/wm/ActivityRecord;->destroyed(Ljava/lang/String;)V
 
-    .line 1239
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

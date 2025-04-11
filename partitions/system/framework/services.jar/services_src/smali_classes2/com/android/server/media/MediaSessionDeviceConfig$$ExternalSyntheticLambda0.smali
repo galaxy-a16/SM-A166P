@@ -20,7 +20,6 @@
 .method public final onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 0
     invoke-static {p1}, Lcom/android/server/media/MediaSessionDeviceConfig;->$r8$lambda$P42v3Rs6yTZN2AYXv2uOZs0538g(Landroid/provider/DeviceConfig$Properties;)V
 
     return-void

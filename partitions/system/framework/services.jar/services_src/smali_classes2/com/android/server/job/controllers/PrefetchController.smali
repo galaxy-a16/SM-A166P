@@ -35,7 +35,6 @@
 .method public static synthetic $r8$lambda$-POOYNmQwM-1hZPm4Ta9eXiiFmQ(Lcom/android/server/job/controllers/PrefetchController;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/job/controllers/PrefetchController;->lambda$onConstantsUpdatedLocked$0()V
 
     return-void
@@ -44,7 +43,6 @@
 .method public static synthetic $r8$lambda$47d82rZAMktfTtnlfKR9RwMguk8(Ljava/util/function/Predicate;Landroid/util/IndentingPrintWriter;Landroid/util/ArraySet;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/job/controllers/PrefetchController;->lambda$dumpControllerStateLocked$1(Ljava/util/function/Predicate;Landroid/util/IndentingPrintWriter;Landroid/util/ArraySet;)V
 
     return-void
@@ -53,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$fgetmEstimatedLaunchTimes(Lcom/android/server/job/controllers/PrefetchController;)Landroid/util/SparseArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     return-object p0
@@ -62,7 +59,6 @@
 .method public static bridge synthetic -$$Nest$fgetmHandler(Lcom/android/server/job/controllers/PrefetchController;)Lcom/android/server/job/controllers/PrefetchController$PcHandler;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mHandler:Lcom/android/server/job/controllers/PrefetchController$PcHandler;
 
     return-object p0
@@ -71,7 +67,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLaunchTimeAllowanceMs(Lcom/android/server/job/controllers/PrefetchController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeAllowanceMs:J
 
     return-wide v0
@@ -80,7 +75,6 @@
 .method public static bridge synthetic -$$Nest$fgetmLaunchTimeThresholdMs(Lcom/android/server/job/controllers/PrefetchController;)J
     .locals 2
 
-    .line 0
     iget-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeThresholdMs:J
 
     return-wide v0
@@ -89,7 +83,6 @@
 .method public static bridge synthetic -$$Nest$fgetmThresholdAlarmListener(Lcom/android/server/job/controllers/PrefetchController;)Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     return-object p0
@@ -98,7 +91,6 @@
 .method public static bridge synthetic -$$Nest$fgetmTrackedJobs(Lcom/android/server/job/controllers/PrefetchController;)Landroid/util/SparseArrayMap;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     return-object p0
@@ -107,7 +99,6 @@
 .method public static bridge synthetic -$$Nest$fgetmUsageStatsManagerInternal(Lcom/android/server/job/controllers/PrefetchController;)Landroid/app/usage/UsageStatsManagerInternal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mUsageStatsManagerInternal:Landroid/app/usage/UsageStatsManagerInternal;
 
     return-object p0
@@ -116,7 +107,6 @@
 .method public static bridge synthetic -$$Nest$fputmLaunchTimeAllowanceMs(Lcom/android/server/job/controllers/PrefetchController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeAllowanceMs:J
 
     return-void
@@ -125,7 +115,6 @@
 .method public static bridge synthetic -$$Nest$fputmLaunchTimeThresholdMs(Lcom/android/server/job/controllers/PrefetchController;J)V
     .locals 0
 
-    .line 0
     iput-wide p1, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeThresholdMs:J
 
     return-void
@@ -134,7 +123,6 @@
 .method public static bridge synthetic -$$Nest$mmaybeUpdateConstraintForPkgLocked(Lcom/android/server/job/controllers/PrefetchController;JJILjava/lang/String;)Z
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/job/controllers/PrefetchController;->maybeUpdateConstraintForPkgLocked(JJILjava/lang/String;)Z
 
     move-result p0
@@ -145,7 +133,6 @@
 .method public static bridge synthetic -$$Nest$mmaybeUpdateConstraintForUid(Lcom/android/server/job/controllers/PrefetchController;I)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/job/controllers/PrefetchController;->maybeUpdateConstraintForUid(I)V
 
     return-void
@@ -154,7 +141,6 @@
 .method public static bridge synthetic -$$Nest$mprocessUpdatedEstimatedLaunchTime(Lcom/android/server/job/controllers/PrefetchController;ILjava/lang/String;J)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/PrefetchController;->processUpdatedEstimatedLaunchTime(ILjava/lang/String;J)V
 
     return-void
@@ -163,7 +149,6 @@
 .method public static bridge synthetic -$$Nest$mupdateThresholdAlarmLocked(Lcom/android/server/job/controllers/PrefetchController;ILjava/lang/String;JJ)V
     .locals 0
 
-    .line 0
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/job/controllers/PrefetchController;->updateThresholdAlarmLocked(ILjava/lang/String;JJ)V
 
     return-void
@@ -172,7 +157,6 @@
 .method public static bridge synthetic -$$Nest$mwillBeLaunchedSoonLocked(Lcom/android/server/job/controllers/PrefetchController;ILjava/lang/String;J)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/PrefetchController;->willBeLaunchedSoonLocked(ILjava/lang/String;J)Z
 
     move-result p0
@@ -183,7 +167,6 @@
 .method public static bridge synthetic -$$Nest$sfgetDEBUG()Z
     .locals 1
 
-    .line 0
     sget-boolean v0, Lcom/android/server/job/controllers/PrefetchController;->DEBUG:Z
 
     return v0
@@ -192,7 +175,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 61
     sget-boolean v0, Lcom/android/server/job/JobSchedulerService;->DEBUG:Z
 
     if-nez v0, :cond_1
@@ -201,7 +183,6 @@
 
     const/4 v1, 0x3
 
-    .line 62
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -228,24 +209,20 @@
 .method public constructor <init>(Lcom/android/server/job/JobSchedulerService;)V
     .locals 4
 
-    .line 131
     invoke-direct {p0, p1}, Lcom/android/server/job/controllers/StateController;-><init>(Lcom/android/server/job/JobSchedulerService;)V
 
-    .line 76
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
-    .line 82
     new-instance p1, Landroid/util/SparseArrayMap;
 
     invoke-direct {p1}, Landroid/util/SparseArrayMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
-    .line 84
     new-instance p1, Landroid/util/ArraySet;
 
     invoke-direct {p1}, Landroid/util/ArraySet;-><init>()V
@@ -254,29 +231,24 @@
 
     const-wide/32 v0, 0x1808580
 
-    .line 92
     iput-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeThresholdMs:J
 
     const-wide/32 v0, 0x124f80
 
-    .line 101
     iput-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeAllowanceMs:J
 
-    .line 111
     new-instance p1, Lcom/android/server/job/controllers/PrefetchController$1;
 
     invoke-direct {p1, p0}, Lcom/android/server/job/controllers/PrefetchController$1;-><init>(Lcom/android/server/job/controllers/PrefetchController;)V
 
     iput-object p1, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimeChangedListener:Landroid/app/usage/UsageStatsManagerInternal$EstimatedLaunchTimeChangedListener;
 
-    .line 132
     new-instance v0, Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     invoke-direct {v0, p0}, Lcom/android/server/job/controllers/PrefetchController$PcConstants;-><init>(Lcom/android/server/job/controllers/PrefetchController;)V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
-    .line 133
     new-instance v0, Lcom/android/server/job/controllers/PrefetchController$PcHandler;
 
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->get()Lcom/android/server/AppSchedulingModuleThread;
@@ -291,12 +263,10 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mHandler:Lcom/android/server/job/controllers/PrefetchController$PcHandler;
 
-    .line 134
     new-instance v0, Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     iget-object v1, p0, Lcom/android/server/job/controllers/StateController;->mContext:Landroid/content/Context;
 
-    .line 135
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->get()Lcom/android/server/AppSchedulingModuleThread;
 
     move-result-object v2
@@ -311,7 +281,6 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
-    .line 136
     const-class v0, Landroid/app/usage/UsageStatsManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -322,7 +291,6 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mUsageStatsManagerInternal:Landroid/app/usage/UsageStatsManagerInternal;
 
-    .line 139
     invoke-virtual {v0, p1}, Landroid/app/usage/UsageStatsManagerInternal;->registerLaunchTimeChangedListener(Landroid/app/usage/UsageStatsManagerInternal$EstimatedLaunchTimeChangedListener;)V
 
     return-void
@@ -333,7 +301,6 @@
 
     const/4 v0, 0x0
 
-    .line 642
     :goto_0
     invoke-virtual {p2}, Landroid/util/ArraySet;->size()I
 
@@ -341,14 +308,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 643
     invoke-virtual {p2, v0}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/job/controllers/JobStatus;
 
-    .line 644
     invoke-interface {p0, v1}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v2
@@ -360,25 +325,20 @@
     :cond_0
     const-string v2, "#"
 
-    .line 647
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 648
     invoke-virtual {v1, p1}, Lcom/android/server/job/controllers/JobStatus;->printUniqueId(Ljava/io/PrintWriter;)V
 
     const-string v2, " from "
 
-    .line 649
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 650
     invoke-virtual {v1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
     move-result v1
 
     invoke-static {p1, v1}, Landroid/os/UserHandle;->formatUid(Ljava/io/PrintWriter;I)V
 
-    .line 651
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
     :goto_1
@@ -395,17 +355,14 @@
 
     move-object/from16 v0, p0
 
-    .line 404
     new-instance v8, Landroid/util/ArraySet;
 
     invoke-direct {v8}, Landroid/util/ArraySet;-><init>()V
 
-    .line 405
     iget-object v9, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v9
 
-    .line 406
     :try_start_0
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
@@ -413,7 +370,6 @@
 
     move-result-wide v10
 
-    .line 407
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
@@ -422,7 +378,6 @@
 
     const/4 v15, 0x0
 
-    .line 408
     :goto_0
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
@@ -432,7 +387,6 @@
 
     if-ge v15, v1, :cond_3
 
-    .line 409
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, v15}, Landroid/util/SparseArrayMap;->keyAt(I)I
@@ -441,7 +395,6 @@
 
     const/4 v6, 0x0
 
-    .line 410
     :goto_1
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
@@ -451,7 +404,6 @@
 
     if-ge v6, v1, :cond_2
 
-    .line 411
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, v15, v6}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
@@ -480,14 +432,12 @@
 
     move-object/from16 v7, v16
 
-    .line 412
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/job/controllers/PrefetchController;->maybeUpdateConstraintForPkgLocked(JJILjava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 414
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, v15, v14}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -501,7 +451,6 @@
     :cond_0
     move-object/from16 v3, v16
 
-    .line 416
     invoke-virtual {v0, v10, v3, v12, v13}, Lcom/android/server/job/controllers/PrefetchController;->willBeLaunchedSoonLocked(ILjava/lang/String;J)Z
 
     move-result v1
@@ -516,7 +465,6 @@
 
     move-wide/from16 v6, v17
 
-    .line 417
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/job/controllers/PrefetchController;->updateThresholdAlarmLocked(ILjava/lang/String;JJ)V
 
     :cond_1
@@ -535,20 +483,17 @@
 
     goto :goto_0
 
-    .line 421
     :cond_3
     monitor-exit v9
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 422
     invoke-virtual {v8}, Landroid/util/ArraySet;->size()I
 
     move-result v1
 
     if-lez v1, :cond_4
 
-    .line 423
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {v0, v8}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
@@ -559,7 +504,6 @@
     :catchall_0
     move-exception v0
 
-    .line 421
     :try_start_1
     monitor-exit v9
     :try_end_1
@@ -573,7 +517,6 @@
 .method public dumpConstants(Landroid/util/IndentingPrintWriter;)V
     .locals 0
 
-    .line 661
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     invoke-static {p0, p1}, Lcom/android/server/job/controllers/PrefetchController$PcConstants;->-$$Nest$mdump(Lcom/android/server/job/controllers/PrefetchController$PcConstants;Landroid/util/IndentingPrintWriter;)V
@@ -584,7 +527,6 @@
 .method public dumpControllerStateLocked(Landroid/util/IndentingPrintWriter;Ljava/util/function/Predicate;)V
     .locals 9
 
-    .line 619
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J
@@ -593,17 +535,14 @@
 
     const-string v2, "Cached launch times:"
 
-    .line 621
     invoke-virtual {p1, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 622
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
 
     const/4 v2, 0x0
 
     move v3, v2
 
-    .line 623
     :goto_0
     iget-object v4, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
@@ -613,7 +552,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 624
     iget-object v4, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArrayMap;->keyAt(I)I
@@ -622,7 +560,6 @@
 
     move v5, v2
 
-    .line 625
     :goto_1
     iget-object v6, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
@@ -632,7 +569,6 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 626
     iget-object v6, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v6, v3, v5}, Landroid/util/SparseArrayMap;->keyAt(II)Ljava/lang/Object;
@@ -641,7 +577,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 627
     iget-object v7, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v7, v3, v5}, Landroid/util/SparseArrayMap;->valueAt(II)Ljava/lang/Object;
@@ -654,7 +589,6 @@
 
     move-result-wide v7
 
-    .line 629
     invoke-static {v4, v6}, Lcom/android/server/job/controllers/StateController;->packageToString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -663,27 +597,22 @@
 
     const-string v6, ": "
 
-    .line 630
     invoke-virtual {p1, v6}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 631
     invoke-virtual {p1, v7, v8}, Landroid/util/IndentingPrintWriter;->print(J)V
 
     const-string v6, " ("
 
-    .line 632
     invoke-virtual {p1, v6}, Landroid/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
     sub-long/2addr v7, v0
 
     const/16 v6, 0x13
 
-    .line 633
     invoke-static {v7, v8, p1, v6}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;I)V
 
     const-string v6, " from now)"
 
-    .line 635
     invoke-virtual {p1, v6}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v5, v5, 0x1
@@ -695,14 +624,11 @@
 
     goto :goto_0
 
-    .line 638
     :cond_1
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->decreaseIndent()Landroid/util/IndentingPrintWriter;
 
-    .line 640
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 641
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     new-instance v1, Lcom/android/server/job/controllers/PrefetchController$$ExternalSyntheticLambda0;
@@ -711,10 +637,8 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArrayMap;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 655
     invoke-virtual {p1}, Landroid/util/IndentingPrintWriter;->println()V
 
-    .line 656
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/AlarmQueue;->dump(Landroid/util/IndentingPrintWriter;)V
@@ -725,7 +649,6 @@
 .method public getLaunchTimeAllowanceMs()J
     .locals 2
 
-    .line 600
     iget-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeAllowanceMs:J
 
     return-wide v0
@@ -734,7 +657,6 @@
 .method public getLaunchTimeThresholdMs()J
     .locals 2
 
-    .line 605
     iget-wide v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeThresholdMs:J
 
     return-wide v0
@@ -743,7 +665,6 @@
 .method public final getNextEstimatedLaunchTimeLocked(ILjava/lang/String;J)J
     .locals 5
 
-    .line 223
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -754,7 +675,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 225
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
@@ -769,7 +689,6 @@
 
     goto :goto_0
 
-    .line 233
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -777,7 +696,6 @@
 
     return-wide p0
 
-    .line 227
     :cond_1
     :goto_0
     iget-object p3, p0, Lcom/android/server/job/controllers/PrefetchController;->mHandler:Lcom/android/server/job/controllers/PrefetchController$PcHandler;
@@ -788,10 +706,8 @@
 
     move-result-object p3
 
-    .line 228
     invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 230
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     const-wide p3, 0x7fffffffffffffffL
@@ -808,17 +724,14 @@
 .method public getNextEstimatedLaunchTimeLocked(Lcom/android/server/job/controllers/JobStatus;)J
     .locals 3
 
-    .line 214
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 215
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 216
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
@@ -835,7 +748,6 @@
 .method public getPcConstants()Lcom/android/server/job/controllers/PrefetchController$PcConstants;
     .locals 0
 
-    .line 611
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     return-object p0
@@ -844,7 +756,6 @@
 .method public maybeStartTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
     .locals 11
 
-    .line 150
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object p2
@@ -855,17 +766,14 @@
 
     if-eqz p2, :cond_2
 
-    .line 151
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v1
 
-    .line 152
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 153
     iget-object p2, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {p2, v1, v2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -876,17 +784,14 @@
 
     if-nez p2, :cond_0
 
-    .line 155
     new-instance p2, Landroid/util/ArraySet;
 
     invoke-direct {p2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 156
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, v1, v2, p2}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     :cond_0
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
@@ -894,14 +799,12 @@
 
     move-result-wide v7
 
-    .line 159
     sget-object v0, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v0}, Ljava/time/Clock;->millis()J
 
     move-result-wide v9
 
-    .line 160
     invoke-virtual {p2, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     move-result v0
@@ -916,7 +819,6 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 161
     invoke-virtual {p0, v1, v2, v7, v8}, Lcom/android/server/job/controllers/PrefetchController;->willBeLaunchedSoonLocked(ILjava/lang/String;J)Z
 
     move-result p2
@@ -929,7 +831,6 @@
 
     move-wide v5, v9
 
-    .line 162
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/job/controllers/PrefetchController;->updateThresholdAlarmLocked(ILjava/lang/String;JJ)V
 
     :cond_1
@@ -941,7 +842,6 @@
 
     move-wide v7, v9
 
-    .line 164
     invoke-virtual/range {v3 .. v8}, Lcom/android/server/job/controllers/PrefetchController;->updateConstraintLocked(Lcom/android/server/job/controllers/JobStatus;JJ)Z
 
     :cond_2
@@ -951,17 +851,14 @@
 .method public maybeStopTrackingJobLocked(Lcom/android/server/job/controllers/JobStatus;Lcom/android/server/job/controllers/JobStatus;)V
     .locals 2
 
-    .line 171
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result p2
 
-    .line 172
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 173
     iget-object v1, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v1, p2, v0}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -972,7 +869,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 174
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
     move-result p1
@@ -985,7 +881,6 @@
 
     if-nez p1, :cond_0
 
-    .line 175
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     invoke-static {p2, v0}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
@@ -1001,7 +896,6 @@
 .method public final maybeUpdateConstraintForPkgLocked(JJILjava/lang/String;)Z
     .locals 8
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p5, p6}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1019,7 +913,6 @@
     :cond_0
     move v0, p6
 
-    .line 244
     :goto_0
     invoke-virtual {p5}, Landroid/util/ArraySet;->size()I
 
@@ -1027,7 +920,6 @@
 
     if-ge p6, v1, :cond_1
 
-    .line 245
     invoke-virtual {p5, p6}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1042,7 +934,6 @@
 
     move-wide v6, p3
 
-    .line 246
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/job/controllers/PrefetchController;->updateConstraintLocked(Lcom/android/server/job/controllers/JobStatus;JJ)Z
 
     move-result v1
@@ -1062,12 +953,10 @@
 
     move-object/from16 v0, p0
 
-    .line 252
     iget-object v7, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 253
     :try_start_0
     iget-object v1, v0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1079,37 +968,31 @@
 
     if-nez v8, :cond_0
 
-    .line 255
     monitor-exit v7
 
     return-void
 
-    .line 257
     :cond_0
     invoke-static/range {p1 .. p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v9
 
-    .line 258
     new-instance v10, Landroid/util/ArraySet;
 
     invoke-direct {v10}, Landroid/util/ArraySet;-><init>()V
 
-    .line 259
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
 
     move-result-wide v11
 
-    .line 260
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
 
     move-result-wide v13
 
-    .line 261
     invoke-virtual {v8}, Landroid/util/ArraySet;->size()I
 
     move-result v1
@@ -1121,14 +1004,12 @@
     :goto_0
     if-ltz v15, :cond_4
 
-    .line 262
     invoke-virtual {v8, v15}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 263
     iget-object v2, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v2, v9, v1}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1151,7 +1032,6 @@
 
     move v6, v1
 
-    .line 267
     :goto_1
     invoke-virtual {v5}, Landroid/util/ArraySet;->size()I
 
@@ -1159,7 +1039,6 @@
 
     if-ge v6, v1, :cond_1
 
-    .line 268
     invoke-virtual {v5, v6}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1184,14 +1063,12 @@
 
     move-wide v5, v13
 
-    .line 269
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/job/controllers/PrefetchController;->updateConstraintLocked(Lcom/android/server/job/controllers/JobStatus;JJ)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 270
     invoke-virtual {v10, v8}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -1210,7 +1087,6 @@
 
     goto :goto_0
 
-    .line 274
     :cond_4
     invoke-virtual {v10}, Landroid/util/ArraySet;->size()I
 
@@ -1218,12 +1094,10 @@
 
     if-lez v1, :cond_5
 
-    .line 275
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {v0, v10}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 277
     :cond_5
     monitor-exit v7
 
@@ -1248,28 +1122,23 @@
 
     const-string p1, "Told app removed but given null package name."
 
-    .line 183
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 186
     :cond_0
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p2
 
-    .line 187
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseArrayMap;->delete(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     invoke-static {p2, p1}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
@@ -1284,7 +1153,6 @@
 .method public onConstantsUpdatedLocked()V
     .locals 2
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     invoke-static {v0}, Lcom/android/server/job/controllers/PrefetchController$PcConstants;->-$$Nest$fgetmShouldReevaluateConstraints(Lcom/android/server/job/controllers/PrefetchController$PcConstants;)Z
@@ -1293,7 +1161,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 403
     invoke-static {}, Lcom/android/server/AppSchedulingModuleThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1311,7 +1178,6 @@
 .method public onSystemServicesReady()V
     .locals 2
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/appwidget/AppWidgetManager;
@@ -1356,7 +1222,6 @@
     :goto_1
     if-eq p3, v0, :cond_2
 
-    .line 206
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mHandler:Lcom/android/server/job/controllers/PrefetchController$PcHandler;
 
     const/4 p2, 0x2
@@ -1374,17 +1239,14 @@
 .method public onUserRemovedLocked(I)V
     .locals 1
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArrayMap;->delete(I)V
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArrayMap;->delete(I)V
 
-    .line 197
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     invoke-virtual {p0, p1}, Lcom/android/server/utils/AlarmQueue;->removeAlarmsForUserId(I)V
@@ -1395,7 +1257,6 @@
 .method public prepareForUpdatedConstantsLocked()V
     .locals 1
 
-    .line 389
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     const/4 v0, 0x0
@@ -1408,7 +1269,6 @@
 .method public processConstantLocked(Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;)V
     .locals 0
 
-    .line 395
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPcConstants:Lcom/android/server/job/controllers/PrefetchController$PcConstants;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/job/controllers/PrefetchController$PcConstants;->processConstantLocked(Landroid/provider/DeviceConfig$Properties;Ljava/lang/String;)V
@@ -1427,14 +1287,12 @@
 
     move-wide/from16 v13, p3
 
-    .line 282
     sget-boolean v1, Lcom/android/server/job/controllers/PrefetchController;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
     const-string v2, "JobScheduler.Prefetch"
 
-    .line 283
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1461,7 +1319,6 @@
 
     sget-object v4, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
-    .line 286
     invoke-virtual {v4}, Ljava/time/Clock;->millis()J
 
     move-result-wide v4
@@ -1482,16 +1339,13 @@
 
     move-result-object v3
 
-    .line 283
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     :cond_0
     iget-object v15, v0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v15
 
-    .line 291
     :try_start_0
     iget-object v2, v0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
@@ -1509,7 +1363,6 @@
 
     const-string v0, "JobScheduler.Prefetch"
 
-    .line 294
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1518,7 +1371,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 296
     invoke-static/range {p1 .. p2}, Lcom/android/server/job/controllers/StateController;->packageToString(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -1529,12 +1381,10 @@
 
     move-result-object v1
 
-    .line 294
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_1
 
-    .line 302
     :cond_1
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
@@ -1548,7 +1398,6 @@
 
     move-result-wide v16
 
-    .line 303
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mEstimatedLaunchTimes:Landroid/util/SparseArrayMap;
 
     invoke-static/range {p3 .. p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1557,21 +1406,18 @@
 
     invoke-virtual {v1, v11, v12, v2}, Landroid/util/SparseArrayMap;->add(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 305
     invoke-virtual {v9}, Landroid/util/ArraySet;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 306
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sSystemClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
 
     move-result-wide v18
 
-    .line 307
     sget-object v1, Lcom/android/server/job/JobSchedulerService;->sElapsedRealtimeClock:Ljava/time/Clock;
 
     invoke-virtual {v1}, Ljava/time/Clock;->millis()J
@@ -1588,14 +1434,12 @@
 
     move-wide/from16 v6, v20
 
-    .line 308
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/job/controllers/PrefetchController;->updateThresholdAlarmLocked(ILjava/lang/String;JJ)V
 
     const/4 v1, 0x0
 
     move v10, v1
 
-    .line 309
     :goto_0
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mPrefetchChangedListeners:Landroid/util/ArraySet;
 
@@ -1605,7 +1449,6 @@
 
     if-ge v10, v1, :cond_2
 
-    .line 310
     iget-object v1, v0, Lcom/android/server/job/controllers/PrefetchController;->mPrefetchChangedListeners:Landroid/util/ArraySet;
 
     invoke-virtual {v1, v10}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -1653,19 +1496,16 @@
 
     move-object/from16 v7, p2
 
-    .line 314
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/job/controllers/PrefetchController;->maybeUpdateConstraintForPkgLocked(JJILjava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 315
     iget-object v0, v0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
     invoke-interface {v0, v11}, Lcom/android/server/job/StateChangedListener;->onControllerStateChanged(Landroid/util/ArraySet;)V
 
-    .line 319
     :cond_3
     :goto_1
     monitor-exit v15
@@ -1685,18 +1525,15 @@
 .method public registerPrefetchChangedListener(Lcom/android/server/job/controllers/PrefetchController$PrefetchChangedListener;)V
     .locals 1
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 467
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPrefetchChangedListeners:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 468
     monitor-exit v0
 
     return-void
@@ -1714,18 +1551,15 @@
 .method public unRegisterPrefetchChangedListener(Lcom/android/server/job/controllers/PrefetchController$PrefetchChangedListener;)V
     .locals 1
 
-    .line 472
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 473
     :try_start_0
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mPrefetchChangedListeners:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 474
     monitor-exit v0
 
     return-void
@@ -1743,10 +1577,8 @@
 .method public final updateConstraintLocked(Lcom/android/server/job/controllers/JobStatus;JJ)Z
     .locals 4
 
-    .line 331
     iget-object v0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
-    .line 332
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUid()I
 
     move-result v1
@@ -1773,17 +1605,14 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 335
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourceUserId()I
 
     move-result v0
 
-    .line 336
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getSourcePackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 337
     invoke-virtual {p0, v0, v1, p2, p3}, Lcom/android/server/job/controllers/PrefetchController;->willBeLaunchedSoonLocked(ILjava/lang/String;J)Z
 
     move-result p2
@@ -1794,7 +1623,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 345
     invoke-virtual {p0, v1, v0}, Landroid/appwidget/AppWidgetManager;->isBoundWidgetPackage(Ljava/lang/String;I)Z
 
     move-result p0
@@ -1808,7 +1636,6 @@
 
     goto :goto_1
 
-    .line 347
     :cond_2
     iget-object p0, p0, Lcom/android/server/job/controllers/StateController;->mService:Lcom/android/server/job/JobSchedulerService;
 
@@ -1816,7 +1643,6 @@
 
     move-result v2
 
-    .line 349
     :cond_3
     :goto_1
     invoke-virtual {p1, p4, p5, v2}, Lcom/android/server/job/controllers/JobStatus;->setPrefetchConstraintSatisfied(JZ)Z
@@ -1829,7 +1655,6 @@
 .method public final updateThresholdAlarmLocked(ILjava/lang/String;JJ)V
     .locals 6
 
-    .line 355
     iget-object v0, p0, Lcom/android/server/job/controllers/PrefetchController;->mTrackedJobs:Landroid/util/SparseArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArrayMap;->get(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1840,7 +1665,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 356
     invoke-virtual {v0}, Landroid/util/ArraySet;->size()I
 
     move-result v0
@@ -1849,7 +1673,6 @@
 
     goto :goto_1
 
-    .line 361
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/PrefetchController;->getNextEstimatedLaunchTimeLocked(ILjava/lang/String;J)J
 
@@ -1863,7 +1686,6 @@
 
     sub-long v2, v0, p3
 
-    .line 363
     iget-wide v4, p0, Lcom/android/server/job/controllers/PrefetchController;->mLaunchTimeThresholdMs:J
 
     cmp-long v2, v2, v4
@@ -1874,7 +1696,6 @@
 
     sub-long/2addr v0, p3
 
-    .line 368
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
     invoke-static {p1, p2}, Landroid/content/pm/UserPackage;->of(ILjava/lang/String;)Landroid/content/pm/UserPackage;
@@ -1887,7 +1708,6 @@
 
     goto :goto_0
 
-    .line 371
     :cond_1
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
 
@@ -1900,7 +1720,6 @@
     :goto_0
     return-void
 
-    .line 357
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/android/server/job/controllers/PrefetchController;->mThresholdAlarmListener:Lcom/android/server/job/controllers/PrefetchController$ThresholdAlarmListener;
@@ -1917,7 +1736,6 @@
 .method public final willBeLaunchedSoonLocked(ILjava/lang/String;J)Z
     .locals 2
 
-    .line 382
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/job/controllers/PrefetchController;->getNextEstimatedLaunchTimeLocked(ILjava/lang/String;J)J
 
     move-result-wide p1

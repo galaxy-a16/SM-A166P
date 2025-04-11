@@ -14,17 +14,14 @@
 .method public constructor <init>([Lcom/android/server/soundtrigger_middleware/HalFactory;Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareImpl$AudioSessionProvider;)V
     .locals 7
 
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 84
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -36,7 +33,6 @@
 
     aget-object v4, p1, v3
 
-    .line 86
     :try_start_0
     new-instance v5, Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
@@ -55,7 +51,6 @@
 
     const-string v6, "Failed to add a SoundTriggerModule instance"
 
-    .line 88
     invoke-static {v5, v6, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -66,7 +61,6 @@
     :cond_0
     new-array p1, v2, [Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
-    .line 92
     invoke-interface {v0, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -83,7 +77,6 @@
 .method public attach(ILandroid/media/soundtrigger_middleware/ISoundTriggerCallback;Z)Landroid/media/soundtrigger_middleware/ISoundTriggerModule;
     .locals 0
 
-    .line 121
     iget-object p0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareImpl;->mModules:[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
     aget-object p0, p0, p1
@@ -98,7 +91,6 @@
 .method public listModules()[Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;
     .locals 4
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareImpl;->mModules:[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
     array-length v0, v0
@@ -107,7 +99,6 @@
 
     const/4 v1, 0x0
 
-    .line 108
     :goto_0
     iget-object v2, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareImpl;->mModules:[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
@@ -115,15 +106,12 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 109
     new-instance v2, Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;
 
     invoke-direct {v2}, Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;-><init>()V
 
-    .line 110
     iput v1, v2, Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;->handle:I
 
-    .line 111
     iget-object v3, p0, Lcom/android/server/soundtrigger_middleware/SoundTriggerMiddlewareImpl;->mModules:[Lcom/android/server/soundtrigger_middleware/SoundTriggerModule;
 
     aget-object v3, v3, v1
@@ -134,7 +122,6 @@
 
     iput-object v3, v2, Landroid/media/soundtrigger_middleware/SoundTriggerModuleDescriptor;->properties:Landroid/media/soundtrigger/Properties;
 
-    .line 112
     aput-object v2, v0, v1
 
     add-int/lit8 v1, v1, 0x1

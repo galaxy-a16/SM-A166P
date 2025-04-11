@@ -21,15 +21,12 @@
 .method public constructor <init>(Lcom/android/server/aod/AODManagerService;Landroid/os/Handler;)V
     .locals 0
 
-    .line 533
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
-    .line 534
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     const-string p1, "aod_show_state"
 
-    .line 527
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -38,7 +35,6 @@
 
     const-string p1, "aod_mode"
 
-    .line 528
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -47,7 +43,6 @@
 
     const-string p1, "doze_always_on"
 
-    .line 529
     invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -56,7 +51,6 @@
 
     const-string/jumbo p1, "low_power"
 
-    .line 530
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -65,7 +59,6 @@
 
     const-string/jumbo p1, "ultra_powersaving_mode"
 
-    .line 531
     invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -80,7 +73,6 @@
 .method public observe()V
     .locals 4
 
-    .line 539
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmContext(Lcom/android/server/aod/AODManagerService;)Landroid/content/Context;
@@ -93,7 +85,6 @@
 
     const-string v1, "aod_mode"
 
-    .line 542
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -106,7 +97,6 @@
 
     const-string v1, "aod_show_state"
 
-    .line 545
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -115,7 +105,6 @@
 
     const-string v1, "aod_tap_to_show_mode"
 
-    .line 546
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -124,7 +113,6 @@
 
     const-string v1, "aod_display_mode_auto"
 
-    .line 547
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -133,7 +121,6 @@
 
     const-string v1, "aod_show_for_new_noti"
 
-    .line 548
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -142,7 +129,6 @@
 
     const-string v1, "aod_mode_start_time"
 
-    .line 549
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -151,7 +137,6 @@
 
     const-string v1, "aod_mode_end_time"
 
-    .line 550
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -160,7 +145,6 @@
 
     const-string v1, "fingerprint_screen_lock"
 
-    .line 551
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -169,7 +153,6 @@
 
     const-string v1, "fingerprint_screen_off_icon_aod"
 
-    .line 552
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -178,7 +161,6 @@
 
     const-string v1, "edge_lighting_show_condition"
 
-    .line 553
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -187,7 +169,6 @@
 
     const-string v1, "doze_always_on"
 
-    .line 555
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -196,7 +177,6 @@
 
     const-string/jumbo v1, "low_power"
 
-    .line 557
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -205,21 +185,18 @@
 
     const-string/jumbo v1, "ultra_powersaving_mode"
 
-    .line 558
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 560
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     const-string/jumbo v1, "observe"
 
     invoke-static {v0, v1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$maddAODTspLog(Lcom/android/server/aod/AODManagerService;Ljava/lang/String;)V
 
-    .line 561
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {p0}, Lcom/android/server/aod/AODManagerService;->-$$Nest$mupdateSettings(Lcom/android/server/aod/AODManagerService;)V
@@ -230,7 +207,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 8
 
-    .line 566
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->mAODShowStateUri:Landroid/net/Uri;
 
     invoke-virtual {p1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -267,7 +243,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 570
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmContext(Lcom/android/server/aod/AODManagerService;)Landroid/content/Context;
@@ -280,7 +255,6 @@
 
     const-string/jumbo v1, "package"
 
-    .line 571
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v4
@@ -293,7 +267,6 @@
 
     move-object v3, p2
 
-    .line 573
     :try_start_0
     invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -304,7 +277,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 574
     :try_start_1
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
@@ -318,7 +290,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 575
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
@@ -341,7 +312,6 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 581
     :goto_2
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
@@ -357,7 +327,6 @@
 
     move-object v2, v0
 
-    .line 578
     :goto_3
     :try_start_2
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
@@ -384,14 +353,11 @@
     :goto_4
     if-eqz v0, :cond_2
 
-    .line 581
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 584
     :cond_2
     throw p0
 
-    .line 587
     :cond_3
     :goto_5
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->mAODShowStateUri:Landroid/net/Uri;
@@ -402,14 +368,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 588
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {p0}, Lcom/android/server/aod/AODManagerService;->updateBatteryStats()V
 
     goto/16 :goto_8
 
-    .line 589
     :cond_4
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->mDozeAlwaysOnUri:Landroid/net/Uri;
 
@@ -425,7 +389,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 591
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -452,7 +415,6 @@
 
     goto :goto_6
 
-    .line 593
     :cond_5
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
@@ -474,7 +436,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/aod/AODManagerService;->-$$Nest$maddAODTspLog(Lcom/android/server/aod/AODManagerService;Ljava/lang/String;)V
 
-    .line 595
     :goto_6
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
@@ -482,7 +443,6 @@
 
     goto :goto_8
 
-    .line 597
     :cond_6
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
@@ -500,7 +460,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 598
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-static {v1}, Lcom/android/server/aod/AODManagerService;->-$$Nest$fgetmCoverController(Lcom/android/server/aod/AODManagerService;)Lcom/android/server/aod/AODSCoverController;
@@ -512,7 +471,6 @@
     :cond_7
     if-eqz p1, :cond_8
 
-    .line 601
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -539,7 +497,6 @@
 
     goto :goto_7
 
-    .line 603
     :cond_8
     iget-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
@@ -561,7 +518,6 @@
 
     invoke-static {p1, p2}, Lcom/android/server/aod/AODManagerService;->-$$Nest$maddAODTspLog(Lcom/android/server/aod/AODManagerService;Ljava/lang/String;)V
 
-    .line 605
     :goto_7
     iget-object p0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 

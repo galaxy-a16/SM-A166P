@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/location/listeners/ListenerRegistration;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/location/listeners/ListenerRegistration$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/location/listeners/ListenerRegistration;
@@ -27,7 +26,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/location/listeners/ListenerRegistration$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/location/listeners/ListenerRegistration;
 
     invoke-static {p0}, Lcom/android/server/location/listeners/ListenerRegistration;->$r8$lambda$2ZBTq2V6H4YAlFacTxHD81N0y0Q(Lcom/android/server/location/listeners/ListenerRegistration;)Ljava/lang/Object;

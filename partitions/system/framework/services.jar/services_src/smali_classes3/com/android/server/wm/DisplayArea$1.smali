@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 865
     invoke-static {}, Lcom/android/server/wm/DisplayArea$Type;->values()[Lcom/android/server/wm/DisplayArea$Type;
 
     move-result-object v0

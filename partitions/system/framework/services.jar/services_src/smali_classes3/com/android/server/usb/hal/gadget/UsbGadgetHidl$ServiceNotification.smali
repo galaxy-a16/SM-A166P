@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)V
     .locals 0
 
-    .line 99
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$ServiceNotification;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-direct {p0}, Landroid/hidl/manager/V1_0/IServiceNotification$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onRegistration(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
 
-    .line 102
     iget-object p3, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$ServiceNotification;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-static {p3}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fgetmPw(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)Lcom/android/internal/util/IndentingPrintWriter;
@@ -55,7 +53,6 @@
 
     invoke-static {p2, p3, p1}, Lcom/android/server/usb/UsbDeviceManager;->logAndPrint(ILcom/android/internal/util/IndentingPrintWriter;Ljava/lang/String;)V
 
-    .line 103
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$ServiceNotification;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     const/4 p1, 0x0

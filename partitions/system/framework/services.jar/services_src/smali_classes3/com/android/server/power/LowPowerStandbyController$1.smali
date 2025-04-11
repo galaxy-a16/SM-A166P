@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/power/LowPowerStandbyController;)V
     .locals 0
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/power/LowPowerStandbyController$1;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 158
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -92,7 +90,6 @@
 
     goto :goto_1
 
-    .line 166
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$1;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
@@ -100,7 +97,6 @@
 
     goto :goto_1
 
-    .line 163
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$1;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 
@@ -108,7 +104,6 @@
 
     goto :goto_1
 
-    .line 160
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/power/LowPowerStandbyController$1;->this$0:Lcom/android/server/power/LowPowerStandbyController;
 

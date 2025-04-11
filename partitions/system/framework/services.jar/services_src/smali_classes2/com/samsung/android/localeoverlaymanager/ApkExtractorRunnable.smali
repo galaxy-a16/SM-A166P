@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 23
     const-class v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -35,13 +34,10 @@
 .method public constructor <init>(Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;Lcom/samsung/android/localeoverlaymanager/CompressedAssetCopier;)V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
-    .line 40
     iput-object p2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mAssetCopier:Lcom/samsung/android/localeoverlaymanager/CompressedAssetCopier;
 
     return-void
@@ -52,28 +48,24 @@
 .method public final createLocaleOverlayDir()V
     .locals 3
 
-    .line 81
     new-instance p0, Ljava/io/File;
 
     const-string v0, "/data/overlays/current_locale_apks/files/"
 
     invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 83
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 85
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -101,7 +93,6 @@
 
     const/16 v2, 0x1fd
 
-    .line 87
     invoke-static {p0, v2, v0, v1}, Landroid/os/FileUtils;->setPermissions(Ljava/io/File;III)I
 
     :cond_1
@@ -120,12 +111,10 @@
 
     const-string v4, "localeapks_zipped"
 
-    .line 100
     invoke-virtual {p0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->createLocaleOverlayDir()V
 
     const/4 v5, 0x1
 
-    .line 103
     :try_start_0
     invoke-virtual {v2, v4}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -133,14 +122,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 104
     array-length v6, v0
 
     if-nez v6, :cond_0
 
     goto :goto_1
 
-    .line 107
     :cond_0
     array-length v6, v0
 
@@ -177,7 +164,6 @@
     :catch_0
     move-exception v0
 
-    .line 111
     sget-object v6, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -202,7 +188,6 @@
 
     move v6, v5
 
-    .line 113
     :goto_2
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
@@ -236,7 +221,6 @@
 
     iget-object v9, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
-    .line 114
     invoke-virtual {v9}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->getTargetPackage()Ljava/lang/String;
 
     move-result-object v9
@@ -247,10 +231,8 @@
 
     move-result-object v7
 
-    .line 113
     invoke-static {v0, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     invoke-interface/range {p2 .. p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -272,7 +254,6 @@
 
     goto :goto_3
 
-    .line 121
     :cond_3
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -282,7 +263,6 @@
 
     if-ne v8, v9, :cond_4
 
-    .line 122
     sget-object v8, Lcom/samsung/android/localeoverlaymanager/OverlayConstants;->ISO_639_2_TO_639_1_MAPPING:Ljava/util/Map;
 
     invoke-interface {v8, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -296,7 +276,6 @@
 
     goto :goto_3
 
-    .line 127
     :cond_5
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -320,7 +299,6 @@
 
     move-result-object v8
 
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,12 +317,10 @@
 
     move-result-object v0
 
-    .line 129
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -355,18 +331,15 @@
 
     if-eqz p3, :cond_6
 
-    .line 133
     invoke-static {v9}, Lcom/samsung/android/localeoverlaymanager/Utils;->deleteFile(Ljava/io/File;)V
 
     goto :goto_4
 
-    .line 137
     :cond_6
     iget-object v0, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {v0, v8}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->onApkExtracted(Ljava/lang/String;)V
 
-    .line 138
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -405,7 +378,6 @@
 
     if-ne v6, v5, :cond_8
 
-    .line 145
     :try_start_1
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -426,7 +398,6 @@
 
     goto :goto_6
 
-    .line 147
     :cond_8
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -446,14 +417,12 @@
 
     goto :goto_5
 
-    .line 149
     :goto_6
     :try_start_2
     iget-object v0, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mAssetCopier:Lcom/samsung/android/localeoverlaymanager/CompressedAssetCopier;
 
     invoke-interface {v0, v2, v11, v8, v9}, Lcom/samsung/android/localeoverlaymanager/CompressedAssetCopier;->copyFile(Landroid/content/res/AssetManager;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V
 
-    .line 150
     iget-object v0, v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {v0, v8, v5}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->onApkExtracted(Ljava/lang/String;Z)V
@@ -472,7 +441,6 @@
 
     move-object v11, v4
 
-    .line 152
     :goto_7
     sget-object v9, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
@@ -514,7 +482,6 @@
 
     invoke-static {v9, v8}, Lcom/samsung/android/localeoverlaymanager/LogWriter;->logDebugInfoAndLogcat(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +510,6 @@
 
     goto/16 :goto_3
 
-    .line 156
     :cond_9
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
@@ -557,7 +523,6 @@
 .method public getApkExtractionTask()Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
     .locals 0
 
-    .line 44
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     return-object p0
@@ -566,7 +531,6 @@
 .method public run()V
     .locals 5
 
-    .line 49
     sget-object v0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -587,7 +551,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {v1}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->getContextRef()Ljava/lang/ref/WeakReference;
@@ -616,7 +579,6 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 53
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
@@ -624,7 +586,6 @@
 
     move-result-object v2
 
-    .line 54
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -641,7 +602,6 @@
 
     if-nez v1, :cond_1
 
-    .line 56
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -658,18 +618,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-object v0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {v0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->onTaskFailed()V
 
     return-void
 
-    .line 60
     :cond_1
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 61
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -686,25 +643,20 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     invoke-static {v1}, Landroid/content/res/ApkAssets;->loadFromPath(Ljava/lang/String;)Landroid/content/res/ApkAssets;
 
     move-result-object v0
 
-    .line 63
     new-instance v1, Landroid/content/res/AssetManager$Builder;
 
     invoke-direct {v1}, Landroid/content/res/AssetManager$Builder;-><init>()V
 
-    .line 64
     invoke-virtual {v1, v0}, Landroid/content/res/AssetManager$Builder;->addApkAssets(Landroid/content/res/ApkAssets;)Landroid/content/res/AssetManager$Builder;
 
-    .line 65
     invoke-virtual {v1}, Landroid/content/res/AssetManager$Builder;->build()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    .line 66
     iget-object v1, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {v1}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->getLocaleLanguages()Ljava/util/Set;
@@ -727,7 +679,6 @@
     :catch_0
     move-exception v0
 
-    .line 69
     sget-object v1, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -750,14 +701,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;
 
     invoke-virtual {p0}, Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;->onTaskFailed()V
 
     return-void
 
-    .line 74
     :cond_2
     :goto_1
     iget-object p0, p0, Lcom/samsung/android/localeoverlaymanager/ApkExtractorRunnable;->mExtractionTask:Lcom/samsung/android/localeoverlaymanager/ApkExtractionTask;

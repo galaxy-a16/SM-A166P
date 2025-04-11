@@ -19,30 +19,25 @@
     :cond_0
     const-string v1, "android.hardware.soundtrigger@2.3::ISoundTriggerHw"
 
-    .line 22
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 24
     instance-of v3, v2, Landroid/hardware/soundtrigger/V2_3/ISoundTriggerHw;
 
     if-eqz v3, :cond_1
 
-    .line 25
     check-cast v2, Landroid/hardware/soundtrigger/V2_3/ISoundTriggerHw;
 
     return-object v2
 
-    .line 28
     :cond_1
     new-instance v2, Landroid/hardware/soundtrigger/V2_3/ISoundTriggerHw$Proxy;
 
     invoke-direct {v2, p0}, Landroid/hardware/soundtrigger/V2_3/ISoundTriggerHw$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 31
     :try_start_0
     invoke-interface {v2}, Landroid/hardware/soundtrigger/V2_3/ISoundTriggerHw;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 32
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3

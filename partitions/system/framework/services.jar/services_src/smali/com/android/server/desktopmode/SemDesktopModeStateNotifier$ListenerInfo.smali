@@ -22,21 +22,16 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;Lcom/samsung/android/desktopmode/IDesktopModeListener;Ljava/lang/String;II)V
     .locals 0
 
-    .line 165
     iput-object p1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->this$0:Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     iput-object p3, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->name:Ljava/lang/String;
 
-    .line 167
     iput p4, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->pid:I
 
-    .line 168
     iput p5, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->uid:I
 
-    .line 169
     iput-object p2, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->listener:Lcom/samsung/android/desktopmode/IDesktopModeListener;
 
     return-void
@@ -47,7 +42,6 @@
 .method public binderDied()V
     .locals 3
 
-    .line 174
     sget-boolean v0, Lcom/samsung/android/desktopmode/DesktopModeFeature;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -72,7 +66,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/desktopmode/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 175
     :cond_0
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->this$0:Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;
 
@@ -82,7 +75,6 @@
 
     monitor-enter v0
 
-    .line 176
     :try_start_0
     iget-object v1, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->this$0:Lcom/android/server/desktopmode/SemDesktopModeStateNotifier;
 
@@ -98,12 +90,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 178
     iget-object v0, p0, Lcom/android/server/desktopmode/SemDesktopModeStateNotifier$ListenerInfo;->listener:Lcom/samsung/android/desktopmode/IDesktopModeListener;
 
     invoke-interface {v0}, Lcom/samsung/android/desktopmode/IDesktopModeListener;->asBinder()Landroid/os/IBinder;
@@ -119,7 +109,6 @@
     :catchall_0
     move-exception p0
 
-    .line 177
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -131,7 +120,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 183
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

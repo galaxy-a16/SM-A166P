@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/PackageInstallerSession;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageInstallerService$ParentChildSessionMap;->$r8$lambda$1xmpqIzXgSgL9JBwqVOa_V0fT_M(Lcom/android/server/pm/PackageInstallerSession;)I

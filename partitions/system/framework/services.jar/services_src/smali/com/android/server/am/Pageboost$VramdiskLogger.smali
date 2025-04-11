@@ -19,10 +19,8 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 3400
     sput-object v0, Lcom/android/server/am/Pageboost$VramdiskLogger;->array:[Ljava/lang/String;
 
-    .line 3401
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -35,12 +33,10 @@
 .method public static add(Ljava/lang/String;)V
     .locals 3
 
-    .line 3408
     sget-object v0, Lcom/android/server/am/Pageboost$VramdiskLogger;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3409
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -56,7 +52,6 @@
 
     move-result-object v1
 
-    .line 3410
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +68,6 @@
 
     move-result-object p0
 
-    .line 3411
     sget-object v1, Lcom/android/server/am/Pageboost$VramdiskLogger;->array:[Ljava/lang/String;
 
     invoke-static {}, Lcom/android/server/am/Pageboost$VramdiskLogger;->getNextIdx()I
@@ -82,7 +76,6 @@
 
     aput-object p0, v1, v2
 
-    .line 3412
     monitor-exit v0
 
     return-void
@@ -100,7 +93,6 @@
 .method public static getNextIdx()I
     .locals 2
 
-    .line 3404
     sget v0, Lcom/android/server/am/Pageboost$VramdiskLogger;->cur_idx:I
 
     add-int/lit8 v1, v0, 0x1
@@ -115,7 +107,6 @@
 .method public static print(Ljava/io/PrintWriter;)V
     .locals 4
 
-    .line 3416
     sget-object v0, Lcom/android/server/am/Pageboost$VramdiskLogger;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -127,7 +118,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3418
     :try_start_0
     sget-object v2, Lcom/android/server/am/Pageboost$VramdiskLogger;->array:[Ljava/lang/String;
 
@@ -135,7 +125,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3419
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +156,6 @@
 
     goto :goto_0
 
-    .line 3422
     :cond_1
     monitor-exit v0
 

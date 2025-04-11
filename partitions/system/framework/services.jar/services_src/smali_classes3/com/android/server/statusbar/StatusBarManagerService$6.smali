@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/statusbar/StatusBarManagerService;ILandroid/content/ComponentName;Ljava/lang/String;Lcom/android/internal/statusbar/IAddTileResultCallback;)V
     .locals 0
 
-    .line 2894
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->val$userId:I
@@ -51,7 +50,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2900
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-static {v0}, Lcom/android/server/statusbar/StatusBarManagerService;->-$$Nest$fgetmTileRequestTracker(Lcom/android/server/statusbar/StatusBarManagerService;)Lcom/android/server/statusbar/TileRequestTracker;
@@ -71,7 +69,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 2902
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-static {v0}, Lcom/android/server/statusbar/StatusBarManagerService;->-$$Nest$fgetmTileRequestTracker(Lcom/android/server/statusbar/StatusBarManagerService;)Lcom/android/server/statusbar/TileRequestTracker;
@@ -84,7 +81,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/statusbar/TileRequestTracker;->resetRequests(ILandroid/content/ComponentName;)V
 
-    .line 2904
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
@@ -97,7 +93,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2906
     :try_start_0
     iget-object p0, p0, Lcom/android/server/statusbar/StatusBarManagerService$6;->val$callback:Lcom/android/internal/statusbar/IAddTileResultCallback;
 
@@ -114,7 +109,6 @@
 
     const-string/jumbo v0, "requestAddTile - callback"
 
-    .line 2908
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3

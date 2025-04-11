@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/display/BrightnessThrottler;)V
     .locals 1
 
-    .line 389
     iput-object p1, p0, Lcom/android/server/display/BrightnessThrottler$DeviceConfigListener;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
     new-instance v0, Landroid/os/HandlerExecutor;
 
     invoke-static {p1}, Lcom/android/server/display/BrightnessThrottler;->-$$Nest$fgetmDeviceConfigHandler(Lcom/android/server/display/BrightnessThrottler;)Landroid/os/Handler;
@@ -40,12 +38,10 @@
 .method public onPropertiesChanged(Landroid/provider/DeviceConfig$Properties;)V
     .locals 0
 
-    .line 399
     iget-object p1, p0, Lcom/android/server/display/BrightnessThrottler$DeviceConfigListener;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-static {p1}, Lcom/android/server/display/BrightnessThrottler;->-$$Nest$mloadThermalBrightnessThrottlingDataFromDeviceConfig(Lcom/android/server/display/BrightnessThrottler;)V
 
-    .line 400
     iget-object p0, p0, Lcom/android/server/display/BrightnessThrottler$DeviceConfigListener;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-static {p0}, Lcom/android/server/display/BrightnessThrottler;->-$$Nest$mresetThermalThrottlingData(Lcom/android/server/display/BrightnessThrottler;)V
@@ -56,7 +52,6 @@
 .method public startListening()V
     .locals 3
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/display/BrightnessThrottler$DeviceConfigListener;->this$0:Lcom/android/server/display/BrightnessThrottler;
 
     invoke-static {v0}, Lcom/android/server/display/BrightnessThrottler;->-$$Nest$fgetmDeviceConfig(Lcom/android/server/display/BrightnessThrottler;)Landroid/provider/DeviceConfigInterface;

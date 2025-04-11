@@ -11,7 +11,6 @@
 .method public static bridge synthetic -$$Nest$mreadFileAsStringOrNull(Lcom/android/server/usb/UsbMonitorImpl;Ljava/io/File;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/usb/UsbMonitorImpl;->readFileAsStringOrNull(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object p0
@@ -22,7 +21,6 @@
 .method public static bridge synthetic -$$Nest$mstringToFile(Lcom/android/server/usb/UsbMonitorImpl;Ljava/io/File;Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/usb/UsbMonitorImpl;->stringToFile(Ljava/io/File;Ljava/lang/String;)V
 
     return-void
@@ -31,10 +29,8 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 1
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Lcom/android/server/usb/UsbMonitorImpl$UsbStatsHandler;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/usb/UsbMonitorImpl$UsbStatsHandler;-><init>(Lcom/android/server/usb/UsbMonitorImpl;Landroid/os/Looper;)V
@@ -49,12 +45,10 @@
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 147
     iget-object p0, p0, Lcom/android/server/usb/UsbMonitorImpl;->mHandler:Lcom/android/server/usb/UsbMonitorImpl$UsbStatsHandler;
 
     if-eqz p0, :cond_0
 
-    .line 148
     invoke-virtual {p0, p1}, Lcom/android/server/usb/UsbMonitorImpl$UsbStatsHandler;->dump(Ljava/io/PrintWriter;)V
 
     :cond_0
@@ -64,7 +58,6 @@
 .method public final readFileAsStringOrNull(Ljava/io/File;)Ljava/lang/String;
     .locals 2
 
-    .line 119
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -85,7 +78,6 @@
     :catch_0
     move-exception p0
 
-    .line 121
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +112,6 @@
 
     const-string v0, "UsbStatsMonitor"
 
-    .line 127
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -134,7 +125,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 133
     :try_start_0
     new-instance v2, Ljava/io/FileWriter;
 
@@ -143,14 +133,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 134
     :try_start_1
     invoke-virtual {v2, p2}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 139
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileWriter;->close()V
     :try_end_2
@@ -158,7 +146,6 @@
 
     goto :goto_1
 
-    .line 141
     :catch_0
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -186,7 +173,6 @@
     :catch_2
     move-exception p2
 
-    .line 136
     :goto_0
     :try_start_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -213,7 +199,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 139
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
     :try_end_4
@@ -233,11 +218,9 @@
 
     goto :goto_3
 
-    .line 141
     :catch_3
     invoke-static {v0, p0}, Landroid/util/sysfwutil/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_2
     :goto_3
     throw p1
@@ -250,7 +233,6 @@
 .method public systemReady()V
     .locals 1
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/usb/UsbMonitorImpl;->mHandler:Lcom/android/server/usb/UsbMonitorImpl$UsbStatsHandler;
 
     const/4 v0, 0x0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/ContainerServiceWrapper;)V
     .locals 0
 
-    .line 73
     iput-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 76
     iget-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p1}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$fgetTAG(Lcom/android/server/ContainerServiceWrapper;)Ljava/lang/String;
@@ -58,7 +56,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     iget-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p1}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$fgetmHandler(Lcom/android/server/ContainerServiceWrapper;)Landroid/os/Handler;
@@ -69,7 +66,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p2}, Lcom/samsung/android/knox/IContainerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/knox/IContainerService;
@@ -84,7 +80,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 84
     iget-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p1}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$fgetTAG(Lcom/android/server/ContainerServiceWrapper;)Ljava/lang/String;
@@ -115,7 +110,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     iget-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p1}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$fgetmBound(Lcom/android/server/ContainerServiceWrapper;)Z
@@ -124,14 +118,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 86
     iget-object p1, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$fputmBound(Lcom/android/server/ContainerServiceWrapper;Z)V
 
-    .line 87
     iget-object p0, p0, Lcom/android/server/ContainerServiceWrapper$1;->this$0:Lcom/android/server/ContainerServiceWrapper;
 
     invoke-static {p0}, Lcom/android/server/ContainerServiceWrapper;->-$$Nest$mtriggerRestart(Lcom/android/server/ContainerServiceWrapper;)V

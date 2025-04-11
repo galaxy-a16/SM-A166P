@@ -38,7 +38,6 @@
 .method public static synthetic $r8$lambda$afbSPba48wMybvOJMAJFU2YnY-s(Landroid/content/Intent;ILandroid/content/Context;I)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->lambda$semSendTemplateChangedBroadCast$0(Landroid/content/Intent;ILandroid/content/Context;I)V
 
     return-void
@@ -47,7 +46,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 83
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -60,17 +58,14 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 166
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mUserStates:Landroid/util/SparseArray;
 
-    .line 167
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mFileName:Ljava/lang/String;
 
     return-void
@@ -79,17 +74,14 @@
 .method public static copyOptions(ILandroid/hardware/fingerprint/FingerprintAuthenticateOptions;)Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;
     .locals 1
 
-    .line 503
     new-instance v0, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
 
     invoke-direct {v0}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;-><init>()V
 
-    .line 504
     invoke-virtual {v0, p0}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->setUserId(I)Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;
 
     move-result-object p0
 
-    .line 505
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getSensorId()I
 
     move-result v0
@@ -98,7 +90,6 @@
 
     move-result-object p0
 
-    .line 506
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -107,7 +98,6 @@
 
     move-result-object p0
 
-    .line 507
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getAttributionTag()Ljava/lang/String;
 
     move-result-object v0
@@ -116,7 +106,6 @@
 
     move-result-object p0
 
-    .line 508
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->getDisplayState()I
 
     move-result v0
@@ -125,7 +114,6 @@
 
     move-result-object p0
 
-    .line 509
     invoke-virtual {p1}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;->isIgnoreEnrollmentState()Z
 
     move-result p1
@@ -134,7 +122,6 @@
 
     move-result-object p0
 
-    .line 510
     invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintAuthenticateOptions$Builder;->build()Landroid/hardware/fingerprint/FingerprintAuthenticateOptions;
 
     move-result-object p0
@@ -147,7 +134,6 @@
 
     const/4 v0, 0x0
 
-    .line 128
     invoke-static {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getInstance(ILjava/lang/String;)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
 
     move-result-object p0
@@ -158,25 +144,21 @@
 .method public static getInstance(ILjava/lang/String;)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
     .locals 3
 
-    .line 140
     sget-object v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 141
     :try_start_0
     sget-object v1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
     if-nez v1, :cond_0
 
-    .line 142
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
-    .line 144
     :cond_0
     sget-object v1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
@@ -188,7 +170,6 @@
 
     if-nez p1, :cond_1
 
-    .line 146
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +188,6 @@
 
     move-result-object p1
 
-    .line 148
     :cond_1
     sget-object v1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
@@ -217,7 +197,6 @@
 
     invoke-virtual {v1, p0, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 150
     :cond_2
     sget-object p1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
@@ -227,7 +206,6 @@
 
     check-cast p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
 
-    .line 151
     monitor-exit v0
 
     return-object p0
@@ -247,7 +225,6 @@
 
     const-string/jumbo v0, "settings_fingerprint.xml"
 
-    .line 162
     invoke-static {p0, v0}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getInstance(ILjava/lang/String;)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;
 
     move-result-object p0
@@ -258,7 +235,6 @@
 .method public static isKnownAcquiredCode(I)Z
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
@@ -292,7 +268,6 @@
 .method public static isKnownErrorCode(I)Z
     .locals 0
 
-    .line 0
     packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x0
@@ -326,27 +301,22 @@
 
     const-string v1, "fingerIndex"
 
-    .line 428
     invoke-virtual {p0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string/jumbo v1, "verificationType"
 
     const-string v2, "Device Credential"
 
-    .line 429
     invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x1000000
 
-    .line 430
     invoke-virtual {p0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
-    .line 431
     invoke-virtual {p0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 433
     :try_start_0
     new-instance v1, Landroid/os/UserHandle;
 
@@ -354,7 +324,6 @@
 
     invoke-virtual {p2, p0, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 434
     sget-boolean p2, Lcom/android/server/biometrics/Utils;->DEBUG:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -363,7 +332,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 435
     :try_start_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -391,7 +359,6 @@
 
     goto :goto_0
 
-    .line 438
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -422,7 +389,6 @@
     :catch_0
     move-exception p0
 
-    .line 441
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,7 +397,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 442
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -442,7 +407,6 @@
 
     move-result-object p0
 
-    .line 441
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -452,18 +416,15 @@
 .method public static resetForTest()V
     .locals 2
 
-    .line 303
     sget-object v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 304
     :try_start_0
     sput-object v1, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->sInstances:Landroid/util/SparseArray;
 
-    .line 305
     monitor-exit v0
 
     return-void
@@ -485,12 +446,10 @@
 
     const-string v1, ","
 
-    .line 312
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 313
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -502,7 +461,6 @@
 
     const-string/jumbo v4, "settings="
 
-    .line 314
     invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -511,7 +469,6 @@
 
     const/16 v4, 0x9
 
-    .line 316
     :try_start_0
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -532,7 +489,6 @@
 
     const-string/jumbo v5, "semGetMaxTemplateNumber: failed to read sensor config"
 
-    .line 318
     invoke-static {v4, v5, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -549,7 +505,6 @@
 .method public static semGetSensorType()I
     .locals 4
 
-    .line 392
     invoke-static {}, Landroid/hardware/fingerprint/FingerprintManager;->semGetSensorPosition()I
 
     move-result v0
@@ -577,7 +532,6 @@
     :cond_0
     return v1
 
-    .line 394
     :cond_1
     sget-boolean v0, Lcom/android/server/biometrics/SemBiometricFeature;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
@@ -597,21 +551,18 @@
 .method public static semGetSideSensorPosition(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 514
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/fingerprint/fingerprint/position"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 515
     invoke-static {v0}, Lcom/android/server/biometrics/Utils;->readFile(Ljava/io/File;)[B
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 518
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
@@ -619,12 +570,10 @@
 
     invoke-direct {v1, v0, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 519
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 520
     new-instance v1, Ljava/util/ArrayList;
 
     const-string v2, "\\,"
@@ -639,7 +588,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 521
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -650,7 +598,6 @@
 
     const/4 v0, 0x0
 
-    .line 522
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -665,7 +612,6 @@
 
     if-nez v0, :cond_1
 
-    .line 523
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -674,13 +620,11 @@
 
     const-string v0, "0"
 
-    .line 524
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
     const-string/jumbo v0, "sem_area"
 
-    .line 526
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -702,7 +646,6 @@
     :catch_0
     move-exception p0
 
-    .line 529
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,7 +682,6 @@
 
     const-string/jumbo v1, "sem_privileged_attr"
 
-    .line 458
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -757,7 +699,6 @@
 .method public static semIsAuthenticationFailedReasonEvent(I)Z
     .locals 1
 
-    .line 0
     const v0, 0x9c40
 
     if-lt p0, v0, :cond_0
@@ -780,7 +721,6 @@
 .method public static semIsInternalClientFreeEvent(II)Z
     .locals 2
 
-    .line 0
     const/4 v0, 0x6
 
     const/4 v1, 0x0
@@ -817,7 +757,6 @@
 .method public static semIsQualityFailedEvent(II)Z
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     packed-switch p0, :pswitch_data_0
@@ -861,7 +800,6 @@
 .method public static semIsRequestCommandEvent(II)Z
     .locals 2
 
-    .line 0
     const/4 v0, 0x6
 
     const/4 v1, 0x0
@@ -890,7 +828,6 @@
 .method public static semIsSkipEvent(II)Z
     .locals 2
 
-    .line 0
     const/4 v0, 0x6
 
     const/4 v1, 0x0
@@ -910,7 +847,6 @@
 .method public static semUpdateVendorInfo(II)I
     .locals 1
 
-    .line 0
     const/4 v0, 0x6
 
     if-ne p0, v0, :cond_0
@@ -932,7 +868,6 @@
 .method public bridge synthetic addBiometricForUser(Landroid/content/Context;ILandroid/hardware/biometrics/BiometricAuthenticator$Identifier;)V
     .locals 0
 
-    .line 81
     check-cast p3, Landroid/hardware/fingerprint/Fingerprint;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->addBiometricForUser(Landroid/content/Context;ILandroid/hardware/fingerprint/Fingerprint;)V
@@ -943,7 +878,6 @@
 .method public addBiometricForUser(Landroid/content/Context;ILandroid/hardware/fingerprint/Fingerprint;)V
     .locals 1
 
-    .line 178
     invoke-virtual {p3}, Landroid/hardware/fingerprint/Fingerprint;->getName()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -954,14 +888,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 179
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getUniqueName(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {p3, v0}, Landroid/hardware/fingerprint/Fingerprint;->setName(Ljava/lang/CharSequence;)V
 
-    .line 182
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
@@ -969,7 +901,6 @@
 
     invoke-virtual {v0, p3}, Lcom/android/server/biometrics/sensors/BiometricUserState;->addBiometric(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;)V
 
-    .line 184
     invoke-virtual {p3}, Landroid/hardware/fingerprint/Fingerprint;->getBiometricId()I
 
     move-result p3
@@ -982,7 +913,6 @@
 .method public getBiometricsForUser(Landroid/content/Context;I)Ljava/util/List;
     .locals 0
 
-    .line 172
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object p0
@@ -997,14 +927,12 @@
 .method public getFingerprintName(Landroid/content/Context;II)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 479
     invoke-virtual {p0, p1, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getBiometricsForUser(Landroid/content/Context;I)Ljava/util/List;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 481
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1022,14 +950,12 @@
 
     check-cast p1, Landroid/hardware/fingerprint/Fingerprint;
 
-    .line 482
     invoke-virtual {p1}, Landroid/hardware/fingerprint/Fingerprint;->getBiometricId()I
 
     move-result p3
 
     if-ne p3, p2, :cond_0
 
-    .line 483
     invoke-virtual {p1}, Landroid/hardware/fingerprint/Fingerprint;->getName()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -1045,10 +971,8 @@
 .method public final getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
     .locals 2
 
-    .line 241
     monitor-enter p0
 
-    .line 242
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mUserStates:Landroid/util/SparseArray;
 
@@ -1060,19 +984,16 @@
 
     if-nez v0, :cond_0
 
-    .line 244
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mFileName:Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, v1}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 245
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 247
     :cond_0
     monitor-exit p0
 
@@ -1081,7 +1002,6 @@
     :catchall_0
     move-exception p1
 
-    .line 248
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1092,7 +1012,6 @@
 .method public getUniqueName(Landroid/content/Context;I)Ljava/lang/CharSequence;
     .locals 0
 
-    .line 217
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object p0
@@ -1107,7 +1026,6 @@
 .method public isInvalidationInProgress(Landroid/content/Context;I)Z
     .locals 0
 
-    .line 227
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object p0
@@ -1124,17 +1042,14 @@
 
     const/4 v0, 0x1
 
-    .line 465
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mIsBootComplete:Z
 
-    .line 466
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 469
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1153,12 +1068,10 @@
 
     check-cast v1, Ljava/lang/Runnable;
 
-    .line 470
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 472
     :cond_1
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
@@ -1166,7 +1079,6 @@
 
     const/4 v0, 0x0
 
-    .line 473
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
     return-void
@@ -1175,16 +1087,13 @@
 .method public putStateForUserForTest(ILcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;)V
     .locals 1
 
-    .line 234
     monitor-enter p0
 
-    .line 235
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mUserStates:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 236
     monitor-exit p0
 
     return-void
@@ -1202,7 +1111,6 @@
 .method public removeBiometricForUser(Landroid/content/Context;II)V
     .locals 1
 
-    .line 191
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object v0
@@ -1219,7 +1127,6 @@
 
     return-void
 
-    .line 196
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
@@ -1227,17 +1134,14 @@
 
     invoke-virtual {v0, p3}, Lcom/android/server/biometrics/sensors/BiometricUserState;->removeBiometric(I)V
 
-    .line 199
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semSendRemoveTemplateBroadcast(Landroid/content/Context;II)V
 
-    .line 200
     invoke-static {}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->get()Lcom/android/server/biometrics/SemBioAnalyticsManager;
 
     move-result-object p0
 
     invoke-virtual {p0, p3}, Lcom/android/server/biometrics/SemBioAnalyticsManager;->fpInsertLogRemove(I)V
 
-    .line 201
     invoke-static {}, Lcom/android/server/biometrics/SemBioLoggingManager;->get()Lcom/android/server/biometrics/SemBioLoggingManager;
 
     move-result-object p0
@@ -1254,7 +1158,6 @@
 .method public renameBiometricForUser(Landroid/content/Context;IILjava/lang/CharSequence;)V
     .locals 1
 
-    .line 208
     invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1263,7 +1166,6 @@
 
     return-void
 
-    .line 212
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
@@ -1277,14 +1179,12 @@
 .method public final semSendAddTemplateBroadcast(Landroid/content/Context;II)V
     .locals 2
 
-    .line 411
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.FINGERPRINT_ADDED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 412
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semSendTemplateChangedBroadCast(Landroid/content/Context;Landroid/content/Intent;II)V
 
     return-void
@@ -1293,12 +1193,10 @@
 .method public final semSendRemoveTemplateBroadcast(Landroid/content/Context;II)V
     .locals 2
 
-    .line 416
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 417
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object v1
@@ -1315,7 +1213,6 @@
 
     const-string v1, "com.samsung.android.intent.action.FINGERPRINT_RESET"
 
-    .line 418
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
@@ -1323,10 +1220,8 @@
     :cond_0
     const-string v1, "com.samsung.android.intent.action.FINGERPRINT_REMOVED"
 
-    .line 420
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 422
     :goto_0
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->semSendTemplateChangedBroadCast(Landroid/content/Context;Landroid/content/Intent;II)V
 
@@ -1336,29 +1231,24 @@
 .method public final semSendTemplateChangedBroadCast(Landroid/content/Context;Landroid/content/Intent;II)V
     .locals 1
 
-    .line 427
     new-instance v0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p2, p4, p1, p3}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils$$ExternalSyntheticLambda0;-><init>(Landroid/content/Intent;ILandroid/content/Context;I)V
 
-    .line 445
     iget-boolean p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mIsBootComplete:Z
 
     if-nez p1, :cond_1
 
-    .line 446
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
     if-nez p1, :cond_0
 
-    .line 447
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
-    .line 449
     :cond_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->mPendingRunnableAfterBootCompletion:Ljava/util/ArrayList;
 
@@ -1366,7 +1256,6 @@
 
     goto :goto_0
 
-    .line 451
     :cond_1
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
@@ -1377,7 +1266,6 @@
 .method public setInvalidationInProgress(Landroid/content/Context;IZ)V
     .locals 0
 
-    .line 222
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUtils;->getStateForUser(Landroid/content/Context;I)Lcom/android/server/biometrics/sensors/fingerprint/FingerprintUserState;
 
     move-result-object p0

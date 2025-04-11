@@ -14,7 +14,6 @@
 .method public static synthetic $r8$lambda$FJ71Jphm20VafE-FmxAtgvDALmY(Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->lambda$onServiceConnected$1(Landroid/content/ComponentName;)V
 
     return-void
@@ -23,7 +22,6 @@
 .method public static synthetic $r8$lambda$HLkIE9OPE6qZkoJt-afnSMsmtS8(Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->lambda$onServiceConnected$0(Landroid/content/ComponentName;)V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static synthetic $r8$lambda$MPyszMY_HF585e-u_pTAz68oykg(Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->lambda$onServiceConnected$2(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
     return-void
@@ -41,7 +38,6 @@
 .method public static synthetic $r8$lambda$Qlm8-EfpPy2Jef8-thb8yyrEXvw(Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->lambda$onServiceDisconnected$3(Landroid/content/ComponentName;)V
 
     return-void
@@ -50,7 +46,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)V
     .locals 0
 
-    .line 34
     iput-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +56,6 @@
 .method private synthetic lambda$onServiceConnected$0(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 48
     invoke-static {}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->onServiceDisconnected(Landroid/content/ComponentName;)V
 
     return-void
@@ -79,7 +72,6 @@
 .method private synthetic lambda$onServiceConnected$1(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 47
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     new-instance v1, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1$$ExternalSyntheticLambda3;
@@ -96,7 +88,6 @@
 
     const/4 v0, 0x0
 
-    .line 39
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -122,12 +113,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     iget-object v1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {v1, p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fputmBinder(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;Landroid/os/IBinder;)V
 
-    .line 41
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmPackageName(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Ljava/lang/String;
@@ -140,7 +129,6 @@
 
     invoke-static {p2, v1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fputmProcessId(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;I)V
 
-    .line 42
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmBinder(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Landroid/os/IBinder;
@@ -149,14 +137,12 @@
 
     if-eqz p2, :cond_1
 
-    .line 43
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     const/4 v1, 0x1
 
     invoke-static {p2, v1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$mresetBindTimer(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;Z)V
 
-    .line 44
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmConnectionStateListener(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Lcom/android/server/enterprise/plm/impl/ConnectionHelper$ConnectionStateListener;
@@ -165,7 +151,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 45
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmConnectionStateListener(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Lcom/android/server/enterprise/plm/impl/ConnectionHelper$ConnectionStateListener;
@@ -174,7 +159,6 @@
 
     invoke-interface {p2}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$ConnectionStateListener;->onConnect()V
 
-    .line 47
     :cond_0
     iget-object p2, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
@@ -195,7 +179,6 @@
     :catchall_0
     move-exception p1
 
-    .line 53
     invoke-static {}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -206,7 +189,6 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p0, v0}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$mresetBindTimer(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;Z)V
@@ -219,7 +201,6 @@
 .method private synthetic lambda$onServiceDisconnected$3(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 63
     :try_start_0
     invoke-static {}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -245,7 +226,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmBinder(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Landroid/os/IBinder;
@@ -254,7 +234,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 65
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmBinder(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Landroid/os/IBinder;
@@ -267,7 +246,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 66
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmContext(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Landroid/content/Context;
@@ -282,7 +260,6 @@
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 68
     :cond_0
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
@@ -290,14 +267,12 @@
 
     invoke-static {p1, v0}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fputmBinder(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;Landroid/os/IBinder;)V
 
-    .line 69
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     const/4 v0, -0x1
 
     invoke-static {p1, v0}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fputmProcessId(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;I)V
 
-    .line 70
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmConnectionStateListener(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Lcom/android/server/enterprise/plm/impl/ConnectionHelper$ConnectionStateListener;
@@ -306,7 +281,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 71
     iget-object p1, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     invoke-static {p1}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$fgetmConnectionStateListener(Lcom/android/server/enterprise/plm/impl/ConnectionHelper;)Lcom/android/server/enterprise/plm/impl/ConnectionHelper$ConnectionStateListener;
@@ -322,7 +296,6 @@
     :catchall_0
     move-exception p1
 
-    .line 75
     invoke-static {}, Lcom/android/server/enterprise/plm/impl/ConnectionHelper;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -333,7 +306,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget-object p0, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     const/4 p1, 0x0
@@ -350,7 +322,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
 
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     new-instance v1, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1$$ExternalSyntheticLambda0;
@@ -365,7 +336,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1;->this$0:Lcom/android/server/enterprise/plm/impl/ConnectionHelper;
 
     new-instance v1, Lcom/android/server/enterprise/plm/impl/ConnectionHelper$1$$ExternalSyntheticLambda1;

@@ -16,7 +16,6 @@
 .method public static synthetic $r8$lambda$_XaXxDGv60zwlgSKtI-3mpHUP_0(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->lambda$executeDelayed$1(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
 
     return-void
@@ -25,7 +24,6 @@
 .method public static synthetic $r8$lambda$sYtON0b6Ta2c2mKtxQGJJ7-b1js(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->lambda$execute$0(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
 
     return-void
@@ -34,7 +32,6 @@
 .method public constructor <init>(Landroid/os/Handler;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$handler:Landroid/os/Handler;
 
     iput-object p2, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$lockingExecutor:Ljava/util/concurrent/Executor;
@@ -47,7 +44,6 @@
 .method public static synthetic lambda$execute$0(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 95
     invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -56,7 +52,6 @@
 .method public static synthetic lambda$executeDelayed$1(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 100
     invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -67,7 +62,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$handler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$lockingExecutor:Ljava/util/concurrent/Executor;
@@ -84,7 +78,6 @@
 .method public executeDelayed(Ljava/lang/Runnable;J)V
     .locals 2
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$handler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/server/appop/AppOpsUidStateTrackerImpl$1;->val$lockingExecutor:Ljava/util/concurrent/Executor;

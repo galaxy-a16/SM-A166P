@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/am/StrictModeViolationDialog;)V
     .locals 0
 
-    .line 114
     iput-object p1, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -24,7 +23,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-static {v0}, Lcom/android/server/am/StrictModeViolationDialog;->-$$Nest$fgetmService(Lcom/android/server/am/StrictModeViolationDialog;)Lcom/android/server/am/ActivityManagerService;
@@ -37,7 +35,6 @@
 
     monitor-enter v0
 
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
@@ -47,7 +44,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 118
     iget-object v1, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-static {v1}, Lcom/android/server/am/StrictModeViolationDialog;->-$$Nest$fgetmProc(Lcom/android/server/am/StrictModeViolationDialog;)Lcom/android/server/am/ProcessRecord;
@@ -62,7 +58,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/am/ErrorDialogController;->clearViolationDialogs()V
 
-    .line 120
     :cond_0
     monitor-exit v0
     :try_end_0
@@ -70,7 +65,6 @@
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
 
-    .line 121
     iget-object v0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-static {v0}, Lcom/android/server/am/StrictModeViolationDialog;->-$$Nest$fgetmResult(Lcom/android/server/am/StrictModeViolationDialog;)Lcom/android/server/am/AppErrorResult;
@@ -81,7 +75,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 125
     iget-object p0, p0, Lcom/android/server/am/StrictModeViolationDialog$1;->this$0:Lcom/android/server/am/StrictModeViolationDialog;
 
     invoke-virtual {p0}, Landroid/app/AlertDialog;->dismiss()V
@@ -91,7 +84,6 @@
     :catchall_0
     move-exception p0
 
-    .line 120
     :try_start_1
     monitor-exit v0
     :try_end_1

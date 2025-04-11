@@ -13,7 +13,6 @@
 
     return v0
 
-    .line 122
     :cond_0
     new-instance v1, Landroid/util/ArraySet;
 
@@ -23,12 +22,10 @@
 
     invoke-direct {v1, v2}, Landroid/util/ArraySet;-><init>(I)V
 
-    .line 123
     new-instance v2, Landroid/util/ArraySet;
 
     invoke-direct {v2}, Landroid/util/ArraySet;-><init>()V
 
-    .line 125
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -47,7 +44,6 @@
     :goto_0
     if-ge v4, v3, :cond_3
 
-    .line 131
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -77,19 +73,16 @@
     :goto_1
     if-ge v4, v3, :cond_7
 
-    .line 139
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/server/pm/pkg/component/ParsedAttribution;
 
-    .line 141
     invoke-interface {v6}, Lcom/android/server/pm/pkg/component/ParsedAttribution;->getInheritFrom()Ljava/util/List;
 
     move-result-object v6
 
-    .line 142
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v7
@@ -99,14 +92,12 @@
     :goto_2
     if-ge v8, v7, :cond_6
 
-    .line 144
     invoke-interface {v6, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/lang/String;
 
-    .line 146
     invoke-virtual {v1, v9}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v10
@@ -115,7 +106,6 @@
 
     return v5
 
-    .line 151
     :cond_4
     invoke-virtual {v2, v9}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -142,7 +132,6 @@
 .method public static parseAttribution(Landroid/content/res/Resources;Landroid/content/res/XmlResourceParser;Landroid/content/pm/parsing/result/ParseInput;)Landroid/content/pm/parsing/result/ParseResult;
     .locals 9
 
-    .line 49
     sget-object v0, Lcom/android/internal/R$styleable;->AndroidManifestAttribution:[I
 
     invoke-virtual {p0, p1, v0}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -153,7 +142,6 @@
 
     const-string p0, "<attribution> could not be parsed"
 
-    .line 51
     invoke-interface {p2, p0}, Landroid/content/pm/parsing/result/ParseInput;->error(Ljava/lang/String;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
@@ -165,7 +153,6 @@
 
     const/4 v2, 0x0
 
-    .line 55
     :try_start_0
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
 
@@ -175,19 +162,16 @@
 
     const-string p0, "<attribution> does not specify android:tag"
 
-    .line 58
     invoke-interface {p2, p0}, Landroid/content/pm/parsing/result/ParseInput;->error(Ljava/lang/String;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 70
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p0
 
-    .line 60
     :cond_1
     :try_start_1
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -200,19 +184,16 @@
 
     const-string p0, "android:tag is too long. Max length is 50"
 
-    .line 61
     invoke-interface {p2, p0}, Landroid/content/pm/parsing/result/ParseInput;->error(Ljava/lang/String;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 70
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p0
 
-    .line 65
     :cond_2
     :try_start_2
     invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -223,14 +204,12 @@
 
     const-string p0, "<attribution> does not specify android:label"
 
-    .line 67
     invoke-interface {p2, p0}, Landroid/content/pm/parsing/result/ParseInput;->error(Ljava/lang/String;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 70
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object p0
@@ -238,14 +217,12 @@
     :cond_3
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 74
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
 
     const/4 v5, 0x0
 
-    .line 75
     :cond_4
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
@@ -258,7 +235,6 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 76
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v8
@@ -274,7 +250,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_6
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
@@ -282,14 +257,12 @@
 
     const-string v7, "inherit-from"
 
-    .line 82
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_9
 
-    .line 83
     sget-object v6, Lcom/android/internal/R$styleable;->AndroidManifestAttributionInheritFrom:[I
 
     invoke-virtual {p0, p1, v6}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -300,14 +273,12 @@
 
     const-string p0, "<inherit-from> could not be parsed"
 
-    .line 86
     invoke-interface {p2, p0}, Landroid/content/pm/parsing/result/ParseInput;->error(Ljava/lang/String;)Landroid/content/pm/parsing/result/ParseResult;
 
     move-result-object p0
 
     return-object p0
 
-    .line 90
     :cond_7
     :try_start_3
     invoke-virtual {v6, v2, v2}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
@@ -316,18 +287,15 @@
 
     if-nez v5, :cond_8
 
-    .line 94
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 96
     :cond_8
     invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 98
     invoke-virtual {v6}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
@@ -337,10 +305,8 @@
 
     invoke-virtual {v6}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 99
     throw p0
 
-    .line 101
     :cond_9
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -365,18 +331,15 @@
     :cond_a
     if-nez v5, :cond_b
 
-    .line 106
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v5
 
     goto :goto_1
 
-    .line 108
     :cond_b
     invoke-virtual {v5}, Ljava/util/ArrayList;->trimToSize()V
 
-    .line 111
     :goto_1
     new-instance p0, Lcom/android/server/pm/pkg/component/ParsedAttributionImpl;
 
@@ -391,9 +354,7 @@
     :catchall_1
     move-exception p0
 
-    .line 70
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 71
     throw p0
 .end method

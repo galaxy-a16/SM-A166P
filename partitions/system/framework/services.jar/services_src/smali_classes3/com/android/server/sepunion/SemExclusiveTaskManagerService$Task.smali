@@ -23,7 +23,6 @@
 .method public static bridge synthetic -$$Nest$fgetexclusiveListSet(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;)Ljava/util/HashSet;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->exclusiveListSet:Ljava/util/HashSet;
 
     return-object p0
@@ -32,7 +31,6 @@
 .method public static bridge synthetic -$$Nest$mcanTurnOnFeature(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->canTurnOnFeature(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
 
     move-result p0
@@ -43,7 +41,6 @@
 .method public static bridge synthetic -$$Nest$mgetName(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;)Ljava/lang/String;
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -54,7 +51,6 @@
 .method public static bridge synthetic -$$Nest$mgetSettingsStatus(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getSettingsStatus(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
 
     move-result p0
@@ -65,7 +61,6 @@
 .method public static bridge synthetic -$$Nest$mgetType(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;)I
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getType()I
 
     move-result p0
@@ -76,7 +71,6 @@
 .method public static bridge synthetic -$$Nest$mturnOnOff(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;ZLcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->turnOnOff(ZLcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)V
 
     return-void
@@ -85,12 +79,10 @@
 .method public constructor <init>(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)V
     .locals 2
 
-    .line 690
     iput-object p1, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 696
     new-instance v0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$TaskSettings;
 
     const/4 v1, 0x0
@@ -99,7 +91,6 @@
 
     iput-object v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->setting:Lcom/android/server/sepunion/SemExclusiveTaskManagerService$TaskSettings;
 
-    .line 697
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -112,7 +103,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;-><init>(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)V
 
     return-void
@@ -123,7 +113,6 @@
 .method public final canTurnOnFeature(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
     .locals 3
 
-    .line 741
     invoke-static {}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -146,14 +135,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 743
     iget-object v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->exclusiveListSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 744
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -161,14 +148,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 745
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 746
     iget-object v2, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     iget-object v2, v2, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->mTaskMap:Ljava/util/HashMap;
@@ -179,14 +164,12 @@
 
     check-cast v1, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;
 
-    .line 747
     invoke-virtual {v1, p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getSettingsStatus(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 748
     invoke-static {}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -228,7 +211,6 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
-    .line 704
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->name:Ljava/lang/String;
 
     return-object p0
@@ -237,7 +219,6 @@
 .method public final getSettingsStatus(Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)Z
     .locals 2
 
-    .line 716
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getType()I
 
     move-result v0
@@ -246,7 +227,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 717
     iget-object p1, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-static {p1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)Landroid/content/Context;
@@ -268,7 +248,6 @@
 
     return p0
 
-    .line 723
     :cond_1
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->setting:Lcom/android/server/sepunion/SemExclusiveTaskManagerService$TaskSettings;
 
@@ -282,7 +261,6 @@
 .method public final getType()I
     .locals 0
 
-    .line 708
     iget p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->actionType:I
 
     return p0
@@ -291,7 +269,6 @@
 .method public final turnOnOff(ZLcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;)V
     .locals 4
 
-    .line 728
     invoke-virtual {p0}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->getType()I
 
     move-result v0
@@ -300,14 +277,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 730
     iget-object v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->componentName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 731
     iget-object v1, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-static {v1}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)Landroid/content/Context;
@@ -318,7 +293,6 @@
 
     invoke-virtual {v1, v2, v0, p1, v3}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->setAccessibilityServiceState(Landroid/content/Context;Landroid/content/ComponentName;ZI)V
 
-    .line 732
     iget-object p1, p2, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;->mIgnoreSettingsList:Ljava/util/HashSet;
 
     iget-object v0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->setting:Lcom/android/server/sepunion/SemExclusiveTaskManagerService$TaskSettings;
@@ -329,14 +303,12 @@
 
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 733
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->this$0:Lcom/android/server/sepunion/SemExclusiveTaskManagerService;
 
     invoke-static {p0}, Lcom/android/server/sepunion/SemExclusiveTaskManagerService;->-$$Nest$fgetmContext(Lcom/android/server/sepunion/SemExclusiveTaskManagerService;)Landroid/content/Context;
 
     move-result-object p0
 
-    .line 734
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -345,7 +317,6 @@
 
     iget v0, p2, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$UserStatus;->mUserId:I
 
-    .line 733
     invoke-static {p0, p1, v0}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -354,7 +325,6 @@
 
     goto :goto_0
 
-    .line 736
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/SemExclusiveTaskManagerService$Task;->setting:Lcom/android/server/sepunion/SemExclusiveTaskManagerService$TaskSettings;
 

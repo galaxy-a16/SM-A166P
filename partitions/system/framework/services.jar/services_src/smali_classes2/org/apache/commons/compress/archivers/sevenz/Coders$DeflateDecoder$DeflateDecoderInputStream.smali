@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/util/zip/InflaterInputStream;Ljava/util/zip/Inflater;)V
     .locals 0
 
-    .line 164
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 165
     iput-object p1, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflaterInputStream:Ljava/util/zip/InflaterInputStream;
 
-    .line 166
     iput-object p2, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflater:Ljava/util/zip/Inflater;
 
     return-void
@@ -30,7 +27,6 @@
 .method public close()V
     .locals 1
 
-    .line 187
     :try_start_0
     iget-object v0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflaterInputStream:Ljava/util/zip/InflaterInputStream;
 
@@ -38,7 +34,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflater:Ljava/util/zip/Inflater;
 
     invoke-virtual {p0}, Ljava/util/zip/Inflater;->end()V
@@ -52,14 +47,12 @@
 
     invoke-virtual {p0}, Ljava/util/zip/Inflater;->end()V
 
-    .line 190
     throw v0
 .end method
 
 .method public read()I
     .locals 0
 
-    .line 171
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflaterInputStream:Ljava/util/zip/InflaterInputStream;
 
     invoke-virtual {p0}, Ljava/util/zip/InflaterInputStream;->read()I
@@ -72,7 +65,6 @@
 .method public read([B)I
     .locals 0
 
-    .line 181
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflaterInputStream:Ljava/util/zip/InflaterInputStream;
 
     invoke-virtual {p0, p1}, Ljava/util/zip/InflaterInputStream;->read([B)I
@@ -85,7 +77,6 @@
 .method public read([BII)I
     .locals 0
 
-    .line 176
     iget-object p0, p0, Lorg/apache/commons/compress/archivers/sevenz/Coders$DeflateDecoder$DeflateDecoderInputStream;->inflaterInputStream:Ljava/util/zip/InflaterInputStream;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/zip/InflaterInputStream;->read([BII)I

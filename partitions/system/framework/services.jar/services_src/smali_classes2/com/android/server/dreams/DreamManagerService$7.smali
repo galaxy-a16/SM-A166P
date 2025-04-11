@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/dreams/DreamManagerService;)V
     .locals 0
 
-    .line 1191
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$7;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public run()V
     .locals 4
 
-    .line 1195
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$7;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$fgetmLock(Lcom/android/server/dreams/DreamManagerService;)Ljava/lang/Object;
@@ -36,7 +34,6 @@
 
     monitor-enter v0
 
-    .line 1196
     :try_start_0
     iget-object v1, p0, Lcom/android/server/dreams/DreamManagerService$7;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -76,7 +73,6 @@
 
     iget-object v2, p0, Lcom/android/server/dreams/DreamManagerService$7;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
-    .line 1197
     invoke-static {v2}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$mgetDozeComponent(Lcom/android/server/dreams/DreamManagerService;)Landroid/content/ComponentName;
 
     move-result-object v2
@@ -87,7 +83,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1199
     iget-object p0, p0, Lcom/android/server/dreams/DreamManagerService$7;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {p0}, Lcom/android/server/dreams/DreamManagerService;->-$$Nest$fgetmPowerManager(Lcom/android/server/dreams/DreamManagerService;)Landroid/os/PowerManager;
@@ -102,7 +97,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/PowerManager;->wakeUp(JLjava/lang/String;)V
 
-    .line 1202
     :cond_0
     monitor-exit v0
 

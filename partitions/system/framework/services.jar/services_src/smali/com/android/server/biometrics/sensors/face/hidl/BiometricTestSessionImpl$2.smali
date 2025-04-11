@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl;)V
     .locals 0
 
-    .line 240
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
     .locals 0
 
-    .line 254
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl;
 
@@ -52,7 +50,6 @@
 
     const-string p2, "Remote exception"
 
-    .line 256
     invoke-static {p1, p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -62,7 +59,6 @@
 .method public onClientStarted(Lcom/android/server/biometrics/sensors/BaseClientMonitor;)V
     .locals 1
 
-    .line 244
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl$2;->this$0:Lcom/android/server/biometrics/sensors/face/hidl/BiometricTestSessionImpl;
 
@@ -87,7 +83,6 @@
 
     const-string v0, "Remote exception"
 
-    .line 246
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

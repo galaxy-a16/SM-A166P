@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-static {p1}, Lcom/android/server/SystemConfigService$1;->$r8$lambda$-cZ8QlQqejR442wItU3mfLow1cM(Ljava/util/Map$Entry;)Ljava/util/List;

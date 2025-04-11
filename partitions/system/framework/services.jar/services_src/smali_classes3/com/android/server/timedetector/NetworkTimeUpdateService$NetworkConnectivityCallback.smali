@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
     .locals 0
 
-    .line 258
     iput-object p1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -22,7 +21,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;-><init>(Lcom/android/server/timedetector/NetworkTimeUpdateService;)V
 
     return-void
@@ -37,7 +35,6 @@
 
     const-string v1, "New default network %s; checking time."
 
-    .line 261
     filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -48,7 +45,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {v0}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fgetmLock(Lcom/android/server/timedetector/NetworkTimeUpdateService;)Ljava/lang/Object;
@@ -57,18 +53,15 @@
 
     monitor-enter v0
 
-    .line 263
     :try_start_0
     iget-object v1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {v1, p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fputmDefaultNetwork(Lcom/android/server/timedetector/NetworkTimeUpdateService;Landroid/net/Network;)V
 
-    .line 264
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 267
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     const-string/jumbo p1, "network available"
@@ -80,7 +73,6 @@
     :catchall_0
     move-exception p0
 
-    .line 264
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -92,7 +84,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 2
 
-    .line 272
     iget-object v0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     invoke-static {v0}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fgetmLock(Lcom/android/server/timedetector/NetworkTimeUpdateService;)Ljava/lang/Object;
@@ -101,7 +92,6 @@
 
     monitor-enter v0
 
-    .line 273
     :try_start_0
     iget-object v1, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
@@ -115,14 +105,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 274
     iget-object p0, p0, Lcom/android/server/timedetector/NetworkTimeUpdateService$NetworkConnectivityCallback;->this$0:Lcom/android/server/timedetector/NetworkTimeUpdateService;
 
     const/4 p1, 0x0
 
     invoke-static {p0, p1}, Lcom/android/server/timedetector/NetworkTimeUpdateService;->-$$Nest$fputmDefaultNetwork(Lcom/android/server/timedetector/NetworkTimeUpdateService;Landroid/net/Network;)V
 
-    .line 276
     :cond_0
     monitor-exit v0
 

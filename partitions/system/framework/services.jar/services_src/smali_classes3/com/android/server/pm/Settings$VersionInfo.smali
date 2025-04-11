@@ -27,22 +27,18 @@
 .method public forceCurrent()V
     .locals 1
 
-    .line 479
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     iput v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->sdkVersion:I
 
     const/4 v0, 0x3
 
-    .line 480
     iput v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->databaseVersion:I
 
-    .line 481
     sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->buildFingerprint:Ljava/lang/String;
 
-    .line 482
     sget-object v0, Landroid/content/pm/PackagePartitions;->FINGERPRINT:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$VersionInfo;->fingerprint:Ljava/lang/String;

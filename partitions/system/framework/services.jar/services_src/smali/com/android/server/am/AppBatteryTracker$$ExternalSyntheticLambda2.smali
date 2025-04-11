@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/AppBatteryTracker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/am/AppBatteryTracker$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/am/AppBatteryTracker;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/am/AppBatteryTracker$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/am/AppBatteryTracker;
 
     invoke-static {p0}, Lcom/android/server/am/AppBatteryTracker;->$r8$lambda$gngwp95S3ps48KzK6cRwnWNmVS0(Lcom/android/server/am/AppBatteryTracker;)V

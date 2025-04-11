@@ -31,7 +31,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/knox/dar/ddar/ta/TAProxy$TAInfo-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/knox/dar/ddar/ta/TAProxy$TAInfo;-><init>()V
 
     return-void

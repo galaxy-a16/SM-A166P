@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$wiaKciEC71jvtGr9ogaMVI6Ve_s(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;->lambda$cancel$0()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;)V
     .locals 0
 
-    .line 82
     iput-object p1, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;
 
     invoke-direct {p0}, Landroid/hardware/biometrics/common/ICancellationSignal$Stub;-><init>()V
@@ -31,7 +29,6 @@
 .method private synthetic lambda$cancel$0()V
     .locals 2
 
-    .line 89
     :try_start_0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;
 
@@ -52,7 +49,6 @@
     :catch_0
     move-exception p0
 
-    .line 91
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -64,7 +60,6 @@
 .method public cancel()V
     .locals 2
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;->-$$Nest$fgetmIsCancellation(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -75,7 +70,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession$1;->this$0:Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;->-$$Nest$fgetmH(Lcom/android/server/biometrics/sensors/fingerprint/aidl/SemTpaTestSession;)Landroid/os/Handler;
@@ -94,7 +88,6 @@
 .method public getInterfaceHash()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "a9ebb97f5abea1dc6800b69d821ef61944e80e65"
 
     return-object p0
@@ -103,7 +96,6 @@
 .method public getInterfaceVersion()I
     .locals 0
 
-    .line 0
     const/4 p0, 0x3
 
     return p0

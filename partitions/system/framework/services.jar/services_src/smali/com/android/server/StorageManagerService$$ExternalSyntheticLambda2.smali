@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/StorageManagerService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/StorageManagerService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/StorageManagerService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/StorageManagerService$$ExternalSyntheticLambda2;->f$0:Lcom/android/server/StorageManagerService;
 
     invoke-static {p0}, Lcom/android/server/StorageManagerService;->$r8$lambda$RcU40sZh5WzidnZAiYAuHCCB0p8(Lcom/android/server/StorageManagerService;)V

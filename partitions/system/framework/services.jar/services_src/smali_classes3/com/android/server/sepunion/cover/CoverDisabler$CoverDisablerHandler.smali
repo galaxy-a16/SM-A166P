@@ -11,14 +11,12 @@
 .method public constructor <init>(Lcom/android/server/sepunion/cover/CoverDisabler;Landroid/os/Looper;)V
     .locals 1
 
-    .line 69
     iput-object p1, p0, Lcom/android/server/sepunion/cover/CoverDisabler$CoverDisablerHandler;->this$0:Lcom/android/server/sepunion/cover/CoverDisabler;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 70
     invoke-direct {p0, p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
     return-void
@@ -27,7 +25,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/sepunion/cover/CoverDisabler;Landroid/os/Looper;Lcom/android/server/sepunion/cover/CoverDisabler$CoverDisablerHandler-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/sepunion/cover/CoverDisabler$CoverDisablerHandler;-><init>(Lcom/android/server/sepunion/cover/CoverDisabler;Landroid/os/Looper;)V
 
     return-void
@@ -38,14 +35,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 75
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_0
 
     goto :goto_1
 
-    .line 77
     :cond_0
     iget-object p0, p0, Lcom/android/server/sepunion/cover/CoverDisabler$CoverDisablerHandler;->this$0:Lcom/android/server/sepunion/cover/CoverDisabler;
 

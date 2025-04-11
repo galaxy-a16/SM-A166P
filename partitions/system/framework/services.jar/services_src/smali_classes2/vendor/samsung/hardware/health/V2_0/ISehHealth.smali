@@ -19,30 +19,25 @@
     :cond_0
     const-string/jumbo v1, "vendor.samsung.hardware.health@2.0::ISehHealth"
 
-    .line 41
     invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 43
     instance-of v3, v2, Lvendor/samsung/hardware/health/V2_0/ISehHealth;
 
     if-eqz v3, :cond_1
 
-    .line 44
     check-cast v2, Lvendor/samsung/hardware/health/V2_0/ISehHealth;
 
     return-object v2
 
-    .line 47
     :cond_1
     new-instance v2, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Proxy;
 
     invoke-direct {v2, p0}, Lvendor/samsung/hardware/health/V2_0/ISehHealth$Proxy;-><init>(Landroid/os/IHwBinder;)V
 
-    .line 50
     :try_start_0
     invoke-interface {v2}, Lvendor/samsung/hardware/health/V2_0/ISehHealth;->interfaceChain()Ljava/util/ArrayList;
 
@@ -65,7 +60,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 51
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -86,7 +80,6 @@
 
     const-string/jumbo v0, "vendor.samsung.hardware.health@2.0::ISehHealth"
 
-    .line 80
     invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object p0

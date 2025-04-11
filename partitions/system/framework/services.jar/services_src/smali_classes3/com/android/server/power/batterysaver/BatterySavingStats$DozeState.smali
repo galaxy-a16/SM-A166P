@@ -7,7 +7,6 @@
 .method public static fromIndex(I)I
     .locals 0
 
-    .line 0
     shr-int/lit8 p0, p0, 0x3
 
     and-int/lit8 p0, p0, 0x3

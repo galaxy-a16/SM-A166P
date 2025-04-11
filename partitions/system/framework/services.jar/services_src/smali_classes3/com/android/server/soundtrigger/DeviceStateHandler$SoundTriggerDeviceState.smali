@@ -17,7 +17,6 @@
 .method public static synthetic $values()[Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
     .locals 3
 
-    .line 49
     sget-object v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->DISABLE:Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     sget-object v1, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->CRITICAL:Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
@@ -34,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 50
     new-instance v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     const-string v1, "DISABLE"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->DISABLE:Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
-    .line 51
     new-instance v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     const-string v1, "CRITICAL"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->CRITICAL:Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
-    .line 52
     new-instance v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     const-string v1, "ENABLE"
@@ -67,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->ENABLE:Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
-    .line 49
     invoke-static {}, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->$values()[Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     move-result-object v0
@@ -80,7 +75,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -89,7 +83,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
     .locals 1
 
-    .line 49
     const-class v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -104,7 +97,6 @@
 .method public static values()[Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
     .locals 1
 
-    .line 49
     sget-object v0, Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->$VALUES:[Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;
 
     invoke-virtual {v0}, [Lcom/android/server/soundtrigger/DeviceStateHandler$SoundTriggerDeviceState;->clone()Ljava/lang/Object;

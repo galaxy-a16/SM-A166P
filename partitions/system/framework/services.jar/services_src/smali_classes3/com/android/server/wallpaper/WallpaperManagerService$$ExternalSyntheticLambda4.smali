@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(F)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$$ExternalSyntheticLambda4;->f$0:F
@@ -27,7 +26,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     iget p0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$$ExternalSyntheticLambda4;->f$0:F
 
     check-cast p1, Lcom/android/server/wallpaper/WallpaperManagerService$DisplayConnector;

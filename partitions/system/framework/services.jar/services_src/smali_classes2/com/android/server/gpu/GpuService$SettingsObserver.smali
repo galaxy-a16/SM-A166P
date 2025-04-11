@@ -13,10 +13,8 @@
 .method public constructor <init>(Lcom/android/server/gpu/GpuService;)V
     .locals 3
 
-    .line 131
     iput-object p1, p0, Lcom/android/server/gpu/GpuService$SettingsObserver;->this$0:Lcom/android/server/gpu/GpuService;
 
-    .line 132
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -25,14 +23,12 @@
 
     const-string/jumbo v0, "updatable_driver_production_denylists"
 
-    .line 129
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/gpu/GpuService$SettingsObserver;->mProdDriverDenylistsUri:Landroid/net/Uri;
 
-    .line 133
     invoke-static {p1}, Lcom/android/server/gpu/GpuService;->-$$Nest$fgetmContentResolver(Lcom/android/server/gpu/GpuService;)Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -55,7 +51,6 @@
 
     return-void
 
-    .line 143
     :cond_0
     iget-object p1, p0, Lcom/android/server/gpu/GpuService$SettingsObserver;->mProdDriverDenylistsUri:Landroid/net/Uri;
 
@@ -65,12 +60,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 144
     iget-object p1, p0, Lcom/android/server/gpu/GpuService$SettingsObserver;->this$0:Lcom/android/server/gpu/GpuService;
 
     invoke-static {p1}, Lcom/android/server/gpu/GpuService;->-$$Nest$mprocessDenylists(Lcom/android/server/gpu/GpuService;)V
 
-    .line 145
     iget-object p0, p0, Lcom/android/server/gpu/GpuService$SettingsObserver;->this$0:Lcom/android/server/gpu/GpuService;
 
     invoke-static {p0}, Lcom/android/server/gpu/GpuService;->-$$Nest$msetDenylist(Lcom/android/server/gpu/GpuService;)V

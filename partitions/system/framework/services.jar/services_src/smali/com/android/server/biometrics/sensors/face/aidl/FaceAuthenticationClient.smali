@@ -44,7 +44,6 @@
 .method public static synthetic $r8$lambda$GQI6-ziCpY0kEO63chyPX-cJwZ0(Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->lambda$doAuthenticate$0(Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
 
     return-void
@@ -53,7 +52,6 @@
 .method public static bridge synthetic -$$Nest$fgetmCancellationSignal(Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;)Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCancellationSignal:Landroid/hardware/biometrics/common/ICancellationSignal;
 
     return-object p0
@@ -62,7 +60,6 @@
 .method public static bridge synthetic -$$Nest$mdismissNotification(Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;)V
     .locals 0
 
-    .line 0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->dismissNotification()V
 
     return-void
@@ -107,12 +104,10 @@
 
     move/from16 v20, p19
 
-    .line 119
     const-class v0, Landroid/hardware/SensorPrivacyManager;
 
     move-object/from16 v21, v1
 
-    .line 122
     invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -123,7 +118,6 @@
 
     move-object/from16 v0, p0
 
-    .line 119
     invoke-direct/range {v0 .. v20}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;JLcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;JZLandroid/hardware/face/FaceAuthenticateOptions;IZLcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;ZLcom/android/server/biometrics/sensors/face/UsageStats;Lcom/android/server/biometrics/sensors/LockoutCache;ZLandroid/hardware/SensorPrivacyManager;I)V
 
     return-void
@@ -172,17 +166,14 @@
 
     const/16 v17, 0x0
 
-    .line 137
     invoke-direct/range {v0 .. v18}, Lcom/android/server/biometrics/sensors/AuthenticationClient;-><init>(Landroid/content/Context;Ljava/util/function/Supplier;Landroid/os/IBinder;Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;JZLandroid/hardware/biometrics/AuthenticateOptions;IZLcom/android/server/biometrics/log/BiometricLogger;Lcom/android/server/biometrics/log/BiometricContext;ZLandroid/app/TaskStackListener;Lcom/android/server/biometrics/sensors/LockoutTracker;ZZI)V
 
     const/16 v0, 0x17
 
     move-object/from16 v1, p0
 
-    .line 97
     iput v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mLastAcquire:I
 
-    .line 510
     new-instance v0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient$2;
 
     invoke-direct {v0, v1}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient$2;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;)V
@@ -191,15 +182,12 @@
 
     move-wide/from16 v2, p4
 
-    .line 142
     invoke-virtual {v1, v2, v3}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->setRequestId(J)V
 
     move-object/from16 v0, p16
 
-    .line 143
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mUsageStats:Lcom/android/server/biometrics/sensors/face/UsageStats;
 
-    .line 144
     const-class v0, Landroid/app/NotificationManager;
 
     move-object/from16 v2, p1
@@ -214,17 +202,14 @@
 
     move-object/from16 v0, p19
 
-    .line 145
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mSensorPrivacyManager:Landroid/hardware/SensorPrivacyManager;
 
-    .line 146
     invoke-interface/range {p14 .. p14}, Lcom/android/server/biometrics/log/BiometricContext;->getAuthSessionCoordinator()Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mAuthSessionCoordinator:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
-    .line 148
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -235,7 +220,6 @@
 
     const v2, 0x10700e7
 
-    .line 149
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v2
@@ -244,7 +228,6 @@
 
     const v2, 0x10700ea
 
-    .line 151
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v2
@@ -253,7 +236,6 @@
 
     const v2, 0x10700e9
 
-    .line 153
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v2
@@ -262,21 +244,18 @@
 
     const v2, 0x10700ec
 
-    .line 155
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mKeyguardIgnoreListVendor:[I
 
-    .line 160
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->getBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBundle:Landroid/os/Bundle;
 
-    .line 161
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/SemFaceUtils;->resetBundle()V
 
     const/4 v2, 0x0
@@ -285,14 +264,12 @@
 
     const-string/jumbo v3, "sem_privileged_attr"
 
-    .line 163
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     iput v3, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mPrivilegedAttr:I
 
-    .line 165
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,11 +298,9 @@
 
     goto :goto_0
 
-    .line 168
     :cond_0
     iput v2, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mPrivilegedAttr:I
 
-    .line 170
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
@@ -335,7 +310,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 171
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getCookie()I
 
     move-result v0
@@ -346,7 +320,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 173
     invoke-virtual {v0}, Landroid/hardware/biometrics/PromptInfo;->semGetPrivilegedFlag()I
 
     move-result v2
@@ -357,24 +330,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 176
     iget v2, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mPrivilegedAttr:I
 
     or-int/2addr v2, v3
 
     iput v2, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mPrivilegedAttr:I
 
-    .line 179
     :cond_1
     invoke-virtual {v0}, Landroid/hardware/biometrics/PromptInfo;->semGetDisplayId()I
 
     move-result v2
 
-    .line 182
     :cond_2
     invoke-virtual {v1, v2}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->semSetDisplayId(I)V
 
-    .line 183
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -395,7 +364,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 185
     :cond_3
     iput-boolean v3, v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCanIgnoreLockout:Z
 
@@ -406,7 +374,6 @@
 .method public static synthetic lambda$doAuthenticate$0(Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;Landroid/hardware/biometrics/common/OperationContext;)V
     .locals 1
 
-    .line 251
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/face/ISession;
 
@@ -425,7 +392,6 @@
 
     const-string v0, "Unable to notify context changed"
 
-    .line 253
     invoke-static {p1, v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -437,7 +403,6 @@
 .method public canIgnoreLockout()Z
     .locals 0
 
-    .line 530
     iget-boolean p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCanIgnoreLockout:Z
 
     return p0
@@ -450,17 +415,14 @@
 
     const-string v1, "dismissNotification"
 
-    .line 499
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 501
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -469,19 +431,15 @@
 
     invoke-static {v0, v2}, Lcom/android/server/biometrics/Utils;->unregisterBroadcast(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 502
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
-    .line 504
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
     if-eqz v0, :cond_1
 
-    .line 505
     invoke-virtual {v0}, Lcom/android/server/biometrics/SemBiometricNotification;->cancelNotification()V
 
-    .line 506
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
     :cond_1
@@ -491,33 +449,28 @@
 .method public final doAuthenticate()Landroid/hardware/biometrics/common/ICancellationSignal;
     .locals 6
 
-    .line 243
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getFreshDaemon()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;
 
-    .line 245
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;->hasContextMethods()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 246
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->getOperationContext()Lcom/android/server/biometrics/log/OperationContextExt;
 
     move-result-object v1
 
-    .line 247
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/face/ISession;
 
     move-result-object v2
 
     iget-wide v3, p0, Lcom/android/server/biometrics/sensors/AuthenticationClient;->mOperationId:J
 
-    .line 248
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getOptions()Landroid/hardware/biometrics/AuthenticateOptions;
 
     move-result-object v5
@@ -528,12 +481,10 @@
 
     move-result-object v5
 
-    .line 247
     invoke-interface {v2, v3, v4, v5}, Landroid/hardware/biometrics/face/ISession;->authenticateWithContext(JLandroid/hardware/biometrics/common/OperationContext;)Landroid/hardware/biometrics/common/ICancellationSignal;
 
     move-result-object v2
 
-    .line 249
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getBiometricContext()Lcom/android/server/biometrics/log/BiometricContext;
 
     move-result-object p0
@@ -546,7 +497,6 @@
 
     return-object v2
 
-    .line 258
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/face/aidl/AidlSession;->getSession()Landroid/hardware/biometrics/face/ISession;
 
@@ -564,7 +514,6 @@
 .method public final getAcquireIgnorelist()[I
     .locals 1
 
-    .line 347
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
     move-result v0
@@ -585,7 +534,6 @@
 .method public final getAcquireVendorIgnorelist()[I
     .locals 1
 
-    .line 351
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
     move-result v0
@@ -608,17 +556,14 @@
 
     const-string p0, "biometric"
 
-    .line 453
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
-    .line 452
     invoke-static {p0}, Landroid/hardware/biometrics/IBiometricService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/biometrics/IBiometricService;
 
     move-result-object p0
 
-    .line 456
     :try_start_0
     invoke-interface {p0, p1}, Landroid/hardware/biometrics/IBiometricService;->semGetPromptInfo(I)Landroid/hardware/biometrics/PromptInfo;
 
@@ -631,7 +576,6 @@
     :catch_0
     move-exception p0
 
-    .line 458
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -663,7 +607,6 @@
 .method public getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
     .locals 0
 
-    .line 426
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;->getInstance()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     move-result-object p0
@@ -674,7 +617,6 @@
 .method public handleLifecycleAfterAuth(Z)V
     .locals 1
 
-    .line 302
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     const/4 v0, 0x1
@@ -687,18 +629,14 @@
 .method public onAcquired(II)V
     .locals 1
 
-    .line 362
     iput p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mLastAcquire:I
 
-    .line 363
     invoke-virtual {p0, p1, p2}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->shouldSendAcquiredMessage(II)Z
 
     move-result v0
 
-    .line 364
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->onAcquiredInternal(IIZ)V
 
-    .line 365
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result p1
@@ -707,7 +645,6 @@
 
     move-result-object p1
 
-    .line 366
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result p2
@@ -724,25 +661,20 @@
 .method public onAuthenticated(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;ZLjava/util/ArrayList;)V
     .locals 9
 
-    .line 308
     invoke-super {p0, p1, p2, p3}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->onAuthenticated(Landroid/hardware/biometrics/BiometricAuthenticator$Identifier;ZLjava/util/ArrayList;)V
 
     const/4 p1, 0x4
 
-    .line 310
     iput p1, p0, Lcom/android/server/biometrics/sensors/AuthenticationClient;->mState:I
 
-    .line 311
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mUsageStats:Lcom/android/server/biometrics/sensors/face/UsageStats;
 
     new-instance p3, Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;
 
-    .line 312
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getStartTimeMs()J
 
     move-result-wide v1
 
-    .line 313
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -757,7 +689,6 @@
 
     const/4 v7, 0x0
 
-    .line 317
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v8
@@ -768,10 +699,8 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;-><init>(JJZIII)V
 
-    .line 311
     invoke-virtual {p1, p3}, Lcom/android/server/biometrics/sensors/face/UsageStats;->addEvent(Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;)V
 
-    .line 320
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->dismissNotification()V
 
     return-void
@@ -780,7 +709,6 @@
 .method public onAuthenticationFrame(Landroid/hardware/face/FaceAuthenticationFrame;)V
     .locals 3
 
-    .line 376
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticationFrame;->getData()Landroid/hardware/face/FaceDataFrame;
 
     move-result-object v0
@@ -789,7 +717,6 @@
 
     move-result v0
 
-    .line 377
     invoke-virtual {p1}, Landroid/hardware/face/FaceAuthenticationFrame;->getData()Landroid/hardware/face/FaceDataFrame;
 
     move-result-object v1
@@ -798,29 +725,24 @@
 
     move-result v1
 
-    .line 378
     iput v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mLastAcquire:I
 
     const/4 v2, 0x0
 
-    .line 379
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/biometrics/sensors/AcquisitionClient;->onAcquiredInternal(IIZ)V
 
-    .line 381
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->shouldSendAcquiredMessage(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 382
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 384
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getListener()Lcom/android/server/biometrics/sensors/ClientMonitorCallbackConverter;
 
@@ -839,10 +761,8 @@
 
     const-string v1, "Failed to send authentication frame"
 
-    .line 386
     invoke-static {v0, v1, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 387
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {p1, p0, v2}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
@@ -855,20 +775,16 @@
 .method public onError(II)V
     .locals 11
 
-    .line 329
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->dismissNotification()V
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mUsageStats:Lcom/android/server/biometrics/sensors/face/UsageStats;
 
     new-instance v10, Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;
 
-    .line 333
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->getStartTimeMs()J
 
     move-result-wide v2
 
-    .line 334
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -881,7 +797,6 @@
 
     const/4 v6, 0x0
 
-    .line 338
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v9
@@ -894,21 +809,18 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;-><init>(JJZIII)V
 
-    .line 332
     invoke-virtual {v0, v10}, Lcom/android/server/biometrics/sensors/face/UsageStats;->addEvent(Lcom/android/server/biometrics/sensors/face/UsageStats$AuthenticationEvent;)V
 
     const/16 v0, 0x10
 
     if-ne p1, v0, :cond_0
 
-    .line 341
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/server/biometrics/sensors/BiometricNotificationUtils;->showReEnrollmentNotification(Landroid/content/Context;)V
 
-    .line 343
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->onError(II)V
 
@@ -918,7 +830,6 @@
 .method public onLockoutPermanent()V
     .locals 12
 
-    .line 409
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mAuthSessionCoordinator:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
@@ -933,15 +844,12 @@
 
     move-result v3
 
-    .line 410
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
     move-result-wide v4
 
-    .line 409
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->lockedOutFor(IIIJ)V
 
-    .line 413
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getLogger()Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v6
@@ -958,15 +866,12 @@
 
     const/4 v10, 0x0
 
-    .line 414
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v11
 
-    .line 413
     invoke-virtual/range {v6 .. v11}, Lcom/android/server/biometrics/log/BiometricLogger;->logOnError(Landroid/content/Context;Lcom/android/server/biometrics/log/OperationContextExt;III)V
 
-    .line 416
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result v0
@@ -975,7 +880,6 @@
 
     move-result-object v0
 
-    .line 417
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v1
@@ -986,7 +890,6 @@
 
     const/4 v1, 0x0
 
-    .line 419
     invoke-virtual {p0, v0, v1}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->onError(II)V
 
     return-void
@@ -997,7 +900,6 @@
 
     move-object v0, p0
 
-    .line 394
     iget-object v1, v0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mAuthSessionCoordinator:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
@@ -1012,17 +914,14 @@
 
     move-result v4
 
-    .line 395
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getRequestId()J
 
     move-result-wide v7
 
     move-wide/from16 v5, p1
 
-    .line 394
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->lockOutTimed(IIIJJ)V
 
-    .line 398
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getLogger()Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object v9
@@ -1039,15 +938,12 @@
 
     const/4 v13, 0x0
 
-    .line 399
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v14
 
-    .line 398
     invoke-virtual/range {v9 .. v14}, Lcom/android/server/biometrics/log/BiometricLogger;->logOnError(Landroid/content/Context;Lcom/android/server/biometrics/log/OperationContextExt;III)V
 
-    .line 401
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getSensorId()I
 
     move-result v1
@@ -1056,7 +952,6 @@
 
     move-result-object v1
 
-    .line 402
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getTargetUserId()I
 
     move-result v2
@@ -1067,7 +962,6 @@
 
     const/4 v2, 0x0
 
-    .line 404
     invoke-virtual {p0, v1, v2}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->onError(II)V
 
     return-void
@@ -1084,7 +978,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 356
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getAcquireVendorIgnorelist()[I
 
     move-result-object p0
@@ -1097,7 +990,6 @@
 
     goto :goto_0
 
-    .line 357
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getAcquireIgnorelist()[I
 
@@ -1121,7 +1013,6 @@
 .method public final showBackgroundAuthenticationNotificationIfNeeded()V
     .locals 6
 
-    .line 465
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBundle:Landroid/os/Bundle;
 
     const/4 v1, 0x4
@@ -1132,14 +1023,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 466
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->isKeyguard()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 467
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1156,7 +1045,6 @@
 
     goto :goto_0
 
-    .line 470
     :cond_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
@@ -1164,14 +1052,12 @@
 
     if-nez v0, :cond_1
 
-    .line 471
     new-instance v0, Lcom/android/server/biometrics/SemBiometricNotification;
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 472
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v3
@@ -1180,7 +1066,6 @@
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
-    .line 474
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -1190,7 +1075,6 @@
 
     const-string/jumbo v3, "package"
 
-    .line 475
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getOwnerString()Ljava/lang/String;
 
     move-result-object v4
@@ -1199,27 +1083,22 @@
 
     const-string v3, "authenticator"
 
-    .line 476
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 477
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_2
 
-    .line 478
     new-instance v1, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient$1;-><init>(Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;)V
 
     iput-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotificationAction:Landroid/content/BroadcastReceiver;
 
-    .line 491
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 492
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1228,7 +1107,6 @@
 
     sget-object v4, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    .line 493
     invoke-static {}, Lcom/android/server/biometrics/sensors/face/SemFaceMainThread;->get()Lcom/android/server/biometrics/sensors/face/SemFaceMainThread;
 
     move-result-object v5
@@ -1237,10 +1115,8 @@
 
     move-result-object v5
 
-    .line 492
     invoke-static {v2, v3, v1, v4, v5}, Lcom/android/server/biometrics/Utils;->registerBroadcastAsUser(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Landroid/os/UserHandle;Landroid/os/Handler;)V
 
-    .line 495
     :cond_2
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mBackgroundNotification:Lcom/android/server/biometrics/SemBiometricNotification;
 
@@ -1254,12 +1130,10 @@
 .method public start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
     .locals 0
 
-    .line 193
     invoke-super {p0, p1}, Lcom/android/server/biometrics/sensors/AuthenticationClient;->start(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)V
 
     const/4 p1, 0x1
 
-    .line 194
     iput p1, p0, Lcom/android/server/biometrics/sensors/AuthenticationClient;->mState:I
 
     return-void
@@ -1274,7 +1148,6 @@
 
     const/4 v2, 0x0
 
-    .line 207
     :try_start_0
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mSensorPrivacyManager:Landroid/hardware/SensorPrivacyManager;
 
@@ -1282,7 +1155,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 209
     invoke-virtual {v3, v1, v4}, Landroid/hardware/SensorPrivacyManager;->isSensorPrivacyEnabled(II)Z
 
     move-result v3
@@ -1293,17 +1165,14 @@
 
     const v4, 0x186a3
 
-    .line 212
     invoke-virtual {p0, v3, v4}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->onError(II)V
 
-    .line 217
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {v3, p0, v2}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
 
     goto :goto_1
 
-    .line 222
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
@@ -1313,15 +1182,12 @@
 
     const-string v3, "authenticate START"
 
-    .line 224
     invoke-static {v0, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 225
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 226
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     move-result-object v5
@@ -1332,7 +1198,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 227
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
     move-result-object v5
@@ -1345,12 +1210,10 @@
 
     iput-object v5, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCancellationSignal:Landroid/hardware/biometrics/common/ICancellationSignal;
 
-    .line 228
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->showBackgroundAuthenticationNotificationIfNeeded()V
 
     goto :goto_0
 
-    .line 230
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->doAuthenticate()Landroid/hardware/biometrics/common/ICancellationSignal;
 
@@ -1358,7 +1221,6 @@
 
     iput-object v5, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCancellationSignal:Landroid/hardware/biometrics/common/ICancellationSignal;
 
-    .line 232
     :goto_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1399,13 +1261,10 @@
 
     const-string v4, "Remote exception when requesting auth"
 
-    .line 236
     invoke-static {v0, v4, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 237
     invoke-virtual {p0, v1, v2}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->onError(II)V
 
-    .line 238
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {v0, p0, v2}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
@@ -1417,20 +1276,16 @@
 .method public stopHalOperation()V
     .locals 4
 
-    .line 264
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->unsubscribeBiometricContext()V
 
-    .line 267
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->dismissNotification()V
 
-    .line 270
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mCancellationSignal:Landroid/hardware/biometrics/common/ICancellationSignal;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 273
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->getServiceExtImpl()Lcom/android/server/biometrics/sensors/face/aidl/SemFaceServiceExImpl;
 
@@ -1451,15 +1306,12 @@
 
     const-string v3, "Remote exception when requesting cancel"
 
-    .line 278
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v1, 0x1
 
-    .line 279
     invoke-virtual {p0, v1, v0}, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->onError(II)V
 
-    .line 280
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->mCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
     invoke-interface {v1, p0, v0}, Lcom/android/server/biometrics/sensors/ClientMonitorCallback;->onClientFinished(Lcom/android/server/biometrics/sensors/BaseClientMonitor;Z)V
@@ -1472,7 +1324,6 @@
 .method public vibrateError()V
     .locals 2
 
-    .line 439
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1489,7 +1340,6 @@
 
     return-void
 
-    .line 442
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/HalClientMonitor;->isBiometricPrompt()Z
 
@@ -1497,7 +1347,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 443
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -1508,7 +1357,6 @@
 
     goto :goto_0
 
-    .line 445
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getContext()Landroid/content/Context;
 
@@ -1525,12 +1373,10 @@
 .method public wrapCallbackForStart(Lcom/android/server/biometrics/sensors/ClientMonitorCallback;)Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
     .locals 3
 
-    .line 200
     new-instance v0, Lcom/android/server/biometrics/sensors/ClientMonitorCompositeCallback;
 
     iget-object v1, p0, Lcom/android/server/biometrics/sensors/face/aidl/FaceAuthenticationClient;->mSemCancelDaemonCallback:Lcom/android/server/biometrics/sensors/ClientMonitorCallback;
 
-    .line 201
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/BaseClientMonitor;->getLogger()Lcom/android/server/biometrics/log/BiometricLogger;
 
     move-result-object p0

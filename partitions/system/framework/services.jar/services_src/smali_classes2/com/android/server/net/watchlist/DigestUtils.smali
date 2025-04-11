@@ -7,12 +7,10 @@
 .method public static getSha256Hash(Ljava/io/File;)[B
     .locals 1
 
-    .line 37
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 38
     :try_start_0
     invoke-static {v0}, Lcom/android/server/net/watchlist/DigestUtils;->getSha256Hash(Ljava/io/InputStream;)[B
 
@@ -20,7 +18,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 39
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     return-object p0
@@ -28,7 +25,6 @@
     :catchall_0
     move-exception p0
 
-    .line 37
     :try_start_1
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -50,7 +46,6 @@
 
     const-string v0, "SHA256"
 
-    .line 45
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -59,7 +54,6 @@
 
     new-array v1, v1, [B
 
-    .line 49
     :goto_0
     invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
 
@@ -69,12 +63,10 @@
 
     const/4 v3, 0x0
 
-    .line 50
     invoke-virtual {v0, v1, v3, v2}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 52
     :cond_0
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 

@@ -39,7 +39,6 @@
 .method public static synthetic $r8$lambda$H-UaQZ3rA_G-pC1DsdhfVre66Dg(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->lambda$startAnimation$2()V
 
     return-void
@@ -48,7 +47,6 @@
 .method public static synthetic $r8$lambda$M_M7KRVkzh4PkUMRwLAm7qCWehw(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;FF)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->lambda$updateView$0(FF)V
 
     return-void
@@ -57,7 +55,6 @@
 .method public static synthetic $r8$lambda$a82nOD95QLV39Snkllhl2pCMCck(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->lambda$clearAnimation$3()V
 
     return-void
@@ -66,7 +63,6 @@
 .method public static synthetic $r8$lambda$xjLxhE5NcVy4Nu6BfdR1aFK6dNY(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->lambda$setViewOnOff$1(Z)V
 
     return-void
@@ -75,37 +71,30 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 57
     iput v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mNavigationBarHeight:I
 
-    .line 62
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mHandler:Landroid/os/Handler;
 
-    .line 65
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mUiThread:Ljava/lang/Thread;
 
-    .line 66
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
     if-eqz p1, :cond_1
 
-    .line 68
     iput p2, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mType:I
 
-    .line 69
     invoke-virtual {p1}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
     move-result-object p1
@@ -130,13 +119,10 @@
 
     const-wide/16 p1, 0x0
 
-    .line 70
     iput-wide p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDurationTime:J
 
-    .line 71
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->makeView()V
 
-    .line 72
     invoke-virtual {p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->getNavigationBarHeight()I
 
     move-result p1
@@ -150,26 +136,22 @@
 .method private synthetic lambda$clearAnimation$3()V
     .locals 2
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 166
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 167
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setScaleY(F)V
@@ -182,7 +164,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 144
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const/4 p1, 0x0
@@ -191,7 +172,6 @@
 
     goto :goto_0
 
-    .line 146
     :cond_0
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
@@ -206,14 +186,12 @@
 .method private synthetic lambda$startAnimation$2()V
     .locals 3
 
-    .line 157
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -246,7 +224,6 @@
 .method private synthetic lambda$updateView$0(FF)V
     .locals 2
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
@@ -257,7 +234,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     float-to-int p1, p1
@@ -276,7 +252,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -290,7 +265,6 @@
 
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 136
     :goto_0
     iget-object p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -304,7 +278,6 @@
 
     iput p2, p1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 137
     iget-object p2, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
@@ -319,7 +292,6 @@
 .method public announceForAccessibility(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 172
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
@@ -330,7 +302,6 @@
 .method public clearAnimation()V
     .locals 1
 
-    .line 163
     new-instance v0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda3;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;)V
@@ -345,10 +316,8 @@
 
     const/4 v0, 0x0
 
-    .line 176
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
-    .line 177
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
@@ -361,7 +330,6 @@
 .method public finalize()V
     .locals 0
 
-    .line 41
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -370,7 +338,6 @@
 .method public final getNavigationBarHeight()I
     .locals 2
 
-    .line 181
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -379,14 +346,12 @@
 
     const v1, 0x11101f2
 
-    .line 182
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -395,7 +360,6 @@
 
     const v0, 0x1050253
 
-    .line 187
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -412,7 +376,6 @@
 .method public final makeView()V
     .locals 5
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "window"
@@ -425,14 +388,12 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 78
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDisplay:Landroid/view/Display;
 
-    .line 80
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
@@ -441,33 +402,26 @@
 
     const/4 v1, -0x2
 
-    .line 81
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 82
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
     const/16 v1, 0x7e8
 
-    .line 83
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     const/16 v1, 0x718
 
-    .line 84
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/4 v1, -0x3
 
-    .line 89
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
     const/16 v1, 0x33
 
-    .line 90
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 91
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->samsungFlags:I
 
     const/high16 v2, 0x20000
@@ -478,10 +432,8 @@
 
     const/4 v1, 0x1
 
-    .line 92
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
-    .line 94
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -498,22 +450,18 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
-    .line 95
     invoke-virtual {v0}, Landroid/view/View;->bringToFront()V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const v3, 0x1020616
@@ -524,7 +472,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 100
     iget-object v3, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const v4, 0x1020618
@@ -535,13 +482,10 @@
 
     check-cast v3, Landroid/widget/ImageView;
 
-    .line 101
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 102
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 104
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const v3, 0x102061c
@@ -554,7 +498,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mStandbyImageView:Landroid/widget/ImageView;
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const v3, 0x102061a
@@ -567,7 +510,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
-    .line 106
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     const v3, 0x1020619
@@ -580,50 +522,42 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDragPointImageView:Landroid/widget/ImageView;
 
-    .line 108
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mStandbyImageView:Landroid/widget/ImageView;
 
     iget v3, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mScale:F
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mStandbyImageView:Landroid/widget/ImageView;
 
     iget v3, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mScale:F
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setScaleY(F)V
 
-    .line 110
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setScaleY(F)V
 
-    .line 113
     iget v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mType:I
 
     const/4 v3, 0x0
 
     if-nez v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mStandbyImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDragPointImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -633,29 +567,24 @@
     :cond_0
     if-ne v0, v1, :cond_1
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mStandbyImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mProgressImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDragPointImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 123
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     invoke-virtual {v0, v3, v3}, Landroid/view/View;->measure(II)V
 
-    .line 124
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
@@ -664,7 +593,6 @@
 
     iput v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mWidth:I
 
-    .line 126
     iget-object v0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mView:Landroid/view/View;
@@ -679,7 +607,6 @@
 .method public final runOnUiThread(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 200
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -688,14 +615,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 201
     iget-object p0, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 203
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
@@ -706,7 +631,6 @@
 .method public setDurationTime(J)V
     .locals 0
 
-    .line 152
     iput-wide p1, p0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;->mDurationTime:J
 
     return-void
@@ -715,7 +639,6 @@
 .method public setViewOnOff(Z)V
     .locals 1
 
-    .line 142
     new-instance v0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;Z)V
@@ -728,7 +651,6 @@
 .method public startAnimation()V
     .locals 1
 
-    .line 156
     new-instance v0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;)V
@@ -741,7 +663,6 @@
 .method public updateView(FF)V
     .locals 1
 
-    .line 130
     new-instance v0, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/accessibility/autoaction/CornerActionCircleCue$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/accessibility/autoaction/CornerActionCircleCue;FF)V

@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 52
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -32,36 +31,29 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 53
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mContext:Landroid/content/Context;
 
-    .line 56
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mSynObj:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 57
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     if-nez v1, :cond_0
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mContext:Landroid/content/Context;
 
-    .line 59
     new-instance p0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
     sput-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 61
     :cond_0
     monitor-exit v0
 
@@ -84,20 +76,17 @@
 
     monitor-enter v0
 
-    .line 65
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mDefaultProvider:Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;
 
     if-nez v1, :cond_0
 
-    .line 66
     new-instance v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mDefaultProvider:Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;
 
-    .line 68
     :cond_0
     sget-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mDefaultProvider:Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;
     :try_end_0
@@ -120,7 +109,6 @@
 .method public deleteDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
     .locals 0
 
-    .line 76
     sget-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->deleteDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
@@ -133,7 +121,6 @@
 .method public getDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 81
     sget-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Ljava/util/ArrayList;
@@ -146,17 +133,14 @@
 .method public getDomainsByProfileName(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 9
 
-    .line 117
     sget-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     if-eqz p0, :cond_4
 
-    .line 121
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 124
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v0, v0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
@@ -171,7 +155,6 @@
 
     const-string/jumbo v3, "packageUid"
 
-    .line 125
     filled-new-array {v0, v3}, [Ljava/lang/String;
 
     move-result-object v3
@@ -194,7 +177,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 135
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,11 +199,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 138
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
@@ -231,12 +211,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 140
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 141
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,12 +233,10 @@
 
     const/4 v2, 0x1
 
-    .line 142
     invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 143
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -283,14 +259,12 @@
 
     if-ltz v0, :cond_1
 
-    .line 146
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 149
     :cond_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -300,7 +274,6 @@
 
     if-nez v0, :cond_0
 
-    .line 152
     :cond_2
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
@@ -311,7 +284,6 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    .line 153
     throw p0
 
     :cond_3
@@ -327,7 +299,6 @@
 .method public getProfileId()I
     .locals 11
 
-    .line 86
     sget-object v0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v1, "KnoxVpnStorageProvider"
@@ -336,7 +307,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 87
     iget-object v0, v0, Lcom/android/server/enterprise/storage/EdmStorageProviderBase;->mEdmDbHelper:Lcom/android/server/enterprise/storage/EdmStorageHelper;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -347,7 +317,6 @@
 
     const-string/jumbo v0, "profileCount"
 
-    .line 88
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v5
@@ -370,7 +339,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 90
     :try_start_0
     invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
 
@@ -380,7 +348,6 @@
 
     goto :goto_0
 
-    .line 95
     :cond_0
     invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
 
@@ -388,24 +355,20 @@
 
     if-lez p0, :cond_2
 
-    .line 96
     invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 97
     invoke-interface {v3, v4}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     goto :goto_1
 
-    .line 91
     :cond_1
     :goto_0
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
-    .line 92
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -416,7 +379,6 @@
 
     const/4 v6, 0x0
 
-    .line 93
     invoke-virtual {p0, v0, v6, v6, v5}, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->putDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -428,7 +390,6 @@
     :goto_1
     if-eqz v3, :cond_4
 
-    .line 103
     :goto_2
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
@@ -442,7 +403,6 @@
     :catch_0
     move-exception p0
 
-    .line 100
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -473,14 +433,11 @@
     :goto_3
     if-eqz v3, :cond_3
 
-    .line 103
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
-    .line 105
     :cond_3
     throw p0
 
-    .line 107
     :cond_4
     :goto_4
     new-instance p0, Ljava/lang/StringBuilder;
@@ -505,7 +462,6 @@
 .method public putDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Z
     .locals 0
 
-    .line 72
     sget-object p0, Lcom/android/server/enterprise/vpn/knoxvpn/storage/KnoxVpnStorageProvider;->mEDM:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putDataByFields(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Z

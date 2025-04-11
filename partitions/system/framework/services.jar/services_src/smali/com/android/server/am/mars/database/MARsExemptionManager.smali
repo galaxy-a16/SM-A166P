@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 22
     new-instance v0, Lcom/android/server/am/mars/database/MARsExemptionManager$Lock;
 
     const/4 v1, 0x0
@@ -30,10 +29,8 @@
 .method public constructor <init>()V
     .locals 52
 
-    .line 25
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     const-string v1, "com.sec.facatfunction"
@@ -158,7 +155,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/am/mars/database/MARsExemptionManager-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/am/mars/database/MARsExemptionManager;-><init>()V
 
     return-void
@@ -167,7 +163,6 @@
 .method public static getInstance()Lcom/android/server/am/mars/database/MARsExemptionManager;
     .locals 1
 
-    .line 32
     invoke-static {}, Lcom/android/server/am/mars/database/MARsExemptionManager$MARsExemptionManagerHolder;->-$$Nest$sfgetINSTANCE()Lcom/android/server/am/mars/database/MARsExemptionManager;
 
     move-result-object v0
@@ -180,7 +175,6 @@
 .method public getExemptionList()Ljava/util/ArrayList;
     .locals 0
 
-    .line 40
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsExemptionManager;->mExemptionList:Ljava/util/ArrayList;
 
     return-object p0
@@ -189,7 +183,6 @@
 .method public isFgExemptedFromMars(Ljava/lang/String;)Z
     .locals 1
 
-    .line 101
     invoke-static {}, Ljava/com/android/server/am/mars/database/MARsListManager;->getInstance()Ljava/com/android/server/am/mars/database/MARsListManager;
 
     move-result-object p0
@@ -198,7 +191,6 @@
 
     move-result-object p0
 
-    .line 103
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -216,14 +208,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 104
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +245,6 @@
 .method public setExemptionList(Ljava/util/ArrayList;)V
     .locals 3
 
-    .line 113
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -273,12 +262,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 114
     sget-object v1, Lcom/android/server/am/mars/database/MARsExemptionManager;->MARsExemptionManagerLock:Lcom/android/server/am/mars/database/MARsExemptionManager$Lock;
 
     monitor-enter v1
 
-    .line 115
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/mars/database/MARsExemptionManager;->mExemptionList:Ljava/util/ArrayList;
 
@@ -288,12 +275,10 @@
 
     if-nez v2, :cond_0
 
-    .line 116
     iget-object v2, p0, Lcom/android/server/am/mars/database/MARsExemptionManager;->mExemptionList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
     :cond_0
     monitor-exit v1
 

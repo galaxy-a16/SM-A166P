@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 13
     invoke-direct {p0}, Lcom/samsung/android/server/pm/install/UnknownSourceAppManager$AbstractASKSHelper;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public checkUnknownSourcePackage(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Landroid/content/pm/Signature;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;I)I
     .locals 14
 
-    .line 20
     :try_start_0
     invoke-static {}, Landroid/content/pm/ASKSManager;->getASKSManager()Landroid/content/pm/IASKSManager;
 
@@ -59,7 +57,6 @@
     :catch_0
     move-exception v0
 
-    .line 26
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +84,6 @@
 .method public isTrustedStore(Ljava/lang/String;I)Z
     .locals 0
 
-    .line 49
     :try_start_0
     invoke-static {}, Landroid/content/pm/ASKSManager;->getASKSManager()Landroid/content/pm/IASKSManager;
 
@@ -104,7 +100,6 @@
     :catch_0
     move-exception p0
 
-    .line 51
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

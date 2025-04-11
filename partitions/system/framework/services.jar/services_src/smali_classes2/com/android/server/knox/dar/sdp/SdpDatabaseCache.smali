@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$smLogI(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -26,10 +25,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-instance v0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache$1;
 
     const/high16 v1, 0x3f400000    # 0.75f
@@ -42,21 +39,18 @@
 
     iput-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
-    .line 49
     new-instance v0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache$DatabaseHelper;
 
     invoke-direct {v0, p1}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache$DatabaseHelper;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDatabaseHelper:Lcom/android/server/knox/dar/sdp/SdpDatabaseCache$DatabaseHelper;
 
-    .line 50
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbReadable:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 51
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p1
@@ -69,7 +63,6 @@
 .method public static LogD(Ljava/lang/String;)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
@@ -78,7 +71,6 @@
 
     const-string v0, "SdpDatabaseCache"
 
-    .line 308
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -87,7 +79,6 @@
 .method public static makeTag(ILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 299
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,7 +101,6 @@
 .method public static reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
 
-    .line 303
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +119,6 @@
 
     invoke-static {v0, p0}, Lcom/android/server/knox/dar/sdp/SDPLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
     invoke-static {p1}, Lcom/android/server/knox/dar/sdp/SDPLog;->e(Ljava/lang/Exception;)V
 
     return-void
@@ -140,17 +129,14 @@
 .method public final cache(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 194
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->makeTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 195
     iget-object p2, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter p2
 
-    .line 196
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -178,12 +164,10 @@
 
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->LogD(Ljava/lang/String;)V
 
-    .line 197
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     monitor-exit p2
 
     return-void
@@ -201,13 +185,11 @@
 .method public destroy(I)V
     .locals 4
 
-    .line 238
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string/jumbo v1, "sdp_info"
@@ -234,7 +216,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 240
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
@@ -242,7 +223,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -262,12 +242,10 @@
     :try_start_1
     const-string/jumbo v1, "remove"
 
-    .line 245
     invoke-static {v1, v0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 247
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -279,13 +257,11 @@
 
     return-void
 
-    .line 252
     :cond_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 253
     :try_start_2
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
@@ -297,12 +273,10 @@
 
     move-result-object p0
 
-    .line 254
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 255
     :cond_1
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -311,24 +285,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 256
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 257
     invoke-virtual {v1, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 258
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
-    .line 259
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,7 +321,6 @@
 
     goto :goto_1
 
-    .line 262
     :cond_2
     monitor-exit v0
 
@@ -366,27 +335,23 @@
 
     throw p0
 
-    .line 247
     :goto_2
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 248
     throw p1
 .end method
 
 .method public getBoolean(ILjava/lang/String;Z)Z
     .locals 0
 
-    .line 101
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->getInternal(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p1, "1"
 
-    .line 102
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -421,7 +386,6 @@
 .method public getInt(ILjava/lang/String;I)I
     .locals 0
 
-    .line 109
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->getInternal(ILjava/lang/String;)Ljava/lang/String;
 
@@ -429,7 +393,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 110
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -446,7 +409,6 @@
 .method public final getInternal(ILjava/lang/String;)Ljava/lang/String;
     .locals 12
 
-    .line 135
     invoke-virtual {p0, p1, p2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->hitOrNull(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -460,7 +422,6 @@
 
     const/4 v2, 0x0
 
-    .line 143
     :try_start_0
     iget-object v3, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbReadable:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -482,7 +443,6 @@
 
     aput-object p2, v7, v1
 
-    .line 145
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v8
@@ -495,14 +455,12 @@
 
     const/4 v10, 0x0
 
-    .line 143
     invoke-virtual/range {v3 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 147
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
@@ -523,7 +481,6 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 154
     :goto_0
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
@@ -540,7 +497,6 @@
     :try_start_1
     const-string v4, "get"
 
-    .line 152
     invoke-static {v4, v3}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -553,7 +509,6 @@
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 157
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->cache(ILjava/lang/String;Ljava/lang/String;)V
 
     :cond_3
@@ -562,10 +517,8 @@
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 154
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 155
     :cond_4
     throw p0
 .end method
@@ -573,17 +526,14 @@
 .method public final hitOrNull(ILjava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 183
     invoke-static {p1, p2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->makeTag(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 184
     iget-object p2, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
     monitor-enter p2
 
-    .line 185
     :try_start_0
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
@@ -593,7 +543,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -614,7 +563,6 @@
 
     invoke-static {v0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->LogD(Ljava/lang/String;)V
 
-    .line 187
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mCache:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -627,7 +575,6 @@
 
     return-object p0
 
-    .line 189
     :cond_0
     monitor-exit p2
 
@@ -650,7 +597,6 @@
 
     const/4 v0, 0x0
 
-    .line 214
     :try_start_0
     iget-object v1, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbReadable:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -676,7 +622,6 @@
 
     new-array v5, v10, [Ljava/lang/String;
 
-    .line 217
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -689,14 +634,12 @@
 
     const/4 v8, 0x0
 
-    .line 214
     invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 219
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -704,17 +647,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 220
     invoke-interface {v0, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 221
     invoke-interface {v0, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 222
     invoke-virtual {p0, p1, v1, v2}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->putInternal(ILjava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -738,14 +678,12 @@
     :try_start_1
     const-string/jumbo p1, "preload"
 
-    .line 228
     invoke-static {p1, p0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v0, :cond_1
 
-    .line 230
     :goto_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -757,7 +695,6 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 231
     :cond_2
     throw p0
 .end method
@@ -774,7 +711,6 @@
     :cond_0
     const-string p3, "0"
 
-    .line 55
     :goto_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->putInternal(ILjava/lang/String;Ljava/lang/String;)V
 
@@ -784,7 +720,6 @@
 .method public putInt(ILjava/lang/String;I)V
     .locals 0
 
-    .line 59
     invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p3
@@ -805,7 +740,6 @@
 
     goto :goto_2
 
-    .line 75
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
@@ -813,12 +747,10 @@
 
     const-string/jumbo v2, "name"
 
-    .line 76
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v2, "user"
 
-    .line 77
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -827,18 +759,15 @@
 
     const-string/jumbo v2, "value"
 
-    .line 78
     invoke-virtual {v1, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    .line 82
     :try_start_0
     iget-object v3, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 83
     iget-object v3, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string/jumbo v4, "name=? AND user=?"
@@ -849,7 +778,6 @@
 
     aput-object p2, v5, v2
 
-    .line 84
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -858,17 +786,14 @@
 
     aput-object v6, v5, v7
 
-    .line 83
     invoke-virtual {v3, v0, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 85
     iget-object v3, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v0, v4, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
@@ -876,7 +801,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -896,12 +820,10 @@
     :try_start_1
     const-string/jumbo v1, "put"
 
-    .line 91
     invoke-static {v1, v0}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->reportError(Ljava/lang/String;Ljava/lang/Exception;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -909,19 +831,16 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 96
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->cache(ILjava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
 
-    .line 93
     :goto_1
     iget-object p0, p0, Lcom/android/server/knox/dar/sdp/SdpDatabaseCache;->mDbWritable:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 94
     throw p1
 
     :cond_2

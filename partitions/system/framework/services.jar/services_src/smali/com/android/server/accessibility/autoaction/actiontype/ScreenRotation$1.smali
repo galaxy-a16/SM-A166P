@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;)V
     .locals 0
 
-    .line 105
     iput-object p1, p0, Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation$1;->this$0:Lcom/android/server/accessibility/autoaction/actiontype/ScreenRotation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 108
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void

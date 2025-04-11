@@ -11,14 +11,12 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,20 +29,17 @@
 
     monitor-enter v0
 
-    .line 31
     :try_start_0
     sget-object v1, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->mInstance:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     if-nez v1, :cond_0
 
-    .line 32
     new-instance v1, Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
     invoke-direct {v1}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;-><init>()V
 
     sput-object v1, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->mInstance:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
 
-    .line 34
     :cond_0
     sget-object v1, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->mInstance:Lcom/android/server/location/gnss/sec/GnssVendorConfig;
     :try_end_0
@@ -67,7 +62,6 @@
 .method public isBroadcomGnss()Z
     .locals 1
 
-    .line 58
     new-instance p0, Ljava/io/File;
 
     const-string/jumbo v0, "vendor/etc/gnss/gps.xml"
@@ -84,7 +78,6 @@
 .method public isIzatServiceEnabled()Z
     .locals 1
 
-    .line 38
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isQcomHardware()Z
 
     move-result v0
@@ -115,14 +108,12 @@
 
     const-string v0, "Unknown"
 
-    .line 76
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "SM-S921B"
 
-    .line 78
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -131,7 +122,6 @@
 
     const-string v0, "SM-S921N"
 
-    .line 79
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -140,7 +130,6 @@
 
     const-string v0, "SM-S926B"
 
-    .line 80
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -149,7 +138,6 @@
 
     const-string v0, "SM-S926N"
 
-    .line 81
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -173,7 +161,6 @@
 .method public isLsiGnss()Z
     .locals 1
 
-    .line 54
     new-instance p0, Ljava/io/File;
 
     const-string/jumbo v0, "vendor/etc/gnss/gps.cfg"
@@ -190,7 +177,6 @@
 .method public isMtkGnss()Z
     .locals 1
 
-    .line 50
     new-instance p0, Ljava/io/File;
 
     const-string/jumbo v0, "vendor/etc/gnss/mnl.prop"
@@ -207,7 +193,6 @@
 .method public isNonQcomGnss()Z
     .locals 1
 
-    .line 46
     invoke-virtual {p0}, Lcom/android/server/location/gnss/sec/GnssVendorConfig;->isBroadcomGnss()Z
 
     move-result v0
@@ -246,7 +231,6 @@
 
     const-string/jumbo p0, "qcom"
 
-    .line 42
     sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -263,12 +247,10 @@
 
     const-string v0, "Unknown"
 
-    .line 62
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 64
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p0

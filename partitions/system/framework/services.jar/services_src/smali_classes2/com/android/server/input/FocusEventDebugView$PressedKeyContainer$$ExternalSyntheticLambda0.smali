@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer;
 
     invoke-static {p0}, Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer;->$r8$lambda$yvzK3kKMvU9bM54q6egSaC3O8c0(Lcom/android/server/input/FocusEventDebugView$PressedKeyContainer;)V

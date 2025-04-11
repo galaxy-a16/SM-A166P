@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
     .locals 0
 
-    .line 2882
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$4;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +26,6 @@
 .method public onNullBinding(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 2897
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$4;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {p1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-$$Nest$fgetmContext(Lcom/android/server/appwidget/AppWidgetServiceImpl;)Landroid/content/Context;
@@ -42,12 +40,10 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 2886
     invoke-static {p2}, Lcom/android/internal/widget/IRemoteViewsFactory$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/IRemoteViewsFactory;
 
     move-result-object p1
 
-    .line 2888
     :try_start_0
     invoke-interface {p1}, Lcom/android/internal/widget/IRemoteViewsFactory;->onDataSetChangedAsync()V
     :try_end_0
@@ -62,10 +58,8 @@
 
     const-string v0, "Error calling onDataSetChangedAsync()"
 
-    .line 2890
     invoke-static {p2, v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2892
     :goto_0
     iget-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$4;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
@@ -81,6 +75,5 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 0
     return-void
 .end method

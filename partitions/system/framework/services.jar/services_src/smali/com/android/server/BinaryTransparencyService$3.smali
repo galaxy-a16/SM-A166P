@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/BinaryTransparencyService;)V
     .locals 0
 
-    .line 1508
     iput-object p1, p0, Lcom/android/server/BinaryTransparencyService$3;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-direct {p0}, Landroid/content/pm/IStagedApexObserver$Stub;-><init>()V
@@ -24,7 +23,6 @@
 .method public onApexStaged(Landroid/content/pm/ApexStagedEvent;)V
     .locals 2
 
-    .line 1511
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1514
     iget-object p1, p0, Lcom/android/server/BinaryTransparencyService$3;->this$0:Lcom/android/server/BinaryTransparencyService;
 
     invoke-static {p1}, Lcom/android/server/BinaryTransparencyService;->-$$Nest$fgetmContext(Lcom/android/server/BinaryTransparencyService;)Landroid/content/Context;

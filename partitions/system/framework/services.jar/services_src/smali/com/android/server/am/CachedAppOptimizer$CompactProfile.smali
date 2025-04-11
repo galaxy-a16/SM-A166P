@@ -19,7 +19,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
     .locals 4
 
-    .line 308
     sget-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->NONE:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     sget-object v1, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->SOME:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
@@ -38,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 309
     new-instance v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     const-string v1, "NONE"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->NONE:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
-    .line 310
     new-instance v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     const-string v1, "SOME"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->SOME:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
-    .line 311
     new-instance v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     const-string v1, "ANON"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->ANON:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
-    .line 312
     new-instance v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     const-string v1, "FULL"
@@ -82,7 +77,6 @@
 
     sput-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->FULL:Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
-    .line 308
     invoke-static {}, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->$values()[Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 308
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -104,7 +97,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
     .locals 1
 
-    .line 308
     const-class v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +111,6 @@
 .method public static values()[Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
     .locals 1
 
-    .line 308
     sget-object v0, Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->$VALUES:[Lcom/android/server/am/CachedAppOptimizer$CompactProfile;
 
     invoke-virtual {v0}, [Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->clone()Ljava/lang/Object;

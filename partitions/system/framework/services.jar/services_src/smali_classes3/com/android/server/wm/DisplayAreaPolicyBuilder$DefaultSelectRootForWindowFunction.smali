@@ -16,13 +16,10 @@
 .method public constructor <init>(Lcom/android/server/wm/RootDisplayArea;Ljava/util/List;)V
     .locals 0
 
-    .line 366
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 367
     iput-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayRoot:Lcom/android/server/wm/RootDisplayArea;
 
-    .line 368
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -37,7 +34,6 @@
 .method public apply(Ljava/lang/Integer;Landroid/os/Bundle;)Lcom/android/server/wm/RootDisplayArea;
     .locals 1
 
-    .line 373
     iget-object p1, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayAreaGroupRoots:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -46,7 +42,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 374
     iget-object p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayRoot:Lcom/android/server/wm/RootDisplayArea;
 
     return-object p0
@@ -56,19 +51,16 @@
 
     const-string/jumbo p1, "root_display_area_id"
 
-    .line 378
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 379
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 380
     iget-object p2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayRoot:Lcom/android/server/wm/RootDisplayArea;
 
     iget v0, p2, Lcom/android/server/wm/DisplayArea;->mFeatureId:I
@@ -77,7 +69,6 @@
 
     return-object p2
 
-    .line 383
     :cond_1
     iget-object p2, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayAreaGroupRoots:Ljava/util/List;
 
@@ -90,7 +81,6 @@
     :goto_0
     if-ltz p2, :cond_3
 
-    .line 384
     iget-object v0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayAreaGroupRoots:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -103,7 +93,6 @@
 
     if-ne v0, p1, :cond_2
 
-    .line 385
     iget-object p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayAreaGroupRoots:Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -119,7 +108,6 @@
 
     goto :goto_0
 
-    .line 389
     :cond_3
     iget-object p0, p0, Lcom/android/server/wm/DisplayAreaPolicyBuilder$DefaultSelectRootForWindowFunction;->mDisplayRoot:Lcom/android/server/wm/RootDisplayArea;
 
@@ -129,7 +117,6 @@
 .method public bridge synthetic apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 360
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Landroid/os/Bundle;

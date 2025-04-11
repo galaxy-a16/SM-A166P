@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;)V
     .locals 1
 
-    .line 427
     invoke-direct {p0}, Landroid/media/IRemoteDisplayCallback$Stub;-><init>()V
 
-    .line 428
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -29,7 +27,6 @@
 .method public dispose()V
     .locals 0
 
-    .line 432
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;->mConnectionRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->clear()V
@@ -40,7 +37,6 @@
 .method public onStateChanged(Landroid/media/RemoteDisplayState;)V
     .locals 0
 
-    .line 437
     iget-object p0, p0, Lcom/android/server/media/RemoteDisplayProviderProxy$ProviderCallback;->mConnectionRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -51,7 +47,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 439
     invoke-virtual {p0, p1}, Lcom/android/server/media/RemoteDisplayProviderProxy$Connection;->postStateChanged(Landroid/media/RemoteDisplayState;)V
 
     :cond_0

@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/display/LocalDisplayAdapter;)V
     .locals 0
 
-    .line 1758
     iput-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +24,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/display/LocalDisplayAdapter;Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;-><init>(Lcom/android/server/display/LocalDisplayAdapter;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public onFrameRateOverridesChanged(JJ[Landroid/view/DisplayEventReceiver$FrameRateOverride;)V
     .locals 0
 
-    .line 1802
     iget-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -45,7 +42,6 @@
 
     monitor-enter p1
 
-    .line 1803
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
@@ -61,16 +57,13 @@
 
     if-nez p0, :cond_0
 
-    .line 1809
     monitor-exit p1
 
     return-void
 
-    .line 1811
     :cond_0
     invoke-virtual {p0, p5}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;->onFrameRateOverridesChanged([Landroid/view/DisplayEventReceiver$FrameRateOverride;)V
 
-    .line 1812
     monitor-exit p1
 
     return-void
@@ -88,7 +81,6 @@
 .method public onHotplug(JJZ)V
     .locals 0
 
-    .line 1761
     iget-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -99,7 +91,6 @@
 
     if-eqz p5, :cond_0
 
-    .line 1763
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
@@ -107,13 +98,11 @@
 
     goto :goto_0
 
-    .line 1765
     :cond_0
     iget-object p0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-static {p0, p3, p4}, Lcom/android/server/display/LocalDisplayAdapter;->-$$Nest$mtryDisconnectDisplayLocked(Lcom/android/server/display/LocalDisplayAdapter;J)V
 
-    .line 1767
     :goto_0
     monitor-exit p1
 
@@ -132,7 +121,6 @@
 .method public onModeChanged(JJIJ)V
     .locals 0
 
-    .line 1780
     iget-object p1, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
     invoke-virtual {p1}, Lcom/android/server/display/DisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -141,7 +129,6 @@
 
     monitor-enter p1
 
-    .line 1781
     :try_start_0
     iget-object p0, p0, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayEventListener;->this$0:Lcom/android/server/display/LocalDisplayAdapter;
 
@@ -157,7 +144,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1787
     monitor-exit p1
 
     return-void
@@ -169,10 +155,8 @@
 
     div-float/2addr p2, p3
 
-    .line 1790
     invoke-virtual {p0, p5, p2}, Lcom/android/server/display/LocalDisplayAdapter$LocalDisplayDevice;->onActiveDisplayModeChangedLocked(IF)V
 
-    .line 1791
     monitor-exit p1
 
     return-void

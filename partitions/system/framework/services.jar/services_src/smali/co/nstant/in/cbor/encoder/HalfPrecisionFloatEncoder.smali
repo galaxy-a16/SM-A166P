@@ -7,7 +7,6 @@
 .method public constructor <init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 12
     invoke-direct {p0, p1, p2}, Lco/nstant/in/cbor/encoder/AbstractEncoder;-><init>(Lco/nstant/in/cbor/CborEncoder;Ljava/io/OutputStream;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static fromFloat(F)I
     .locals 5
 
-    .line 29
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
@@ -122,10 +120,8 @@
 
     const/16 v0, 0xf9
 
-    .line 17
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
-    .line 18
     invoke-virtual {p1}, Lco/nstant/in/cbor/model/AbstractFloat;->getValue()F
 
     move-result p1
@@ -138,14 +134,12 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    .line 19
     invoke-virtual {p0, v0}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     shr-int/lit8 p1, p1, 0x0
 
     and-int/lit16 p1, p1, 0xff
 
-    .line 20
     invoke-virtual {p0, p1}, Lco/nstant/in/cbor/encoder/AbstractEncoder;->write(I)V
 
     return-void

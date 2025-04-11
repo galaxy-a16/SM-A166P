@@ -20,7 +20,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/pm/ShortcutPackage;Ljava/util/ArrayList;Lcom/android/server/pm/ShortcutService;[Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/pm/ShortcutPackage$$ExternalSyntheticLambda29;->f$0:Lcom/android/server/pm/ShortcutPackage;
@@ -39,7 +38,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .line 0
     iget-object v0, p0, Lcom/android/server/pm/ShortcutPackage$$ExternalSyntheticLambda29;->f$0:Lcom/android/server/pm/ShortcutPackage;
 
     iget-object v1, p0, Lcom/android/server/pm/ShortcutPackage$$ExternalSyntheticLambda29;->f$1:Ljava/util/ArrayList;

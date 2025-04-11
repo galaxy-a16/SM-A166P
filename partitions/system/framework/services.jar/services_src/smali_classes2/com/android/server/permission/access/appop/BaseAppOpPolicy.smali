@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/permission/access/appop/BaseAppOpPersistence;)V
     .locals 0
 
-    .line 27
     invoke-direct {p0}, Lcom/android/server/permission/access/SchemePolicy;-><init>()V
 
-    .line 26
     iput-object p1, p0, Lcom/android/server/permission/access/appop/BaseAppOpPolicy;->persistence:Lcom/android/server/permission/access/appop/BaseAppOpPersistence;
 
     return-void
@@ -25,7 +23,6 @@
 .method public getObjectScheme()Ljava/lang/String;
     .locals 0
 
-    .line 0
     const-string p0, "app-op"
 
     return-object p0
@@ -34,7 +31,6 @@
 .method public parseUserState(Lcom/android/modules/utils/BinaryXmlPullParser;Lcom/android/server/permission/access/AccessState;I)V
     .locals 0
 
-    .line 32
     iget-object p0, p0, Lcom/android/server/permission/access/appop/BaseAppOpPolicy;->persistence:Lcom/android/server/permission/access/appop/BaseAppOpPersistence;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/permission/access/appop/BaseAppOpPersistence;->parseUserState(Lcom/android/modules/utils/BinaryXmlPullParser;Lcom/android/server/permission/access/AccessState;I)V
@@ -45,7 +41,6 @@
 .method public serializeUserState(Lcom/android/modules/utils/BinaryXmlSerializer;Lcom/android/server/permission/access/AccessState;I)V
     .locals 0
 
-    .line 36
     iget-object p0, p0, Lcom/android/server/permission/access/appop/BaseAppOpPolicy;->persistence:Lcom/android/server/permission/access/appop/BaseAppOpPersistence;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/permission/access/appop/BaseAppOpPersistence;->serializeUserState(Lcom/android/modules/utils/BinaryXmlSerializer;Lcom/android/server/permission/access/AccessState;I)V

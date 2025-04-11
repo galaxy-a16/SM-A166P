@@ -13,7 +13,6 @@
 .method public static bridge synthetic -$$Nest$fgetmProcStatesCache(Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;)Landroid/util/SparseArray;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
     return-object p0
@@ -22,12 +21,10 @@
 .method public constructor <init>(Lcom/android/server/vibrator/VibrationSettings;)V
     .locals 0
 
-    .line 776
     iput-object p1, p0, Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;->this$0:Lcom/android/server/vibrator/VibrationSettings;
 
     invoke-direct {p0}, Landroid/app/UidObserver;-><init>()V
 
-    .line 777
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -42,7 +39,6 @@
 .method public isUidForeground(I)Z
     .locals 2
 
-    .line 780
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
     const/4 v0, 0x6
@@ -77,7 +73,6 @@
 .method public onUidGone(IZ)V
     .locals 0
 
-    .line 786
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->delete(I)V
@@ -88,7 +83,6 @@
 .method public onUidStateChanged(IIJI)V
     .locals 0
 
-    .line 791
     iget-object p0, p0, Lcom/android/server/vibrator/VibrationSettings$MyUidObserver;->mProcStatesCache:Landroid/util/SparseArray;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

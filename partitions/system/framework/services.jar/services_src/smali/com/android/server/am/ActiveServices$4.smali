@@ -42,7 +42,6 @@
 .method public constructor <init>(Lcom/android/server/am/ActiveServices;Lcom/android/server/am/ServiceRecord;Ljava/lang/String;Ljava/lang/String;ILandroid/content/Intent;ZIZLandroid/app/IServiceConnection;ILjava/lang/String;IZLandroid/app/BackgroundStartPrivileges;)V
     .locals 0
 
-    .line 1466
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
     iput-object p2, p0, Lcom/android/server/am/ActiveServices$4;->val$s:Lcom/android/server/am/ServiceRecord;
@@ -83,7 +82,6 @@
 .method public run()V
     .locals 12
 
-    .line 1469
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v0, v0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -92,7 +90,6 @@
 
     monitor-enter v0
 
-    .line 1470
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -108,7 +105,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1471
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
@@ -117,7 +113,6 @@
 
     return-void
 
-    .line 1475
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
@@ -146,7 +141,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1479
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -155,7 +149,6 @@
 
     return-void
 
-    .line 1481
     :cond_1
     :try_start_2
     iget-boolean v1, p0, Lcom/android/server/am/ActiveServices$4;->val$isBinding:Z
@@ -166,7 +159,6 @@
 
     const/4 v1, 0x6
 
-    .line 1483
     :try_start_3
     iget-object v2, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -193,7 +185,6 @@
     .catch Landroid/os/TransactionTooLargeException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1492
     :try_start_4
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -213,10 +204,8 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjPendingTargetsLocked(I)V
 
-    .line 1493
     throw v2
 
-    .line 1492
     :catch_0
     iget-object p0, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -226,7 +215,6 @@
 
     goto :goto_0
 
-    .line 1496
     :cond_2
     :try_start_5
     iget-object v1, p0, Lcom/android/server/am/ActiveServices$4;->this$0:Lcom/android/server/am/ActiveServices;
@@ -256,7 +244,6 @@
     .catch Landroid/os/TransactionTooLargeException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1503
     :catch_1
     :goto_1
     :try_start_6

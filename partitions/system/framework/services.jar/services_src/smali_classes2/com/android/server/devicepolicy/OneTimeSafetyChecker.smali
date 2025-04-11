@@ -28,7 +28,6 @@
 .method public static synthetic $r8$lambda$U5-2Gk1Rn0BOAitb4utOaWbYxhU(Lcom/android/server/devicepolicy/OneTimeSafetyChecker;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->lambda$new$0()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 45
     const-class v0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -52,10 +50,8 @@
 .method public constructor <init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;II)V
     .locals 4
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -66,7 +62,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mHandler:Landroid/os/Handler;
 
-    .line 59
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v1, p1
@@ -75,20 +70,16 @@
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
-    .line 60
     iput p2, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mOperation:I
 
-    .line 61
     iput p3, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mReason:I
 
-    .line 62
     invoke-virtual {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDevicePolicySafetyChecker()Landroid/app/admin/DevicePolicySafetyChecker;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mRealSafetyChecker:Landroid/app/admin/DevicePolicySafetyChecker;
 
-    .line 63
     sget-object v1, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -109,7 +100,6 @@
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 64
     invoke-static {p3}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -138,10 +128,8 @@
 
     move-result-object p3
 
-    .line 63
     invoke-static {v1, p3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     new-instance p3, Lcom/android/server/devicepolicy/OneTimeSafetyChecker$$ExternalSyntheticLambda0;
 
     invoke-direct {p3, p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/devicepolicy/OneTimeSafetyChecker;)V
@@ -154,7 +142,6 @@
 .method private synthetic lambda$new$0()V
     .locals 0
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->selfDestruct()V
 
     return-void
@@ -165,12 +152,10 @@
 .method public final disableSelf()V
     .locals 3
 
-    .line 113
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mDone:Z
 
     if-eqz v0, :cond_0
 
-    .line 114
     sget-object p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
     const-string v0, "disableSelf(): already disabled"
@@ -179,7 +164,6 @@
 
     return-void
 
-    .line 117
     :cond_0
     sget-object v0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
@@ -201,7 +185,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mService:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mRealSafetyChecker:Landroid/app/admin/DevicePolicySafetyChecker;
@@ -210,7 +193,6 @@
 
     const/4 v0, 0x1
 
-    .line 119
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mDone:Z
 
     return-void
@@ -219,12 +201,10 @@
 .method public getUnsafeOperationReason(I)I
     .locals 6
 
-    .line 73
     invoke-static {p1}, Landroid/app/admin/DevicePolicyManager;->operationToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     sget-object v1, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -247,17 +227,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     iget v2, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mOperation:I
 
     if-ne p1, v2, :cond_0
 
-    .line 77
     iget p1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mReason:I
 
     goto :goto_0
 
-    .line 79
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -275,7 +252,6 @@
 
     iget v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mOperation:I
 
-    .line 80
     invoke-static {v0}, Landroid/app/admin/DevicePolicyManager;->operationToString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -286,28 +262,23 @@
 
     move-result-object p1
 
-    .line 79
     invoke-static {v1, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, -0x1
 
-    .line 82
     :goto_0
     invoke-static {p1}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 83
     const-class v2, Landroid/app/admin/DevicePolicyManagerLiteInternal;
 
-    .line 84
     invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/app/admin/DevicePolicyManagerLiteInternal;
 
-    .line 86
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -330,10 +301,8 @@
 
     const/4 v3, 0x0
 
-    .line 87
     invoke-interface {v2, p0, p1, v3}, Landroid/app/admin/DevicePolicyManagerLiteInternal;->notifyUnsafeOperationStateChanged(Landroid/app/admin/DevicePolicySafetyChecker;IZ)V
 
-    .line 89
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -354,10 +323,8 @@
 
     const/4 v3, 0x1
 
-    .line 90
     invoke-interface {v2, p0, p1, v3}, Landroid/app/admin/DevicePolicyManagerLiteInternal;->notifyUnsafeOperationStateChanged(Landroid/app/admin/DevicePolicySafetyChecker;IZ)V
 
-    .line 92
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -374,7 +341,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->disableSelf()V
 
     return p1
@@ -383,7 +349,6 @@
 .method public isSafeOperation(I)Z
     .locals 4
 
-    .line 100
     iget v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mReason:I
 
     if-eq v0, p1, :cond_0
@@ -395,7 +360,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 101
     :goto_0
     sget-object v1, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
@@ -425,7 +389,6 @@
 
     invoke-static {v1, p1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->disableSelf()V
 
     return v0
@@ -434,7 +397,6 @@
 .method public onFactoryReset(Lcom/android/internal/os/IResultReceiver;)V
     .locals 0
 
-    .line 109
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -445,14 +407,12 @@
 .method public final selfDestruct()V
     .locals 3
 
-    .line 123
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mDone:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 126
     :cond_0
     sget-object v0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->TAG:Ljava/lang/String;
 
@@ -476,7 +436,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->disableSelf()V
 
     return-void
@@ -485,7 +444,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -506,7 +464,6 @@
 
     iget v1, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mReason:I
 
-    .line 133
     invoke-static {v1}, Landroid/app/admin/DevicePolicyManager;->operationSafetyReasonToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -519,7 +476,6 @@
 
     iget p0, p0, Lcom/android/server/devicepolicy/OneTimeSafetyChecker;->mOperation:I
 
-    .line 134
     invoke-static {p0}, Landroid/app/admin/DevicePolicyManager;->operationToString(I)Ljava/lang/String;
 
     move-result-object p0

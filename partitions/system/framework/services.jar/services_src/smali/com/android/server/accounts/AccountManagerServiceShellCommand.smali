@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/accounts/AccountManagerService;)V
     .locals 0
 
-    .line 32
     invoke-direct {p0}, Landroid/os/ShellCommand;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->mService:Lcom/android/server/accounts/AccountManagerService;
 
     return-void
@@ -27,7 +25,6 @@
 
     if-nez p1, :cond_0
 
-    .line 39
     invoke-virtual {p0, p1}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0
@@ -37,7 +34,6 @@
     :cond_0
     const-string v0, "get-bind-instant-service-allowed"
 
-    .line 41
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -56,7 +52,6 @@
 
     return p0
 
-    .line 46
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->runSetBindInstantServiceAllowed()I
 
@@ -64,7 +59,6 @@
 
     return p0
 
-    .line 43
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->runGetBindInstantServiceAllowed()I
 
@@ -76,44 +70,36 @@
 .method public onHelp()V
     .locals 1
 
-    .line 103
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
 
     const-string v0, "Account manager service commands:"
 
-    .line 104
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  help"
 
-    .line 105
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Print this help text."
 
-    .line 106
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  set-bind-instant-service-allowed [--user <USER_ID> (current user if not specified)] true|false "
 
-    .line 107
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Set whether binding to services provided by instant apps is allowed."
 
-    .line 109
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "  get-bind-instant-service-allowed [--user <USER_ID> (current user if not specified)]"
 
-    .line 110
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Get whether binding to services provided by instant apps is allowed."
 
-    .line 112
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void
@@ -122,7 +108,6 @@
 .method public final parseUserId()Ljava/lang/Integer;
     .locals 4
 
-    .line 78
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
     move-result-object v0
@@ -131,7 +116,6 @@
 
     const-string v1, "--user"
 
-    .line 80
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -140,7 +124,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 81
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
     move-result-object v0
@@ -153,7 +136,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 83
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result p0
@@ -169,7 +151,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 85
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -183,7 +164,6 @@
     :cond_1
     if-gez v0, :cond_2
 
-    .line 88
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -206,7 +186,6 @@
 
     return-object v2
 
-    .line 91
     :cond_2
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -214,7 +193,6 @@
 
     return-object p0
 
-    .line 94
     :cond_3
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
@@ -238,7 +216,6 @@
 
     return-object v2
 
-    .line 98
     :cond_4
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -254,7 +231,6 @@
 .method public final runGetBindInstantServiceAllowed()I
     .locals 2
 
-    .line 53
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->parseUserId()Ljava/lang/Integer;
 
     move-result-object v0
@@ -265,7 +241,6 @@
 
     return p0
 
-    .line 57
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getOutPrintWriter()Ljava/io/PrintWriter;
 
@@ -273,7 +248,6 @@
 
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->mService:Lcom/android/server/accounts/AccountManagerService;
 
-    .line 58
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -282,7 +256,6 @@
 
     move-result p0
 
-    .line 57
     invoke-static {p0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -297,7 +270,6 @@
 .method public final runSetBindInstantServiceAllowed()I
     .locals 3
 
-    .line 63
     invoke-virtual {p0}, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->parseUserId()Ljava/lang/Integer;
 
     move-result-object v0
@@ -308,7 +280,6 @@
 
     return v1
 
-    .line 67
     :cond_0
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -316,7 +287,6 @@
 
     if-nez v2, :cond_1
 
-    .line 69
     invoke-virtual {p0}, Landroid/os/ShellCommand;->getErrPrintWriter()Ljava/io/PrintWriter;
 
     move-result-object p0
@@ -327,7 +297,6 @@
 
     return v1
 
-    .line 72
     :cond_1
     iget-object p0, p0, Lcom/android/server/accounts/AccountManagerServiceShellCommand;->mService:Lcom/android/server/accounts/AccountManagerService;
 
@@ -335,12 +304,10 @@
 
     move-result v0
 
-    .line 73
     invoke-static {v2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 72
     invoke-virtual {p0, v0, v1}, Lcom/android/server/accounts/AccountManagerService;->setBindInstantServiceAllowed(IZ)V
 
     const/4 p0, 0x0

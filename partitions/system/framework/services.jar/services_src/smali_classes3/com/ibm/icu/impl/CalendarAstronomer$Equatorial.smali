@@ -13,13 +13,10 @@
 .method public constructor <init>(DD)V
     .locals 0
 
-    .line 1564
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1565
     iput-wide p1, p0, Lcom/ibm/icu/impl/CalendarAstronomer$Equatorial;->ascension:D
 
-    .line 1566
     iput-wide p3, p0, Lcom/ibm/icu/impl/CalendarAstronomer$Equatorial;->declination:D
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 1576
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

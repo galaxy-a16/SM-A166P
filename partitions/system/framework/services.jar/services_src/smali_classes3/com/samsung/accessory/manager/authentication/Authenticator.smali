@@ -15,10 +15,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mContext:Landroid/content/Context;
 
     return-void
@@ -29,12 +27,10 @@
 .method public close()V
     .locals 0
 
-    .line 97
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz p0, :cond_0
 
-    .line 98
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->close()V
 
     :cond_0
@@ -44,14 +40,12 @@
 .method public connect()V
     .locals 1
 
-    .line 87
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 88
     invoke-virtual {p0, v0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->connect(Ljava/lang/String;)Z
 
     :cond_0
@@ -61,12 +55,10 @@
 .method public disconnect()V
     .locals 0
 
-    .line 92
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz p0, :cond_0
 
-    .line 93
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->disconnect()Z
 
     :cond_0
@@ -76,7 +68,6 @@
 .method public getConnectivity()Lcom/samsung/accessory/manager/connectivity/Connectivity;
     .locals 0
 
-    .line 56
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     return-object p0
@@ -91,7 +82,6 @@
 .method public openNode(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
     .locals 0
 
-    .line 72
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->openNode(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)Z
@@ -104,12 +94,10 @@
 .method public sendEndCommand()V
     .locals 0
 
-    .line 82
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz p0, :cond_0
 
-    .line 83
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->sendStopUsbAuth()V
 
     :cond_0
@@ -121,10 +109,8 @@
 
     const/4 v0, 0x1
 
-    .line 64
     invoke-virtual {p1, v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setApiState(I)V
 
-    .line 65
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->sendStartAuth(Lcom/samsung/accessory/manager/authentication/AuthenticationResult;)[B
@@ -137,7 +123,6 @@
 .method public sendStopAuth()Z
     .locals 0
 
-    .line 69
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     invoke-virtual {p0}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->sendStopAuth()Z
@@ -150,7 +135,6 @@
 .method public sendSynchronously([BLcom/samsung/accessory/manager/authentication/AuthenticationResult;)[B
     .locals 2
 
-    .line 76
     invoke-virtual {p2}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->getApiState()I
 
     move-result v0
@@ -161,10 +145,8 @@
 
     const/4 v0, 0x2
 
-    .line 77
     invoke-virtual {p2, v0}, Lcom/samsung/accessory/manager/authentication/AuthenticationResult;->setApiState(I)V
 
-    .line 78
     :cond_0
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
@@ -178,14 +160,12 @@
 .method public setConnection()V
     .locals 2
 
-    .line 38
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 39
     :cond_0
     iget v0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mType:I
 
@@ -207,7 +187,6 @@
 
     goto :goto_0
 
-    .line 50
     :cond_1
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/WirelessChargerConnectivity;
 
@@ -219,7 +198,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_2
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/UsbConnectivity;
 
@@ -231,7 +209,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_3
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
 
@@ -243,7 +220,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_4
     new-instance v0, Lcom/samsung/accessory/manager/connectivity/NfcConnectivity;
 
@@ -260,7 +236,6 @@
 .method public final setConnection(Lcom/samsung/accessory/manager/connectivity/Connectivity;)V
     .locals 0
 
-    .line 21
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     return-void
@@ -272,12 +247,10 @@
 .method public setSessionState(I)V
     .locals 0
 
-    .line 33
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     if-eqz p0, :cond_0
 
-    .line 34
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->setSessionState(I)V
 
     :cond_0
@@ -287,7 +260,6 @@
 .method public setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V
     .locals 0
 
-    .line 25
     iget-object p0, p0, Lcom/samsung/accessory/manager/authentication/Authenticator;->mConnectivity:Lcom/samsung/accessory/manager/connectivity/Connectivity;
 
     invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/connectivity/Connectivity;->setStateChangedCallback(Lcom/samsung/accessory/manager/connectivity/Connectivity$StateChangedCallback;)V

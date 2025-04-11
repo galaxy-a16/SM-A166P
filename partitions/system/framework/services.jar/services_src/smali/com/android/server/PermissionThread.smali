@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 
     const-string v2, "android.perm"
 
-    .line 45
     invoke-direct {p0, v2, v0, v1}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
 
     return-void
@@ -45,14 +43,12 @@
 .method public static ensureThreadLocked()V
     .locals 5
 
-    .line 50
     sget-object v0, Lcom/android/server/PermissionThread;->sInstance:Lcom/android/server/PermissionThread;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 54
     :cond_0
     new-instance v0, Lcom/android/server/PermissionThread;
 
@@ -60,10 +56,8 @@
 
     sput-object v0, Lcom/android/server/PermissionThread;->sInstance:Lcom/android/server/PermissionThread;
 
-    .line 55
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 56
     sget-object v0, Lcom/android/server/PermissionThread;->sInstance:Lcom/android/server/PermissionThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -72,17 +66,14 @@
 
     const-wide/32 v1, 0x80000
 
-    .line 57
     invoke-virtual {v0, v1, v2}, Landroid/os/Looper;->setTraceTag(J)V
 
     const-wide/16 v1, 0x64
 
     const-wide/16 v3, 0xc8
 
-    .line 58
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/os/Looper;->setSlowLogThresholdMs(JJ)V
 
-    .line 60
     new-instance v0, Landroid/os/Handler;
 
     sget-object v1, Lcom/android/server/PermissionThread;->sInstance:Lcom/android/server/PermissionThread;
@@ -95,7 +86,6 @@
 
     sput-object v0, Lcom/android/server/PermissionThread;->sHandler:Landroid/os/Handler;
 
-    .line 61
     new-instance v0, Landroid/os/HandlerExecutor;
 
     sget-object v1, Lcom/android/server/PermissionThread;->sHandler:Landroid/os/Handler;
@@ -110,16 +100,13 @@
 .method public static getExecutor()Ljava/util/concurrent/Executor;
     .locals 2
 
-    .line 89
     sget-object v0, Lcom/android/server/PermissionThread;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 90
     :try_start_0
     invoke-static {}, Lcom/android/server/PermissionThread;->ensureThreadLocked()V
 
-    .line 91
     sget-object v1, Lcom/android/server/PermissionThread;->sHandlerExecutor:Landroid/os/HandlerExecutor;
 
     monitor-exit v0
@@ -129,7 +116,6 @@
     :catchall_0
     move-exception v1
 
-    .line 92
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -140,16 +126,13 @@
 .method public static getHandler()Landroid/os/Handler;
     .locals 2
 
-    .line 78
     sget-object v0, Lcom/android/server/PermissionThread;->sLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 79
     :try_start_0
     invoke-static {}, Lcom/android/server/PermissionThread;->ensureThreadLocked()V
 
-    .line 80
     sget-object v1, Lcom/android/server/PermissionThread;->sHandler:Landroid/os/Handler;
 
     monitor-exit v0
@@ -159,7 +142,6 @@
     :catchall_0
     move-exception v1
 
-    .line 81
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

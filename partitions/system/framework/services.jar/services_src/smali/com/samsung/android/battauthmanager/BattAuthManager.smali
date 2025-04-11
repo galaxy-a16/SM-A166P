@@ -15,20 +15,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "BattAuthManager"
 
     const-string v1, "BattAuthManager start"
 
-    .line 17
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iput-object p1, p0, Lcom/samsung/android/battauthmanager/BattAuthManager;->mContext:Landroid/content/Context;
 
-    .line 19
     invoke-virtual {p0}, Lcom/samsung/android/battauthmanager/BattAuthManager;->initWpcAuthenticator()V
 
     return-void
@@ -41,18 +37,15 @@
 
     const-string v0, "BattAuthManager"
 
-    .line 24
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 25
     invoke-interface {v1}, Landroid/content/pm/IPackageManager;->isFirstBoot()Z
 
     move-result v1
 
-    .line 26
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,22 +62,18 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     iget-object v2, p0, Lcom/samsung/android/battauthmanager/BattAuthManager;->mWpcAuthenticator:Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     if-nez v2, :cond_0
 
-    .line 28
     new-instance v2, Landroid/os/HandlerThread;
 
     invoke-direct {v2, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     iput-object v2, p0, Lcom/samsung/android/battauthmanager/BattAuthManager;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 29
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 30
     new-instance v2, Lcom/samsung/android/battauthmanager/WpcAuthenticator;
 
     iget-object v3, p0, Lcom/samsung/android/battauthmanager/BattAuthManager;->mContext:Landroid/content/Context;
@@ -101,7 +90,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 32
     invoke-virtual {v2}, Lcom/samsung/android/battauthmanager/WpcAuthenticator;->removeDigests()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -113,10 +101,8 @@
 
     const-string v1, "BattAuthManager error"
 
-    .line 36
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :cond_0

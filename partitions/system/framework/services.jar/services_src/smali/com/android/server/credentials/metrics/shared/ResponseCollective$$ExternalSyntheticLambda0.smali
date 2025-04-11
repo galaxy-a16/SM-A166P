@@ -20,7 +20,6 @@
 .method public final applyAsInt(Ljava/lang/Object;)I
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/credentials/metrics/EntryEnum;
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I

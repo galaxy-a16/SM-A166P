@@ -15,7 +15,6 @@
 .method public static synthetic $values()[Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
     .locals 2
 
-    .line 3903
     sget-object v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->IdleDump:Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     sget-object v1, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->PmmDump:Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
@@ -30,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 3904
     new-instance v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     const-string v1, "IdleDump"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->IdleDump:Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
-    .line 3905
     new-instance v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     const-string v1, "PmmDump"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->PmmDump:Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
-    .line 3903
     invoke-static {}, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->$values()[Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     move-result-object v0
@@ -65,7 +61,6 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 3903
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -74,7 +69,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
     .locals 1
 
-    .line 3903
     const-class v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -89,7 +83,6 @@
 .method public static values()[Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
     .locals 1
 
-    .line 3903
     sget-object v0, Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->$VALUES:[Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;
 
     invoke-virtual {v0}, [Lcom/android/server/am/KillPolicyManager$MemoryLoggingType;->clone()Ljava/lang/Object;

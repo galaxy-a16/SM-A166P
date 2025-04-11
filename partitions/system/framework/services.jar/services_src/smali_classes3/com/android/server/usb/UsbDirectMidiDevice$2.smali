@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/server/usb/UsbDirectMidiDevice;Ljava/lang/String;ILandroid/hardware/usb/UsbDeviceConnection;Landroid/hardware/usb/UsbEndpoint;[Landroid/media/midi/MidiReceiver;I)V
     .locals 0
 
-    .line 426
     iput-object p1, p0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
     iput p3, p0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$cableCountFinal:I
@@ -48,22 +47,18 @@
 
     const-string v1, "UsbDirectMidiDevice"
 
-    .line 429
     new-instance v2, Landroid/hardware/usb/UsbRequest;
 
     invoke-direct {v2}, Landroid/hardware/usb/UsbRequest;-><init>()V
 
-    .line 430
     new-instance v3, Lcom/android/server/usb/UsbMidiPacketConverter;
 
     invoke-direct {v3}, Lcom/android/server/usb/UsbMidiPacketConverter;-><init>()V
 
-    .line 431
     iget v4, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$cableCountFinal:I
 
     invoke-virtual {v3, v4}, Lcom/android/server/usb/UsbMidiPacketConverter;->createDecoders(I)V
 
-    .line 433
     :try_start_0
     iget-object v4, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$connectionFinal:Landroid/hardware/usb/UsbDeviceConnection;
 
@@ -71,7 +66,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/hardware/usb/UsbRequest;->initialize(Landroid/hardware/usb/UsbDeviceConnection;Landroid/hardware/usb/UsbEndpoint;)Z
 
-    .line 434
     iget-object v4, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$endpointFinal:Landroid/hardware/usb/UsbEndpoint;
 
     invoke-virtual {v4}, Landroid/hardware/usb/UsbEndpoint;->getMaxPacketSize()I
@@ -85,7 +79,6 @@
     :goto_0
     if-eqz v6, :cond_d
 
-    .line 437
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
@@ -96,18 +89,15 @@
 
     const-string v0, "input thread interrupted"
 
-    .line 438
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_5
 
-    .line 441
     :cond_0
     invoke-static {v4}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
-    .line 442
     invoke-virtual {v2, v7}, Landroid/hardware/usb/UsbRequest;->queue(Ljava/nio/ByteBuffer;)Z
 
     move-result v8
@@ -116,12 +106,10 @@
 
     const-string v0, "Cannot queue request"
 
-    .line 443
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_5
 
-    .line 446
     :cond_1
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$connectionFinal:Landroid/hardware/usb/UsbDeviceConnection;
 
@@ -133,7 +121,6 @@
 
     const-string v0, "Response is null"
 
-    .line 448
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_5
@@ -143,18 +130,15 @@
 
     const-string v7, "Skipping response"
 
-    .line 452
     invoke-static {v1, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 457
     :cond_3
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v14
 
-    .line 459
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v7
@@ -165,10 +149,8 @@
 
     const/4 v12, 0x0
 
-    .line 463
     invoke-static {v8, v4, v12, v7}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$smlogByteArray(Ljava/lang/String;[BII)V
 
-    .line 468
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
     invoke-static {v8}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$fgetmIsUniversalMidiDevice(Lcom/android/server/usb/UsbDirectMidiDevice;)Z
@@ -177,19 +159,16 @@
 
     if-nez v8, :cond_4
 
-    .line 469
     invoke-virtual {v3, v4, v7}, Lcom/android/server/usb/UsbMidiPacketConverter;->decodeMidiPackets([BI)V
 
     :cond_4
     move v13, v12
 
-    .line 473
     :goto_1
     iget v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$cableCountFinal:I
 
     if-ge v13, v8, :cond_c
 
-    .line 475
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
     invoke-static {v8}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$fgetmIsUniversalMidiDevice(Lcom/android/server/usb/UsbDirectMidiDevice;)Z
@@ -198,7 +177,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 478
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
     invoke-static {v8, v4, v7}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$mswapEndiannessPerWord(Lcom/android/server/usb/UsbDirectMidiDevice;[BI)[B
@@ -207,7 +185,6 @@
 
     goto :goto_2
 
-    .line 482
     :cond_5
     invoke-virtual {v3, v13}, Lcom/android/server/usb/UsbMidiPacketConverter;->pullDecodedMidiPackets(I)[B
 
@@ -216,7 +193,6 @@
     :goto_2
     move-object v11, v8
 
-    .line 487
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +215,6 @@
 
     invoke-static {v8, v11, v12, v9}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$smlogByteArray(Ljava/lang/String;[BII)V
 
-    .line 492
     array-length v8, v11
 
     if-nez v8, :cond_7
@@ -253,7 +228,6 @@
 
     goto :goto_3
 
-    .line 496
     :cond_7
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->val$outputReceivers:[Landroid/media/midi/MidiReceiver;
 
@@ -272,7 +246,6 @@
     :cond_8
     add-int/2addr v9, v13
 
-    .line 503
     aget-object v8, v8, v9
 
     const/4 v10, 0x0
@@ -295,7 +268,6 @@
 
     invoke-virtual/range {v8 .. v13}, Landroid/media/midi/MidiReceiver;->send([BIIJ)V
 
-    .line 510
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
     invoke-static {v8}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$fgetmPowerBoostSetter(Lcom/android/server/usb/UsbDirectMidiDevice;)Lcom/android/server/usb/PowerBoostSetter;
@@ -320,14 +292,12 @@
 
     iget-object v8, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
-    .line 513
     invoke-static {v8, v5}, Lcom/android/server/usb/UsbDirectMidiDevice;->-$$Nest$misChannelVoiceMessage(Lcom/android/server/usb/UsbDirectMidiDevice;[B)Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
-    .line 514
     :cond_9
     iget-object v5, v0, Lcom/android/server/usb/UsbDirectMidiDevice$2;->this$0:Lcom/android/server/usb/UsbDirectMidiDevice;
 
@@ -353,7 +323,6 @@
 
     const-string/jumbo v5, "outputReceivers is null"
 
-    .line 499
     invoke-static {v1, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -380,7 +349,6 @@
     :try_start_1
     const-string v3, "input thread: "
 
-    .line 522
     invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_5
@@ -388,27 +356,22 @@
     :catch_1
     const-string/jumbo v0, "reader thread exiting"
 
-    .line 520
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 524
     :cond_d
     :goto_5
     invoke-virtual {v2}, Landroid/hardware/usb/UsbRequest;->close()V
 
     const-string v0, "input thread exit"
 
-    .line 526
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 524
     :goto_6
     invoke-virtual {v2}, Landroid/hardware/usb/UsbRequest;->close()V
 
-    .line 525
     throw v0
 .end method

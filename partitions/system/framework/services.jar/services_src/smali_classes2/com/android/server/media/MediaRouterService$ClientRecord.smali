@@ -34,27 +34,20 @@
 .method public constructor <init>(Lcom/android/server/media/MediaRouterService;Lcom/android/server/media/MediaRouterService$UserRecord;Landroid/media/IMediaRouterClient;IILjava/lang/String;Z)V
     .locals 0
 
-    .line 1008
     iput-object p1, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1009
     iput-object p2, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mUserRecord:Lcom/android/server/media/MediaRouterService$UserRecord;
 
-    .line 1010
     iput-object p3, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mClient:Landroid/media/IMediaRouterClient;
 
-    .line 1011
     iput p4, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mUid:I
 
-    .line 1012
     iput p5, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mPid:I
 
-    .line 1013
     iput-object p6, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mPackageName:Ljava/lang/String;
 
-    .line 1014
     iput-boolean p7, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mTrusted:Z
 
     return-void
@@ -65,7 +58,6 @@
 .method public binderDied()V
     .locals 1
 
-    .line 1023
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->this$0:Lcom/android/server/media/MediaRouterService;
 
     invoke-virtual {v0, p0}, Lcom/android/server/media/MediaRouterService;->clientDied(Lcom/android/server/media/MediaRouterService$ClientRecord;)V
@@ -76,7 +68,6 @@
 .method public dispose()V
     .locals 2
 
-    .line 1018
     iget-object v0, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mClient:Landroid/media/IMediaRouterClient;
 
     invoke-interface {v0}, Landroid/media/IMediaRouterClient;->asBinder()Landroid/os/IBinder;
@@ -93,7 +84,6 @@
 .method public dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 2
 
-    .line 1031
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,7 +98,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1033
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +112,6 @@
 
     move-result-object p2
 
-    .line 1034
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +132,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1035
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,7 +156,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1036
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +176,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1037
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +202,6 @@
 .method public getState()Landroid/media/MediaRouterClientState;
     .locals 1
 
-    .line 1027
     iget-boolean v0, p0, Lcom/android/server/media/MediaRouterService$ClientRecord;->mTrusted:Z
 
     if-eqz v0, :cond_0
@@ -238,7 +222,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1042
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

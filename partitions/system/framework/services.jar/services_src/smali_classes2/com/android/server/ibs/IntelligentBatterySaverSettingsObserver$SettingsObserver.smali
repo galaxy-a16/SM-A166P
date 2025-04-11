@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;)V
     .locals 0
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver$SettingsObserver;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;
 
-    .line 39
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -29,7 +27,6 @@
 .method public onChange(ZLandroid/net/Uri;)V
     .locals 1
 
-    .line 44
     iget-object p1, p0, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver$SettingsObserver;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;
 
     invoke-static {p1}, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;->-$$Nest$fgetmContext(Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;)Landroid/content/Context;
@@ -50,7 +47,6 @@
 
     if-nez p1, :cond_0
 
-    .line 45
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver$SettingsObserver;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;
 
     invoke-static {p0}, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;->-$$Nest$fgetmIBSService(Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;)Lcom/android/server/ibs/IntelligentBatterySaverService;
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 47
     :cond_0
     iget-object p0, p0, Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver$SettingsObserver;->this$0:Lcom/android/server/ibs/IntelligentBatterySaverSettingsObserver;
 

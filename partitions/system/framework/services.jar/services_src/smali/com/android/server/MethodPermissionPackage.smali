@@ -11,12 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 485
     invoke-direct {p0}, Lcom/android/server/PermissionPackage;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 486
     iput-boolean v0, p0, Lcom/android/server/MethodPermissionPackage;->isSterileMethod:Z
 
     return-void

@@ -13,7 +13,6 @@
 .method public static synthetic $r8$lambda$5QjJJRxSSpcoVMwg7zoe5z7TZsI(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$11(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -24,7 +23,6 @@
 .method public static synthetic $r8$lambda$AfukGsVhXeCknr1_PdsGQ4ThMuc(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$3(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -35,7 +33,6 @@
 .method public static synthetic $r8$lambda$FmWMSOg285h_lJL-DdB_7ysaxfk(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$7(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -46,7 +43,6 @@
 .method public static synthetic $r8$lambda$HAJ0V_xBrkBXM9sia8YNIYprHIs(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$0(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -57,7 +53,6 @@
 .method public static synthetic $r8$lambda$Jo2t-0dl-HuIJn5ReskV8hQqxxI(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$1(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -68,7 +63,6 @@
 .method public static synthetic $r8$lambda$Q41iHGbQre73OUAxv3QmRduT1P4(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$2(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -79,7 +73,6 @@
 .method public static synthetic $r8$lambda$VdoQ0KBY-KSaxzoCJ4DRiffz4T0(JLcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$8(JLcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -90,7 +83,6 @@
 .method public static synthetic $r8$lambda$Wm7Yv-Lx7uGu5Qjq_kJk860CWpo(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$9(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -101,7 +93,6 @@
 .method public static synthetic $r8$lambda$ZG6QfW0LPcrKCikJyUtl2r-Yx20(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$6(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -112,7 +103,6 @@
 .method public static synthetic $r8$lambda$dKDjN1M65TzjWZGGkaYV4IGwGuA(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$5(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -123,7 +113,6 @@
 .method public static synthetic $r8$lambda$oMNvxrQKGgid9nyAcD8B228y68I(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$4(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -134,7 +123,6 @@
 .method public static synthetic $r8$lambda$pc7P6Uot2tuu9kArZcNLXaZVc4I(Lcom/android/server/alarm/MetricsHelper;Ljava/util/function/Supplier;ILjava/util/List;)I
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$12(Ljava/util/function/Supplier;ILjava/util/List;)I
 
     move-result p0
@@ -145,7 +133,6 @@
 .method public static synthetic $r8$lambda$xigEGBz9RbhJjZ2SKcH0pbTS_e0(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 0
     invoke-static {p0}, Lcom/android/server/alarm/MetricsHelper;->lambda$registerPuller$10(Lcom/android/server/alarm/Alarm;)Z
 
     move-result p0
@@ -156,13 +143,10 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Object;)V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/alarm/MetricsHelper;->mContext:Landroid/content/Context;
 
-    .line 48
     iput-object p2, p0, Lcom/android/server/alarm/MetricsHelper;->mLock:Ljava/lang/Object;
 
     return-void
@@ -171,7 +155,6 @@
 .method public static synthetic lambda$registerPuller$0(Lcom/android/server/alarm/Alarm;)Z
     .locals 4
 
-    .line 63
     iget-wide v0, p0, Lcom/android/server/alarm/Alarm;->windowLength:J
 
     const-wide/16 v2, 0x0
@@ -194,7 +177,6 @@
 .method public static synthetic lambda$registerPuller$1(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 64
     iget-boolean p0, p0, Lcom/android/server/alarm/Alarm;->wakeup:Z
 
     return p0
@@ -203,7 +185,6 @@
 .method public static synthetic lambda$registerPuller$10(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 79
     iget-object p0, p0, Lcom/android/server/alarm/Alarm;->alarmClock:Landroid/app/AlarmManager$AlarmClockInfo;
 
     if-eqz p0, :cond_0
@@ -222,7 +203,6 @@
 .method public static synthetic lambda$registerPuller$11(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 80
     iget p0, p0, Lcom/android/server/alarm/Alarm;->type:I
 
     invoke-static {p0}, Lcom/android/server/alarm/AlarmManagerService;->isRtc(I)Z
@@ -241,19 +221,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 58
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
     move-object/from16 v3, p0
 
-    .line 59
     iget-object v15, v3, Lcom/android/server/alarm/MetricsHelper;->mLock:Ljava/lang/Object;
 
     monitor-enter v15
 
-    .line 60
     :try_start_0
     invoke-interface/range {p1 .. p1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
 
@@ -261,7 +238,6 @@
 
     check-cast v3, Lcom/android/server/alarm/AlarmStore;
 
-    .line 62
     invoke-interface {v3}, Lcom/android/server/alarm/AlarmStore;->size()I
 
     move-result v4
@@ -270,7 +246,6 @@
 
     invoke-direct {v5}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda1;-><init>()V
 
-    .line 63
     invoke-interface {v3, v5}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v5
@@ -279,7 +254,6 @@
 
     invoke-direct {v6}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda4;-><init>()V
 
-    .line 64
     invoke-interface {v3, v6}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v6
@@ -288,7 +262,6 @@
 
     invoke-direct {v7}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda5;-><init>()V
 
-    .line 65
     invoke-interface {v3, v7}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v7
@@ -297,7 +270,6 @@
 
     invoke-direct {v8}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda6;-><init>()V
 
-    .line 67
     invoke-interface {v3, v8}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v8
@@ -306,7 +278,6 @@
 
     invoke-direct {v9}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda7;-><init>()V
 
-    .line 69
     invoke-interface {v3, v9}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v9
@@ -315,7 +286,6 @@
 
     invoke-direct {v10}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda8;-><init>()V
 
-    .line 71
     invoke-interface {v3, v10}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v10
@@ -324,7 +294,6 @@
 
     invoke-direct {v11}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda9;-><init>()V
 
-    .line 73
     invoke-interface {v3, v11}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v11
@@ -333,7 +302,6 @@
 
     invoke-direct {v12}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda10;-><init>()V
 
-    .line 75
     invoke-interface {v3, v12}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v12
@@ -342,7 +310,6 @@
 
     invoke-direct {v13, v1, v2}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda11;-><init>(J)V
 
-    .line 76
     invoke-interface {v3, v13}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v13
@@ -351,7 +318,6 @@
 
     invoke-direct {v1}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda12;-><init>()V
 
-    .line 78
     invoke-interface {v3, v1}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v14
@@ -360,7 +326,6 @@
 
     invoke-direct {v1}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda2;-><init>()V
 
-    .line 79
     invoke-interface {v3, v1}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v16
@@ -369,7 +334,6 @@
 
     invoke-direct {v1}, Lcom/android/server/alarm/MetricsHelper$$ExternalSyntheticLambda3;-><init>()V
 
-    .line 80
     invoke-interface {v3, v1}, Lcom/android/server/alarm/AlarmStore;->getCount(Ljava/util/function/Predicate;)I
 
     move-result v17
@@ -402,7 +366,6 @@
 
     move/from16 v14, v17
 
-    .line 61
     invoke-static/range {v1 .. v14}, Lcom/android/internal/util/FrameworkStatsLog;->buildStatsEvent(IIIIIIIIIIIIII)Landroid/util/StatsEvent;
 
     move-result-object v0
@@ -411,7 +374,6 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 82
     monitor-exit v15
 
     const/4 v0, 0x0
@@ -421,14 +383,12 @@
     :catchall_0
     move-exception v0
 
-    .line 83
     monitor-exit v15
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
-    .line 56
     :cond_0
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
@@ -454,7 +414,6 @@
 .method public static synthetic lambda$registerPuller$2(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 66
     iget p0, p0, Lcom/android/server/alarm/Alarm;->flags:I
 
     and-int/lit8 p0, p0, 0x4
@@ -475,7 +434,6 @@
 .method public static synthetic lambda$registerPuller$3(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 68
     iget p0, p0, Lcom/android/server/alarm/Alarm;->flags:I
 
     and-int/lit8 p0, p0, 0x40
@@ -496,12 +454,10 @@
 .method public static synthetic lambda$registerPuller$4(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 69
     iget-object p0, p0, Lcom/android/server/alarm/Alarm;->operation:Landroid/app/PendingIntent;
 
     if-eqz p0, :cond_0
 
-    .line 70
     invoke-virtual {p0}, Landroid/app/PendingIntent;->isForegroundService()Z
 
     move-result p0
@@ -522,7 +478,6 @@
 .method public static synthetic lambda$registerPuller$5(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 72
     iget-object p0, p0, Lcom/android/server/alarm/Alarm;->operation:Landroid/app/PendingIntent;
 
     if-eqz p0, :cond_0
@@ -547,7 +502,6 @@
 .method public static synthetic lambda$registerPuller$6(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 74
     iget-object p0, p0, Lcom/android/server/alarm/Alarm;->operation:Landroid/app/PendingIntent;
 
     if-eqz p0, :cond_0
@@ -572,7 +526,6 @@
 .method public static synthetic lambda$registerPuller$7(Lcom/android/server/alarm/Alarm;)Z
     .locals 0
 
-    .line 75
     iget-object p0, p0, Lcom/android/server/alarm/Alarm;->listener:Landroid/app/IAlarmListener;
 
     if-eqz p0, :cond_0
@@ -591,7 +544,6 @@
 .method public static synthetic lambda$registerPuller$8(JLcom/android/server/alarm/Alarm;)Z
     .locals 4
 
-    .line 77
     invoke-virtual {p2}, Lcom/android/server/alarm/Alarm;->getRequestedElapsed()J
 
     move-result-wide v0
@@ -618,7 +570,6 @@
 .method public static synthetic lambda$registerPuller$9(Lcom/android/server/alarm/Alarm;)Z
     .locals 4
 
-    .line 78
     iget-wide v0, p0, Lcom/android/server/alarm/Alarm;->repeatInterval:J
 
     const-wide/16 v2, 0x0
@@ -653,7 +604,6 @@
 
     move-object v5, p4
 
-    .line 122
     invoke-static/range {v0 .. v5}, Lcom/android/internal/util/FrameworkStatsLog;->write(III[I[I[I)V
 
     return-void
@@ -664,7 +614,6 @@
 
     const/16 v0, 0x170
 
-    .line 107
     iget v1, p0, Lcom/android/server/alarm/Alarm;->uid:I
 
     iget-wide v2, p0, Lcom/android/server/alarm/Alarm;->windowLength:J
@@ -726,19 +675,16 @@
     :cond_3
     iget v3, p0, Lcom/android/server/alarm/Alarm;->mExactAllowReason:I
 
-    .line 115
     invoke-static {v3}, Lcom/android/server/alarm/MetricsHelper;->reasonToStatsReason(I)I
 
     move-result v10
 
     iget p0, p0, Lcom/android/server/alarm/Alarm;->type:I
 
-    .line 116
     invoke-static {p0}, Lcom/android/server/alarm/AlarmManagerService;->isRtc(I)Z
 
     move-result p0
 
-    .line 117
     invoke-static {p1}, Landroid/app/ActivityManager;->processStateAmToProto(I)I
 
     move-result p1
@@ -755,7 +701,6 @@
 
     move v9, p1
 
-    .line 107
     invoke-static/range {v0 .. v9}, Lcom/android/internal/util/FrameworkStatsLog;->write(IIZZZZZIZI)V
 
     return-void
@@ -764,7 +709,6 @@
 .method public static reasonToStatsReason(I)I
     .locals 2
 
-    .line 0
     const/4 v0, 0x1
 
     if-eqz p0, :cond_5
@@ -817,7 +761,6 @@
 .method public registerPuller(Ljava/util/function/Supplier;)V
     .locals 3
 
-    .line 52
     iget-object v0, p0, Lcom/android/server/alarm/MetricsHelper;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/app/StatsManager;
@@ -828,7 +771,6 @@
 
     check-cast v0, Landroid/app/StatsManager;
 
-    .line 54
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -841,7 +783,6 @@
 
     const/4 p1, 0x0
 
-    .line 53
     invoke-virtual {v0, p0, p1, v1, v2}, Landroid/app/StatsManager;->setPullAtomCallback(ILandroid/app/StatsManager$PullAtomMetadata;Ljava/util/concurrent/Executor;Landroid/app/StatsManager$StatsPullAtomCallback;)V
 
     return-void

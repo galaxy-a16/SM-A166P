@@ -20,7 +20,6 @@
 .method public constructor <init>(Lcom/android/server/location/gnss/GnssListenerMultiplexer;Landroid/os/IInterface;Ljava/lang/Object;Landroid/location/util/identity/CallerIdentity;)V
     .locals 0
 
-    .line 303
     iput-object p1, p0, Lcom/android/server/location/gnss/GnssListenerMultiplexer$3;->this$0:Lcom/android/server/location/gnss/GnssListenerMultiplexer;
 
     iput-object p2, p0, Lcom/android/server/location/gnss/GnssListenerMultiplexer$3;->val$listener:Landroid/os/IInterface;
@@ -39,7 +38,6 @@
 .method public run()V
     .locals 5
 
-    .line 305
     iget-object v0, p0, Lcom/android/server/location/gnss/GnssListenerMultiplexer$3;->this$0:Lcom/android/server/location/gnss/GnssListenerMultiplexer;
 
     iget-object v1, p0, Lcom/android/server/location/gnss/GnssListenerMultiplexer$3;->val$listener:Landroid/os/IInterface;
@@ -56,12 +54,10 @@
 
     iget-object p0, p0, Lcom/android/server/location/gnss/GnssListenerMultiplexer$3;->val$listener:Landroid/os/IInterface;
 
-    .line 306
     invoke-virtual {v2, v3, v4, p0}, Lcom/android/server/location/gnss/GnssListenerMultiplexer;->createRegistration(Ljava/lang/Object;Landroid/location/util/identity/CallerIdentity;Landroid/os/IInterface;)Lcom/android/server/location/gnss/GnssListenerMultiplexer$GnssListenerRegistration;
 
     move-result-object p0
 
-    .line 305
     invoke-static {v0, v1, p0}, Lcom/android/server/location/gnss/GnssListenerMultiplexer;->access$000(Lcom/android/server/location/gnss/GnssListenerMultiplexer;Ljava/lang/Object;Lcom/android/server/location/listeners/ListenerRegistration;)V
 
     return-void

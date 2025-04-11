@@ -20,7 +20,6 @@
 .method public final operate(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/location/IGnssNavigationMessageListener;
 
     invoke-static {p1}, Lcom/android/server/location/gnss/GnssNavigationMessageProvider$GnssNavigationMessageListenerRegistration;->$r8$lambda$-J1tgIK3-T3Lq-7x-vA4wW3_Z8g(Landroid/location/IGnssNavigationMessageListener;)V

@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 28
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd"
@@ -46,7 +45,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +89,6 @@
 
     iget-wide v2, p0, Lcom/android/server/apphibernation/GlobalLevelState;->lastUnhibernatedMs:J
 
-    .line 43
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0

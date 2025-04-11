@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/compat/PlatformCompat;)V
     .locals 0
 
-    .line 510
     iput-object p1, p0, Lcom/android/server/compat/PlatformCompat$1;->this$0:Lcom/android/server/compat/PlatformCompat;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -28,7 +27,6 @@
 
     return-void
 
-    .line 516
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -38,7 +36,6 @@
 
     return-void
 
-    .line 520
     :cond_1
     invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
@@ -48,7 +45,6 @@
 
     return-void
 
-    .line 524
     :cond_2
     iget-object p0, p0, Lcom/android/server/compat/PlatformCompat$1;->this$0:Lcom/android/server/compat/PlatformCompat;
 

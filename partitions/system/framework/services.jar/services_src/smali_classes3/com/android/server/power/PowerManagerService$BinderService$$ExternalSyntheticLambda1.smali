@@ -14,7 +14,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/power/PowerManagerService$BinderService;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$BinderService$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/power/PowerManagerService$BinderService;
@@ -27,7 +26,6 @@
 .method public final run()V
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/power/PowerManagerService$BinderService$$ExternalSyntheticLambda1;->f$0:Lcom/android/server/power/PowerManagerService$BinderService;
 
     invoke-static {p0}, Lcom/android/server/power/PowerManagerService$BinderService;->$r8$lambda$zMTStonPBcyTWTzDONOqx_9HLFY(Lcom/android/server/power/PowerManagerService$BinderService;)V

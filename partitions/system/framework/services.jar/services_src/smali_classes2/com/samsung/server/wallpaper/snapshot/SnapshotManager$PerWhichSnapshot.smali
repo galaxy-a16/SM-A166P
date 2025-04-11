@@ -18,10 +18,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 619
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 616
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -30,7 +28,6 @@
 
     const/4 v0, -0x1
 
-    .line 617
     iput v0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->connectedSnapshotForLiveWallpaper:I
 
     return-void
@@ -41,12 +38,10 @@
 .method public clone()Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;
     .locals 5
 
-    .line 665
     new-instance v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;
 
     invoke-direct {v0}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;-><init>()V
 
-    .line 666
     iget-object v1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->wallpaper:Lcom/android/server/wallpaper/WallpaperData;
 
     invoke-virtual {v1}, Lcom/android/server/wallpaper/WallpaperData;->clone()Lcom/android/server/wallpaper/WallpaperData;
@@ -55,7 +50,6 @@
 
     iput-object v1, v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->wallpaper:Lcom/android/server/wallpaper/WallpaperData;
 
-    .line 668
     iget-object v1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -79,14 +73,12 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 669
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 670
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -97,7 +89,6 @@
 
     move-result v2
 
-    .line 671
     iget-object v4, v0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 674
     :cond_0
     iget p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->connectedSnapshotForLiveWallpaper:I
 
@@ -120,7 +110,6 @@
 .method public bridge synthetic clone()Ljava/lang/Object;
     .locals 0
 
-    .line 614
     invoke-virtual {p0}, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->clone()Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;
 
     move-result-object p0
@@ -131,7 +120,6 @@
 .method public getConnectedSnapshotForLiveWallpaper()I
     .locals 0
 
-    .line 644
     iget p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->connectedSnapshotForLiveWallpaper:I
 
     return p0
@@ -149,7 +137,6 @@
     :cond_0
     const-string p1, "lockscreen_wallpaper"
 
-    .line 636
     :goto_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
@@ -177,7 +164,6 @@
 .method public getSettings()Ljava/util/Map;
     .locals 0
 
-    .line 652
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
     return-object p0
@@ -186,7 +172,6 @@
 .method public getWallpaperData()Lcom/android/server/wallpaper/WallpaperData;
     .locals 0
 
-    .line 660
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->wallpaper:Lcom/android/server/wallpaper/WallpaperData;
 
     return-object p0
@@ -195,7 +180,6 @@
 .method public setConnectedSnapshotForLiveWallpaper(I)V
     .locals 0
 
-    .line 640
     iput p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->connectedSnapshotForLiveWallpaper:I
 
     return-void
@@ -206,7 +190,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 624
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
     const-string p1, "lockscreen_wallpaper_sub"
@@ -219,7 +202,6 @@
 
     goto :goto_0
 
-    .line 626
     :cond_0
     iget-object p0, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
@@ -238,7 +220,6 @@
 .method public setSettings(Ljava/util/Map;)V
     .locals 0
 
-    .line 648
     iput-object p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->settings:Ljava/util/Map;
 
     return-void
@@ -247,7 +228,6 @@
 .method public setWallpaperData(Lcom/android/server/wallpaper/WallpaperData;)V
     .locals 0
 
-    .line 656
     iput-object p1, p0, Lcom/samsung/server/wallpaper/snapshot/SnapshotManager$PerWhichSnapshot;->wallpaper:Lcom/android/server/wallpaper/WallpaperData;
 
     return-void

@@ -16,12 +16,10 @@
 .method public constructor <init>(Lcom/android/server/locksettings/LockSettingsStrongAuth;I)V
     .locals 0
 
-    .line 622
     iput-object p1, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$NonStrongBiometricTimeoutAlarmListener;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 623
     iput p2, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$NonStrongBiometricTimeoutAlarmListener;->mUserId:I
 
     return-void
@@ -32,7 +30,6 @@
 .method public onAlarm()V
     .locals 2
 
-    .line 628
     iget-object v0, p0, Lcom/android/server/locksettings/LockSettingsStrongAuth$NonStrongBiometricTimeoutAlarmListener;->this$0:Lcom/android/server/locksettings/LockSettingsStrongAuth;
 
     const/16 v1, 0x80

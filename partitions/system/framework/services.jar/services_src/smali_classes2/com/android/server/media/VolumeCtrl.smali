@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 43
     new-instance v0, Ljava/lang/String;
 
     const-string/jumbo v1, "the options are as follows: \n\t\t--stream STREAM selects the stream to control, see AudioManager.STREAM_*\n\t\t                controls AudioManager.STREAM_MUSIC if no stream is specified\n\t\t--set INDEX     sets the volume index value\n\t\t--adj DIRECTION adjusts the volume, use raise|same|lower for the direction\n\t\t--get           outputs the current volume\n\t\t--show          shows the UI during the volume change\n\texamples:\n\t\tadb shell media_session volume --show --stream 3 --set 11\n\t\tadb shell media_session volume --stream 0 --adj lower\n\t\tadb shell media_session volume --stream 3 --get\n\n\t\tSamsung custom options are as follows: \n\t\t--setfine INDEX sets the fine volume index value\n\t\t--getfine       outputs the current fine volume\n\texamples:\n\t\tadb shell media_session volume --show --setfine 127\n\t\tadb shell media_session volume --getfine\n"
@@ -50,7 +49,6 @@
 
     const/16 v18, 0x0
 
-    .line 94
     :goto_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextOption()Ljava/lang/String;
 
@@ -64,7 +62,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 95
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
     move-result v10
@@ -205,7 +202,6 @@
     :goto_2
     packed-switch v7, :pswitch_data_0
 
-    .line 134
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -226,7 +222,6 @@
 
     throw v0
 
-    .line 104
     :pswitch_0
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -240,7 +235,6 @@
 
     move-result v13
 
-    .line 105
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +249,6 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     invoke-static {v13}, Lcom/android/server/media/VolumeCtrl;->streamName(I)Ljava/lang/String;
 
     move-result-object v7
@@ -270,7 +263,6 @@
 
     move-result-object v6
 
-    .line 105
     invoke-virtual {v0, v11, v6}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
@@ -283,14 +275,12 @@
     :pswitch_2
     const-string/jumbo v6, "will get fine volume"
 
-    .line 130
     invoke-virtual {v0, v11, v6}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     move/from16 v17, v9
 
     goto/16 :goto_0
 
-    .line 120
     :pswitch_3
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -306,12 +296,10 @@
 
     const-string/jumbo v6, "will set device"
 
-    .line 121
     invoke-virtual {v0, v11, v6}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 109
     :pswitch_4
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -325,7 +313,6 @@
 
     move-result v14
 
-    .line 111
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,14 +336,12 @@
     :pswitch_5
     const-string/jumbo v6, "will get volume"
 
-    .line 101
     invoke-virtual {v0, v11, v6}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     move/from16 v16, v9
 
     goto/16 :goto_0
 
-    .line 115
     :pswitch_6
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -364,14 +349,12 @@
 
     const-string/jumbo v5, "will adjust volume"
 
-    .line 116
     invoke-virtual {v0, v11, v5}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     move v5, v8
 
     goto/16 :goto_0
 
-    .line 124
     :pswitch_7
     invoke-virtual/range {p0 .. p0}, Landroid/os/ShellCommand;->getNextArgRequired()Ljava/lang/String;
 
@@ -387,7 +370,6 @@
 
     const-string/jumbo v6, "will set fine volume"
 
-    .line 126
     invoke-virtual {v0, v11, v6}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     move/from16 v18, v9
@@ -401,12 +383,10 @@
 
     const-string v1, "Error: no valid volume adjustment (null)"
 
-    .line 142
     invoke-virtual {v0, v1}, Lcom/android/server/media/MediaShellCommand;->showError(Ljava/lang/String;)V
 
     return-void
 
-    .line 145
     :cond_9
     invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
 
@@ -468,7 +448,6 @@
     :goto_4
     packed-switch v2, :pswitch_data_1
 
-    .line 150
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -520,12 +499,10 @@
     :goto_5
     const-string v2, "Connecting to AudioService"
 
-    .line 159
     invoke-virtual {v0, v11, v2}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "audio"
 
-    .line 160
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -538,21 +515,18 @@
 
     if-ne v5, v9, :cond_f
 
-    .line 169
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMaxVolume(I)I
 
     move-result v4
 
     if-gt v14, v4, :cond_e
 
-    .line 170
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMinVolume(I)I
 
     move-result v4
 
     if-ge v14, v4, :cond_f
 
-    .line 172
     :cond_e
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -562,7 +536,6 @@
 
     move-result-object v3
 
-    .line 173
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMinVolume(I)I
 
     move-result v4
@@ -571,7 +544,6 @@
 
     move-result-object v4
 
-    .line 174
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMaxVolume(I)I
 
     move-result v2
@@ -586,7 +558,6 @@
 
     const-string v2, "Error: invalid volume index %d for stream %d (should be in [%d..%d])"
 
-    .line 171
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -595,7 +566,6 @@
 
     return-void
 
-    .line 182
     :cond_f
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -631,7 +601,6 @@
 
     move v5, v12
 
-    .line 185
     invoke-interface/range {v6 .. v12}, Landroid/media/IAudioService;->setStreamVolumeForDeviceWithAttribution(IIILjava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_6
@@ -641,7 +610,6 @@
 
     move v5, v12
 
-    .line 188
     invoke-interface {v2, v13, v14, v15, v4}, Landroid/media/IAudioService;->setStreamVolume(IIILjava/lang/String;)V
 
     goto :goto_6
@@ -651,7 +619,6 @@
 
     if-ne v5, v8, :cond_12
 
-    .line 191
     invoke-interface {v2, v13, v7, v15, v4}, Landroid/media/IAudioService;->adjustStreamVolume(IIILjava/lang/String;)V
 
     :cond_12
@@ -660,7 +627,6 @@
 
     if-eqz v12, :cond_13
 
-    .line 195
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +645,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     invoke-static {v13}, Lcom/android/server/media/VolumeCtrl;->streamName(I)Ljava/lang/String;
 
     move-result-object v6
@@ -690,7 +655,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 197
     invoke-static {v13, v12}, Landroid/media/AudioSystem;->getStreamVolumeIndex(II)I
 
     move-result v6
@@ -701,12 +665,10 @@
 
     move-result-object v5
 
-    .line 195
     invoke-virtual {v0, v3, v5}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_7
 
-    .line 199
     :cond_13
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -726,7 +688,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 200
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMinVolume(I)I
 
     move-result v6
@@ -737,7 +698,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     invoke-interface {v2, v13}, Landroid/media/IAudioService;->getStreamMaxVolume(I)I
 
     move-result v6
@@ -752,7 +712,6 @@
 
     move-result-object v5
 
-    .line 199
     invoke-virtual {v0, v3, v5}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_14
@@ -763,7 +722,6 @@
 
     or-int v9, v15, v3
 
-    .line 208
     invoke-interface {v2, v1}, Landroid/media/IAudioService;->getStreamMaxVolume(I)I
 
     move-result v3
@@ -787,19 +745,16 @@
 
     move-object v11, v4
 
-    .line 215
     invoke-interface/range {v6 .. v11}, Landroid/media/IAudioService;->setFineVolume(IIIILjava/lang/String;)V
 
     goto :goto_9
 
-    .line 211
     :cond_16
     :goto_8
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 212
     invoke-interface {v2, v1}, Landroid/media/IAudioService;->getStreamMaxVolume(I)I
 
     move-result v1
@@ -816,7 +771,6 @@
 
     const-string v2, "Error: invalid volume index %d(should be in [0..%d])"
 
-    .line 210
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -828,7 +782,6 @@
     :cond_17
     if-eqz v17, :cond_18
 
-    .line 218
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -860,10 +813,8 @@
 
     const-string v2, "Error type 2"
 
-    .line 163
     invoke-virtual {v0, v1, v2}, Lcom/android/server/media/MediaShellCommand;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     new-instance v0, Landroid/util/AndroidException;
 
     const-string v1, "Can\'t connect to audio service; is the system running?"
@@ -914,7 +865,6 @@
 .method public static streamName(I)Ljava/lang/String;
     .locals 1
 
-    .line 226
     :try_start_0
     sget-object v0, Landroid/media/AudioSystem;->STREAM_NAMES:[Ljava/lang/String;
 

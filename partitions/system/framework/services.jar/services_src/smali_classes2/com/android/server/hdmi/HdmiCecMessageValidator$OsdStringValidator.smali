@@ -18,7 +18,6 @@
 .method public synthetic constructor <init>(Lcom/android/server/hdmi/HdmiCecMessageValidator$OsdStringValidator-IA;)V
     .locals 0
 
-    .line 0
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator$OsdStringValidator;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public isValid([B)I
     .locals 2
 
-    .line 934
     array-length p0, p1
 
     const/4 v0, 0x2
@@ -43,10 +41,8 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 937
     aget-byte v0, p1, p0
 
-    .line 939
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidDisplayControl(I)Z
 
     move-result v0
@@ -57,7 +53,6 @@
 
     const/4 v1, 0x1
 
-    .line 941
     invoke-static {p1, v1, v0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smisValidAsciiString([BII)Z
 
     move-result p1
@@ -66,7 +61,6 @@
 
     move p0, v1
 
-    .line 937
     :cond_1
     invoke-static {p0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-$$Nest$smtoErrorCode(Z)I
 

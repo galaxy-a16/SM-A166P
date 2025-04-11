@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/people/data/AppUsageStatsData;
 
     invoke-virtual {p1}, Lcom/android/server/people/data/AppUsageStatsData;->getChosenCount()I

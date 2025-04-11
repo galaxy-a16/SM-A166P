@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 33
     invoke-direct {p0}, Lcom/android/server/ExtconUEventObserver;-><init>()V
 
     return-void
@@ -20,14 +19,12 @@
 
     const-string v0, "NAME"
 
-    .line 55
     invoke-virtual {p2, v0}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "STATE"
 
-    .line 56
     invoke-virtual {p2, v1}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -38,7 +35,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 58
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/server/ExtconStateObserver;->updateState(Lcom/android/server/ExtconUEventObserver$ExtconInfo;Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_0

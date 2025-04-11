@@ -10,13 +10,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 47
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 48
     invoke-virtual {p0}, Landroid/os/Binder;->markVintfStability()V
 
-    .line 49
     sget-object v0, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
@@ -33,7 +30,6 @@
 
     return-object p0
 
-    .line 60
     :cond_0
     sget-object v0, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
@@ -43,17 +39,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 61
     instance-of v1, v0, Landroid/hardware/weaver/IWeaver;
 
     if-eqz v1, :cond_1
 
-    .line 62
     check-cast v0, Landroid/hardware/weaver/IWeaver;
 
     return-object v0
 
-    .line 64
     :cond_1
     new-instance v0, Landroid/hardware/weaver/IWeaver$Stub$Proxy;
 
@@ -65,7 +58,6 @@
 .method public static getDefaultTransactionName(I)Ljava/lang/String;
     .locals 1
 
-    .line 0
     const/4 v0, 0x1
 
     if-eq p0, v0, :cond_2
@@ -123,14 +115,12 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
-    .line 0
     return-object p0
 .end method
 
 .method public getMaxTransactionId()I
     .locals 0
 
-    .line 0
     const p0, 0xfffffe
 
     return p0
@@ -139,7 +129,6 @@
 .method public getTransactionName(I)Ljava/lang/String;
     .locals 0
 
-    .line 104
     invoke-static {p1}, Landroid/hardware/weaver/IWeaver$Stub;->getDefaultTransactionName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -150,7 +139,6 @@
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 3
 
-    .line 108
     sget-object v0, Landroid/hardware/weaver/IWeaver;->DESCRIPTOR:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -161,7 +149,6 @@
 
     if-gt p1, v2, :cond_0
 
-    .line 110
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     :cond_0
@@ -169,17 +156,14 @@
 
     goto :goto_0
 
-    .line 116
     :sswitch_0
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return v1
 
-    .line 121
     :sswitch_1
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 122
     invoke-interface {p0}, Landroid/hardware/weaver/IWeaver;->getInterfaceVersion()I
 
     move-result p0
@@ -188,11 +172,9 @@
 
     return v1
 
-    .line 127
     :sswitch_2
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 128
     invoke-interface {p0}, Landroid/hardware/weaver/IWeaver;->getInterfaceHash()Ljava/lang/String;
 
     move-result-object p0
@@ -212,77 +194,61 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 168
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
-    .line 156
     :cond_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 158
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p4
 
-    .line 160
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 161
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 162
     invoke-interface {p0, p1, p4, v0}, Landroid/hardware/weaver/IWeaver;->write(I[B[B)V
 
-    .line 163
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_1
 
-    .line 144
     :cond_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 146
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p4
 
-    .line 147
     invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
 
-    .line 148
     invoke-interface {p0, p1, p4}, Landroid/hardware/weaver/IWeaver;->read(I[B)Landroid/hardware/weaver/WeaverReadResponse;
 
     move-result-object p0
 
-    .line 149
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 150
     invoke-virtual {p3, p0, v1}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
     goto :goto_1
 
-    .line 136
     :cond_3
     invoke-interface {p0}, Landroid/hardware/weaver/IWeaver;->getConfig()Landroid/hardware/weaver/WeaverConfig;
 
     move-result-object p0
 
-    .line 137
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 138
     invoke-virtual {p3, p0, v1}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
     :goto_1

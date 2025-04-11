@@ -7,21 +7,18 @@
 .method public onEnrollAcquire(IIII)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onEnrollError(III)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public onEnrollFinished(II)V
     .locals 0
 
-    .line 0
     return-void
 .end method
 

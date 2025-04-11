@@ -14,7 +14,6 @@
 .method public constructor <init>(Lcom/android/server/enterprise/utils/ConstrainedState;)V
     .locals 0
 
-    .line 97
     iput-object p1, p0, Lcom/android/server/enterprise/utils/ConstrainedState$2;->this$0:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,19 +33,16 @@
 
     const-string/jumbo v1, "notification"
 
-    .line 102
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 101
     invoke-static {v1}, Landroid/app/INotificationManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/INotificationManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState$2;->this$0:Lcom/android/server/enterprise/utils/ConstrainedState;
 
     const/4 v1, 0x1
@@ -60,7 +56,6 @@
     :cond_0
     const-wide/16 v1, 0x3e8
 
-    .line 109
     :try_start_0
     invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
@@ -71,7 +66,6 @@
     :catch_0
     move-exception v1
 
-    .line 110
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

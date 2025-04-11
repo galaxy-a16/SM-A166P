@@ -11,7 +11,6 @@
 
     if-ge p0, v0, :cond_0
 
-    .line 40
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
@@ -21,7 +20,6 @@
 
     if-ge p0, v0, :cond_1
 
-    .line 41
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->AM_LW:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
@@ -31,7 +29,6 @@
 
     if-ge p0, v0, :cond_2
 
-    .line 42
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->AM_MW:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
@@ -41,7 +38,6 @@
 
     if-ge p0, v0, :cond_3
 
-    .line 43
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->AM_SW:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
@@ -51,7 +47,6 @@
 
     if-ge p0, v0, :cond_4
 
-    .line 44
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
@@ -61,12 +56,10 @@
 
     if-ge p0, v0, :cond_5
 
-    .line 45
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->FM:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
     return-object p0
 
-    .line 46
     :cond_5
     sget-object p0, Lcom/android/server/broadcastradio/hal2/FrequencyBand;->UNKNOWN:Lcom/android/server/broadcastradio/hal2/FrequencyBand;
 
@@ -76,7 +69,6 @@
 .method public static maybeRethrow(Lcom/android/server/broadcastradio/hal2/Utils$FuncThrowingRemoteException;)Ljava/lang/Object;
     .locals 0
 
-    .line 55
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/broadcastradio/hal2/Utils$FuncThrowingRemoteException;->exec()Ljava/lang/Object;
 
@@ -89,7 +81,6 @@
     :catch_0
     move-exception p0
 
-    .line 57
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     const/4 p0, 0x0
@@ -100,7 +91,6 @@
 .method public static maybeRethrow(Lcom/android/server/broadcastradio/hal2/Utils$VoidFuncThrowingRemoteException;)V
     .locals 0
 
-    .line 68
     :try_start_0
     invoke-interface {p0}, Lcom/android/server/broadcastradio/hal2/Utils$VoidFuncThrowingRemoteException;->exec()V
     :try_end_0
@@ -111,7 +101,6 @@
     :catch_0
     move-exception p0
 
-    .line 70
     invoke-virtual {p0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
 
     :goto_0

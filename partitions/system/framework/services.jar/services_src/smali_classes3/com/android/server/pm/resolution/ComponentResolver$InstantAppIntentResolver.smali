@@ -13,17 +13,14 @@
 .method public constructor <init>(Lcom/android/server/pm/UserManagerService;)V
     .locals 1
 
-    .line 1812
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
 
-    .line 1806
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
-    .line 1813
     iput-object p1, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     return-void
@@ -34,7 +31,6 @@
 .method public filterResults(Ljava/util/List;)V
     .locals 5
 
-    .line 1853
     iget-object v0, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
@@ -45,7 +41,6 @@
 
     return-void
 
-    .line 1856
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -56,7 +51,6 @@
     :goto_0
     if-ge v1, v0, :cond_4
 
-    .line 1858
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -65,15 +59,12 @@
 
     iget-object v2, v2, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;->resolveInfo:Landroid/content/pm/InstantAppResolveInfo;
 
-    .line 1859
     invoke-virtual {v2}, Landroid/content/pm/InstantAppResolveInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1860
     iget-object v4, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
-    .line 1861
     invoke-virtual {v4, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -84,18 +75,15 @@
 
     goto :goto_1
 
-    .line 1866
     :cond_1
     iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-ne v4, v2, :cond_2
 
-    .line 1868
     iget-object v2, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v3}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1869
     iget-object v2, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
@@ -106,7 +94,6 @@
 
     goto :goto_2
 
-    .line 1876
     :cond_2
     invoke-interface {p1, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
@@ -128,14 +115,12 @@
 .method public getIntentFilter(Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;)Landroid/content/IntentFilter;
     .locals 0
 
-    .line 0
     return-object p1
 .end method
 
 .method public bridge synthetic getIntentFilter(Ljava/lang/Object;)Landroid/content/IntentFilter;
     .locals 0
 
-    .line 1792
     check-cast p1, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
 
     invoke-virtual {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->getIntentFilter(Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;)Landroid/content/IntentFilter;
@@ -148,7 +133,6 @@
 .method public isPackageForFilter(Ljava/lang/String;Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;)Z
     .locals 0
 
-    .line 0
     const/4 p0, 0x1
 
     return p0
@@ -157,7 +141,6 @@
 .method public bridge synthetic isPackageForFilter(Ljava/lang/String;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1792
     check-cast p2, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->isPackageForFilter(Ljava/lang/String;Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;)Z
@@ -170,7 +153,6 @@
 .method public newArray(I)[Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
     .locals 0
 
-    .line 1818
     new-array p0, p1, [Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
 
     return-object p0
@@ -179,7 +161,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1792
     invoke-virtual {p0, p1}, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->newArray(I)[Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
 
     move-result-object p0
@@ -190,7 +171,6 @@
 .method public newResult(Lcom/android/server/pm/Computer;Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;IIJ)Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
     .locals 0
 
-    .line 1831
     iget-object p1, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mUserManager:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {p1, p4}, Lcom/android/server/pm/UserManagerService;->exists(I)Z
@@ -203,7 +183,6 @@
 
     return-object p3
 
-    .line 1834
     :cond_0
     iget-object p1, p2, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;->resolveInfo:Landroid/content/pm/InstantAppResolveInfo;
 
@@ -211,7 +190,6 @@
 
     move-result-object p1
 
-    .line 1835
     invoke-virtual {p2}, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;->getOrder()I
 
     move-result p4
@@ -220,10 +198,8 @@
 
     move-result-object p4
 
-    .line 1836
     iget-object p5, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
-    .line 1837
     invoke-virtual {p5, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p5
@@ -232,7 +208,6 @@
 
     if-eqz p5, :cond_1
 
-    .line 1839
     iget-object p5, p5, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p5, Ljava/lang/Integer;
@@ -249,18 +224,15 @@
 
     return-object p3
 
-    .line 1842
     :cond_1
     iget-object p3, p2, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;->resolveInfo:Landroid/content/pm/InstantAppResolveInfo;
 
-    .line 1843
     invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
 
     move-result p5
 
     if-lez p5, :cond_2
 
-    .line 1845
     iget-object p0, p0, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->mOrderResult:Landroid/util/ArrayMap;
 
     new-instance p5, Landroid/util/Pair;
@@ -276,7 +248,6 @@
 .method public bridge synthetic newResult(Lcom/android/server/pm/Computer;Ljava/lang/Object;IIJ)Ljava/lang/Object;
     .locals 0
 
-    .line 1792
     check-cast p2, Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;
 
     invoke-virtual/range {p0 .. p6}, Lcom/android/server/pm/resolution/ComponentResolver$InstantAppIntentResolver;->newResult(Lcom/android/server/pm/Computer;Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;IIJ)Landroid/content/pm/AuxiliaryResolveInfo$AuxiliaryFilter;

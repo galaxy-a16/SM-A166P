@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/server/trust/TrustManagerService;I)V
     .locals 0
 
-    .line 2388
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
-    .line 2389
     invoke-direct {p0, p1, p2}, Lcom/android/server/trust/TrustManagerService$TrustTimeoutAlarmListener;-><init>(Lcom/android/server/trust/TrustManagerService;I)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public final disableNonrenewableTrustWhileRenewableTrustIsPresent()V
     .locals 4
 
-    .line 2409
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmUserTrustState(Lcom/android/server/trust/TrustManagerService;)Landroid/util/SparseArray;
@@ -34,7 +31,6 @@
 
     monitor-enter v0
 
-    .line 2410
     :try_start_0
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -52,7 +48,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2413
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v1}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmUserTrustState(Lcom/android/server/trust/TrustManagerService;)Landroid/util/SparseArray;
@@ -65,7 +60,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2414
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     iget p0, p0, Lcom/android/server/trust/TrustManagerService$TrustTimeoutAlarmListener;->mUserId:I
@@ -74,7 +68,6 @@
 
     invoke-virtual {v1, p0, v2}, Lcom/android/server/trust/TrustManagerService;->updateTrust(II)V
 
-    .line 2416
     :cond_0
     monitor-exit v0
 
@@ -93,12 +86,10 @@
 .method public handleAlarm()V
     .locals 2
 
-    .line 2396
     sget-boolean v0, Lcom/android/server/trust/TrustManagerService;->ENABLE_ACTIVE_UNLOCK_FLAG:Z
 
     if-eqz v0, :cond_1
 
-    .line 2397
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmTrustableTimeoutAlarmListenerForUser(Lcom/android/server/trust/TrustManagerService;)Landroid/util/SparseArray;
@@ -115,7 +106,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2398
     invoke-virtual {v0}, Lcom/android/server/trust/TrustManagerService$TrustTimeoutAlarmListener;->isQueued()Z
 
     move-result v0
@@ -132,7 +122,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2400
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0}, Lcom/android/server/trust/TrustManagerService;->-$$Nest$fgetmAlarmLock(Lcom/android/server/trust/TrustManagerService;)Ljava/lang/Object;
@@ -141,11 +130,9 @@
 
     monitor-enter v0
 
-    .line 2401
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/trust/TrustManagerService$TrustedTimeoutAlarmListener;->disableNonrenewableTrustWhileRenewableTrustIsPresent()V
 
-    .line 2402
     monitor-exit v0
 
     return-void

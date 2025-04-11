@@ -18,30 +18,24 @@
 .method public constructor <init>(II[I[I)V
     .locals 8
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     sub-int/2addr p2, p1
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 55
     new-array v0, p2, [I
 
     iput-object v0, p0, Lcom/android/server/display/color/CctEvaluator;->mStepsAtOffsetCcts:[I
 
-    .line 56
     new-array v0, p2, [I
 
     iput-object v0, p0, Lcom/android/server/display/color/CctEvaluator;->mSteppedCctsAtOffsetCcts:[I
 
-    .line 57
     iput p1, p0, Lcom/android/server/display/color/CctEvaluator;->mIndexOffset:I
 
-    .line 59
     array-length p1, p3
 
-    .line 60
     array-length v0, p3
 
     array-length v1, p4
@@ -52,10 +46,8 @@
 
     const-string p1, "Parallel arrays cctRangeMinimums and steps are different lengths; setting step of 1"
 
-    .line 61
     invoke-static {v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     invoke-virtual {p0}, Lcom/android/server/display/color/CctEvaluator;->setStepOfOne()V
 
     goto :goto_2
@@ -65,10 +57,8 @@
 
     const-string p1, "No cctRangeMinimums or steps are set; setting step of 1"
 
-    .line 66
     invoke-static {v2, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/display/color/CctEvaluator;->setStepOfOne()V
 
     goto :goto_2
@@ -85,7 +75,6 @@
     :goto_0
     if-ge v1, p2, :cond_5
 
-    .line 73
     iget v4, p0, Lcom/android/server/display/color/CctEvaluator;->mIndexOffset:I
 
     add-int/2addr v4, v1
@@ -95,7 +84,6 @@
     :goto_1
     if-ge v5, p1, :cond_2
 
-    .line 75
     aget v6, p3, v5
 
     if-lt v4, v6, :cond_2
@@ -110,7 +98,6 @@
 
     goto :goto_1
 
-    .line 80
     :cond_2
     iget-object v5, p0, Lcom/android/server/display/color/CctEvaluator;->mStepsAtOffsetCcts:[I
 
@@ -122,7 +109,6 @@
 
     sub-int v5, v3, v4
 
-    .line 82
     invoke-static {v5}, Ljava/lang/Math;->abs(I)I
 
     move-result v5
@@ -134,7 +120,6 @@
     :cond_3
     move v3, v4
 
-    .line 85
     :cond_4
     iget-object v4, p0, Lcom/android/server/display/color/CctEvaluator;->mSteppedCctsAtOffsetCcts:[I
 
@@ -154,7 +139,6 @@
 .method public evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 1
 
-    .line 93
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -179,14 +163,12 @@
 
     float-to-int p1, v0
 
-    .line 94
     iget p2, p0, Lcom/android/server/display/color/CctEvaluator;->mIndexOffset:I
 
     sub-int p2, p1, p2
 
     if-ltz p2, :cond_1
 
-    .line 95
     iget-object p0, p0, Lcom/android/server/display/color/CctEvaluator;->mSteppedCctsAtOffsetCcts:[I
 
     array-length p3, p0
@@ -195,7 +177,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_0
     aget p0, p0, p2
 
@@ -205,7 +186,6 @@
 
     return-object p0
 
-    .line 96
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -226,7 +206,6 @@
 
     invoke-static {p2, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -237,7 +216,6 @@
 .method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 29
     check-cast p2, Ljava/lang/Integer;
 
     check-cast p3, Ljava/lang/Integer;
@@ -252,7 +230,6 @@
 .method public final setStepOfOne()V
     .locals 3
 
-    .line 103
     iget-object v0, p0, Lcom/android/server/display/color/CctEvaluator;->mStepsAtOffsetCcts:[I
 
     const/4 v1, 0x1
@@ -261,7 +238,6 @@
 
     const/4 v0, 0x0
 
-    .line 104
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/color/CctEvaluator;->mSteppedCctsAtOffsetCcts:[I
 
@@ -269,7 +245,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 105
     iget v2, p0, Lcom/android/server/display/color/CctEvaluator;->mIndexOffset:I
 
     add-int/2addr v2, v0

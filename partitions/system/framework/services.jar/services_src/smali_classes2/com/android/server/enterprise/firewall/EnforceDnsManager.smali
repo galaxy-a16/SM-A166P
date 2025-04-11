@@ -33,46 +33,38 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/enterprise/adapter/IDnsResolverAdapter;)V
     .locals 1
 
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 55
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mEnforceDnsUid:Z
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mContext:Landroid/content/Context;
 
-    .line 59
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 60
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mLinkPropertiesMap:Ljava/util/Map;
 
-    .line 61
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mTransportsMap:Ljava/util/Map;
 
-    .line 62
     iput-object p2, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mDnsResolverAdapter:Lcom/android/server/enterprise/adapter/IDnsResolverAdapter;
 
     return-void
@@ -81,7 +73,6 @@
 .method public static getDomainStrings(Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
-    .line 202
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -110,7 +101,6 @@
 .method public flushVmDnsCache()V
     .locals 4
 
-    .line 138
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.net.action.CLEAR_DNS_CACHE"
@@ -119,20 +109,16 @@
 
     const/high16 v1, 0x20000000
 
-    .line 139
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     const/high16 v1, 0x4000000
 
-    .line 143
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 144
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v1
 
-    .line 146
     :try_start_0
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mContext:Landroid/content/Context;
 
@@ -142,7 +128,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 148
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -152,14 +137,12 @@
 
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 149
     throw p0
 .end method
 
 .method public final getIntSetting(Ljava/lang/String;I)I
     .locals 0
 
-    .line 183
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
@@ -172,14 +155,12 @@
 .method public final makeStrings(Ljava/util/Collection;)[Ljava/lang/String;
     .locals 3
 
-    .line 193
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result p0
 
     new-array p0, p0, [Ljava/lang/String;
 
-    .line 195
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -201,7 +182,6 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 196
     invoke-virtual {v1}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v1
@@ -219,7 +199,6 @@
 .method public noteDnsServersForNetwork(ILandroid/net/LinkProperties;)V
     .locals 2
 
-    .line 88
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mLinkPropertiesMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -228,7 +207,6 @@
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->sendDnsConfigurationForNetwork(I)V
 
     return-void
@@ -237,7 +215,6 @@
 .method public sendDnsConfigurationForNetwork(I)V
     .locals 14
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mLinkPropertiesMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -250,7 +227,6 @@
 
     check-cast v0, Landroid/net/LinkProperties;
 
-    .line 102
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mTransportsMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -269,39 +245,31 @@
 
     goto/16 :goto_0
 
-    .line 104
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->updateParametersSettings()V
 
-    .line 105
     new-instance v2, Landroid/net/ResolverParamsParcel;
 
     invoke-direct {v2}, Landroid/net/ResolverParamsParcel;-><init>()V
 
-    .line 107
     iput p1, v2, Landroid/net/ResolverParamsParcel;->netId:I
 
-    .line 108
     iget p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mSampleValidity:I
 
     iput p1, v2, Landroid/net/ResolverParamsParcel;->sampleValiditySeconds:I
 
-    .line 109
     iget p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mSuccessThreshold:I
 
     iput p1, v2, Landroid/net/ResolverParamsParcel;->successThreshold:I
 
-    .line 110
     iget p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMinSamples:I
 
     iput p1, v2, Landroid/net/ResolverParamsParcel;->minSamples:I
 
-    .line 111
     iget p1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMaxSamples:I
 
     iput p1, v2, Landroid/net/ResolverParamsParcel;->maxSamples:I
 
-    .line 112
     invoke-virtual {v0}, Landroid/net/LinkProperties;->getDnsServers()Ljava/util/List;
 
     move-result-object p1
@@ -312,7 +280,6 @@
 
     iput-object p1, v2, Landroid/net/ResolverParamsParcel;->servers:[Ljava/lang/String;
 
-    .line 113
     invoke-virtual {v0}, Landroid/net/LinkProperties;->getDomains()Ljava/lang/String;
 
     move-result-object p1
@@ -325,37 +292,30 @@
 
     const-string p1, ""
 
-    .line 114
     iput-object p1, v2, Landroid/net/ResolverParamsParcel;->tlsName:Ljava/lang/String;
 
     const/4 p1, 0x0
 
     new-array p1, p1, [Ljava/lang/String;
 
-    .line 115
     iput-object p1, v2, Landroid/net/ResolverParamsParcel;->tlsServers:[Ljava/lang/String;
 
-    .line 116
     new-instance p1, Landroid/net/ResolverOptionsParcel;
 
     invoke-direct {p1}, Landroid/net/ResolverOptionsParcel;-><init>()V
 
     iput-object p1, v2, Landroid/net/ResolverParamsParcel;->resolverOptions:Landroid/net/ResolverOptionsParcel;
 
-    .line 117
     iget-boolean v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mEnforceDnsUid:Z
 
     iput-boolean v0, p1, Landroid/net/ResolverOptionsParcel;->enforceDnsUid:Z
 
-    .line 118
     iput-object v1, v2, Landroid/net/ResolverParamsParcel;->transportTypes:[I
 
-    .line 120
     sget-object p1, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->TAG:Ljava/lang/String;
 
     iget v0, v2, Landroid/net/ResolverParamsParcel;->netId:I
 
-    .line 121
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -368,7 +328,6 @@
 
     iget-object v0, v2, Landroid/net/ResolverParamsParcel;->domains:[Ljava/lang/String;
 
-    .line 122
     invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -381,7 +340,6 @@
 
     iget v0, v2, Landroid/net/ResolverParamsParcel;->successThreshold:I
 
-    .line 123
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -394,7 +352,6 @@
 
     iget v0, v2, Landroid/net/ResolverParamsParcel;->maxSamples:I
 
-    .line 124
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -407,7 +364,6 @@
 
     iget v0, v2, Landroid/net/ResolverParamsParcel;->retryCount:I
 
-    .line 125
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v11
@@ -416,7 +372,6 @@
 
     iget-object v0, v2, Landroid/net/ResolverParamsParcel;->tlsServers:[Ljava/lang/String;
 
-    .line 126
     invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v13
@@ -427,14 +382,12 @@
 
     const-string/jumbo v1, "sendDnsConfigurationForNetwork(%d, %s, %s, %d, %d, %d, %d, %d, %d, %s, %s)"
 
-    .line 120
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     iget-object p0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mDnsResolverAdapter:Lcom/android/server/enterprise/adapter/IDnsResolverAdapter;
 
     invoke-interface {p0, v2}, Lcom/android/server/enterprise/adapter/IDnsResolverAdapter;->setResolverConfiguration(Landroid/net/ResolverParamsParcel;)V
@@ -447,10 +400,8 @@
 .method public updateDnsUidForNetwork(IZ)V
     .locals 0
 
-    .line 93
     iput-boolean p2, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mEnforceDnsUid:Z
 
-    .line 94
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->sendDnsConfigurationForNetwork(I)V
 
     return-void
@@ -463,7 +414,6 @@
 
     const/16 v1, 0x708
 
-    .line 153
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->getIntSetting(Ljava/lang/String;I)I
 
     move-result v0
@@ -478,7 +428,6 @@
 
     if-le v0, v3, :cond_1
 
-    .line 157
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->TAG:Ljava/lang/String;
 
@@ -504,7 +453,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     iput v1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mSampleValidity:I
 
     :cond_1
@@ -512,7 +460,6 @@
 
     const/16 v1, 0x19
 
-    .line 162
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->getIntSetting(Ljava/lang/String;I)I
 
     move-result v0
@@ -525,7 +472,6 @@
 
     if-le v0, v3, :cond_3
 
-    .line 166
     :cond_2
     sget-object v0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->TAG:Ljava/lang/String;
 
@@ -551,7 +497,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     iput v1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mSuccessThreshold:I
 
     :cond_3
@@ -559,7 +504,6 @@
 
     const/16 v1, 0x8
 
-    .line 171
     invoke-virtual {p0, v0, v1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->getIntSetting(Ljava/lang/String;I)I
 
     move-result v0
@@ -570,14 +514,12 @@
 
     const/16 v2, 0x40
 
-    .line 172
     invoke-virtual {p0, v0, v2}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->getIntSetting(Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMaxSamples:I
 
-    .line 173
     iget v3, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMinSamples:I
 
     if-ltz v3, :cond_4
@@ -586,7 +528,6 @@
 
     if-le v0, v2, :cond_5
 
-    .line 174
     :cond_4
     sget-object v0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->TAG:Ljava/lang/String;
 
@@ -630,10 +571,8 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     iput v1, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMinSamples:I
 
-    .line 178
     iput v2, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mMaxSamples:I
 
     :cond_5
@@ -643,7 +582,6 @@
 .method public updateTransportsForNetwork(I[I)V
     .locals 2
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->mTransportsMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -652,7 +590,6 @@
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/firewall/EnforceDnsManager;->sendDnsConfigurationForNetwork(I)V
 
     return-void

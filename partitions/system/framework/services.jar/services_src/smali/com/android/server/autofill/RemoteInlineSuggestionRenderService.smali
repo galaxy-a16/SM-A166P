@@ -11,7 +11,6 @@
 .method public static synthetic $r8$lambda$PQTv9YU9PfBWd_46Tv-zX1TZTlQ(Landroid/os/RemoteCallback;Landroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->lambda$getInlineSuggestionsRendererInfo$1(Landroid/os/RemoteCallback;Landroid/service/autofill/IInlineSuggestionRenderService;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static synthetic $r8$lambda$f8OllhrcGlehyM53OeAM4HiHSyY(IILandroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
 
-    .line 0
     invoke-static {p0, p1, p2}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->lambda$destroySuggestionViews$2(IILandroid/service/autofill/IInlineSuggestionRenderService;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public static synthetic $r8$lambda$nQmTpkQM9fpRS0pqARpArAY01_0(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;IIILandroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
 
-    .line 0
     invoke-static/range {p0 .. p8}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->lambda$renderSuggestion$0(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;IIILandroid/service/autofill/IInlineSuggestionRenderService;)V
 
     return-void
@@ -38,7 +35,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Ljava/lang/String;ILcom/android/server/autofill/RemoteInlineSuggestionRenderService$InlineSuggestionRenderCallbacks;ZZ)V
     .locals 10
 
-    .line 56
     invoke-virtual {p1}, Landroid/content/Context;->getMainThreadHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -71,17 +67,14 @@
 
     move/from16 v8, p7
 
-    .line 55
     invoke-direct/range {v0 .. v9}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;ILcom/android/internal/infra/AbstractRemoteService$VultureCallback;Landroid/os/Handler;IZI)V
 
     const-wide/16 v0, 0x0
 
     move-object v2, p0
 
-    .line 50
     iput-wide v0, v2, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->mIdleUnbindTimeoutMs:J
 
-    .line 60
     invoke-virtual {p0}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->ensureBound()V
 
     return-void
@@ -90,7 +83,6 @@
 .method public static getServiceComponentName(Landroid/content/Context;I)Landroid/content/ComponentName;
     .locals 1
 
-    .line 141
     invoke-static {p0, p1}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->getServiceInfo(Landroid/content/Context;I)Landroid/content/pm/ServiceInfo;
 
     move-result-object p0
@@ -101,7 +93,6 @@
 
     return-object p0
 
-    .line 144
     :cond_0
     new-instance p1, Landroid/content/ComponentName;
 
@@ -111,7 +102,6 @@
 
     invoke-direct {p1, v0, p0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     sget-boolean p0, Lcom/android/server/autofill/Helper;->sVerbose:Z
 
     if-eqz p0, :cond_1
@@ -141,7 +131,6 @@
 .method public static getServiceInfo(Landroid/content/Context;I)Landroid/content/pm/ServiceInfo;
     .locals 5
 
-    .line 113
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -158,12 +147,10 @@
 
     const-string/jumbo p0, "no external services package!"
 
-    .line 115
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
 
-    .line 119
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
@@ -171,10 +158,8 @@
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {v3, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 121
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -191,7 +176,6 @@
 
     goto :goto_0
 
-    .line 123
     :cond_1
     iget-object p1, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -202,20 +186,17 @@
 
     goto :goto_1
 
-    .line 129
     :cond_2
     iget-object p0, p1, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
     const-string v0, "android.permission.BIND_INLINE_SUGGESTION_RENDER_SERVICE"
 
-    .line 130
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    .line 131
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +226,6 @@
     :goto_1
     const-string p0, "No valid components found."
 
-    .line 125
     invoke-static {v1, p0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -254,7 +234,6 @@
 .method public static synthetic lambda$destroySuggestionViews$2(IILandroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
 
-    .line 107
     invoke-interface {p2, p0, p1}, Landroid/service/autofill/IInlineSuggestionRenderService;->destroySuggestionViews(II)V
 
     return-void
@@ -263,7 +242,6 @@
 .method public static synthetic lambda$getInlineSuggestionsRendererInfo$1(Landroid/os/RemoteCallback;Landroid/service/autofill/IInlineSuggestionRenderService;)V
     .locals 0
 
-    .line 100
     invoke-interface {p1, p0}, Landroid/service/autofill/IInlineSuggestionRenderService;->getInlineSuggestionsRendererInfo(Landroid/os/RemoteCallback;)V
 
     return-void
@@ -290,7 +268,6 @@
 
     move/from16 v8, p7
 
-    .line 92
     invoke-interface/range {v0 .. v8}, Landroid/service/autofill/IInlineSuggestionRenderService;->renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
 
     return-void
@@ -301,7 +278,6 @@
 .method public destroySuggestionViews(II)V
     .locals 1
 
-    .line 107
     new-instance v0, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p1, p2}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda0;-><init>(II)V
@@ -314,7 +290,6 @@
 .method public ensureBound()V
     .locals 0
 
-    .line 82
     invoke-virtual {p0}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->scheduleBind()V
 
     return-void
@@ -323,7 +298,6 @@
 .method public getInlineSuggestionsRendererInfo(Landroid/os/RemoteCallback;)V
     .locals 1
 
-    .line 100
     new-instance v0, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p1}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda2;-><init>(Landroid/os/RemoteCallback;)V
@@ -336,7 +310,6 @@
 .method public bridge synthetic getServiceInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 0
 
-    .line 44
     invoke-virtual {p0, p1}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->getServiceInterface(Landroid/os/IBinder;)Landroid/service/autofill/IInlineSuggestionRenderService;
 
     move-result-object p0
@@ -347,7 +320,6 @@
 .method public getServiceInterface(Landroid/os/IBinder;)Landroid/service/autofill/IInlineSuggestionRenderService;
     .locals 0
 
-    .line 65
     invoke-static {p1}, Landroid/service/autofill/IInlineSuggestionRenderService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/autofill/IInlineSuggestionRenderService;
 
     move-result-object p0
@@ -358,7 +330,6 @@
 .method public getTimeoutIdleBindMillis()J
     .locals 2
 
-    .line 0
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -369,7 +340,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 75
     invoke-virtual {p0}, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService;->getTimeoutIdleBindMillis()J
 
     move-result-wide v0
@@ -380,10 +350,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->scheduleUnbind()V
 
-    .line 78
     :cond_0
     invoke-super {p0, p1}, Lcom/android/internal/infra/AbstractMultiplePendingRequestsRemoteService;->handleOnConnectedStateChanged(Z)V
 
@@ -393,7 +361,6 @@
 .method public renderSuggestion(Landroid/service/autofill/IInlineSuggestionUiCallback;Landroid/service/autofill/InlinePresentation;IILandroid/os/IBinder;III)V
     .locals 10
 
-    .line 92
     new-instance v9, Lcom/android/server/autofill/RemoteInlineSuggestionRenderService$$ExternalSyntheticLambda1;
 
     move-object v0, v9

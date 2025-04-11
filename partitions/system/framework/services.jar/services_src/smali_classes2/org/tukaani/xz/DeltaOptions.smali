@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 29
     const-class v0, Lorg/tukaani/xz/DeltaOptions;
 
     return-void
@@ -20,15 +19,12 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 50
     invoke-direct {p0}, Lorg/tukaani/xz/FilterOptions;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 40
     iput v0, p0, Lorg/tukaani/xz/DeltaOptions;->distance:I
 
-    .line 51
     invoke-virtual {p0, p1}, Lorg/tukaani/xz/DeltaOptions;->setDistance(I)V
 
     return-void
@@ -39,7 +35,6 @@
 .method public clone()Ljava/lang/Object;
     .locals 0
 
-    .line 97
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -49,7 +44,6 @@
 
     return-object p0
 
-    .line 100
     :catch_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -61,7 +55,6 @@
 .method public getInputStream(Ljava/io/InputStream;Lorg/tukaani/xz/ArrayCache;)Ljava/io/InputStream;
     .locals 0
 
-    .line 88
     new-instance p2, Lorg/tukaani/xz/DeltaInputStream;
 
     iget p0, p0, Lorg/tukaani/xz/DeltaOptions;->distance:I
@@ -82,12 +75,10 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 64
     iput p1, p0, Lorg/tukaani/xz/DeltaOptions;->distance:I
 
     return-void
 
-    .line 60
     :cond_0
     new-instance p0, Lorg/tukaani/xz/UnsupportedOptionsException;
 

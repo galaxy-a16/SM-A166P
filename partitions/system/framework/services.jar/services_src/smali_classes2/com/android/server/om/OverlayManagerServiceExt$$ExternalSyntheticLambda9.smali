@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Landroid/content/om/OverlayInfo;
 
     invoke-static {p1}, Lcom/android/server/om/OverlayManagerServiceExt;->$r8$lambda$9JRR47Gvf8w5269TGezCT33UojI(Landroid/content/om/OverlayInfo;)Ljava/lang/String;

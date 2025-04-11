@@ -29,7 +29,6 @@
 
     new-array v0, v0, [I
 
-    .line 47
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/server/power/stats/KernelWakelockReader;->PROC_WAKELOCKS_FORMAT:[I
@@ -38,7 +37,6 @@
 
     new-array v0, v0, [I
 
-    .line 57
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/server/power/stats/KernelWakelockReader;->WAKEUP_SOURCES_FORMAT:[I
@@ -72,31 +70,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 69
     iput-object v1, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mProcWakelocksName:[Ljava/lang/String;
 
     new-array v0, v0, [J
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mProcWakelocksData:[J
 
     const/4 v0, 0x0
 
-    .line 71
     iput-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mSuspendControlService:Landroid/system/suspend/internal/ISuspendControlServiceInternal;
 
     const v0, 0x8000
 
     new-array v0, v0, [B
 
-    .line 72
     iput-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
 
     return-void
@@ -111,7 +104,6 @@
 
     const/4 v1, 0x0
 
-    .line 189
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/power/stats/KernelWakelockReader;->waitForSuspendControlService()Landroid/system/suspend/internal/ISuspendControlServiceInternal;
 
@@ -121,13 +113,11 @@
     :try_end_0
     .catch Landroid/os/ServiceManager$ServiceNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 196
     :try_start_1
     invoke-interface {v2}, Landroid/system/suspend/internal/ISuspendControlServiceInternal;->getWakeLockStats()[Landroid/system/suspend/internal/WakeLockInfo;
 
     move-result-object v2
 
-    .line 197
     invoke-virtual {p0, v2, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->updateWakelockStats([Landroid/system/suspend/internal/WakeLockInfo;Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -140,7 +130,6 @@
 
     const-string p1, "SuspendControlService got IllegalArgumentException"
 
-    .line 202
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v1
@@ -150,7 +139,6 @@
 
     const-string p1, "Failed to obtain wakelock stats from ISuspendControlService"
 
-    .line 199
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v1
@@ -160,7 +148,6 @@
 
     const-string p1, "Required service suspend_control not available"
 
-    .line 191
     invoke-static {v0, p1, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v1
@@ -186,7 +173,6 @@
 
     if-ge v2, v9, :cond_0
 
-    .line 268
     aget-byte v3, v0, v2
 
     if-eq v3, v12, :cond_0
@@ -202,7 +188,6 @@
 
     add-int/2addr v2, v13
 
-    .line 271
     monitor-enter p0
 
     move v14, v2
@@ -215,7 +200,6 @@
     :goto_2
     if-ge v15, v9, :cond_1
 
-    .line 274
     :try_start_0
     aget-byte v2, v0, v15
 
@@ -234,11 +218,9 @@
 
     goto/16 :goto_7
 
-    .line 282
     :cond_2
     iget-object v8, v1, Lcom/android/server/power/stats/KernelWakelockReader;->mProcWakelocksName:[Ljava/lang/String;
 
-    .line 283
     iget-object v7, v1, Lcom/android/server/power/stats/KernelWakelockReader;->mProcWakelocksData:[J
 
     move v2, v14
@@ -246,7 +228,6 @@
     :goto_3
     if-ge v2, v15, :cond_4
 
-    .line 288
     aget-byte v3, v0, v2
 
     and-int/lit16 v3, v3, 0x80
@@ -265,12 +246,10 @@
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 291
     sget-object v2, Lcom/android/server/power/stats/KernelWakelockReader;->WAKEUP_SOURCES_FORMAT:[I
 
     goto :goto_4
 
-    .line 292
     :cond_5
     sget-object v2, Lcom/android/server/power/stats/KernelWakelockReader;->PROC_WAKELOCKS_FORMAT:[I
 
@@ -293,19 +272,16 @@
 
     move-object/from16 v8, v16
 
-    .line 290
     invoke-static/range {v2 .. v8}, Landroid/os/Process;->parseProcLine([BII[I[Ljava/lang/String;[J[F)Z
 
     move-result v2
 
-    .line 295
     aget-object v3, v18, v11
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 296
     aget-wide v4, v17, v13
 
     long-to-int v4, v4
@@ -316,14 +292,12 @@
 
     if-eqz p3, :cond_6
 
-    .line 300
     aget-wide v7, v17, v7
 
     mul-long/2addr v7, v5
 
     goto :goto_5
 
-    .line 303
     :cond_6
     aget-wide v7, v17, v7
 
@@ -336,21 +310,18 @@
     :goto_5
     if-eqz v2, :cond_9
 
-    .line 306
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-lez v5, :cond_9
 
-    .line 307
     invoke-virtual {v10, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_7
 
-    .line 308
     new-instance v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;
 
     sget v5, Lcom/android/server/power/stats/KernelWakelockReader;->sKernelWakelockUpdateVersion:I
@@ -361,7 +332,6 @@
 
     goto :goto_6
 
-    .line 311
     :cond_7
     invoke-virtual {v10, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -369,21 +339,18 @@
 
     check-cast v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;
 
-    .line 312
     iget v3, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mVersion:I
 
     sget v5, Lcom/android/server/power/stats/KernelWakelockReader;->sKernelWakelockUpdateVersion:I
 
     if-ne v3, v5, :cond_8
 
-    .line 313
     iget v3, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
     add-int/2addr v3, v4
 
     iput v3, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
-    .line 314
     iget-wide v3, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mTotalTime:J
 
     add-long/2addr v3, v7
@@ -392,14 +359,11 @@
 
     goto :goto_6
 
-    .line 316
     :cond_8
     iput v4, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
-    .line 317
     iput-wide v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mTotalTime:J
 
-    .line 318
     iput v5, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mVersion:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -412,7 +376,6 @@
     :try_start_1
     const-string v2, "KernelWakelockReader"
 
-    .line 323
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,7 +409,6 @@
 
     const-string v3, "Failed to parse proc line!"
 
-    .line 326
     invoke-static {v2, v3}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_a
@@ -457,7 +419,6 @@
 
     goto/16 :goto_1
 
-    .line 332
     :cond_b
     :goto_7
     monitor-exit p0
@@ -467,7 +428,6 @@
     :catchall_0
     move-exception v0
 
-    .line 333
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -478,7 +438,6 @@
 .method public final readKernelWakelockStats(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
     .locals 10
 
-    .line 80
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/class/wakeup"
@@ -491,7 +450,6 @@
 
     const-string v1, "KernelWakelockReader"
 
-    .line 82
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -516,16 +474,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
     const-class v0, Lcom/android/server/power/stats/KernelWakelockReader;
 
     monitor-enter v0
 
-    .line 88
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->updateVersion(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
-    .line 89
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->getWakelockStatsFromSystemSuspend(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
     move-result-object v2
@@ -536,15 +491,12 @@
 
     const-string p1, "Failed to get wakelock stats from SystemSuspend"
 
-    .line 90
     invoke-static {p0, p1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     monitor-exit v0
 
     return-object v1
 
-    .line 93
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->removeOldStats(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
@@ -557,14 +509,12 @@
     :catchall_0
     move-exception p0
 
-    .line 94
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
-    .line 96
     :cond_1
     iget-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
 
@@ -572,17 +522,14 @@
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 99
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 101
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReadsMask()I
 
     move-result v0
 
-    .line 105
     :try_start_1
     new-instance v5, Ljava/io/FileInputStream;
 
@@ -610,7 +557,6 @@
 
     goto/16 :goto_3
 
-    .line 109
     :catch_1
     :try_start_2
     new-instance v5, Ljava/io/FileInputStream;
@@ -627,7 +573,6 @@
 
     move v7, v2
 
-    .line 119
     :goto_0
     :try_start_3
     iget-object v8, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
@@ -646,17 +591,14 @@
 
     goto :goto_0
 
-    .line 124
     :cond_2
     invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 129
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicyMask(I)V
 
-    .line 132
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -671,7 +613,6 @@
 
     const-string v3, "KernelWakelockReader"
 
-    .line 134
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -695,7 +636,6 @@
     :cond_3
     if-lez v7, :cond_6
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
 
     array-length v0, v0
@@ -704,7 +644,6 @@
 
     const-string v0, "KernelWakelockReader"
 
-    .line 139
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -729,7 +668,6 @@
     :goto_1
     if-ge v2, v7, :cond_6
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
 
     aget-byte v0, v0, v2
@@ -745,18 +683,15 @@
 
     goto :goto_1
 
-    .line 152
     :cond_6
     :goto_2
     const-class v1, Lcom/android/server/power/stats/KernelWakelockReader;
 
     monitor-enter v1
 
-    .line 153
     :try_start_4
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->updateVersion(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
-    .line 155
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->getWakelockStatsFromSystemSuspend(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
     move-result-object v0
@@ -767,16 +702,13 @@
 
     const-string v2, "Failed to get Native wakelock stats from SystemSuspend"
 
-    .line 156
     invoke-static {v0, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :cond_7
     iget-object v0, p0, Lcom/android/server/power/stats/KernelWakelockReader;->mKernelWakelockBuffer:[B
 
     invoke-virtual {p0, v0, v7, v6, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->parseProcWakelocks([BIZLcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
-    .line 160
     invoke-virtual {p0, p1}, Lcom/android/server/power/stats/KernelWakelockReader;->removeOldStats(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
 
     move-result-object p0
@@ -788,7 +720,6 @@
     :catchall_2
     move-exception p0
 
-    .line 161
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
@@ -801,13 +732,11 @@
 
     const-string/jumbo p1, "neither /proc/wakelocks nor /d/wakeup_sources exists"
 
-    .line 112
     invoke-static {p0, p1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 129
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicyMask(I)V
 
     return-object v1
@@ -818,12 +747,10 @@
 
     const-string v2, "failed to read kernel wakelocks"
 
-    .line 126
     invoke-static {p1, v2, p0}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 129
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicyMask(I)V
 
     return-object v1
@@ -831,14 +758,12 @@
     :goto_4
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicyMask(I)V
 
-    .line 130
     throw p0
 .end method
 
 .method public removeOldStats(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
     .locals 2
 
-    .line 355
     invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -847,7 +772,6 @@
 
     move-result-object p0
 
-    .line 356
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -856,7 +780,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 357
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -869,7 +792,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 358
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -881,14 +803,12 @@
 .method public updateVersion(Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
     .locals 0
 
-    .line 343
     sget p0, Lcom/android/server/power/stats/KernelWakelockReader;->sKernelWakelockUpdateVersion:I
 
     add-int/lit8 p0, p0, 0x1
 
     sput p0, Lcom/android/server/power/stats/KernelWakelockReader;->sKernelWakelockUpdateVersion:I
 
-    .line 344
     iput p0, p1, Lcom/android/server/power/stats/KernelWakelockStats;->kernelWakelockVersion:I
 
     return-object p1
@@ -897,7 +817,6 @@
 .method public updateWakelockStats([Landroid/system/suspend/internal/WakeLockInfo;Lcom/android/server/power/stats/KernelWakelockStats;)Lcom/android/server/power/stats/KernelWakelockStats;
     .locals 11
 
-    .line 218
     array-length p0, p1
 
     const/4 v0, 0x0
@@ -907,7 +826,6 @@
 
     aget-object v1, p1, v0
 
-    .line 220
     iget-object v2, v1, Landroid/system/suspend/internal/WakeLockInfo;->name:Ljava/lang/String;
 
     invoke-virtual {p2, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -918,7 +836,6 @@
 
     if-nez v2, :cond_0
 
-    .line 222
     iget-object v2, v1, Landroid/system/suspend/internal/WakeLockInfo;->name:Ljava/lang/String;
 
     new-instance v5, Lcom/android/server/power/stats/KernelWakelockStats$Entry;
@@ -941,7 +858,6 @@
 
     goto :goto_1
 
-    .line 225
     :cond_0
     iget-object v2, v1, Landroid/system/suspend/internal/WakeLockInfo;->name:Ljava/lang/String;
 
@@ -951,10 +867,8 @@
 
     check-cast v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;
 
-    .line 226
     iget-wide v5, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mTotalTime:J
 
-    .line 227
     iget-boolean v7, v1, Landroid/system/suspend/internal/WakeLockInfo;->isKernelWakelock:Z
 
     if-nez v7, :cond_1
@@ -965,7 +879,6 @@
 
     if-ne v7, v8, :cond_1
 
-    .line 228
     iget v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
     iget-wide v8, v1, Landroid/system/suspend/internal/WakeLockInfo;->activeCount:J
@@ -976,7 +889,6 @@
 
     iput v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
-    .line 230
     iget-wide v7, v1, Landroid/system/suspend/internal/WakeLockInfo;->totalTime:J
 
     mul-long/2addr v7, v3
@@ -987,7 +899,6 @@
 
     goto :goto_1
 
-    .line 232
     :cond_1
     iget-wide v7, v1, Landroid/system/suspend/internal/WakeLockInfo;->activeCount:J
 
@@ -995,19 +906,16 @@
 
     iput v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mCount:I
 
-    .line 234
     iget-wide v7, v1, Landroid/system/suspend/internal/WakeLockInfo;->totalTime:J
 
     mul-long/2addr v7, v3
 
     iput-wide v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mTotalTime:J
 
-    .line 235
     sget v7, Lcom/android/server/power/stats/KernelWakelockReader;->sKernelWakelockUpdateVersion:I
 
     iput v7, v2, Lcom/android/server/power/stats/KernelWakelockStats$Entry;->mVersion:I
 
-    .line 238
     :goto_1
     iget-object v2, v1, Landroid/system/suspend/internal/WakeLockInfo;->name:Ljava/lang/String;
 
@@ -1031,7 +939,6 @@
 
     if-ltz v2, :cond_3
 
-    .line 240
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1134,12 +1041,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 174
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 173
     invoke-static {v1}, Landroid/system/suspend/internal/ISuspendControlServiceInternal$Stub;->asInterface(Landroid/os/IBinder;)Landroid/system/suspend/internal/ISuspendControlServiceInternal;
 
     move-result-object v1
@@ -1155,7 +1060,6 @@
 
     goto :goto_0
 
-    .line 179
     :cond_1
     new-instance p0, Landroid/os/ServiceManager$ServiceNotFoundException;
 

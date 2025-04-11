@@ -20,7 +20,6 @@
 .method public final onValues(II)V
     .locals 0
 
-    .line 0
     invoke-static {p1, p2}, Lcom/android/server/biometrics/sensors/face/hidl/Face10;->$r8$lambda$Wz-Go0ZBp61l2GgCfMu-LMkWLOU(II)V
 
     return-void

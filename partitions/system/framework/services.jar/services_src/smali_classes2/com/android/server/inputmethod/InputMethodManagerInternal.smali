@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 191
     new-instance v0, Lcom/android/server/inputmethod/InputMethodManagerInternal$1;
 
     invoke-direct {v0}, Lcom/android/server/inputmethod/InputMethodManagerInternal$1;-><init>()V
@@ -32,10 +31,8 @@
 .method public static get()Lcom/android/server/inputmethod/InputMethodManagerInternal;
     .locals 1
 
-    .line 278
     const-class v0, Lcom/android/server/inputmethod/InputMethodManagerInternal;
 
-    .line 279
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
@@ -46,7 +43,6 @@
 
     goto :goto_0
 
-    .line 280
     :cond_0
     sget-object v0, Lcom/android/server/inputmethod/InputMethodManagerInternal;->NOP:Lcom/android/server/inputmethod/InputMethodManagerInternal;
 

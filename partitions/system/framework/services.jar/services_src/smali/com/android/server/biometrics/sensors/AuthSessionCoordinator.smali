@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 54
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeClock()Ljava/time/Clock;
 
     move-result-object v0
@@ -34,31 +33,26 @@
 .method public constructor <init>(Ljava/time/Clock;)V
     .locals 1
 
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
-    .line 60
     new-instance v0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
-    .line 61
     new-instance v0, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     invoke-direct {v0, p1}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;-><init>(Ljava/time/Clock;)V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
-    .line 62
     new-instance p1, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     const/16 v0, 0x64
@@ -75,7 +69,6 @@
 .method public final attemptToFinish(IILjava/lang/String;)V
     .locals 4
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -92,7 +85,6 @@
 
     if-nez v0, :cond_0
 
-    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,13 +108,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 206
     :goto_0
     iget v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
 
     if-eq p1, v3, :cond_1
 
-    .line 207
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,7 +147,6 @@
 
     return-void
 
-    .line 213
     :cond_2
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
@@ -167,12 +156,10 @@
 
     invoke-interface {p1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 214
     iget-boolean p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mIsAuthenticating:Z
 
     if-eqz p1, :cond_3
 
-    .line 215
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->endAuthSession()V
 
     :cond_3
@@ -184,7 +171,6 @@
 
     monitor-enter p0
 
-    .line 167
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -228,25 +214,21 @@
 
     move-result-object p4
 
-    .line 171
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     invoke-virtual {p5, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
 
     if-eqz p6, :cond_0
 
-    .line 173
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-virtual {p5, p2}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->authenticatedFor(I)V
 
-    .line 175
     :cond_0
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->attemptToFinish(IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 176
     monitor-exit p0
 
     return-void
@@ -264,7 +246,6 @@
 
     monitor-enter p0
 
-    .line 120
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
@@ -300,15 +281,12 @@
 
     invoke-virtual {v0, p3}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
 
-    .line 123
     iget-boolean p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mIsAuthenticating:Z
 
     if-nez p3, :cond_0
 
-    .line 124
     invoke-virtual {p0, p1}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->onAuthSessionStarted(I)V
 
-    .line 127
     :cond_0
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
@@ -324,7 +302,6 @@
 
     const-string p1, "AuthSessionCoordinator"
 
-    .line 128
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,12 +324,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 129
     monitor-exit p0
 
     return-void
 
-    .line 132
     :cond_1
     :try_start_1
     iget p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
@@ -361,7 +336,6 @@
 
     const-string p2, "AuthSessionCoordinator"
 
-    .line 133
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -392,12 +366,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 135
     monitor-exit p0
 
     return-void
 
-    .line 138
     :cond_2
     :try_start_2
     iget-object p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
@@ -410,7 +382,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 139
     monitor-exit p0
 
     return-void
@@ -428,10 +399,8 @@
 
     const/4 v0, 0x0
 
-    .line 106
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mIsAuthenticating:Z
 
-    .line 107
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->clear()V
@@ -442,7 +411,6 @@
 .method public endAuthSession()V
     .locals 6
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-virtual {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->getResult()Ljava/util/Map;
@@ -451,14 +419,12 @@
 
     const/16 v1, 0xfff
 
-    .line 86
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     const/16 v2, 0xff
 
-    .line 87
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -473,7 +439,6 @@
 
     move-result-object v1
 
-    .line 86
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -500,7 +465,6 @@
 
     move-result v2
 
-    .line 88
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -511,7 +475,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 89
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -522,14 +485,12 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 90
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     iget v4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
 
     invoke-virtual {v3, v4, v2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->clearPermanentLockOut(II)V
 
-    .line 91
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     iget v4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
@@ -538,7 +499,6 @@
 
     goto :goto_0
 
-    .line 92
     :cond_1
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -550,7 +510,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 93
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     iget v4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
@@ -559,7 +518,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_2
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -571,7 +529,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 95
     iget-object v3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     iget v4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
@@ -580,7 +537,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_3
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
@@ -590,7 +546,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 100
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -615,7 +570,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->clearSession()V
 
     :cond_4
@@ -627,7 +581,6 @@
 
     monitor-enter p0
 
-    .line 115
     :try_start_0
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
@@ -654,7 +607,6 @@
 
     monitor-enter p0
 
-    .line 155
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -698,22 +650,18 @@
 
     move-result-object p4
 
-    .line 159
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     invoke-virtual {p5, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
 
-    .line 160
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-virtual {p5, p2}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->lockOutTimed(I)V
 
-    .line 161
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->attemptToFinish(IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 162
     monitor-exit p0
 
     return-void
@@ -731,7 +679,6 @@
 
     monitor-enter p0
 
-    .line 144
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -769,22 +716,18 @@
 
     move-result-object p4
 
-    .line 147
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     invoke-virtual {p5, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
 
-    .line 148
     iget-object p5, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-virtual {p5, p2}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;->lockedOutFor(I)V
 
-    .line 149
     invoke-virtual {p0, p1, p3, p4}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->attemptToFinish(IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 150
     monitor-exit p0
 
     return-void
@@ -800,27 +743,22 @@
 .method public onAuthSessionStarted(I)V
     .locals 2
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthOperations:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 70
     iput p1, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mUserId:I
 
     const/4 v0, 0x1
 
-    .line 71
     iput-boolean v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mIsAuthenticating:Z
 
-    .line 72
     new-instance v0, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
     invoke-direct {v0}, Lcom/android/server/biometrics/sensors/AuthResultCoordinator;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mAuthResultCoordinator:Lcom/android/server/biometrics/sensors/AuthResultCoordinator;
 
-    .line 73
     iget-object p0, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -851,7 +789,6 @@
 
     monitor-enter p0
 
-    .line 181
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -883,7 +820,6 @@
 
     move-result-object p3
 
-    .line 184
     iget-object p4, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mRingBuffer:Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;
 
     invoke-virtual {p4, p3}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator$RingBuffer;->addApiCall(Ljava/lang/String;)V
@@ -892,27 +828,22 @@
 
     if-ne p2, p3, :cond_0
 
-    .line 186
     invoke-virtual {p0}, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->clearSession()V
 
-    .line 196
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     invoke-virtual {p3, p1, p2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->clearTimedLockout(II)V
 
-    .line 197
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
 
     invoke-virtual {p3, p1, p2}, Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;->clearPermanentLockOut(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 198
     monitor-exit p0
 
     return-void
 
-    .line 189
     :cond_0
     :try_start_1
     iget-object p3, p0, Lcom/android/server/biometrics/sensors/AuthSessionCoordinator;->mMultiBiometricLockoutState:Lcom/android/server/biometrics/sensors/MultiBiometricLockoutState;
@@ -921,7 +852,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 190
     monitor-exit p0
 
     return-void
@@ -937,7 +867,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 225
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

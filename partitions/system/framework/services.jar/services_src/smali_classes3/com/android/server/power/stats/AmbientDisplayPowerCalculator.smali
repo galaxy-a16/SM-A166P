@@ -11,15 +11,12 @@
 .method public constructor <init>(Lcom/android/internal/os/PowerProfile;)V
     .locals 6
 
-    .line 39
     invoke-direct {p0}, Lcom/android/server/power/stats/PowerCalculator;-><init>()V
 
-    .line 40
     invoke-virtual {p1}, Lcom/android/internal/os/PowerProfile;->getNumDisplays()I
 
     move-result v0
 
-    .line 41
     new-array v1, v0, [Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     iput-object v1, p0, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->mPowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
@@ -29,14 +26,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 43
     iget-object v2, p0, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->mPowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     new-instance v3, Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     const-string v4, "ambient.on.display"
 
-    .line 44
     invoke-virtual {p1, v4, v1}, Lcom/android/internal/os/PowerProfile;->getAveragePowerForOrdinal(Ljava/lang/String;I)D
 
     move-result-wide v4
@@ -58,14 +53,12 @@
 .method public calculate(Landroid/os/BatteryUsageStats$Builder;Landroid/os/BatteryStats;JJLandroid/os/BatteryUsageStatsQuery;)V
     .locals 11
 
-    .line 55
     invoke-virtual {p2}, Landroid/os/BatteryStats;->getScreenDozeEnergyConsumptionUC()J
 
     move-result-wide v5
 
     move-object/from16 v0, p7
 
-    .line 56
     invoke-static {v5, v6, v0}, Lcom/android/server/power/stats/PowerCalculator;->getPowerModel(JLandroid/os/BatteryUsageStatsQuery;)I
 
     move-result v7
@@ -78,35 +71,30 @@
 
     move-wide v3, p3
 
-    .line 57
     invoke-virtual {p0, p2, p3, p4, v8}, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->calculateDuration(Landroid/os/BatteryStats;JI)J
 
     move-result-wide v9
 
     move v1, v7
 
-    .line 59
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->calculateTotalPower(ILandroid/os/BatteryStats;JJ)D
 
     move-result-wide v0
 
     move-object v2, p1
 
-    .line 61
     invoke-virtual {p1, v8}, Landroid/os/BatteryUsageStats$Builder;->getAggregateBatteryConsumerBuilder(I)Landroid/os/AggregateBatteryConsumer$Builder;
 
     move-result-object v2
 
     const/16 v3, 0xf
 
-    .line 63
     invoke-virtual {v2, v3, v9, v10}, Landroid/os/AggregateBatteryConsumer$Builder;->setUsageDurationMillis(IJ)Landroid/os/BatteryConsumer$BaseBuilder;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/AggregateBatteryConsumer$Builder;
 
-    .line 64
     invoke-virtual {v2, v3, v0, v1, v7}, Landroid/os/AggregateBatteryConsumer$Builder;->setConsumedPower(IDI)Landroid/os/BatteryConsumer$BaseBuilder;
 
     return-void
@@ -115,7 +103,6 @@
 .method public final calculateDuration(Landroid/os/BatteryStats;JI)J
     .locals 0
 
-    .line 69
     invoke-virtual {p1, p2, p3, p4}, Landroid/os/BatteryStats;->getScreenDozeTime(JI)J
 
     move-result-wide p0
@@ -130,7 +117,6 @@
 .method public final calculateEstimatedPower(Landroid/os/BatteryStats;J)D
     .locals 8
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->mPowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     array-length v0, v0
@@ -142,7 +128,6 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    .line 87
     invoke-virtual {p1, v3, p2, p3}, Landroid/os/BatteryStats;->getDisplayScreenDozeTime(IJ)J
 
     move-result-wide v4
@@ -151,7 +136,6 @@
 
     div-long/2addr v4, v6
 
-    .line 89
     iget-object v6, p0, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->mPowerEstimators:[Lcom/android/server/power/stats/UsageBasedPowerEstimator;
 
     aget-object v6, v6, v3
@@ -177,14 +161,12 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 79
     invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/power/stats/AmbientDisplayPowerCalculator;->calculateEstimatedPower(Landroid/os/BatteryStats;J)D
 
     move-result-wide p0
 
     return-wide p0
 
-    .line 76
     :cond_0
     invoke-static {p5, p6}, Lcom/android/server/power/stats/PowerCalculator;->uCtoMah(J)D
 
@@ -196,7 +178,6 @@
 .method public isPowerComponentSupported(I)Z
     .locals 0
 
-    .line 0
     const/16 p0, 0xf
 
     if-ne p1, p0, :cond_0

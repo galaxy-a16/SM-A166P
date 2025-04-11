@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/appprelauncher/AppPrelaunchService;)V
     .locals 0
 
-    .line 835
     iput-object p1, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$2;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -24,7 +23,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 838
     iget-object p0, p0, Lcom/android/server/appprelauncher/AppPrelaunchService$2;->this$0:Lcom/android/server/appprelauncher/AppPrelaunchService;
 
     invoke-static {p0, p2}, Lcom/android/server/appprelauncher/AppPrelaunchService;->-$$Nest$mperformInstallActionBroadcast(Lcom/android/server/appprelauncher/AppPrelaunchService;Landroid/content/Intent;)V

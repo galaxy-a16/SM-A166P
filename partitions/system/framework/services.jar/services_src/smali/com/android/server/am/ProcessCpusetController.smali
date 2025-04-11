@@ -21,25 +21,20 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-object p1, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
-    .line 59
     iget-object p1, p1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
     iput-object p1, p0, Lcom/android/server/am/ProcessCpusetController;->mContext:Landroid/content/Context;
 
-    .line 60
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -52,7 +47,6 @@
 .method public static getController()Lcom/android/server/am/ProcessCpusetController;
     .locals 1
 
-    .line 70
     sget-object v0, Lcom/android/server/am/ProcessCpusetController;->mController:Lcom/android/server/am/ProcessCpusetController;
 
     return-object v0
@@ -61,10 +55,8 @@
 .method public static getController(Lcom/android/server/am/ActivityManagerService;)Lcom/android/server/am/ProcessCpusetController;
     .locals 0
 
-    .line 74
     invoke-static {p0}, Lcom/android/server/am/ProcessCpusetController;->prepareController(Lcom/android/server/am/ActivityManagerService;)V
 
-    .line 75
     invoke-static {}, Lcom/android/server/am/ProcessCpusetController;->getController()Lcom/android/server/am/ProcessCpusetController;
 
     move-result-object p0
@@ -79,7 +71,6 @@
 
     monitor-enter v0
 
-    .line 64
     :try_start_0
     sget-object v1, Lcom/android/server/am/ProcessCpusetController;->mController:Lcom/android/server/am/ProcessCpusetController;
 
@@ -89,7 +80,6 @@
 
     goto :goto_0
 
-    .line 66
     :cond_0
     new-instance v1, Lcom/android/server/am/ProcessCpusetController;
 
@@ -99,12 +89,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 67
     monitor-exit v0
 
     return-void
 
-    .line 65
     :cond_1
     :goto_0
     monitor-exit v0
@@ -124,14 +112,12 @@
 .method public resetAbnormalList()V
     .locals 4
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 80
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -150,7 +136,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 81
     iget-object v2, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -165,19 +150,16 @@
 
     check-cast v2, Lcom/android/server/am/ProcessRecord;
 
-    .line 82
     iget-object v2, v2, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
     const/4 v3, 0x0
 
-    .line 83
     invoke-virtual {v2, v3}, Lcom/android/server/am/ProcessStateRecord;->setAbnormalStatus(Z)V
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 85
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -185,7 +167,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(I)V
 
-    .line 86
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -210,14 +191,12 @@
 .method public setFGSFilter(IZ)Z
     .locals 3
 
-    .line 116
     iget-object v0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 117
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -231,7 +210,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 118
     invoke-virtual {p1}, Lcom/android/server/am/UidRecord;->getCurProcState()I
 
     move-result v1
@@ -240,10 +218,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 119
     invoke-virtual {p1, p2}, Lcom/android/server/am/UidRecord;->setFGSFilterStatus(Z)V
 
-    .line 120
     iget-object p0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     const/16 p1, 0x18
@@ -257,7 +233,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 123
     :goto_0
     monitor-exit v0
     :try_end_0
@@ -283,14 +258,12 @@
 .method public setProcessSlowdown(IZ)Z
     .locals 5
 
-    .line 93
     iget-object v0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter v0
 
-    .line 94
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -311,7 +284,6 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 95
     iget-object v3, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
@@ -326,14 +298,12 @@
 
     check-cast v3, Lcom/android/server/am/ProcessRecord;
 
-    .line 96
     invoke-virtual {v3}, Lcom/android/server/am/ProcessRecord;->getPid()I
 
     move-result v4
 
     if-ne v4, p1, :cond_0
 
-    .line 97
     iget-object v1, v3, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
 
     goto :goto_1
@@ -346,7 +316,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 101
     :goto_1
     monitor-exit v0
     :try_end_0
@@ -356,7 +325,6 @@
 
     if-nez v1, :cond_2
 
-    .line 103
     sget-object p0, Lcom/android/server/am/ProcessCpusetController;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -383,18 +351,15 @@
 
     return p0
 
-    .line 106
     :cond_2
     invoke-virtual {v1, p2}, Lcom/android/server/am/ProcessStateRecord;->setAbnormalStatus(Z)V
 
-    .line 107
     iget-object p1, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
 
     monitor-enter p1
 
-    .line 108
     :try_start_1
     iget-object p0, p0, Lcom/android/server/am/ProcessCpusetController;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -402,7 +367,6 @@
 
     invoke-virtual {p0, p2}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(I)V
 
-    .line 109
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -426,7 +390,6 @@
     :catchall_1
     move-exception p0
 
-    .line 101
     :try_start_3
     monitor-exit v0
     :try_end_3

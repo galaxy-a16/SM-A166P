@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/io/InputStream;J)V
     .locals 0
 
-    .line 38
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->in:Ljava/io/InputStream;
 
-    .line 40
     iput-wide p2, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->bytesRemaining:J
 
     return-void
@@ -30,14 +27,12 @@
 .method public close()V
     .locals 0
 
-    .line 0
     return-void
 .end method
 
 .method public read()I
     .locals 4
 
-    .line 45
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -50,10 +45,8 @@
 
     sub-long/2addr v0, v2
 
-    .line 46
     iput-wide v0, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->bytesRemaining:J
 
-    .line 47
     iget-object p0, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -71,7 +64,6 @@
 .method public read([BII)I
     .locals 4
 
-    .line 54
     iget-wide v0, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -93,7 +85,6 @@
 
     long-to-int p3, v0
 
-    .line 61
     :cond_1
     iget-object v0, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->in:Ljava/io/InputStream;
 
@@ -103,7 +94,6 @@
 
     if-ltz p1, :cond_2
 
-    .line 63
     iget-wide p2, p0, Lorg/apache/commons/compress/utils/BoundedInputStream;->bytesRemaining:J
 
     int-to-long v0, p1

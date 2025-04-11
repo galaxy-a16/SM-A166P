@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
 .method public static metricsState(Ljava/lang/String;)I
     .locals 9
 
-    .line 57
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -209,12 +207,10 @@
 
     const/16 p0, 0x19f
 
-    .line 53
     invoke-static {p1}, Lcom/android/server/timezonedetector/location/RealControllerMetricsLogger;->metricsState(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 51
     invoke-static {p0, p1}, Lcom/android/internal/util/FrameworkStatsLog;->write(II)V
 
     return-void

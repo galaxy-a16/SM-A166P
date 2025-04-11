@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/desktopmode/DisplayPortStateManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 114
     iput-object p1, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
     invoke-direct {p0, p2}, Lcom/android/server/desktopmode/SettingsHelper$OnSettingChangedListener;-><init>(Ljava/lang/String;)V
@@ -26,12 +25,10 @@
 
     const-string p2, "dual"
 
-    .line 117
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    .line 118
     iget-object p2, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
     invoke-static {p2}, Lcom/android/server/desktopmode/DisplayPortStateManager;->-$$Nest$fgetmLock(Lcom/android/server/desktopmode/DisplayPortStateManager;)Ljava/lang/Object;
@@ -40,7 +37,6 @@
 
     monitor-enter p2
 
-    .line 119
     :try_start_0
     iget-object v0, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
@@ -50,12 +46,10 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
     invoke-static {v0, p1}, Lcom/android/server/desktopmode/DisplayPortStateManager;->-$$Nest$fputmExternalDisplayModeDual(Lcom/android/server/desktopmode/DisplayPortStateManager;Z)V
 
-    .line 121
     iget-object p1, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
     invoke-static {p1}, Lcom/android/server/desktopmode/DisplayPortStateManager;->-$$Nest$fgetmHdmiDisplayConnected(Lcom/android/server/desktopmode/DisplayPortStateManager;)Z
@@ -72,7 +66,6 @@
 
     if-nez p1, :cond_0
 
-    .line 122
     iget-object p0, p0, Lcom/android/server/desktopmode/DisplayPortStateManager$4;->this$0:Lcom/android/server/desktopmode/DisplayPortStateManager;
 
     invoke-static {p0}, Lcom/android/server/desktopmode/DisplayPortStateManager;->-$$Nest$mgetSettingState(Lcom/android/server/desktopmode/DisplayPortStateManager;)Z
@@ -83,7 +76,6 @@
 
     invoke-static {p0, p1, v0}, Lcom/android/server/desktopmode/DisplayPortStateManager;->-$$Nest$msetDisplayPortStateLocked(Lcom/android/server/desktopmode/DisplayPortStateManager;ZZ)V
 
-    .line 125
     :cond_0
     monitor-exit p2
 

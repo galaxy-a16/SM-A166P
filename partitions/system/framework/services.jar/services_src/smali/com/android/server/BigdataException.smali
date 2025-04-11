@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/server/HermesBigdataFunction$BigdataError;)V
     .locals 1
 
-    .line 383
     invoke-virtual {p1}, Lcom/android/server/HermesBigdataFunction$BigdataError;->reason()Ljava/lang/String;
 
     move-result-object v0
@@ -24,10 +23,8 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/server/HermesBigdataFunction$BigdataError;)V
     .locals 0
 
-    .line 379
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 380
     iput-object p2, p0, Lcom/android/server/BigdataException;->err:Lcom/android/server/HermesBigdataFunction$BigdataError;
 
     return-void
@@ -38,7 +35,6 @@
 .method public getErrCode()I
     .locals 0
 
-    .line 387
     iget-object p0, p0, Lcom/android/server/BigdataException;->err:Lcom/android/server/HermesBigdataFunction$BigdataError;
 
     invoke-virtual {p0}, Lcom/android/server/HermesBigdataFunction$BigdataError;->errCode()I

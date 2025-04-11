@@ -15,7 +15,6 @@
 .method public static synthetic $r8$lambda$t2YML1-M8X3GH-gQEYX0RXQV-E4(Lcom/android/server/wm/ActivityTaskManagerService$5;Ljava/lang/Runnable;Z)V
     .locals 0
 
-    .line 0
     invoke-direct {p0, p1, p2}, Lcom/android/server/wm/ActivityTaskManagerService$5;->lambda$onDismissSucceeded$0(Ljava/lang/Runnable;Z)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;Lcom/android/server/wm/Transition;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 4652
     iput-object p1, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->val$transition:Lcom/android/server/wm/Transition;
@@ -41,12 +39,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 4661
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 4663
     :cond_0
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -63,12 +59,10 @@
 .method public onDismissSucceeded()V
     .locals 4
 
-    .line 4655
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->val$transition:Lcom/android/server/wm/Transition;
 
     if-nez v0, :cond_0
 
-    .line 4656
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mH:Lcom/android/server/wm/ActivityTaskManagerService$H;
@@ -79,7 +73,6 @@
 
     return-void
 
-    .line 4659
     :cond_0
     iget-object v0, p0, Lcom/android/server/wm/ActivityTaskManagerService$5;->this$0:Lcom/android/server/wm/ActivityTaskManagerService;
 

@@ -15,14 +15,12 @@
 .method public static fromParcelableArray([Ljava/lang/Object;Ljava/util/function/Function;)Ljava/util/ArrayList;
     .locals 4
 
-    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     array-length v1, p0
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 58
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -32,7 +30,6 @@
 
     aget-object v3, p0, v2
 
-    .line 59
     invoke-interface {p1, v3}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -50,7 +47,6 @@
 .method public static toParcelableArray(Ljava/util/Collection;Ljava/util/function/Function;Ljava/lang/Class;)[Ljava/lang/Object;
     .locals 2
 
-    .line 42
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -61,7 +57,6 @@
 
     check-cast p2, [Ljava/lang/Object;
 
-    .line 44
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -79,7 +74,6 @@
 
     move-result-object v1
 
-    .line 45
     invoke-interface {p1, v1}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1

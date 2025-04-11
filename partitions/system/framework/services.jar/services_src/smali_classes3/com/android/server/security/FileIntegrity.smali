@@ -16,7 +16,6 @@
         client = .enum Landroid/annotation/SystemApi$Client;->SYSTEM_SERVER:Landroid/annotation/SystemApi$Client;
     .end annotation
 
-    .line 56
     invoke-virtual {p0}, Landroid/os/ParcelFileDescriptor;->getFd()I
 
     move-result p0
@@ -32,7 +31,6 @@
         client = .enum Landroid/annotation/SystemApi$Client;->SYSTEM_SERVER:Landroid/annotation/SystemApi$Client;
     .end annotation
 
-    .line 45
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0

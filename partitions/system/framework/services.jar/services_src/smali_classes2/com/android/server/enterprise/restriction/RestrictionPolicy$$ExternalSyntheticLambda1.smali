@@ -20,7 +20,6 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/samsung/android/knox/restriction/RestrictionPolicy$USBInterface;
 
     invoke-static {p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->$r8$lambda$CCXl52fSQHQyhWl6Il7sExCBMgs(Lcom/samsung/android/knox/restriction/RestrictionPolicy$USBInterface;)Ljava/lang/String;

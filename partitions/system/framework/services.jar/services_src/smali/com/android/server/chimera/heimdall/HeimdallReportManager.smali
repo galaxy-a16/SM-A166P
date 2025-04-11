@@ -19,7 +19,6 @@
 .method public static bridge synthetic -$$Nest$fgetmBigdataManager(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mBigdataManager:Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;
 
     return-object p0
@@ -28,7 +27,6 @@
 .method public static bridge synthetic -$$Nest$fgetmContext(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)Landroid/content/Context;
     .locals 0
 
-    .line 0
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -37,33 +35,26 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
     .locals 0
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mContext:Landroid/content/Context;
 
-    .line 48
     iput-object p2, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 49
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 51
     new-instance p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BroadcastManager;
 
     invoke-direct {p1, p0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BroadcastManager;-><init>(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)V
 
     iput-object p1, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mBroadcastManager:Lcom/android/server/chimera/heimdall/HeimdallReportManager$BroadcastManager;
 
-    .line 52
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BroadcastManager;->registerReceiver()V
 
-    .line 54
     new-instance p1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;
 
     invoke-direct {p1, p0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;-><init>(Lcom/android/server/chimera/heimdall/HeimdallReportManager;)V
@@ -78,7 +69,6 @@
 .method public final compressReports(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 6
 
-    .line 124
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +127,6 @@
 
     move-result-object p0
 
-    .line 128
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +143,6 @@
 
     invoke-static {v4}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 130
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -164,14 +152,12 @@
 
     move-result-object p0
 
-    .line 131
     invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 137
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -192,7 +178,6 @@
 
     move-result-object p0
 
-    .line 138
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +192,6 @@
 
     invoke-static {v4}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 140
     :try_start_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -217,14 +201,12 @@
 
     move-result-object p0
 
-    .line 141
     invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 147
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,7 +243,6 @@
 
     move-result-object p0
 
-    .line 151
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,7 +257,6 @@
 
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 153
     :try_start_2
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -286,14 +266,12 @@
 
     move-result-object p0
 
-    .line 154
     invoke-virtual {p0}, Ljava/lang/Process;->waitFor()I
     :try_end_2
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 161
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,7 +294,6 @@
 
     const/16 p1, 0x1a0
 
-    .line 163
     :try_start_3
     invoke-static {p0, p1}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
@@ -324,14 +301,12 @@
 
     const/16 v0, 0x3ef
 
-    .line 164
     invoke-static {p0, p1, v0}, Landroid/system/Os;->chown(Ljava/lang/String;II)V
     :try_end_3
     .catch Landroid/system/ErrnoException; {:try_start_3 .. :try_end_3} :catch_0
 
     const-string p0, "Compress Finished."
 
-    .line 170
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     return-void
@@ -339,7 +314,6 @@
     :catch_0
     move-exception p0
 
-    .line 166
     invoke-virtual {p0}, Landroid/system/ErrnoException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -351,7 +325,6 @@
     :catch_1
     move-exception p0
 
-    .line 156
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -363,7 +336,6 @@
     :catch_2
     move-exception p0
 
-    .line 143
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -375,7 +347,6 @@
     :catch_3
     move-exception p0
 
-    .line 133
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -388,7 +359,6 @@
 .method public final getPackageVersion(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 353
     iget-object p0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const-string/jumbo v0, "unknown"
@@ -397,7 +367,6 @@
 
     const/4 v1, 0x0
 
-    .line 355
     :try_start_0
     invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -405,7 +374,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 356
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -417,7 +385,6 @@
     :catch_0
     move-exception p0
 
-    .line 358
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -432,7 +399,6 @@
 .method public reportBigdata(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 2
 
-    .line 96
     iget-object v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->firstAppPackageName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->getPackageVersion(Ljava/lang/String;)Ljava/lang/String;
@@ -441,7 +407,6 @@
 
     iput-object v0, p1, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->firstAppVersionName:Ljava/lang/String;
 
-    .line 97
     iget-object v0, p0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mBigdataManager:Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataManager;
 
     new-instance v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$BigdataInfo;
@@ -456,7 +421,6 @@
 .method public final reportDmaBufDump(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 2
 
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -473,7 +437,6 @@
 
     move-result-object p1
 
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -488,7 +451,6 @@
 
     move-result-object p1
 
-    .line 120
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->writeDmaBufSize(Ljava/lang/String;)V
 
     return-void
@@ -499,7 +461,6 @@
 
     const-string v0, "/data/log/heimdalld_log/"
 
-    .line 72
     invoke-virtual {p1}, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->isSpecKill()Z
 
     move-result v1
@@ -508,7 +469,6 @@
 
     const/16 v1, 0x1fd
 
-    .line 74
     :try_start_0
     invoke-static {v0, v1}, Landroid/system/Os;->mkdir(Ljava/lang/String;I)V
 
@@ -516,7 +476,6 @@
 
     const/16 v2, 0x3ef
 
-    .line 75
     invoke-static {v0, v1, v2}, Landroid/system/Os;->chown(Ljava/lang/String;II)V
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
@@ -526,30 +485,23 @@
     :catch_0
     move-exception v1
 
-    .line 77
     invoke-virtual {v1}, Landroid/system/ErrnoException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v1}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 80
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->reportDumpSysMemInfo(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 81
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->reportProcStatus(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 82
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->reportDmaBufDump(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 83
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->compressReports(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 85
     invoke-virtual {p0, p1}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->reportJavaHeapDump(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
 
-    .line 88
     :try_start_1
     invoke-static {v0}, Landroid/system/Os;->remove(Ljava/lang/String;)V
     :try_end_1
@@ -560,7 +512,6 @@
     :catch_1
     move-exception p0
 
-    .line 90
     invoke-virtual {p0}, Landroid/system/ErrnoException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -575,7 +526,6 @@
 .method public final reportDumpSysMemInfo(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 3
 
-    .line 102
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -592,7 +542,6 @@
 
     move-result-object v0
 
-    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -607,7 +556,6 @@
 
     move-result-object v0
 
-    .line 105
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->writeMemInfo(Lcom/android/server/chimera/heimdall/HeimdallProcessData;Ljava/lang/String;)V
 
     return-void
@@ -616,7 +564,6 @@
 .method public final reportJavaHeapDump(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 3
 
-    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -637,7 +584,6 @@
 
     move-result-object v0
 
-    .line 175
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -656,7 +602,6 @@
 
     const/4 v2, 0x0
 
-    .line 177
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->writeHeapDump(Lcom/android/server/chimera/heimdall/HeimdallProcessData;Ljava/lang/String;ZZ)V
 
     return-void
@@ -665,7 +610,6 @@
 .method public final reportProcStatus(Lcom/android/server/chimera/heimdall/HeimdallProcessData;)V
     .locals 3
 
-    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -682,7 +626,6 @@
 
     move-result-object v0
 
-    .line 109
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -697,7 +640,6 @@
 
     move-result-object v0
 
-    .line 110
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -718,7 +660,6 @@
 
     move-result-object p1
 
-    .line 112
     invoke-virtual {p0, p1, v0}, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->writeShellCmdOutput(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -727,7 +668,6 @@
 .method public final writeDmaBufSize(Ljava/lang/String;)V
     .locals 7
 
-    .line 315
     invoke-static {}, Lcom/android/internal/os/KernelAllocationStats;->getDmabufAllocations()[Lcom/android/internal/os/KernelAllocationStats$ProcessDmabuf;
 
     move-result-object p0
@@ -736,12 +676,10 @@
 
     const-string p0, "DmaBuf cannot be read."
 
-    .line 318
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     return-void
 
-    .line 322
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -749,18 +687,15 @@
 
     const/4 v1, 0x1
 
-    .line 324
     :try_start_0
     invoke-virtual {v0, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 325
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 326
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -779,7 +714,6 @@
 
     goto :goto_0
 
-    .line 328
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -800,7 +734,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 336
     :goto_0
     :try_start_1
     new-instance v1, Ljava/io/FileWriter;
@@ -811,7 +744,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 337
     :try_start_2
     new-instance v0, Ljava/io/BufferedWriter;
 
@@ -819,7 +751,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 339
     :try_start_3
     array-length v2, p0
 
@@ -830,7 +761,6 @@
 
     aget-object v4, p0, v3
 
-    .line 340
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -867,7 +797,6 @@
 
     goto :goto_1
 
-    .line 343
     :cond_2
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
@@ -884,7 +813,6 @@
     :catchall_0
     move-exception p0
 
-    .line 335
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_6
@@ -927,14 +855,12 @@
     :catch_0
     move-exception p0
 
-    .line 344
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 346
     :goto_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -961,7 +887,6 @@
     :catch_1
     move-exception p0
 
-    .line 331
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -978,25 +903,21 @@
 
     move-object v9, p2
 
-    .line 257
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
-    .line 259
     :try_start_0
     invoke-virtual {v10, v1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 260
     invoke-virtual {v10}, Ljava/io/File;->createNewFile()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 261
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1015,7 +936,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1039,7 +959,6 @@
     :goto_0
     const/high16 v2, 0x20000000
 
-    .line 270
     :try_start_1
     invoke-static {v10, v2}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
@@ -1049,7 +968,6 @@
 
     if-nez v11, :cond_2
 
-    .line 272
     :try_start_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1071,7 +989,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 306
     :try_start_3
     invoke-virtual {v11}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_3
@@ -1080,14 +997,12 @@
     :cond_1
     return-void
 
-    .line 276
     :cond_2
     :try_start_4
     new-instance v12, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v12, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 278
     new-instance v8, Landroid/os/RemoteCallback;
 
     new-instance v1, Lcom/android/server/chimera/heimdall/HeimdallReportManager$1;
@@ -1100,7 +1015,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 286
     :try_start_5
     iget-object v0, v0, Lcom/android/server/chimera/heimdall/HeimdallReportManager;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1125,7 +1039,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 302
     :try_start_6
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -1141,7 +1054,6 @@
     :catch_0
     move-exception v0
 
-    .line 304
     :try_start_7
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
 
@@ -1151,7 +1063,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 306
     :goto_1
     :try_start_8
     invoke-virtual {v11}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -1163,7 +1074,6 @@
     :catch_1
     move-exception v0
 
-    .line 289
     :try_start_9
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1193,7 +1103,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 291
     :try_start_a
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
 
@@ -1203,7 +1112,6 @@
 
     const-string v0, "heapdump file is deleted."
 
-    .line 292
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     goto :goto_2
@@ -1211,13 +1119,11 @@
     :cond_3
     const-string v0, "heapdump file is NOT deleted."
 
-    .line 294
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
     :try_end_a
     .catch Ljava/lang/SecurityException; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 306
     :catch_2
     :goto_2
     :try_start_b
@@ -1234,7 +1140,6 @@
 
     if-eqz v11, :cond_4
 
-    .line 270
     :try_start_c
     invoke-virtual {v11}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_c
@@ -1259,14 +1164,12 @@
     :catch_3
     move-exception v0
 
-    .line 307
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
-    .line 310
     :goto_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1293,7 +1196,6 @@
     :catch_4
     move-exception v0
 
-    .line 266
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -1310,12 +1212,10 @@
 
     move-object/from16 v1, p2
 
-    .line 182
     new-instance v3, Landroid/os/Debug$MemoryInfo;
 
     invoke-direct {v3}, Landroid/os/Debug$MemoryInfo;-><init>()V
 
-    .line 183
     iget v2, v0, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->pid:I
 
     invoke-static {v2, v3}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)Z
@@ -1326,12 +1226,10 @@
 
     const-string v0, "Failed to dumpsys meminfo"
 
-    .line 184
     invoke-static {v0}, Lcom/android/server/chimera/heimdall/Heimdall;->log(Ljava/lang/String;)V
 
     return-void
 
-    .line 188
     :cond_0
     new-instance v2, Ljava/io/File;
 
@@ -1339,18 +1237,15 @@
 
     const/4 v4, 0x1
 
-    .line 190
     :try_start_0
     invoke-virtual {v2, v4}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 191
     invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 192
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1369,7 +1264,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1390,7 +1284,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 201
     :goto_0
     :try_start_1
     new-instance v9, Ljava/io/PrintWriter;
@@ -1402,7 +1295,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 202
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1442,7 +1334,6 @@
 
     const/4 v7, 0x0
 
-    .line 204
     iget v8, v0, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->pid:I
 
     iget-object v0, v0, Lcom/android/server/chimera/heimdall/HeimdallProcessData;->processName:Ljava/lang/String;
@@ -1472,14 +1363,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 207
     :try_start_4
     invoke-virtual/range {v22 .. v22}, Ljava/io/PrintWriter;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 211
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1515,7 +1404,6 @@
     :goto_1
     move-object v1, v0
 
-    .line 201
     :try_start_5
     invoke-virtual/range {v22 .. v22}, Ljava/io/PrintWriter;->close()V
     :try_end_5
@@ -1540,7 +1428,6 @@
     :catch_0
     move-exception v0
 
-    .line 208
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -1552,7 +1439,6 @@
     :catch_1
     move-exception v0
 
-    .line 197
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -1565,25 +1451,21 @@
 .method public final writeShellCmdOutput(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .line 216
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    .line 218
     :try_start_0
     invoke-virtual {p0, v0}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 219
     invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 220
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1602,7 +1484,6 @@
 
     goto :goto_0
 
-    .line 222
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1623,7 +1504,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 231
     :goto_0
     :try_start_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -1634,14 +1514,12 @@
 
     move-result-object v0
 
-    .line 232
     invoke-virtual {v0}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 239
     :try_start_2
     new-instance v1, Ljava/io/InputStreamReader;
 
@@ -1655,7 +1533,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 240
     :try_start_3
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -1663,7 +1540,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_6
 
-    .line 241
     :try_start_4
     new-instance v2, Ljava/io/FileWriter;
 
@@ -1673,7 +1549,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 242
     :try_start_5
     new-instance p0, Ljava/io/BufferedWriter;
 
@@ -1681,7 +1556,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 245
     :goto_1
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -1690,7 +1564,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 246
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1711,7 +1584,6 @@
 
     goto :goto_1
 
-    .line 248
     :cond_1
     :try_start_7
     invoke-virtual {p0}, Ljava/io/BufferedWriter;->close()V
@@ -1733,7 +1605,6 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_0
 
-    .line 252
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1761,7 +1632,6 @@
     :catchall_0
     move-exception p1
 
-    .line 238
     :try_start_b
     invoke-virtual {p0}, Ljava/io/BufferedWriter;->close()V
     :try_end_b
@@ -1846,7 +1716,6 @@
     :catch_0
     move-exception p0
 
-    .line 249
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -1858,7 +1727,6 @@
     :catch_1
     move-exception p0
 
-    .line 234
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -1870,7 +1738,6 @@
     :catch_2
     move-exception p0
 
-    .line 225
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0

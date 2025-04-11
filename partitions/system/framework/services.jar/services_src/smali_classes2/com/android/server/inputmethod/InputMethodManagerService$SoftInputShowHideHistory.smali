@@ -17,7 +17,6 @@
 .method public static bridge synthetic -$$Nest$sfgetsSequenceNumber()Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 1
 
-    .line 0
     sget-object v0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->sSequenceNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object v0
@@ -26,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1028
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -41,19 +39,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1025
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;
 
-    .line 1026
     iput-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mEntries:[Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;
 
     const/4 v0, 0x0
 
-    .line 1027
     iput v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mNextIndex:I
 
     return-void
@@ -64,17 +59,14 @@
 .method public addEntry(Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;)V
     .locals 2
 
-    .line 1076
     iget v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mNextIndex:I
 
-    .line 1077
     iget-object v1, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mEntries:[Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;
 
     aput-object p1, v1, v0
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1078
     array-length p1, v1
 
     rem-int/2addr v0, p1
@@ -89,15 +81,12 @@
 
     const-string/jumbo v0, "yyyy-MM-dd HH:mm:ss.SSS"
 
-    .line 1082
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    .line 1083
     invoke-static {v0, v1}, Ljava/time/format/DateTimeFormatter;->ofPattern(Ljava/lang/String;Ljava/util/Locale;)Ljava/time/format/DateTimeFormatter;
 
     move-result-object v0
 
-    .line 1084
     invoke-static {}, Ljava/time/ZoneId;->systemDefault()Ljava/time/ZoneId;
 
     move-result-object v1
@@ -108,7 +97,6 @@
 
     const/4 v1, 0x0
 
-    .line 1086
     :goto_0
     iget-object v2, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mEntries:[Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;
 
@@ -116,7 +104,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1087
     iget v3, p0, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory;->mNextIndex:I
 
     add-int/2addr v3, v1
@@ -131,11 +118,9 @@
 
     goto/16 :goto_2
 
-    .line 1091
     :cond_0
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1092
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -158,10 +143,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1094
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1095
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,10 +183,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1098
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1099
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +207,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1101
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,10 +225,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1103
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1104
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,10 +245,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1106
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1107
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,10 +265,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1109
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1110
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,10 +285,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1112
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1113
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -333,10 +305,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1115
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1116
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -355,10 +325,8 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1118
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1119
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,20 +345,16 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1121
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, " editorInfo: "
 
-    .line 1122
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1123
     iget-object v3, v2, Lcom/android/server/inputmethod/InputMethodManagerService$SoftInputShowHideHistory$Entry;->mEditorInfo:Landroid/view/inputmethod/EditorInfo;
 
     if-eqz v3, :cond_1
 
-    .line 1124
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -411,7 +375,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1125
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,7 +395,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1126
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,14 +420,11 @@
     :cond_1
     const-string/jumbo v3, "null"
 
-    .line 1128
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1131
     :goto_1
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1132
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

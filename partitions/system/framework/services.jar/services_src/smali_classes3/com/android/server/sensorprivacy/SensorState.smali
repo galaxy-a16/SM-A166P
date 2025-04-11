@@ -13,13 +13,10 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput p1, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
-    .line 31
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->getCurrentTimeMillis()J
 
     move-result-wide v0
@@ -32,13 +29,10 @@
 .method public constructor <init>(IJ)V
     .locals 2
 
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput p1, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
-    .line 36
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->getCurrentTimeMillis()J
 
     move-result-wide v0
@@ -55,17 +49,14 @@
 .method public constructor <init>(Lcom/android/server/sensorprivacy/SensorState;)V
     .locals 2
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     invoke-virtual {p1}, Lcom/android/server/sensorprivacy/SensorState;->getState()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
-    .line 41
     invoke-virtual {p1}, Lcom/android/server/sensorprivacy/SensorState;->getLastChange()J
 
     move-result-wide v0
@@ -78,7 +69,6 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 68
     invoke-static {p1}, Lcom/android/server/sensorprivacy/SensorState;->enabledToState(Z)I
 
     move-result p1
@@ -91,7 +81,6 @@
 .method public static enabledToState(Z)I
     .locals 0
 
-    .line 0
     if-eqz p0, :cond_0
 
     const/4 p0, 0x1
@@ -110,7 +99,6 @@
 .method public getLastChange()J
     .locals 2
 
-    .line 58
     iget-wide v0, p0, Lcom/android/server/sensorprivacy/SensorState;->mLastChange:J
 
     return-wide v0
@@ -119,7 +107,6 @@
 .method public getState()I
     .locals 0
 
-    .line 54
     iget p0, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
     return p0
@@ -128,7 +115,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/server/sensorprivacy/SensorState;->getState()I
 
     move-result p0
@@ -149,7 +135,6 @@
 .method public setEnabled(Z)Z
     .locals 0
 
-    .line 72
     invoke-static {p1}, Lcom/android/server/sensorprivacy/SensorState;->enabledToState(Z)I
 
     move-result p1
@@ -164,15 +149,12 @@
 .method public setState(I)Z
     .locals 2
 
-    .line 45
     iget v0, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
     if-eq v0, p1, :cond_0
 
-    .line 46
     iput p1, p0, Lcom/android/server/sensorprivacy/SensorState;->mStateType:I
 
-    .line 47
     invoke-static {}, Lcom/android/server/sensorprivacy/SensorPrivacyService;->getCurrentTimeMillis()J
 
     move-result-wide v0

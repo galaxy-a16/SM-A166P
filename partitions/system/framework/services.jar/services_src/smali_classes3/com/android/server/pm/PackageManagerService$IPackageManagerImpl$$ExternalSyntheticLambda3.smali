@@ -20,7 +20,6 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 0
     check-cast p1, Lcom/android/server/pm/pkg/mutate/PackageStateWrite;
 
     invoke-static {p1}, Lcom/android/server/pm/PackageManagerService$IPackageManagerImpl;->$r8$lambda$3-JtOjG1nfYkW3CVUOFByLQJvRI(Lcom/android/server/pm/pkg/mutate/PackageStateWrite;)V

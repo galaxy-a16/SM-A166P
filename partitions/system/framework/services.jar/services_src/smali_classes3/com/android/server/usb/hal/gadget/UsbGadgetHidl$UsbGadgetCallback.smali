@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)V
     .locals 0
 
-    .line 233
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-direct {p0}, Landroid/hardware/usb/gadget/V1_2/IUsbGadgetCallback$Stub;-><init>()V
@@ -28,18 +27,14 @@
 .method public constructor <init>(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;Lcom/android/internal/util/IndentingPrintWriter;IJZ)V
     .locals 0
 
-    .line 236
     iput-object p1, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-direct {p0}, Landroid/hardware/usb/gadget/V1_2/IUsbGadgetCallback$Stub;-><init>()V
 
-    .line 237
     iput p3, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->mRequest:I
 
-    .line 238
     iput-wide p4, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->mFunctions:J
 
-    .line 239
     iput-boolean p6, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->mChargingFunctions:Z
 
     return-void
@@ -50,7 +45,6 @@
 .method public getCurrentUsbFunctionsCb(JI)V
     .locals 0
 
-    .line 252
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-static {p0}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fgetmDeviceManager(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)Lcom/android/server/usb/UsbDeviceManager;
@@ -65,7 +59,6 @@
 .method public getUsbSpeedCb(I)V
     .locals 0
 
-    .line 257
     iget-object p0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-static {p0}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fgetmDeviceManager(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)Lcom/android/server/usb/UsbDeviceManager;
@@ -80,7 +73,6 @@
 .method public setCurrentUsbFunctionsCb(JI)V
     .locals 9
 
-    .line 245
     iget-object v0, p0, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl$UsbGadgetCallback;->this$0:Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;
 
     invoke-static {v0}, Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;->-$$Nest$fgetmDeviceManager(Lcom/android/server/usb/hal/gadget/UsbGadgetHidl;)Lcom/android/server/usb/UsbDeviceManager;

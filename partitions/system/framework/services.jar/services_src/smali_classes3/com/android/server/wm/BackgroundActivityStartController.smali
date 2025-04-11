@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/server/wm/ActivityTaskManagerService;Lcom/android/server/wm/ActivityTaskSupervisor;)V
     .locals 0
 
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     iput-object p1, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 154
     iput-object p2, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
     return-void
@@ -30,7 +27,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 147
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -133,7 +129,6 @@
 
     const-string/jumbo v2, "window_manager"
 
-    .line 628
     invoke-static {v2, v0, v1}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
@@ -146,7 +141,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 598
     invoke-virtual {p2}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result p2
@@ -170,7 +164,6 @@
 
     move-object v5, p7
 
-    .line 602
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -193,7 +186,6 @@
 
     move-object v4, p4
 
-    .line 580
     invoke-static/range {v0 .. v5}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result p0
@@ -218,7 +210,6 @@
 
     move-object v5, p5
 
-    .line 586
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -229,7 +220,6 @@
 .method public static logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 609
     invoke-static {p0, p2, p3, p4}, Lcom/android/server/wm/BackgroundActivityStartController;->statsLogBalAllowed(IIILandroid/content/Intent;)V
 
     return p0
@@ -255,7 +245,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 639
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p3
@@ -269,7 +258,6 @@
     :cond_1
     move-object p3, v1
 
-    .line 640
     :goto_0
     invoke-static {v2, p3, p0, p1, p2}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;III)V
 
@@ -286,7 +274,6 @@
 
     if-ne p0, p3, :cond_4
 
-    .line 649
     :cond_3
     invoke-static {v2, v1, p0, p1, p2}, Lcom/android/internal/util/FrameworkStatsLog;->write(ILjava/lang/String;III)V
 
@@ -315,7 +302,6 @@
 
     move-object/from16 v5, p10
 
-    .line 205
     invoke-static/range {p1 .. p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
@@ -330,7 +316,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 209
     invoke-virtual/range {p10 .. p10}, Landroid/app/ActivityOptions;->getPendingIntentCreatorBackgroundActivityStartMode()I
 
     move-result v2
@@ -363,7 +348,6 @@
 
     goto :goto_2
 
-    .line 220
     :cond_2
     invoke-virtual {v9, v10, v12}, Lcom/android/server/wm/BackgroundActivityStartController;->isHomeApp(ILjava/lang/String;)Z
 
@@ -383,27 +367,23 @@
 
     move-object/from16 v4, p9
 
-    .line 221
     invoke-static/range {v0 .. v5}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 227
     :cond_3
     iget-object v3, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v3, v3, Lcom/android/server/wm/ActivityTaskManagerService;->mRootWindowContainer:Lcom/android/server/wm/RootWindowContainer;
 
-    .line 228
     invoke-virtual {v3}, Lcom/android/server/wm/RootWindowContainer;->getCurrentInputMethodWindow()Lcom/android/server/wm/WindowState;
 
     move-result-object v3
 
     if-eqz v3, :cond_5
 
-    .line 229
     iget v3, v3, Lcom/android/server/wm/WindowState;->mOwnerUid:I
 
     if-ne v0, v3, :cond_5
@@ -420,7 +400,6 @@
 
     move-object/from16 v4, p9
 
-    .line 230
     invoke-static/range {v0 .. v5}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
@@ -441,14 +420,12 @@
 
     move-object/from16 v4, p9
 
-    .line 215
     invoke-static/range {v0 .. v5}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 238
     :cond_5
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -456,7 +433,6 @@
 
     move-result v7
 
-    .line 241
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mActiveUids:Lcom/android/server/wm/MirrorActiveUids;
@@ -465,7 +441,6 @@
 
     move-result v6
 
-    .line 242
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0, v10}, Lcom/android/server/wm/ActivityTaskManagerService;->hasActiveVisibleWindow(I)Z
@@ -500,12 +475,10 @@
     :goto_5
     if-nez v0, :cond_9
 
-    .line 250
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mActiveUids:Lcom/android/server/wm/MirrorActiveUids;
 
-    .line 251
     invoke-virtual {v0, v10}, Lcom/android/server/wm/MirrorActiveUids;->hasNonAppVisibleWindow(I)Z
 
     move-result v0
@@ -538,7 +511,6 @@
 
     const/4 v1, 0x0
 
-    .line 255
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -578,7 +550,6 @@
 
     goto :goto_8
 
-    .line 266
     :cond_e
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -597,7 +568,6 @@
 
     goto :goto_9
 
-    .line 270
     :cond_f
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -605,7 +575,6 @@
 
     move-result v0
 
-    .line 271
     :goto_9
     invoke-static/range {p4 .. p4}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -639,7 +608,6 @@
     :goto_a
     move v2, v8
 
-    .line 281
     :goto_b
     invoke-static/range {p4 .. p4}, Landroid/os/Process;->isSdkSandboxUid(I)Z
 
@@ -647,14 +615,12 @@
 
     if-eqz v18, :cond_13
 
-    .line 283
     invoke-static/range {p4 .. p4}, Landroid/os/Process;->getAppUidForSdkSandboxUid(I)I
 
     move-result v8
 
     move/from16 v19, v0
 
-    .line 285
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0, v8}, Lcom/android/server/wm/ActivityTaskManagerService;->hasActiveVisibleWindow(I)Z
@@ -675,7 +641,6 @@
 
     move-object/from16 v4, p9
 
-    .line 286
     invoke-static/range {v0 .. v5}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
@@ -685,7 +650,6 @@
     :cond_13
     move/from16 v19, v0
 
-    .line 292
     :cond_14
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -693,14 +657,12 @@
 
     move-result-object v8
 
-    .line 297
     invoke-static {v5, v13, v8}, Lcom/android/server/am/PendingIntentRecord;->getBackgroundStartPrivilegesAllowedByCaller(Landroid/app/ActivityOptions;ILjava/lang/String;)Landroid/app/BackgroundStartPrivileges;
 
     move-result-object v0
 
     if-eqz v5, :cond_16
 
-    .line 301
     invoke-virtual/range {p10 .. p10}, Landroid/app/ActivityOptions;->getPendingIntentBackgroundActivityStartMode()I
 
     move-result v20
@@ -721,7 +683,6 @@
     :goto_d
     if-nez v15, :cond_18
 
-    .line 304
     invoke-virtual {v0}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result v20
@@ -739,7 +700,6 @@
     :goto_e
     const/16 v20, 0x1
 
-    .line 306
     :goto_f
     invoke-virtual {v0}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
@@ -797,7 +757,6 @@
 
     move-object/from16 v8, v21
 
-    .line 311
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/wm/BackgroundActivityStartController;->checkPiBackgroundActivityStart(IILandroid/app/BackgroundStartPrivileges;Landroid/content/Intent;Landroid/app/ActivityOptions;ZZLjava/lang/String;)I
 
     move-result v0
@@ -832,7 +791,6 @@
     :goto_11
     if-eqz v1, :cond_1b
 
-    .line 317
     invoke-virtual/range {v19 .. v19}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result v0
@@ -850,7 +808,6 @@
 
     const-string v0, "android.permission.START_ACTIVITIES_FROM_BACKGROUND"
 
-    .line 325
     invoke-static {v0, v11, v10}, Lcom/android/server/wm/ActivityTaskManagerService;->checkPermission(Ljava/lang/String;II)I
 
     move-result v0
@@ -871,14 +828,12 @@
 
     move-object/from16 v6, p9
 
-    .line 327
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 333
     :cond_1c
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
@@ -904,14 +859,12 @@
 
     move-object/from16 v6, p9
 
-    .line 334
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 341
     :cond_1d
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -935,14 +888,12 @@
 
     move-object/from16 v6, p9
 
-    .line 342
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 349
     :cond_1e
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -966,20 +917,17 @@
 
     move-object/from16 v6, p9
 
-    .line 350
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 357
     :cond_1f
     invoke-static/range {p1 .. p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 358
     iget-object v2, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v2, v0, v10}, Lcom/android/server/wm/ActivityTaskManagerService;->isAssociatedCompanionApp(II)Z
@@ -1002,14 +950,12 @@
 
     move-object/from16 v6, p9
 
-    .line 359
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 366
     :cond_20
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1019,7 +965,6 @@
 
     if-eqz v0, :cond_21
 
-    .line 367
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1054,14 +999,12 @@
 
     move-object/from16 v6, p9
 
-    .line 372
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 380
     :cond_21
     invoke-static {}, Lcom/android/server/wm/BackgroundActivityStartController;->isSystemExemptFlagEnabled()Z
 
@@ -1097,7 +1040,6 @@
 
     move-object/from16 v6, p9
 
-    .line 383
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
@@ -1121,7 +1063,6 @@
     :goto_12
     if-eqz v8, :cond_24
 
-    .line 397
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0, v14, v13}, Lcom/android/server/wm/ActivityTaskManagerService;->getProcessController(II)Lcom/android/server/wm/WindowProcessController;
@@ -1146,7 +1087,6 @@
 
     move/from16 v14, v28
 
-    .line 404
     invoke-virtual {v11, v14}, Lcom/android/server/wm/WindowProcessController;->areBackgroundActivityStartsAllowed(I)I
 
     move-result v6
@@ -1163,14 +1103,12 @@
 
     const/4 v1, 0x1
 
-    .line 407
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 409
     invoke-virtual {v11}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v4
@@ -1199,7 +1137,6 @@
 
     move-object/from16 v6, v21
 
-    .line 407
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1214,14 +1151,12 @@
 
     const/4 v5, 0x1
 
-    .line 412
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 415
     invoke-virtual {v11}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v4
@@ -1250,7 +1185,6 @@
 
     move-object/from16 v6, p9
 
-    .line 412
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
@@ -1260,19 +1194,16 @@
     :cond_26
     move/from16 p2, v6
 
-    .line 420
     iget-object v2, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/ActivityTaskManagerService;->mProcessMap:Lcom/android/server/wm/WindowProcessControllerMap;
 
-    .line 421
     invoke-virtual {v2, v0}, Lcom/android/server/wm/WindowProcessControllerMap;->getProcesses(I)Landroid/util/ArraySet;
 
     move-result-object v2
 
     if-eqz v2, :cond_29
 
-    .line 423
     invoke-virtual {v2}, Landroid/util/ArraySet;->size()I
 
     move-result v3
@@ -1282,14 +1213,12 @@
     :goto_15
     if-ltz v3, :cond_29
 
-    .line 424
     invoke-virtual {v2, v3}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/wm/WindowProcessController;
 
-    .line 425
     invoke-virtual {v4, v14}, Lcom/android/server/wm/WindowProcessController;->areBackgroundActivityStartsAllowed(I)I
 
     move-result v5
@@ -1306,14 +1235,12 @@
 
     if-eqz v8, :cond_27
 
-    .line 429
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 432
     invoke-virtual {v4}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v4
@@ -1344,7 +1271,6 @@
 
     move-object/from16 v6, v21
 
-    .line 429
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IZIILandroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -1354,14 +1280,12 @@
     :cond_27
     const/4 v7, 0x1
 
-    .line 436
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 439
     invoke-virtual {v4}, Lcom/android/server/wm/WindowProcessController;->getPid()I
 
     move-result v4
@@ -1392,7 +1316,6 @@
 
     move-object v7, v8
 
-    .line 436
     invoke-static/range {v0 .. v7}, Lcom/android/server/wm/BackgroundActivityStartController;->logStartAllowedAndReturnCode(IILandroid/app/BackgroundStartPrivileges;ZIILandroid/content/Intent;Ljava/lang/String;)I
 
     move-result v0
@@ -1410,7 +1333,6 @@
 
     if-eqz v1, :cond_2d
 
-    .line 450
     invoke-virtual/range {v19 .. v19}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result v0
@@ -1433,7 +1355,6 @@
     :cond_2b
     move/from16 v8, v16
 
-    .line 459
     :goto_17
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1464,7 +1385,6 @@
     :goto_18
     if-nez v18, :cond_2f
 
-    .line 467
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1475,7 +1395,6 @@
 
     goto :goto_19
 
-    .line 468
     :cond_2e
     iget-object v2, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -1505,7 +1424,6 @@
     :cond_2f
     move-object/from16 v8, v18
 
-    .line 472
     :goto_1a
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1547,7 +1465,6 @@
 
     move/from16 v5, v27
 
-    .line 476
     invoke-static {v2, v3, v5}, Landroid/util/DebugUtils;->valueToString(Ljava/lang/Class;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -1598,7 +1515,6 @@
 
     move/from16 v8, v23
 
-    .line 483
     invoke-static {v4, v3, v8}, Landroid/util/DebugUtils;->valueToString(Ljava/lang/Class;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -1651,7 +1567,6 @@
 
     if-eqz v11, :cond_30
 
-    .line 491
     invoke-virtual {v11}, Lcom/android/server/wm/WindowProcessController;->hasActivityInVisibleTask()Z
 
     move-result v10
@@ -1678,7 +1593,6 @@
 
     if-eqz v1, :cond_32
 
-    .line 495
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1687,7 +1601,6 @@
 
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 496
     invoke-static {v1}, Lcom/android/server/wm/BackgroundActivityStartController;->balCodeToString(I)Ljava/lang/String;
 
     move-result-object v12
@@ -1702,17 +1615,14 @@
 
     move-result-object v10
 
-    .line 495
     invoke-static {v4, v10}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
 
-    .line 498
     invoke-virtual {v2}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result v2
 
     if-eqz v2, :cond_31
 
-    .line 501
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1731,7 +1641,6 @@
 
     return v1
 
-    .line 508
     :cond_31
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1749,7 +1658,6 @@
 
     invoke-static {v7, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
     :cond_32
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1767,7 +1675,6 @@
 
     invoke-static {v7, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskManagerService;->isActivityStartsLoggingEnabled()Z
@@ -1776,10 +1683,8 @@
 
     if-eqz v0, :cond_34
 
-    .line 516
     iget-object v0, v9, Lcom/android/server/wm/BackgroundActivityStartController;->mSupervisor:Lcom/android/server/wm/ActivityTaskSupervisor;
 
-    .line 517
     invoke-virtual {v0}, Lcom/android/server/wm/ActivityTaskSupervisor;->getActivityMetricsLogger()Lcom/android/server/wm/ActivityMetricsLogger;
 
     move-result-object v0
@@ -1806,7 +1711,6 @@
 
     move v9, v14
 
-    .line 518
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/wm/ActivityMetricsLogger;->logAbortedBgActivityStart(Landroid/content/Intent;Lcom/android/server/wm/WindowProcessController;ILjava/lang/String;IZIIZZ)V
 
     :cond_34
@@ -1816,7 +1720,6 @@
 .method public final checkPiBackgroundActivityStart(IILandroid/app/BackgroundStartPrivileges;Landroid/content/Intent;Landroid/app/ActivityOptions;ZZLjava/lang/String;)I
     .locals 7
 
-    .line 538
     invoke-static {p5}, Lcom/android/server/am/PendingIntentRecord;->isPendingIntentBalAllowedByPermission(Landroid/app/ActivityOptions;)Z
 
     move-result p5
@@ -1829,7 +1732,6 @@
 
     const-string v1, "android.permission.START_ACTIVITIES_FROM_BACKGROUND"
 
-    .line 540
     invoke-static {v1, p2, p5, v0}, Landroid/app/ActivityManager;->checkComponentPermission(Ljava/lang/String;IIZ)I
 
     move-result p5
@@ -1840,7 +1742,6 @@
 
     const/4 v1, 0x0
 
-    .line 543
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1876,7 +1777,6 @@
 
     const/4 v1, 0x0
 
-    .line 552
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1908,7 +1808,6 @@
     :cond_1
     if-eqz p7, :cond_2
 
-    .line 560
     invoke-virtual {p3}, Landroid/app/BackgroundStartPrivileges;->allowsBackgroundActivityStarts()Z
 
     move-result p3
@@ -1919,7 +1818,6 @@
 
     const/4 v1, 0x0
 
-    .line 561
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1948,16 +1846,13 @@
 
     return p0
 
-    .line 568
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 569
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p3
 
-    .line 568
     invoke-virtual {p0, p3, p2}, Lcom/android/server/wm/ActivityTaskManagerService;->isAssociatedCompanionApp(II)Z
 
     move-result p0
@@ -1968,7 +1863,6 @@
 
     const/4 v1, 0x0
 
-    .line 570
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2006,7 +1900,6 @@
 .method public final isHomeApp(ILjava/lang/String;)Z
     .locals 3
 
-    .line 158
     iget-object v0, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mHomeProcess:Lcom/android/server/wm/WindowProcessController;
@@ -2017,7 +1910,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 160
     iget-object p0, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object p0, p0, Lcom/android/server/wm/ActivityTaskManagerService;->mHomeProcess:Lcom/android/server/wm/WindowProcessController;
@@ -2039,16 +1931,13 @@
 
     return v2
 
-    .line 165
     :cond_2
     iget-object p0, p0, Lcom/android/server/wm/BackgroundActivityStartController;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityTaskManagerService;->getPackageManagerInternalLocked()Landroid/content/pm/PackageManagerInternal;
 
     move-result-object p0
 
-    .line 167
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p1
@@ -2059,7 +1948,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 168
     invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -2082,7 +1970,6 @@
 .method public shouldAbortBackgroundActivityStart(IILjava/lang/String;IILcom/android/server/wm/WindowProcessController;Lcom/android/server/am/PendingIntentRecord;Landroid/app/BackgroundStartPrivileges;Landroid/content/Intent;Landroid/app/ActivityOptions;)Z
     .locals 0
 
-    .line 182
     invoke-virtual/range {p0 .. p10}, Lcom/android/server/wm/BackgroundActivityStartController;->checkBackgroundActivityStart(IILjava/lang/String;IILcom/android/server/wm/WindowProcessController;Lcom/android/server/am/PendingIntentRecord;Landroid/app/BackgroundStartPrivileges;Landroid/content/Intent;Landroid/app/ActivityOptions;)I
 
     move-result p0
